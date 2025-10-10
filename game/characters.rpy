@@ -1,0 +1,10 @@
+
+define n = Character(None)
+define a = Character("Aeron", color="#42f5da")
+define ya = Character("Young Aeron", color="#42c5da")
+define l = Character("Lyra", color="#54c0ff")
+define z = Character("Zira", color="#c401ff")
+define t = Character("Tessa", color="#c401ff")
+define s = Character("Selene", color="#c401ff")
+define no = Character("Noelle", color="#c401ff")
+define m = Character("Marcus", color="#750000")
