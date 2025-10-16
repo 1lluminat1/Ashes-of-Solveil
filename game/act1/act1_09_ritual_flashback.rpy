@@ -17,7 +17,9 @@ label act1_ritual:
     # COSTUME: Aeron in white; clerics in muted gold; Marcus in shadow behind column.
     # SOUND: Low choral bed + quiet machine hum under it.
 
+    # NEW: Corrected age reference
     ya "{i}This is it. The day the Rylan legacy passes to me.{/i}"
+    ya "{i}Twelve years old. Same age Kael was when he got his Band.{/i}"
     ya "{i}At least, that's what they always said.{/i}"
 
     # CAMERA: Slow 180° around altar; incense smoke trails.
@@ -50,7 +52,7 @@ label act1_ritual:
 
     # FX: Relic core glow ramps; subtle vibration passes into altar.
     "{i}The relic hums—low at first, rising like a blade under breath.{/i}"
-    "{i}Light lashes from its core, strikes the Band. Sparks race his skin.{/i}"
+    "{i}Light lashes from its core, strikes the Band. Sparks race across his skin.{/i}"
 
     ya "{i}It sears—but I hold still. This is what I trained for.{/i}"
 
@@ -109,20 +111,55 @@ label act1_ritual:
     m "My son has a purpose you cannot comprehend."
     m "The relic spoke. Not rejection—revelation."
 
+    # NEW: Marcus already planning what Aeron will become
+    m "(quieter, to clerics) He will serve in other ways."
+    m "The Band grants faith. I will grant him skill."
+    m "One makes believers. The other makes tools."
+
     # TRANSITION: Hard match cut to Aeron's present silhouette in window light.
     a "{i}That day, a story was written for me.{/i}"
-    a "{i}My father called it destiny. Maybe he couldn't stand another failure.{/i}"
+    a "{i}My father called it destiny. I think he just couldn't stand another failure.{/i}"
+
+    # NEW: Kael context - corrected timeline
+    a "{i}Kael's Band worked. For three years after his Branding at twelve, he belonged.{/i}"
+    a "{i}Then at fifteen, it turned on him. Rejected him.{/i}"
+    a "{i}He had three years of being whole. I never got one.{/i}"
 
     # NEW/REVISED: More specific walk home memory
     a "{i}I remember the walk home. Silent. Marcus ahead. Me behind.{/i}"
     a "{i}My wrist still burned where the Band had been. I kept touching the empty space.{/i}"
     a "{i}He didn't look back once. Not when I stumbled. Not when I stopped to catch my breath.{/i}"
     a "{i}Just kept walking. Like I was already forgotten.{/i}"
+    
+    # NEW: Marcus begins molding Glass
     a "{i}That night, I heard him on the terminal. Rewriting the narrative.{/i}"
     a "{i}'Not failure. Fate. Not broken. Chosen.'{/i}"
+    a "{i}And then, quieter: 'If he cannot have faith, I will make him useful.'{/i}"
     a "{i}I believed him because I had to.{/i}"
     a "{i}What else was left?{/i}"
 
-    a "{i}Either way, I spent the years after chasing someone else's idea of me.{/i}"
+    # NEW: Glass identity origins
+    a "{i}The Band was supposed to make me whole.{/i}"
+    a "{i}Instead, Father made me Glass.{/i}"
+    a "{i}Ten years of training. Of missions. Of kills.{/i}"
+    a "{i}390 operations. 390 successes.{/i}"
+    a "{i}He wanted a believer. He got Glass.{/i}"
+    a "{i}Transparent. Empty. Unbreaking.{/i}"
+    a "{i}At least, that's what we both pretend.{/i}"
+
+    # NEW: Connection to present-day cracks
+    a "{i}But Glass is cracking now. I feel it.{/i}"
+    a "{i}Lyra sees it. The cracks spreading.{/i}"
+    a "{i}Maybe the Band knew. Maybe that's why it rejected me.{/i}"
+    a "{i}I was never meant to be whole. Just useful.{/i}"
+    a "{i}And now I'm not even sure I'm that anymore.{/i}"
+    
+    # canon_note: Aeron is 12 years old during Branding (corrected)
+    # canon_note: Kael got his Band at 12 (worked for 3 years, failed at 15)
+    # canon_note: Marcus immediately begins planning to make Aeron "useful without faith"
+    # canon_note: This is the origin of Glass - Marcus's solution to the failed Branding
+    # canon_note: "If he cannot have faith, I will make him useful" - Marcus's core philosophy
+    # canon_note: Connection to present: Glass is cracking, Lyra sees it, Band rejection was prescient
+    # canon_note: 10 years from this moment (age 12 to 22) = 390 operations of becoming Glass
     
     return

@@ -12,9 +12,11 @@ label act1_hill:
     # SOUND: Soft wind; distant city hum; occasional perimeter buzz far away.
     # LIGHTING: Warm, low-angle sun; lens flare acceptable; soft rim on hair.
 
-    a "{i}Years ago... before the branding. Before the silence. Before the weight of names.{/i}"
-    a "{i}There was this hill. Far enough for trouble. Close enough to still matter.{/i}"
-    a "{i}Rules never meant much to Lyra.{/i}"
+    # NEW: Age context and time reference - CORRECTED
+    a "{i}Years ago... before the Branding. Before Glass. Before everything broke.{/i}"
+    a "{i}We were both ten. Two years before our Brandings would define us.{/i}"
+    a "{i}There was this hill. Far enough for trouble. Close enough to still matter...{/i}"
+    a "{i}...but rules never meant much to Lyra.{/i}"
 
     # CAMERA: Static two-shot seated, city in the far bokeh.
     l "If you could fly anywhere—no tech, no Band—just wings... where?"
@@ -24,6 +26,10 @@ label act1_hill:
 
     l "(grins) Nature boy, huh?"
     ya "Better than being stuck in a glass tower pretending it's perfect."
+    # NEW: Glass foreshadowing
+    l "Glass tower. I like that. Transparent and empty."
+    ya "And sharp if you're not careful."
+    l "(laughs) Everything in Aeries is sharp if you're not careful."
 
     # VISUAL: Lyra leans back on her hands; looks at the sky.
     l "You know what I hate most about the Aeries?"
@@ -51,6 +57,13 @@ label act1_hill:
     ya "Do you believe her?"
     l "(pause) ...I don't know. Do you believe your father?"
     ya "I don't know either."
+    # NEW: Young Aeron's fear - ADJUSTED
+    ya "What if it doesn't work? The Branding?"
+    l "Why wouldn't it work?"
+    ya "I don't know. Kael's worked. But... what if mine doesn't?"
+    l "Then we figure it out. Together."
+    ya "You promise?"
+    l "I promise. Two years from now, we both get Branded. And whatever happens, we're still us."
 
     # VISUAL: Lyra's fingers still; the grass blade falls.
     l "(softly) What if the Band changes us?"
@@ -102,17 +115,20 @@ label act1_hill:
     ya "Promise."
     l "(small smile) Then I'll hold you to it."
 
-    # NEW/REVISED: More visceral almost-touch
+    # NEW/REVISED: More visceral almost-touch with future Glass parallel
     # VISUAL: Lyra's hand rests in the grass between them; Aeron's hand inches closer.
     "{i}Her hand rests in the grass. His moves toward it—slow, uncertain.{/i}"
     # VISUAL: Fingers almost touch—close enough to feel the warmth.
     "{i}The space between them narrows. An inch. Less.{/i}"
+    a "{i}Even then, we were glass leaning toward glass.{/i}"
+    a "{i}Close enough to touch. Afraid of shattering.{/i}"
+    
     # VISUAL: Then Lyra pulls away, standing suddenly.
     l "(standing quickly) We should head back before they notice we're gone."
     ya "(disappointed) Yeah. Probably."
 
     # BLOCKING: Lyra pops up to stand; offers hand.
-    l "Then we'll run away someday. You and me."
+    l "We'll run away someday. You and me."
     ya "You serious?"
     l "(nods) Dead serious."
 
@@ -124,15 +140,17 @@ label act1_hill:
     # VISUAL: Lyra pulls him to his feet; they stand face to face, close.
     "{i}She pulls him up. For a moment, they stand too close. Eyes meet.{/i}"
 
-    l "(barely a whisper) Don't forget me. When everything changes."
+    l "(barely a whisper) When everything changes..."
+    l "...don't forget me."
     ya "I won't. I couldn't."
     l "(sad smile) Everyone says that."
     ya "I'm not everyone."
     l "(touches his arm briefly) No. You're not."
 
-    # NEW: Physical lingering
+    # NEW: Physical lingering with Glass parallel
     # VISUAL: Her hand lingers for a heartbeat—then lets go.
     "{i}Her fingers slip away. The warmth remains.{/i}"
+    a "{i}I should have held on. Should have known this was the last time we'd be whole.{/i}"
 
     # VISUAL: She steps back; the moment breaks but doesn't shatter.
     "{i}She steps back. The moment hangs in the air like the last note of a song.{/i}"
@@ -141,11 +159,24 @@ label act1_hill:
     a "{i}For a moment, the city didn't exist. Just us, and the wind.{/i}"
     a "{i}I should have held tighter to that moment.{/i}"
 
-    # NEW: Connection to broken promises
+    # NEW: Connection to broken promises and Glass
     a "{i}We promised to find a place like that hill. Somewhere ours.{/i}"
     a "{i}Instead, we found duty. Orders. Distance.{/i}"
+    a "{i}She became Echelon's proof. I became Glass.{/i}"
+    a "{i}Two polished surfaces. Both see-through. Both empty.{/i}"
+    a "{i}But tonight, on the balcony, we almost remembered.{/i}"
+    a "{i}Glass leaning toward glass. Just like this hill. Just like always.{/i}"
 
     # TRANSITION: Gentle white bloom → next flashback.
-    a "{i}Then the day came—two years later, the Branding Ritual—and everything changed.{/i}"
+    a "{i}Then the day came—two years later, we both turned twelve—and everything changed.{/i}"
+
+    # canon_note: Both Aeron and Lyra are age 10 in this flashback
+    # canon_note: Two years before both their Brandings (which happen at 12)
+    # canon_note: They're the same age - same cohort, same academy
+    # canon_note: "Glass leaning toward glass" - foreshadows their dynamic 12 years later
+    # canon_note: Promise to "find a place like this" - broken by duty, echoes in balcony scene
+    # canon_note: Young Aeron already afraid of failing - prescient fear
+    # canon_note: Both already performing even as children - seeds of future emptiness
+    # canon_note: Lyra's Branding will succeed, Aeron's will fail - diverging paths begin at 12
 
     return

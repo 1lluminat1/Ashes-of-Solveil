@@ -1,10 +1,14 @@
 
 define n = Character(None)
-define a = Character("Aeron", color="#42f5da")
+
+define a = Character("Aeron", color="#B8B8A8")
+define l = Character("Lyra", color="#C8A2FF")
+define z = Character("Zira", color="#00BFFF")
+define t = Character("Tessa", color="#8DC97A")
+define s = Character("Selene", color="#C0C0C0")
+define n = Character("Noelle", color="#9CB7C9")
+define m = Character("Marcus", color="#7A3B3F")
+
 define ya = Character("Young Aeron", color="#42c5da")
-define l = Character("Lyra", color="#54c0ff")
-define z = Character("Zira", color="#c401ff")
-define t = Character("Tessa", color="#c401ff")
-define s = Character("Selene", color="#c401ff")
-define no = Character("Noelle", color="#c401ff")
-define m = Character("Marcus", color="#750000")
+define l = Character("Young Lyra", color="#7e5cad")
+define k = Character("Kael", color="#4B4E8A")
