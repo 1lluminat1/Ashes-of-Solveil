@@ -22,6 +22,7 @@ label start:
     call act1_return_aeries
     call act1_sweep
     call act1_confession_lyra
+    call act1_morning_after_confession
     call act1_obsidian_bridge
     call act1_investigation
     call act1_purge
