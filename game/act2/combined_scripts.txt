@@ -1,0 +1,2755 @@
+=== Contents of act2_01_descent.rpy ===
+
+# act2_01_descent.rpy
+
+
+# =======================================================
+# ACT 2 - Scene 1: Descent
+# =======================================================
+
+
+label act2_descent:
+
+    # VISUAL: Aeron's apartment. Hours after Purge. Dawn breaking. City burning in distance.
+    # LIGHTING: Orange glow from fires mixing with cold morning light. Smoke visible.
+    # SOUND: Distant sirens; fire alarms; city in chaos; his ragged breathing.
+
+    "{i}ACT 2: FROM ASH{/i}"
+    
+    # VISUAL: Fade in from black. Aeron and Lyra still on rooftop where Purge happened.
+    # Hours have passed. Dawn approaching. Both hollow, empty, staring at burning sectors.
+    
+    "{i}Hours pass. Or days. Time loses meaning when the world ends.{/i}"
+    "{i}They stand on the rooftop. Watching Sectors 8, 9, 10 burn.{/i}"
+    "{i}Smoke rises like monuments. The dead have no graves.{/i}"
+
+    # VISUAL: Aeron finally moves. Turns from the burning city.
+    a "{i}We can't stay here.{/i}"
+    
+    l "(hollow) Where would we go?"
+    a "Anywhere but here."
+    
+    # VISUAL: Lyra looks at him. Both exhausted, broken, barely functioning.
+    l "Echelon will be looking for us."
+    a "I know."
+    l "They'll want to know why you weren't on the command deck."
+    a "I know."
+    l "Marcus will realize—"
+    a "(sharp) I know."
+
+    # VISUAL: Silence. Both processing. Dawn light growing.
+    "{i}Silence. The city wakes. Oblivious or pretending.{/i}"
+    "{i}Above the Purge zones, life continues. Because it always does.{/i}"
+
+    l "How long do we have?"
+    a "Hours. Maybe less. They'll check my apartment first."
+    l "Then we need to move."
+    a "(looks at her) You don't have to come. This is my—"
+    l "(cuts him off) Don't. We burn together. Remember?"
+
+    # VISUAL: He nods. Small. Grateful. Terrified.
+    a "{i}We burn together. Glass and glass.{/i}"
+    a "{i}Both shattered. Both falling.{/i}"
+
+    # TRANSITION: Return to apartment. Moving fast. Urgency building.
+    # VISUAL: Apartment door opens. Everything the same but different.
+    # LIGHTING: Orange glow through windows. Smoke visible. Chaos distant.
+
+    scene bg_aeron_apartment with fade
+    
+    "{i}The apartment. Unchanged. But everything's different now.{/i}"
+    "{i}This was home. Now it's a crime scene waiting to happen.{/i}"
+
+    # VISUAL: Aeron moves to closet. Grabs tactical gear, not uniform.
+    # SOUND: Rustling fabric; zippers; equipment being packed quickly.
+
+    a "{i}What do we take? What matters?{/i}"
+    a "{i}Weapons. Credits. Clothes. Everything else is weight.{/i}"
+
+    # VISUAL: He pauses at Kael's photo. Hand hovers. Decides.
+    "{i}Kael's photo. On the desk. Smiling.{/i}"
+    a "{i}I can't leave you behind. Not again.{/i}"
+    "{i}He takes it. Slips it inside his jacket. Against his chest.{/i}"
+
+    # VISUAL: Lyra gathering her things from bathroom, bedroom. Efficient. Military.
+    l "How much can we carry?"
+    a "Not much. We'll be moving fast."
+    l "Where?"
+    a "Down. The Lower Spans. Unders if we have to."
+    l "(stops) The Unders? Aeron, they'll kill us there."
+    a "Echelon will kill us here. At least down there we have a chance."
+
+    # VISUAL: She processes. Nods. Grim acceptance.
+    l "The people you saved. In the Sweep. Some are still there."
+    a "Maybe. If they survived the Purge."
+    l "They might help us."
+    a "(bitter laugh) Help Glass? The man who killed 600 of them?"
+    l "The man who saved 200."
+    a "That's not how they'll remember it."
+
+    # VISUAL: Packing continues. Clock ticking. Sunrise approaching.
+    # SOUND: Distant comms chatter (Echelon channels). Patrol movements increasing.
+
+    "{i}The city wakes. Patrols mobilize. The hunt hasn't started.{/i}"
+    "{i}But it will. Soon.{/i}"
+
+    # VISUAL: Aeron at terminal. Deletes files. Wipes data. Covering tracks.
+    a "{i}Everything. Gone. No trail. No evidence.{/i}"
+    a "{i}They'll find the apartment empty. But they'll know I left.{/i}"
+    a "{i}Marcus will know. He always knows.{/i}"
+
+    # VISUAL: Zira's encrypted device on desk. Blinking softly.
+    "{i}The device. Zira's gift. Still here. Still working.{/i}"
+    a "{i}She said use it when I was ready. When I needed her.{/i}"
+    a "{i}I need her. But can I risk it?{/i}"
+
+    # ACTION: Player choice—activate device or leave it.
+    menu:
+        "The device blinks. A lifeline. Or a trap."
+        "Activate the device—contact Zira.":
+            $ aeron_contacted_zira = True
+            
+            # VISUAL: He picks it up. Activates. Sends simple message.
+            "{i}He types one word: 'Help.'{/i}"
+            "{i}Sends. No response. Did she receive it?{/i}"
+            a "{i}If she got it, she'll know. If not... we're alone.{/i}"
+            
+        "Leave it—don't risk the signal.":
+            $ aeron_contacted_zira = False
+            
+            "{i}Too risky. Signal could be tracked. Echelon could intercept.{/i}"
+            a "{i}We're on our own. Better that way.{/i}"
+            "{i}He pockets the device anyway. Just in case.{/i}"
+
+    # VISUAL: Lyra returns. Small pack. Essentials only. Ready.
+    l "I'm ready. You?"
+    a "(looks around apartment one last time) Yeah. I'm ready."
+
+    # VISUAL: Apartment. Empty. Hollow. Abandoned.
+    a "{i}Seven years here. 390 operations launched from this room.{/i}"
+    a "{i}Glass lived here. Glass died on that rooftop.{/i}"
+    a "{i}What walks out this door... I don't know what that is.{/i}"
+
+    l "(hand on his shoulder) Aeron. We need to go."
+    a "(nods) Right. Let's move."
+
+    # VISUAL: Door opens. Hallway beyond. Empty. Dawn light filtering through windows.
+    # SOUND: Distant elevator chime. Footsteps. Patrol approaching.
+
+    "{i}Footsteps. Close. Patrol coming this way.{/i}"
+    
+    l "(whisper) They're early."
+    a "Elevator or stairs?"
+    l "Stairs. Quieter."
+    a "Back exit. Through maintenance level."
+    l "Lead the way."
+
+    # VISUAL: Moving quickly but quietly through Aeries corridors.
+    # LIGHTING: Morning light through tall windows. Marble gleaming. Perfect order.
+    # SOUND: Their footsteps muted; distant patrols; comms chatter growing.
+
+    "{i}Aeries. Perfect. Sterile. Cold.{/i}"
+    "{i}Marble halls stretching endlessly. Everything clean. Everything controlled.{/i}"
+    "{i}They don't belong here anymore.{/i}"
+
+    # VISUAL: Past propaganda screens. Messages updating.
+    # TEXT ON SCREENS: "RECENT TERRORIST ATTACK CONTAINED"
+    # TEXT: "SECTORS 8-10 UNDER EMERGENCY PROTOCOLS"
+    # TEXT: "ECHELON PROTECTS. ECHELON PROVIDES."
+
+    a "{i}Terrorist attack. That's what they're calling it.{/i}"
+    a "{i}Not genocide. Not Purge. Just... contained threat.{/i}"
+    a "{i}100,000 dead. And they call it protection.{/i}"
+
+    # VISUAL: They reach maintenance stairs. Heavy door. Rarely used.
+    # SOUND: Door opens with metallic groan. Stairs descending into darkness.
+
+    "{i}Maintenance stairs. Down. Always down.{/i}"
+    "{i}Away from light. Away from order. Away from everything.{/i}"
+
+    l "How far down?"
+    a "As far as we can go."
+    l "The Unders are fifty levels from here."
+    a "Then we go fifty levels."
+
+    # VISUAL: They descend. Step by step. Lighting getting dimmer.
+    # SOUND: Their breathing; footsteps echoing; city hum growing louder below.
+
+    "{i}Down. Level by level. The city changes.{/i}"
+    "{i}Clean to grimy. Bright to dim. Order to chaos.{/i}"
+    "{i}And they descend into it.{/i}"
+
+    # VISUAL: Passing through Mid Levels. Industrial. Functional. Working class.
+    # People starting their day. Factories humming. Life continuing.
+
+    a "{i}Mid Levels. Workers. Families. Normal people.{/i}"
+    a "{i}They don't know. Sectors 8-10 burned. And they don't know.{/i}"
+    a "{i}Or they know and they're pretending. Because what else can they do?{/i}"
+
+    # VISUAL: Someone glances at them. Aeron in tactical gear. Lyra same.
+    # Worker looks away quickly. Doesn't want trouble.
+
+    l "We stand out."
+    a "I know. Keep moving."
+    l "We need different clothes. These scream Echelon."
+    a "We'll find something in the Lower Spans. Black market."
+    l "With what money?"
+    a "(shows credit chip) Aeries credits. Should buy us time."
+    l "If they take them. If they don't recognize us first."
+
+    # VISUAL: Continuing descent. Levels blurring together. Getting darker, dirtier.
+    # SOUND: Music from below; voices; machinery; city living.
+
+    "{i}Lower Spans. The city's underbelly. Where Aeries refuse looks.{/i}"
+    "{i}Neon. Rust. Steam. Humanity compressed and forgotten.{/i}"
+    "{i}This is where they swept. Where 800 died. Where 200 lived.{/i}"
+
+    # VISUAL: They emerge into Lower Spans proper. Market district. Pre-dawn crowd.
+    # LIGHTING: Neon signs. Flickering. Harsh shadows. Industrial glow.
+    # SOUND: Vendors calling. Deals being made. Life surviving.
+
+    a "{i}Sector 6. Near where we swept. Near where they died.{/i}"
+    a "{i}The vendor. The child. The families. All gone now.{/i}"
+    a "{i}And we're here. Walking among the survivors.{/i}"
+
+    l "(quiet) Do you recognize it?"
+    a "Every corner. Every street. Every face I didn't save."
+
+    # VISUAL: People notice them. Conversations stop. Eyes follow.
+    # Whispers spread. "Echelon." "Soldiers." "What are they doing here?"
+
+    "{i}Eyes. Everywhere. Watching. Judging.{/i}"
+    "{i}We're not hidden. We're targets.{/i}"
+
+    # VISUAL: Vendor approaches. Old woman. Weathered. Angry.
+    vendor "You're Echelon."
+    a "...Yes."
+    vendor "You swept Sector 10. Three days ago."
+    a "(carefully) I did."
+    vendor "My nephew was there. He's dead now."
+    vendor "You kill him?"
+    a "...I don't know. Maybe."
+
+    # VISUAL: She stares. Long. Hard. Then spits at his feet.
+    vendor "Get out of my sector. Before someone less kind finds you."
+    "{i}She walks away. Others watching. Tension rising.{/i}"
+
+    l "(whisper) We need to move. Now."
+    a "Where? We're exposed everywhere."
+    l "Find shelter. Hide. Figure it out from there."
+    a "With everyone watching? We won't make it an hour."
+
+    # VISUAL: More people noticing. Hostility growing. Crowd forming.
+    # SOUND: Murmurs. "Echelon." "Glass." "Murderers." Anger building.
+
+    "{i}The crowd grows. Whispers harden. Space shrinks.{/i}"
+    a "{i}They know me. They remember.{/i}"
+    a "{i}Glass killed their families. And Glass is here.{/i}"
+
+    # VISUAL: Man steps forward. Young. Angry. Holding makeshift weapon.
+    man "You're Glass. I know your face."
+    a "..."
+    man "Sector 10. You killed my sister."
+    a "I'm sorry."
+    man "Sorry? SORRY? She was nine years old!"
+    man "And you're SORRY?"
+
+    # VISUAL: Crowd closing in. Multiple weapons visible. Nowhere to run.
+    l "(hand on weapon) Aeron, we need to—"
+    a "(stops her) Don't. We're outnumbered."
+    l "Then what?"
+    a "...We run. Or we die. Pick one."
+
+    # VISUAL: Man raises weapon. Others follow. About to attack.
+    # SOUND: Sudden CRACK. Gunshot. Not at them. Warning shot.
+
+    "{i}CRACK. Gunshot. Echo. Crowd freezes.{/i}"
+
+    # VISUAL: Figure appears from alley. Hood up. Female. Armed.
+    # Voice familiar. Confident. Amused.
+
+    z "That's enough."
+
+    # VISUAL: Crowd parts. Confused. Wary. The figure approaches.
+    # SOUND: Footsteps. Deliberate. Unhurried. Commanding.
+
+    z "These two are with me. Touch them, you answer to me."
+    man "Who the hell are you?"
+    z "Someone you don't want to fuck with. Now back off."
+
+    # VISUAL: Zira lowers hood. Face revealed. Eyes sharp. Grin dangerous.
+    z "Unless you want to find out what happens when you ignore me."
+
+    # VISUAL: Man hesitates. Others uncertain. Zira's reputation precedes her.
+    man "(to Aeron) This isn't over."
+    "{i}Crowd disperses. Slowly. Reluctantly. But disperses.{/i}"
+
+    # VISUAL: Zira walks to them. Looks them over. Shakes head.
+    z "You two are terrible at hiding."
+    a "Zira—"
+    z "Save it. Follow me. Before they change their minds."
+    l "How did you know we'd be here?"
+    z "(grins) I've been tracking you since you left Aeries."
+    z "Did you really think you could disappear? In those clothes?"
+    a "You got my message?"
+    z "I got it. And I came. Because apparently you're idiots."
+    z "Now move. We don't have time for gratitude."
+
+    # VISUAL: She leads them into alley. Narrow. Dark. Hidden from main street.
+    # SOUND: Their footsteps; distant crowd; her confident stride.
+
+    "{i}She moves like she owns the place. Maybe she does.{/i}"
+    "{i}We follow. Because we have no choice. Because she's right.{/i}"
+    "{i}We're idiots. And we need her.{/i}"
+
+    # VISUAL: Deep in alley network. Twisting paths. Zira knows every turn.
+    z "Echelon's hunting you. Whole city knows by now."
+    a "Already?"
+    z "Marcus put out the word. Traitors. Kill on sight. Big reward."
+    z "You're famous. Congratulations."
+    l "How much time do we have?"
+    z "Before Echelon floods the Lower Spans? Hours. Maybe less."
+    z "Before locals kill you for revenge? Minutes. Maybe less."
+    z "You picked the worst possible place to hide."
+
+    a "Where else could we go?"
+    z "Anywhere but here. But too late now. You're here."
+    z "So we adapt. Like always."
+
+    # VISUAL: She stops at hidden door. Unmarked. Nondescript.
+    # SOUND: Electronic lock. Beeps. Door slides open. Darkness beyond.
+
+    z "Welcome to my safe house. It's not much. But it's yours."
+    z "For now. Until we figure out what the hell you two are doing."
+
+    # VISUAL: They enter. Door seals behind them. Darkness. Then lights flicker on.
+    # LIGHTING: Dim. Industrial. Functional. Small space. Secure.
+
+    "{i}Small. Cold. Secure. Hidden.{/i}"
+    "{i}Not home. But shelter.{/i}"
+    "{i}And right now, that's everything.{/i}"
+
+    # VISUAL: Zira tosses them water. Food packets. Basic supplies.
+    z "Eat. Rest. Don't leave. I'll be back tonight."
+    l "Where are you going?"
+    z "To make sure you idiots stay alive."
+    z "Echelon's mobilizing. Locals want blood. You're trapped."
+    z "So I'm fixing it. Like I fix everything."
+
+    a "Why are you helping us?"
+    z "(pauses at door) Because I told you I would."
+    z "And because 200 people are alive because Glass cracked."
+    z "I want to see what happens when Glass breaks completely."
+    z "(grins) Should be interesting."
+
+    # VISUAL: She leaves. Door seals. They're alone.
+    # SOUND: Silence. Just breathing. Exhaustion. Shock.
+
+    "{i}Alone. Safe. For now.{/i}"
+    "{i}The city hunts us. Both sides want us dead.{/i}"
+    "{i}And we're here. In the dark. Waiting.{/i}"
+
+    l "(collapses against wall) We're fucked."
+    a "(sits beside her) Completely."
+    l "Echelon wants us dead. Locals want us dead."
+    l "We have nothing. No allies. No plan. No future."
+    a "We have Zira."
+    l "One person. Against a city."
+    a "One person who just saved our lives."
+
+    # VISUAL: Long silence. Both processing. Reality settling.
+    "{i}Silence. Heavy. Crushing.{/i}"
+    "{i}Hours ago, they witnessed 100,000 deaths.{/i}"
+    "{i}Now they're fugitives. Hunted. Hated. Alone.{/i}"
+
+    a "{i}From Glass to Ash.{/i}"
+    a "{i}Burned down. Nothing left. Just fuel for fire.{/i}"
+    a "{i}But fire needs more than fuel. It needs air. It needs spark.{/i}"
+    a "{i}Maybe Zira's right. Maybe this is where we find it.{/i}"
+
+    l "What do we do now?"
+    a "We survive. One hour at a time."
+    l "And after that?"
+    a "...We burn them. Like we said."
+    l "How? We're two people against an empire."
+    a "Two people who know that empire. Who were that empire."
+    a "If anyone can burn it... it's us."
+
+    # VISUAL: They sit. Backs against wall. Exhausted. Terrified. Committed.
+    "{i}Two people. One city. Impossible odds.{/i}"
+    "{i}But they're here. And they're alive.{/i}"
+    "{i}That's something. That has to be something.{/i}"
+
+    # TRANSITION: Fade to black. Time passes. Night falls. Zira returns.
+    # TEXT: "That Evening"
+
+    # canon_note: Aeron & Lyra officially fugitives - hunted by both sides
+    # canon_note: Zira becomes crucial lifeline - saves them immediately
+    # canon_note: Lower Spans hostile - locals remember Glass, want revenge
+    # canon_note: Aeron faces consequences - nephew dead, sister dead, they remember
+    # canon_note: Sets up Act 2 theme: earning trust from those they harmed
+    # canon_note: Aeries credits may not work in Unders - economy difference
+    # canon_note: "Two people against empire" - David vs Goliath setup
+    # canon_note: Zira tracking them since they left - she's been watching/helping
+
+    return
+
+=== End of {rpy_file} ===
+
+=== Contents of act2_02_reality_check.rpy ===
+
+# act2_02_reality_check.rpy
+
+
+# =======================================================
+# ACT 2 - Scene 2: The Unders - Reality Check
+# =======================================================
+
+
+label act2_reality_check:
+
+    # VISUAL: Zira's safe house. Evening. Dim light. Small, cramped, functional.
+    # LIGHTING: Single overhead bulb. Shadows deep. Industrial glow through window.
+    # SOUND: City hum below; distant machinery; their breathing; exhaustion.
+
+    "{i}That Evening.{/i}"
+    
+    # VISUAL: Aeron and Lyra sitting against wall. Hours passed. Exhausted. Processing.
+    # Small space. Concrete walls. One window (barred). Door (locked from inside).
+
+    "{i}Hours in the dark. Waiting. Thinking. Surviving.{/i}"
+    "{i}The safe house is small. Cold. But it's shelter.{/i}"
+    "{i}And shelter is everything when the world wants you dead.{/i}"
+
+    # VISUAL: Aeron staring at nothing. Lyra checking her Band compulsively.
+    # Both doing their coping mechanisms. Both barely holding together.
+
+    a "{i}Seven hours since we left Aeries. Feels like seven years.{/i}"
+    a "{i}Everything we had—gone. Everything we were—ash.{/i}"
+    a "{i}And now we're here. Waiting for someone to decide if we live.{/i}"
+
+    # VISUAL: Lyra's hand moves to Band. Touches it. Checking. Automatic.
+    "{i}Her hand moves. Wrist. Band. Checking. Always checking.{/i}"
+    "{i}Even here. Even now. Terrified it'll stop working.{/i}"
+
+    l "(quiet) Do you think she's coming back?"
+    a "Zira? Yeah. She said she would."
+    l "People say a lot of things."
+    a "She saved us. Twice. Why save us just to abandon us?"
+    l "(hollow laugh) Why do anything? Nothing makes sense anymore."
+
+    # VISUAL: Silence. Both staring at nothing. Trauma settling. Reality crushing.
+    "{i}Silence. Heavy. The kind that presses on your chest.{/i}"
+
+    a "We can't stay here forever."
+    l "Where else would we go?"
+    a "I don't know. But this is temporary. Zira made that clear."
+    l "Then what? We just... wander the Unders hoping not to die?"
+    a "We survive. Then we plan. Then we—"
+    l "(cuts him off) We what, Aeron? We're two people."
+    l "Echelon has thousands. Weapons. Resources. Control."
+    l "What exactly do we think we're going to do?"
+
+    # VISUAL: He looks at her. Both broken. Both questioning. Reality hitting.
+    a "...I don't know. But we said we'd burn them."
+    l "We said a lot of things on that rooftop."
+    l "Rage. Grief. Shock. Words aren't plans."
+    a "Then we make a plan."
+    l "With what? We have nothing."
+
+    # VISUAL: Aeron looks around. Small space. Minimal supplies. No resources.
+    a "{i}She's right. We have nothing.{/i}"
+    a "{i}No weapons. No intel. No allies. No future.{/i}"
+    a "{i}Just two broken people in a concrete box.{/i}"
+
+    # SOUND: Door lock clicking. Beeps. Opening.
+    # VISUAL: Both tense. Hands move toward weapons (they don't have).
+
+    "{i}The door opens. They freeze.{/i}"
+    "{i}No weapons. Nothing but fists. And fists don't stop bullets.{/i}"
+
+    # VISUAL: Zira enters. Arms full of supplies. Kicks door closed behind her.
+    # LIGHTING: Hallway light spills in, then cuts off. Dim bulb only source again.
+
+    z "Still alive. Good. That's progress."
+
+    # VISUAL: She drops supplies on floor. Food, water, clothes, basic necessities.
+    # SOUND: Packages hitting concrete. Rustling. Reality of survival.
+
+    z "Clothes. Food. Water. Fake IDs. Enough to last a few days."
+    z "After that, you're on your own."
+
+    l "Fake IDs?"
+    z "You think you can walk around as yourselves?"
+    z "Echelon's posted your faces everywhere. Bounty on both heads."
+    z "Big bounty. Tempting bounty."
+
+    a "How big?"
+    z "50,000 credits. Each. Dead or alive."
+    z "(grins) Personally, I'd take dead. Less hassle."
+
+    # VISUAL: Both process. That much money could change lives in the Unders.
+    a "{i}50,000 credits. That's a fortune down here.{/i}"
+    a "{i}Everyone we meet is a potential killer. For the right price.{/i}"
+
+    l "Why haven't you turned us in?"
+    z "Because 50,000 credits spends fast. But what you represent?"
+    z "That's worth more."
+    a "What do we represent?"
+    z "Hope. Maybe. Or a really entertaining disaster."
+    z "Either way, I'm curious."
+
+    # VISUAL: She sits. Cross-legged. Comfortable. At home here.
+    z "Alright. Reality check. You two need to understand where you are."
+    z "The Unders aren't Aeries. Rules are different. Culture's different."
+    z "Survival's different."
+
+    a "We know it's dangerous—"
+    z "(cuts him off) You don't know shit."
+    z "You ran one operation down here. One night. Escorted."
+    z "That's not knowing. That's tourism."
+
+    # VISUAL: She leans forward. Eyes sharp. Making sure they hear this.
+    z "The Unders don't have Echelon law. We have our own."
+    z "Barter economy. Favors. Debts. Reputation."
+    z "Your Aeries credits? Worthless unless you find the right person."
+    z "And finding the right person means asking. And asking means exposing yourself."
+
+    l "What do we do for money?"
+    z "You earn it. Work. Skills. Services."
+    z "Or you steal it. But theft here has consequences."
+    z "Not jail. Not fines. Blood. Always blood."
+
+    # VISUAL: Both listen. Reality settling. Harsher than expected.
+    a "What about allies?"
+    z "Allies require trust. Trust requires time. Time requires survival."
+    z "You've been here seven hours. You almost died twice."
+    z "Locals hate you. Echelon's hunting you. You have no leverage."
+
+    a "Then how do we survive?"
+    z "You don't stand out. You don't talk. You don't trust anyone."
+    z "You stay hidden until I say it's safe."
+    z "Which might be never. So get comfortable."
+
+    # VISUAL: Lyra picks up clothes. Plain. Worn. Nothing like Echelon.
+    l "How long have you been doing this?"
+    z "Doing what?"
+    l "Surviving down here. Helping people. Playing both sides."
+    z "(pause) Long enough to know when someone's worth the risk."
+
+    # VISUAL: Zira stands. Moves to window. Looks out at city below.
+    z "The Unders are 50 levels of humanity compressed and forgotten."
+    z "Echelon looks down and sees waste. Criminals. Expendable."
+    z "But we're the foundation. The city stands on us."
+    z "And when we stop holding it up... it falls."
+
+    a "Is that what you want? The city to fall?"
+    z "(looks back at him) I want the people crushing us to fall."
+    z "The city? The people? They're just trying to survive."
+    z "Like you. Like me. Like everyone down here."
+
+    # VISUAL: She moves to door. Preparing to leave again.
+    z "I have contacts. People who might help. Might."
+    z "But you need to understand—nobody's going to welcome you."
+    z "You're Echelon. You're Glass. You killed their families."
+    z "Redemption doesn't come from words. It comes from blood."
+
+    l "What does that mean?"
+    z "It means you prove yourselves. With actions. With sacrifice."
+    z "You want allies? Earn them. You want safety? Fight for it."
+    z "The Unders don't give anything free. Not even second chances."
+
+    # VISUAL: Hand on door. About to leave. Stops. Looks back.
+    z "There's someone I know. Rebel leader. Her cell was hit hard in the Purge."
+    z "Most of her people died. Sector 10."
+
+    # VISUAL: Aeron and Lyra both tense. Sector 10. Their Sweep.
+    a "(carefully) Will she help us?"
+    z "Help you? She'll probably want to kill you."
+    z "But she's the only real resistance left. Everyone else scattered."
+    z "If you want to fight Echelon, you need her."
+
+    a "What's her name?"
+    z "Selene. And before you ask—yes, she knows who you are."
+    z "I already told her. Tested the waters."
+    z "She's... considering. That's the best I can do."
+
+    l "When do we meet her?"
+    z "When I say it's safe. Which isn't now."
+    z "Echelon's flooding the Lower Spans. Patrols everywhere."
+    z "Marcus wants you bad. And he's willing to burn the Unders to find you."
+
+    # VISUAL: Both process. Marcus. Father. Hunting his son.
+    a "{i}Father's hunting me. Publicly. Aggressively.{/i}"
+    a "{i}Not quietly disappeared. Not 'training accident.'{/i}"
+    a "{i}He wants me dead. And he wants everyone to know why.{/i}"
+
+    a "What's he saying? Publicly?"
+    z "That you're a traitor. That you conspired with terrorists."
+    z "That the Purge was necessary because of intel leaks."
+    z "He's blaming the 100,000 deaths on resistance activity."
+    z "(bitter) And people believe him. Because they always do."
+
+    l "He's rewriting it. Making us the villains."
+    z "Of course he is. That's how Echelon works."
+    z "Truth doesn't matter. Only narrative."
+
+    # VISUAL: Zira opens door. Hallway beyond. Dark. Dangerous.
+    z "Stay here. Don't leave. Don't answer the door."
+    z "I'll be back tomorrow. Maybe with good news."
+    z "Probably with bad news. Expect bad news."
+
+    a "Zira. Thank you. For everything."
+    z "(pauses) Don't thank me yet. You might not survive long enough to mean it."
+    z "But... you're welcome. I guess."
+    z "(almost leaves, stops) And Glass?"
+    a "Yeah?"
+    z "Stop calling yourself Glass. You're not that anymore."
+    z "Figure out what you are. Before this city decides for you."
+
+    # VISUAL: She leaves. Door closes. Lock engages. Alone again.
+    "{i}Gone. Again. Leaving them in the dark.{/i}"
+    "{i}With supplies. With warnings. With impossible hope.{/i}"
+
+    # VISUAL: Both sit. Processing everything. Reality fully settling now.
+    l "We're fucked."
+    a "We established that."
+    l "No, I mean really fucked. Aeron, listen to what she said."
+    l "Echelon's hunting us. Locals hate us. We have no money."
+    l "And the one person who might help us wants us dead."
+    l "How exactly do we survive this?"
+
+    # VISUAL: He looks at supplies. Clothes. Food. Fake IDs.
+    a "One day at a time. Like Zira said."
+    l "That's not a plan."
+    a "It's the only plan we have."
+
+    # VISUAL: He picks up fake IDs. Examines them. Basic. Functional.
+    # PROP: ID cards. Photos (theirs, slightly altered). Names (not theirs).
+
+    a "{i}Kade Voss. That's my new name.{/i}"
+    a "{i}Lower Spans worker. Sector 6. Unremarkable. Forgettable.{/i}"
+    a "{i}Not Glass. Not Rylan. Not Echelon.{/i}"
+    a "{i}Just... nobody. Trying to survive.{/i}"
+
+    l "(picks up her ID) Mira Chen. Sector 7."
+    l "(hollow laugh) Ironic. Sector 7."
+    a "What?"
+    l "Nothing. Just... ghosts everywhere."
+
+    # VISUAL: Both stare at fake identities. Their old lives gone. New ones forced.
+    a "{i}Kade Voss. Aeron Rylan died on that rooftop.{/i}"
+    a "{i}Glass shattered in the Purge.{/i}"
+    a "{i}What's left... I don't know yet.{/i}"
+
+    # VISUAL: Lyra sets ID down. Looks at Aeron. Vulnerable. Scared.
+    l "I don't know how to do this."
+    a "Do what?"
+    l "Be nobody. I've been Echelon my whole life."
+    l "Perfect soldier. Model citizen. Proof the system works."
+    l "Now I'm... Mira Chen. Worker. Nobody. Nothing."
+    l "I don't know how to be nothing."
+
+    # VISUAL: He moves closer. Not touching. Just present. Grounding.
+    a "Then we learn together."
+    a "Neither of us knows how to do this. But we're here."
+    a "And as long as we're here, we're not nothing."
+    l "(quiet) What are we, then?"
+    a "...Survivors. For now. That's enough."
+
+    # VISUAL: She leans against him. Shoulder to shoulder. Exhaustion winning.
+    "{i}She leans. He doesn't move. Both too tired for anything else.{/i}"
+    "{i}Two people in a concrete box. Hunted. Hated. Alone.{/i}"
+    "{i}But not dead. Not yet.{/i}"
+
+    l "Do you think we'll make it?"
+    a "I don't know."
+    l "Honest answer. Thank you."
+    a "We made it this far. That counts for something."
+    l "Does it? Or are we just delaying the inevitable?"
+
+    # VISUAL: Long silence. No good answer. Just survival.
+    a "Get some rest. Tomorrow might be worse."
+    l "Worse than today?"
+    a "Always assume worse. Prepare for worse. Hope for better."
+    l "(bitter laugh) You sound like a resistance fighter already."
+    a "Do I?"
+    l "No. You sound terrified. Like me."
+
+    # VISUAL: Both settle in. Makeshift sleeping arrangements. Concrete floor.
+    # LIGHTING: Dim bulb stays on (too dangerous to sleep in dark).
+    # SOUND: City hum. Distant sirens. Their breathing. Exhaustion.
+
+    "{i}They sleep. Or try to. Bodies exhausted. Minds racing.{/i}"
+    "{i}Tomorrow: Zira returns. Maybe with Selene. Maybe with hope.{/i}"
+    "{i}Tonight: Just survival. Just breathing. Just existing.{/i}"
+
+    a "{i}From Aeries to Unders. From Glass to Kade.{/i}"
+    a "{i}From everything to nothing.{/i}"
+    a "{i}But Zira's right. I need to figure out what I am.{/i}"
+    a "{i}Before this city decides for me.{/i}"
+    a "{i}Before I become just another corpse in the ruins.{/i}"
+
+    # VISUAL: Hold on both sleeping. Vulnerable. Broken. Human.
+    "{i}Two people against a city. Impossible odds.{/i}"
+    "{i}But they're here. And they're alive.{/i}"
+    "{i}Tomorrow brings either hope or death.{/i}"
+    "{i}Tonight brings only darkness. And that's enough.{/i}"
+
+    # TRANSITION: Fade to black. Time passes. Morning comes.
+    # TEXT: "The Next Day"
+
+    # canon_note: Reality check complete - they understand how fucked they are
+    # canon_note: Fake IDs: Kade Voss (Aeron), Mira Chen (Lyra) - new identities
+    # canon_note: Bounty: 50,000 credits each - everyone's a potential threat
+    # canon_note: Aeries credits worthless - must learn Unders economy
+    # canon_note: Zira mentions Selene - rebel leader, Sector 10, probably wants them dead
+    # canon_note: Marcus rewriting narrative - blaming Purge on "resistance intel leaks"
+    # canon_note: Echelon flooding Lower Spans - Marcus hunting aggressively
+    # canon_note: "Stop calling yourself Glass" - identity crisis continues
+    # canon_note: Both learning to be "nobody" - stripped of former identities
+    # canon_note: Sets up Scene 3: More days passing, waiting, survival
+
+    return
+
+=== End of {rpy_file} ===
+
+=== Contents of act2_03_safe_house_planning.rpy ===
+
+# act2_03_safe_house_planning.rpy
+
+
+# =======================================================
+# ACT 2 - Scene 3: Safe House Planning (HUB)
+# =======================================================
+
+
+label act2_safe_house_planning:
+
+    # VISUAL: Safe house. Morning light through barred window. Day 2.
+    # LIGHTING: Dim gray dawn filtering in. Single bulb still on. Cold.
+    # SOUND: City waking up below; distant machinery; footsteps in hallway.
+
+    "{i}Day 2.{/i}"
+    
+    # VISUAL: Aeron wakes on concrete floor. Body stiff. Lyra already awake, staring at wall.
+    # Both look like hell. Dark circles. Exhaustion. Trauma settling into bones.
+
+    "{i}Morning. If you can call it that. Concrete floor leaves you cold and aching, mind worse than the body.{/i}"
+    "{i}Lyra's already awake, staring at nothing. Her hand moves to her Band in that automatic way she can't seem to stop.{/i}"
+
+    a "{i}Day 2 in the Unders. Still alive. That has to count for something.{/i}"
+    
+    # VISUAL: Lyra glances at him. Nods. No words. What is there to say?
+    l "(quiet) Did you sleep?"
+    a "Some. You?"
+    l "Not really."
+    a "Nightmares?"
+    l "Memories. Same thing at this point."
+
+    # SOUND: Door lock beeping. Both tense immediately. Hands move toward weapons they don't have.
+    "{i}The lock beeps. They freeze, hands moving instinctively toward weapons that aren't there.{/i}"
+    "{i}Still defenseless. Still terrified every time that door opens.{/i}"
+
+    # VISUAL: Door opens. Zira enters. Arms full of supplies again. Looks tired but alert.
+    z "Morning, fugitives. Still breathing, so that's a good start."
+
+    # VISUAL: She drops supplies. Food packets, water, something wrapped in cloth.
+    # SOUND: Packages hitting floor. Rustling. Practical.
+
+    z "Breakfast—protein bars and water. Not fancy, but it'll keep you functional."
+    a "You didn't have to—"
+    z "I did, actually. You two look like corpses and I can't have you dying before the fun starts."
+
+    # VISUAL: She sits cross-legged. Same comfortable confidence. Owns this space.
+    z "Alright, reality check part two. You listening?"
+    l "We're listening."
+    z "Good. What I'm about to say determines whether you survive the week."
+
+    # VISUAL: She pulls out small datapad. Lists. Notes. Plans.
+    z "You can't just hide in here forever. Echelon's hunting and locals are getting suspicious. Word spreads fast down here—two Echelon operatives vanished right after the Purge."
+    z "People connect dots fast in the Unders. You need cover."
+
+    a "The fake IDs—"
+    z "Are paper thin. IDs get you past casual inspection, sure. But actual survival? That requires integration. Reputation. Proof you belong here."
+    z "Right now you're obvious outsiders. That makes you targets."
+
+    l "What do we do?"
+    z "You work. You blend in. You earn your place one interaction at a time."
+    z "The Unders run on barter, favors, and reputation. You have exactly none of those things."
+    z "So you build them. One day at a time."
+
+    # VISUAL: She swipes through datapad. Shows them list.
+    z "I've identified seven things you need to survive down here. Call them priorities. You've got about a week before Selene decides whether she'll even meet you."
+    z "Use that week to prove you're serious. Prove you're not just Echelon trash hiding in a hole."
+
+    a "What are the seven things?"
+
+    # VISUAL: Zira leans forward. Direct. Practical. No room for negotiation.
+    z "First: work. You need money—real money. Scrip that actually spends down here, not your useless Aeries credits."
+    z "Your Echelon funds might work if you find the right black market dealers. But finding them means exposure. Better to earn clean."
+
+    z "Second: weapons. You're completely unarmed right now. That's suicide in the Unders. Knife minimum, gun if you can manage it. Something to defend yourselves with."
+    z "Everyone else down here is armed and they won't hesitate to use them."
+
+    z "Third: intel. You need to know Echelon's movements and patrol patterns if you want to stay ahead of them."
+    z "I have a contact—info broker. Brilliant but weird. She might help if you don't piss her off."
+
+    z "Fourth: medical supplies. People get hurt down here constantly. You want reputation? Save someone's life. Heal someone's kid."
+    z "There's an underground clinic with a medic who might help. Or might spit in your face considering Glass's reputation."
+
+    z "Fifth: reputation itself. Do something good. Help someone. Change how people see you."
+    z "Locals hate you right now. Change that one person at a time. Escort an elder, protect a vendor—small things that add up."
+
+    z "Sixth: survival skills. You don't know the Unders. The culture, the signals, the territories. I'll teach you. Not because I'm nice, but because you're useless to anyone otherwise."
+
+    z "Seventh: confront your past. Sector 10. The Sweep. You need to face it. There's a survivor out there—someone who remembers, someone who lost everything."
+    z "Talk to them. Apologize, listen, whatever it takes. Selene will ask, and if you haven't done it she'll know you're not serious."
+
+    # VISUAL: Both process. Seven tasks. One week. Overwhelming.
+    l "That's... a lot."
+    z "That's survival. You wanted to fight Echelon? This is step one. You can't fight an empire from a concrete box."
+    z "You need allies, resources, skills, trust. None of that comes free."
+
+    a "What about Selene? You said she's considering."
+    z "She is. Barely. I told her about the Sweep and the 200 you saved. She didn't shoot the messenger, so that's progress."
+    z "But she lost most of her cell in the Purge. Sector 10 was her territory. You swept Sector 10, which means you killed her people."
+    z "So yeah, she's considering. Considering whether to meet you or just put a bullet in your head the moment she sees you."
+
+    l "Will she help us?"
+    z "Depends. Do these seven things. Prove you're not just hiding. Prove you're willing to work, to change, to actually earn it."
+    z "Then maybe she gives you a chance. Or maybe she kills you anyway. Honestly could go either way."
+
+    # VISUAL: Zira stands. Stretches. Ready to leave again.
+    z "You've got one week. Seven days, seven tasks. Do them in whatever order you want—I don't care. But get them done. All of them."
+    z "Because when Selene agrees to meet, you better have something to show for this week."
+
+    a "Where do we start?"
+    z "That's up to you. You're adults. Figure it out."
+    z "Just don't do anything stupid. Which, given your track record, is probably a lot to ask."
+
+    # VISUAL: She moves to door. Pauses. Looks back.
+    z "I'll check in and leave messages when I can. Help where it makes sense. But I can't babysit. I have my own work, my own problems."
+    z "You're on your own most of the time. Get used to it."
+
+    l "Zira. Why are you doing this?"
+    z "(pauses) Because someone should. And nobody else will."
+    z "And because... I want to see if Glass can become something else. Call it curiosity, call it hope, call it stupidity."
+    z "Either way, don't waste it."
+
+    # VISUAL: She leaves. Door closes. Lock engages. Alone again.
+    "{i}Gone again. Leaving them with seven impossible tasks and one week to complete them.{/i}"
+    "{i}Everything rides on this. Every single thing.{/i}"
+
+    # VISUAL: Both sit. Looking at each other. Overwhelmed but determined.
+    l "Seven tasks."
+    a "Seven days."
+    l "Where do we even start?"
+    a "...I don't know. But we have to start somewhere."
+
+    # VISUAL: Aeron stands. Looks at door. The city beyond. Terrifying and necessary.
+    a "{i}One week to prove we're worth keeping alive. One week to build something from nothing.{/i}"
+    a "{i}Seven tasks. Every single one could kill us.{/i}"
+
+    l "(stands beside him) We do this together. Like everything else."
+    a "Together. Yeah."
+    l "What's first?"
+
+    # VISUAL: Aeron looks at her. Both broken. Both scared. Both committed.
+    a "We figure out who Kade Voss is. Who Mira Chen is. We go out there, we survive, we earn it."
+    l "One day at a time."
+    a "One day at a time."
+
+    # ==============================================================
+    # ACTIVITY HUB - Day Selection Loop
+    # ==============================================================
+
+    # Initialize activity tracking if first time
+    $ if not hasattr(store, 'activities_completed'):
+        $ activities_completed = []
+        $ current_day = 2
+        $ activities_remaining = 7
+
+    label act2_activity_hub:
+
+        # VISUAL: Hub scene. Safe house. Time of day varies based on current_day.
+        # LIGHTING: Changes per day (morning/afternoon/evening hints).
+        
+        # Check if returning from activity or first time
+        $ if len(activities_completed) > 0:
+            "{i}Day [current_day]. Another day, another task to complete.{/i}"
+            "{i}Still alive. Still moving forward. That has to mean something.{/i}"
+        else:
+            "{i}Day 2. The first step into this new life. Choose carefully.{/i}"
+
+        # Show progress
+        $ activities_remaining = 7 - len(activities_completed)
+        
+        if activities_remaining > 0:
+            "{i}[activities_remaining] tasks remaining before Selene decides our fate.{/i}"
+            
+            # Build activity menu dynamically based on what's completed
+            menu:
+                "What should we focus on today?"
+                
+                "Find Work - Earn scrip, establish cover" if "work" not in activities_completed:
+                    $ activities_completed.append("work")
+                    $ current_day += 1
+                    jump act2_activity_01_find_work
+                
+                "Acquire Weapons - Get armed, black market contact" if "weapons" not in activities_completed:
+                    $ activities_completed.append("weapons")
+                    $ current_day += 1
+                    jump act2_activity_02_acquire_weapons
+                
+                "Gather Intel - Meet info broker, learn patrol patterns" if "intel" not in activities_completed:
+                    $ activities_completed.append("intel")
+                    $ current_day += 1
+                    jump act2_activity_03_gather_intel
+                
+                "Medical Supplies - Underground clinic, prove worth" if "medical" not in activities_completed:
+                    $ activities_completed.append("medical")
+                    $ current_day += 1
+                    jump act2_activity_04_medical_supplies
+                
+                "Earn Reputation - Help locals, change perceptions" if "reputation" not in activities_completed:
+                    $ activities_completed.append("reputation")
+                    $ current_day += 1
+                    jump act2_activity_05_earn_reputation
+                
+                "Survival Skills - Learn the Unders with Zira" if "survival" not in activities_completed:
+                    $ activities_completed.append("survival")
+                    $ current_day += 1
+                    jump act2_activity_06_survival_skills
+                
+                "Confront the Past - Return to Sector 10, face survivor" if "past" not in activities_completed:
+                    $ activities_completed.append("past")
+                    $ current_day += 1
+                    jump act2_activity_07_confront_past
+        
+        # All activities completed - trigger next story beat
+        else:
+            "{i}Seven days. Seven tasks. All completed, every single one of them.{/i}"
+            "{i}Time to see if it was enough to earn Selene's attention.{/i}"
+            jump act2_06_the_message
+
+    # canon_note: Hub established - 7 activities over 7 days (Days 2-8)
+    # canon_note: Activities can be done in any order - player choice matters
+    # canon_note: Each activity = full scene, returns to hub after completion
+    # canon_note: Zira's seven tasks: work, weapons, intel, medical, reputation, survival, past
+    # canon_note: Selene mentioned - waiting to see if they're serious, will respond after tasks done
+    # canon_note: One week timeline established - urgency building
+    # canon_note: "Prove Glass can become something else" - Zira's core motivation
+    # canon_note: Activities_completed list tracks progress, prevents repeating
+    # canon_note: Current_day advances with each activity (Day 2 → Day 8)
+    # canon_note: All 7 complete → Scene 6 triggers (Selene's message arrives)
+
+    return
+
+=== End of {rpy_file} ===
+
+=== Contents of act2_04_activity_01_find_work.rpy ===
+
+# act2_activity_01_find_work.rpy
+
+
+# =======================================================
+# ACT 2 - Activity 1: Find Work
+# =======================================================
+
+
+label activity_find_work:
+
+    # VISUAL: Lower Spans. Day. Sector 6 market district. Crowded. Alive. Chaotic.
+    # LIGHTING: Natural light filtered through grates above. Neon signs. Smoky haze.
+    # SOUND: Vendors calling out; haggling; machinery; life happening; survival economics.
+
+    #scene bg_sector6_market with fade
+
+    "{i}Day 2. Activity: Find Work.{/i}"
+    a "{i}Zira said I need money. Scrip, not Aeries credits.{/i}"
+    a "{i}Credits might work at some places, but scrip is what the Unders actually use.{/i}"
+
+    # VISUAL: Aeron walking through market. Wearing Unders clothes (if Activity 6 done) or civilian wear.
+    # People bustle past. Vendors hawking goods. Life compressed and vibrant.
+
+    "{i}The market is chaos made economy. Everything's for sale. Everything's negotiable.{/i}"
+    "{i}Food, tech, weapons, medicine, information. If you need it, someone's selling it.{/i}"
+    "{i}And everyone's working. Because down here, you work or you starve.{/i}"
+
+    # VISUAL: He scans for opportunities. Signs: "Help Wanted." "Worker Needed." Hand-written.
+    a "{i}I need work. Something that pays. Something that doesn't ask questions.{/i}"
+    a "{i}Zira said market stalls are always hiring. Manual labor. Loading. Repairs.{/i}"
+    a "{i}Nothing glamorous. But I'm not Glass anymore. Glamour isn't an option.{/i}"
+
+    # VISUAL: Three options visible. Three different vendors needing help.
+    # OPTION A: Food stall (heavy lifting, simple work)
+    # OPTION B: Repair shop (technical work, more pay)
+    # OPTION C: Smuggling run (risky, highest pay)
+
+    menu:
+        "Three vendors are hiring. Choose where to work:"
+        
+        "Food stall—Help vendor with heavy lifting and deliveries.":
+            jump work_food_stall
+            
+        "Repair shop—Fix machinery and salvage tech.":
+            jump work_repair_shop
+            
+        "Smuggling run—Transport 'goods' across sectors (risky).":
+            jump work_smuggling_run
+
+# =======================================================
+# WORK OPTION A: FOOD STALL
+# =======================================================
+
+label work_food_stall:
+
+    # VISUAL: Food stall. Vendor: older man, 50s, gruff but fair. Name: Kren.
+    # Stall loaded with crates. Produce. Preserved goods. Basic survival food.
+
+    "{i}Food stall. Owner looks exhausted. Crates piled high. Clearly needs help.{/i}"
+
+    # VISUAL: Aeron approaches. Kren looks up. Suspicious but desperate.
+    kren "You looking for work or just staring?"
+
+    a "Work. Sign says you're hiring."
+    kren "Depends. You strong? Reliable? Not gonna rob me the second I turn around?"
+
+    a "Strong enough. Reliable enough. Not a thief."
+    kren "(eyes narrow) You're new. Don't recognize your face."
+    kren "Where you from?"
+
+    # VISUAL: Critical moment. Lie or partial truth. Kren's judging.
+    menu:
+        "How do you answer?"
+        
+        "Truth (partial)—'Moved here recently. Need work. That's all.'":
+            $ kren_trust = 2
+            $ aeron_honest = True
+            
+            a "Moved here recently from... elsewhere. Need work. That's the situation."
+            kren "(studies him) 'Elsewhere' doing a lot of heavy lifting in that sentence."
+            kren "But you got honest eyes. Desperate eyes. I know desperate."
+            kren "(sighs) Fine. 50 scrip for the day. Help me load deliveries and move crates."
+            kren "You steal anything, I'll gut you myself. We clear?"
+            
+        "Deflect—'Does it matter? I need work, you need help.'":
+            $ kren_trust = 1
+            $ aeron_honest = False
+            
+            a "Does my history matter? You need help, I need scrip. That's the transaction."
+            kren "(frowns) Smart mouth. I don't like smart mouths."
+            kren "But you're right. I'm desperate enough to hire anyone who isn't actively bleeding."
+            kren "40 scrip for the day. You fuck up, I dock pay. Steal, I break fingers."
+            kren "That's the deal. Take it or leave it."
+
+    a "I'll take it. When do I start?"
+    kren "Now. Grab that crate and follow me."
+
+    # VISUAL: Aeron lifts crate. Heavy. Real weight. Manual labor beginning.
+    # SOUND: Grunt of effort. Crate settling on shoulder. Footsteps. Work starting.
+
+    "{i}The crate is heavier than it looks. Forty kilos at least.{/i}"
+    "{i}I've carried weapons. I've carried bodies. But this is different.{/i}"
+    "{i}This is survival. This is honest work. This is what being human means.{/i}"
+
+    # VISUAL: Montage. Hours passing. Loading. Unloading. Delivering. Sweat. Exhaustion.
+    # SOUND: Crates moving. Grunts. Footsteps. City hum. Work rhythm.
+
+    a "{i}Hours blend together. Lift. Carry. Stack. Repeat.{/i}"
+    a "{i}My back aches. My hands blister. My legs scream.{/i}"
+    a "{i}But I keep moving. Because this is what I chose.{/i}"
+
+    # VISUAL: Mid-day. Break. Kren offers water. Sits beside Aeron.
+    kren "(hands water) You work hard. Didn't expect that from a newcomer."
+    a "(drinks gratefully) Thanks. Needed this."
+    kren "Where'd you learn to lift like that? Military?"
+
+    # VISUAL: Aeron tenses slightly. Truth too close. Deflects.
+    a "Learned young. Necessity."
+    kren "(nods) Fair enough. We all got histories we don't talk about."
+    kren "Down here, past doesn't matter much. Just what you do today."
+
+    # VISUAL: They sit in comfortable silence. Working-class solidarity.
+    a "{i}He doesn't ask more. Doesn't push. Just accepts.{/i}"
+    a "{i}That's the Unders. Everyone's running from something.{/i}"
+
+    # VISUAL: Afternoon. Final deliveries. Kren watching Aeron work. Approving.
+    kren "You're good at this. Better than the last three I hired."
+    kren "They quit after an hour. Said it was too hard."
+    kren "(grins) You got stamina. I respect that."
+
+    a "Just doing the job."
+    kren "Yeah, but most people don't. They do half the job and expect full pay."
+    kren "You actually earn your keep. Rare quality down here."
+
+    # VISUAL: Evening. Work done. Kren counts out scrip. Pays Aeron.
+    # PROP: Scrip notes. Local currency. Physical payment. Real.
+
+    kren "50 scrip. Promised amount."
+    kren "(adds extra note) And 10 more. Bonus. For not being useless."
+
+    a "You don't have to—"
+    kren "I don't do charity. You earned it. Take it."
+    kren "(slight pause) You need work again, come back. I'll hire you."
+    kren "Good workers are hard to find. Don't waste talent."
+
+    # VISUAL: Aeron takes money. First honest pay in his life. Feels different.
+    a "{i}60 scrip. Earned through sweat and labor.{/i}"
+    a "{i}Not orders. Not violence. Just work.{/i}"
+    a "{i}It feels... clean. Like I'm washing off Glass one crate at a time.{/i}"
+
+    a "Thank you. I'll remember that."
+    kren "Don't thank me. Just show up if you come back."
+    kren "(waves him off) Now get out of here. I'm closing up."
+
+    # VISUAL: Aeron leaves market. Exhausted but accomplished. Small victory.
+    a "{i}First honest work in my life. First money earned without blood.{/i}"
+    a "{i}60 scrip. Not much. But it's mine. Really mine.{/i}"
+    a "{i}Maybe that's what being human feels like. Earning instead of taking.{/i}"
+
+    $ scrip += 60
+    $ contacts["kren"] = {"name": "Kren", "trust": kren_trust, "met": True, "skills": ["supplies", "local_gossip"], "location": "Sector 6 Market"}
+    $ reputation_unders += 2
+    
+    jump work_complete
+
+# =======================================================
+# WORK OPTION B: REPAIR SHOP
+# =======================================================
+
+label work_repair_shop:
+
+    # VISUAL: Repair shop. Cluttered. Machines everywhere. Owner: woman, 30s, grease-stained. Name: Vika.
+    # Tech salvage. Broken equipment. Constant repairs needed.
+
+    "{i}Repair shop. Machines piled high. Everything broken. Everything salvageable.{/i}"
+
+    # VISUAL: Aeron enters. Vika doesn't look up. Working on something. Focused.
+    a "Sign says you're hiring."
+    v "(not looking up) Can you solder? Do you know circuit architecture? Can you identify pre-Collapse tech?"
+
+    a "I can solder. Basic circuit knowledge. Some tech identification."
+    v "(finally looks up) Military training?"
+
+    # VISUAL: Aeron freezes. She's perceptive. Dangerous question.
+    a "Why do you ask?"
+    v "Because your posture screams 'I was trained to kill' and your hands have calluses from weapon grips, not tools."
+    v "I'm not judging. Just observing. Lots of ex-military down here."
+    v "(back to work) Can you follow instructions and not blow up my shop?"
+
+    a "Yes to both."
+    v "70 scrip for the day. You break something expensive, I dock pay."
+    v "Help me repair these salvaged units. We're behind schedule."
+
+    # VISUAL: She gestures to pile of broken tech. Daunting. Overwhelming.
+    a "{i}I know weapons. I know combat systems. But civilian tech?{/i}"
+    a "{i}This is going to be harder than lifting crates.{/i}"
+
+    # VISUAL: Montage. Repairs. Soldering. Learning. Vika teaching when needed.
+    # SOUND: Soldering iron hissing. Tools clinking. Machines humming to life.
+
+    "{i}Hours of delicate work. Circuit boards. Wiring. Components.{/i}"
+    "{i}Vika's patient but exacting. No mistakes allowed.{/i}"
+
+    a "{i}I learned fast. Military precision helps. But this is creation, not destruction.{/i}"
+
+    # VISUAL: Mid-day. Vika examining Aeron's work. Nods approval.
+    v "Not bad. You learn quick."
+    v "Most people I hire burn themselves out in the first hour."
+    v "You've got steady hands. Good for this work."
+
+    a "Steady hands come from training."
+    v "Military sniper training, I'd guess. But you're not sniping anymore."
+    v "(doesn't push) Whatever you're running from, you're useful here."
+
+    # VISUAL: They work side by side. Companionable silence. Mutual respect.
+    "{i}She doesn't ask. Doesn't judge. Just works beside me.{/i}"
+    "{i}That's respect. Real respect. Earned through competence.{/i}"
+
+    # VISUAL: Evening. Multiple units repaired. Vika impressed.
+    v "You're good at this. Really good. Better than me at your age."
+    v "If you want steady work, I'll hire you regularly. 70 scrip per day."
+    v "I need someone reliable. You seem reliable."
+
+    a "I'll consider it. Thank you."
+    v "(hands him scrip) 70 as promised. You earned it."
+    v "And here— (hands small tool) Precision soldering iron. Yours. You'll need it."
+
+    # VISUAL: Small gift. Tool. Practical and valuable. Shows trust.
+    a "I can't take this—"
+    v "You can and you will. Can't have my worker using shit tools."
+    v "Consider it an investment. Come back, that tool pays for itself."
+
+    # VISUAL: Aeron accepts. Grateful. Tool feels significant. Skill acknowledged.
+    a "{i}A tool. Given freely. Because she values my work.{/i}"
+    a "{i}Not weapons. Not violence. Tools for building.{/i}"
+    a "{i}Maybe I can be more than Glass. Maybe I can create instead of destroy.{/i}"
+
+    $ scrip += 70
+    $ inventory.append("precision_soldering_iron")
+    $ contacts["vika"] = {"name": "Vika", "trust": 2, "met": True, "skills": ["repair", "tech_salvage"], "location": "Sector 6 Repair Shop"}
+    $ reputation_unders += 1
+    $ skill_basic_repair = True
+    
+    jump work_complete
+
+# =======================================================
+# WORK OPTION C: SMUGGLING RUN
+# =======================================================
+
+label work_smuggling_run:
+
+    # VISUAL: Dark alley. Shady contact. Name: Rax. Dangerous eyes. Calculating.
+    # This is illegal work. Higher pay. Higher risk.
+
+    "{i}Smuggling run. The riskiest option. The highest pay.{/i}"
+    "{i}Rax doesn't look trustworthy. But I need money.{/i}"
+
+    rax "You looking for easy money or real money?"
+    a "What's the difference?"
+    rax "Easy money is safe and small. Real money is dangerous and big."
+    rax "I've got a package. Needs to get from Sector 6 to Sector 4. Echelon's watching the route."
+    rax "100 scrip if you make the run without getting caught."
+
+    a "What's in the package?"
+    rax "Doesn't matter. You're courier, not inspector."
+    rax "You get caught, you don't know me. You don't mention me. You take the fall alone."
+    rax "That's the deal. Take it or leave it."
+
+    # VISUAL: Risky. Could go wrong. But 100 scrip is significant money.
+    menu:
+        "Accept the smuggling run?"
+        
+        "Accept—Take the risk for the money.":
+            $ accepted_smuggling = True
+            jump smuggling_run_gameplay
+            
+        "Decline—Too risky, find safer work.":
+            $ accepted_smuggling = False
+            a "Too risky. I'll find work elsewhere."
+            rax "(shrugs) Your loss. More for someone else."
+            "{i}I leave. Safer options exist. Not worth the risk yet.{/i}"
+            jump activity_hub  # Return to choose different work
+
+label smuggling_run_gameplay:
+
+    rax "Smart choice. Here's the package. Don't open it. Don't drop it."
+    rax "Route's marked on this map. Avoid main streets. Echelon patrols every 15 minutes."
+    rax "Deliver to contact at this address. He'll pay you. I get my cut later."
+
+    # VISUAL: Aeron takes package. Small. Heavy. Illegal. Unknown contents.
+    "{i}The package feels dense. Could be tech. Could be drugs. Could be worse.{/i}"
+    "{i}I don't ask. Courier doesn't ask.{/i}"
+
+    # VISUAL: Smuggling route. Stealth gameplay. Avoid patrols. Use shadows.
+    # SOUND: Footsteps (his, trying to be quiet). Distant patrols. Tension.
+
+    "{i}I move through alleys. Staying low. Staying quiet.{/i}"
+    "{i}Echelon patrol passes. Twenty meters away. I hold breath.{/i}"
+
+    # MINI-GAME: Stealth choices. Avoid detection.
+    menu:
+        "Echelon patrol approaching. How do you avoid them?"
+        
+        "Hide behind dumpster—Wait for them to pass.":
+            "{i}I duck behind dumpster. Hold still. Patrol passes.{/i}"
+            "{i}Close. Too close. But I'm safe.{/i}"
+            $ stealth_success = True
+            
+        "Sprint across opening—Risk it to save time.":
+            "{i}I sprint. Fast. Quiet as possible.{/i}"
+            "{i}Patrol turns. Sees movement. Shouts.{/i}"
+            "{i}FUCK. Run. RUN.{/i}"
+            $ stealth_success = False
+
+    if stealth_success:
+        # SUCCESS PATH
+        "{i}I make it to delivery point. No detection. Clean run.{/i}"
+        
+        # VISUAL: Contact waiting. Takes package. Counts out scrip.
+        contact "Clean run. Impressive. Here's your 100 scrip."
+        contact "Rax will be pleased. You need more work, come find us."
+        
+        $ scrip += 100
+        $ reputation_unders += 1
+        $ contacts["rax"] = {"name": "Rax", "trust": 1, "met": True, "skills": ["smuggling", "black_market"], "location": "Sector 6 Shadows"}
+        
+        "{i}100 scrip. Risky but successful. Highest pay I've earned.{/i}"
+        "{i}But it feels dirty. This isn't honest work. This is survival.{/i}"
+        "{i}Still... money is money. And I need it.{/i}"
+        
+    else:
+        # FAILURE PATH
+        "{i}Patrol chases. I drop package to run faster.{/i}"
+        "{i}Escape through maintenance tunnels. Lose them.{/i}"
+        "{i}But package is gone. Mission failed.{/i}"
+        
+        # VISUAL: Return to Rax. Empty-handed. Angry.
+        rax "You lost the package?!"
+        a "Had to. Patrol was on me. It was the package or capture."
+        rax "Useless. Get out of here. No pay. No second chances."
+        
+        $ scrip += 0
+        $ reputation_unders -= 1
+        
+        "{i}No pay. Reputation damaged. Lesson learned.{/i}"
+        "{i}Smuggling isn't as easy as it looks. Risk isn't always worth reward.{/i}"
+
+    jump work_complete
+
+# =======================================================
+# WORK COMPLETE - RETURN TO HUB
+# =======================================================
+
+label work_complete:
+
+    # TRANSITION: Return to safe house. Day ending. Work complete.
+    scene bg_safe_house with fade
+
+    # VISUAL: Zira waiting. Curious about how work went.
+    z "How'd it go? Make any money?"
+    a "Yeah. Earned [scrip] scrip today."
+    z "Not bad for your first day working like a normal person."
+    z "(grins) How's it feel? Honest labor?"
+
+    a "Exhausting. Humbling. Different from anything I've done."
+    z "That's called being human. Welcome to it."
+    z "Get some rest. Tomorrow's another day of survival."
+
+    # REWARDS SUMMARY SCREEN:
+    "{b}Activity Complete: Find Work{/b}"
+    "
+    Rewards:
+    - Scrip Earned: [scrip]
+    - Contact Added: [depends on work choice]
+    - Reputation: [varies by choice]
+    - Experience: Manual labor, Unders economy, survival basics
+    
+    You now understand how the Unders economy functions.
+    You can work again for additional income if needed.
+    Scrip can be used to purchase items, bribe contacts, or trade favors.
+    "
+
+    $ activities_completed += 1
+    $ days_remaining -= 1
+    $ activity_work_done = True
+
+    # canon_note: First honest work Aeron's ever done - significant character moment
+    # canon_note: Learns Unders economy uses scrip (local currency) vs Aeries credits
+    # canon_note: Different work options = different contacts and skills gained
+    # canon_note: Kren (food vendor) = supplies contact, trustworthy, potential ally
+    # canon_note: Vika (repair shop) = tech contact, teaches repair skill, gives tool
+    # canon_note: Rax (smuggler) = black market contact, risky but lucrative
+    # canon_note: Scrip used for buying weapons, medkits, bribes throughout Act 2
+    # canon_note: "Earning instead of taking" = theme of humanization
+    # canon_note: Physical exhaustion from labor = humbling experience for Glass
+    # canon_note: Can repeat work if needed for more money (optional gameplay)
+
+    return
+
+=== End of {rpy_file} ===
+
+=== Contents of act2_06_activity_03_gather_intel.rpy ===
+
+# act2_activity_03_gather_intel.rpy
+
+
+# =======================================================
+# ACT 2 - Activity 3: Gather Intel (Meet Noelle)
+# =======================================================
+
+
+label activity_gather_intel:
+
+    # VISUAL: Lower Spans. Night. Sector 6 rooftops overlooking Echelon patrol routes.
+    # LIGHTING: Cold blue-white from streetlights below; neon glow distant; shadows deep.
+    # SOUND: City hum; distant patrols; Aeron's breathing; wind through metal.
+
+    #scene bg_sector6_rooftops with fade
+
+    "{i}Day 3. Activity: Gather Intel.{/i}"
+    "{i}Zira said know your enemy, so I'm learning.{/i}"
+
+    # VISUAL: Aeron crouched on rooftop edge. Binoculars (if acquired) or just eyes.
+    # Watching Echelon patrols below. Taking notes on old datapad.
+
+    "{i}Echelon patrols move like clockwork—predictable, every 20 minutes, same routes.{/i}"
+    "{i}Or they were. Something's changed.{/i}"
+
+    a "{i}The patrol patterns are shifting. Not random though. There's logic here—deliberate adaptation.{/i}"
+    a "{i}They're responding to resistance activity somehow.{/i}"
+    a "{i}But how? What's the underlying pattern?{/i}"
+
+    # VISUAL: He reviews notes. Frustrated. Data incomplete. Can't see the bigger picture.
+    "{i}Three nights of tracking and I still can't predict them.{/i}"
+    "{i}There's an algorithm here somewhere. I'm just not seeing it.{/i}"
+
+    # SOUND: Footstep. Soft. Behind him. Close.
+    # VISUAL: He tenses. Hand moves toward weapon (if acquired).
+
+    "{i}Not alone.{/i}"
+
+    # He spins. Ready. Tense.
+    # VISUAL: Figure stands 3 meters away. Female. Mid-20s. Arms crossed. Unimpressed.
+
+    n "You're reading that wrong."
+
+    # VISUAL: Noelle. Silver-blue eyes. Clinical posture. No threat display, just observation.
+    # LIGHTING: Cold blue glow from datapad illuminates her face. Sharp. Precise.
+
+    a "Who—"
+
+    n "The patrol shifts aren't random—they're algorithmic. Echelon uses predictive modeling to adapt their routes based on resistance activity patterns."
+    n "You're tracking outcomes, the physical movement patterns, but you're missing the inputs that feed their decision matrices."
+    n "That's why you can't predict them."
+
+    # VISUAL: She steps closer. Not threatening. Just... analyzing. Like he's data.
+    "{i}She moves like she's solving an equation, every step calculated and deliberate.{/i}"
+
+    a "(hand still on weapon) How long have you been watching me?"
+    n "Three nights, same as you've been watching them."
+    n "You're consistent and methodical, but your analysis has fundamental gaps."
+
+    a "And you're an expert?"
+    n "Yes."
+
+    # VISUAL: No hesitation. No arrogance. Just fact. She believes it completely.
+    a "{i}No bravado, no performance. She states it like math.{/i}"
+    a "{i}Two plus two equals four. She's an expert. Same certainty.{/i}"
+
+    a "Why tell me? Why not just keep doing your own thing?"
+    n "Because I need field data—real-time observations from someone who knows what they're looking at."
+    n "I can model algorithms, predict shifts, and map probabilities, but I need ground-truth verification to refine my accuracy."
+    n "You provide field observations, I provide predictive analysis. Both parties benefit from the exchange."
+
+    # VISUAL: She extends hand. Not friendly. Transactional. Like a business deal.
+    n "Noelle Korr. I used to work for Compliance Division as a neural conditioning researcher."
+    n "Until I discovered they were rewriting people's memories to maintain social obedience."
+    n "I objected to the ethical violations. They objected to my objection. Mutual termination of our relationship."
+    n "(matter-of-fact) Now I'm here, underground, and very interested in Echelon's predictive models."
+
+    # VISUAL: He hesitates. Compliance Division. Echelon. But she said 'used to.'
+    a "(carefully) You worked for Echelon?"
+    n "Past tense matters. I left when I discovered what they were really doing."
+    n "They're not just maintaining order—they're erasing cognitive dissent at the neurological level."
+    n "I had evidence. They wanted me silent. I declined and escaped with my research data."
+
+    # VISUAL: He takes her hand. Firm. Brief. Professional.
+    a "Kade Voss. Observer, currently gathering intel on patrol movements."
+    n "'Kade Voss' is an alias, but that's acceptable. I don't require real names for functional partnerships."
+    n "Your actual identity is irrelevant as long as your data is accurate."
+
+    # VISUAL: She releases hand. Pulls out her own datapad. More advanced. Covered in notes.
+    n "Show me your data and I'll correct your analysis."
+
+    # VISUAL: He hesitates. Sharing intel = risk. But she's right. He needs help.
+    a "{i}She's blunt, clinical, no social performance whatsoever.{/i}"
+    a "{i}Either completely genuine or the best actor I've ever encountered.{/i}"
+    a "{i}But she's right—I'm missing something. And I need answers.{/i}"
+
+    # He shows her datapad. She scans it. Eyes moving rapidly. Processing.
+    # VISUAL: Her face: focused, analytical, slight frown (data displeases her).
+
+    n "(scrolling quickly) This is incomplete—surface-level observations with no temporal cross-referencing."
+    n "You're tracking current patterns but not historical trends or predictive modeling."
+    n "Echelon adapts every 72 hours based on resistance activity metrics. You've captured one cycle, which is insufficient for meaningful prediction."
+
+    a "(defensive) I've been tracking for three nights—"
+    n "Right, three nights equals one cycle. You need minimum three cycles—nine nights of continuous observation—before the underlying patterns become statistically visible."
+    n "Single-cycle data is essentially noise without context."
+
+    # VISUAL: She pulls up her own data. Screen filled with charts, graphs, models.
+    n "I've been tracking for six weeks with historical data, predictive algorithms, and pattern analysis."
+    n "Their current patrol model is what I'm calling Adaptive Response Protocol 7."
+    n "It shifts every 68 to 76 hours depending on local resistance incidents and sector-specific threat assessments."
+    n "(points to map) Next shift happens in approximately 22 hours. Routes will change here, here, and here."
+
+    # VISUAL: She points to specific locations. Precise. Confident.
+    a "{i}She's not guessing. She knows this. But how?{/i}"
+
+    a "How can you be sure?"
+    n "Bayesian probability combined with historical precedent and pattern recognition. I've modeled their decision-making algorithm across 47 shift cycles."
+    n "Current confidence interval is about 89% with a margin of error around plus or minus 4%."
+    n "(slight shrug) If you want absolute certainty, you're asking the wrong person. Certainty is irrational in complex systems."
+    n "But high probability within acceptable error margins? That I can provide."
+
+    # VISUAL: He stares at her data. Complex. Beyond his training. But... logical.
+    a "You really know your stuff."
+    n "Yes, that's what I said initially. Are you experiencing comprehension delay or just processing the implications?"
+
+    # VISUAL: Pause. He realizes: she's not being rude. She's literal. No social filter.
+    a "{i}She doesn't do sarcasm or hints. Just direct truth.{/i}"
+    a "{i}It's almost refreshing after years of performance and masks.{/i}"
+
+    a "No, just not used to people being this direct."
+    n "Indirect communication is inefficient and introduces unnecessary ambiguity. I prefer clarity even when clarity creates social discomfort."
+    n "Most people find it off-putting, but it reduces misunderstandings by approximately 60%."
+
+    # VISUAL: She closes her datapad. Looks at him fully. Analyzing.
+    n "You're military trained—Echelon methodology specifically. I can tell from your observation technique and postural habits."
+    n "But you're here gathering intel against them, which creates an obvious contradiction."
+    n "(direct eye contact) So which is it? Defector or active infiltrator?"
+
+    # VISUAL: He tenses. This is the moment. Lie or truth?
+    menu:
+        "Tell the truth (partial)—'Defector. Very recently.'":
+            $ noelle_trust = 1
+            $ aeron_honest_with_noelle = True
+            
+            a "Defector. Very recently—less than a week."
+            n "(processing) Temporal context suggests defection during the Purge event. Causal relationship?"
+            a "Yes. I witnessed it and couldn't stay after that."
+            
+            n "(nods slowly) That's a logical response to severe cognitive dissonance."
+            n "You experienced ethical conflict when your actions contradicted your core values. The system rejected your humanity, or your humanity rejected the system."
+            n "Either framing leads to the same outcome—defection becomes psychologically necessary."
+            
+            a "You're not concerned that I was Echelon?"
+            n "Past tense is critical here. 'Was' versus 'is' changes the entire probability matrix."
+            n "Your current behavior patterns suggest genuine defection rather than active infiltration. Observable data supports your claim."
+            n "(tilts head) Probability you're deceiving me? Approximately 23%. That's within my acceptable risk threshold for potential partnerships."
+            
+            # VISUAL: She extends datapad toward him. Offering collaboration.
+            n "I'll share my predictive models if you share field observations. Together we achieve more accurate predictions and higher survival probability."
+            n "Does that sound reasonable?"
+
+        "Deflect—'Does it matter? I'm here now working against them.'":
+            $ noelle_trust = 0
+            $ aeron_honest_with_noelle = False
+            
+            a "Does it matter? I'm here now, actively working against Echelon."
+            n "(pause) Evasive response. You're declining to provide relevant contextual data."
+            n "That indicates either classified information constraints or trust issues, both of which are understandable but complicate partnership dynamics."
+            
+            a "I'm not trying to complicate things—"
+            n "Then provide context. Or don't—but understand that I calculate risk continuously."
+            n "Unknown variables increase uncertainty. Uncertainty decreases my willingness to share high-value intelligence."
+            
+            # VISUAL: She doesn't seem hurt. Just... calculating. Adjusting probability.
+            n "I'll share limited data—surface-level analysis only until you prove reliable."
+            n "If you demonstrate consistent accuracy and non-hostile intent, I'll increase information sharing accordingly."
+            n "Basic trust protocol. Does that work for you?"
+
+    # VISUAL: Either way, she extends datapad. Offering some level of partnership.
+    a "Acceptable. And... thank you."
+    n "Gratitude is unnecessary for transactional exchanges, but acknowledged anyway. You're welcome."
+
+    # VISUAL: She transfers data to his datapad. Files flowing. Advanced intel.
+    # SOUND: Electronic beeps. Data transfer. His pad suddenly much more useful.
+
+    "{i}Her data fills my datapad—charts, models, predictions, analysis.{/i}"
+    "{i}More intelligence than I could gather in months. She's sharing it in seconds.{/i}"
+
+    a "This is extensive. You're sure you want to share all this?"
+    n "Information hoarded is information wasted. Resistance requires distributed knowledge and redundant data storage."
+    n "Also, if you die with this data, I have backups in three separate locations. Risk mitigation."
+
+    # VISUAL: He can't tell if she's joking. Her face: completely neutral.
+    a "Right. Risk mitigation."
+    n "Was that intended as humor? I detected possible sarcasm but remain uncertain."
+    a "Honestly, I don't know either."
+    n "Acceptable answer. Ambiguity acknowledged. Moving forward."
+
+    # VISUAL: She moves to rooftop edge. Looks down at patrols. Observing.
+    n "Next patrol arrives in approximately 4 minutes. Route designation Alpha-7. Confidence level: 94%."
+    n "We'll observe together, verify my model's accuracy, and I'll adjust variables if the prediction fails."
+
+    # VISUAL: They stand side by side. Watching. Waiting. Silence comfortable (for her).
+    "{i}She doesn't fill silence with unnecessary words. Doesn't perform socially. Just exists.{/i}"
+    "{i}Watching data transform into reality. Equations becoming patrols.{/i}"
+
+    # SOUND: Patrol approaches below. Boots. Voices. Echelon soldiers.
+    # VISUAL: Exactly on schedule. Exactly the route she predicted.
+
+    n "Route Alpha-7, exactly as predicted. Model accuracy confirmed."
+    n "(small note of satisfaction) Good. I really dislike being wrong."
+
+    a "You do this every night? Predict their movements?"
+    n "Daily, yes. Predictive modeling has a calming effect on me—there's something deeply satisfying about finding order within apparent chaos."
+    n "It's also functionally useful for survival since avoiding Echelon requires knowing where they'll be before they arrive."
+
+    a "How long have you been down here living underground?"
+    n "Six months, three weeks, and two days since I left Compliance Division."
+    n "My survival rate has exceeded initial projections, which suggests successful environmental adaptation."
+    n "(slight pause) Though I do miss reliable data infrastructure and climate-controlled environments."
+
+    # VISUAL: She says it matter-of-fact. Missing climate control = missing family.
+    a "{i}She misses climate control, not people or comfort. Climate control.{/i}"
+    a "{i}I can't tell if that's sad or just... her. Just how her mind works.{/i}"
+
+    a "Do you work with others or primarily solo?"
+    n "Primarily solo. Social interaction requires significant energy that I prefer allocating toward research and analysis."
+    n "But I maintain a small network of contacts—information sources, occasional collaborators. People I can work with on specific projects."
+    n "(gestures between them) This qualifies as one. Mutually beneficial and surprisingly tolerable so far."
+
+    a "Tolerable. That's high praise."
+    n "(brief glance at him) You haven't annoyed me yet, which is statistically rare. Most people become irritating within the first ten minutes."
+    n "You're currently at 15 minutes with minimal irritation. That's promising."
+
+    # VISUAL: They watch patrols disappear. Silence returns. She prepares to leave.
+    n "I have sufficient observational data for tonight. I'm returning to run full analysis on the variables."
+    n "(transfers coordinates to his pad) Meet me here tomorrow at 23:00. Different location, same purpose. Try not to be late."
+
+    a "What if I can't make it?"
+    n "Then I work alone as usual, which I'm accustomed to."
+    n "(slight pause) But I'd prefer you attend. Your field observations improve my predictive accuracy by 12 to 18 percent, which is statistically significant enough to justify continued collaboration."
+
+    # VISUAL: She turns to leave. Stops. Looks back. Almost uncertain (rare for her).
+    n "Kade. One question before I go."
+    a "Yeah?"
+    n "Why defect specifically? What was the variable that shifted you from compliance to resistance?"
+
+    # VISUAL: He processes. How to explain the Purge? The guilt? The shattering?
+    a "I watched 100,000 people die in minutes because of decisions I made."
+    a "And I realized I couldn't be part of that system anymore."
+
+    n "(long pause, processing carefully) Causal guilt combined with ethical crisis. Your entire identity structure fractured when your actions contradicted your core values."
+    n "(quieter, more careful) That's... logical. Extremely painful, but logically consistent."
+    n "I'm sorry for what you're experiencing. Even though logically, expressing regret doesn't change past events or reduce your pain."
+
+    # VISUAL: She says it awkwardly. Like practicing a skill she's studied but not mastered.
+    a "Thank you. I think."
+    n "I'm not particularly skilled at emotional responses. They don't come naturally to me."
+    n "But the research data suggests empathy improves cooperative relationships, so I'm attempting it."
+    n "(slight uncertainty) Was that adequate?"
+
+    a "(small smile) You're doing fine."
+    n "(nods once) Noted. I'll continue making attempts then."
+
+    # VISUAL: She leaves. Disappears into shadows. Gone as suddenly as she appeared.
+    "{i}And just like that she's gone, like she was never here at all.{/i}"
+    "{i}But my datapad is full of her work—models, predictions, brilliant analysis.{/i}"
+
+    a "{i}Noelle Korr. Analyst. Former Compliance Division researcher.{/i}"
+    a "{i}Blunt, clinical, brilliant, and unexpectedly human beneath all that logic.{/i}"
+    a "{i}And somehow I think I just made an ally.{/i}"
+
+    # VISUAL: He reviews her data. Page after page. Intricate. Beautiful in its logic.
+    a "{i}She sees the world in patterns, algorithms, probabilities.{/i}"
+    a "{i}No performance, no masks, no social games. Just unfiltered truth.{/i}"
+    a "{i}It's strange and uncomfortable, but there's something honest about it.{/i}"
+    a "{i}Maybe that's what I need right now. Someone who can't lie even if she wanted to.{/i}"
+
+    # TRANSITION: Return to safe house. Report to Zira. Activity complete.
+    scene bg_safe_house with fade
+
+    # VISUAL: Zira examining the data Noelle provided. Impressed.
+    z "Where the hell did you get this? This is professional-grade intelligence analysis."
+    a "Met someone tonight. An analyst who's been tracking Echelon independently."
+    z "She? What's her name?"
+    a "Noelle Korr. Says she used to work for Compliance Division."
+
+    # VISUAL: Zira stops. Looks up sharp. Recognizes the name immediately.
+    z "(low whistle) Noelle Korr. I've heard of her."
+    z "Neural conditioning researcher. Absolutely brilliant. She disappeared from Echelon about six months ago."
+    z "Word is she stole massive amounts of classified research data. They've been hunting her ever since."
+
+    a "She mentioned discovering ethical violations. Memory alteration programs."
+    z "Yeah. She found proof that Echelon was literally rewriting people's memories to maintain compliance."
+    z "Erasing dissent at the neurological level. She tried to expose it internally, and they tried to erase her."
+    z "(grins) But she got out with her research intact. And now she's working with you."
+
+    a "Is that a problem?"
+    z "Problem? Glass, you just partnered with one of the most wanted defectors in Solveil."
+    z "(looks at data again) This is incredibly valuable. Keep working with her."
+    z "She's probably the smartest person in this entire city, and if she's willing to share intel with you, don't fuck it up."
+
+    a "She wants to meet again tomorrow night. Same arrangement."
+    z "Go. Learn everything she'll teach you. This kind of predictive analysis could save dozens of lives."
+    z "(serious now) But be careful. She's Echelon's second-most-wanted target after you."
+    z "If they find you together, they'll kill both of you without hesitation."
+
+    a "Understood."
+    z "Good. Now get some rest. Tomorrow's another day of not dying, and apparently you have a date with a genius."
+
+    # TRANSITION: End of activity. Rewards gained. Contact added.
+
+    # REWARDS SUMMARY SCREEN:
+    "{b}Activity Complete: Gather Intel{/b}"
+    "
+    Rewards:
+    - Intel Document: 'Predictive Patrol Models' (Advanced)
+    - Contact Added: Noelle Korr (Analyst, Trust: [noelle_trust])
+    - Reputation: +1 (Demonstrated competence in intelligence gathering)
+    
+    New Ability Unlocked: 'Pattern Recognition'
+    - Reduced detection chance during Echelon encounters
+    - Improved mission planning capabilities
+    - Better tactical decision-making
+    
+    Noelle Korr is now available for future collaboration.
+    Meet her tomorrow night to continue intelligence operations.
+    "
+
+    $ activities_completed += 1
+    $ days_remaining -= 1
+    $ intel_documents.append("predictive_patrol_models")
+    $ contacts["noelle"] = {"trust": noelle_trust, "met": True, "skills": ["analysis", "prediction", "neural_research"]}
+    $ reputation_unders += 1
+    $ activity_intel_done = True
+
+    # canon_note: Noelle introduced - brilliant analyst, former Compliance Division researcher
+    # canon_note: Neural conditioning backstory - Echelon rewrites memories for social compliance
+    # canon_note: She's direct and literal but not robotic - autism-coded respectfully with natural speech
+    # canon_note: "Pattern Recognition" ability reduces Echelon detection in future missions
+    # canon_note: She's Echelon's second-most-wanted (after Aeron) - dangerous partnership
+    # canon_note: She doesn't know he's Glass yet - discovery comes in future scene
+    # canon_note: Trust variable affects her willingness to share intel and help
+    # canon_note: Her emotional awkwardness is genuine attempt at empathy, not coldness
+    # canon_note: She'll develop throughout story - logic → understanding → empathy through Aeron
+    # canon_note: "No unit for this" moment comes later when she realizes she has feelings
+
+    return
+
+=== End of {rpy_file} ===
+
+=== Contents of act2_07_activity_04_medical_supplies.rpy ===
+
+# act2_activity_04_medical_supplies.rpy
+
+
+# =======================================================
+# ACT 2 - Activity 4: Medical Supplies (Meet Tessa)
+# =======================================================
+
+
+label activity_medical_supplies:
+
+    # VISUAL: Lower Spans. Day. Sector 7. Hidden alley leading to underground clinic.
+    # LIGHTING: Dim natural light filtered through grates above. Warm amber glow from clinic entrance.
+    # SOUND: Distant city hum; voices murmuring; someone crying softly; life struggling.
+
+    scene bg_sector7_alley with fade
+
+    "{i}Day 4. Activity: Medical Supplies.{/i}"
+    "{i}Zira said find a medic. Someone who can patch us up when things go wrong.{/i}"
+    "{i}Because things will go wrong. They always do.{/i}"
+
+    # VISUAL: Aeron following directions. Alley narrows. Graffiti on walls. Signs of life.
+    "{i}The address Zira gave me leads here. Sector 7. Deep in the Unders.{/i}"
+    "{i}A clinic. Hidden. For people who can't afford Echelon's sanitized medicine.{/i}"
+
+    # VISUAL: Entrance marked with faded green symbol. Hand-painted. Medical cross.
+    # SOUND: Voices inside. Someone groaning in pain. Someone speaking softly, gently.
+
+    a "{i}Green mark. Medical cross. This is it.{/i}"
+    a "{i}Zira said her name is Tessa. Runs a scavenger-care commune.{/i}"
+    a "{i}Hybrid medicine. Organic and cybernetic. Whatever keeps people alive.{/i}"
+
+    # VISUAL: He pushes through hanging cloth serving as door. Enters clinic.
+    # LIGHTING: Warm amber-green glow. Bioluminescent plants growing in corners. Soft, alive.
+    # SOUND: Quiet. Reverent almost. People resting. Breathing. Healing.
+
+    scene bg_tessas_clinic with fade
+
+    "{i}The clinic smells like herbs and antiseptic mixed together. Life trying to survive.{/i}"
+    "{i}Makeshift beds line the walls. Injured people resting. Burns. Wounds. Sickness.{/i}"
+    "{i}And in the center, kneeling beside a man with severe burns—her.{/i}"
+
+    # VISUAL: Tessa. Mid-20s. Dark hair tied back. Gentle hands glowing faint green.
+    # She's applying bioluminescent gel to burn victim. Speaking softly. Calming.
+    # LIGHTING: Green glow from her hands. Organic compound. Healing made visible.
+
+    t "(soft, rhythmic) Breathe. That's all I'm asking right now. Just breathe with me."
+    t "In through your nose. Hold it. Out through your mouth."
+    t "Good. You're doing so well. I know it hurts, but you're here. You're alive."
+
+    # VISUAL: Burn victim (male, 40s) trembling. Tears streaming. But breathing.
+    "{i}His skin is charred black in places. Red and weeping in others. Purge victim.{/i}"
+    "{i}She works with steady hands. No hesitation. No revulsion. Just care.{/i}"
+
+    # VISUAL: Aeron stands at entrance. Watching. Something in his chest tightens.
+    a "{i}She's healing someone I helped create. My mercy triggered the Purge.{/i}"
+    a "{i}These burns exist because I saved 200 people. Cascade of consequences.{/i}"
+
+    # VISUAL: Tessa looks up. Eyes meet his. Recognition immediate and complete.
+    # Her hands don't stop working. Gel continues spreading. Patient comes first.
+
+    t "(quiet, not stopping) You're Glass."
+
+    # VISUAL: Injured man's eyes snap open. Others in clinic turn. Tension spikes instantly.
+    # SOUND: Breathing changes. Fear. Anger. Recognition spreading like wildfire.
+
+    "{i}The name echoes in the small space. Glass. Everyone knows Glass.{/i}"
+    "{i}Everyone lost someone to Glass. Sector 10. The Sweep. 600 dead.{/i}"
+
+    a "...Yes."
+
+    # VISUAL: Tessa returns focus to patient. Doesn't look at Aeron. Keeps working.
+    t "(to patient) It's alright. Stay still. I'm almost finished."
+    t "(to Aeron, calm) Why are you here?"
+
+    a "I need medical supplies. Someone said you—"
+    t "I know what you need. I asked why you're here."
+    t "(still not looking at him) In the Unders. Alive. When Echelon should be hunting you."
+
+    # VISUAL: She finishes applying gel. Bandages the burns carefully. Tender and precise.
+    t "(to patient) There. The gel will keep working for the next six hours. You'll feel it cooling."
+    t "Rest now. I'll check on you in an hour."
+
+    # VISUAL: Patient nods weakly. Looks at Aeron with mix of fear and hatred. Says nothing.
+    # Tessa stands. Turns fully toward Aeron. Studies him. Not with hate. With sadness.
+
+    t "You caused this. The Purge. These injuries. These deaths."
+    a "I didn't—"
+    t "Your actions triggered it. That's causation enough, even if you didn't light the fires yourself."
+
+    # VISUAL: She walks to sink. Washes hands. Methodical. Centered. Processing.
+    "{i}She's calm. Too calm. Like she's decided something already.{/i}"
+    "{i}Judgment rendered before I even explained.{/i}"
+
+    a "I'm not asking for forgiveness—"
+    t "(turns, looks at him fully) Then what are you asking for?"
+
+    # VISUAL: Long pause. What IS he asking for? Supplies? Absolution? A reason to keep going?
+    a "...Help. I need help to keep fighting."
+    t "Fighting who? Echelon? Or yourself?"
+
+    # VISUAL: The question lands like a blade. Clean. Precise. True.
+    a "{i}Herself? Both? I don't even know anymore.{/i}"
+
+    t "(softer now) Why are you here, Aeron? In the Unders. Away from everything you knew."
+    t "You could have stayed in Aeries. Stayed Glass. Stayed safe."
+    t "But you didn't. Why?"
+
+    a "Because I watched 100,000 people die and I couldn't be part of that system anymore."
+    a "Because I'm trying to fix what I broke. Even if I can't. Even if it kills me."
+
+    # VISUAL: She studies him. Eyes deep and warm and infinitely sad. Measuring truth.
+    t "You can't fix 100,000 dead, Aeron. You can't patch souls with medicine."
+    t "But you can help the living. If that's truly what you want."
+
+    # VISUAL: She moves to cabinet. Opens it. Pulls out medkit. Well-stocked. Organized.
+    # Places it on table between them. Offering. Testing.
+
+    t "I'm Tessa Kael. I heal people. All people. Even those who don't deserve it."
+    t "(looks at him directly) Which means you too. Despite everything."
+
+    a "Why?"
+    t "Because mercy isn't about deserving. It's about choosing."
+    t "And I choose to believe you're here for the right reasons."
+    t "(slight pause) Prove me right. Or prove me a fool. Either way, I'll have tried."
+
+    # VISUAL: She pushes medkit toward him. Not freely given. Offered with expectation.
+    a "{i}She's not forgiving me. She's giving me a chance.{/i}"
+    a "{i}Burden of proof. Earn it through action.{/i}"
+
+    a "I don't know if I deserve this chance."
+    t "Probably not. But that's not for me to judge."
+    t "I heal. You fight. We both serve life in different ways."
+    t "(gentle but firm) Take the medkit. Use it to save someone. Then come back."
+    t "Show me Glass can do more than cut."
+
+    # VISUAL: He takes medkit. Heavy. Not just weight. Responsibility. Expectation.
+    a "Thank you."
+    t "Don't thank me yet. Gratitude means nothing until you've earned it."
+    t "Actions first. Words after."
+
+    # VISUAL: He turns to leave. Stops. Looks back at burn victim. At others resting.
+    a "These people. The burn victims. They're from the Purge?"
+    t "Most of them, yes. Survivors from Sectors 8, 9, and 10."
+    t "The ones who made it out. Barely."
+
+    a "How many?"
+    t "In my clinic right now? Fourteen. In all of Sector 7? Maybe a hundred."
+    t "(quiet) Out of 100,000. That's the survival rate."
+
+    # VISUAL: Numbers crushing him. 100,000 dead. 100 survived. Because of his mercy.
+    a "{i}My mercy killed 99,900 people.{/i}"
+    a "{i}The arithmetic of guilt. It never balances.{/i}"
+
+    t "You're calculating, aren't you? How many died because of you."
+    a "How did you—"
+    t "I see it in your face. The weight. The math."
+    t "(steps closer) Stop counting the dead, Aeron. Start counting the living."
+    t "You can't bring back 100,000. But you can save the next hundred."
+    t "That's how you fix it. One person at a time. Forever."
+
+    # VISUAL: She says it simply. Like it's obvious. Like redemption is just arithmetic.
+    a "That's... a long time."
+    t "Yes. It is."
+    t "(small sad smile) But you're here. Which means you're willing to try."
+    t "That's more than most people manage."
+
+    # VISUAL: Someone calls from across clinic. Another patient needs attention.
+    voice "Tessa? I need help over here."
+
+    t "Coming!"
+    t "(to Aeron) I have to go. People need me."
+    t "(hands him second medkit) Take this too. You'll need more than one."
+    t "And Aeron? Come back when you've used them. I want to know who you saved."
+
+    a "You want me to report back?"
+    t "I want you to remember their names. The people you save."
+    t "(firm) Because Glass killed 600 people. I want to know how many Aeron saves."
+    t "Keep count. It matters."
+
+    # VISUAL: She walks away. Returns to patients. Hands glowing green again. Life continuing.
+    "{i}She didn't forgive me. Didn't absolve me. Didn't make it easier.{/i}"
+    "{i}She just gave me work to do. People to save. A way forward.{/i}"
+    "{i}Maybe that's better than forgiveness. Maybe that's what I need.{/i}"
+
+    # VISUAL: He looks at medkits. Two of them. Heavy with expectation.
+    a "{i}Keep count, she said. Remember their names.{/i}"
+    a "{i}600 dead. How many living to balance that?{/i}"
+    a "{i}Infinite, probably. But I have to start somewhere.{/i}"
+
+    # VISUAL: He turns to leave. Stops at doorway. Looks back one more time.
+    # Tessa kneeling beside another patient. Green glow surrounding her hands. Healing.
+
+    a "{i}Tessa Kael. Healer. Heart of the Unders.{/i}"
+    a "{i}She sees the worst humanity has to offer and chooses compassion anyway.{/i}"
+    a "{i}Glass killed. Tessa heals.{/i}"
+    a "{i}Maybe that's who I need to learn from.{/i}"
+
+    # TRANSITION: Return to safe house. Report to Zira. Activity complete.
+    scene bg_safe_house with fade
+
+    # VISUAL: Zira sees the medkits. Raises eyebrow. Impressed.
+    z "Two medkits? She must like you."
+    a "She doesn't like me. She's testing me."
+    z "Same thing with Tessa. She only tests people she thinks are worth saving."
+    z "(grins) Told you to find a medic. Didn't expect you'd find the best one in the Unders."
+
+    a "She knew who I was. Immediately."
+    z "Everyone knows who you are, Glass. You're famous down here."
+    z "But Tessa doesn't work in hate. She works in hope."
+    z "If she gave you medkits, she's hoping you'll prove her right."
+
+    a "She said to come back. After I've used them. Tell her who I saved."
+    z "(softens) That sounds like Tessa. She collects names. Remembers everyone she heals."
+    z "Says it matters. That people deserve to be remembered."
+
+    # VISUAL: Aeron looks at medkits. Responsibility weighing.
+    a "What if I can't save anyone? What if I just make things worse?"
+    z "Then you try again. That's what Tessa does. Every day."
+    z "She loses patients. She loses people she cares about. But she keeps trying."
+    z "(firm) That's what separates people like her from people like Echelon."
+    z "Echelon stops trying. Tessa never does."
+
+    a "She's... different. From anyone I've met."
+    z "She's the best of us. Proof that kindness can survive even here."
+    z "Learn from her. Let her teach you how to save people instead of killing them."
+    z "(slight smile) Might be good for your soul. If you still have one."
+
+    a "I'm not sure I do."
+    z "Then let Tessa help you grow a new one. She's good at that."
+
+    # VISUAL: Aeron stores medkits carefully. Precious cargo. Lives waiting.
+    a "{i}Keep count. Remember their names.{/i}"
+    a "{i}600 dead. Now I count the living.{/i}"
+    a "{i}Starting now. Starting with whoever I save next.{/i}"
+
+    # TRANSITION: End of activity. Rewards gained. Contact added.
+
+    # REWARDS SUMMARY SCREEN:
+    "{b}Activity Complete: Medical Supplies{/b}"
+    "
+    Rewards:
+    - Medkit x2 (Can save critically injured allies)
+    - Contact Added: Tessa Kael (Healer, Compassion)
+    - Reputation: +2 (Tessa vouched for you to local community)
+    - Favor Owed: Tessa helped you; you owe her proof of change
+    
+    New Philosophy Unlocked: 'Count the Living'
+    - Track people saved, not just people killed
+    - Redemption through action, not words
+    - Names matter; remember everyone
+    
+    Tessa's clinic is now available as a safe location.
+    Return after using medkits to deepen relationship.
+    "
+
+    $ activities_completed += 1
+    $ days_remaining -= 1
+    $ medkits += 2
+    $ contacts["tessa"] = {
+        "name": "Tessa Kael",
+        "trust": 3,
+        "met": True,
+        "skills": ["healing", "empathy", "bio_mechanics"],
+        "location": "Sector 7 Clinic"
+    }
+    $ reputation_unders += 2
+    $ favors_owed_list.append("tessa_proof_of_change")
+    $ activity_medical_done = True
+    $ tessa_count_the_living = True  # Philosophy flag for tracking saves
+
+    # canon_note: Tessa introduced - field medic, bio-mechanic, emotional heart
+    # canon_note: "Count the living" philosophy - track saves not kills, redemption through action
+    # canon_note: She doesn't forgive Aeron, but gives him chance to prove himself
+    # canon_note: Purge survivors in her clinic - physical manifestation of Aeron's guilt
+    # canon_note: 100,000 dead vs 100 survived - harsh arithmetic of consequences
+    # canon_note: "Mercy isn't about deserving, it's about choosing" - core Tessa belief
+    # canon_note: She gave TWO medkits - more generous than necessary (she sees potential)
+    # canon_note: Wants him to return with names of people saved - accountability
+    # canon_note: Her clinic becomes safe house later (Act 2 Scene 20)
+    # canon_note: Green glow = bioluminescent healing gel (her signature)
+    # canon_note: She collects names, remembers everyone - opposite of Echelon's erasure
+    # canon_note: Tessa's role: teaches Aeron to save instead of kill, emotional grounding
+    # canon_note: Romance path: pure empathy, unconditional compassion, emotional safety
+
+    return
+
+=== End of {rpy_file} ===
+
+=== Contents of act2_08_activity_05_reputation.rpy ===
+
+# act2_activity_05_reputation.rpy
+
+
+# =======================================================
+# ACT 2 - Activity 5: Earn Reputation
+# =======================================================
+
+
+label act2_activity_05_earn_reputation:
+
+    # VISUAL: Safe house. Morning. Aeron preparing to go out.
+    # LIGHTING: Gray dawn through window. Cold but hopeful.
+    # SOUND: City waking. Distant voices. Life continuing.
+
+    "{i}Day [current_day]. Time to face the people who hate me.{/i}"
+    
+    # VISUAL: Aeron adjusting Unders clothes. Lyra watching.
+    a "{i}Zira said earn reputation. Help people. Change perceptions.{/i}"
+    a "{i}Sounds simple. Except everyone down here wants me dead.{/i}"
+
+    l "You sure about this?"
+    a "No. But we need allies. This is how we get them."
+    l "By helping the people whose families you killed?"
+    a "By helping the people whose families I saved. The 200. They're still out there somewhere."
+    l "And if you run into the ones you didn't save?"
+    a "...Then I deal with it. Same as everything else."
+
+    # VISUAL: She stands. Moves to him. Hand on his shoulder briefly.
+    l "Don't get yourself killed trying to be a hero. You're not good at it yet."
+    a "(bitter smile) Thanks for the vote of confidence."
+    l "I mean it. You go out there trying to save everyone and you'll end up dead in an alley."
+    l "Small steps. One person at a time. Like Zira said."
+    a "One person at a time. Right."
+
+    # TRANSITION: Out into the Unders. Morning market. People moving. Life happening.
+    # VISUAL: Lower Spans market district. Vendors setting up. Crowds thin but growing.
+    # LIGHTING: Artificial dawn. Neon signs. Steam vents. Industrial glow.
+    # SOUND: Vendors calling. Deals being made. City alive.
+
+    scene bg_lower_spans_market with fade
+
+    "{i}The market. Where I swept. Where they died. Where some lived.{/i}"
+    "{i}Every corner holds ghosts. Every face could be someone I saved or someone who lost everything because of me.{/i}"
+
+    # VISUAL: Aeron moving through crowd. Eyes down. Not drawing attention.
+    # People glance at him. Some recognize something. Most ignore.
+
+    a "{i}Kade Voss. Just another worker. Nobody important. Nobody dangerous.{/i}"
+    a "{i}Except I'm terrible at being nobody.{/i}"
+
+    # VISUAL: Old woman struggling with heavy crate. Vendor stall. No help coming.
+    "{i}There. Old woman. Heavy crate. No one helping.{/i}"
+
+    a "{i}Small steps. One person at a time.{/i}"
+
+    # ACTION: Approach and help or keep walking?
+    menu:
+        "The old woman struggles. No one helps. Everyone's too busy surviving."
+        
+        "Approach and help":
+            $ reputation_unders += 1
+            $ helped_elder = True
+            
+            # VISUAL: Aeron approaches. Cautious. Non-threatening.
+            a "Need a hand with that?"
+            
+            # VISUAL: She looks up. Suspicious. Everyone's suspicious down here.
+            elder "Who's asking?"
+            a "Nobody. Just someone passing by."
+            elder "(eyes narrow) Nobody helps for free in the Unders."
+            a "Then consider it unusual."
+            
+            # VISUAL: Long pause. She evaluates him. Decides.
+            elder "...Fine. Lift from that side. Don't drop it."
+            
+            # VISUAL: They lift together. Heavy. Aeron's muscles strain but he manages.
+            # SOUND: Crate scraping. Grunting effort. Set down with thud.
+            
+            "{i}Heavy. Whatever's in here weighs more than it looks.{/i}"
+            "{i}But we manage. Set it down without dropping it.{/i}"
+            
+            elder "(catches breath) Not bad. For nobody."
+            a "Glad I could help."
+            elder "What's your name, nobody?"
+            a "Kade. Kade Voss."
+            elder "Well, Kade Voss. You're either stupid or new. Nobody helps for free."
+            a "Maybe I'm both."
+            elder "(almost smiles) Maybe you are."
+            
+            # VISUAL: She digs in pocket. Pulls out small coin. Offers it.
+            elder "For your trouble."
+            a "Keep it. I didn't do it for money."
+            elder "(suspicious again) Then why?"
+            a "Because you needed help. That's enough."
+            
+            # VISUAL: She stares. Long. Then pockets coin.
+            elder "You're definitely new. That kind of thinking gets you killed."
+            elder "But... thank you. Don't make a habit of it."
+            a "I'll try not to."
+            
+            "{i}She turns back to her stall. Dismissing me. But I caught something in her eyes.{/i}"
+            "{i}Not trust. Not yet. But maybe... less hostility. That's something.{/i}"
+            
+        "Keep walking - too risky":
+            $ reputation_unders += 0
+            $ helped_elder = False
+            
+            "{i}Too risky. She might recognize me. Might call others.{/i}"
+            "{i}I keep walking. One less chance to help. One less person who might remember me differently.{/i}"
+            a "{i}Small steps. But I just took one backwards.{/i}"
+
+    # VISUAL: Continue through market. More opportunities. More chances.
+    "{i}The market continues. More people. More needs. More opportunities to prove I'm not Glass anymore.{/i}"
+
+    # VISUAL: Commotion ahead. Voices raised. Crowd gathering.
+    # SOUND: Shouting. Angry. Escalating.
+
+    "{i}Voices. Angry. Something's happening.{/i}"
+
+    # VISUAL: Push through crowd. See what's happening.
+    # MAN (young, angry) confronting VENDOR. Knife visible. Threatening.
+
+    man "You owe me! Three days late!"
+    vendor "I told you, business has been slow. The Purge scared everyone. No one's buying."
+    man "That's not my problem. You borrowed, you pay. That's how it works."
+    vendor "I don't have it. Not yet. Give me another week—"
+    man "I gave you three weeks already! No more extensions!"
+
+    # VISUAL: Knife moves closer. Vendor backing up. Scared. Crowd watching but not intervening.
+    "{i}Debt collection. Violent. Public. And no one's helping.{/i}"
+    "{i}Because down here, you don't interfere in debts. That's how you get killed.{/i}"
+
+    a "{i}Walk away. Not your business. Not your problem.{/i}"
+    a "{i}...Except it is. Because Glass walked away from 600 people. And they died.{/i}"
+
+    # ACTION: Intervene or walk away?
+    menu:
+        "The knife gleams. The vendor's terrified. The crowd watches. No one helps."
+        
+        "Intervene - talk the man down":
+            $ reputation_unders += 2
+            $ intervened_debt = True
+            $ made_enemy = True
+            
+            # VISUAL: Aeron steps forward. Hands visible. Non-threatening but firm.
+            a "Hey. Let's talk about this."
+            
+            # VISUAL: Man whirls. Knife pointed at Aeron now. Crowd tenses.
+            man "Who the fuck are you?"
+            a "Nobody. Just someone who thinks there's a better way to handle this."
+            man "Better way? He owes me! That's the only way that matters!"
+            a "He owes you money. Killing him means you never get paid. Where's the profit in that?"
+            
+            # VISUAL: Man hesitates. Logic penetrating rage. Barely.
+            man "So what? I let him walk? Show everyone they can fuck me over?"
+            a "No. You show everyone you're smart. That you get paid eventually instead of getting nothing."
+            
+            # VISUAL: Vendor watching. Hopeful. Terrified. Silent.
+            man "And how do I know he'll pay? How do I know this isn't just bullshit?"
+            a "Because I'll vouch for him. He doesn't pay in a week, you come find me."
+            
+            # VISUAL: Crowd murmurs. Bold move. Stupid move. Maybe both.
+            man "(laughs, bitter) You'll vouch for him? And who the fuck are you that your word means anything?"
+            a "Someone who keeps his word. That's all you need to know."
+            
+            # VISUAL: Long tense moment. Knife still out. Could go either way.
+            man "...Fine. One week. He doesn't pay, I find you. And if I can't find you, I come back here and finish this."
+            man "(to vendor) One week. Don't make me regret this."
+            
+            # VISUAL: Man sheathes knife. Walks away. Crowd disperses. Crisis averted.
+            "{i}He leaves. Knife goes away. Vendor's still alive.{/i}"
+            "{i}I just made a promise I have no idea how to keep. One week. Great.{/i}"
+            
+            # VISUAL: Vendor approaches. Shaking. Grateful. Overwhelmed.
+            vendor "Thank you. I don't... thank you. I thought he was going to kill me."
+            a "He still might if you don't pay him in a week."
+            vendor "I know. I'll figure something out. Business will pick up. It has to."
+            a "What's your name?"
+            vendor "Dren. I sell... I used to sell electronics. Parts. Now I sell whatever I can find."
+            a "Kade. And Dren? Find a way to pay him. Because I can't protect you forever."
+            vendor "I will. I promise. And thank you again. You... you saved my life."
+            
+            "{i}Saved his life. One person. That's one more than Glass would have saved.{/i}"
+            "{i}One more name for Tessa's count. If I can keep him alive.{/i}"
+            
+            $ contacts["dren"] = {"trust": 2, "debt": "vouched_for", "met": True}
+            
+        "Walk away - not your fight":
+            $ reputation_unders += 0
+            $ intervened_debt = False
+            
+            "{i}Not my fight. Not my business. Interfering in debts gets you killed.{/i}"
+            "{i}I walk away. The vendor's on his own.{/i}"
+            
+            # SOUND: Scuffle behind. Cry of pain. Then silence.
+            "{i}Behind me, a cry. Pain. Then silence.{/i}"
+            "{i}I don't look back. Can't look back. Glass taught me that.{/i}"
+            "{i}But it still feels like I'm walking away from the Sweep all over again.{/i}"
+
+    # VISUAL: Continue through market. Processing what just happened.
+    a "{i}Two chances. Two choices. Each one builds or destroys what little reputation I have.{/i}"
+    a "{i}This is how it works down here. One interaction at a time. One person at a time.{/i}"
+
+    # VISUAL: Child runs past. Chasing something. Ball rolls into street ahead.
+    # SOUND: Heavy vehicle approaching. Fast. Not slowing.
+
+    "{i}Child. Ball. Street. Vehicle coming fast.{/i}"
+    "{i}Shit.{/i}"
+
+    # VISUAL: Child runs into street after ball. Doesn't see vehicle.
+    # Time slows. Split second to decide.
+
+    a "{i}No time to think. Only react.{/i}"
+
+    # ACTION: Automatic - save the child. No choice presented. Aeron acts.
+    # VISUAL: Aeron lunges. Grabs child. Pulls them back. Vehicle rushes past. Close. Too close.
+    # SOUND: Screech. Engine roar. Wind. Heart pounding.
+
+    "{i}Move. Grab. Pull.{/i}"
+    "{i}Vehicle roars past. Inches. Wind tears at us.{/i}"
+    "{i}Close. Too fucking close.{/i}"
+
+    # VISUAL: They fall. Aeron on ground. Child on top. Safe. Shaken. Alive.
+    "{i}Ground. Hard. Child on top of me. Crying. Scared. Alive.{/i}"
+    "{i}That's what matters. Alive.{/i}"
+
+    # VISUAL: Mother runs over. Panicked. Scoops up child. Checks for injuries.
+    mother "Kara! Oh stars, Kara! Are you hurt?"
+    
+    # VISUAL: Child crying but unharmed. Mother holding her. Then looks at Aeron.
+    mother "(sees Aeron) You... you saved her."
+    
+    # VISUAL: Aeron sits up. Breathing hard. Adrenaline fading. Reality setting in.
+    a "(catches breath) She's okay. That's what matters."
+    mother "She could have died. That vehicle—if you hadn't—"
+    a "But I did. She's safe. That's enough."
+    
+    # VISUAL: Mother kneels. Still holding child. Eyes wet. Grateful. Overwhelmed.
+    mother "Thank you. I don't... I don't know what to say. Thank you."
+    a "You don't have to say anything. Just keep her safe."
+    mother "What's your name? I need to know who saved my daughter."
+    a "Kade. Kade Voss."
+    mother "Kade. I'm Lira. And this is Kara. We won't forget this. We owe you everything."
+    a "You don't owe me anything. Just... watch her closer next time."
+    mother "(nods, crying) I will. I promise. Thank you. Thank you."
+    
+    # VISUAL: She leaves. Child looking back. Small wave. Aeron waves back.
+    "{i}They leave. The child waves. I wave back.{/i}"
+    "{i}One more name. Kara. Saved. Alive.{/i}"
+    "{i}That's two. Dren and Kara. Two names for Tessa.{/i}"
+
+    $ reputation_unders += 3
+    $ saved_child = True
+    $ contacts["lira"] = {"trust": 5, "gratitude": "infinite", "met": True, "child": "kara"}
+
+    # VISUAL: Market continuing. But people are looking at Aeron differently now.
+    # Whispers. Nods. Small acknowledgments.
+
+    "{i}The market continues. But something's different. People are looking at me.{/i}"
+    "{i}Not with hostility. Not exactly. But... awareness. Recognition. Maybe respect.{/i}"
+
+    # VISUAL: Man approaches. Older. Weathered. Cautious but not hostile.
+    man2 "You're Kade?"
+    a "(wary) Yeah. Why?"
+    man2 "Saw what you did. With the debt. With the kid."
+    man2 "That took guts. Or stupidity. Hard to tell which."
+    a "Probably both."
+    man2 "(nods) Down here, probably both is what keeps you alive."
+    man2 "Name's Kellan. I run a small operation. Deliveries, mostly. Legitimate."
+    a "Good for you."
+    kellan "I could use someone with your instincts. Someone who doesn't look away when things get hard."
+    kellan "Pay's not great. But it's steady. And it builds reputation."
+    a "I'll think about it."
+    kellan "Do that. You know where to find me if you need work. Ask around for Kellan. They'll point you my way."
+    
+    # VISUAL: He leaves. Another contact. Another thread.
+    "{i}Another offer. Another connection. Reputation building thread by thread.{/i}"
+
+    $ contacts["kellan"] = {"trust": 1, "job_offer": True, "met": True, "work": "deliveries"}
+
+    # VISUAL: Aeron continues. One more encounter. Final test.
+    # VISUAL: Recognizes someone. From the Sweep. Woman. Mid-30s. Scar on face.
+    # She's setting up stall. Hasn't seen him yet.
+
+    "{i}Wait. I know her.{/i}"
+    "{i}The Sweep. Sector 10. I let her run. Didn't report her. She's one of the 200.{/i}"
+    "{i}Does she remember me?{/i}"
+
+    # ACTION: Approach or avoid?
+    menu:
+        "She's one of the 200. One of the ones I saved. Does she remember?"
+        
+        "Approach her":
+            $ approached_survivor = True
+            $ reputation_unders += 2
+            
+            # VISUAL: Aeron approaches. Careful. Hands visible.
+            a "Excuse me."
+            
+            # VISUAL: She turns. Looks at him. Eyes widen. Recognition. Fear. Then something else.
+            woman "(stiffens) You."
+            a "You remember me."
+            woman "Hard to forget Glass."
+            
+            # VISUAL: Tension. Crowd notices. Some move closer. Ready to intervene.
+            "{i}She knows. She remembers. And everyone's watching now.{/i}"
+            
+            a "I'm not Glass anymore. I'm... trying not to be."
+            woman "Trying. That's nice. Try doesn't bring back the dead."
+            a "No. It doesn't. Nothing does."
+            woman "(bitter laugh) So why are you here? Come to finish the job?"
+            a "No. I came to... I don't know. Say I'm sorry. For what it's worth."
+            woman "It's not worth much."
+            a "I know. But it's all I have."
+            
+            # VISUAL: Long silence. She stares at him. Evaluating. Processing.
+            woman "You let me run. During the Sweep. You saw me and you let me run."
+            a "I did."
+            woman "Why?"
+            a "Because I could. Because I had to save someone. Because... I was cracking."
+            woman "Cracking. Poetic. My husband didn't get to crack. He died in that apartment."
+            
+            # VISUAL: Pain. Raw. Real. Aeron doesn't flinch from it.
+            a "I'm sorry. I know that doesn't help. But I'm sorry."
+            
+            # VISUAL: She turns away. Back to stall. Dismissing him. Then pauses.
+            woman "What's your name now? Since you're not Glass."
+            a "Kade. Kade Voss."
+            woman "Kade Voss. Fine. You want redemption, Kade? Earn it. Help people. Save people. Do something that matters."
+            woman "Because right now? Right now you're just the man who killed my husband and let me live. That's your legacy."
+            woman "Change it. Or don't. I don't care. Just don't expect me to forgive you."
+            
+            # VISUAL: She goes back to work. Conversation over. But not hostile. Not threatening.
+            a "I won't expect forgiveness. But I'll earn it anyway."
+            woman "(doesn't look back) We'll see."
+            
+            "{i}She doesn't forgive me. Doesn't have to. But she didn't call for my head either.{/i}"
+            "{i}That's something. Maybe enough to build on. One day.{/i}"
+            
+            $ contacts["sweep_survivor"] = {"trust": 0, "trauma": "husband_killed", "met": True, "saved": True}
+            
+        "Avoid her - not ready":
+            $ approached_survivor = False
+            
+            "{i}Not ready. Can't face her. Not yet. Not today.{/i}"
+            "{i}I turn away. One more chance wasted. One more person I failed.{/i}"
+
+    # VISUAL: Return to safe house. Evening. Exhausted. Changed.
+    # TRANSITION: Back to safe house. Lyra waiting.
+
+    scene bg_safe_house with fade
+
+    "{i}Back. Safe house. Evening. Exhausted. Body and mind both drained.{/i}"
+    "{i}But something's different. Something changed today.{/i}"
+
+    # VISUAL: Lyra looks up. Sees him. Evaluates.
+    l "You're alive. That's better than I expected."
+    a "(collapses against wall) Barely."
+    l "What happened?"
+    
+    # VISUAL: Aeron processing. Multiple encounters. Each one significant.
+    a "Helped an old woman with a crate. Talked down a debt collector. Saved a kid from getting run over."
+    a "Met one of the survivors from the Sweep. She remembered me."
+    l "And?"
+    a "And she didn't kill me. Didn't forgive me either. But she didn't kill me."
+    l "That's progress."
+    a "Is it? Feels like I'm just putting bandages on a wound that'll never heal."
+    
+    # VISUAL: Lyra sits beside him. Close. Grounding presence.
+    l "Maybe it won't heal. Maybe it's not supposed to. But you're still trying. That counts for something."
+    a "Does it?"
+    l "Ask the kid. Ask her mother. Ask the vendor. They're alive because of you."
+    l "That's three people who wouldn't be without you. That's not nothing."
+    
+    # VISUAL: Silence. Processing. Accepting. Maybe believing.
+    a "{i}Three people. Kara. Dren. The elder.{/i}"
+    a "{i}Three names to balance against 600. Doesn't seem like enough. But it's a start.{/i}"
+    
+    l "You did good today."
+    a "I did something. Good is... subjective."
+    l "Take the win, Aeron. You earned it."
+    
+    # VISUAL: He nods. Small. Accepting it. For now.
+    a "{i}One day. Three lives. Multiple connections.{/i}"
+    a "{i}Reputation built one interaction at a time. One person at a time.{/i}"
+    a "{i}Tessa was right. Count the living. Three today. How many tomorrow?{/i}"
+
+    # Show reputation gain summary
+    if reputation_unders >= 6:
+        "{i}The Unders are starting to see me differently. Not as Glass. But as someone trying.{/i}"
+        "{i}That's enough. For now.{/i}"
+    else:
+        "{i}Small progress. Barely noticeable. But progress nonetheless.{/i}"
+        "{i}One day at a time. One person at a time. Until reputation becomes reality.{/i}"
+
+    # TRANSITION: Back to hub
+    jump act2_activity_hub
+
+    # canon_note: Activity 5 complete - reputation earned through helping others
+    # canon_note: Helped elder with crate (optional, +1 reputation)
+    # canon_note: Intervened in debt situation - vouched for Dren (choice, +2 reputation, made enemy)
+    # canon_note: Saved child Kara from vehicle (automatic, +3 reputation, major impact)
+    # canon_note: Met Kellan (job offer - deliveries)
+    # canon_note: Confronted Sweep survivor (optional, +2 reputation, no forgiveness but no hostility)
+    # canon_note: Total reputation gain: 1-8 points depending on choices
+    # canon_note: Three lives saved/helped: Elder, Dren, Kara (minimum), plus survivor confronted
+    # canon_note: "Count the Living" philosophy demonstrated - names for Tessa
+    # canon_note: Contacts made: Dren (vendor, owes favor), Lira (mother, infinite gratitude), Kellan (job offer), Sweep survivor (neutral)
+    # canon_note: Shows Aeron changing from Glass to someone who helps - small steps matter
+    # canon_note: Enemy made: debt collector remembers Aeron (future consequence)
+    # canon_note: One week deadline for Dren's debt - subplot introduced
+
+    return
+
+=== End of {rpy_file} ===
+
+=== Contents of act2_09_activity_06_survival_skills.rpy ===
+
+# act2_activity_06_survival_skills.rpy
+
+
+# =======================================================
+# ACT 2 - Activity 6: Survival Skills (Zira Vulnerability)
+# =======================================================
+
+
+label activity_survival_skills:
+
+    # VISUAL: Safe house. Evening. Day 5. Just Aeron and Zira.
+    # LIGHTING: Dim overhead bulb. Shadows deep. Intimate space.
+    # SOUND: City hum distant; their breathing; occasional siren far away.
+
+    scene bg_safe_house with fade
+
+    "{i}Day 5. Activity: Survival Skills.{/i}"
+    "{i}Zira said I need to learn how to actually survive down here.{/i}"
+    "{i}Not just hide. Survive. Blend in. Become invisible.{/i}"
+
+    # VISUAL: Zira sitting cross-legged on floor. Spread of items before her.
+    # Clothing, tools, maps, markers. Teaching materials.
+
+    z "Alright, Glass. Time for your education in not being a walking Echelon advertisement."
+    z "Sit down. Pay attention. This might keep you alive."
+
+    # VISUAL: Aeron sits across from her. Tired but attentive. Five days of activities wearing on him.
+    a "What am I learning today?"
+    z "How to be nobody. How to move through the Unders without screaming 'I'm from Aeries, please murder me.'"
+    z "Clothing, speech patterns, body language, cultural markers. Everything that separates us from them."
+
+    # VISUAL: She pushes bundle of clothes toward him. Worn. Local. Unders style.
+    z "First: you dress like you belong. No clean lines. No military posture in civilian clothes."
+    z "Wear this. Look like you've lived here your whole life."
+
+    # VISUAL: He examines clothes. Rough fabric. Stained but functional. Real.
+    a "These are... used."
+    z "Of course they're used. Nobody down here has new anything."
+    z "New clothes mean you stole them or you're Echelon. Both get you killed."
+    z "(pushes them) Change. Now. I need to see how you move in them."
+
+    # VISUAL: He changes (off screen). Returns wearing Unders clothing. Feels wrong.
+    # LIGHTING: He looks different. Rougher. More real. Less Glass.
+
+    z "(circles him, examining) Better. You look human now instead of weapon-shaped."
+    z "But you're still moving wrong. Too precise. Too controlled."
+    z "Unders don't move like soldiers. We slouch. We shuffle. We conserve energy."
+
+    # VISUAL: She demonstrates. Her posture shifts. Less confident. More tired. Real.
+    z "See? I'm not Zira the rogue anymore. I'm just another worker going home."
+    z "Invisible. Forgettable. That's how you survive."
+
+    # VISUAL: Aeron tries to copy. Awkward at first. Too deliberate.
+    a "(attempting slouch) Like this?"
+    z "No, you look like you're injured. Relax. Let gravity win."
+    z "You've been fighting gravity your whole life. Stop fighting. Just exist."
+
+    # VISUAL: He tries again. Better. More natural. She nods approval.
+    z "There. That's better. You look tired instead of dangerous."
+    z "Tired is good. Tired is normal. Everyone down here is tired."
+
+    # VISUAL: She sits again. Pulls out hand-drawn maps. Territory markers.
+    z "Next: territories. The Unders aren't unified. They're fractured into districts, each controlled by different groups."
+    z "You need to know who owns what. Where you're safe. Where you're dead."
+
+    # VISUAL: She traces routes on map. Markers. Symbols. Complex web.
+    z "Red marks: hostile territory. Stay out unless you want problems."
+    z "Green marks: neutral zones. Markets, clinics, public spaces. Safe-ish."
+    z "Blue marks: friendly contacts. People I know. Use my name carefully."
+
+    a "How do I know which territory I'm in?"
+    z "Graffiti. Tags. Colors. Each group marks their space."
+    z "(points to map) See this? Three vertical lines. That's the Rust Collective. Hard people, but fair."
+    z "This one? Circle with a dot. The Underlows. Avoid them. They hate Echelon more than most."
+
+    # VISUAL: Aeron studies map. Memorizing. Taking it seriously.
+    a "Why are you teaching me this? You could've just given me the map."
+    z "Because maps don't teach survival. Experience does."
+    z "And I don't have time to save your ass every time you wander into wrong territory."
+    z "(slight pause) Also... I need you to survive. For what's coming."
+
+    # VISUAL: Something in her tone. Heavier. More personal. He notices.
+    a "What's coming?"
+    z "War. Eventually. If we're lucky."
+    z "If we're not lucky? Echelon crushes what's left of resistance and we all die anyway."
+    z "Either way, I need you ready. Can't have you dying because you didn't know a gang sign."
+
+    # VISUAL: She pulls out small notebook. Worn. Personal. Hesitates before opening.
+    z "There's one more thing you need to learn. Language."
+    z "Not just words. Hand signals. Code phrases. Ways to communicate without speaking."
+
+    # VISUAL: She demonstrates hand signals. Quick. Precise. Military-esque but different.
+    z "This means 'danger.' This means 'move.' This means 'Echelon nearby.'"
+    z "These kept resistance alive before the Purge. Some still use them."
+
+    # VISUAL: Aeron copies signals. Muscle memory activating. Learns quickly.
+    a "These are... old military signals. Modified."
+    z "Smart boy. Yeah, they're adapted from old resistance codes."
+    z "My brother taught me these. Before..."
+    "{i}She stops. Cuts off. Didn't mean to mention that.{/i}"
+
+    # VISUAL: Aeron notices. Carefully approaches the opening she left.
+    a "Brother?"
+    z "(tense) Forget I said that."
+    a "Zira—"
+    z "Drop it, Glass. We're here to teach you survival, not excavate my past."
+
+    # VISUAL: Silence. Heavy. She's guarded now. Walls up. But something's cracking.
+    "{i}She's hiding something. Something painful. Something that explains her.{/i}"
+
+    menu:
+        "The moment hangs between them. Push or let it go?"
+        
+        "Press gently—'You mentioned him before. When you saved us. Who was he?'":
+            $ zira_trust += 2
+            $ zira_loyalty += 1
+            $ aeron_empathy += 1
+            
+            a "(gentle) You mentioned him before. When you saved us that first night. Who was he?"
+            z "(jaw tight) I said drop it."
+            a "And I'm saying you don't have to carry it alone."
+            a "You've saved my life twice. Taught me how to survive. Given me everything."
+            a "Let me know who I'm surviving for. Why you're doing this."
+            
+            # VISUAL: She stares at him. Measuring. Debating. Then something breaks.
+            z "(long exhale) ...Kai. His name was Kai."
+            
+        "Let it go—'Alright. Show me the next signal.'":
+            $ zira_trust += 0
+            $ zira_loyalty += 0
+            
+            a "Alright. Show me the next signal."
+            
+            # VISUAL: She looks at him. Brief surprise. Then nods. Appreciates the space.
+            z "Smart. Don't push. I respect that."
+            z "(demonstrates signal) This one means—"
+            
+            # VISUAL: She stops mid-gesture. Looks at notebook. At hand signals.
+            # Something in her cracks anyway. Can't keep it in.
+            
+            z "(quiet) His name was Kai. My brother."
+            z "He taught me these signals. Before Echelon killed him."
+
+    # VISUAL: The room temperature drops. Truth laid bare. Painful and raw.
+    # SOUND: City hum fades. Just her breathing. Just this moment.
+
+    "{i}Kai. Her brother. Dead.{/i}"
+    "{i}Everything she's done suddenly makes sense.{/i}"
+
+    a "(quiet) What happened?"
+    z "(stares at notebook) He tried to defect. Like you. Four years ago."
+    z "He was Echelon too. Mid-level operative. Nothing special. Just another weapon."
+    z "But he had a conscience. Started questioning orders. Seeing what they really were."
+
+    # VISUAL: She traces hand signals in notebook. Memorizing. Remembering.
+    z "He came to me. Said he couldn't do it anymore. Needed help getting out."
+    z "I was already underground by then. Rogue. Surviving on my own."
+    z "I told him I'd help him. Get him out. Find him a new life in the Unders."
+
+    # VISUAL: Her jaw clenches. Painful memory surfacing. She forces it out.
+    z "We planned it for weeks. Every detail. Every contingency. I thought we had it perfect."
+    z "(bitter laugh) We didn't account for Marcus Rylan."
+
+    # VISUAL: Aeron goes still. Father's name like ice water. Always his father.
+    a "Marcus... knew?"
+    z "Marcus knows everything. That's his gift. Omniscient bastard."
+    z "Kai made it three blocks from Echelon HQ before they caught him."
+    z "Not patrol. Not guards. Marcus himself. Waiting."
+
+    # VISUAL: She closes notebook. Hands shaking slightly. Controlled fury.
+    z "Marcus gave him a choice. Return to service, or face execution for treason."
+    z "Kai chose execution. Said he'd rather die free than live as Glass."
+    z "(voice breaking slightly) Marcus shot him personally. Made example of him."
+    z "Broadcasted it. 'This is what happens to traitors. This is Echelon's mercy.'"
+
+    # VISUAL: Aeron's stomach drops. Father's cruelty familiar but still devastating.
+    a "{i}Father killed her brother. Made it public. Made it terror.{/i}"
+    a "{i}Four years ago. I was eighteen. Still Glass. Still obedient.{/i}"
+    a "{i}Did I see that broadcast? Did I watch her brother die and feel nothing?{/i}"
+
+    a "I'm sorry. I'm so sorry, Zira."
+    z "Don't apologize for your father. You didn't pull the trigger."
+    z "(looks at him) But you're him. Same escape attempt. Same conscience emerging."
+    z "That's why I'm helping you. You're Kai's second chance."
+
+    # VISUAL: Truth settles. Her motivation crystal clear. Redemption proxy.
+    a "I'm not your brother."
+    z "I know you're not. But you're close enough."
+    z "When I saw you crack—when Glass started breaking—I saw Kai again."
+    z "Same look in your eyes. Same realization that the system is rot."
+    z "And I thought... maybe this time it works. Maybe this time he gets out."
+
+    # VISUAL: She stands. Paces. Energy needing release. Emotion too strong.
+    z "I told myself I wouldn't care. That you were just another asset. Another tool."
+    z "But I do care. And that's fucking terrifying."
+    z "Because if you die... it's like watching Kai die again."
+
+    # VISUAL: Aeron stands. Approaches carefully. She's coiled tight. Vulnerable and dangerous.
+    a "I'm not going to die."
+    z "(bitter laugh) That's what Kai said. Right before Marcus put a bullet in his head."
+    a "I'm not Kai. And I'm not going to let Marcus win again."
+    z "You don't know that. Nobody knows that."
+    z "Echelon always wins. That's what they do. They crush hope and call it order."
+
+    # VISUAL: He moves closer. Not touching. Just present. Grounding.
+    a "Then we change the pattern. We make Echelon lose."
+    a "For Kai. For everyone Marcus killed. For everyone we can still save."
+    z "(looks at him, eyes wet but fierce) You really believe that? That we can win?"
+    a "I have to. Because if I don't believe it, what's the point of any of this?"
+
+    # VISUAL: She stares at him. Measuring. Then something shifts. Decision made.
+    z "(reaches into jacket pocket) I have something for you."
+    z "Something I've been carrying for four years. Something Kai wanted me to have."
+
+    # VISUAL: She pulls out device. Small. Technical. Advanced. Hacking tool.
+    # LIGHTING: Faint blue glow. Precious. Irreplaceable.
+
+    z "Hacking device. Military-grade. One of a kind. Kai built it himself."
+    z "Can bypass Echelon security protocols. Slice through encrypted systems."
+    z "He was carrying it when they killed him. I recovered it after... after the execution."
+
+    # VISUAL: She holds it out. Offering. Painful to give away but necessary.
+    z "I want you to have it. Use it to do what Kai couldn't."
+    z "Burn Echelon from the inside. Make Marcus pay."
+
+    # VISUAL: Aeron takes it carefully. Reverent. Understanding the weight.
+    a "Zira, I can't take this. It's—"
+    z "It's a tool. And tools are meant to be used, not worshipped."
+    z "Kai would want someone to finish his work. Might as well be you."
+    z "(firm) Take it. Honor him by destroying the thing that killed him."
+
+    # VISUAL: He closes hand around device. Acceptance and responsibility.
+    a "I will. I promise."
+    z "Don't promise. Just do it."
+    z "(slight pause) And Glass? Don't die. I can't watch that twice."
+
+    # VISUAL: Their eyes meet. Understanding. She's not just helping him. She's saving herself.
+    a "I won't die. I'm too stubborn."
+    z "(small smile) Good. Stubbornness might be what saves you."
+    z "Kai was stubborn too. Just not stubborn enough."
+
+    # VISUAL: She turns away. Wipes eyes quickly. Composing herself. Walls returning.
+    z "(back to business) Alright. Enough feelings. Back to survival."
+    z "You know the territories. You know the signals. You know why I'm invested."
+    z "Now you need to practice. Tomorrow you're going out alone."
+
+    a "Alone?"
+    z "Can't hold your hand forever. You need to learn to move through the Unders independently."
+    z "I'll track you. Make sure you don't die. But you're on your own."
+    z "(slight grin) Try not to get murdered on your first solo trip."
+
+    # VISUAL: Despite everything, he almost laughs. Her humor cutting through weight.
+    a "I'll do my best."
+    z "Your best better be good enough."
+
+    # VISUAL: She gathers teaching materials. Packs them away. Preparing to leave.
+    z "Get some rest. Tomorrow's going to be interesting."
+    z "(at door, looks back) And Glass? Thanks. For listening. For... caring."
+    z "Most people don't bother asking about the dead. Easier to ignore ghosts."
+
+    a "Kai isn't a ghost. Not while we remember him."
+    z "(soft smile) No. I suppose he isn't."
+    z "Goodnight, Aeron. Sleep if you can."
+
+    # VISUAL: She leaves. Door closes. He's alone with Kai's device and new understanding.
+    "{i}Zira the rogue. Zira the survivor. Zira the sister.{/i}"
+    "{i}She's not helping me out of belief or ideology.{/i}"
+    "{i}She's helping me because I'm her second chance. Her do-over. Her hope.{/i}"
+
+    # VISUAL: He examines hacking device. Blue glow. Kai's legacy.
+    a "{i}Four years ago, Marcus killed her brother for trying to escape.{/i}"
+    a "{i}Now I'm trying to escape. And she's making sure I succeed.{/i}"
+    a "{i}Kai's second chance. That's a lot of weight to carry.{/i}"
+    a "{i}But if it means Zira gets her closure... I'll carry it.{/i}"
+
+    # VISUAL: He stores device carefully. Precious. Irreplaceable. Mission.
+    a "{i}For Kai. For Zira. For everyone Marcus destroyed.{/i}"
+    a "{i}We're going to burn Echelon down. And Marcus with it.{/i}"
+    a "{i}That's not a promise. That's a guarantee.{/i}"
+
+    # TRANSITION: End of activity. Rewards gained. Zira loyalty deepened.
+
+    # REWARDS SUMMARY SCREEN:
+    "{b}Activity Complete: Survival Skills{/b}"
+    "
+    Rewards:
+    - Skill Unlocked: 'Unders Disguise' (Reduced detection in Lower Spans)
+    - Item Gained: Kai's Hacking Device (Bypass Echelon security)
+    - Knowledge Gained: Territory maps, hand signals, cultural markers
+    - Relationship Deepened: Zira (Trust +2, Loyalty +1)
+    
+    Zira's Past Revealed:
+    - Her brother Kai tried to defect 4 years ago
+    - Marcus Rylan personally executed him
+    - Zira helping Aeron = second chance for Kai
+    - Kai's hacking device now yours—use it to finish his work
+    
+    You can now navigate the Unders independently.
+    Zira will track you but won't intervene unless necessary.
+    Tomorrow: Solo navigation test.
+    "
+
+    $ activities_completed += 1
+    $ days_remaining -= 1
+    $ hacking_device = True
+    $ inventory.append("kais_hacking_device")
+    $ contacts["zira"]["trust"] = 8
+    $ contacts["zira"]["loyalty"] = 10
+    $ skill_unders_disguise = True
+    $ activity_skills_done = True
+    $ zira_backstory_revealed = True
+    $ aeron_knows_about_kai = True
+
+    # canon_note: Zira's brother Kai revealed - defector killed by Marcus 4 years ago
+    # canon_note: Marcus personally executed Kai, broadcasted it as terror example
+    # canon_note: Zira helping Aeron = proxy redemption for Kai's death
+    # canon_note: "You're Kai's second chance" - her core motivation exposed
+    # canon_note: Kai's hacking device given to Aeron - precious legacy item
+    # canon_note: Device bypasses Echelon security - crucial for Act 3 infiltration
+    # canon_note: Zira's loyalty now 10/10 - she will die for Aeron if needed (Act 3 Scene 18)
+    # canon_note: Hand signals taught - resistance communication system
+    # canon_note: Territory maps learned - navigate Unders safely
+    # canon_note: "Don't die. I can't watch that twice." - emotional core of relationship
+    # canon_note: Aeron was 18 when Kai died - may have seen broadcast, didn't process it
+    # canon_note: Zira cried but controlled it - vulnerability shown rarely
+    # canon_note: Tomorrow = solo navigation (next scene option)
+    # canon_note: This scene cements Zira as family, not just ally
+
+    return
+
+=== End of {rpy_file} ===
+
+=== Contents of act2_10_activity_07_confront_past.rpy ===
+
+
+
+=== End of {rpy_file} ===
+

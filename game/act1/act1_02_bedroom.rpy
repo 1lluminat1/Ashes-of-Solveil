@@ -20,24 +20,18 @@ label act1_bedroom:
     
     # REVISED: Not about belonging, but about identity
     a "{i}The city's still out there. I'm just another piece of it now.{/i}"
-    a "{i}A tool. A function. Glass.{/i}"
+    a "{i}A tool. A function.{/i}"
 
     # VISUAL: Reflection fractured by droplets—his face split across the pane.
     # Symbol: Glass = truth / self-awareness.
     # VISUAL: His own reflection, distorted by rain, looks back at him.
 
     "{i}His reflection fractures across the rain-streaked window.{/i}"
-    a "{i}Glass looking at Glass.{/i}"
-    a "{i}Transparent. Empty. Nothing to see.{/i}"
-
-    # VISUAL: On wall—an empty display case once meant for his Band.
-    # Plaque reads quietly beneath dust: "For the Chosen."
-
-    a "{i}An empty frame weighs more than the Band ever would.{/i}"
+    a "{i}The reflection's fractured. Like something that's been held together for too long.{/i}"
     
     # NEW: Reframe this - not about failure, but about what replaced it
     a "{i}The Band was supposed to give me purpose.{/i}"
-    a "{i}Instead, I got orders. 389 of them.{/i}"
+    a "{i}Instead, I carry out orders. 389 of them.{/i}"
     a "{i}Father calls me Glass. Transparent. Sharp. Useful.{/i}"
     a "{i}Perfect metrics. Perfect form. Perfectly empty.{/i}"
 
@@ -68,23 +62,24 @@ label act1_bedroom:
     a "{i}Right clothes. Right words. Right performance.{/i}"
     a "{i}Tomorrow's the gala. Father's exhibition.{/i}"
     a "{i}'Look at what I made from failure,' he'll say.{/i}"
-    a "{i}'Glass that cuts on command.'{/i}"
+    a "{i}A tool that follows orders, that's what he wants them to see.{/i}"
+    a "{i}He wants perfection on display. But even perfection hesitates.{/i}"
 
     # OPTIONAL ACTION — Obedience test (Empathy metric seed)
     menu:
-        "Does Aeron rehearse the lines Echelon expects to hear?"
-        "Practice the pledge under his breath.":
-            $ aeron_practiced_pledge = True
+        "A whisper away from obedience. A breath away from defiance."
+        "Say it anyway":
+            $ player_state["empathy_score"] -= 1
             a "\"{i}Order above all. Unity before self.{/i}\""
             a "{i}The words come automatic. Like breathing.{/i}"
             # NEW: The real issue isn't the words
             a "{i}I can recite doctrine. I can execute missions. I can kill without hesitation.{/i}"
             a "{i}What I can't do is believe any of it.{/i}"
             a "{i}And Father knows. He's always known.{/i}"
-        "Stay silent.":
-            $ aeron_practiced_pledge = False
+        "Stay silent":
+            $ player_state["empathy_score"] += 1
             a "{i}The words don't matter. I'll say them when required.{/i}"
-            a "{i}Glass doesn't need to practice. Glass just performs.{/i}"
+            a "{i}No rehearsal needed. You've played this part a hundred times.{/i}"
 
     # NEW: Mission order notification
     # VISUAL: Terminal on desk blinks; red notification light pulsing.
@@ -98,7 +93,7 @@ label act1_bedroom:
     # REVISED: This is routine, not new
     a "{i}Operation 390.{/i}"
     a "{i}Just another number. Just another night.{/i}"
-    a "{i}Glass doesn't question. Glass just cuts.{/i}"
+    a "{i}Feel nothing. Ask nothing. Do what you're told.{/i}"
 
     # VISUAL: Aeron stands; silhouette against window; rain continues.
     "{i}He stands. The city hums below. The mission waits.{/i}"

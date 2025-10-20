@@ -81,11 +81,7 @@ label act1_sector7_mission:
     # Micro gesture — glove inspection
     # VISUAL: Close-up; Aeron's hands; removes right glove slowly.
     # LIGHTING: Glove catches light; latex shines.
-    a "{i}I peel the glove. No blood. Cleaner than the room deserves. The latex shines like glass.{/i}"
-    
-    # NEW: Glass identity introduction
-    a "{i}Glass. That's what they call me.{/i}"
-    a "{i}See-through. Empty. Sharp when you need it.{/i}"
+    a "{i}I peel the glove. No blood. Cleaner than the room deserves. The latex gleams under the light.{/i}"
     
     # MANTRAS - ALL PERFECT, NO GLITCHES:
     # VISUAL: Aeron stands; posture perfect; breathing steady.
@@ -134,13 +130,25 @@ label act1_sector7_mission:
     # Glass motif
     # VISUAL: Reflection in visor; distorted, empty.
     a "{i}My visor gives me someone else's eyes back.{/i}"
-    a "{i}Glass doesn't feel. Glass doesn't question.{/i}"
-    a "{i}Glass just cuts.{/i}"
-    
+    a "{i}Feel nothing. Ask nothing. Do what you're told.{/i}"
+
     # NEW: Very subtle doubt (not a break)
     a "{i}Order is mercy.{/i}"
     a "{i}(…){/i}"
     a "{i}...Is this what mercy looks like?{/i}"
+
+    # NEW: Player empathy seed
+    menu:
+        "It flickers at the edge of thought — a face, a feeling, unwelcome."
+        "Bury it.":
+            $ player_state["empathy_score"] -= 1
+            a "{i}Weakness spreads like infection. I cut it out.{/i}"
+            a "{i}The mission's logged. Sector's secure. That's all that matters.{/i}"
+
+        "Let it stay.":
+            $ player_state["empathy_score"] += 1
+            a "{i}The child's face stays with me. Just the eyes. That’s all it takes.{/i}"
+            a "{i}The report will be clean. But I won’t be.{/i}"
     
     # NEW: But he doesn't dwell - pushes it away
     a "{i}The mission's complete. The sector's secure.{/i}"
@@ -168,7 +176,9 @@ label act1_sector7_mission:
     m "Glass completes missions. Glass doesn't question."
     m "That's what makes you valuable."
     
-    a "{i}Glass. Transparent. Empty. Perfect.{/i}"
+    a "{i}That’s what they call me.{/i}"
+    a "{i}Sharp. Obedient. Disposable. Transparent.{/i}"
+
     
     # NEW: Very subtle internal question
     a "{i}...Is this what you intended, Father?{/i}"
@@ -185,7 +195,7 @@ label act1_sector7_mission:
     
     # NEW: But he doesn't dwell
     a "{i}Tomorrow, the gala. Tonight, the report.{/i}"
-    a "{i}Glass doesn't rest. Glass just... continues.{/i}"
+    a "{i}There’s no rest. Just reports. Then orders. Then more silence.{/i}"
     
     # TRANSITION
     # VISUAL: Fade to black; hold for beat.

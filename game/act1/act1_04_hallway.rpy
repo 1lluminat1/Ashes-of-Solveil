@@ -20,7 +20,7 @@ label act1_hallway:
 
     a "{i}Their eyes trace edges, not faces. Judging the outline, never the person.{/i}"
     # NEW: Glass makes them uncomfortable
-    a "{i}They see Glass. And Glass makes them nervous.{/i}"
+    a "{i}They see something they don’t understand. And that makes them nervous.{/i}"
 
     # VISUAL: Floor tiles—concentric circles radiating from the center, like ripples frozen in stone.
     "{i}The floor tiles form rings within rings—the Echelon sigil stamped into the earth itself.{/i}"
@@ -36,7 +36,7 @@ label act1_hallway:
     a "{i}No Band, no worth. That's the first thing they see.{/i}"
     # NEW: But not the only thing
     a "{i}Then they see the uniform. The medals. The record.{/i}"
-    a "{i}And they look away faster.{/i}"
+    a "{i}And they look away even faster.{/i}"
 
     # VISUAL: An older man in servant's attire approaches—silver hair, careful posture.
     # He carries a tray of glasses but pauses when he sees Aeron.
@@ -53,7 +53,7 @@ label act1_hallway:
     
     # REVISED: Servant's perspective on what Aeron became
     servant "(softer) He spoke of you often. Said you'd be the one to change things."
-    a "{i}Change what? The world, or just his mind about leaving it?{/i}"
+    a "{i}Change what? The world? Or just his mind about leaving it?{/i}"
     a "(carefully) He said a lot of things."
     servant "That he did, sir."
     
@@ -81,22 +81,21 @@ label act1_hallway:
     # NEW: Transition to wrist choice
     # VISUAL: Another elite passes—eyes flick to Aeron's wrist, then to his face, then away quickly.
     "{i}Another glance. This one lingers on the medals, then recoils.{/i}"
-    a "{i}They know the record. They know what Glass does.{/i}"
-    a "{i}And they don't want to be seen looking too long.{/i}"
+    a "{i}They know what I’ve done. What I’m capable of.{/i}"
+    a "{i}And they don’t want to be seen looking too long.{/i}"
 
     # ACTION — Obedience choice (Empathy / Detachment metric seed)
     menu:
-        "Aeron glances at his bare wrist. What does he do?"
-        "Tug the sleeve to hide it.":
-            $ aeron_hides_wrist = True
-            # VISUAL: Smooths cuff; gold reflection travels along his arm.
-            a "{i}Old habit. As if hiding it changes what I am.{/i}"
-            a "{i}Glass with a cloth over it. Still see-through underneath.{/i}"
-            
-        "Leave it exposed.":
-            $ aeron_hides_wrist = False
-            a "{i}Let them look. Let them remember.{/i}"
-            a "{i}No Band. Just results. 390 of them.{/i}"
+        "His wrist catches the light — naked, unmarked. A dozen eyes pretend not to see."
+        "Cover it.":
+            $ player_state["empathy_score"] -= 1
+            a "{i}An old reflex. As if fabric could fix the silence.{/i}"
+            a "{i}Let them think I belong. Let them stop wondering.{/i}"
+
+        "Let it show.":
+            $ player_state["empathy_score"] += 1
+            a "{i}No Band. No need to lie about it.{/i}"
+            a "{i}Let them feel uneasy. Let them remember what this uniform really means.{/i}"
 
     # VISUAL: Portraits of Aeries elites — immaculate propaganda, eyes following.
     "{i}Portraits line the walls—heroes painted to outlast their mistakes.{/i}"
@@ -109,8 +108,8 @@ label act1_hallway:
     # NEW: What Marcus made
     a "{i}He trained me well. Too well, maybe.{/i}"
     a "{i}I can kill without hesitation. Lead without doubt. Obey without question.{/i}"
-    a "{i}Everything he wanted. Except the belief.{/i}"
-    a "{i}He made me Glass. Perfect and empty.{/i}"
+    a "{i}Everything he wanted. Everything but faith.{/i}"
+    a "{i}All function, no soul. Just enough to pass for human.{/i}"
     a "{i}And that makes me his greatest failure.{/i}"
 
     # VISUAL: Two elites whisper as he passes—light catches their mirrored glasses.
@@ -125,9 +124,9 @@ label act1_hallway:
     "{i}\"...nothing behind them...\"{/i}"
     
     a "{i}They're not wrong.{/i}"
-    a "{i}Glass doesn't feel. Glass doesn't question.{/i}"
-    a "{i}Glass just cuts.{/i}"
-    
+    a "{i}I don’t feel. I don’t question.{/i}"
+    a "{i}I just cut.{/i}"
+
     "{i}The whispers fade as he passes. Relief in their silence.{/i}"
 
     # VISUAL: End doors glow—warm light spilling into the cold hall; guards motionless.
@@ -137,14 +136,15 @@ label act1_hallway:
     # VISUAL: Aeron's hand hovers near the door frame; doesn't quite touch.
     a "{i}I could turn around. Slip into the dark.{/i}"
     a "{i}Would anyone stop me? Would anyone care?{/i}"
+
     # NEW: But Glass doesn't retreat
     "{i}His hand drops. The choice was already made.{/i}"
     a "{i}No. Not tonight.{/i}"
-    a "{i}Glass performs when called. That's what Glass does.{/i}"
+    a "{i}I show up when I’m told. That’s what I’m built for.{/i}"
 
     # VISUAL: Doors open—gold light floods frame; muffled sound swells, then cuts to silence.
     "{i}Hinges sigh. Light and voices flood the marble hush.{/i}"
-    "{i}Time to smile. Time to lie. Time to be Glass.{/i}"
+    a "{i}Time to smile. Time to lie. Time to perform.{/i}"
 
     # canon_note: Maintain contrast—Aeries = white-gold top light (control), gala = diffused amber (illusion of warmth).
     # canon_note: Variable aeron_hides_wrist affects later empathy dialogue (Lyra Act I / Zira Act II).

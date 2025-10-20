@@ -65,7 +65,7 @@ label act1_lyra_visit:
 
     menu:
         "Tell her to leave":
-            $ lyra_rel -= 1
+            $ characters["lyra"]["affection"] += 1
             # BLOCKING: Lyra turns; slight pause at threshold.
             a "It's late. You shouldn't be here."
             l "(contained) Right. Forget I knocked."
@@ -77,7 +77,7 @@ label act1_lyra_visit:
             a "{i}Maybe that's why she came.{/i}"
 
         "Let Lyra stay":
-            $ lyra_rel += 1
+            $ characters["lyra"]["affection"] += 1
             # BLOCKING: She sits edge of bed; posture still formal.
             a "(after a beat) Sit, then."
             l "(moves to the edge of the bed) Better."

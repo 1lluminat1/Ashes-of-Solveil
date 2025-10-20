@@ -33,11 +33,26 @@ label act1_morning_routine:
 
     "{i}The dress uniform hangs like a costume. Every crease pressed. Every medal aligned.{/i}"
     
-    # NEW/REVISED: Kael callback with Glass comparison
+    # NEW/REVISED: Kael callback
     # VISUAL: Brief flash—memory of Kael in his uniform, standing tall, confident.
     a "{i}Kael wore his like armor. Stood taller. Smiled wider.{/i}"
-    a "{i}I wear mine like Glass wears light. Transparent. Reflecting what they want to see.{/i}"
+    a "{i}I wear mine like a screen. Reflecting what they want to see. Hiding the rest.{/i}"
     a "{i}His didn't save him either.{/i}"
+
+    menu:
+        "In the mirror, you're alone. But not empty. Something lingers beneath the surface..."
+        "Let yourself remember":
+            $ player_state["empathy_score"] += 1
+            a "{i}His smile. His silence. The way he still stood tall after they marked him broken.{/i}"
+            a "{i}He wore this same collar — but never let it define him.{/i}"
+            a "{i}He was human to the end. Can I still be?{/i}"
+
+        "Bury it":
+            $ player_state["empathy_score"] -= 1
+            a "{i}This isn't the time for ghosts. You're not a boy grieving.{/i}"
+            a "{i}You're what they built — efficient, trained, necessary.{/i}"
+            a "{i}Let the memory stay buried. You have a job to do.{/i}"
+
 
     # VISUAL: Automated wardrobe assistant activates—soft blue light scans the uniform.
     # SOUND: Soft chime; synthetic voice, pleasant and hollow.
@@ -47,49 +62,29 @@ label act1_morning_routine:
     
     # NEW: Setup for choice with Glass context
     a "{i}Full ceremonial. Medals and all. The whole performance.{/i}"
-    a "{i}Glass doesn't need decorations. But the audience expects them.{/i}"
-
-    # ACTION: Player choice—medals or no medals.
-    menu:
-        "The medals catch the light—commendations for operations he doesn't remember caring about."
-        "Wear the full dress uniform with medals.":
-            $ aeron_wears_medals = True
-            # VISUAL: Aeron pins each medal carefully; camera lingers on his hands.
-            a "{i}If I look the part, maybe they'll stop asking questions.{/i}"
-            "{i}Each medal clicks into place. Weight without meaning.{/i}"
-            # NEW: Mission count reference
-            a "{i}Sector 9 pacification. Midlier insurgent sweep. Grid 7 containment.{/i}"
-            a "{i}Names for violence. Medals for obedience.{/i}"
-            a "{i}390 operations. How many of these actually mattered?{/i}"
-            
-        "Leave the medals off.":
-            $ aeron_wears_medals = False
-            # VISUAL: Aeron closes the medal case without touching them.
-            a "{i}Let them wonder. I'm done pretending I earned these.{/i}"
-            "{i}The uniform feels lighter. Still a lie, but a quieter one.{/i}"
-            # NEW: Glass reference
-            a "{i}Glass doesn't need decoration. Glass is transparent.{/i}"
-            a "{i}They can see right through me either way.{/i}"
+    a "{i}I don’t need decorations. But the audience expects the illusion.{/i}"
 
     # NEW/REVISED: Collar moment with more physical detail
     # VISUAL: He buttons the collar; fabric constricts slightly around his throat.
-    "{i}The collar sits tight. Too tight.{/i}"
+    a "{i}The collar sits tight.{/i}"
+    # NEW: Glass doesn't need air
+    a "{i}Just tight enough to remind me who this uniform belongs to.{/i}"
     # VISUAL: His finger tugs at it briefly—then stops. Adjusts instead.
     a "{i}Breathing's optional at these events anyway.{/i}"
-    # NEW: Glass doesn't need air
-    a "{i}Glass doesn't breathe. Glass just reflects.{/i}"
 
     # VISUAL: Reflection in mirror—Aeron in full uniform, posture straight, face expressionless.
     a "{i}There. General Rylan's son. Ready for inspection.{/i}"
+
     # REVISED: Glass identity
-    a "{i}Glass, polished and presentable.{/i}"
-    a "{i}See-through. Empty. Perfect.{/i}"
+    a "{i}Exactly what they expect.{/i}"
+    a "{i}Polished. Presentable. Perfect./i}"
+    a "{i}Empty.{/i}"
 
     # VISUAL: He turns away from the mirror; apartment door slides open with a pneumatic hiss.
-    "{i}The mirror shows the uniform. Not the blood from last night.{/i}"
-    "{i}Not the family. Not the metrics. Not the 99.7%.{/i}"
-    "{i}Just Glass, ready to perform.{/i}"
-    
+    a "{i}The mirror shows the uniform. Not the blood from last night.{/i}"
+    a "{i}Not the family. Not the metrics. Not the 99.7%.{/i}"
+    a "{i}Just another uniform, ready to perform.{/i}"
+
     a "{i}Time to face the world.{/i}"
 
     # canon_note: aeron_wears_medals flag can influence elite reactions in act1_04_gala.

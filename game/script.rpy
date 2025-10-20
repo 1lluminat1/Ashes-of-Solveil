@@ -29,6 +29,10 @@ label start:
     # END ACT 1
 
     # START ACT 2
-    call act2_intro
+    call act2_descent
+    call act2_reality_check
+    call act2_safe_house_planning
+    call act2_the_message
+    
     # END ACT 2
     return

@@ -21,13 +21,13 @@ label act1_intro:
 
     # VISUAL: Middle Levels—dense, industrial, humming with surveillance and motion.
 
-    "{i}Below, the Middle Levels grind—commerce, paperwork, cameras.{/i}"
+    "{i}Below that: the Middle Levels grind—commerce, paperwork, cameras.{/i}"
     "{i}A restless machine, paying for the view above.{/i}"
 
     # VISUAL: Unders—neon haze, dripping water, faint human sounds; light returns from within.
     # Should contrast sharply with the silence of the upper tiers.
 
-    "{i}Deeper still, the Unders. Neon caught in smoke. Footsteps, water, voices.{/i}"
+    "{i}And beneath it all: The **Unders**. The forgotten heart. The rotten core.{/i}"
     "{i}Here, light survives by learning to breathe.{/i}"
 
     # VISUAL: Composite wide shot of the entire city—Aeries to Unders, unified vertical frame.
