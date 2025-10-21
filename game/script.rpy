@@ -33,6 +33,20 @@ label start:
     call act2_reality_check
     call act2_safe_house_planning
     call act2_the_message
+    call act2_meeting_selene
+    call act2_temp_base
+    call act2_base_scouting
+    call act2_establishing_base
+    call act2_noelle_working_late
+    call act2_recruitment_wave
+    call act2_zira_night_patrol
+    call act2_tessa_late_night_clinic
+    call act2_lyra_identity_crisis
+    call act2_noelle_no_unit
+    call act2_massive_recruitment
+    call act2_tessa_mercy_death
+    call act2_echelon_raid_defense
+    call act2_zira_commitment
     
     # END ACT 2
     return

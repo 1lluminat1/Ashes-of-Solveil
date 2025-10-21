@@ -2,7 +2,7 @@
 
 
 # =======================================================
-# ACT 2 - Scene 6: The Message
+# ACT 2 - Scene 12: The Message
 # =======================================================
 
 
@@ -161,7 +161,6 @@ label act2_the_message:
     "{i}Footsteps. Multiple. Armed. Coming closer. This is it. No turning back. Face Selene. Face judgment. Face the future.{/i}"
 
     # TRANSITION: Meeting Selene begins
-    jump act2_07_meeting_selene
 
     # canon_note: Scene 6 complete - Selene's message received, meeting arranged
     # canon_note: Eight days passed - all seven activities completed

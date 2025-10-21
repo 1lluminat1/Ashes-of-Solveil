@@ -1,12 +1,12 @@
-# act2_07_meeting_selene.rpy
+# act2_13_meeting_selene.rpy
 
 
 # =======================================================
-# ACT 2 - Scene 7: Meeting Selene (+ Dynamic Crisis)
+# ACT 2 - Scene 13: Meeting Selene (+ Dynamic Crisis)
 # =======================================================
 
 
-label act2_07_meeting_selene:
+label act2_meeting_selene:
 
     # Initialize scene tracking
     $ scenes["meeting_selene"] = {
@@ -1369,7 +1369,6 @@ label crisis_resolution_success:
     "{i}Act 2 complete. From fugitives to resistance. From hunted to hunters. The war begins. And we're ready. As ready as broken people can be. Which might be enough. Might be everything.{/i}"
     
     # Jump to Act 2 finale or Act 3 beginning
-    jump act2_finale
 
     # canon_note: Scene 7 complete - met Selene, survived crisis, joined resistance
     # canon_note: Dynamic crisis system - player choices from activities determine which crisis triggers
@@ -1457,3 +1456,5 @@ label act2_finale_failure:
     "Act 2 Complete - Alliance Failed"
     "Alternate Path Beginning..."
     return
+
+# TODO: FIX JUMPING
