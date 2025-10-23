@@ -10,5 +10,5 @@ define n = Character("Noelle", color="#9CB7C9")
 define m = Character("Marcus", color="#7A3B3F")
 
 define ya = Character("Young Aeron", color="#42c5da")
-define l = Character("Young Lyra", color="#7e5cad")
+define yl = Character("Young Lyra", color="#7e5cad")
 define k = Character("Kael", color="#4B4E8A")

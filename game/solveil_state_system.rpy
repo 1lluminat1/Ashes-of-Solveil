@@ -148,7 +148,7 @@ init python:
             "lyra": 50000
         },
         "echelon_alert": 0,
-        "empathy_score": 0
+        "empathy_score": -5
     }
 
     # ========== CANON FLAGS ==========

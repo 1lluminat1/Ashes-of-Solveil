@@ -118,41 +118,50 @@ label act1_ritual:
 
     # TRANSITION: Hard match cut to Aeron's present silhouette in window light.
     a "{i}That day, a story was written for me.{/i}"
-    a "{i}My father called it destiny. I think he just couldn't stand another failure.{/i}"
+    a "{i}My father called it destiny. I think he just couldn’t stand another failure.{/i}"
 
-    # NEW: Kael context - corrected timeline
-    a "{i}Kael's Band worked. For three years after his Branding at twelve, he belonged.{/i}"
+    # Kael context — corrected timeline
+    a "{i}Kael’s Band worked. For three years after his Branding at twelve, he belonged.{/i}"
     a "{i}Then at fifteen, it turned on him. Rejected him.{/i}"
     a "{i}He had three years of being whole. I never got one.{/i}"
 
-    # NEW/REVISED: More specific walk home memory
+    # The walk home
     a "{i}I remember the walk home. Silent. Marcus ahead. Me behind.{/i}"
     a "{i}My wrist still burned where the Band had been. I kept touching the empty space.{/i}"
-    a "{i}He didn't look back once. Not when I stumbled. Not when I stopped to catch my breath.{/i}"
-    a "{i}Just kept walking. Like I was already forgotten.{/i}"
-    
-    # NEW: Marcus begins molding Glass
-    a "{i}That night, I heard him on the terminal. Rewriting the narrative.{/i}"
+    a "{i}He didn’t look back once. Not when I stumbled. Not when I stopped to breathe.{/i}"
+    a "{i}Just kept walking. Like I was already an afterthought.{/i}"
+
+    # Marcus rewriting the narrative
+    a "{i}That night, I heard him on the terminal. Rewriting the report.{/i}"
     a "{i}'Not failure. Fate. Not broken. Chosen.'{/i}"
-    a "{i}And then, quieter: 'If he cannot have faith, I will make him useful.'{/i}"
+    a "{i}And quieter: 'If he cannot have faith, I will make him useful.'{/i}"
     a "{i}I believed him because I had to.{/i}"
     a "{i}What else was left?{/i}"
 
-    # NEW: Glass identity origins
+    # Origins of the mask
     a "{i}The Band was supposed to make me whole.{/i}"
-    a "{i}Instead, Father made me Glass.{/i}"
-    a "{i}Ten years of training. Of missions. Of kills.{/i}"
-    a "{i}390 operations. 390 successes.{/i}"
-    a "{i}He wanted a believer. He got Glass.{/i}"
-    a "{i}Transparent. Empty. Unbreaking.{/i}"
-    a "{i}At least, that's what we both pretend.{/i}"
+    a "{i}Instead, he made me precise.{/i}"
+    a "{i}Ten years of missions. 390 successes. Zero hesitation recorded.{/i}"
+    a "{i}He wanted a believer. He built something else.{/i}"
+    a "{i}Transparent. Efficient. Predictable.{/i}"
+    a "{i}And we both pretended that meant strength.{/i}"
 
-    # NEW: Connection to present-day cracks
-    a "{i}But Glass is cracking now. I feel it.{/i}"
-    a "{i}Lyra sees it. The cracks spreading.{/i}"
-    a "{i}Maybe the Band knew. Maybe that's why it rejected me.{/i}"
-    a "{i}I was never meant to be whole. Just useful.{/i}"
-    a "{i}And now I'm not even sure I'm that anymore.{/i}"
+    # Connection to present-day cracks (branch tone by empathy)
+    $ score = player_state["empathy_score"]
+
+    if score <= -4:
+        a "{i}That precision still holds. Mostly. A system shouldn’t question its code.{/i}"
+        a "{i}But sometimes I feel the old lines flex — like metal under strain.{/i}"
+        a "{i}If that’s weakness, I’ll cauterize it. Like he taught me.{/i}"
+    elif -3 <= score <= 1:
+        a "{i}That precision still holds. But lately, it falters.{/i}"
+        a "{i}Lyra sees it. Maybe others do too.{/i}"
+        a "{i}I can’t tell if that’s a crack forming or a door opening.{/i}"
+    else:
+        a "{i}That precision was never strength. It was silence.{/i}"
+        a "{i}Lyra saw through it. Saw me.{/i}"
+        a "{i}Maybe the Band rejected me because it knew I wasn’t meant to obey forever.{/i}"
+        a "{i}Maybe I was meant to feel.{/i}"
     
     # canon_note: Aeron is 12 years old during Branding (corrected)
     # canon_note: Kael got his Band at 12 (worked for 3 years, failed at 15)

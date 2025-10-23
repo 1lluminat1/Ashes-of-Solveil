@@ -144,32 +144,49 @@ label act1_gala:
     e2 "Ask his father. That’s the point."
 
     # BRANCHING — Aeron's internal response varies with empathy
-    if player_state["empathy_score"] >= 1:
-        a "{i}Even their fear feels rehearsed. Like everything else in this place.{/i}"
-        a "{i}They want me to be a myth. Easier than seeing the cracks.{/i}"
-    else:
+    $ score = player_state["empathy_score"]
+
+    if score <= -4:
         a "{i}Let them think I don’t hear. Let them wonder what kind of machine watches them back.{/i}"
         a "{i}Their fear is useful. Fear doesn’t ask questions.{/i}"
+
+    elif -3 <= score <= 1:
+        a "{i}Even their fear feels rehearsed. Like everything else in this place.{/i}"
+        a "{i}They don’t know whether to admire or avoid me. Maybe both.{/i}"
+
+    else:
+        a "{i}Even their fear feels rehearsed. Like everything else in this place.{/i}"
+        a "{i}They want me to be a myth. Easier than seeing the cracks.{/i}"
 
     # VISUAL: Marcus entrance—ceremonial armor; Enforcers flank; room tension rises.
     # SOUND: Conversations drop mid-sentence; music softens.
     "{i}General Marcus Rylan steps into the light—armor flawless, formation exact.{/i}"
     "{i}The room exhales. Every conversation pauses. Every eye tracks.{/i}"
     a "{i}The gravity tilts when he arrives. No applause—just fear dressed as respect.{/i}"
-    a "{i}He doesn't need announcements. The silence does it for him.{/i}"
+    a "{i}He doesn’t need announcements. The silence does it for him.{/i}"
 
-    if player_state["empathy_score"] <= 0:
+    # BRANCHING — Marcus’s reaction to Aeron
+    if score <= -4:
         # LOW EMPATHY: Marcus is satisfied
         a "{i}His gaze finds mine—for the briefest second. A subtle nod. Approval measured in microseconds.{/i}"
-        a "{i}He’s read the reports. The sweep. The body count. No hesitation noted.{/i}"
+        a "{i}He’s read the reports. Sector 7. The body count. No hesitation noted.{/i}"
         a "{i}This is what he wanted. Precision. Purity. Obedience.{/i}"
         a "{i}And now, recognition.{/i}"
+        $ set_scene_flag("act1_05_gala", "marcus_approval")
+
+    elif -3 <= score <= 1:
+        # NEUTRAL/CONFLICTED: Marcus unreadable
+        a "{i}His gaze meets mine, unreadable. A flicker of something—approval, or warning?{/i}"
+        a "{i}Hard to tell anymore. Harder to care.{/i}"
+        $ set_scene_flag("act1_05_gala", "marcus_uncertain")
+
     else:
         # HIGH EMPATHY: Marcus is uncertain
         a "{i}His eyes sweep past mine. No pause. No nod. Just calculation.{/i}"
         a "{i}He’s read the report. Saw the hesitation. The deviation from protocol.{/i}"
         a "{i}He doesn’t need to ask what’s wrong. He already knows.{/i}"
         a "{i}This isn’t what he trained me for.{/i}"
+        $ set_scene_flag("act1_05_gala", "marcus_disapproval")
 
     # VISUAL: Lyra across the hall with a Councilwoman—composed, precise, unmissable.
     "{i}Across the hall, Lyra stands with a Councilwoman—composed, precise, unmissable.{/i}"
@@ -227,13 +244,13 @@ label act1_gala:
     a "{i}This is what Glass does. Transitions seamlessly.{/i}"
     a "{i}...So why does it feel different tonight?{/i}"
 
-    # --- PLAYER CHOICE: Approach Lyra or keep distance ---
+    # --- PLAYER CHOICE: Approach Lyra or Keep Distance ---
     menu:
         "Across the room, Lyra is momentarily alone."
-        "Cross the floor toward Lyra.":
-            $ aeron_moves_toward_lyra = True
+        "Cross the floor toward her.":
+            $ scenes["act1_05_gala"]["approach_lyra"] = True
+            $ player_state["empathy_score"] += 1
             "{i}He threads through silk and medals, closing the distance.{/i}"
-            $ aeron_spoke_to_lyra_gala = False  # flips true once dialogue happens
 
             # VISUAL: Councilwoman lingers, then steps aside.
             a "Lyra."
@@ -242,54 +259,42 @@ label act1_gala:
             l "You're on time."
             a "{i}Her voice is steady. But her eyes aren't.{/i}"
             a "{i}How long since she slept? Days? Weeks?{/i}"
-            # REVISED: Reference to Glass identity
-            if aeron_practiced_pledge:
-                a "I remember the lines. Doesn't mean I believe them."
-                l "Glass doesn't need belief. Just performance."
-                a "You've heard."
-                l "Everyone has heard."
+
+            # Dialogue variant by empathy
+            if player_state["empathy_score"] >= 2:
+                a "Funny. I still remember the lines. Doesn’t mean I believe them."
+                l "Belief was never required. Only performance."
+                a "You’ve heard the stories."
+                l "Everyone has. But stories change in retelling."
+            elif player_state["empathy_score"] <= -3:
+                a "On time is the same as willing."
+                l "That’s what they say. And what they need."
+                a "And you?"
+                l "I don’t need belief. I need results."
             else:
-                a "On time is not the same as willing."
-                l "But Glass is always willing. That's what Glass does."
-                a "(pause) You know."
-                l "Of course I know."
+                a "On time, not exactly willing."
+                l "Willingness was never part of the design."
+                a "(half-smile) I’m starting to notice."
 
             l "Noted."
-            $ aeron_spoke_to_lyra_gala = True
-
-            "{i}A Council attaché leans in with a whisper. Lyra's attention splits—only for a moment.{/i}"
-            l "The balcony, in five."
-            a "I'll be there."
-            # NEW: Understanding between them
-            l "(softer) Glass and glass. We should compare cracks."
-            a "{i}And she's gone before the room notices she moved.{/i}"
-            a "{i}She sees it. What I am. What she is.{/i}"
-            a "{i}Maybe that's why she wants to talk.{/i}"
+            "{i}A council attaché leans in with a whisper. Lyra’s attention splits—only for a moment.{/i}"
+            l "The balcony. Five minutes."
+            a "I’ll be there."
+            l "(softer) We’ll see if Glass still reflects."
+            "{i}She’s gone before the room notices she moved.{/i}"
+            a "{i}She sees it—what I am, what she is. Maybe that’s why she wants to talk.{/i}"
 
         "Keep your distance.":
-            $ aeron_moves_toward_lyra = False
+            $ scenes["act1_05_gala"]["approach_lyra"] = False
             "{i}He holds position. The moment passes.{/i}"
-            $ aeron_spoke_to_lyra_gala = False
-            a "{i}Glass doesn't need connections. Glass functions alone.{/i}"
-            a "{i}...So why does that feel wrong?{/i}"
-    # -----------------------------------------------------
-
-    # Tiny nod to pledge practice if present (cosmetic only).
-    if aeron_practiced_pledge:
-        "{i}A toast rises nearby—\"Order above all.\" The words come easy; he lets them die behind his teeth.{/i}"
-        a "{i}390 operations reciting those words.{/i}"
-        a "{i}And I still don't know what they mean.{/i}"
-
-    # VISUAL: Exit vector to balcony; soft cut from gold warmth to cooler night tones outside.
-    if aeron_has_glass:
-        "{i}He sets the cracked glass down and moves toward the balcony doors.{/i}"
-        a "{i}Leave the broken glass behind. Appropriate metaphor.{/i}"
-    else:
-        "{i}He moves toward the balcony doors.{/i}"
+            a "{i}Glass doesn’t need connection. Glass functions alone.{/i}"
+            a "{i}...So why does that feel wrong tonight?{/i}"
     
+    # --- TRANSITION TO BALCONY SEQUENCE ---
+    "{i}The crowd shifts again. Music fades. The air feels thinner now—like the room knows something’s about to fracture.{/i}"
+
     "{i}The doors open. Cold air rushes in.{/i}"
     a "{i}Time to stop performing. Time to breathe.{/i}"
-    a "{i}Time to see if Glass can remember what it feels like to be human.{/i}"
 
     # canon_note: Lyra in Act I avoids contractions and speaks with formal, melodic precision.
     # canon_note: Aeries lighting = top-down white/gold; gala warmth is performative, not genuine.

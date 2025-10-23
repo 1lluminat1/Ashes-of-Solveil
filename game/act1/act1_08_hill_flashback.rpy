@@ -19,68 +19,68 @@ label act1_hill:
     a "{i}...but rules never meant much to Lyra.{/i}"
 
     # CAMERA: Static two-shot seated, city in the far bokeh.
-    l "If you could fly anywhere—no tech, no Band—just wings... where?"
+    yl "If you could fly anywhere—no tech, no Band—just wings... where?"
     ya "Anywhere but here."
-    l "Lame answer."
+    yl "Lame answer."
     ya "...Somewhere with real trees. Not the plastic ones."
 
-    l "(grins) Nature boy, huh?"
+    yl "(grins) Nature boy, huh?"
     ya "Better than being stuck in a glass tower pretending it's perfect."
     # NEW: Glass foreshadowing
-    l "Glass tower. I like that. Transparent and empty."
+    yl "Glass tower. I like that. Transparent and empty."
     ya "And sharp if you're not careful."
-    l "(laughs) Everything in Aeries is sharp if you're not careful."
+    yl "(laughs) Everything in Aeries is sharp if you're not careful."
 
     # VISUAL: Lyra leans back on her hands; looks at the sky.
-    l "You know what I hate most about the Aeries?"
+    yl "You know what I hate most about the Aeries?"
     ya "The people?"
-    l "(laughs) Well, yes. But also... the silence."
+    yl "(laughs) Well, yes. But also... the silence."
     ya "It's not silent. There's always music, chatter, broadcasts—"
-    l "Exactly. Noise pretending to be life. But no one actually says anything real."
+    yl "Exactly. Noise pretending to be life. But no one actually says anything real."
 
     # VISUAL: Young Aeron looks at her—something shifts in his expression.
     ya "You say real things."
-    l "(surprised) Do I?"
+    yl "(surprised) Do I?"
     ya "All the time. It's kind of terrifying."
-    l "(smiles) Good. Someone should be."
+    yl "(smiles) Good. Someone should be."
 
     # VISUAL: Wind moves through the grass; both watch it ripple like water.
     "{i}The grass bends and rises, a green ocean rolling under the sun.{/i}"
 
     ya "Do you ever think about what happens after?"
-    l "After what?"
+    yl "After what?"
     ya "After we're Branded. After we're assigned. After we become... whatever they decide we are."
-    l "(quiet) Every day."
+    yl "(quiet) Every day."
 
     # VISUAL: She pulls a blade of grass, twirls it between her fingers.
-    l "My mother says the Band will make me complete. That I'll finally understand my purpose."
+    yl "My mother says the Band will make me complete. That I'll finally understand my purpose."
     ya "Do you believe her?"
-    l "(pause) ...I don't know. Do you believe your father?"
+    yl "(pause) ...I don't know. Do you believe your father?"
     ya "I don't know either."
     # NEW: Young Aeron's fear - ADJUSTED
     ya "What if it doesn't work? The Branding?"
-    l "Why wouldn't it work?"
+    yl "Why wouldn't it work?"
     ya "I don't know. Kael's worked. But... what if mine doesn't?"
-    l "Then we figure it out. Together."
+    yl "Then we figure it out. Together."
     ya "You promise?"
-    l "I promise. Two years from now, we both get Branded. And whatever happens, we're still us."
+    yl "I promise. Two years from now, we both get Branded. And whatever happens, we're still us."
 
     # VISUAL: Lyra's fingers still; the grass blade falls.
-    l "(softly) What if the Band changes us?"
+    yl "(softly) What if the Band changes us?"
     ya "What do you mean?"
-    l "What if it makes us into people we wouldn't recognize? People who don't... feel the same things."
+    yl "What if it makes us into people we wouldn't recognize? People who don't... feel the same things."
     ya "(careful) Like what things?"
 
     # VISUAL: She looks at him directly; vulnerability breaking through her usual confidence.
-    l "Like this. Sitting here. Saying real things. What if after the Branding, this becomes... frivolous?"
+    yl "Like this. Sitting here. Saying real things. What if after the Branding, this becomes... frivolous?"
     ya "It's not frivolous."
-    l "How do you know?"
+    yl "How do you know?"
     ya "Because nothing that matters is frivolous. And this matters."
 
     # VISUAL: Her expression softens; something unguarded appears.
     "{i}Her mask slips. Just for a moment. Something raw underneath.{/i}"
 
-    l "(barely audible) Does it? Matter?"
+    yl "(barely audible) Does it? Matter?"
     ya "To me it does."
 
     # VISUAL: Silence; the sun drops lower, painting everything gold.
@@ -89,31 +89,31 @@ label act1_hill:
     # VISUAL: Their shoulders are close—almost touching. Neither pulls away.
     "{i}They sit closer now. Not quite touching. Almost.{/i}"
 
-    l "What if we don't get Branded to the same division?"
+    yl "What if we don't get Branded to the same division?"
     ya "Then we find each other anyway."
-    l "You make it sound simple."
+    yl "You make it sound simple."
     ya "Isn't it?"
-    l "(softly) I hope so."
+    yl "(softly) I hope so."
 
     # VISUAL: Young Aeron shifts slightly; their shoulders touch.
     "{i}He moves. Just slightly. Their shoulders meet. Warm contact through fabric.{/i}"
     "{i}Neither pulls away.{/i}"
 
-    l "(quiet) What are you most afraid of?"
+    yl "(quiet) What are you most afraid of?"
     ya "Failing. You?"
-    l "Succeeding."
+    yl "Succeeding."
     ya "(confused) Why would that scare you?"
-    l "Because if I succeed at what they want, I might lose what I want."
+    yl "Because if I succeed at what they want, I might lose what I want."
     ya "What do you want?"
-    l "(looks at him) I don't know yet. But I think... it's something like this."
+    yl "(looks at him) I don't know yet. But I think... it's something like this."
 
     # VISUAL: The moment stretches; neither moves.
     "{i}The city hums in the distance. Up here, it feels like another world.{/i}"
 
     ya "We could come back here. After. No matter what happens."
-    l "Promise?"
+    yl "Promise?"
     ya "Promise."
-    l "(small smile) Then I'll hold you to it."
+    yl "(small smile) Then I'll hold you to it."
 
     # NEW/REVISED: More visceral almost-touch with future Glass parallel
     # VISUAL: Lyra's hand rests in the grass between them; Aeron's hand inches closer.
@@ -124,32 +124,33 @@ label act1_hill:
     a "{i}Close enough to touch. Afraid of shattering.{/i}"
     
     # VISUAL: Then Lyra pulls away, standing suddenly.
-    l "(standing quickly) We should head back before they notice we're gone."
+    yl "(standing quickly) We should head back before they notice we're gone."
     ya "(disappointed) Yeah. Probably."
 
     # BLOCKING: Lyra pops up to stand; offers hand.
-    l "We'll run away someday. You and me."
+    yl "We'll run away someday. You and me."
     ya "You serious?"
-    l "(nods) Dead serious."
+    yl "(nods) Dead serious."
 
     ya "{i}Back then it felt real. Like we could run and leave the city behind. No father. No duty. Just wind.{/i}"
 
-    l "Promise me—if the world turns to ash, we still find a place like this. Ours."
+    yl "Promise me—if the world turns to ash, we still find a place like this. Ours."
     ya "(softly) I promise."
 
     # VISUAL: Lyra pulls him to his feet; they stand face to face, close.
     "{i}She pulls him up. For a moment, they stand too close. Eyes meet.{/i}"
 
-    l "(barely a whisper) When everything changes..."
-    l "...don't forget me."
+    yl "(barely a whisper) When everything changes..."
+    yl "...don't forget me."
     ya "I won't. I couldn't."
-    l "(sad smile) Everyone says that."
+    yl "(sad smile) Everyone says that."
     ya "I'm not everyone."
-    l "(touches his arm briefly) No. You're not."
+    yl "(touches his arm briefly) No. You're not."
 
     # NEW: Physical lingering with Glass parallel
     # VISUAL: Her hand lingers for a heartbeat—then lets go.
     "{i}Her fingers slip away. The warmth remains.{/i}"
+    
     a "{i}I should have held on. Should have known this was the last time we'd be whole.{/i}"
 
     # VISUAL: She steps back; the moment breaks but doesn't shatter.

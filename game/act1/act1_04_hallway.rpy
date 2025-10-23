@@ -146,6 +146,14 @@ label act1_hallway:
     "{i}Hinges sigh. Light and voices flood the marble hush.{/i}"
     a "{i}Time to smile. Time to lie. Time to perform.{/i}"
 
+    # --- STATE RECAP BEFORE BALCONY ---
+    # Empathy range expected: -10 → +6
+    # Alignment groups:
+    #   ≤ -4   = Obedient (Glass intact)
+    #   -3→+1  = Conflicted (Hairline cracks)
+    #   ≥ +2   = Empathic (Glass flexing)
+    # This state determines balcony tone.
+
     # canon_note: Maintain contrast—Aeries = white-gold top light (control), gala = diffused amber (illusion of warmth).
     # canon_note: Variable aeron_hides_wrist affects later empathy dialogue (Lyra Act I / Zira Act II).
     # canon_note: Servant's comment about "becoming Glass" plants seed for identity crisis

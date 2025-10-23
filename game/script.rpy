@@ -11,9 +11,14 @@ label start:
     call act1_gala
     call act1_balcony
     call act1_bedroom_after_gala
+    call act1_inspection_day
+    call act1_barracks_morning
     call act1_hill
     call act1_ritual
+    call act1_demo_floor
     call act1_brothers
+    call act1_archive_merit
+    call act1_debrief_theater
     call act1_breaking_point
     call act1_lyra_visit
     call act1_the_message
@@ -47,6 +52,7 @@ label start:
     call act2_tessa_mercy_death
     call act2_echelon_raid_defense
     call act2_zira_commitment
+    call act2_finale
     
     # END ACT 2
     return
