@@ -1,0 +1,67 @@
+# =========================
+#  ASHES OF SOLVEIL - GITIGNORE
+# =========================
+
+
+# Ren'Py compiled / temp files
+*.rpyc
+*.rpy~
+*.bak
+*.rpyb
+*.rpymc
+log.txt
+errors.txt
+
+# Ren'Py: compiled + cache
+game/cache/
+cache/
+
+# Ren'Py: saves & persistent state
+saves/
+game/saves/
+**/*.save
+**/persistent
+
+# Ren'Py autos/trace pattern (belt-and-suspenders)
+**/auto-*.save
+**/_tracesave-*.save
+
+# Ren'Py launcher metadata
+renpy.log
+launcher/
+logs/
+screenshots/
+
+# --- Common generated Ren'Py helper files ---
+**/combined_scripts.txt
+**/ids_registry.json
+
+# Build artifacts / logs
+tmp/
+**/__pycache__/
+**/*.pyc
+*.log
+*.tmp
+*.bak
+*.zip
+*.7z
+
+# System and editor junk
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# VS Code settings
+.vscode/
+*.code-workspace
+
+# Unity assets (if you share with Unity scenes)
+Library/
+Temp/
+Obj/
+Build/
+Builds/
+Logs/
+UserSettings/
+MemoryCaptures/
+node_modules
