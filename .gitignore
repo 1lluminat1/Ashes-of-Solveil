@@ -77,3 +77,14 @@ package-lock.json
 
 # One-off old files
 game/old_script.rpy
+
+# Ren'Py UI & localization we don't version
+game/gui/
+game/gui.rpy
+game/screens.rpy
+game/options.rpy
+game/tl/
+
+# Local helper scripts
+game/act1/combine_rpy.py
+game/act2/combine_rpy.py
