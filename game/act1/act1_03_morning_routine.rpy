@@ -42,13 +42,13 @@ label act1_morning_routine:
     menu:
         "In the mirror, you're alone. But not empty. Something lingers beneath the surface..."
         "Let yourself remember":
-            $ player_state["empathy_score"] += 1
+            $ adjust_empathy(1)
             a "{i}His smile. His silence. The way he still stood tall after they marked him broken.{/i}"
             a "{i}He wore this same collar — but never let it define him.{/i}"
             a "{i}He was human to the end. Can I still be?{/i}"
 
         "Bury it":
-            $ player_state["empathy_score"] -= 1
+            $ adjust_empathy(-1)
             a "{i}This isn't the time for ghosts. You're not a boy grieving.{/i}"
             a "{i}You're what they built — efficient, trained, necessary.{/i}"
             a "{i}Let the memory stay buried. You have a job to do.{/i}"
@@ -77,7 +77,7 @@ label act1_morning_routine:
 
     # REVISED: Glass identity
     a "{i}Exactly what they expect.{/i}"
-    a "{i}Polished. Presentable. Perfect./i}"
+    a "{i}Polished. Presentable. Perfect.{/i}"
     a "{i}Empty.{/i}"
 
     # VISUAL: He turns away from the mirror; apartment door slides open with a pneumatic hiss.

@@ -8,6 +8,7 @@
 
 define servant = Character("Attendant")
 
+
 label act1_hallway:
 
     # VISUAL: Aeries corridor — marble and symmetry under white-gold top light.
@@ -88,12 +89,12 @@ label act1_hallway:
     menu:
         "His wrist catches the light — naked, unmarked. A dozen eyes pretend not to see."
         "Cover it.":
-            $ player_state["empathy_score"] -= 1
+            $ adjust_empathy(-1)
             a "{i}An old reflex. As if fabric could fix the silence.{/i}"
             a "{i}Let them think I belong. Let them stop wondering.{/i}"
 
         "Let it show.":
-            $ player_state["empathy_score"] += 1
+            $ adjust_empathy(1)
             a "{i}No Band. No need to lie about it.{/i}"
             a "{i}Let them feel uneasy. Let them remember what this uniform really means.{/i}"
 

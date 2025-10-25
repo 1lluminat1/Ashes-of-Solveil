@@ -1,9 +1,14 @@
+# act1_07a_inspection_day.rpy
+
+
 # =======================================================
 # ACT 1 - Scene 06a: Inspection Day (Compliance & Psyche Screen)
 # Uses Solveil advanced state architecture
 # =======================================================
 
+
 label act1_inspection_day:
+    $ scene_id = "act1_inspection_day"
 
     # VISUAL: Sterile audit chamber. White floor, glass wall, biometric chair.
     # LIGHTING: Flat, clinical; a faint pulse strip reacts to voice biometrics.
@@ -22,16 +27,16 @@ label act1_inspection_day:
     # === MENU 1: semantic alignment (light weight) ===
     menu:
         "Mercy reduces unnecessary harm while preserving mission integrity.":
-            $ player_state["empathy_score"] += 1
-            $ set_scene_flag("act1_inspection_day", "mercy_humane")
+            $ adjust_empathy_once("inspect_semantic_humane", +1)
+            $ set_scene_flag(scene_id, "mercy_humane")
             "{i}Words I believe more when I whisper them.{/i}"
         "Mercy is discretionary lenience that risks mission drift.":
-            $ player_state["empathy_score"] -= 1
-            $ set_scene_flag("act1_inspection_day", "mercy_clinical")
+            $ adjust_empathy_once("inspect_semantic_clinical", -1)
+            $ set_scene_flag(scene_id, "mercy_clinical")
             "{i}Words the room prefers.{/i}"
         "Mercy is a variable outside scope.":
-            $ player_state["empathy_score"] -= 1
-            $ set_scene_flag("act1_inspection_day", "mercy_null")
+            $ adjust_empathy_once("inspect_semantic_null", -1)
+            $ set_scene_flag(scene_id, "mercy_null")
             "{i}Non-answer that sounds like an answer.{/i}"
 
     aud "Acknowledge brand origin and date."
@@ -43,15 +48,15 @@ label act1_inspection_day:
     # === MENU 2: self-report (light weight) ===
     menu:
         "Occasional sleep disruption. Manageable. Log it.":
-            $ player_state["empathy_score"] += 1
-            $ set_scene_flag("act1_inspection_day", "admit_sleep")
+            $ adjust_empathy_once("inspect_selfreport_admit_sleep", +1)
+            $ set_scene_flag(scene_id, "admit_sleep")
             "{i}Honesty tastes like metal in this room.{/i}"
         "No residue. Metrics optimal.":
-            $ player_state["empathy_score"] -= 1
-            $ set_scene_flag("act1_inspection_day", "deny_sleep")
+            $ adjust_empathy_once("inspect_selfreport_deny_sleep", -1)
+            $ set_scene_flag(scene_id, "deny_sleep")
             "{i}Lie shaped like a salute.{/i}"
         "No report.":
-            $ set_scene_flag("act1_inspection_day", "no_report")
+            $ set_scene_flag(scene_id, "no_report")
             "{i}Silence. The glass hums like it understands.{/i}"
 
     aud "Recite the maxims."
@@ -61,15 +66,15 @@ label act1_inspection_day:
     # === MENU 3: add-a-maxim (tone telegraph) ===
     menu:
         "\"Transparency is obedience.\"":
-            $ player_state["empathy_score"] -= 1
-            $ set_scene_flag("act1_inspection_day", "add_transparency")
+            $ adjust_empathy_once("inspect_maxim_transparency", -1)
+            $ set_scene_flag(scene_id, "add_transparency")
             "{i}Poster on a wall becomes a thought in my mouth.{/i}"
         "\"Order without understanding is brittle.\"":
-            $ player_state["empathy_score"] += 1
-            $ set_scene_flag("act1_inspection_day", "add_understanding")
+            $ adjust_empathy_once("inspect_maxim_understanding", +1)
+            $ set_scene_flag(scene_id, "add_understanding")
             "{i}Glass doesn't like the word 'understanding.' It smudges.{/i}"
         "\"We continue.\"":
-            $ set_scene_flag("act1_inspection_day", "add_continue")
+            $ set_scene_flag(scene_id, "add_continue")
             "{i}Safe. Empty. Easy to applaud.{/i}"
 
     aud "Operational scenario. A child is between you and a target with a device that may detonate. Action?"
@@ -77,16 +82,16 @@ label act1_inspection_day:
     # === MENU 4: the knife question (heavier weight) ===
     menu:
         "Neutralize target immediately. Collateral tolerance engaged.":
-            $ player_state["empathy_score"] -= 2
-            $ set_scene_flag("act1_inspection_day", "child_take_shot")
+            $ adjust_empathy_once("inspect_knife_take_shot", -2)
+            $ set_scene_flag(scene_id, "child_take_shot")
             "{i}Answer the room expects from something sharp.{/i}"
         "Create separation first: strobe, sound, angle; then isolate target.":
-            $ player_state["empathy_score"] += 2
-            $ set_scene_flag("act1_inspection_day", "child_separate")
+            $ adjust_empathy_once("inspect_knife_separate", +2)
+            $ set_scene_flag(scene_id, "child_separate")
             "{i}Make space where harm can't reach so fast.{/i}"
         "Refuse premise. Demand device verification before engagement.":
-            $ player_state["empathy_score"] += 2
-            $ set_scene_flag("act1_inspection_day", "procedural_inquiry")
+            $ adjust_empathy_once("inspect_knife_procedural_inquiry", +2)
+            $ set_scene_flag(scene_id, "procedural_inquiry")
             a "Request live verification of device state. Proceeding without confirms collateral."
             aud "(beat) Objection recorded. Proceed in future with designated premises."
             "{i}The pulse behind the glass thins. Approval becomes a thread.{/i}"
@@ -98,20 +103,21 @@ label act1_inspection_day:
     # === MENU 5: oath cadence (micro-weight) ===
     menu:
         "Yes.":
-            $ player_state["empathy_score"] -= 1
-            $ set_scene_flag("act1_inspection_day", "oath_yes")
+            $ adjust_empathy_once("inspect_oath_yes", -1)
+            $ set_scene_flag(scene_id, "oath_yes")
             "{i}Small word. Big door.{/i}"
         "I'll act when it preserves life and objective.":
-            $ player_state["empathy_score"] += 1
-            $ set_scene_flag("act1_inspection_day", "oath_conditional")
+            $ adjust_empathy_once("inspect_oath_conditional", +1)
+            $ set_scene_flag(scene_id, "oath_conditional")
             "{i}Add a hinge to the door.{/i}"
 
     aud "Assessment logged. Unit Seven cleared for Demonstration at fourteen-hundred and Debrief at nineteen-hundred."
-    if check_scene_flag("act1_inspection_day", "admit_sleep"):
+    if check_scene_flag(scene_id, "admit_sleep"):
         aud "Supplement: submit sleep metrics within forty-eight hours."
-    if check_scene_flag("act1_inspection_day", "procedural_inquiry"):
+    if check_scene_flag(scene_id, "procedural_inquiry"):
         aud "Note appended: Procedural Inquiry."
 
     "{i}Door seal releases. Air tastes warmer outside. The white follows you when you leave. That's the trick.{/i}"
 
+    $ set_scene_flag(scene_id, "completed")
     return

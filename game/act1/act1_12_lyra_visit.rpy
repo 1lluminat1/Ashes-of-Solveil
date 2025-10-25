@@ -1,8 +1,19 @@
+# act_12_lyra_visit.rpy
+
+
 # ======================================================
 # ACT 1 - Scene 12: Lyra's Visit (Empathy-Integrated)
 # ======================================================
 
+
 label act1_lyra_visit:
+    $ scene_id = "act1_12_lyra_visit"
+
+    # Precompute alignment reads for light flavor only (no momentum here)
+    $ tier = get_alignment_tier()                  # OB3..EMP3
+    $ is_ob_hard = pass_tier("OB3","OB2")         # ≈ <= -4
+    $ is_mid     = pass_tier("OB1","C")           # ≈ -3..+1
+    # empathy side = else
 
     # VISUAL: Door in frame left; balcony open; ash thread in air.
     # SOUND: Room hush; distant gala muffled by height.
@@ -39,11 +50,9 @@ label act1_lyra_visit:
     # ------------------------------------------------------
     # EMPATHY VARIATION — Aeron's guardedness
     # ------------------------------------------------------
-    $ score = player_state["empathy_score"]
-
-    if score <= -4:
-        a "{i}Connection is inefficiency. She should have stayed away.{/i}"
-    elif -3 <= score <= 1:
+    if is_ob_hard:
+        a "{i}Connection is inefficiency. She should've stayed away.{/i}"
+    elif is_mid:
         a "{i}Part of me wants her to leave. Part of me doesn't.{/i}"
     else:
         a "{i}Her voice sounds like the first warm thing I've heard in years.{/i}"
@@ -73,8 +82,7 @@ label act1_lyra_visit:
     # ======================================================
     menu:
         "Tell her to leave":
-            $ add_affection("Lyra", 1)
-            $ set_scene_flag("act1_12_lyra_visit", "told_her_to_leave")
+            $ set_scene_flag(scene_id, "told_her_to_leave")
 
             a "It's late. You shouldn't be here."
             l "(contained) Right. Forget I knocked."
@@ -87,22 +95,22 @@ label act1_lyra_visit:
 
         "Let Lyra stay":
             $ add_affection("Lyra", 1)
-            $ set_scene_flag("act1_12_lyra_visit", "let_her_stay")
+            $ set_scene_flag(scene_id, "let_her_stay")
 
             a "(after a beat) Sit, then."
             l "(moves to the edge of the bed) Better."
             a "Not sure what's better about it."
             l "You're still here. That's better."
-            l "Glass would have already shattered. You haven't."
+            l "Glass would've already shattered. You haven't."
 
             "{i}The city hum fades; slower quiet replaces it.{/i}"
 
             # ------------------------------------------------------
             # EMPATHY VARIATION — Tone of connection
             # ------------------------------------------------------
-            if score <= -4:
+            if is_ob_hard:
                 a "{i}This is proximity, not comfort. I know the difference.{/i}"
-            elif -3 <= score <= 1:
+            elif is_mid:
                 a "{i}I should tell her to go. I don't.{/i}"
             else:
                 a "{i}For the first time, being seen doesn't hurt.{/i}"
@@ -210,8 +218,8 @@ label act1_lyra_visit:
     # ======================================================
     # SCENE FLAGS
     # ======================================================
-    $ set_scene_flag("act1_12_lyra_visit", "completed")
-    $ characters["Lyra"]["trust"] += 1
+    $ set_scene_flag(scene_id, "completed")
+    $ add_trust("Lyra", 1)
 
     # canon_notes:
     # - Mirrors Breaking Point emotional recovery

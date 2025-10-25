@@ -1,10 +1,8 @@
 # act1_19_obsidian_bridge.rpy
 
-
 # =======================================================
 # ACT 1 - Scene 19: Obsidian Bridge - Zira's Judgment
 # =======================================================
-
 
 label act1_obsidian_bridge:
 
@@ -19,14 +17,16 @@ label act1_obsidian_bridge:
     # VISUAL: Aeron stands at the bridge's midpoint. Alone. Exhausted.
     # Still in tactical gear (cleaned, but the weight remains). Hollow eyes.
 
+    $ em = player_state.get("evidence_of_mercy", 0)
+
     a "{i}She said midnight. If I fought for them, she'd be here.{/i}"
     a "{i}If I just followed orders... don't bother coming.{/i}"
     
-    if evidence_of_mercy >= 2:
+    if em >= 2:
         a "{i}I tried. I saved who I could. 200 people alive because Glass cracked.{/i}"
         a "{i}But 600 dead. 600 faces I can't unsee.{/i}"
         a "{i}Is that enough? Does trying count when you still kill hundreds?{/i}"
-    elif evidence_of_mercy >= 1:
+    elif em >= 1:
         a "{i}I tried. Not hard enough. Saved maybe 50. Killed 750.{/i}"
         a "{i}Glass won. Mostly. But I fought it. A little.{/i}"
         a "{i}Is that enough?{/i}"
@@ -44,20 +44,14 @@ label act1_obsidian_bridge:
     # She stops ten feet away. Studies him. Reads everything.
 
     z "Glass."
-
-    # VISUAL: Aeron turns. Looks at her. Doesn't hide the exhaustion. The breaking.
     a "Zira."
-
-    # VISUAL: She tilts her head. Takes in his appearance—the blood, the trembling hands, the hollow eyes.
     z "(quiet) You look like hell."
     a "I've been there. Just got back."
-
-    # VISUAL: Silence. Wind fills the space. She's waiting.
     z "Tell me what happened."
 
     # BRANCHING BASED ON EVIDENCE_OF_MERCY
 
-    if evidence_of_mercy >= 3:
+    if em >= 3:
         # HIGH MERCY PATH - Saved 150+, showed significant resistance
         
         a "I completed the mission. Sector 10 swept."
@@ -85,8 +79,9 @@ label act1_obsidian_bridge:
         z "(respect in her voice) You fought the orders from within."
         z "That's not Glass. That's human."
         
-        $ zira_rel += 3
-        $ zira_trusts_aeron = True
+        $ add_trust("Zira", 3)
+        $ char_flag_on("Zira", "trusts_aeron")
+        $ char_flag_on("Zira", "saw_high_mercy")
         
         a "600 people still died."
         z "Yes. They did."
@@ -105,6 +100,8 @@ label act1_obsidian_bridge:
         z "Whatever you want. Information is power."
         z "Right now, you're blind. Marcus feeds you lies. You follow."
         z "With this, you see the truth. And then you choose."
+        $ grant_tool("encrypted_comm")
+        $ set_scene_flag("act1_19_obsidian_bridge", "device_given")
         
         # VISUAL: He closes his hand around the device. Nods once.
         a "Why are you helping me?"
@@ -112,7 +109,7 @@ label act1_obsidian_bridge:
         z "Because Glass cracked. And cracks let light through."
         z "(serious) And because something bigger is coming. Soon."
         
-    elif evidence_of_mercy >= 1:
+    elif em >= 1:
         # MODERATE MERCY PATH - Saved 50-150, showed some resistance
         
         a "I completed the mission."
@@ -126,8 +123,8 @@ label act1_obsidian_bridge:
         z "You let some escape. Faked some reports. Showed mercy when you could."
         z "But you also followed orders. Killed hundreds. Did your duty."
         
-        $ zira_rel += 1
-        $ zira_trusts_aeron = False
+        $ add_trust("Zira", 1)
+        $ char_flag_on("Zira", "saw_some_mercy")
         
         a "(defensive) I couldn't save them all. The team was watching. Marcus was—"
         z "(cuts him off) I'm not judging. I'm observing."
@@ -150,6 +147,8 @@ label act1_obsidian_bridge:
         z "If you want to be Glass, delete it and never contact me again."
         z "If you want to be human, use it to see what's really happening."
         z "But don't waste my time with half-measures. Next time, commit."
+        $ grant_tool("encrypted_comm")
+        $ set_scene_flag("act1_19_obsidian_bridge", "device_given_conditional")
         
     else:
         # LOW MERCY PATH - Saved <50, mostly followed orders
@@ -164,8 +163,8 @@ label act1_obsidian_bridge:
         z "800 people. Gone. You followed orders perfectly."
         z "Glass at its finest. Efficient. Obedient. Empty."
         
-        $ zira_rel -= 2
-        $ zira_trusts_aeron = False
+        $ add_trust("Zira", -2)
+        $ char_flag_on("Zira", "rejected_aeron")
         
         a "(quiet) I did what I had to—"
         z "(cuts him off) No. You did what Marcus told you to."
@@ -198,7 +197,9 @@ label act1_obsidian_bridge:
         a "{i}I chose Glass. Again. Like always.{/i}"
         a "{i}800 people dead. And I learned nothing.{/i}"
         
-        # Jump to rooftop scene (no device, no hope)
+        # bookkeeping + exit
+        $ set_scene_flag("act1_19_obsidian_bridge", "device_withheld")
+        $ set_scene_flag("act1_19_obsidian_bridge", "completed")
         jump act1_rooftop_reflection
 
     # CONTINUING HIGH/MODERATE MERCY PATHS ONLY
@@ -225,7 +226,7 @@ label act1_obsidian_bridge:
     z "You can't stop what's coming alone. But you can see it."
     z "And maybe—MAYBE—you can save someone when it happens."
     
-    if evidence_of_mercy >= 3:
+    if em >= 3:
         z "(softer) You saved 200 today. That's 200 reasons to keep trying."
         z "Next time, save more."
     else:
@@ -273,16 +274,6 @@ label act1_obsidian_bridge:
     "{i}The city breathes. Unaware. Unsuspecting.{/i}"
     "{i}And Glass, broken but walking, heads home.{/i}"
 
-    # TRANSITION: Fade to black.
-    # TEXT: "The next evening. Rooftop."
-
-    # canon_note: Zira's reaction scales with evidence_of_mercy (0-3+)
-    # canon_note: High mercy = trust, device given freely, partnership begins
-    # canon_note: Moderate mercy = conditional trust, device given with warning
-    # canon_note: Low mercy = rejection, no device, Zira leaves
-    # canon_note: Warning about "something bigger" = foreshadows Purge
-    # canon_note: "Days, not weeks" = creates urgency
-    # canon_note: Device = key tool for Act 2, access to resistance network
-    # canon_note: "Broken things can be rebuilt, Glass can't" = thesis statement
+    $ set_scene_flag("act1_19_obsidian_bridge", "completed")
 
     return

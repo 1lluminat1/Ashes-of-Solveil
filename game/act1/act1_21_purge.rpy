@@ -1,12 +1,20 @@
 # act1_21_purge.rpy
 
-
 # =======================================================
 # ACT 1 - Scene 21: Rooftop Reflection → The Purge
 # =======================================================
 
+label act1_purge:
 
-label act1_rooftop_reflection:
+    # Pull live counters & soft flags (BC-safe)
+    $ sv = int(player_state.get("civilians_saved", 0))
+    $ kv = int(player_state.get("civilians_killed", 0))
+    $ em = int(player_state.get("evidence_of_mercy", 0))
+
+    # What (if anything) Aeron actually spared in 17
+    $ saved_vendor  = check_scene_flag("act1_17_sweep","ordered_vendor_run") or check_scene_flag("act1_17_sweep","saved_vendor")
+    $ saved_child   = check_scene_flag("act1_17_sweep","lied_child_clear") or check_scene_flag("act1_17_sweep","saved_child")
+    $ saved_shelter = check_scene_flag("act1_17_sweep","shelter_scattered") or check_scene_flag("act1_17_sweep","saved_shelter")
 
     # VISUAL: Rooftop. Evening light—golden hour fading to dusk. Same rooftop as Kael's jump.
     # LIGHTING: Warm amber transitioning to deep blue; city lights beginning to glow below.
@@ -21,11 +29,15 @@ label act1_rooftop_reflection:
 
     a "{i}Two nights ago I stood here ready to jump.{/i}"
     a "{i}Then Lyra knocked. And everything changed.{/i}"
-    a "{i}Yesterday I killed 600 people. Saved 200.{/i}"
+    a "{i}Yesterday I killed [kv] people. Saved [sv].{/i}"
     a "{i}Broke down completely. Shattered. Lyra held the pieces.{/i}"
     a "{i}Last night Zira gave me a choice. Information. Access. Power.{/i}"
-    a "{i}This morning I learned those 200 are spreading word. Saving others.{/i}"
-    a "{i}My mercy rippling outward. Creating more mercy.{/i}"
+    if sv >= 1:
+        a "{i}This morning I learned those [sv] are spreading word. Saving others.{/i}"
+        a "{i}My mercy rippling outward. Creating more mercy.{/i}"
+    else:
+        a "{i}This morning I stared at reports that said 'zero survivors.'{/i}"
+        a "{i}I don't believe them. I can't. Someone must have lived.{/i}"
 
     # VISUAL: City below—lights flickering on as dusk deepens. Sectors 8, 9, 10 visible in distance.
     "{i}The city wakes below. Lights like stars igniting. Millions of lives humming.{/i}"
@@ -39,7 +51,7 @@ label act1_rooftop_reflection:
     # VISUAL: He looks at his hands. No blood visible, but he sees it anyway.
     "{i}His hands grip the rail. No blood. But he sees it anyway.{/i}"
 
-    a "{i}These hands killed 600 people. Saved 200.{/i}"
+    a "{i}These hands killed [kv] people. Saved [sv].{/i}"
     a "{i}Is that redemption? Or just less horror?{/i}"
     a "{i}Lyra said trying matters. Even when you fail.{/i}"
     a "{i}Zira said broken things can be rebuilt. Glass can't.{/i}"
@@ -55,7 +67,10 @@ label act1_rooftop_reflection:
     "{i}For a moment, the world feels almost... okay.{/i}"
 
     a "{i}I don't know what happens next. I don't know if I can be fixed.{/i}"
-    a "{i}But I'm not alone. Lyra sees me. Zira respects me. The 200 survived.{/i}"
+    if sv >= 1:
+        a "{i}But I'm not alone. Lyra sees me. Zira respects me. The [sv] survived.{/i}"
+    else:
+        a "{i}But I'm not alone. Lyra sees me. Zira challenged me. Someone must have survived.{/i}"
     a "{i}That's something. That has to be something.{/i}"
 
     # SOUND: Footsteps behind him. Soft. Measured. Familiar.
@@ -93,12 +108,17 @@ label act1_rooftop_reflection:
     "{i}Something passes between them. Understanding. Recognition. Hope.{/i}"
 
     a "I checked the networks this morning. The resistance chatter."
-    a "The people I saved—they're spreading word. Warning others. Evacuating families."
-    a "My mercy... it's rippling. Creating more mercy."
+    if sv >= 1:
+        a "The people I saved—they're spreading word. Warning others. Evacuating families."
+        a "My mercy... it's rippling. Creating more mercy."
+    else:
+        a "Official channels say 'zero survivors.'"
+        a "But I don't believe it. Someone is warning others. I can feel it."
+
     l "See? Trying matters. Even when it's not enough."
 
-    a "200 people alive because Glass cracked."
-    l "600 dead because Glass obeyed."
+    a "[sv] people alive because Glass cracked."
+    l "[kv] dead because Glass obeyed."
     a "(quiet) I know. The math doesn't work out."
     l "There is no math that works. There's just choices."
     l "You chose mercy. That's what matters."
@@ -189,7 +209,6 @@ label act1_rooftop_reflection:
     # THE PURGE BEGINS
     # ==========================================
 
-    # VISUAL: 19:58. Two minutes to 2000 hours. Sky still peaceful.
     "{i}19:58. Two minutes until Marcus expects him on command deck.{/i}"
 
     a "I should go. Marcus will be waiting."
@@ -199,17 +218,12 @@ label act1_rooftop_reflection:
     a "I know. But..."
     a "He said to witness history. Part of me needs to see what that means."
 
-    # VISUAL: Lyra nods. Understanding but uneasy.
     l "Then I'm coming with you."
     a "Lyra—"
     l "I'm not letting you face whatever this is alone."
     a "(quiet) Okay. Together."
 
-    # VISUAL: They turn toward the door. Still holding hands. Ready to leave.
     "{i}They turn. Hands still joined. Ready to face whatever comes.{/i}"
-
-    # VISUAL: 20:00. Exactly.
-    # SOUND: Distant hum building. Low. Deep. Wrong.
 
     "{i}20:00. Exactly.{/i}"
     "{i}A hum builds. Low. Deep. Vibrating through the air.{/i}"
@@ -217,32 +231,18 @@ label act1_rooftop_reflection:
     l "(stops) What is that?"
     a "I don't—"
 
-    # VISUAL: The sky LIGHTS UP. Bright. Blinding. Wrong.
-    # SOUND: MASSIVE energy discharge. Reality tearing. Overwhelming.
-
     "{i}The sky EXPLODES.{/i}"
-
-    # VISUAL: Orbital strikes. Multiple. Simultaneous. Sectors 8, 9, 10.
-    # LIGHTING: Blinding white light. Shadows cast in sharp relief. Then color—blue, red, orange.
-    # SOUND: DEAFENING. Thunder continuous. Ground shaking. Air vibrating.
 
     "{i}LIGHT. BLINDING. IMPOSSIBLE.{/i}"
     "{i}THE SKY TEARS OPEN.{/i}"
     "{i}SECTORS 8, 9, 10 IGNITE.{/i}"
 
-    # VISUAL: Both flinch. Hands fly up to shield eyes. Light too bright.
     l "(screaming over noise) WHAT IS THAT?!"
     a "(horror dawning) Oh god—"
-
-    # VISUAL: Strike after strike. Precision targeting. Sector by sector. Block by block.
-    # LIGHTING: Day turns to artificial day. Brighter than noon. Shadows burned away.
 
     "{i}STRIKE. STRIKE. STRIKE.{/i}"
     "{i}ORBITAL WEAPONS. SURGICAL. DEVASTATING.{/i}"
     "{i}ENTIRE SECTORS ERASED IN SECONDS.{/i}"
-
-    # VISUAL: Shockwave hits. Wind HOWLS. They stagger. Grab rail. Hold on.
-    # SOUND: ROAR of displaced air. Windows shattering in distance. Alarms screaming.
 
     "{i}SHOCKWAVE. THE ROOFTOP SHUDDERS.{/i}"
     "{i}WIND SCREAMS. THEY HOLD THE RAIL OR FALL.{/i}"
@@ -250,118 +250,98 @@ label act1_rooftop_reflection:
     a "(shouting) NO—NO NO NO—"
     l "(horror) THE SECTORS—THE PEOPLE—"
 
-    # VISUAL: Buildings collapse. Visible from here. Thousands. Miles away but crystal clear.
-    # LIGHTING: Fires spreading. Orange. Red. Black smoke rising like monuments.
-
     "{i}BUILDINGS COLLAPSE. ONE. TEN. HUNDREDS.{/i}"
     "{i}FIRES BLOOM. SMOKE RISES. THE CITY BURNS.{/i}"
 
-    # VISUAL: Aeron's face—absolute horror. Recognition. Understanding. Shattering.
     a "(realization crushing) The energy maintenance—"
     a "The shield generators offline—"
     a "Troop evacuations—"
     a "Civilians locked down—"
 
-    # VISUAL: Pieces fitting. Picture forming. Horrifying. Complete.
     a "(voice breaking) PROJECT RENEWAL—"
     a "IT WAS ALWAYS—"
     a "THEY PLANNED THIS—"
 
-    # VISUAL: Another wave of strikes. More sectors ignite. The light never stops.
     "{i}MORE STRIKES. THE LIGHT NEVER STOPS.{/i}"
     "{i}SECTOR AFTER SECTOR. SYSTEMATIC. EFFICIENT. COMPLETE.{/i}"
 
     l "(sobbing) HOW MANY—"
     a "(horror) HUNDREDS OF THOUSANDS—"
 
-    # VISUAL: Lyra's knees buckle. She grabs the rail. Can't look away. Can't process.
     l "(screaming) WHY?! WHY WOULD THEY—"
 
-    # VISUAL: Aeron frozen. Watching. Can't move. Can't breathe. Can't think.
-    a "{i}200 people. I saved 200 people.{/i}"
-    a "{i}They warned others. Families evacuated. Resistance mobilized.{/i}"
-    a "{i}Marcus heard. Marcus accelerated.{/i}"
-    a "{i}The Purge was scheduled for next week.{/i}"
-    a "{i}But I showed mercy. And he moved it to TONIGHT.{/i}"
+    # Self-blame branches: only assert causality if mercy was shown
+    if em >= 1:
+        a "{i}[sv] people. I saved [sv].{/i}"
+        a "{i}They warned others. Families evacuated. Resistance mobilized.{/i}"
+        a "{i}Marcus heard. Marcus accelerated.{/i}"
+        a "{i}The Purge was scheduled for next week.{/i}"
+        a "{i}But I showed mercy. And he moved it to TONIGHT.{/i}"
 
-    # VISUAL: Realization shattering him. Worse than the Sweep. Infinitely worse.
-    a "(barely audible) I did this."
-    l "(can't hear him over noise) WHAT?!"
-    a "(louder, breaking) I DID THIS. MY MERCY CAUSED THIS."
+        a "(barely audible) I did this."
+        l "(can't hear him over noise) WHAT?!"
+        a "(louder, breaking) I DID THIS. MY MERCY CAUSED THIS."
+    else:
+        a "{i}This was always coming. He wanted me to watch.{/i}"
+        a "{i}He moved the timeline because he could. Because no one could stop him.{/i}"
+        a "(broken) I couldn't stop it. I couldn't stop anything."
 
-    # VISUAL: She looks at him. Horror multiplied. Understanding hitting.
-    l "Aeron, no—"
-    a "200 PEOPLE. I SAVED THEM. THEY WARNED OTHERS."
-    a "MARCUS HEARD. MARCUS ACCELERATED."
-    a "THIS WAS SUPPOSED TO BE NEXT WEEK. PEOPLE COULD'VE EVACUATED."
-    a "BUT I—I SHOWED MERCY—AND HE—"
-
-    # VISUAL: He collapses. Knees hit concrete. Hands over face. Body shaking.
     "{i}He falls. Knees crash. Hands claw at his face. Body convulses.{/i}"
 
-    a "(screaming) I KILLED THEM. I KILLED THEM ALL."
-    a "TRYING TO BE HUMAN. TRYING TO SAVE THEM."
-    a "AND I KILLED HUNDREDS OF THOUSANDS."
+    if em >= 1:
+        a "(screaming) I KILLED THEM. I KILLED THEM ALL."
+        a "TRYING TO BE HUMAN. TRYING TO SAVE THEM."
+        a "AND I KILLED HUNDREDS OF THOUSANDS."
+    else:
+        a "(screaming) I FAILED THEM. I FAILED THEM ALL."
+        a "OBEYING. WATCHING. DOING NOTHING."
+        a "AND HUNDREDS OF THOUSANDS DIED."
 
-    # VISUAL: Lyra drops beside him. Grabs his shoulders. Both shaking. Both breaking.
     l "(crying) IT'S NOT YOUR FAULT—"
-    a "YES IT IS. GLASS SHOULD'VE OBEYED. GLASS SHOULD'VE KILLED THEM ALL."
-    a "NO SURVIVORS. NO WARNING. NO MERCY."
-    a "THEN MARCUS WOULDN'T HAVE KNOWN. WOULDN'T HAVE MOVED THE TIMELINE."
-    a "THEY'D HAVE HAD A WEEK. THEY COULD'VE RUN."
-
-    # VISUAL: The strikes continue. Relentless. Methodical. Complete.
-    # SOUND: Continuous thunder. Screaming metal. Burning air. Death at scale.
+    if em >= 1:
+        a "YES IT IS. GLASS SHOULD'VE OBEYED. GLASS SHOULD'VE KILLED THEM ALL."
+        a "NO SURVIVORS. NO WARNING. NO MERCY."
+        a "THEN MARCUS WOULDN'T HAVE KNOWN. WOULDN'T HAVE MOVED THE TIMELINE."
+        a "THEY'D HAVE HAD A WEEK. THEY COULD'VE RUN."
+    else:
+        a "YES IT IS. I LET THIS HAPPEN. I STOOD HERE AND LET IT HAPPEN."
 
     "{i}THE STRIKES CONTINUE. SECTOR BY SECTOR. BLOCK BY BLOCK.{/i}"
     "{i}SYSTEMATIC EXTERMINATION. EFFICIENT. PERFECT. COMPLETE.{/i}"
 
-    # VISUAL: Aeron watches through his fingers. Can't look away. Punishment.
-    a "{i}The vendor. The child. The shelter families.{/i}"
-    a "{i}I saved them yesterday. They're dying tonight.{/i}"
-    a "{i}All 200. And 100,000s more.{/i}"
+    # Avoid contradictions if specific saves didn't happen
+    if saved_vendor or saved_child or saved_shelter:
+        a "{i}The vendor. The child. The shelter families.{/i}"
+        a "{i}I saved them yesterday. They're dying tonight.{/i}"
+    else:
+        a "{i}Faces from yesterday. The market. The doors. The shelter.{/i}"
+        a "{i}They're dying tonight.{/i}"
+
     a "{i}Because I tried to be human.{/i}"
 
-    # VISUAL: Lyra holding him. Both breaking. Both witnessing. Both helpless.
     l "(sobbing) WE HAVE TO DO SOMETHING—"
     a "(hollow) THERE'S NOTHING. IT'S ALREADY DONE."
     a "HUNDREDS OF THOUSANDS. GONE. IN MINUTES."
-
-    # VISUAL: The light begins to fade. Strikes slowing. Damage complete.
-    # LIGHTING: Transition from blinding white to orange flames to deep red glow to darkness.
-    # SOUND: Thunder fading. Fire roaring. Sirens wailing. Silence underneath.
 
     "{i}The light fades. The strikes slow. Then stop.{/i}"
     "{i}Fire remains. Smoke rises. The city burns.{/i}"
     "{i}Sectors 8, 9, 10. Gone. Erased. Cleansed.{/i}"
 
-    # VISUAL: Aeron and Lyra on rooftop. Holding each other. Shattered. Empty.
-    # LIGHTING: Red glow from fires. Smoke blotting stars. Darkness deeper than before.
-
     "{i}Silence. Not peace. Just absence.{/i}"
     "{i}Two people on a rooftop. Holding each other. Broken beyond words.{/i}"
 
-    # VISUAL: Aeron stares at his hands. Shaking. Sees blood that isn't there.
     a "(whisper) My hands."
     l "Aeron—"
     a "My hands. I can see them. All of them."
-    a "600 yesterday. 200 I saved. 100,000s tonight."
+    a "[kv] yesterday. [sv] I saved. Hundreds of thousands tonight."
     a "All on my hands."
 
-    # VISUAL: Lyra's face—grief, horror, guilt, love. Everything at once. Nothing helps.
     l "It's not your fault. Marcus did this. The system did this."
     a "(hollow laugh) The system? I AM the system."
     a "Glass. Perfect weapon. Perfect obedience."
     a "Except I cracked. Showed mercy. Became human."
     a "(voice breaking) And humanity murdered hundreds of thousands."
 
-    # VISUAL: She has no answer. No comfort. Just presence. Just being there.
-    l "(barely audible) I'm sorry."
-    a "For what?"
-    l "For not being able to fix this. For not being able to fix you."
-    a "I can't be fixed, Lyra. I'm broken. Forever."
-
-    # VISUAL: Long silence. Fire glow. Smoke. Death. Darkness.
     "{i}Silence stretches. The city burns. The world has ended.{/i}"
     "{i}And they sit in the ruins. Together. Shattered. Human.{/i}"
 
@@ -374,13 +354,8 @@ label act1_rooftop_reflection:
     a "{i}'This is why obedience matters.'{/i}"
     a "{i}And he's right. He's always been right.{/i}"
 
-    # VISUAL: Lyra turns to him. Sees the emptiness. The surrender. The breaking.
     l "(urgent) Aeron. Look at me."
-    
-    # VISUAL: He doesn't move. Staring at burning sectors. Catatonic.
     l "(grabs his face, forces eye contact) LOOK AT ME."
-
-    # VISUAL: His eyes meet hers. Hollow. Gone. Glass restored.
     a "(empty) What?"
     l "Don't let him win. Don't let this break you."
     a "(hollow laugh) I'm already broken."
@@ -388,13 +363,11 @@ label act1_rooftop_reflection:
     a "What else is there?"
     l "(fierce) REVENGE. RESISTANCE. DESTROYING THE SYSTEM THAT DID THIS."
 
-    # VISUAL: Something flickers in his eyes. Not hope. Darker. Anger.
     a "(quiet) Revenge."
     l "Yes. They did this. Marcus. The Directorate. Echelon."
     l "They ordered this. They pushed the button. They killed hundreds of thousands."
     l "(fierce) NOT YOU. THEM."
 
-    # VISUAL: The anger builds. Slow. Cold. Dangerous.
     a "...They did this."
     l "Yes."
     a "Father did this."
@@ -403,21 +376,18 @@ label act1_rooftop_reflection:
     l "Yes."
     a "(cold) Then I'll learn. But not what he wanted."
 
-    # VISUAL: He stands. Slowly. Mechanically. Changed.
     "{i}He stands. Different. Colder. Harder. Not Glass. Something new.{/i}"
 
     a "Glass followed orders. Glass showed mercy. Glass failed."
     a "So no more Glass. No more mercy. No more obedience."
     a "(looks at burning sectors) Just ash. And those who made it."
 
-    # VISUAL: Lyra stands beside him. Both watching the fires. Both changed.
     l "What do we do?"
     a "We burn them back."
     a "Not today. Not tomorrow. But soon."
     a "We learn. We prepare. We find every crack in the system."
     a "And we shatter it from within."
 
-    # VISUAL: Both silhouettes against fire glow. Dark. Determined. Broken but dangerous.
     "{i}Two silhouettes against burning sky. Glass shattered. Humanity murdered. Rage born.{/i}"
 
     a "{i}Operation 391. My last mission as Glass.{/i}"
@@ -425,20 +395,10 @@ label act1_rooftop_reflection:
     a "{i}Not weapon. Not soldier. Not son.{/i}"
     a "{i}Just ash. Waiting to burn the world that made it.{/i}"
 
-    # TRANSITION: Fade to black. Fire roaring. City burning. Act 1 ends.
-    # TEXT: "ACT 1 - END"
-    # TEXT: "THE GLASS HAS SHATTERED"
-
-    # canon_note: Purge happens exactly at 2000 hours (when Marcus scheduled observation)
-    # canon_note: Aeron realizes his mercy triggered acceleration (tragic irony complete)
-    # canon_note: Both Aeron and Lyra witness together (shared trauma, shared rage)
-    # canon_note: Tentative hope destroyed immediately (maximum emotional impact)
-    # canon_note: Aeron's guilt multiplied infinitely (600 → 200 saved → 100,000s killed)
-    # canon_note: "Glass was right" moment (system punishes humanity, proves obedience)
-    # canon_note: BUT: Transforms into rage/resistance rather than surrender
-    # canon_note: Lyra redirects his guilt toward system ("NOT YOU. THEM.")
-    # canon_note: "We burn them back" = thesis for Act 2
-    # canon_note: No longer Glass, no longer human, just "ash waiting to burn"
-    # canon_note: ACT 1 END - Complete transformation, lowest point, ready to rise
+    # Scene bookkeeping & canon
+    $ set_scene_flag("act1_21_purge", "witnessed_purge")
+    $ canon["purge_witnessed"] = True
+    $ canon["act1_complete"] = True
+    $ canon["glass_shattered"] = True
 
     return

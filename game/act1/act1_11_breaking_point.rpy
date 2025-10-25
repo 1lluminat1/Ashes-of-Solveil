@@ -1,8 +1,19 @@
+# act1_11_breaking_point.rpy
+
+
 # ======================================================
 # ACT 1 - Scene 11: Aeron's Breaking Point
 # ======================================================
 
+
 label act1_breaking_point:
+    $ scene_id = "act1_11_breaking_point"
+
+    # Precompute alignment reads (no momentum here)
+    $ tier = get_alignment_tier()                  # OB3..EMP3
+    $ is_ob_hard = pass_tier("OB3","OB2")         # ≈ <= -4
+    $ is_mid     = pass_tier("OB1","C")           # ≈ -3..+1
+    # empathy side = else
 
     # VISUAL: Room in deep shadow; single city-light stripe across desk photo.
     # PROP: Brother photo face-up; mission envelope ajar.
@@ -22,23 +33,18 @@ label act1_breaking_point:
     # ------------------------------------------------------
     # EMPATHY-BASED INTERNAL MONOLOGUE VARIATION
     # ------------------------------------------------------
-    $ score = player_state["empathy_score"]
-
-    if score <= -4:
+    if is_ob_hard:
         a "{i}I don’t know if I’m angry anymore. Just tired.{/i}"
         a "{i}Tired of pretending any of this means something. Tired of wasting efficiency on meaning.{/i}"
         a "{i}Glass doesn’t dream. Glass concludes.{/i}"
-
-    elif -3 <= score <= 1:
+    elif is_mid:
         a "{i}I don’t know if I’m angry anymore. Just tired.{/i}"
         a "{i}Tired of pretending any of this means something.{/i}"
         a "{i}Tired of following orders just to keep breathing.{/i}"
-
     else:
         a "{i}I don’t know if I’m angry anymore. Just tired.{/i}"
         a "{i}Tired of pretending any of this means something.{/i}"
         a "{i}Maybe it could, if I still remembered how to feel.{/i}"
-
     # ------------------------------------------------------
 
     "{i}He opens the balcony door. Cold air moves through the room.{/i}"
@@ -98,10 +104,10 @@ label act1_breaking_point:
     # ------------------------------------------------------
     # EMPATHY VARIATION – approaching the menu
     # ------------------------------------------------------
-    if score <= -4:
+    if is_ob_hard:
         a "{i}Father made me efficient. Ending myself would just be another operation.{/i}"
         a "{i}Quick. Clean. No deviation.{/i}"
-    elif -3 <= score <= 1:
+    elif is_mid:
         a "{i}I don’t know if I want to die or stop being this thing he made.{/i}"
     else:
         a "{i}Maybe breaking doesn’t mean ending. Maybe it means finally beginning.{/i}"
@@ -111,12 +117,12 @@ label act1_breaking_point:
         "Step forward":
             a "{i}Just one more step...{/i}"
             a "{i}Glass falls. Glass breaks. Glass—{/i}"
-            $ set_scene_flag("act1_11_breaking_point", "step_forward")
+            $ set_scene_flag(scene_id, "step_forward")
         "Step back":
             a "{i}I can’t keep living like this...{/i}"
             a "{i}But maybe... maybe breaking doesn’t mean falling.{/i}"
             a "{i}Maybe it means shattering the Glass and finding what’s underneath.{/i}"
-            $ set_scene_flag("act1_11_breaking_point", "step_back")
+            $ set_scene_flag(scene_id, "step_back")
 
     "{i}A knock at the door. Sharp. Sudden. Like fate rapping on the walls.{/i}"
     "{i}He drops back to stone. The city noise thins; his heartbeat doesn’t.{/i}"
@@ -126,15 +132,15 @@ label act1_breaking_point:
     # ------------------------------------------------------
     # EMPATHY VARIATION – reaction to the knock
     # ------------------------------------------------------
-    if score <= -4:
+    if is_ob_hard:
         a "{i}Efficiency interrupted. Fate disagrees.{/i}"
-        $ set_scene_flag("act1_11_breaking_point", "aeron_accepted_death")
-    elif -3 <= score <= 1:
+        $ set_scene_flag(scene_id, "aeron_accepted_death")
+    elif is_mid:
         a "{i}Someone always knocks before the fall.{/i}"
-        $ set_scene_flag("act1_11_breaking_point", "aeron_contemplated")
+        $ set_scene_flag(scene_id, "aeron_contemplated")
     else:
         a "{i}Maybe that knock was the world reminding me I’m still here.{/i}"
-        $ set_scene_flag("act1_11_breaking_point", "aeron_reconsidered")
+        $ set_scene_flag(scene_id, "aeron_reconsidered")
     # ------------------------------------------------------
 
     a "{i}Glass doesn’t cry. Glass doesn’t break.{/i}"
@@ -147,4 +153,5 @@ label act1_breaking_point:
     # - Flags: step_forward / step_back + emotional response tracking
     # - Seeds Act 2 emotional divergence and future Lyra callback
 
+    $ set_scene_flag(scene_id, "completed")
     return

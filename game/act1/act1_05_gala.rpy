@@ -16,12 +16,15 @@ define ye3 = Character("Young Elite 3")
 define cadet = Character("Daren")
 # --------------------------------------------------------
 
+
 label act1_gala:
+    $ scene_id = "act1_05_gala"
+
     # VISUAL: Lavish gold wash over marble; chandeliers; strings under low conversation.
     "{i}The ballroom breathes manufactured warmth—chandeliers, velvet, the sweet smell of curated luxury.{/i}"
 
     a "{i}All this gold to smooth over the cracks. Plaster over decay with opulence.{/i}"
-    a "{i}Six hours ago, I killed four people in Sector Seven.{/i}"
+    a "{i}Six hours ago, I killed four people in Sector 7.{/i}"
     a "{i}Now I’m here. Smiling. Composed. As if blood rinses off that easily.{/i}"
     a "{i}But that's what they want, right? No conflict. No conscience. Just transition.{/i}"
 
@@ -50,7 +53,7 @@ label act1_gala:
     a "Something like that."
 
     cadet "(glances at medals, impressed) Heard about your last operation. Sector Nine?"
-    a "(neutral) Sector Seven. This morning."
+    a "(neutral) Sector 7. This morning."
     cadet "(surprised) This morning? And you're here tonight?"
     a "Recovery’s for people who feel it."
     cadet "(nervous laugh) Cold. They really call you that?"
@@ -82,7 +85,7 @@ label act1_gala:
     menu:
         "Daren's smile wavers."
         "Respond with cold courtesy.":
-            $ player_state["empathy_score"] -= 1
+            $ adjust_empathy(-1)
             a "Enjoy the gala, Daren."
             # VISUAL: Aeron turns away; Daren's smile collapses into relief.
             cadet "Yeah. You too. Stay... stay sharp."
@@ -91,9 +94,9 @@ label act1_gala:
             a "{i}Let him.{/i}"
             
         "Acknowledge the awkwardness.":
-            $ player_state["empathy_score"] += 1
+            $ adjust_empathy(1)
             $ set_scene_flag("act1_05_gala", "acknowledge_daren")
-            if player_state >= 2:
+            if pass_emp_gate(2):
                 a "You don't have to do this."
                 cadet "(confused) Do what?"
                 a "(softer) Pretend we’re still who we were. We're not."
@@ -107,13 +110,13 @@ label act1_gala:
 
             a "{i}He walks away. Not relieved. Just... sad.{/i}"
             a "{i}He sees it. What I’ve become.{/i}"
-            a "{i}Maybe thats why he looked at me like that.{/i}"
+            a "{i}Maybe that's why he looked at me like that.{/i}"
             a "{i}Like he remembered something I forgot...{/i}"
             a "{i}Something from before I became this.{/i}"
             jump act1_daren_flashback
     # ------------------------------------------------------
 
-    if check_scene_flag("act1_05_gala", "acknowledge_daren"):
+    if check_scene_flag(scene_id, "acknowledge_daren"):
         # VISUAL: Ambient reset — golden wash, camera resumes slow glide.
         "{i}The music resumes like it never stopped. Conversations blur back into motion.{/i}"
         a "{i}The past is always closer than I think.{/i}"
@@ -123,19 +126,7 @@ label act1_gala:
     a "{i}Even here, there's no room without a camera.{/i}"
     a "{i}Every movement measured. Every breath filed away.{/i}"
 
-    # REVISED: Elite whispers - complete rewrite for Glass identity
-    # Nearby elites whisper (kept as audible whispers).
-    e1 "...Marcus Rylan's son. Glass."
-    e2 "390 operations. Seven years. Zero failures."
-    e3 "Technically perfect. But have you seen his eyes?"
-    e1 "Empty. Like there's nothing behind them."
-    e2 "Father's weapon. Not his heir."
-    e3 "(quietly) I heard he doesn't feel it anymore. The kills."
-    e1 "Doesn't feel anything. That's the problem."
-    e2 "Problem? That's what makes him valuable."
-    e3 "(softly) Or dangerous."
-
-    # REVISED: Elite whispers — no choice, just observation
+    # REVISED: Elite whispers — no choice, just observation (single definitive block)
     "{i}Nearby, whispers slide beneath the music — rehearsed, polite, just loud enough.{/i}"
     e1 "...Marcus Rylan's son. Glass."
     e2 "390 operations. Zero failures. No margin for error."
@@ -143,20 +134,27 @@ label act1_gala:
     e1 "Is that strength... or vacancy?"
     e2 "Ask his father. That’s the point."
 
-    # BRANCHING — Aeron's internal response varies with empathy
-    $ score = player_state["empathy_score"]
+    # BRANCHING — Aeron's internal response by tier (OB3..EMP3) + momentum spice
+    $ tier = get_alignment_tier()
+    $ mom  = get_alignment_momentum()  # -1..+1 (recent push)
 
-    if score <= -4:
+    if tier in ("OB3","OB2"):
         a "{i}Let them think I don’t hear. Let them wonder what kind of machine watches them back.{/i}"
-        a "{i}Their fear is useful. Fear doesn’t ask questions.{/i}"
+        if mom <= -0.5:
+            a "{i}Their fear is a tool. I keep it sharp.{/i}"
+        else:
+            a "{i}Their fear is useful. Fear doesn’t ask questions.{/i}"
 
-    elif -3 <= score <= 1:
+    elif tier in ("OB1","C"):
         a "{i}Even their fear feels rehearsed. Like everything else in this place.{/i}"
         a "{i}They don’t know whether to admire or avoid me. Maybe both.{/i}"
 
-    else:
+    else:  # EMP1/EMP2/EMP3
         a "{i}Even their fear feels rehearsed. Like everything else in this place.{/i}"
-        a "{i}They want me to be a myth. Easier than seeing the cracks.{/i}"
+        if mom >= 0.5:
+            a "{i}They want a myth. I can’t unsee the people behind it.{/i}"
+        else:
+            a "{i}They want a myth. I keep giving them the cracks instead.{/i}"
 
     # VISUAL: Marcus entrance—ceremonial armor; Enforcers flank; room tension rises.
     # SOUND: Conversations drop mid-sentence; music softens.
@@ -165,28 +163,29 @@ label act1_gala:
     a "{i}The gravity tilts when he arrives. No applause—just fear dressed as respect.{/i}"
     a "{i}He doesn’t need announcements. The silence does it for him.{/i}"
 
-    # BRANCHING — Marcus’s reaction to Aeron
-    if score <= -4:
-        # LOW EMPATHY: Marcus is satisfied
+    # BRANCHING — Marcus’s reaction to Aeron (tiers + momentum)
+    if tier in ("OB3","OB2"):
         a "{i}His gaze finds mine—for the briefest second. A subtle nod. Approval measured in microseconds.{/i}"
-        a "{i}He’s read the reports. Sector 7. The body count. No hesitation noted.{/i}"
+        if mom <= -0.5:
+            a "{i}He sees the edge he honed and knows I kept it sharp.{/i}"
+        else:
+            a "{i}He’s read the reports. Sector 7. The body count. No hesitation noted.{/i}"
         a "{i}This is what he wanted. Precision. Purity. Obedience.{/i}"
-        a "{i}And now, recognition.{/i}"
-        $ set_scene_flag("act1_05_gala", "marcus_approval")
+        $ set_scene_flag(scene_id, "marcus_approval")
 
-    elif -3 <= score <= 1:
-        # NEUTRAL/CONFLICTED: Marcus unreadable
-        a "{i}His gaze meets mine, unreadable. A flicker of something—approval, or warning?{/i}"
+    elif tier in ("OB1","C"):
+        a "{i}His gaze meets mine, unreadable. A flicker—approval, or warning?{/i}"
         a "{i}Hard to tell anymore. Harder to care.{/i}"
-        $ set_scene_flag("act1_05_gala", "marcus_uncertain")
+        $ set_scene_flag(scene_id, "marcus_uncertain")
 
-    else:
-        # HIGH EMPATHY: Marcus is uncertain
+    else:  # EMP1/EMP2/EMP3
         a "{i}His eyes sweep past mine. No pause. No nod. Just calculation.{/i}"
-        a "{i}He’s read the report. Saw the hesitation. The deviation from protocol.{/i}"
-        a "{i}He doesn’t need to ask what’s wrong. He already knows.{/i}"
+        if mom >= 0.5:
+            a "{i}He’s seen the hesitation. He’ll call it deviation. I call it breathing.{/i}"
+        else:
+            a "{i}He’s read the report. Saw the hesitation. The deviation from protocol.{/i}"
         a "{i}This isn’t what he trained me for.{/i}"
-        $ set_scene_flag("act1_05_gala", "marcus_disapproval")
+        $ set_scene_flag(scene_id, "marcus_disapproval")
 
     # VISUAL: Lyra across the hall with a Councilwoman—composed, precise, unmissable.
     "{i}Across the hall, Lyra stands with a Councilwoman—composed, precise, unmissable.{/i}"
@@ -200,24 +199,27 @@ label act1_gala:
     menu:
         "Lyra's eyes meet yours for a heartbeat."
         "Acknowledge her.":
-            if player_state["empathy_score"] >= 3:
+            # affection only if player is clearly on the EMP side (>= 3)
+            if pass_emp_gate():  # EMP_EDGE default is 3
                 $ add_affection("Lyra", 1)
+            $ set_scene_flag(scene_id, "acknowledge_lyra")
             a "{i}I nod—barely. Memory, not invitation.{/i}"
             a "{i}The space between us tightens. Just for a second.{/i}"
 
         "Look away.":
+            $ set_scene_flag(scene_id, "ignored_lyra")
             a "{i}I let the moment pass. Safer that way.{/i}"
             a "{i}Eyes forward. No room for ghosts tonight.{/i}"
     # ----------------------------------------------
 
-    # BRANCHING THOUGHT BASED ON EMPATHY
-    if player_state["empathy_score"] >= 1:
+    # BRANCHING THOUGHT BASED ON EMPATHY (slight positive vs not)
+    $ norm = get_alignment_score_norm()   # -1.0 .. +1.0
+    if norm > 0.0:
         a "{i}She sees it. Not the medals. Not the posture. The strain.{/i}"
         a "{i}Maybe she remembers what I was before the edges hardened.{/i}"
     else:
         a "{i}She sees exactly what they built. And doesn’t flinch.{/i}"
         a "{i}No pity. No softness. Just recognition.{/i}"
-
 
     # REVISED: Younger elites nearby - complete rewrite for Glass fear/fascination
     ye1 "I heard he's done nearly 400 operations."
@@ -245,65 +247,73 @@ label act1_gala:
     a "{i}...So why does it feel different tonight?{/i}"
 
     # --- PLAYER CHOICE: Approach Lyra or Keep Distance ---
+    # (scene_id assumed set earlier to "act1_05_gala")
     menu:
         "Across the room, Lyra is momentarily alone."
         "Cross the floor toward her.":
-            $ scenes["act1_05_gala"]["approach_lyra"] = True
-            $ player_state["empathy_score"] += 1
+            $ set_scene_flag(scene_id, "approach_lyra")
+            $ adjust_empathy(1)  # nudge toward EMP for choosing connection
             "{i}He threads through silk and medals, closing the distance.{/i}"
 
             # VISUAL: Councilwoman lingers, then steps aside.
             a "Lyra."
             "{i}She pivots, posture precise, eyes reading him in a single beat.{/i}"
 
-            l "You're on time."
+            l "You are on time."
             a "{i}Her voice is steady. But her eyes aren't.{/i}"
             a "{i}How long since she slept? Days? Weeks?{/i}"
 
-            # Dialogue variant by empathy
-            if player_state["empathy_score"] >= 2:
+            # Dialogue variant by alignment (maps your >=2 / <=-3 thresholds)
+            $ norm = get_alignment_score_norm()      # -1..+1
+            $ band = get_empathy_band()              # "obedience" | "conflicted" | "empathy"
+
+            if norm >= 0.17:  # ~ >= +2 on a ±12 scale
                 a "Funny. I still remember the lines. Doesn’t mean I believe them."
                 l "Belief was never required. Only performance."
                 a "You’ve heard the stories."
                 l "Everyone has. But stories change in retelling."
-            elif player_state["empathy_score"] <= -3:
+            elif band == "obedience":  # ≤ -3
                 a "On time is the same as willing."
-                l "That’s what they say. And what they need."
+                l "That's what they say. And what they need."
                 a "And you?"
-                l "I don’t need belief. I need results."
+                l "I don't need belief. I need results."
             else:
                 a "On time, not exactly willing."
                 l "Willingness was never part of the design."
                 a "(half-smile) I’m starting to notice."
 
-            l "Noted."
             "{i}A council attaché leans in with a whisper. Lyra’s attention splits—only for a moment.{/i}"
+
             l "The balcony. Five minutes."
             a "I’ll be there."
-            l "(softer) We’ll see if Glass still reflects."
+            l "(softer) We will see if Glass still reflects."
+
             "{i}She’s gone before the room notices she moved.{/i}"
+
             a "{i}She sees it—what I am, what she is. Maybe that’s why she wants to talk.{/i}"
+            $ set_scene_flag(scene_id, "balcony_meet_set")
 
         "Keep your distance.":
-            $ scenes["act1_05_gala"]["approach_lyra"] = False
             "{i}He holds position. The moment passes.{/i}"
+
             a "{i}Glass doesn’t need connection. Glass functions alone.{/i}"
             a "{i}...So why does that feel wrong tonight?{/i}"
-    
+            $ set_scene_flag(scene_id, "kept_distance")
+    # ----------------------------------------------
+        
     # --- TRANSITION TO BALCONY SEQUENCE ---
     "{i}The crowd shifts again. Music fades. The air feels thinner now—like the room knows something’s about to fracture.{/i}"
-
     "{i}The doors open. Cold air rushes in.{/i}"
+
     a "{i}Time to stop performing. Time to breathe.{/i}"
 
     # canon_note: Lyra in Act I avoids contractions and speaks with formal, melodic precision.
     # canon_note: Aeries lighting = top-down white/gold; gala warmth is performative, not genuine.
-    # canon_note: New flags added (aeron_masks_emotion, aeron_avoids_marcus, aeron_acknowledged_lyra)
-    #             can modulate future dialogue or internal monologues.
+    # canon_note: New flags added (acknowledge_daren, acknowledge_lyra, approach_lyra, balcony_meet_set, kept_distance)
     # canon_note: Elite whispers now FEAR/RESPECT Glass rather than mock failure - complete tonal shift
     # canon_note: Daren scene shows how peers see Aeron - admiration mixed with fear
     # canon_note: "390 operations" and "six hours ago" ground timeline - mission was this morning
-    # canon_note: Lyra's "glass and glass" line sets up balcony conversation about their shared emptiness
+    # canon_note: Lyra's "glass and glass" motif leads into balcony conversation about shared emptiness
     # canon_note: First hints that "cracks are forming" in Glass - seeds of breakdown
 
     return

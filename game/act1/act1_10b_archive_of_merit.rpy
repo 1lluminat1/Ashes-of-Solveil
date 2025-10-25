@@ -1,8 +1,16 @@
+# act1_10b_archive_of_merit.rpy
+
+
 # =======================================================
 # ACT 1 - Scene 10b: Archive of Merit (Propaganda Walk)
 # =======================================================
 
+
+define docent = Character("Docent")
+
+
 label act1_archive_merit:
+    $ scene_id = "act1_archive_merit"
 
     # VISUAL: Marble-and-glass museum corridor; holo-plaques; curated history
     # LIGHTING: Prestigious, soft uplights. Polished reflections.
@@ -26,18 +34,20 @@ label act1_archive_merit:
     # CHOICE: how Aeron responds to the plaque
     menu:
         "Ask a pointed question about evac corridors and casualty verification.":
-            $ player_state["empathy_score"] += 1
-            $ set_scene_flag("act1_archive_merit", "questioned_plaque")
+            $ adjust_empathy_once("archive_plaque_question", +1)
+            $ set_scene_flag(scene_id, "questioned_plaque")
             $ add_trust("Lyra", 1)
             a "Where were evac corridors staged? Who verified casualty counts?"
             docent "(beat) Evacuation was deemed unnecessary within tolerance."
             "{i}'Within tolerance' is a museum way to say 'we didn't look.'{/i}"
+
         "Compliment the efficiency of the pacification.":
-            $ player_state["empathy_score"] -= 1
-            $ set_scene_flag("act1_archive_merit", "praised_efficiency")
+            $ adjust_empathy_once("archive_plaque_praise_efficiency", -1)
+            $ set_scene_flag(scene_id, "praised_efficiency")
             $ add_trust("Lyra", -1)
             a "Effective containment at scale."
             "{i}The glass likes sentences that sound like metrics.{/i}"
+
         "Say nothing and keep walking.":
             "{i}Silence is easy to curate. No fingerprints.{/i}"
 
@@ -49,22 +59,25 @@ label act1_archive_merit:
 
     menu:
         "Add a quiet line under your breath: 'Order without understanding is brittle.'":
-            $ player_state["empathy_score"] += 1
-            $ set_scene_flag("act1_archive_merit", "added_understanding")
+            $ adjust_empathy_once("archive_add_understanding", +1)
+            $ set_scene_flag(scene_id, "added_understanding")
             # If Lyra respects nuance, reward a hair of affection
             $ add_affection("Lyra", 1)
-            ly "(low) Careful where you say that."
+            l "(low) Careful where you say that."
             a "(low) I just did."
+
         "Repeat the maxims exactly, for the room to hear.":
-            $ player_state["empathy_score"] -= 1
-            $ set_scene_flag("act1_archive_merit", "repeated_maxims")
-            ly "(measured) Adequate."
+            $ adjust_empathy_once("archive_repeat_maxims", -1)
+            $ set_scene_flag(scene_id, "repeated_maxims")
+            l "(measured) Adequate."
+
         "Deflect with a neutral 'We continue.'":
-            $ set_scene_flag("act1_archive_merit", "we_continue")
+            $ set_scene_flag(scene_id, "we_continue")
             "{i}Safe words for dangerous glass.{/i}"
 
     # EXIT
     docent "Witnesses become records; records become order."
     "{i}Order smiles from behind its teeth and thanks us for visiting.{/i}"
 
+    $ set_scene_flag(scene_id, "completed")
     return

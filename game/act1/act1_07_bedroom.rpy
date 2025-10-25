@@ -1,3 +1,6 @@
+# act1_07_bedroom.rpy
+
+
 # =======================================================
 # ACT 1 - Scene 07: Aeron's Bedroom (After the Gala)
 # =======================================================
@@ -7,7 +10,21 @@
 # First visible hesitation in obedience → emotional split seed.
 # =======================================================
 
-label act1_07_bedroom:
+
+label act1_bedroom_after_gala:
+
+    $ scene_id = "act1_07_bedroom"
+
+    # Precompute alignment reads for this scene
+    $ tier = get_alignment_tier()           # OB3, OB2, OB1, C, EMP1, EMP2, EMP3
+    $ band = get_empathy_band()             # "obedience" | "conflicted" | "empathy"
+    $ norm = get_alignment_score_norm()     # -1.0 .. +1.0
+    $ mom  = get_alignment_momentum()       # -1 .. +1
+
+    # Convenience buckets mirroring your old thresholds
+    $ is_ob_hard = pass_tier("OB3","OB2")           # ≈ score <= -4
+    $ is_mid     = pass_tier("OB1","C")             # ≈ -3 .. +1
+    $ is_emp     = pass_tier("EMP1","EMP2","EMP3")  # ≈ >= +2
 
     scene bg_aeron_room_night with fade
     "{i}Later that night...{/i}"
@@ -17,10 +34,10 @@ label act1_07_bedroom:
 
     # --- Balcony callback ------------------------------------------------
     if check_scene_flag("act1_05_gala", "approach_lyra"):
-        if check_scene_flag("act1_05_gala", "shares_light") and check_scene_flag("act1_05_gala", "holds_gaze"):
+        if check_scene_flag("act1_06_balcony", "shared_light") and check_scene_flag("act1_06_balcony", "held_gaze"):
             a "{i}But I can still feel the space between us. Close enough to matter.{/i}"
             a "{i}Glass leaning toward glass. Almost touching. Almost shattering.{/i}"
-        elif check_scene_flag("act1_05_gala", "shares_light"):
+        elif check_scene_flag("act1_06_balcony", "shared_light"):
             a "{i}The flame. Her eyes. For a moment, we were just... us.{/i}"
             a "{i}Not Glass. Not performance. Just two people remembering what that felt like.{/i}"
 
@@ -33,11 +50,9 @@ label act1_07_bedroom:
     "{i}A sealed mission order waits on the desk. The Echelon crest bleeds crimson in the light.{/i}"
 
     # --- Empathy-based flavor --------------------------------------------
-    $ score = player_state["empathy_score"]
-
-    if score <= -4:
+    if is_ob_hard:
         a "{i}Silence is clarity. The hum beneath everything. The system breathing through me.{/i}"
-    elif -3 <= score <= 1:
+    elif is_mid:
         a "{i}It’s quiet. Too quiet to tell if it’s peace or pressure.{/i}"
     else:
         a "{i}The room feels heavier than before. Every order adds weight. Even silence sounds like expectation.{/i}"
@@ -46,15 +61,15 @@ label act1_07_bedroom:
     menu:
         "The seal catches the light—Marcus’s insignia pressed into wax."
         "Break it immediately.":
-            $ set_scene_flag("act1_07_bedroom", "hesitated_order")
-            $ scenes["act1_07_bedroom"]["hesitated_order"] = False
+            # Did NOT hesitate
+            $ set_scene_flag(scene_id, "opened_immediately")
             "{i}The seal snaps. Orders are always easier than silence.{/i}"
             a "{i}Glass doesn’t hesitate. Glass obeys.{/i}"
 
         "Hesitate for a breath.":
-            $ set_scene_flag("act1_07_bedroom", "hesitated_order")
-            $ player_state["empathy_score"] += 1
-            $ score += 1
+            # DID hesitate
+            $ set_scene_flag(scene_id, "hesitated_order")
+            $ adjust_empathy(1)
             "{i}I hold it between my fingers, as if delay could change the words inside.{/i}"
             "{i}Then the seal breaks with a soft crack.{/i}"
             a "{i}Glass hesitating. That’s new.{/i}"
@@ -70,9 +85,9 @@ label act1_07_bedroom:
     a "{i}Sector 10 makes 391.{/i}"
     a "{i}Different orders. Same result. Same words. Same emptiness.{/i}"
 
-    if score <= -4:
+    if is_ob_hard:
         a "{i}They call it progress. They’re right. Every mission cleaner than the last.{/i}"
-    elif -3 <= score <= 1:
+    elif is_mid:
         a "{i}Progress, repetition—same thing after enough cycles.{/i}"
     else:
         a "{i}They call it progress. I call it perfected apathy.{/i}"
@@ -86,13 +101,15 @@ label act1_07_bedroom:
     menu:
         "A blank message cursor blinks on the terminal."
         "Send a single-word acknowledgment: 'Received.'":
-            $ set_scene_flag("act1_07_bedroom", "acknowledged_marcus")
+            $ set_scene_flag(scene_id, "acknowledged_marcus")
+            $ adjust_empathy(-1)
             "{i}The message leaves without ceremony.{/i}"
             a "{i}Glass confirms. Glass complies. Glass continues.{/i}"
             a "{i}391 operations. The count continues.{/i}"
 
         "Say nothing.":
-            $ player_state["empathy_score"] += 1
+            $ set_scene_flag(scene_id, "ignored_marcus")
+            $ adjust_empathy(1)
             "{i}The cursor keeps blinking until the screen sleeps.{/i}"
             a "{i}Glass doesn’t respond. First time in 390 operations.{/i}"
             a "{i}The silence feels like rebellion. Or just exhaustion.{/i}"
@@ -102,13 +119,11 @@ label act1_07_bedroom:
     a "{i}The Unders stay the same. The rest of us just pretend we’re different.{/i}"
 
     # --- Closing reflection ----------------------------------------------
-    $ score = player_state["empathy_score"]
-
-    if score <= -4:
+    if is_ob_hard:
         a "{i}Tonight changed nothing. Connection is noise. I can’t afford noise.{/i}"
         a "{i}'Glass recognizes glass'—and still chooses to hold form.{/i}"
         a "{i}Wholeness is a myth for those who hesitate.{/i}"
-    elif -3 <= score <= 1:
+    elif is_mid:
         a "{i}She said, 'Glass recognizes glass.' Maybe she was right. Maybe she was wrong.{/i}"
         a "{i}But the thought won’t leave me.{/i}"
     else:

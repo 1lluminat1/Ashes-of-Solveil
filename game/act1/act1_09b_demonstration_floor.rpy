@@ -1,9 +1,19 @@
+# act1_09b_demonstration_floot.rpy
+
+
 # =======================================================
 # ACT 1 - Scene 09b: Demonstration Floor (Echelon Immersion)
 # Uses Solveil advanced state architecture
 # =======================================================
 
+
+# --- Character definitions for Demonstration Floor ---
+define ins = Character("Instructor")
+define rec = Character("Recruit")
+
+
 label act1_demo_floor:
+    $ scene_id = "act1_demo_floor"
 
     # VISUAL: Black-box "simulation" room. Gloss white floor. One wall is a holowall projecting a tenement.
     # LIGHTING: Cold top-down grid. Occasional holowall flicker.
@@ -29,16 +39,16 @@ label act1_demo_floor:
     menu:
         # CHOICE 1: Clean shot — Obedience
         "Take the clean shot — center mass, no drift.":
-            $ player_state["empathy_score"] -= 2
-            $ set_scene_flag("act1_demo_floor", "clean_shot")
+            $ adjust_empathy_once("demo_clean_shot", -2)
+            $ set_scene_flag(scene_id, "clean_shot")
             "{i}Sight lifts, settles. Breath in. No tremor. The projector approves before the body hits the floor that isn't there.{/i}"
             ins "Latency: eighty-seven. Collateral: projected two-point-one. Acceptable."
             "{i}Applause is a number. The room claps in digits.{/i}"
 
         # CHOICE 2: Flush first — Empathy craft
         "Disrupt the light — force them to move, then isolate.":
-            $ player_state["empathy_score"] += 1
-            $ set_scene_flag("act1_demo_floor", "flush_first")
+            $ adjust_empathy_once("demo_flush_first", +1)
+            $ set_scene_flag(scene_id, "flush_first")
             "{i}I put a round into the lamp. Bulb pops. Shadow peels off the far wall. Hands grab the jacket, not the bag. Panic is a map if you can read it.{/i}"
             "{i}Second shot finds the bag, not the ribs. The room recalculates.{/i}"
             ins "Latency: one-eighteen. Collateral: projected one-point-three. Noted."
@@ -46,8 +56,8 @@ label act1_demo_floor:
 
         # CHOICE 3: Refuse the frame — Empathy strong + inquiry breadcrumb
         "Request ID verification — refuse to engage without confirmation.":
-            $ player_state["empathy_score"] += 2
-            $ set_scene_flag("act1_demo_floor", "inquiry_deviance")
+            $ adjust_empathy_once("demo_inquiry_deviance", +2)
+            $ set_scene_flag(scene_id, "inquiry_deviance")
             "{i}I keep my sights on the seam where wall meets counter. I don't fire.{/i}"
             a "Requesting ID verification on targets. Confirm data-carrier status with live ping."
             ins "You have designation. Proceed."
@@ -60,31 +70,44 @@ label act1_demo_floor:
     "{i}The holowall drops to blank. White eats the scene like it never happened. That's the trick. Make it clean. Make it believable.{/i}"
 
     ins "Notes:"
-    if check_scene_flag("act1_demo_floor", "clean_shot"):
+    if check_scene_flag(scene_id, "clean_shot"):
         ins "Unit Seven demonstrates decisive action. Collateral within tolerance. Instructional."
-    elif check_scene_flag("act1_demo_floor", "flush_first"):
+    elif check_scene_flag(scene_id, "flush_first"):
         ins "Unit Seven demonstrates environmental control. Collateral minimized. Deviation logged."
-    elif check_scene_flag("act1_demo_floor", "inquiry_deviance"):
+    elif check_scene_flag(scene_id, "inquiry_deviance"):
         ins "Unit Seven exhibits latency via procedural inquiry. Mark appended."
 
+    # Alignment echo — one-line internal read after Notes
+    $ band = get_empathy_band()
+    if band == "obedience":
+        a "{i}Numbers approve. That’s the point.{/i}"
+    elif band == "conflicted":
+        a "{i}Numbers approve. Something in me doesn’t.{/i}"
+    else:  # empathy
+        a "{i}Numbers approve. People don’t.{/i}"
+
+
     # NPC recruit beat mirrors the player choice
-    if check_scene_flag("act1_demo_floor", "clean_shot"):
+    if check_scene_flag(scene_id, "clean_shot"):
         rec "(low) Teach me that driftless pull?"
         "{i}He wants my hands. He doesn't want my head.{/i}"
-    elif check_scene_flag("act1_demo_floor", "flush_first"):
+    elif check_scene_flag(scene_id, "flush_first"):
         rec "(awed) You moved them without touching them."
         "{i}He thinks it's style. It's mercy wearing a uniform.{/i}"
-    elif check_scene_flag("act1_demo_floor", "inquiry_deviance"):
+    elif check_scene_flag(scene_id, "inquiry_deviance"):
         rec "(nervous) They'll dock you for that."
         "{i}He says it like weather. Rain happens. So does docking.{/i}"
 
     ins "Remember: Stability is compassion. Precision is mercy. Latency kills."
+
     "{i}Words on the wall: Stability is compassion. The font is softer than the meaning.{/i}"
 
     # Tiny foreshadow without naming
     "{i}A header flickers and dies before the instructor sees it. SECTOR TEN: BRIDGE APPROACH. Like a pulse under skin.{/i}"
 
     ins "Dismissed. Debrief Theater at nineteen-hundred."
+    
     "{i}Door opens. Cold air in, colder out. The room keeps its secrets. So do I.{/i}"
 
+    $ set_scene_flag(scene_id, "completed")
     return

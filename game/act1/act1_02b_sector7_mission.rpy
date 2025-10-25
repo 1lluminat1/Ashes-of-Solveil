@@ -6,8 +6,8 @@
 # ===================================================
 
 
-define unit2 = Character("[Unit-2]", color="#4A90E2")
-define unit3 = Character("[Unit-3]", color="#4A90E2")
+define unit2 = Character("Unit-2", color="#4A90E2")
+define unit3 = Character("Unit-3", color="#4A90E2")
 
 label act1_sector7_mission:
 
@@ -141,12 +141,12 @@ label act1_sector7_mission:
     menu:
         "It flickers at the edge of thought — a face, a feeling, unwelcome."
         "Bury it.":
-            $ player_state["empathy_score"] -= 1
+            $ adjust_empathy(-1)
             a "{i}Weakness spreads like infection. I cut it out.{/i}"
             a "{i}The mission's logged. Sector's secure. That's all that matters.{/i}"
 
         "Let it stay.":
-            $ player_state["empathy_score"] += 1
+            $ adjust_empathy(1)
             a "{i}The child's face stays with me. Just the eyes. That’s all it takes.{/i}"
             a "{i}The report will be clean. But I won’t be.{/i}"
     

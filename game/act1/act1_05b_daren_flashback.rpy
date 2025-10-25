@@ -1,3 +1,11 @@
+# act1_05b_daren_flashback.rpy
+
+
+# =======================================================
+# ACT 1 – Scene 5b: Daren Flashback
+# =======================================================
+
+
 label act1_daren_flashback:
 
     # VISUAL: Academy training room – dusk lighting, hard shadow; simulated urban environment.

@@ -146,22 +146,32 @@ label act1_ritual:
     a "{i}Transparent. Efficient. Predictable.{/i}"
     a "{i}And we both pretended that meant strength.{/i}"
 
-    # Connection to present-day cracks (branch tone by empathy)
-    $ score = player_state["empathy_score"]
+    # Connection to present-day cracks (branch tone by alignment)
+    $ tier = get_alignment_tier()       # OB3, OB2, OB1, C, EMP1, EMP2, EMP3
+    $ norm = get_alignment_score_norm() # -1..+1
+    $ is_ob_hard = pass_tier("OB3","OB2")      # ≈ <= -4
+    $ is_mid     = pass_tier("OB1","C")        # ≈ -3..+1
 
-    if score <= -4:
+    if is_ob_hard:
         a "{i}That precision still holds. Mostly. A system shouldn’t question its code.{/i}"
         a "{i}But sometimes I feel the old lines flex — like metal under strain.{/i}"
         a "{i}If that’s weakness, I’ll cauterize it. Like he taught me.{/i}"
-    elif -3 <= score <= 1:
+    elif is_mid:
         a "{i}That precision still holds. But lately, it falters.{/i}"
         a "{i}Lyra sees it. Maybe others do too.{/i}"
         a "{i}I can’t tell if that’s a crack forming or a door opening.{/i}"
-    else:
+    else:  # empathy side (≈ >= +2)
         a "{i}That precision was never strength. It was silence.{/i}"
         a "{i}Lyra saw through it. Saw me.{/i}"
         a "{i}Maybe the Band rejected me because it knew I wasn’t meant to obey forever.{/i}"
         a "{i}Maybe I was meant to feel.{/i}"
+
+    # Optional: momentum whisper (very light touch)
+    $ mom = get_alignment_momentum()
+    if mom >= 0.5:
+        a "{i}Lately the edges are softening. On purpose.{/i}"
+    elif mom <= -0.5:
+        a "{i}Lately the edge returns faster. Reflex over choice.{/i}"
     
     # canon_note: Aeron is 12 years old during Branding (corrected)
     # canon_note: Kael got his Band at 12 (worked for 3 years, failed at 15)

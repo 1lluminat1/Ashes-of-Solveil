@@ -2,190 +2,172 @@
 
 
 # =======================================================
-# ACT 1 - Scene 15: Aeron's First Encounter With Zira
+# ACT 1 - Scene 15: Aeron's First Encounter with Zira
 # =======================================================
 
 
-# VISUAL: Dimly lit street in the Unders. Neon signage flickers. Wet pavement. Trash and data-choked air.
-# Low synth hum and ambient Unders sounds. Aeron walks alone, eyes scanning.
-
 label act1_zira:
+    $ scene_id = "act1_15_zira_first_contact"
+
+    # Alignment reads for light flavor only
+    $ tier = get_alignment_tier()                  # OB3..EMP3
+    $ is_ob_hard = pass_tier("OB3","OB2")         # ≈ <= -4
+    $ is_mid     = pass_tier("OB1","C")           # ≈ -3..+1
+    $ band = get_empathy_band()                   # "obedience" | "conflicted" | "empathy"
+
     "{i}Northeast edge. Grid Six-Two.{/i}"
     "{i}The coordinates from the message.{/i}"
-    "{i}Aeron walks the crumbling spine of Sector 10's northeast edge, mission order folded in his coat like a threat.{/i}"
+    "{i}Aeron walks the crumbling spine of Sector 10’s northeast edge, Marcus’s mission order folded in his coat like a threat.{/i}"
 
     a "{i}No eyes. No witnesses. No backup.{/i}"
     a "{i}Perfect place to bury the truth.{/i}"
-    # NEW: Glass observation
     a "{i}Or perfect place for Glass to finally see what it's been cutting.{/i}"
 
-    # VISUAL: Glitched vending machine sparks nearby. A figure half-lit in shadow, crouched near an access panel. Hooded. Female.
-    # A hacking device flickers in her hand, wires like veins into the wall.
-    "{i}Movement. Just past the broken light. Someone tampering with the infrastructure—quick hands, steady posture.{/i}"
+    # VISUAL: A figure crouched near an access panel, wires glowing faintly.
+    "{i}Movement. Quick. Intentional. Someone tampering with the wall—steady hands, steady rhythm.{/i}"
 
     a "Stop right there."
-    # The figure doesn't flinch. Instead:
-    z "If you were going to shoot, you would've already."
+    z "If you were going to shoot, you would’ve already."
     a "Turn around. Slowly."
 
-    # Zira stands, hood halfway falling back. Her face is sharp, eyes lit by the interface glow.
-    z "Relax. I'm not armed. Not stupid either. So don't be."
+    # VISUAL: Hood half-off, face lit by blue interference glow.
+    z "Relax. Not armed. Not stupid either. Don’t be either."
 
-    # Brief pause. Static buzz.
-    a "You're interfering with city systems. That's a high offense."
-    z "And you're dressed too clean to be down here. So what's the offense, really?"
+    a "You’re interfering with city systems."
+    z "And you’re dressed too clean for the Unders. So who’s really interfering?"
     a "Who are you?"
-    z "Someone who keeps the grid from swallowing this sector whole."
-    z "Also someone with very little patience for Echelon hounds, so unless you're lost—"
+    z "Someone who keeps this grid from eating its own power loops."
+    z "Also someone with zero patience for Echelon hounds—so unless you’re lost—"
 
-    # Aeron steps closer.
-    a "I'm not with the enforcers. Not tonight."
-    z "Then you're either rogue or stupid. And you don't look stupid."
-    # NEW: Glass recognition
-    z "(studies him) Wait. You're Glass, aren't you?"
-    a "(tense) What did you say?"
-    z "Glass. Marcus Rylan's weapon. 390 operations. Zero failures."
+    a "I’m not with the enforcers. Not tonight."
+    z "Then you’re either rogue or stupid. And you don’t look stupid."
+    z "(studies him) Wait. You’re Glass, aren’t you?"
+
+    a "(tense) What did you just say?"
+    z "Glass. Marcus Rylan’s weapon. 390 operations. Zero failures."
     z "Everyone in the Unders knows about Glass."
     a "And what do they say?"
-    z "That Glass is sharp. Glass is empty. And Glass always cuts."
-    z "(tilts head) But you're down here. Night before a sweep. That's not what Glass does."
+    z "That Glass is sharp. Empty. And it always cuts."
+    z "(tilts head) But you’re down here. Night before a sweep. That’s not what Glass does."
 
-    # Pause. Sparks flicker from the panel she was working on.
     a "What were you doing just now?"
-    z "Re-routing drain energy to keep a shelter from freezing overnight."
-    a "So... you're a vigilante now?"
-    z "I'm alive. That's already illegal down here."
-    # NEW: Tomorrow's mission
+    z "Re-routing drain energy to keep a shelter warm."
+    a "So you’re a vigilante now?"
+    z "I’m alive. That’s already illegal down here."
     z "Especially after tomorrow. After your sweep."
+
     a "(sharp) How do you know about that?"
-    z "I know everything that happens in Sector 10. Including your orders."
-    z "200 to 500 targets. Dawn deployment. Zero tolerance."
-    z "(bitter) 'Acceptable collateral.' That's what the brief says, right?"
+    z "Because I watch everything that happens in Sector 10. Including your orders."
+    z "200–500 targets. Dawn deployment. Zero tolerance."
+    z "(bitter) 'Acceptable collateral.' That’s the word, right?"
 
-    # VISUAL: Drone hum approaches in distance.
-    "{i}A low thrum echoes from above — patrol drone. Noticed the energy spike, maybe. Too late to run.{/i}"
+    "{i}A low hum approaches—patrol drone. Searchlight scraping the walls.{/i}"
+    a "They’re sweeping. You triggered a ping."
+    z "No, your boots did."
 
-    a "They're sweeping the area. You triggered a ping."
-    z "No, your dumb boots did."
+    z "(closing glove) Fine. I’m out. Try not to get killed, Glass."
 
-    # She flips her glove closed, sparks die.
-    z "Fine. I'm out. Try not to get killed, Glass."
-
-    # She turns — but pauses.
+    # ---------------------------------------------------
+    # PLAYER CHOICE — stop her or not
+    # ---------------------------------------------------
     menu:
         "Stop her":
-            $ zira_rel += 1
+            $ set_scene_flag(scene_id, "stopped_zira")
+            $ add_trust("Zira", 1)
+            $ adjust_empathy_once("zira_stop_ask_honesty", +1)
             a "Wait. I need information."
-            z "That'll cost you."
+            z "That’ll cost you."
             a "Money?"
             z "No. Honesty."
-            a "...I'm listening."
-            z "Why are you really here? Night before you're ordered to kill everyone in this sector?"
-            a "(pause) Because I wanted to see their faces first."
+            a "...I’m listening."
+            z "Why are you really here? Night before your sweep?"
+            if check_scene_flag("act1_14_lower_spans", "reassured_child") or check_scene_flag("act1_14_lower_spans", "acknowledged_unders"):
+                a "Because I wanted to see their faces first."
+            else:
+                a "Because something felt wrong about the intel."
             z "(surprised) ...Glass said that?"
             a "Maybe Glass is cracking."
-            z "(studies him) You're not what I expected."
+            z "(studies him) You’re not what I expected."
             a "What did you expect?"
-            z "Another Aeries puppet. But you... you're asking questions."
-            a "Is that dangerous?"
-            z "(grins) Lethal. I like it."
-            
-        "Let her go":
-            $ zira_rel -= 1
-            a "Fine. Walk away."
-            z "Suit yourself. But if you're down here for truth, you're already bleeding."
-            z "(over shoulder) Glass doesn't bleed. But people do."
-            z "Figure out which one you are before tomorrow."
+            z "Another Aeries puppet. But you’re asking questions."
+            a "Dangerous questions?"
+            z "(grins) The best kind."
 
-    # Regardless, a second drone shrieks closer. Both characters duck under cover.
-    "{i}The drone passes overhead. Searchlights rake the alley but miss their mark.{/i}"
+        "Let her go":
+            $ set_scene_flag(scene_id, "let_zira_go")
+            $ add_trust("Zira", -1)
+            $ adjust_empathy_once("zira_let_go", -1)
+            a "Fine. Walk away."
+            z "Suit yourself. But if you’re down here for truth, you’re already bleeding."
+            z "(over shoulder) Glass doesn’t bleed. People do. Figure out which one you are before dawn."
+
+    # ---------------------------------------------------
+    # SHARED FOLLOW-UP
+    # ---------------------------------------------------
+    "{i}Another drone passes overhead. Both dive into cover; light washes the alley, then fades.{/i}"
 
     a "You know this area well."
-    z "Better than your briefing packet did."
-    # NEW: Mission specifics
-    a "I need someone who can tell me what's really happening in Sector 10."
-    a "My orders say organized resistance. Rebel networks."
-    z "(laughs bitterly) Organized resistance? Try families hiding from debt collectors."
-    z "Try kids who can't afford Branding fees."
-    z "Try people who just want to survive without Echelon's boot on their throat."
-    a "The intelligence reports—"
-    z "Are lies. Sector 10 isn't a rebel stronghold. It's a settlement Father wants erased."
-    z "Too many unregistered citizens. Too much independence. Too much... humanity."
+    z "Better than your mission briefing ever did."
 
-    # VISUAL: Aeron's expression shifts—something clicking into place.
+    a "I need someone who can tell me what’s really happening here."
+    a "The report says organized resistance."
+    z "(laughs) Organized resistance? Try families hiding from debt collectors."
+    z "Try kids without Branding fees."
+    z "Try people who just want to live without Echelon’s boot on their throat."
+    a "The intel—"
+    z "Is propaganda. Sector 10 isn’t a rebel hub. It’s a cleanup. A purge."
+    z "Too many unregistered. Too much independence. Too much humanity."
+
     a "{i}Not a military target. A civilian purge.{/i}"
-    a "{i}Glass has been cutting civilians for 390 operations.{/i}"
-    a "{i}But this... this is different. This is deliberate erasure.{/i}"
+    a "{i}Glass has been cutting civilians for years. But this one... deliberate.{/i}"
 
-    a "How do you know this?"
-    z "Because I track everything. Data flows. Population movements. Energy usage."
-    z "Sector 10's energy consumption is residential. Not industrial. Not military."
-    z "It's families, Glass. Just families."
-    a "(quiet) Why tell me this?"
-    z "Because you came here tonight. Glass doesn't do reconnaissance."
-    z "Glass just obeys. But you... you wanted to see."
-    z "(leans in) That means there's still something human under all that empty."
+    a "How do you know?"
+    z "I read the grid. Energy flow, traffic, waste disposal—all residential signatures."
+    z "You’re not wiping insurgents, Glass. You’re erasing neighborhoods."
 
-    # VISUAL: Aeron processes this; jaw tight.
-    a "{i}She's right. Glass doesn't question. Glass doesn't investigate.{/i}"
-    a "{i}But I'm here. The night before. Asking questions.{/i}"
-    
-    z "You're not what I expected, Glass."
-    a "What did you expect?"
-    z "Another Aeries puppet. Empty. Obedient."
-    z "But you're down here asking questions. That's dangerous."
-    a "Dangerous for who?"
-    z "(grins) For you. For me. For anyone who thinks Glass might still be human."
-    z "But I like dangerous."
-    
-    # NEW: Tomorrow's mission urgency
-    z "If you really want answers, you need to see something."
-    z "Tomorrow at dawn, you sweep this sector. Your orders say 200 to 500 casualties."
-    z "But tonight, right now, there are 800 people sheltering in the sublevels."
-    a "800?"
-    z "Families. Elders. Children. Unregistered, yes. But alive."
-    z "Your orders say eliminate all targets. That's 800 lives, Glass."
-    z "Still think it's about organized resistance?"
+    a "Why tell me?"
+    z "Because you came here tonight. Glass doesn’t scout. It executes."
+    z "You wanted to see. That means there’s still something human left."
 
-    # VISUAL: Aeron's hands clench; something breaking in his expression.
-    a "{i}800 people. The vendor. The child. The families around fires.{/i}"
-    a "{i}All of them. Gone by noon tomorrow.{/i}"
-    a "{i}Glass obeys. Glass doesn't question.{/i}"
-    a "{i}But I'm questioning now.{/i}"
+    # ---------------------------------------------------
+    # Empathy-tone response (via tiers)
+    # ---------------------------------------------------
+    if is_ob_hard:
+        a "{i}Humanity. A liability. But I can’t deny she reads me too easily.{/i}"
+    elif is_mid:
+        a "{i}Humanity. A word I stopped using years ago. But it doesn’t sound wrong tonight.{/i}"
+    else:
+        a "{i}She’s right. Glass doesn’t question. But I’m standing here because I needed to see.{/i}"
 
-    z "Tomorrow at dawn, you sweep this sector. 800 people."
-    z "You can't refuse. Marcus owns you. I know that."
-    z "But you CAN choose HOW you obey."
-    z "Warn people. Fake reports. Look the other way. Find the cracks."
+    z "Tomorrow’s sweep hits 800 people, not 500. I tracked them myself—families, elders, kids."
+    z "Your report calls them 'targets.' You still think this is about rebels?"
+
+    a "{i}800 people. The vendor. The child. The families around fires. All of them.{/i}"
+
+    if check_scene_flag("act1_14_lower_spans", "bought_brew") or check_scene_flag("act1_14_lower_spans", "acknowledged_unders"):
+        a "{i}I saw their faces tonight. They laughed, traded, existed.{/i}"
+    else:
+        a "{i}I avoided their eyes. Pretended they weren’t real. Now I can’t.{/i}"
+
+    z "You can’t refuse the order—Marcus owns you. But you can choose how you obey."
+    z "Warn people. Fake reports. Look away when it matters. Find the cracks."
     z "Glass follows orders. Humans find ways to resist even while obeying."
     z "Show me which one you are."
 
-    a "And if I can't save them all?"
-    z "No one can. But trying matters."
-    z "(softer) 390 operations, you've been Glass. Perfect obedience."
-    z "Tomorrow, try being human. Even if it's messy. Even if it's not enough."
+    a "And if I can’t save them all?"
+    z "No one can. But trying still matters."
+    z "(quiet) 390 operations of perfection. Tomorrow, try being imperfect. Try being human."
 
     z "Meet me at Obsidian Bridge. Midnight tomorrow."
-    z "If you fought for them—even if you lost—I'll be there."
-    z "If you just followed orders without fighting... don't bother coming."
+    z "If you fought for them—even if you lost—I’ll be there."
+    z "If you just followed orders... don’t bother coming."
 
-    # Zira disappears into the dark. Aeron remains, watching the shadows.
-    "{i}She's gone before he can second-guess himself. But the hum in his chest hasn't faded — adrenaline or something else.{/i}"
+    "{i}She’s gone before he can answer. The alley hum remains, steady and low—like a heartbeat that refuses to die.{/i}"
 
-    a "(quietly) What the hell am I getting into..."
-    # NEW: Mission weight
+    a "(quiet) What the hell am I getting into..."
     a "{i}800 people. Dawn deployment. My orders.{/i}"
     a "{i}Glass obeys. Glass always obeys.{/i}"
-    a "{i}But if I obey tomorrow... what's left of me afterward?{/i}"
-    a "{i}Is there anything left to save? Or is Glass all that remains?{/i}"
-    
-    # canon_note: Zira knows about Glass - reputation in the Unders
-    # canon_note: Sector 10 isn't military target - it's civilian purge
-    # canon_note: 800 people, not 200-500 - Marcus's intel is deliberately understated
-    # canon_note: Zira's ultimatum - "don't come if you go through with sweep"
-    # canon_note: Forces moral choice - can't meet Zira AND complete sweep
-    # canon_note: "Glass or human" - core choice for entire story
-    # canon_note: Aeron now knows sweep is murder, not military operation
-    # canon_note: Sets up next scene - does he report to Marcus? Prepare for sweep? Defy?
+    a "{i}But if I obey tomorrow... what’s left of me afterward?{/i}"
 
+    $ set_scene_flag(scene_id, "completed")
     return

@@ -69,7 +69,7 @@ label act1_bedroom:
     menu:
         "A whisper away from obedience. A breath away from defiance."
         "Say it anyway":
-            $ player_state["empathy_score"] -= 1
+            $ adjust_empathy(-1)
             a "\"{i}Order above all. Unity before self.{/i}\""
             a "{i}The words come automatic. Like breathing.{/i}"
             # NEW: The real issue isn't the words
@@ -77,7 +77,7 @@ label act1_bedroom:
             a "{i}What I can't do is believe any of it.{/i}"
             a "{i}And Father knows. He's always known.{/i}"
         "Stay silent":
-            $ player_state["empathy_score"] += 1
+            $ adjust_empathy(1)
             a "{i}The words don't matter. I'll say them when required.{/i}"
             a "{i}No rehearsal needed. You've played this part a hundred times.{/i}"
 
