@@ -187,7 +187,10 @@ label act1_sector7_mission:
         "It flickers at the edge of thought — a face, a feeling, unwelcome.":
 
         "Bury it.":
-            $ adjust_empathy_once(-1)  # OB-lean; consider cred+1 in backend if you’re tracking it
+            # OB lean (formerly -1)
+            $ apply_choice_once(_current_scene_id, "_bury_it", "OB", factor=1,
+                                next_scene_label="act1_03_morning_routing"
+                                note="Buries the memory")
             a "{i}Weakness spreads like infection. I cut it out.{/i}"
             # VISUAL: Propaganda screen brightness swells slightly; corridor returns to perfect symmetry.
             pause 0.8
@@ -195,7 +198,9 @@ label act1_sector7_mission:
             pause 0.8
 
         "Let it stay.":
-            $ adjust_empathy_once(1)   # EMP-lean; consider notoriety+1 in backend if used
+            $ apply_choice_once(_current_scene_id, "_let_it_stay", "EMP", factor=1,
+                    next_scene_label="act1_03_morning_routing"
+                    note="Lets the memory stay")
             a "{i}The child's face stays with me. Just the eyes. That’s all it takes.{/i}"
             # VISUAL: Screen white cools by a hair; a hint of red emergency strip reflects in visor.
             pause 0.8

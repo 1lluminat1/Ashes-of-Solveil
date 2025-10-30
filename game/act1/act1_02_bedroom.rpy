@@ -168,7 +168,7 @@ label act1_bedroom:
     menu:
         "Say it anyway":
             # OB lean (formerly -1)
-            $ apply_choice_once(_current_scene_id, "say_it_anyway", "OB", factor=1,
+            $ apply_choice_once(_current_scene_id, "_say_it_anyway", "OB", factor=1,
                                 next_scene_label="act1_02b_sector7_mission"
                                 note="Recites doctrine aloud")
             a "\"{i}Order above all. Unity before self.{/i}\""
@@ -179,7 +179,7 @@ label act1_bedroom:
 
         "Stay silent":
             # EMP lean (formerly +1)
-            $ apply_choice_once(_current_scene_id, "stay_silent", "EMP", factor=1,
+            $ apply_choice_once(_current_scene_id, "_stay_silent", "EMP", factor=1,
                                 next_scene_label="act1_02b_sector7_mission"
                                 note="Swallows the words")
             a "{i}He waits for the words to come. They don’t.{/i}"

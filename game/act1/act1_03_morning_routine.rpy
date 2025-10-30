@@ -53,7 +53,9 @@ label act1_morning_routine:
         "In the mirror, you're alone. But not empty. Something lingers beneath the surface...":
 
         "Let yourself remember":
-            $ adjust_empathy_once("act1_03_let_remember", 1)
+            $ apply_choice_once(_current_scene_id, "_remember_it", "EMP", factor=1,
+                    next_scene_label="act1_04_hallway"
+                    note="Remembers the memory")
             a "{i}His smile. His silence. The way he still stood tall after they marked him broken.{/i}"
             pause 0.8
             a "{i}He wore this same collar — but never let it define him.{/i}"
@@ -62,7 +64,9 @@ label act1_morning_routine:
             pause 1.0
 
         "Bury it":
-            $ adjust_empathy_once("act1_03_bury_it", -1)
+            $ apply_choice_once(_current_scene_id, "_buries_it", "OB", factor=1,
+                    next_scene_label="act1_04_hallway"
+                note="Buries the memory")
             a "{i}This isn't the time for ghosts. You're not a boy grieving.{/i}"
             pause 0.7
             a "{i}You're what they built — efficient, trained, necessary.{/i}"
