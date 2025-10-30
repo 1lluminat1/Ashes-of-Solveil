@@ -1,18 +1,29 @@
 # act2_activity_06_survival_skills.rpy
 
-
 # =======================================================
 # ACT 2 - Activity 6: Survival Skills (Zira Vulnerability)
 # =======================================================
 
+# TODO migrate legacy inventory/skills/contacts/currency updates to consolidated helper system.
+# Using mark_scene()/mark_flag()/rel()/log_line() breadcrumbs only in this draft.
 
 label activity_survival_skills:
+
+    $ start_operation("op206_survival", note="Zira teaches Unders survival; Kai backstory; legacy device transfer")
+    $ mark_scene("act2_06_survival_skills", "started")
+    $ log_line("ACT2_06 begin: Survival Skills with Zira (vulnerability reveal)")
 
     # VISUAL: Safe house. Evening. Day 5. Just Aeron and Zira.
     # LIGHTING: Dim overhead bulb. Shadows deep. Intimate space.
     # SOUND: City hum distant; their breathing; occasional siren far away.
 
     scene bg_safe_house with fade
+
+    # Light empathy/obedience opener
+    if get_empathy_band() != "obedience":
+        a "{i}Day 5. Learn to be nobody. Maybe that’s the only way to live long enough to be someone new.{/i}"
+    else:
+        a "{i}Day 5. Objective: reduce profile. Blend. Avoid pattern-of-life flags.{/i}"
 
     "{i}Day 5. Activity: Survival Skills.{/i}"
     "{i}Zira said I need to learn how to actually survive down here.{/i}"
@@ -109,12 +120,12 @@ label activity_survival_skills:
     "{i}She's hiding something. Something painful. Something that explains her.{/i}"
 
     menu:
-        "The moment hangs between them. Push or let it go?"
+        "The moment hangs between them. Push or let it go?":
         
         "Press gently—'You mentioned him before. When you saved us. Who was he?'":
-            $ zira_trust += 2
-            $ zira_loyalty += 1
-            $ aeron_empathy += 1
+            $ rel("Zira", trust=2, loyalty=1)
+            $ mark_flag("Zira", "opened_up_about_kai_prompted")
+            $ mark_scene("act2_06_survival_skills", "pressed_about_kai")
             
             a "(gentle) You mentioned him before. When you saved us that first night. Who was he?"
             z "(jaw tight) I said drop it."
@@ -126,8 +137,7 @@ label activity_survival_skills:
             z "(long exhale) ...Kai. His name was Kai."
             
         "Let it go—'Alright. Show me the next signal.'":
-            $ zira_trust += 0
-            $ zira_loyalty += 0
+            $ mark_scene("act2_06_survival_skills", "respected_boundary")
             
             a "Alright. Show me the next signal."
             
@@ -140,6 +150,7 @@ label activity_survival_skills:
             
             z "(quiet) His name was Kai. My brother."
             z "He taught me these signals. Before Echelon killed him."
+            $ mark_flag("Zira", "opened_up_about_kai_unprompted")
 
     # VISUAL: The room temperature drops. Truth laid bare. Painful and raw.
     # SOUND: City hum fades. Just her breathing. Just this moment.
@@ -267,6 +278,13 @@ label activity_survival_skills:
     "{i}She's not helping me out of belief or ideology.{/i}"
     "{i}She's helping me because I'm her second chance. Her do-over. Her hope.{/i}"
 
+    # EMP/OB flavor pivot into resolve
+    if get_empathy_band() != "obedience":
+        a "{i}For Kai. For Zira. For everyone Marcus destroyed.{/i}"
+        a "{i}We don't erase the past. We outlive it—and build something human on the other side.{/i}"
+    else:
+        a "{i}Objective lock: dismantle Echelon. Asset acquired: Kai’s device. Next step: plan penetration points.{/i}"
+
     # VISUAL: He examines hacking device. Blue glow. Kai's legacy.
     a "{i}Four years ago, Marcus killed her brother for trying to escape.{/i}"
     a "{i}Now I'm trying to escape. And she's making sure I succeed.{/i}"
@@ -278,9 +296,17 @@ label activity_survival_skills:
     a "{i}We're going to burn Echelon down. And Marcus with it.{/i}"
     a "{i}That's not a promise. That's a guarantee.{/i}"
 
-    # TRANSITION: End of activity. Rewards gained. Zira loyalty deepened.
+    # REWARD & STATE BREADCRUMBS (helpers-only; no legacy dict writes)
+    $ mark_scene("act2_06_survival_skills", "kai_device_received")
+    $ mark_flag("Aeron", "has_kais_hacking_device")
+    $ mark_flag("Aeron", "skill_unders_disguise_unlocked")
+    $ mark_flag("Zira", "trust_deepened")
+    $ mark_flag("Zira", "loyalty_deepened")
+    $ rel("Zira", trust=2, loyalty=1)
+    $ log_line("Unlocked: Unders Disguise; Received: Kai's Hacking Device; Zira trust+2 loyalty+1")
+    $ mark_scene("act2_activity", "survival_done")
 
-    # REWARDS SUMMARY SCREEN:
+    # REWARDS SUMMARY SCREEN (text-only; underlying grants handled by future migration)
     "{b}Activity Complete: Survival Skills{/b}"
     "
     Rewards:
@@ -288,42 +314,19 @@ label activity_survival_skills:
     - Item Gained: Kai's Hacking Device (Bypass Echelon security)
     - Knowledge Gained: Territory maps, hand signals, cultural markers
     - Relationship Deepened: Zira (Trust +2, Loyalty +1)
-    
+
     Zira's Past Revealed:
     - Her brother Kai tried to defect 4 years ago
     - Marcus Rylan personally executed him
     - Zira helping Aeron = second chance for Kai
     - Kai's hacking device now yours—use it to finish his work
-    
+
     You can now navigate the Unders independently.
     Zira will track you but won't intervene unless necessary.
     Tomorrow: Solo navigation test.
     "
 
-    $ activities_completed += 1
-    $ days_remaining -= 1
-    $ hacking_device = True
-    $ inventory.append("kais_hacking_device")
-    $ contacts["zira"]["trust"] = 8
-    $ contacts["zira"]["loyalty"] = 10
-    $ skill_unders_disguise = True
-    $ activity_skills_done = True
-    $ zira_backstory_revealed = True
-    $ aeron_knows_about_kai = True
-
-    # canon_note: Zira's brother Kai revealed - defector killed by Marcus 4 years ago
-    # canon_note: Marcus personally executed Kai, broadcasted it as terror example
-    # canon_note: Zira helping Aeron = proxy redemption for Kai's death
-    # canon_note: "You're Kai's second chance" - her core motivation exposed
-    # canon_note: Kai's hacking device given to Aeron - precious legacy item
-    # canon_note: Device bypasses Echelon security - crucial for Act 3 infiltration
-    # canon_note: Zira's loyalty now 10/10 - she will die for Aeron if needed (Act 3 Scene 18)
-    # canon_note: Hand signals taught - resistance communication system
-    # canon_note: Territory maps learned - navigate Unders safely
-    # canon_note: "Don't die. I can't watch that twice." - emotional core of relationship
-    # canon_note: Aeron was 18 when Kai died - may have seen broadcast, didn't process it
-    # canon_note: Zira cried but controlled it - vulnerability shown rarely
-    # canon_note: Tomorrow = solo navigation (next scene option)
-    # canon_note: This scene cements Zira as family, not just ally
+    $ summary = end_operation("op206_survival", tag="Survival skills complete")
+    $ log_line(summary)
 
     jump act2_activity_hub

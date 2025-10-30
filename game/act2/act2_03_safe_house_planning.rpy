@@ -1,19 +1,24 @@
 # act2_03_safe_house_planning.rpy
-
-
 # =======================================================
 # ACT 2 - Scene 3: Safe House Planning (HUB)
+# OB/EMP integrated; Consolidated State Architecture hooks
+# Adds randomized pre/post activity flavor + event-specific quips
+# Uses helpers only + scene_flags for all scene/task tracking
 # =======================================================
 
-
 label act2_safe_house_planning:
+
+    # --- SCENE INIT / SNAPSHOT ---
+    $ start_operation("op203_safehouse_hub", note="Safehouse planning + 7-task hub intro")
+    $ mark_scene("act2_03_safe_house_planning", "started")
+    $ log_line("ACT2_03 started: Safe House Planning (Hub)")
 
     # VISUAL: Safe house. Morning light through barred window. Day 2.
     # LIGHTING: Dim gray dawn filtering in. Single bulb still on. Cold.
     # SOUND: City waking up below; distant machinery; footsteps in hallway.
 
     "{i}Day 2.{/i}"
-    
+
     # VISUAL: Aeron wakes on concrete floor. Body stiff. Lyra already awake, staring at wall.
     # Both look like hell. Dark circles. Exhaustion. Trauma settling into bones.
 
@@ -21,7 +26,7 @@ label act2_safe_house_planning:
     "{i}Lyra's already awake, staring at nothing. Her hand moves to her Band in that automatic way she can't seem to stop.{/i}"
 
     a "{i}Day 2 in the Unders. Still alive. That has to count for something.{/i}"
-    
+
     # VISUAL: Lyra glances at him. Nods. No words. What is there to say?
     l "(quiet) Did you sleep?"
     a "Some. You?"
@@ -142,147 +147,222 @@ label act2_safe_house_planning:
     l "One day at a time."
     a "One day at a time."
 
-    # ==============================================================
-    # ACTIVITY HUB - Day Selection Loop
-    # ==============================================================
+    # --- HUB STATE INIT (helpers + scene_flags only) ---
+    python:
+        # Track remaining days (allowed outside characters/scenes)
+        if player_state.get("days_remaining", None) is None:
+            player_state["days_remaining"] = 7
+        if "last_activity" not in player_state:
+            player_state["last_activity"] = ""
 
-    # Initialize activity tracking if first time
-    $ if not hasattr(store, 'activities_completed'):
-        $ activities_completed = []
-        $ current_day = 2
-        $ activities_remaining = 
+        # Seed a canonical set of task keys in a local list (not saved in dicts)
+        store._a2_tasks = ["work","weapons","intel","medical","reputation","survival","past"]
+        # Ensure a scene_flags bucket exists for hub flavor (no-op: mark_scene builds lazily)
+        # Nothing to mark here yet.
 
-    jump act2_activity_hub    
+    jump act2_activity_hub
 
+
+# ==========================
+# HUB LOOP
+# ==========================
 label act2_activity_hub:
 
-    # VISUAL: Hub scene. Safe house. Time of day varies based on current_day.
-    # LIGHTING: Changes per day (morning/afternoon/evening hints).
-    
-    # Check if returning from activity or first time
-    $ if len(activities_completed) > 0:
+    # Determine progress from scene_flags only
+    python:
+        done_count = 0
+        for t in _a2_tasks:
+            if check_scene_flag("act2_activity", f"{t}_done"):
+                done_count += 1
+        activities_remaining = len(_a2_tasks) - done_count
+        current_day = 2 + done_count
+
+    if done_count > 0:
         "{i}Day [current_day]. Another day, another task to complete.{/i}"
         "{i}Still alive. Still moving forward. That has to mean something.{/i}"
     else:
         "{i}Day 2. The first step into this new life. Choose carefully.{/i}"
 
-    # CHECK FOR LYRA SCENE BEFORE SHOWING MENU (after any activity completion)
-    # This checks every time they return to hub
-    $ if len(activities_completed) > 0:
-        jump act2_check_lyra_scene_hub
+    # --- POST-ACTIVITY EVENT-SPECIFIC FLAVOR (fires once per task) ---
+    python:
+        last_task = player_state.get("last_activity", "")
+        flavor_key = f"flavor_once_{last_task}" if last_task else ""
+        if last_task and not check_scene_flag("act2_activity", flavor_key):
+            flavor_once = {
+                "weapons": [
+                    ("z", "If Vex smiles at you, check your pockets and your pulse."),
+                    ("l", "I still can't believe we got that gun from Vex."),
+                    ("a", "{i}Weight on the hip. Not comfort. Responsibility.{/i}")
+                ],
+                "work": [
+                    ("z", "Scrip spends. Your faces don’t. Wear the faces that do."),
+                    ("l", "I forgot how much I hate grease under my nails."),
+                    ("a", "{i}Honest work. Feels strange after years of lies.{/i}")
+                ],
+                "intel": [
+                    ("z", "If Noelle says ‘curious’, you run. Or you sit. Depends on her tea."),
+                    ("a", "{i}Patterns emerge where cruelty grows lazy.{/i}")
+                ],
+                "medical": [
+                    ("z", "Tessa doesn’t do miracles. She does math with blood."),
+                    ("l", "That kid’s breathing sounded like glass."),
+                    ("a", "{i}Mercy is heavier than steel. It leaves a mark.{/i}")
+                ],
+                "reputation": [
+                    ("z", "One neighbor talks. Then two. Make them say the right things."),
+                    ("l", "They looked at us like we were human. For a moment.")
+                ],
+                "survival": [
+                    ("z", "Lesson one: eyes up, hands empty, path mapped."),
+                    ("a", "{i}Signals and chalk. The Unders write in ghosts.{/i}")
+                ],
+                "past": [
+                    ("l", "Sector 10 still smells like burned air."),
+                    ("a", "{i}Apology is a door. Doesn’t open itself.{/i}")
+                ]
+            }
+            pool = flavor_once.get(last_task, [])
+            # Deterministic pick: 2 lines for EMP band, 1 for OB band
+            max_lines = 2 if get_empathy_band() != "obedience" else 1
+            for i, (who, line) in enumerate(pool):
+                if i >= max_lines:
+                    break
+                renpy.say(eval(who), line)
+            # Mark once via scene_flags
+            mark_scene("act2_activity", flavor_key)
+
+    # --- OPTIONAL RANDOMIZED PRE-ACTIVITY FLAVOR ---
+    python:
+        import renpy
+        pre_emp = [
+            ("l", "We can’t fix everything today, but we can fix something."),
+            ("a", "{i}Pick the wound you can stitch.{/i}")
+        ]
+        pre_ob = [
+            ("a", "{i}Start with the task that bleeds least time.{/i}"),
+            ("z", "Don’t overthink it. Over-prep it.")
+        ]
+        pre_pool = pre_emp if get_empathy_band() != "obedience" else pre_ob
+        if renpy.random.random() < 0.5:
+            who, line = renpy.random.choice(pre_pool)
+            renpy.say(eval(who), line)
+
+    # LYRA SCENE CHECK
+    call act2_check_lyra_scene_hub from _hub_lyra_gate
 
 label act2_continue_hub:
-    # Show progress
-    $ activities_remaining = 7 - len(activities_completed)
-    
+
+    # Recompute using flags
+    python:
+        done_count = 0
+        for t in _a2_tasks:
+            if check_scene_flag("act2_activity", f"{t}_done"):
+                done_count += 1
+        activities_remaining = len(_a2_tasks) - done_count
+        current_day = 2 + done_count
+
     if activities_remaining > 0:
         "{i}[activities_remaining] tasks remaining before Selene decides our fate.{/i}"
-        
-        # Build activity menu dynamically based on what's completed
+
         menu:
-            "What should we focus on today?"
-            
-            "Find Work - Earn scrip, establish cover" if "work" not in activities_completed:
-                $ activities_completed.append("work")
-                $ current_day += 1
+            "What should we focus on today?":
+
+            "Find Work - Earn scrip, establish cover" if not check_scene_flag("act2_activity","work_done"):
+                $ mark_scene("act2_activity","work_done")
+                $ player_state["days_remaining"] = max(0, player_state["days_remaining"] - 1)
+                $ player_state["last_activity"] = "work"
                 jump act2_activity_01_find_work
-            
-            "Acquire Weapons - Get armed, black market contact" if "weapons" not in activities_completed:
-                $ activities_completed.append("weapons")
-                $ current_day += 1
+
+            "Acquire Weapons - Get armed, black market contact" if not check_scene_flag("act2_activity","weapons_done"):
+                $ mark_scene("act2_activity","weapons_done")
+                $ player_state["days_remaining"] = max(0, player_state["days_remaining"] - 1)
+                $ player_state["last_activity"] = "weapons"
                 jump act2_activity_02_acquire_weapons
-            
-            "Gather Intel - Meet info broker, learn patrol patterns" if "intel" not in activities_completed:
-                $ activities_completed.append("intel")
-                $ current_day += 1
+
+            "Gather Intel - Meet info broker, learn patrol patterns" if not check_scene_flag("act2_activity","intel_done"):
+                $ mark_scene("act2_activity","intel_done")
+                $ player_state["days_remaining"] = max(0, player_state["days_remaining"] - 1)
+                $ player_state["last_activity"] = "intel"
                 jump act2_activity_03_gather_intel
-            
-            "Medical Supplies - Underground clinic, prove worth" if "medical" not in activities_completed:
-                $ activities_completed.append("medical")
-                $ current_day += 1
+
+            "Medical Supplies - Underground clinic, prove worth" if not check_scene_flag("act2_activity","medical_done"):
+                $ mark_scene("act2_activity","medical_done")
+                $ player_state["days_remaining"] = max(0, player_state["days_remaining"] - 1)
+                $ player_state["last_activity"] = "medical"
                 jump act2_activity_04_medical_supplies
-            
-            "Earn Reputation - Help locals, change perceptions" if "reputation" not in activities_completed:
-                $ activities_completed.append("reputation")
-                $ current_day += 1
+
+            "Earn Reputation - Help locals, change perceptions" if not check_scene_flag("act2_activity","reputation_done"):
+                $ mark_scene("act2_activity","reputation_done")
+                $ player_state["days_remaining"] = max(0, player_state["days_remaining"] - 1)
+                $ player_state["last_activity"] = "reputation"
                 jump act2_activity_05_earn_reputation
-            
-            "Survival Skills - Learn the Unders with Zira" if "survival" not in activities_completed:
-                $ activities_completed.append("survival")
-                $ current_day += 1
+
+            "Survival Skills - Learn the Unders with Zira" if not check_scene_flag("act2_activity","survival_done"):
+                $ mark_scene("act2_activity","survival_done")
+                $ player_state["days_remaining"] = max(0, player_state["days_remaining"] - 1)
+                $ player_state["last_activity"] = "survival"
                 jump act2_activity_06_survival_skills
-            
-            "Confront the Past - Return to Sector 10, face survivor" if "past" not in activities_completed:
-                $ activities_completed.append("past")
-                $ current_day += 1
+
+            "Confront the Past - Return to Sector 10, face survivor" if not check_scene_flag("act2_activity","past_done"):
+                $ mark_scene("act2_activity","past_done")
+                $ player_state["days_remaining"] = max(0, player_state["days_remaining"] - 1)
+                $ player_state["last_activity"] = "past"
                 jump act2_activity_07_confront_past
-    
-    # All activities completed - trigger next story beat
+
     else:
         "{i}Seven days. Seven tasks. All completed, every single one of them.{/i}"
         "{i}Time to see if it was enough to earn Selene's attention.{/i}"
-        #jump act2_06_the_message
+        $ mark_scene("act2_03_safe_house_planning", "all_tasks_completed")
+        $ summary = end_operation("op203_safehouse_hub", tag="Safehouse Hub (All tasks done)")
+        $ log_line(summary)
         return
 
 
-# New label to check for Lyra scene after each activity
+# ==========================
+# LYRA GATE (helpers-only)
+# ==========================
 label act2_check_lyra_scene_hub:
-    
-    # Check if thresholds are met
-    $ lyra_trust = characters["lyra"]["trust"]
-    $ lyra_affection = characters["lyra"]["affection"]
-    
-    # Check if scene already completed
-    $ if characters["lyra"]["lewd_scene_completed"]:
+
+    # Helper reads (add these getters in your state system if not present)
+    $ lyra_trust = get_trust("Lyra")
+    $ lyra_aff   = get_affection("Lyra")
+
+    if char_flag_has("Lyra", "lewd_scene_completed"):
         jump act2_continue_hub
-    
-    # Check thresholds
-    $ if lyra_trust >= 7 and lyra_affection >= 5:
-        $ characters["lyra"]["lewd_scene_unlocked"] = True
-        
+
+    if lyra_trust >= 7 and lyra_aff >= 5:
+        $ mark_flag("Lyra", "lewd_scene_unlocked")
+
         # VISUAL: Safe house. Evening. Both exhausted from the day. Quiet moment.
         # LIGHTING: Dim. Single light. Intimate space.
         # SOUND: City quiet below. Their breathing. Silence comfortable.
-        
+
         "{i}Evening. Quiet. Just the two of us in this small space. Something's different tonight.{/i}"
-        
+
         # VISUAL: Lyra looking at him. Different energy. Vulnerable. Open.
         l "Aeron."
         a "Yeah?"
         l "Can we... can we just sit for a while? Not planning. Not surviving. Just... being."
         a "...Yeah. We can do that."
-        
+
         # VISUAL: They sit. Close. Not touching yet. But proximity different.
         "{i}She sits close. Closer than usual. Not accidental. Intentional. Something unspoken between us.{/i}"
-        
+
         menu:
-            "The space between them feels charged. Different. Significant."
-            
+            "The space between them feels charged. Different. Significant.":
+
             "Spend the evening with Lyra":
+                # Inside act2_lyra_intimate_scene, remember to:
+                #   $ mark_flag("Lyra", "lewd_scene_completed")
+                #   $ rel("Lyra", trust=..., affection=...)  # if applicable
                 jump act2_lyra_intimate_scene
-                
+
             "Give her space - rest instead":
                 a "Actually... I should probably get some rest. Long day."
                 l "(slight disappointment) Oh. Yeah. Of course. Rest is important."
                 l "Goodnight, Aeron."
                 a "Goodnight, Lyra."
-                
                 "{i}The moment passes. Maybe it was nothing. Maybe it was everything. Too late to know now.{/i}"
-                
                 jump act2_continue_hub
     else:
-        # Not enough trust/affection yet
         jump act2_continue_hub
-
-    # canon_note: Hub established - 7 activities over 7 days (Days 2-8)
-    # canon_note: Activities can be done in any order - player choice matters
-    # canon_note: Each activity = full scene, returns to hub after completion
-    # canon_note: Zira's seven tasks: work, weapons, intel, medical, reputation, survival, past
-    # canon_note: Selene mentioned - waiting to see if they're serious, will respond after tasks done
-    # canon_note: One week timeline established - urgency building
-    # canon_note: "Prove Glass can become something else" - Zira's core motivation
-    # canon_note: Activities_completed list tracks progress, prevents repeating
-    # canon_note: Current_day advances with each activity (Day 2 → Day 8)
-    # canon_note: All 7 complete → Scene 6 triggers (Selene's message arrives)
-
-    return

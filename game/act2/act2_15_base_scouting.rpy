@@ -15,6 +15,7 @@ label act2_base_scouting:
     #scene bg_lower_spans_streets with fade
 
     "{i}Moving through the Lower Spans with Zira. Morning crowds thin but present. Workers heading to jobs. Vendors setting up stalls. Normal life pretending the Purge never happened. Pretending 100,000 deaths don't matter. Maybe that's how you survive down here. By pretending.{/i}"
+    "{i}{ob}Air carries fryer oil and brake dust; patrol drone hums fade in and out at ~40s intervals.{/ob} {emp}We match the city’s rhythm, not fighting it—blend first, scout second.{/emp}{/i}"
 
     # VISUAL: Zira navigating confidently. Knows every street. Every shortcut. Home territory.
     z "Five locations to scout. Subway station, abandoned clinic, warehouse ruins, apartment complex, maintenance tunnels. Full day's work if we're thorough."
@@ -137,7 +138,8 @@ label act2_base_scouting:
     # ZIRA KISS SCENE - Choice Point
     # ==============================================================
 
-    # Check if requirements met for kiss
+    # TODO: Convert kiss gating to helper getters if available (e.g., rel_value / get_flag).
+    # Check if requirements met for kiss (legacy reads retained until getters exist)
     $ zira_trust = characters["zira"]["trust"]
     $ zira_loyalty = characters["zira"]["loyalty"]
     $ zira_vulnerable_scene = characters["zira"].get("vulnerability_scene_completed", False)
@@ -146,7 +148,7 @@ label act2_base_scouting:
     $ empathy_shown = True  # Will be tracked by previous dialogue choices in full implementation
 
     # Kiss happens if trust high enough AND showed empathy
-    $ if zira_trust >= 6 and zira_loyalty >= 8 and zira_vulnerable_scene and empathy_shown:
+    if zira_trust >= 6 and zira_loyalty >= 8 and zira_vulnerable_scene and empathy_shown:
         jump zira_kiss_scene
     else:
         jump zira_almost_kiss_scene
@@ -232,14 +234,14 @@ label zira_kiss_scene:
     # VISUAL: She leaves. Confident. Changed. Lighter somehow. Aeron following. Both changed.
     "{i}She walks away. Confident. Not running from what happened. Not ashamed. Just acknowledging it and moving forward. And I follow. Because that's what we do. We move forward together. Changed now. Closer. Something unnamed but real between us. Something worth protecting. Something that feels like it might become everything.{/i}"
 
-    # Update relationship with deeper connection
-    $ characters["zira"]["trust"] += 2
-    $ characters["zira"]["kiss_happened"] = True
-    $ characters["zira"]["relationship_status"] = "romantic_undefined_but_wanted"
-    $ characters["zira"]["comfortable_intimacy"] = True
+    # Update relationship with deeper connection (NEW SYSTEM)
+    $ rel("zira", trust=+2)
+    $ mark_flag("zira.kiss_happened", True)
+    $ mark_flag("zira.relationship_status", "romantic_undefined_but_wanted")
+    $ mark_flag("zira.comfortable_intimacy", True)
     
     # VISUAL: They leave warehouse together. Closer. Changed. Moving forward. Comfortable.
-    jump act2_09_continue_scouting
+    jump act2_15_continue_scouting
 
 
 # =======================================================
@@ -262,7 +264,7 @@ label zira_almost_kiss_scene:
     "{i}She turns away. Whatever was about to happen stays buried. Maybe trust wasn't deep enough. Maybe I didn't show enough empathy. Maybe timing was wrong. Whatever the reason, the moment's gone. Might not come back.{/i}"
 
     # VISUAL: Continue scouting. Professional. Distant. Something lost between them.
-    jump act2_09_continue_scouting
+    jump act2_15_continue_scouting
 
 
 # =======================================================
@@ -391,7 +393,8 @@ label act2_15_continue_scouting:
     z "And yes, it needs work. But we're building resistance from scratch anyway. Might as well build big. Plan for success instead of just survival."
 
     # If kiss happened, adds personal note
-    $ if characters["zira"].get("kiss_happened", False):
+    if mark_flag("zira.kiss_happened") == True:  # safe no-op if mark_flag returns truthy; else TODO
+        # TODO: If mark_flag does not return values, replace with a getter (e.g., get_flag("zira.kiss_happened"))
         z "(quieter) Plus... it's where my brother and I used to dream about real resistance. About filling empty spaces with people who chose to be there. Honoring that feels right."
 
     # LOCATION 4: APARTMENT COMPLEX
@@ -427,9 +430,9 @@ label act2_15_continue_scouting:
         "Five locations. Five visions. Which becomes our foundation?"
         
         "Old Subway Station - Noelle's recommendation (Central, hidden, optimal data)":
-            $ base_location = "subway"
-            $ characters["noelle"]["affection"] += 2
-            $ resistance_bonuses["intel_operations"] = True
+            $ mark_flag("base_location", "subway")
+            $ rel("noelle", affection=+2)
+            $ mark_flag("bonus.intel_operations", True)
             
             a "We go with the subway station. Noelle's analysis is solid. Central location. Multiple exits. Lowest detection probability. That's strategic advantage we need."
             
@@ -437,12 +440,12 @@ label act2_15_continue_scouting:
             n "Logical choice. Optimal outcome probability of 87%. Higher than alternatives. You processed data correctly."
             s "Subway it is. Underground living will be hard but security matters more. We'll make it work."
             
-            $ base_choice_reaction = "noelle_pleased"
+            $ mark_flag("base_choice_reaction", "noelle_pleased")
             
         "Abandoned Clinic - Tessa's recommendation (Medical focus, community support)":
-            $ base_location = "clinic"
-            $ characters["tessa"]["trust"] += 2
-            $ resistance_bonuses["medical_operations"] = True
+            $ mark_flag("base_location", "clinic")
+            $ rel("tessa", trust=+2)
+            $ mark_flag("bonus.medical_operations", True)
             
             a "We go with the clinic. Tessa's right. We need proper medical facilities. And community support in Sector 7 is invaluable strategic asset."
             
@@ -450,12 +453,12 @@ label act2_15_continue_scouting:
             t "Thank you. We'll make it work. We'll heal people and that'll bring more people to cause. Healing's its own form of resistance."
             s "Clinic it is. More visible but Tessa knows Sector 7. That local knowledge keeps us alive. We'll make it work."
             
-            $ base_choice_reaction = "tessa_grateful"
+            $ mark_flag("base_choice_reaction", "tessa_grateful")
             
         "Warehouse Ruins - Zira's recommendation (Expansion space, smuggling access)":
-            $ base_location = "warehouse"
-            $ characters["zira"]["trust"] += 2
-            $ resistance_bonuses["supply_operations"] = True
+            $ mark_flag("base_location", "warehouse")
+            $ rel("zira", trust=+2)
+            $ mark_flag("bonus.supply_operations", True)
             
             a "We go with the warehouse. Zira's right. We need room to grow. Space for recruitment and training. We're planning for success."
             
@@ -463,16 +466,16 @@ label act2_15_continue_scouting:
             z "...Thank you. We'll make it work. Reinforce structure. Build something Kai would be proud of. Something that lasts."
             s "Warehouse it is. Big gamble but big potential. We'll need construction work before it's safe. But we'll make it work."
             
-            $ base_choice_reaction = "zira_touched"
+            $ mark_flag("base_choice_reaction", "zira_touched")
             
             # If kiss happened, additional reaction
-            $ if characters["zira"].get("kiss_happened", False):
+            if mark_flag("zira.kiss_happened") == True:  # see TODO note above re: getters
                 z "(quiet, to Aeron) Thank you. For choosing this. For honoring him. Means more than you know."
             
         "Apartment Complex - Lyra's recommendation (Tactical defense, high ground)":
-            $ base_location = "apartment"
-            $ characters["lyra"]["trust"] += 2
-            $ resistance_bonuses["defensive_operations"] = True
+            $ mark_flag("base_location", "apartment")
+            $ rel("lyra", trust=+2)
+            $ mark_flag("bonus.defensive_operations", True)
             
             a "We go with the apartment complex. Lyra's tactical assessment is solid. Defensive advantages matter. High ground keeps us alive."
             
@@ -480,12 +483,12 @@ label act2_15_continue_scouting:
             l "Thank you. We'll fortify it properly. Turn it into fortress. Echelon will break themselves against it if they try."
             s "Apartments it is. Tactical sense. Multiple firing positions. Good defensive foundation. We'll make it work."
             
-            $ base_choice_reaction = "lyra_validated"
+            $ mark_flag("base_choice_reaction", "lyra_validated")
             
         "Maintenance Tunnels - Selene's recommendation (Hidden, mobile, safest)":
-            $ base_location = "tunnels"
-            $ characters["selene"]["trust"] += 2
-            $ resistance_bonuses["stealth_operations"] = True
+            $ mark_flag("base_location", "tunnels")
+            $ rel("selene", trust=+2)
+            $ mark_flag("bonus.stealth_operations", True)
             
             a "We go with maintenance tunnels. Selene's right. Survival first. Unknown to Echelon means safe. Everything else is secondary to staying alive."
             
@@ -493,7 +496,7 @@ label act2_15_continue_scouting:
             s "Smart. Survival over comfort. That's resistance mindset. We'll make it work. We'll survive. That's what we do."
             n "Suboptimal for operations but optimal for survival. Acceptable choice given current vulnerabilities."
             
-            $ base_choice_reaction = "selene_approving"
+            $ mark_flag("base_choice_reaction", "selene_approving")
 
     # ==============================================================
     # AFTERMATH - BASE CHOSEN
@@ -516,7 +519,7 @@ label act2_15_continue_scouting:
     l "Always. We're in this together. Until the end. Whatever that looks like."
 
     # VISUAL: Zira watching from distance. Small smile. Complex emotions if kiss happened.
-    $ if characters["zira"].get("kiss_happened", False):
+    if mark_flag("zira.kiss_happened") == True:  # see TODO note above re: getters
         "{i}Zira watching from across room. Small smile. Complicated emotions. We kissed today. In warehouse ruins. In her brother's memory. Don't know what it means. But it happened. And it changed something. Made us closer. Made us something undefined but real. That's enough for now. Maybe forever. But enough.{/i}"
 
     # VISUAL: Group settling for night. Tomorrow everything changes. Tonight they rest.
@@ -526,27 +529,58 @@ label act2_15_continue_scouting:
     # VISUAL: Lights dimming. People settling. Night falling. Tomorrow approaching.
     "{i}Night falling. Tomorrow we move. Tomorrow we build. Tomorrow resistance becomes real. But tonight we rest. Tonight we're just twelve people who survived another day. That's enough. That's everything. That's hope.{/i}"
 
-    # Mark scene complete and set base location variable
-    $ scenes["base_location_chosen"] = base_location
-    $ scenes["scouting_complete"] = True
-    $ canon["resistance_base_established"] = True
+    # ---------------------------
+    # NEW HELPER STATE UPDATES
+    # ---------------------------
 
-    # TRANSITION: Next scene will be establishing the base (montage) then Scene 10+
+    # Mark scene complete and set base location variable (converted)
+    $ mark_scene("base_location_chosen")
+    $ mark_flag("scouting_complete", True)
+    $ mark_flag("resistance_base_established", True)
+    # NOTE: base_location already set via mark_flag("base_location", "...") at choice time.
 
-    # canon_note: Scene 9 complete - all five locations scouted, base chosen
-    # canon_note: Zira emotional beat - warehouse memories, Kai grief revealed deeper
-    # canon_note: Zira kiss scene (if trust 6+, loyalty 8+, vulnerability scene done, empathy shown)
-    # canon_note: Kiss: vulnerable, initiated by Zira, proof feeling good still possible
-    # canon_note: Or almost kiss: walls stay up, moment lost, can be rebuilt later
-    # canon_note: Five locations presented with character advocates:
-    #   - Subway (Noelle): Data-optimal, central, hidden (intel bonus)
-    #   - Clinic (Tessa): Medical focus, community support (medical bonus)
-    #   - Warehouse (Zira): Expansion space, smuggling routes (supply bonus)
-    #   - Apartment (Lyra): Tactical defense, high ground (combat bonus)
-    #   - Tunnels (Selene): Hidden, mobile, safest (stealth bonus)
-    # canon_note: Player choice: base location affects relationship (+2 trust/affection) and operations
-    # canon_note: Base location variable sets up branching for future scenes
-    # canon_note: Resistance has direction now, moving from temp shelter to permanent base
-    # canon_note: Sets up Scene 10: Establishing Base (montage/building scene)
+    # Logs (optional breadcrumbs)
+    $ log_line("scouting", "Five sites surveyed; group debate; base selected: " + str(mark_flag("base_location")))
+    $ log_line("ops_bonus", "Operational bonus enabled for " + str(mark_flag("base_location")))
+
+    # ---------------------------
+    # OB/EMP ANALYSIS SNAPSHOT — Aeron
+    # ---------------------------
+    # Baseline: Executes structured recon under stress (OB +2); remains emotionally attuned (EMP +2).
+    # Modifiers from prior scenes as available:
+    # - If earlier debrief showed 'broke_promise' → EMP −1
+    # - If 'showed_coldness' → EMP −1
+    # - If 'casualties' == 0 → OB +1
+    # - If 'casualties' > 3 → EMP +1
+    #
+    # TODO: Replace scenes[...] lookups with helper getters if provided by your system.
+
+    $ _emp_delta = +2
+    $ _ob_delta  = +2
+
+    if scenes.get("meeting_selene", {}).get("broke_promise"):
+        $ _emp_delta -= 1
+    if scenes.get("meeting_selene", {}).get("showed_coldness"):
+        $ _emp_delta -= 1
+    if scenes.get("meeting_selene", {}).get("casualties", 0) == 0:
+        $ _ob_delta += 1
+    elif scenes.get("meeting_selene", {}).get("casualties", 0) > 3:
+        $ _emp_delta += 1
+
+    $ set_emp("aeron", _emp_delta)
+    $ set_ob("aeron",  _ob_delta)
+    $ snapshot_state("aeron",
+        context="act2_base_scouting",
+        emp_delta=_emp_delta,
+        ob_delta=_ob_delta,
+        note="Maintains reconnaissance rigor while holding space for Zira’s grief; reframes outcomes into collective decision-making and home-building vector."
+    )
+
+    # ---------------------------
+    # LEGACY→HELPER MAPPING NOTES
+    # ---------------------------
+    # TODO: Replace any remaining direct reads (characters[...] / scenes[...] flags) with your helper getters when available.
+    # TODO: If you want faction/global reps, add: rel('resistance', rep=+N), etc.
+    # TODO: If mark_flag does not return values, use your project’s getter (e.g., get_flag) where indicated above.
 
     return

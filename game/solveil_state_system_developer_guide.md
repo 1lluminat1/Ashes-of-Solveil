@@ -1,252 +1,278 @@
-# Solveil State System — Developer Guide
+# Solveil State System — Explainer & Usage Guide (v1)
 
-*Version: Consolidated architecture (BC-safe)*
-
-This guide explains what each section of `solveil_state_system.rpy` does and how to use it in scenes. It follows the file top‑to‑bottom so you can skim or copy/paste snippets as needed.
+> Canon: **BC‑free** architecture. Use **`apply_choice_once`** as the *only* mutator at player choice time. Empathy score is for **flavor/momentum/UI**, while OB/EMP *locking* uses **ratio thresholds**.
 
 ---
 
-## 1) Core Dictionaries (state buckets)
-These are the single sources of truth that everything else reads/writes.
+## 0) Mental model
 
-### 1.1 Characters (`characters`)
-- **What:** Per‑character data (relationship meters, romance toggles) plus two normalized sets:
-  - `flags`: reversible toggles for small facts ("opened_up", "kissed_once").
-  - `milestones`: one‑way achievements you never un‑set ("first_kiss", "revealed_backstory").
-- **Why:** Keeps legacy keys (`trust`, `affection`, etc.) for backward compatibility (BC) while allowing cleaner, set‑based reads.
-- **Use:**
+* **`STATE`** is the single source of truth.
+* **Writers** (mutators): `apply_choice_once`, `adjust_empathy` (rare outside choices), `op_start/op_end`, `rel_bump`, inventory/reputation helpers, `canon_set`.
+* **Readers** (gates/UI): `empathy_band`, `alignment_tier/desc`, `alignment_momentum`, `pass_emp/ob/tier`, predicates (`zira_ready_for_kiss` …), and any scene gating.
+* **Ratios, not caps** decide pathing: `opp_emp/opp_ob` + `took_emp/took_ob`.
+
+---
+
+## 1) Characters
+
+**Keys:** `STATE["chars"][name] = { rel:{trust,affection,loyalty}, flags:set(), ms:set(), notes:list }`
+
+**Helpers:**
+
+* `rel_get/rel_set/rel_add`, shorthand: `trust(name)`, `affection(name)`, `loyalty(name)`, and `rel_bump(name, trust=1, affection=0, loyalty=0)`
+* `flag_on/flag_has` — character‑scoped booleans (e.g., `"kiss_happened"`).
+* `ms_add/ms_has` — **milestones**: larger arc beats.
+* `note(name, text)` — dev notes per character.
+
+**Usage example:**
+
 ```renpy
-$ add_trust("Lyra", +1)
-$ add_affection("Lyra", +1)
-$ char_flag_on("Lyra", "opened_up")
-$ if char_flag_has("Lyra", "opened_up"): ...
-$ char_ms_add("Lyra", "first_kiss")
-```
-
-### 1.2 Scenes (`scenes`) and `scene_flags`
-- **What:** `scenes` keeps your legacy per‑scene dicts. `scene_flags` is the modern set‑based mirror (by `scene_id`).
-- **Why:** You can migrate gradually; both read paths work.
-- **Use:**
-```renpy
-$ scene_id = "act1_05_gala"
-$ set_scene_flag(scene_id, "acknowledge_lyra")
-if check_scene_flag(scene_id, "acknowledge_lyra"): ...
-```
-
-### 1.3 Inventory (`inventory`)
-- **What:** Keeps original nested dicts (supplies/tools/disguises/intel) and adds normalized mirrors:
-  - `counters`: for numeric consumables
-  - `tools_set`: presence set for tools
-  - `disguises_set`: presence set for disguises ("unders", "mid", "echelon")
-- **Why:** Reads become simple (`has_tool("hacking_device")`) while BC with old dicts remains.
-- **Use:**
-```renpy
-$ add_item("supplies", "food", +1)            # counters + legacy kept in sync
-$ add_item("tools", "hacking_device")          # also adds to tools_set
-$ grant_disguise("echelon")
-if has_tool("hacking_device"): ...
-```
-
-### 1.4 Reputation / Skills / Player / Canon / Stats / System
-- **reputation**: simple faction meters (`unders`, `resistance`, `echelon`).
-- **skills_set**: normalized presence of learned skills (built from legacy `skills`).
-- **player_state**: global run‑wide counters (empathy, civilians saved/killed, suspicion, etc.).
-- **canon**: story‑wide locks (chapter gates, witnessed events).
-- **stats**: aggregate counters for credits, people saved/killed, etc.
-- **system_flags**: debug UI, shortcuts, overlay log buffer.
-
-Use helpers:
-```renpy
-$ inc_rep("unders", +1)
-$ learn_skill("pattern_recognition")
-$ add_civilians_saved(3)
-$ add_team_suspicion(1)
+$ rel_bump("Lyra", trust=+1)
+$ flag_on("Zira", "vulnerability_scene_completed")
 ```
 
 ---
 
-## 2) Helpers (BC‑safe API)
-Small wrappers so scenes never poke dicts directly.
+## 2) Scenes
 
-- **Relationship**: `add_trust`, `add_affection`, `add_loyalty`, `unlock_romance`, `relationship_state(name)`.
-- **Character facts**: `char_flag_on/has`, `char_ms_add/has`, `char_note`.
-- **Scenes**: `set_scene_flag(scene_id, key)`, `check_scene_flag(scene_id, key)` (writes both new and legacy locations).
-- **Inventory**: `add_item`, `add_item_counter`, `has_item`, `grant_tool`, `has_tool`, `grant_disguise`, `has_disguise`, `add_favor`, `pay_debt`.
-- **Reputation/Stats/Skills**: `inc_rep`, `inc_stat`, `learn_skill`, `has_skill`.
-- **Player counters**: `add_evidence_of_mercy`, `add_team_suspicion`, `add_civilians_saved`, `add_civilians_killed`.
+**Keys:**
 
-**Rule of thumb:** Always call a helper; never mutate the dicts in scenes. This keeps migration painless.
+* `STATE["scenes"]["flags"][scene_id] -> set()`
+* `STATE["scenes"]["snapshots"][op_id] -> dict`
 
----
+**Helpers:** `scene_mark(scene_id, *keys)`, `scene_has(scene_id, key)`
 
-## 3) Alignment (Empathy ↔ Obedience)
-A single axis with robust reads and simple writes.
+**Pattern:** At scene entry, set a unique variable and mark it:
 
-### 3.1 Core knobs
-- `EMPATHY_MIN = -12`, `EMPATHY_MAX = 12`, `EMP_EDGE = 3` (band thresholds)
-- Recent momentum: last 6 empathy deltas for micro‑tone.
-
-### 3.2 Writing alignment
 ```renpy
-$ adjust_empathy(+1)                       # common nudge
-$ adjust_empathy_once("act1_gala_hand", +1)  # award once per unique id
-```
-*Guidance:* ±1 for flavor beats, ±2 for scene‑defining choices, avoid >±3 early.
-
-### 3.3 Reading alignment
-- **Bands** (coarse): `get_empathy_band()` → `"obedience" | "conflicted" | "empathy"`
-- **Tiers** (fine): `get_alignment_tier()` → `OB3 / OB2 / OB1 / C / EMP1 / EMP2 / EMP3`
-- **Normalized**: `get_alignment_score_norm()` → float −1.0..+1.0
-- **Momentum**: `get_alignment_momentum()` → float −1..+1 (recent direction)
-- **Gates**: `pass_emp_gate(min_edge=EMP_EDGE)`, `pass_ob_gate()`, `pass_tier("EMP2", "EMP3")`
-
-**Typical usage:**
-```renpy
-$ band = get_empathy_band()
-if band == "obedience":
-    # colder variant
-elif band == "empathy":
-    # warmer variant
-else:
-    # conflicted
+$ _current_scene_id = "act1_12_lyra_visit"
+$ scene_mark(_current_scene_id, "entered")
 ```
 
 ---
 
-## 4) Operation Reconciliation Kit
-Track mission deltas reliably and auto‑propagate consequences.
+## 3) Inventory & Reputation
 
-### 4.1 Start/End
-```renpy
-$ start_operation("op391_sector10", note="Sector 10 Sweep")
-# ... your scene modifies saved/killed/mercy/suspicion/empathy ...
-$ summary = end_operation("op391_sector10")
-# Optionally log it
-$ log_line(summary)
-```
+**Inventory:** `STATE["inv"] = { counters, tools:set, disguises:set, weapons:list, intel:{...}, favors_owed, debts_owed }`
 
-### 4.2 What `end_operation` does
-- Computes deltas vs. the snapshot (saved/killed/mercy/suspicion).
-- Updates aggregate `stats` (if `auto_stats=True`).
-- Applies a simple faction model (`_apply_reputation`) if `auto_repute=True`.
-- Clamps empathy to safe bounds.
-- Flips basic canon hints via `_canon_touches` (customize per project).
-- Returns a one‑line human summary and stores it alongside the snapshot.
+**Helpers:** `add_item_counter`, `grant_tool/has_tool`, `grant_disguise/has_disguise`, `add_weapon`, `add_favor`, `pay_debt`.
 
-**Tuning points:**
-- `_apply_reputation(...)` → adjust faction math.
-- `_canon_touches(op_id, ...)` → branch story beats by outcome scale.
+**Reputation:** `STATE["rep"] = { unders, resistance, echelon }`
+
+* **Use small per‑choice deltas** for *optics*: `echelon_delta/resistance_delta` in `apply_choice_once`.
+* **Use `op_end`** for *outcomes* (saved/killed/mercy/suspicion)
 
 ---
 
-## 5) Debug Overlay (`screen solveil_debug_overlay`)
-A minimal always‑on overlay (when `system_flags["debug_mode"]` is `True`).
+## 4) Player metrics
 
-**Shows:** empathy score, band, tier, momentum; select resource lines (credits/days); a couple trust/loyalty snippets.
+**Keys (core):** `empathy_score`, `recent_empathy[]`, `echelon_alert`, `evidence_of_mercy`, `team_suspicion`, `civilians_saved/killed`.
 
-**Enable:**
+**Ratio pathing keys:** `opp_emp`, `opp_ob`, `took_emp`, `took_ob`.
+
+* *Meaning:* how many opportunities the player saw of each leaning (opp_*), and how many they chose (took_*).
+* *Purpose:* drive **candidate/lock** decisions independent of raw empathy caps.
+
+**Helpers:**
+
+* `civ_saved/civ_killed`, `add_mercy`, `add_susp`.
+* `adjust_empathy(amount)` — pushes momentum, clamps by your rails.
+* `adjust_empathy_once(scene_id, token, amount)` — idempotent grant.
+* `alignment*` readers: `empathy_band()` → `"empathy"|"conflicted"|"obedience"`, `alignment_tier()`, `alignment_desc()`, `alignment_momentum()`.
+* `pass_emp/ob/tier` — clean scene gates.
+
+**UI Use:**
+
 ```renpy
-$ system_flags["debug_mode"] = True
-```
-The file auto‑registers the overlay if it isn’t already in `config.overlay_screens`.
-
-**Optional log:**
-```renpy
-$ log_line("entered act1_05_gala")
-# Last ~12 lines are kept in system_flags["logs"] (render in your own debug UI if desired)
+$ s=STATE['player']['empathy_score']
+$ text "Empathy: [s]  Band: [empathy_band()]  Tier: [alignment_tier()]  Momentum: [round(alignment_momentum(),2)]"
 ```
 
 ---
 
-## 6) Patterns & Best Practices
+## 5) Single‑call choice API (use everywhere)
 
-### 6.1 Branching on alignment
-Prefer bands/tiers over raw numbers.
+`apply_choice_once(scene_id, token, weight, factor=1, next_scene_label="", echelon_delta=0, resistance_delta=0, note=None)`
+
+* **Idempotent:** empathy per `(scene_id, token)` applied at most once.
+* **Weight:** `"EMP" | "OB" | "NEU"` → auto computes ±delta (or 0).
+* **Ratios:** increments `opp_*` for the **opportunity** and `took_*` if it actually applied.
+* **Rep optics:** optional small deltas per choice.
+* **Telemetry:** appends JSONL and Mermaid edge (per‑act files).
+
+**Neutral helper:** `record_choice_once(scene_id, token, next_scene_label="", note=None)` (alias with `weight="NEU"`).
+
+**Example:**
+
 ```renpy
-$ tier = get_alignment_tier()
-if tier in ("OB3","OB2"):
-    # very cold
-elif tier in ("OB1","C"):
-    # measured
-else:
-    # EMP1/EMP2/EMP3
-```
+menu:
+    "Toast with officers":
+        $ apply_choice_once(_current_scene_id, "toast_officers", "OB", factor=1,
+                            next_scene_label="act1_07_bedroom",
+                            echelon_delta=+1,
+                            note="Protocol optics at gala")
+        jump act1_07_bedroom
 
-### 6.2 Safe empathy awards
-- Micro: ±1 for flavor.
-- Medium: ±2 for scene‑defining.
-- Use `adjust_empathy_once(id, amt)` for any beat that could repeat via re‑entry.
+    "Check on the servant":
+        $ apply_choice_once(_current_scene_id, "check_servant", "EMP", factor=1,
+                            next_scene_label="act1_07_bedroom",
+                            resistance_delta=+1,
+                            note="Quiet kindness")
+        jump act1_07_bedroom
 
-### 6.3 Scene flags
-Always set a local id at the top and use the helper:
-```renpy
-$ scene_id = "act1_05_gala"
-$ set_scene_flag(scene_id, "acknowledge_lyra")
-if check_scene_flag(scene_id, "acknowledge_lyra"): ...
-```
-
-### 6.4 Inventory
-- For consumables use: `add_item("supplies", "food", +1)` **or** `add_item_counter("food", +1)` (both keep legacy+normalized in sync).
-- For presence items use: `grant_tool("hacking_device")` and `has_tool("hacking_device")`.
-- Disguises (normalized): `grant_disguise("echelon")`; `has_disguise("echelon")`.
-
-### 6.5 Relationships
-- **Trust** drives reliability/gating.
-- **Affection** drives warmth/intimacy pacing.
-- Keep romance flows gated by trust **and** affection when appropriate:
-```renpy
-if pass_tier("EMP1","EMP2","EMP3") and characters["Lyra"]["trust"] >= 2 and characters["Lyra"]["affection"] >= 1:
-    # allow softer option
+    "Pick up the lantern (neutral)":
+        $ record_choice_once(_current_scene_id, "pick_lantern", "act1_15_zira_first_contact", note="Good optics")
+        jump act1_15_zira_first_contact
 ```
 
 ---
 
-## 7) Quick Reference (copy/paste)
+## 6) Candidate & Lock (ratio‑based)
 
-**Award empathy once**
-```renpy
-$ adjust_empathy_once("act1_18_confession_space", +1)
-```
+**Thresholds (tune):**
 
-**Gate by band**
-```renpy
-if get_empathy_band() == "obedience":
-    ...
-```
+* `ACT1_OB_RATIO = 0.80` → feel OB in Act I if ≥80% of OB opportunities were taken.
+* `ACT2_OB_RATIO = 0.85` → hard OB lock.
+* `ACT2_EMP_RATIO = 0.65` → hard EMP lock.
+* **Chip acceptance** forces EMP candidate/lock.
 
-**Gate by tier**
-```renpy
-if pass_tier("EMP2","EMP3"): ...
-```
+**Candidate (Act I):** sets `STATE["canon"]["path_candidate"]` to `"EMP"|"OB"`.
+**Lock (Act II – massive_recruitment):** sets `STATE["canon"]["path_state"]`.
 
-**Start / end a mission**
-```renpy
-$ start_operation("op392_bridge", note="Obsidian Bridge")
-# ... do things ...
-$ summary = end_operation("op392_bridge")
-$ log_line(summary)
-```
+**Usage:**
 
-**Set & read a scene flag**
 ```renpy
-$ set_scene_flag("act1_12_lyra_visit", "let_her_stay")
-if check_scene_flag("act1_12_lyra_visit", "let_her_stay"): ...
-```
-
-**Inventory presence**
-```renpy
-$ grant_tool("binoculars")
-if has_tool("binoculars"): ...
+$ evaluate_path_candidate_act1()  # call at the end of Bridge scene
+$ lock_path_act2_massive_recruitment()  # inside massive_recruitment scene
 ```
 
 ---
 
-## 8) Migration notes
-- Old reads like `scenes["act1_05_gala"]["foo"]` still work, but prefer `scene_flags` helpers going forward.
-- Avoid writing raw numbers directly (empathy, rep, stats); always go through helpers.
-- You can prune unused legacy keys over time—the helpers isolate you from structure churn.
+## 7) Operations snapshots
+
+Use these around multi‑step set pieces to accumulate outcomes and apply rep once.
+
+```renpy
+$ op_start("S10_sweep", note="Sector 10 Sweep")
+...
+$ civ_saved(3); add_mercy(1)
+...
+$ summary = op_end("S10_sweep", tag="S10 Sweep Outcome")
+"{i}[summary]{/i}"
+```
+
+* `op_end` pushes **stats** and (optionally) **rep** via `_apply_rep`.
+* Keep per‑choice rep deltas small to avoid double‑counting with op outcomes.
 
 ---
 
-**That’s it.** Keep scenes thin and expressive; let helpers do the bookkeeping. When in doubt: set a flag, award empathy via a helper, and branch by band/tier—not raw numbers.
+## 8) Canon glue
 
+Global story booleans and one‑offs.
+
+* `canon_set/ canon_get` — set & read flags like `"purge_witnessed"`, `"act1_complete"`.
+* `set_base_location/base_location` — shared hub.
+
+**Example:**
+
+```renpy
+$ canon_set("purge_witnessed")
+if canon_get("purge_witnessed"):
+    # unlock a memory beat
+```
+
+---
+
+## 9) Predicates (examples)
+
+* `zira_ready_for_kiss()` — showcases how to combine rel + flags + canon.
+* Add more for your gating hotspots (e.g., `lyra_first_lewd_ready()`).
+
+---
+
+## 10) Debug overlay
+
+Togglable HUD. Enable via `STATE["sys"]["debug_mode"] = True` during dev.
+Shows trust/loyalty, rep, credits, days remaining, empathy metrics.
+
+---
+
+## 11) Mermaid & JSONL telemetry
+
+* **Files:** `dev_graph_act1.mmd`, `devlog_act1.jsonl` (swap per act if preferred).
+* Each call to `apply_choice_once` graphs `scene_id → next_scene_label` with a labeled edge.
+* Use the JSONL file for analytics, QA, or regression tests.
+
+**Tip:** In release builds, guard the file writes behind `if config.developer:` or a custom flag.
+
+---
+
+## 12) Best practices & gotchas
+
+* **One writer at choice time:** only call `apply_choice_once` (or `record_choice_once`).
+* **Do not farm:** Every empathy beat is keyed by `(scene_id, token)`.
+* **Ratios over caps:** Empathy score can be wide‑railed. Locks use ratios.
+* **Avoid double‑counting rep:** Use per‑choice deltas for optics; use `op_end` for outcomes.
+* **Stable naming:** File/label/SCENE_ID must correspond (see naming standard below).
+* **Scene header:**
+
+```
+# SCENE_ID: A1_12_LyraVisit | TYPE: VARIANT | ORDER: 12
+# LABEL: act1_12_lyra_visit
+```
+
+* **Tokens:** `{slug}__{verb_noun}` (e.g., `breaking_point__refuse_order`).
+
+---
+
+## 13) Scene naming standard (authoritative)
+
+* **File:** `act{A}_{NN}_{slug}.rpy`  → `act1_12_lyra_visit.rpy`
+* **Label:** `act{A}_{NN}_{slug}`  → `act1_12_lyra_visit`
+* **SCENE_ID:** `A{A}_{NN}_{SlugTitleCase}` → `A1_12_LyraVisit`
+* **Insertions:** letter suffixes → `act1_07a_inspection_day`
+* **Variant blocks:** in‑file `_emp` / `_ob` sublabels if absolutely necessary; prefer gates.
+
+---
+
+## 14) Quick reference (copy/paste)
+
+```renpy
+# Entering a scene
+$ _current_scene_id = "act1_12_lyra_visit"
+$ scene_mark(_current_scene_id, "entered")
+
+# Choice (OB)
+$ apply_choice_once(_current_scene_id, "toast_officers", "OB", factor=1,
+                    next_scene_label="act1_07_bedroom",
+                    echelon_delta=+1, note="Protocol optics")
+
+# Choice (EMP)
+$ apply_choice_once(_current_scene_id, "check_servant", "EMP", factor=1,
+                    next_scene_label="act1_07_bedroom",
+                    resistance_delta=+1, note="Quiet kindness")
+
+# Choice (NEU)
+$ record_choice_once(_current_scene_id, "inspect_room",
+                     next_scene_label="act1_XX_next",
+                     note="Surveyed area")
+
+# Act I candidate (end of Bridge)
+$ evaluate_path_candidate_act1()
+
+# Act II lock (massive recruitment)
+$ lock_path_act2_massive_recruitment()
+```
+
+---
+
+## 15) Future extensions (optional)
+
+* **Schema versioning:** `STATE["sys"]["schema"] = 1` plus a small migration runner in `after_load_callbacks`.
+* **Global once‑tokens:** `STATE["canon"]["once"] = set()` + `adjust_empathy_once_global(token, amount)`.
+* **Edge dedup for Mermaid:** keep an in‑memory `_edges_seen` or a small `STATE["sys"]["edges_seen"] = set()`.
+* **Release gates:** wrap file I/O in `if config.developer:`.
+
+---
+
+**End of v1.** Keep this doc alongside `solveil_state_system.rpy` for quick reference.

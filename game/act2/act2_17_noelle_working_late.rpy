@@ -1,10 +1,9 @@
-# act2_11_noelle_working_late.rpy (REVISED)
+# act2_11_noelle_working_late.rpy (REVISED + OB/EMP FLAVOR)
 
 
 # =======================================================
 # ACT 2 - Scene 11: Noelle - Working Late (Intellectual Intimacy)
 # =======================================================
-
 
 label act2_11_noelle_working_late:
 
@@ -13,6 +12,11 @@ label act2_11_noelle_working_late:
     # SOUND: Silence. Occasional distant footstep. City hum outside.
 
     scene bg_base_night with fade
+
+    # Alignment precompute (light flavor gates)
+    $ tier = get_alignment_tier()        # OB3..EMP3
+    $ is_ob_hard = pass_tier("OB3","OB2")
+    $ is_mid     = pass_tier("OB1","C")  # else = empathy side
 
     "{i}Late night. Can't sleep. Again. Nightmares. Glass. Sweep. 600 faces. Same dream every night. Different details but same ending. Blood. Screaming. Waking up in cold sweat. Gave up trying. Came to operations room instead. Maybe work will quiet the noise.{/i}"
 
@@ -33,6 +37,14 @@ label act2_11_noelle_working_late:
     # VISUAL: She slams datapad down. Rare display of emotion. Then notices Aeron.
     n "(looking up, startled) Aeron. You're awake. Current time is 0237 hours, which is suboptimal for sleep cycles. Why aren't you sleeping?"
 
+    # OB/EMP flavor: why he's awake
+    if is_ob_hard:
+        a "Sleep's a luxury. I don’t budget for luxuries."
+    elif is_mid:
+        a "Same as you. Work won."
+    else:
+        a "Nightmares. Figured numbers might be quieter than ghosts."
+
     # VISUAL: Aeron entering. Sitting nearby. Not too close. Giving space.
     a "Could ask you the same thing. You've been here all night?"
     n "Yes. Since 2100 hours. Six hours and 37 minutes of continuous work, attempting to solve a problem that remains unsolved. It's frustrating."
@@ -42,7 +54,14 @@ label act2_11_noelle_working_late:
     n "Frustration is a statistically rare emotional state for me. It occurs in approximately 3% of my work sessions, usually when a problem resists logical solution. This particular problem is exceptionally resistant."
 
     # VISUAL: Aeron curious. Leaning forward slightly. Interested.
-    a "What are you working on?"
+    # OB/EMP flavor: offer help
+    if is_ob_hard:
+        a "Put it up. I’ll spot the weak seam."
+    elif is_mid:
+        a "Show me the model; maybe I catch something."
+    else:
+        a "Show me. Maybe the way it *felt* inside the programming helps."
+
     n "A neural conditioning reversal algorithm. I'm attempting to undo Echelon's psychological programming. If successful, we could deprogram Banded soldiers and convert enemy combatants into resistance fighters. The recruitment increase would be exponential."
 
     # VISUAL: She pulls up displays. Shows complex neural patterns. Brain scans. Conditioning pathways.
@@ -59,10 +78,6 @@ label act2_11_noelle_working_late:
 
     # VISUAL: Aeron moving closer. Looking at displays. Trying to understand.
     a "Show me. Walk me through it. Maybe a fresh perspective helps."
-    n "You're not a data analyst. Your expertise is in tactical operations and—"
-    a "—and I was conditioned by Echelon. I lived through their programming. Maybe I can see something you can't, from an inside perspective."
-
-    # VISUAL: Noelle considering. Logic processing. Decides to try.
     n "...That's a valid point. Experiential knowledge versus theoretical analysis. Your input may provide the missing perspective. Very well."
 
     # VISUAL: She pulls up neural conditioning model. Explains. Complex but clear.
@@ -75,7 +90,14 @@ label act2_11_noelle_working_late:
     n "Yes. You experienced deep layer conditioning. But you broke it. You 'cracked,' as you call it. That's anomalous. Deep conditioning doesn't break spontaneously. Yet yours did. Why?"
 
     # VISUAL: Aeron thinking. Remembering. The child. The mercy. The crack.
-    a "The child. During the Sweep. I was ordered to terminate her. 600 targets. She was target 391. But she looked at me and I... couldn't. Something in me refused. Broke through the conditioning. I remembered I was human. Remembered choice."
+    a "The child. During the Sweep. I was ordered to terminate her. 600 targets. She was target 391. But she looked at me and I... couldn't."
+    # OB/EMP flavor: naming the fracture
+    if is_ob_hard:
+        a "(flat) One deviation. Enough to fracture the mask."
+    elif is_mid:
+        a "(quiet) One decision I couldn’t square with orders."
+    else:
+        a "(soft) One choice. It reminded me I was still a person."
     a "Giving her mercy broke Glass. Broke the conditioning. Let Aeron come back."
 
     # VISUAL: Noelle processing. Eyes widening. Recognition. BREAKTHROUGH.
@@ -91,10 +113,18 @@ label act2_11_noelle_working_late:
 
     # VISUAL: She turns to Aeron. Eyes bright. Excited. Rare genuine smile.
     n "You solved it. I spent 47 hours processing this problem, and you solved it in..."
-    
+
     # VISUAL: Checks time.
     n "...11 minutes. You casually solved a 47-hour problem in 11 minutes. That's statistically improbable. That's exceptional. That's..."
     n "That's fascinating."
+
+    # VISUAL: Aeron reaction flavor
+    if is_ob_hard:
+        a "You built the machine. I kicked the jam out."
+    elif is_mid:
+        a "Team effort. You did the lift; I nudged a hinge."
+    else:
+        a "You had the map. I just recognized the road I took out."
 
     # VISUAL: Looking at him differently. Not just ally. Not just resistance member. Something else.
     n "Your mind is fascinating. You approached the problem from an experiential angle I couldn't access. You provided a perspective I was lacking. You completed my incomplete analysis."
@@ -131,14 +161,13 @@ label act2_11_noelle_working_late:
 
     # VISUAL: Silence again. Both tired. Both comfortable. Strange intimacy in data talk.
     n "Your nightmares prevent sleep. Sleep deprivation degrades cognitive function. Cognitive degradation reduces your effectiveness. Your reduced effectiveness makes you less able to save people. So your guilt causes the very thing you're guilty about. It's a logical paradox."
-    a "Yeah. I know. Can't logic away guilt, though. Doesn't work like that."
-    n "That's unfortunate. Logic solves most problems. Emotions are inefficient variables—they resist optimization. But they're also what makes you... you. Your capacity for guilt means you have capacity for empathy. Empathy drove the mercy. Mercy broke the conditioning. The conditioning break enabled your defection. Your defection enabled the resistance. The resistance saves lives."
-    n "So your emotions, however inefficient, are strategically valuable. Your guilt is unpleasant for you to experience, but it makes you an effective moral agent. That's a net positive, even if it doesn't feel positive."
-
-    # VISUAL: Aeron processing. Noelle trying to make him feel better using data. It's working somehow.
-    a "You're trying to make me feel better. Using statistics."
-    n "Yes. Is it working?"
-    a "...Actually, yeah. A little bit. You're good at this."
+    # OB/EMP flavor on comfort landing
+    if is_ob_hard:
+        a "Yeah. I hear it. Enough to keep me operational."
+    elif is_mid:
+        a "Yeah. A little. I'll take it."
+    else:
+        a "Yeah. Actually helps. A little. You're good at this."
     n "That's an incorrect assessment. I'm terrible at emotional support—I have approximately a 12% competency rating in empathetic communication. But I'm trying. Because you're distressed. And your distress is unpleasant for me to observe."
     n "That's new. Normally I don't care about others' emotional states. They're irrelevant data. But yours isn't irrelevant. Yours affects me. I notice when you're distressed. I want to mitigate it. That's unusual."
 
@@ -178,7 +207,12 @@ label act2_11_noelle_working_late:
     n "I'm analyzing my own feelings like they're data because that's all I know how to do. But they resist analysis. They're not data. They're just... feelings. And I don't know what to do with that."
 
     # VISUAL: Aeron reaches out. Gently. Slowly. Touches her hand. Small contact. Testing.
-    a "You don't have to do anything with it. Just acknowledge it. Let it exist. See where it goes. No pressure. No timeline. No measurement required."
+    if is_ob_hard:
+        a "(low) Brief contact. Tell me if you want me to stop."
+    elif is_mid:
+        a "(gentle) Can I…?"
+    else:
+        a "(soft) I’m here. If touch helps, I’ve got you."
 
     # VISUAL: Noelle looking at his hand on hers. Processing. Touch. Physical contact. Elevated heart rate. Dopamine. Oxytocin. Data and feeling mixing.
     n "Physical contact elevates the responses. Heart rate is now 31% above baseline—that's a significant increase. But it's not unpleasant. It's... pleasant. Eighty-nine percent pleasant. Maybe 93%."
@@ -188,8 +222,14 @@ label act2_11_noelle_working_late:
     n "I should sleep. It's 0312 hours—suboptimal time to still be awake. But I don't want to stop this conversation. This interaction. This moment. Even though it's inefficient, even though it's not solving problems, I want to stay here. With you. That's an emotional decision, not a logical one. It's emotional."
     n "I'm making emotional decisions about you. That's new. That's significant. That's important to acknowledge."
 
-    # VISUAL: Aeron smiling. Small. Gentle. Not pushing. Just present.
-    a "Then stay. If you want. We can just sit here. No problem-solving. No analyzing. Just existing. Together. That's allowed."
+    # VISUAL: Aeron inviting her to stay (flavor)
+    if is_ob_hard:
+        a "We can hold position. No tasks. Just breathe."
+    elif is_mid:
+        a "We can just sit. No work. No targets."
+    else:
+        a "Stay. No solving, no measuring—just us for a minute."
+
     n "Existing without productivity. That's illogical. But... acceptable. In this specific context. With you. Ninety-one percent acceptable. Possibly 94%."
 
     # VISUAL: They sit together. Silence. Comfortable. Her hand still under his. Quiet moment. No words needed.
@@ -203,7 +243,14 @@ label act2_11_noelle_working_late:
     n "I should attempt sleep. Four hours remaining before the operational day begins. Suboptimal but necessary. You should also sleep. Your nightmares are manageable—22 people saved and counting. The math is shifting toward positive. Remember that."
     a "I'll try. And Noelle?"
     n "Yes?"
-    a "I'm in the 98th percentile for pleasant interaction? You're in the 100th percentile. Just so you know."
+
+    # VISUAL: Goodbye compliment variant
+    if is_ob_hard:
+        a "For the record—you're my max value case."
+    elif is_mid:
+        a "For what it’s worth, you’re top of my charts too."
+    else:
+        a "I'm in the 98th percentile for pleasant interaction? You're in the 100th percentile. Just so you know."
 
     # VISUAL: Noelle processing. Eyes widening. Small smile. Genuine. Rare. Beautiful.
     n "One hundredth percentile. That's the maximum rating. That's the optimal outcome. That's..."
@@ -211,12 +258,17 @@ label act2_11_noelle_working_late:
     n "Thank you for that data point. I'll process it. Extensively. Probably all night. But pleasantly. Ninety-seven percent pleasantly. Possibly 99%."
 
     # VISUAL: She leaves. Door closing. Aeron alone. But less alone. Connection made. Important. Real.
-    "{i}Alone in operations room. But not lonely. Noelle just shared something—vulnerability, feelings she doesn't understand. She analyzed them with me. Trusted me with her uncertainty. That matters. That's intimacy. Strange intellectual intimacy. But intimacy nonetheless.{/i}"
+    if is_ob_hard:
+        "{i}Alone in operations room. Connection acknowledged. Recalibrating, not surrendering.{/i}"
+    elif is_mid:
+        "{i}Alone in operations room. Connection noted. Feels… steadying.{/i}"
+    else:
+        "{i}Alone in operations room. Connection, fragile and warm, enough to dull the knives.{/i}"
 
     # VISUAL: Returning to quarters. Maybe sleep will come easier. Maybe nightmares quieter. Maybe.
     "{i}Returning to quarters. 0327 hours. Exhausted. But a different kind of exhausted. Connected exhausted. Noelle's trying to understand feelings. I'm trying to understand redemption. We're both uncertain. Both processing. Both learning. Maybe that's enough. Maybe that's everything. Maybe that's 97% pleasant. Possibly 99%.{/i}"
 
-    # Mark scene complete
+    # ---- STATE (leave as-is if you haven't migrated this scene yet) ----
     $ scenes["noelle_working_late"] = True
     $ characters["noelle"]["affection"] += 3
     $ characters["noelle"]["intellectual_intimacy"] = True
@@ -226,19 +278,3 @@ label act2_11_noelle_working_late:
     scene black with fade
 
     return
-
-    # canon_note: Scene 11 complete - Noelle intellectual intimacy established
-    # canon_note: Neural conditioning reversal algorithm breakthrough (Aeron's insight critical)
-    # canon_note: Noelle realizes she has feelings but can't quantify them ("no unit")
-    # canon_note: Describes physiological responses (heart rate, dopamine) like data
-    # canon_note: First physical contact (hand touch) - highly pleasant (89-93%)
-    # canon_note: Aeron rates 98th percentile pleasant interaction, she's 100th for him
-    # canon_note: She's processing feelings overnight (won't sleep, analyzing)
-    # canon_note: Foundation for "no unit" scene later (Scene 16 Act 2)
-    # canon_note: Intellectual attraction → emotional attraction pathway beginning
-    # canon_note: Algorithm success = major strategic win (can deprogram Echelon soldiers)
-    # canon_note: Aeron's guilt addressed through Noelle's logic (22 saved, math shifting positive)
-    # canon_note: Beautiful autism-coded representation - not robotic, genuinely struggling with emotions
-    # canon_note: "You don't bore me" = highest compliment Noelle can give
-    # canon_note: Sets up deeper romance development if player chooses that path
-    # canon_note: REVISED - Natural speech patterns, complete sentences, analytical but human

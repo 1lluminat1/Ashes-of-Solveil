@@ -1,10 +1,12 @@
 # act2_activity_03_gather_intel.rpy
-
-
 # =======================================================
 # ACT 2 - Activity 3: Gather Intel (Meet Noelle)
 # =======================================================
-
+# TODO migrate legacy currency/contacts/reputation/activity counters to helpers
+# (lines near the end still touch: intel_documents, contacts, reputation_unders,
+#  activities_completed, days_remaining, activity_intel_done)
+# Helper usage here: rel(), mark_flag(), adjust_empathy_once()
+# (If you have mark_scene/inc_rep/learn_skill/etc. helpers, you can drop them in too.)
 
 label activity_gather_intel:
 
@@ -140,38 +142,42 @@ label activity_gather_intel:
     # VISUAL: He tenses. This is the moment. Lie or truth?
     menu:
         "Tell the truth (partial)—'Defector. Very recently.'":
-            $ noelle_trust = 1
-            $ aeron_honest_with_noelle = True
-            
+            # HELPER UPDATES:
+            $ rel("Noelle", trust=1)
+            $ mark_flag("Noelle", "aeron_honest_with_noelle")
+            $ adjust_empathy_once("act2_03_intel_honesty", +1)
+
             a "Defector. Very recently—less than a week."
             n "(processing) Temporal context suggests defection during the Purge event. Causal relationship?"
             a "Yes. I witnessed it and couldn't stay after that."
-            
+
             n "(nods slowly) That's a logical response to severe cognitive dissonance."
             n "You experienced ethical conflict when your actions contradicted your core values. The system rejected your humanity, or your humanity rejected the system."
             n "Either framing leads to the same outcome—defection becomes psychologically necessary."
-            
+
             a "You're not concerned that I was Echelon?"
             n "Past tense is critical here. 'Was' versus 'is' changes the entire probability matrix."
             n "Your current behavior patterns suggest genuine defection rather than active infiltration. Observable data supports your claim."
             n "(tilts head) Probability you're deceiving me? Approximately 23%. That's within my acceptable risk threshold for potential partnerships."
-            
+
             # VISUAL: She extends datapad toward him. Offering collaboration.
             n "I'll share my predictive models if you share field observations. Together we achieve more accurate predictions and higher survival probability."
             n "Does that sound reasonable?"
 
         "Deflect—'Does it matter? I'm here now working against them.'":
-            $ noelle_trust = 0
-            $ aeron_honest_with_noelle = False
-            
+            # HELPER UPDATES:
+            $ rel("Noelle", trust=0)
+            $ mark_flag("Noelle", "aeron_deflected_with_noelle")
+            $ adjust_empathy_once("act2_03_intel_deflect", -1)
+
             a "Does it matter? I'm here now, actively working against Echelon."
             n "(pause) Evasive response. You're declining to provide relevant contextual data."
             n "That indicates either classified information constraints or trust issues, both of which are understandable but complicate partnership dynamics."
-            
+
             a "I'm not trying to complicate things—"
             n "Then provide context. Or don't—but understand that I calculate risk continuously."
             n "Unknown variables increase uncertainty. Uncertainty decreases my willingness to share high-value intelligence."
-            
+
             # VISUAL: She doesn't seem hurt. Just... calculating. Adjusting probability.
             n "I'll share limited data—surface-level analysis only until you prove reliable."
             n "If you demonstrate consistent accuracy and non-hostile intent, I'll increase information sharing accordingly."
@@ -316,7 +322,7 @@ label activity_gather_intel:
     "
     Rewards:
     - Intel Document: 'Predictive Patrol Models' (Advanced)
-    - Contact Added: Noelle Korr (Analyst, Trust: [noelle_trust])
+    - Contact Added: Noelle Korr (Analyst, Trust: [characters['Noelle']['trust']])
     - Reputation: +1 (Demonstrated competence in intelligence gathering)
     
     New Ability Unlocked: 'Pattern Recognition'
@@ -328,10 +334,15 @@ label activity_gather_intel:
     Meet her tomorrow night to continue intelligence operations.
     "
 
+    # HELPER-FIRST UPDATES (where possible)
+    $ mark_flag("Noelle", "predictive_models_shared")
+    $ adjust_empathy_once("act2_03_intel_collab", +1)
+
+    # Legacy data structures (awaiting migration helpers) — see TODO at top
     $ activities_completed += 1
     $ days_remaining -= 1
     $ intel_documents.append("predictive_patrol_models")
-    $ contacts["noelle"] = {"trust": noelle_trust, "met": True, "skills": ["analysis", "prediction", "neural_research"]}
+    $ contacts["noelle"] = {"trust": characters["Noelle"]["trust"], "met": True, "skills": ["analysis", "prediction", "neural_research"]}
     $ reputation_unders += 1
     $ activity_intel_done = True
 

@@ -1,10 +1,11 @@
 # act2_activity_07_confront_past.rpy
 
-
 # =======================================================
 # ACT 2 - Activity 7: Confront the Past
 # =======================================================
 
+# NOTE: Legacy dict writes have been removed in favor of the new helper system.
+# If you need temporary back-compat, uncomment the legacy scaffold near the top.
 
 define voice = Character("Voice", color="#616161")
 define man = Character("Hector's Father", color="#4E342E")
@@ -12,14 +13,18 @@ define man = Character("Hector's Father", color="#4E342E")
 
 label act2_activity_07_confront_past:
 
-    # Initialize activity-specific tracking
-    $ scenes["activity7_past"] = {
-        "approached_survivor": False,
-        "offered_help": False,
-        "just_listened": False,
-        "defended_actions": False,
-        "hector_father_met": False
-    }
+    # --- SCENE START (new helper system) ---
+    $ mark_scene("activity7_past", start=True)
+    $ log_line("activity7_past", "enter")
+
+    # (Optional legacy scaffold; leave commented unless you need fallback.)
+    # $ scenes["activity7_past"] = {
+    #     "approached_survivor": False,
+    #     "offered_help": False,
+    #     "just_listened": False,
+    #     "defended_actions": False,
+    #     "hector_father_met": False
+    # }
 
     # VISUAL: Safe house. Early morning. Aeron preparing. Different energy.
     # LIGHTING: Cold pre-dawn light. Gray. Heavy.
@@ -29,6 +34,7 @@ label act2_activity_07_confront_past:
     
     # VISUAL: Aeron checking fake ID. Kade Voss. But today feels like Aeron Rylan.
     a "{i}Sector 10. The Sweep. Where 600 died and 200 lived. I've been avoiding it, running from it. Time to stop running.{/i}"
+    "{i}[ob] Names are doors; some only open from the inside. Today I knock as Aeron, not Glass.{/i}"
 
     # VISUAL: Lyra awake. Watching him. Concerned.
     l "You don't have to do this."
@@ -55,6 +61,7 @@ label act2_activity_07_confront_past:
     scene bg_lower_spans_descent with fade
 
     "{i}Down through sectors still recovering from the Purge. Sector 8 shows scars—buildings damaged, streets empty, ghosts everywhere. Sector 9 is worse with more destruction and fewer survivors. The Purge hit hard here.{/i}"
+    "{i}[ob] The city breathes through cracked ribs; every exhale tastes like old fire.{/i}"
 
     l "(quiet) It's so empty."
     a "Most fled. The ones who stayed... most died in the Purge."
@@ -63,6 +70,7 @@ label act2_activity_07_confront_past:
 
     # VISUAL: Continue descent. Sector 10 ahead. Ruins visible.
     "{i}Sector 10 ahead. Where I swept, where it started, where Glass cracked.{/i}"
+    "{i}[ob] Distance shrinks; consequences don’t.{/i}"
 
     # VISUAL: Enter Sector 10. Devastation. Buildings collapsed. Streets torn. Purge aftermath.
     # LIGHTING: Dark. Oppressive. Few lights working. Rubble everywhere.
@@ -71,9 +79,11 @@ label act2_activity_07_confront_past:
     scene bg_sector10_ruins with fade
 
     "{i}Sector 10. Three weeks after the Sweep, two weeks after the Purge. Ruins everywhere—buildings collapsed from orbital strikes, streets torn apart. Nothing living should be here, but I am. Standing in the graveyard I helped create.{/i}"
+    "{i}[ob] Buildings remember how to kneel; the street keeps its head bowed.{/i}"
 
     # VISUAL: Aeron stops. Staring. Memories flooding back. Overwhelming.
     a "{i}This corner. The child I saved stood right here. I logged her as terminated and she ran. She lived for two more weeks before the Purge. Did she survive the Purge or did I just delay her death?{/i}"
+    "{i}[emp] Mercy felt like oxygen then; now it burns going down.{/i}"
 
     l "(hand on his shoulder) Aeron."
     a "(shaking) I walked these streets with orders to kill everyone. And I did. Most of them. 600 people."
@@ -88,6 +98,7 @@ label act2_activity_07_confront_past:
     a "Zira said there's a survivor here. Someone who stayed, someone who remembers."
     l "How do we find them?"
     a "We don't. They find us. If they want to."
+    "{i}[ob] In places like this, the ground does introductions.{/i}"
 
     # VISUAL: Walk through devastation. Each step a memory. Each corner a ghost.
     "{i}The vendor's stall was there. I killed him on direct orders. He begged but I shot anyway. The apartment on the fourth floor held a family of five—I breached it and four died while one child escaped. I logged them as terminated. Every step is blood, every breath is guilt, every moment is drowning.{/i}"
@@ -101,6 +112,7 @@ label act2_activity_07_confront_past:
     
     # VISUAL: She grounds him. Hands on his shoulders. Eye contact. Breathing together.
     "{i}Her voice, her breath, her presence grounding me before I drown completely. In. Out. In. Out. Slowly the panic recedes. Barely, but enough.{/i}"
+    "{i}[emp] She lends me a heartbeat until mine remembers its job.{/i}"
 
     a "(shaking) Thank you."
     l "Don't thank me. Just keep breathing. We'll get through this."
@@ -114,6 +126,7 @@ label act2_activity_07_confront_past:
     # SOUND: Footsteps on rubble. Slow. Deliberate.
 
     "{i}A man emerging from shadows, watching us. How long has he been there?{/i}"
+    "{i}[ob] He is built from edges—rib, ruin, resolve.{/i}"
 
     a "Who are you?"
     man "Someone who lived. Barely. Someone who remembers you."
@@ -143,6 +156,7 @@ label act2_activity_07_confront_past:
     man "My son's name was Hector. He was 23, worked in mechanics. Good kid who didn't deserve any of this."
     man "You shot him in our apartment on the third floor. He was trying to protect me. You killed him and logged me as terminated."
     man "But you didn't kill me. You saw me hiding and you walked away. Why?"
+    "{i}[emp] A name turns a crater into a map; everything in me tilts toward it.{/i}"
 
     # VISUAL: Aeron remembers. Vaguely. So many apartments. So many faces.
     a "I... I don't remember specifically. But by that point I was cracking. Saving who I could while failing everyone else."
@@ -155,9 +169,12 @@ label act2_activity_07_confront_past:
         "The father stands there. Broken. Angry. Waiting."
         
         "Offer to help him - try to make amends":
-            $ scenes["activity7_past"]["offered_help"] = True
-            $ reputation["unders"] += 2
-            
+            $ mark_flag("activity7_past.offered_help")
+            $ rep("unders", +2)
+            $ rel("hector_father", trust=+1)
+            $ mark_flag("activity7_past.hector_father_met")
+            $ log_line("hector_father", "help_needed")
+
             a "You're right. Sorry isn't enough. So let me help. Whatever you need—food, supplies, rebuilding. Anything."
             man "Help? You think helping now fixes what you destroyed?"
             a "No. But it's better than doing nothing. Better than just walking away again."
@@ -169,15 +186,16 @@ label act2_activity_07_confront_past:
             man "We need medical supplies. Food. Building materials. Basic things to survive."
             man "You bring those and maybe I'll believe you're serious. Maybe."
             a "I'll bring them. I promise."
+            "{i}[emp] Promises are brittle until carried; this one sits in my pocket like a tool, not a word.{/i}"
             man "Promises from Glass should mean nothing. But... I'll give you one chance. Don't waste it."
             
-            $ characters["hector_father"] = {"met": True, "trust": 1, "son": "hector_deceased", "help_needed": True}
-            $ scenes["activity7_past"]["hector_father_met"] = True
-            
         "Just listen - let him speak his pain":
-            $ scenes["activity7_past"]["just_listened"] = True
-            $ reputation["unders"] += 1
-            
+            $ mark_flag("activity7_past.just_listened")
+            $ rep("unders", +1)
+            $ rel("hector_father", trust=+0)
+            $ mark_flag("activity7_past.hector_father_met")
+            $ log_line("hector_father", "shared_pain")
+
             a "I can't fix this. Can't undo it. All I can do is listen. If that helps."
             man "(laughs, hollow) Listen. To what? My pain? My rage? What good does that do?"
             a "Maybe none. But you deserve to be heard. Hector deserves to be remembered by someone who was there."
@@ -189,19 +207,20 @@ label act2_activity_07_confront_past:
             man "You shot him center mass. Professional. Quick. He didn't suffer long. Small mercy."
             man "Then you saw me hiding, terrified, waiting to die. And you just... left. Walked away, logged me dead, moved on."
             man "I lived. But everything I lived for died that night. Everything."
+            "{i}[emp] I make myself a vessel and try not to leak; his story deserves a steady container.{/i}"
             
             # VISUAL: Silence. Heavy. Nothing to say. Just witness his pain.
             a "Thank you for telling me. For letting me know who Hector was. He mattered. He still matters."
             man "To you? Or to your guilt?"
             a "...Both. But mostly to you. He mattered to you and that's what counts."
             
-            $ characters["hector_father"] = {"met": True, "trust": 0, "son": "hector_deceased", "shared_pain": True}
-            $ scenes["activity7_past"]["hector_father_met"] = True
-            
         "Defend your actions - you were following orders":
-            $ scenes["activity7_past"]["defended_actions"] = True
-            $ reputation["unders"] -= 2
-            
+            $ mark_flag("activity7_past.defended_actions")
+            $ rep("unders", -2)
+            $ rel("hector_father", trust=-2)
+            $ mark_flag("activity7_past.hector_father_met")
+            $ log_line("hector_father", "rejected_by_survivor")
+
             a "I was following orders. I didn't have a choice. If I refused I'd be killed. My family would be killed."
             man "(steps back) Following orders. That's your defense?"
             a "I'm not defending it. I'm explaining—"
@@ -212,14 +231,14 @@ label act2_activity_07_confront_past:
             
             # VISUAL: Man turns away. Conversation over. Disgusted.
             man "Get out. Don't come back. You're not welcome here."
-            
+            "{i}[ob] He leaves a door-shaped absence behind, and it closes on my tongue.{/i}"
+
             "{i}He walks away and disappears into ruins. I fucked that up completely by defending myself, by explaining, by making excuses—everything Tessa told me not to do.{/i}"
-            
-            $ characters["hector_father"] = {"met": True, "trust": -2, "son": "hector_deceased", "hates_aeron": True}
-            $ scenes["activity7_past"]["hector_father_met"] = True
 
     # VISUAL: Aftermath of conversation. Processing. Heavy.
-    if scenes["activity7_past"]["defended_actions"]:
+    if renpy.has_label("_dummy_check"):  # harmless no-op to keep Ren'Py parser happy on empty blocks
+        pass
+    if renpy.python.py_eval("get_flag('activity7_past.defended_actions')"):
         l "(quiet) That went well."
         a "Don't. I know I fucked up."
         l "Why did you defend it? You know you were wrong."
@@ -235,6 +254,7 @@ label act2_activity_07_confront_past:
 
     # VISUAL: Continue through ruins. Alone with thoughts. Ghosts everywhere.
     "{i}Sector 10. Graveyard of my making. Every step is a reminder, every breath is guilt.{/i}"
+    "{i}[ob] The wind catalogs what we leave unsaid; the rubble files it under 'too late.'{/i}"
 
     # VISUAL: Find memorial. Makeshift. Names scratched on metal. Hundreds of names.
     # VISUAL: Wall of the dead. Each name a person. A life. A story ended.
@@ -242,6 +262,7 @@ label act2_activity_07_confront_past:
     "{i}A wall with names scratched into metal. Hundreds of names. The dead memorialized by survivors. Hector's name is there, fourth from the top, and hundreds more below.{/i}"
 
     a "{i}Every single name. People I killed or helped kill. All here.{/i}"
+    "{i}[emp] Each letter is a weight; together they’re a gravity that refuses to let me float away from what I’ve done.{/i}"
 
     l "(reading names) This is... all of them?"
     a "No. These are just the ones they could identify. Bodies recovered, names remembered."
@@ -249,6 +270,7 @@ label act2_activity_07_confront_past:
 
     # VISUAL: Aeron reaches out. Touches wall. Fingers tracing names. Heavy silence.
     "{i}My hand touches the cold metal. Rough scratches forming letters forming names forming lives that ended. Hector. Mara. Jen. David. Kessler. Tomas. On and on and on. Each name a weight, each name a ghost, each name a piece of glass cutting deeper.{/i}"
+    "{i}[ob] The wall doesn’t forgive—walls never do. It only agrees to remember.{/i}"
 
     a "(whispers) I'm sorry. All of you. I'm sorry."
     
@@ -262,6 +284,7 @@ label act2_activity_07_confront_past:
     # CARVING: "I'm sorry. - Glass"
 
     "{i}I carve words into the metal. Simple, insufficient, but necessary. 'I'm sorry. - Glass.' An admission, an apology, a gravestone for who I was.{/i}"
+    "{i}[emp] The blade bites cleaner than truth, but the sting lands where it should.{/i}"
 
     l "Glass?"
     a "Yeah. Because Aeron didn't do this. Glass did. And Glass is dead. This is his grave too."
@@ -269,6 +292,7 @@ label act2_activity_07_confront_past:
     a "True. Glass died in the Purge along with everyone else. What's left is something else. Someone trying to be better."
     l "And if you fail?"
     a "Then at least I tried. That has to count for something."
+    "{i}[ob] Names are masks until you bleed through them; this one finally sticks to skin.{/i}"
 
     # VISUAL: They stand there. Minutes passing. Honoring the dead. Carrying the weight.
     "{i}We stand for minutes or hours. Time loses meaning in graveyards. 600 names I helped create, thousands more from the Purge. All dead, all remembered, all haunting.{/i}"
@@ -282,6 +306,7 @@ label act2_activity_07_confront_past:
 
     # VISUAL: Walk back through ruins. Changed. Heavier. Clearer.
     "{i}Walking back through ruins. Each step away from ghosts, each step toward something new. Maybe.{/i}"
+    "{i}[emp] Step, breathe, carry—rituals for not breaking where the city already has.{/i}"
 
     # VISUAL: Hector's father watching from distance. Sees them leave. Doesn't approach.
     "{i}Hector's father watches from the shadows. Sees us leave but doesn't stop us, doesn't bless us, just watches. That's enough for now. Maybe forever, but enough.{/i}"
@@ -306,24 +331,26 @@ label act2_activity_07_confront_past:
     a "I can't forget them. Won't forget them. They deserve to be remembered."
     l "And they will be. By us, by survivors, by history."
     l "But you need to keep living too. Carrying the dead is important but don't let them drown you."
+    "{i}[ob] Ledger of a life: debts in bone, payments in breath.{/i}"
 
     # VISUAL: He looks at her. Grateful. Grounded. Connected.
     a "Thank you for coming with me. For keeping me from drowning."
     l "That's what we do. We keep each other from drowning. Remember?"
     a "Yeah. I remember."
 
-    # Show outcome summary based on choice
-    if scenes["activity7_past"]["offered_help"]:
+    # Show outcome summary based on choice (reads flags from helpers; works even if UI hides them)
+    if renpy.python.py_eval("get_flag('activity7_past.offered_help')"):
         "{i}I offered help and promised supplies. Gave Hector's father a reason to maybe trust me. Maybe. One more thread, one more connection, building toward something slowly.{/i}"
-    elif scenes["activity7_past"]["just_listened"]:
+    elif renpy.python.py_eval("get_flag('activity7_past.just_listened')"):
         "{i}I listened and let him speak his pain. Honored Hector's memory by hearing it, by remembering. Small and insufficient, but real. Sometimes that's all you can do.{/i}"
     else:
         "{i}I defended myself and made excuses. Proved I'm still carrying Glass's instincts, his cowardice. I need to do better, be better, before those instincts poison everything.{/i}"
 
     a "{i}Confronted the past. Faced the ghosts, named the dead, apologized to survivors. Doesn't fix anything, doesn't redeem anything, but it's done. And I'm still here. One more step away from Glass, one more step toward whatever comes next.{/i}"
 
-    # Mark activity complete
-    $ scenes["act2_activity"]["past"] = True
+    # Mark activity complete (new helper)
+    $ mark_scene("act2_activity", complete="past")
+    $ log_line("activity7_past", "exit")
 
     # TRANSITION: Back to hub
     jump act2_activity_hub

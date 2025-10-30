@@ -16,6 +16,9 @@ label act2_temp_base:
 
     "{i}Temp shelter. Selene called it temporary and she meant it. Basement of a half-collapsed building in Sector 6. Cramped, dark, smells like mold and desperation. Walls cracked. Water dripping. This isn't a base. This is a hole to hide in until Echelon finds us.{/i}"
 
+    # [EMP/OB FLAVOR - additive]
+    "{i}{ob}Load-bearing cracks step at irregular intervals; dust plumes on each rumble.{/ob} {emp}Everyone sits too straight—hypervigilance eating the slouch from spines.{/emp}{/i}"
+
     # VISUAL: Resistance fighters gathered. 12 total. Shell-shocked. Exhausted. Traumatized.
     # Mix of ages. All looking at Selene. Waiting for leadership. For hope. For anything.
 
@@ -74,6 +77,9 @@ label act2_temp_base:
 
     # VISUAL: Aeron watching. Impressed. She's good. Turning despair into determination.
     a "{i}She's good at this. Leadership. Taking a disaster and making it sound like opportunity. I can see why 847 people followed her. Why they died for her.{/i}"
+
+    # [EMP/OB FLAVOR - additive]
+    "{i}{emp}Her voice threads grief through steel; the room catches it, breath by breath.{/emp}{/i}"
 
     # VISUAL: Lyra beside him. Watching. Processing. Both newcomers to this.
     l "(whisper) Do you think we can? Rebuild from this?"
@@ -211,24 +217,61 @@ label act2_temp_base:
     # VISUAL: Moving together. Into the city. Into the search. Into the future.
     "{i}Into the Unders. Looking for home. Looking for hope. Looking for the place that becomes ours. Day one of rebuilding. Everything starts here. Everything changes here. Find the right place and we have foundation. Find the wrong place and we die slowly. No pressure. Just everything.{/i}"
 
-    # Mark scene complete
-    $ scenes["temp_base_briefing"] = True
-    $ canon["resistance_scale_known"] = True  # Player now knows how devastating Purge was
-    $ characters["zira"]["officially_joined"] = True  # Zira now active resistance member
+    # ---------------------------
+    # NEW HELPER STATE UPDATES
+    # ---------------------------
+    # Converted from:
+    #   $ scenes["temp_base_briefing"] = True
+    #   $ canon["resistance_scale_known"] = True
+    #   $ characters["zira"]["officially_joined"] = True
 
-    # Transition to scouting scene
+    $ mark_scene("temp_base_briefing")
+    $ mark_flag("resistance_scale_known", True)
+    $ mark_flag("zira.officially_joined", True)
 
-    # canon_note: Scene 8 complete - state of resistance revealed, devastating losses
-    # canon_note: Selene's cell: 847 fighters before Purge, 12 survivors after
-    # canon_note: Five major bases destroyed or compromised, all infrastructure gone
-    # canon_note: Command structure eliminated, only Selene remains of leadership
-    # canon_note: Resources minimal: 18 pistols, 4 rifles, low ammo, one week supplies
-    # canon_note: Temp shelter: 48 hours maximum before discovery or collapse
-    # canon_note: Zira officially joins resistance (because of Aeron, Kai proxy motivation)
-    # canon_note: Brings supplies: 3 days food, medical, ammunition (stolen from Echelon)
-    # canon_note: Aeron volunteers to scout base locations, Zira accompanies
-    # canon_note: Selene's charge: "Find us something worth fighting for"
-    # canon_note: Sets up Scene 9: Scouting (Zira emotional beat, five locations, kiss scene)
-    # canon_note: Theme: Rebuilding from ruins, started with 5 once before, starting with 12 now
+    # Optional rel/log breadcrumbs (additive; safe to remove if you prefer clean logs)
+    $ log_line("briefing", "Selene: 847→12; inventory famine; 48h cap; rebuild mandate.")
+    $ log_line("pledge",   "Aeron+Zira will scout five base candidates.")
+    $ log_line("theme",    "Home as center; plan small-start/big-scale.")
+
+    # ---------------------------
+    # OB/EMP ANALYSIS SNAPSHOT — Aeron
+    # ---------------------------
+    # Baseline: facing loss → task orientation (OB +2), maintains attunement to group grief (EMP +2).
+    # Modifiers from Meeting Selene outcomes if present:
+    # - broke_promise → EMP −1
+    # - showed_coldness → EMP −1
+    # - casualties == 0 → OB +1 (confidence/clarity bump)
+    # - casualties > 3 → EMP +1 (guilt-heightened empathy)
+    #
+    # NOTE: This reads from scenes["meeting_selene"] if available in memory.
+    # TODO: If your helper stores crises under a different key, adjust lookups accordingly.
+
+    $ _emp_delta = +2
+    $ _ob_delta  = +2
+
+    if scenes.get("meeting_selene", {}).get("broke_promise"):
+        $ _emp_delta -= 1
+    if scenes.get("meeting_selene", {}).get("showed_coldness"):
+        $ _emp_delta -= 1
+    if scenes.get("meeting_selene", {}).get("casualties", 0) == 0:
+        $ _ob_delta += 1
+    elif scenes.get("meeting_selene", {}).get("casualties", 0) > 3:
+        $ _emp_delta += 1
+
+    $ set_emp("aeron", _emp_delta)
+    $ set_ob("aeron",  _ob_delta)
+    $ snapshot_state("aeron",
+        context="temp_base_briefing",
+        emp_delta=_emp_delta,
+        ob_delta=_ob_delta,
+        note="Moves from survivor-guilt rumination to logistics-forward; holds space for group grief; reframes goal as ‘find home’."
+    )
+
+    # ---------------------------
+    # LEGACY→HELPER MAPPING NOTES
+    # ---------------------------
+    # TODO: If you need per-faction reputation deltas here, confirm target entities and I’ll add:
+    #   rel("resistance", rep=+N) / rel("unders", rep=+N) / rel("selene", trust=+N), etc.
 
     return

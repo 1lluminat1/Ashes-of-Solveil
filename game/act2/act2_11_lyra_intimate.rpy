@@ -1,14 +1,20 @@
 # act2_lyra_intimate.rpy
-
-
 # =======================================================
 # ACT 2 - Lyra Intimate Scene
+# Helpers-only: no raw dict writes; flags via mark_flag(); 
+# romance via unlock_romance(); relationship via rel();
+# activities completion via check_scene_flag().
 # =======================================================
+
+# Alias so either label name works
+label act2_lyra_intimate_scene:
+    jump act2_lyra_intimate
+
 
 label act2_lyra_intimate:
     
-    # Mark scene as started
-    $ characters["lyra"]["lewd_scene_unlocked"] = True
+    # Mark scene as started/unlocked (flagged, not raw dict)
+    $ mark_flag("Lyra", "lewd_scene_unlocked")
     
     # VISUAL: Safe house. Evening deepening into night. Just them.
     # LIGHTING: Single dim light. Shadows soft. Intimate.
@@ -30,7 +36,7 @@ label act2_lyra_intimate:
     a "Me too."
     l "I felt... safe. For the first time since all of this started. Maybe the first time ever."
     a "Even while everything was falling apart?"
-    l "Especially then. Because you were there. Because I wasn't alone in the breaking."
+    l "Especially then. Because you were there. Because I wasn't breaking alone."
     
     # VISUAL: She turns toward him. Eye contact. Vulnerable. Open.
     l "I don't want to be alone tonight. Not in my head. Not with the nightmares. Not with... everything."
@@ -72,10 +78,10 @@ label act2_lyra_intimate:
     a "And I see you. Not the perfect soldier. Not Echelon's proof. Just Lyra. Broken and beautiful and real."
     
     # VISUAL: Moment stretches. Everything slows. Choice approaching.
-    "{i}The space between us shrinks. Inches. Then less. Her eyes asking permission. Mine giving it.{/i}"
+    a "{i}The space between us shrinks. Inches. Then less. Her eyes asking permission. Mine giving it.{/i}"
     
     # VISUAL: Kiss. Gentle at first. Testing. Then deeper. Need pouring through.
-    "{i}Lips meet. Soft. Tentative. Then certain. Her hand in my hair. Mine on her waist. Everything else falling away. Just this. Just us. Just now.{/i}"
+    a "{i}Lips meet. Soft. Tentative. Then certain. Her hand in my hair. Mine on her waist. Everything else falling away. Just this. Just us. Just now.{/i}"
     
     # VISUAL: They break apart. Breathing hard. Foreheads touching. Grounding.
     l "(breathless) That was..."
@@ -91,7 +97,7 @@ label act2_lyra_intimate:
     a "Then let's feel human together."
     
     # VISUAL: Second kiss. Deeper. More urgent. Hands exploring. Not frantic. Purposeful.
-    "{i}We kiss again. Deeper now. Hands moving. Hers sliding under my shirt. Mine tracing her spine. Not desperate. Not rushed. Savoring. Learning. Discovering.{/i}"
+    a "{i}We kiss again. Deeper now. Hands moving. Hers sliding under my shirt. Mine tracing her spine. Not desperate. Not rushed. Savoring. Learning. Discovering.{/i}"
     
     l "(between kisses) Bed. Should we...?"
     a "Yeah. More comfortable."
@@ -200,11 +206,10 @@ label act2_lyra_intimate:
     # VISUAL: Getting dressed. Casual intimacy. No shame. No awkwardness.
     "{i}We dress. No rush. No shame. Casual touches. Small smiles. Everything different now. Better different.{/i}"
     
-    # Update relationship status
-    $ characters["lyra"]["lewd_scene_completed"] = True
-    $ characters["lyra"]["romance_path"] = True
-    $ characters["lyra"]["trust"] += 1
-    $ characters["lyra"]["affection"] += 2
+    # Update relationship status via helpers only
+    $ mark_flag("Lyra", "lewd_scene_completed")
+    $ unlock_romance("Lyra")
+    $ rel("Lyra", trust=1, affection=2)
     
     l "Thank you. For last night. For this morning. For all of it."
     a "Thank you for trusting me. For seeing me. For being here."
@@ -214,9 +219,11 @@ label act2_lyra_intimate:
     # VISUAL: One more kiss. Then back to reality. Changed but stronger.
     "{i}One more kiss. Then reality returns. But we're different now. Connected deeper. Stronger together. Ready for whatever comes next.{/i}"
     
-    # Check if all activities complete
-    $ activities_done = scenes["act2_activity"]["work"] and scenes["act2_activity"]["weapons"] and scenes["act2_activity"]["intel"] and scenes["act2_activity"]["medical"] and scenes["act2_activity"]["reputation"] and scenes["act2_activity"]["skills"] and scenes["act2_activity"]["past"]
-    
+    # Check if all activities complete (helpers-only, via scene_flags)
+    python:
+        tasks = ["work","weapons","intel","medical","reputation","survival","past"]
+        activities_done = all(check_scene_flag("act2_activity", f"{t}_done") for t in tasks)
+
     if activities_done:
         "{i}Seven days. Seven tasks. All complete. And now this. Time to see if Selene responds.{/i}"
         jump act2_06_the_message

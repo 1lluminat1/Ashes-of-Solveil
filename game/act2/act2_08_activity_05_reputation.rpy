@@ -1,10 +1,12 @@
 # act2_activity_05_reputation.rpy
 
+# TODO migrate legacy contacts/reputation/currency vars to new system (contacts[], reputation_unders, etc.)
+# Uses helpers-only where available: mark_scene(), adjust_empathy_once(), get_empathy_band()
+# Adds light EMP/OB flavor beats without trimming original text.
 
 # =======================================================
 # ACT 2 - Activity 5: Earn Reputation
 # =======================================================
-
 
 define vendor = Character("Vendor", color="#8D6E63")
 define elder = Character("Elder Woman", color="#A1887F")
@@ -14,8 +16,10 @@ define kellan = Character("Kellan", color="#5D4037")
 define woman = Character("Sweep Survivor", color="#6A1B9A")
 define lira = Character("Lira", color="#F06292")
 
-
 label act2_activity_05_earn_reputation:
+
+    # Scene mark
+    $ mark_scene("act2_activity_05_reputation", "started")
 
     # VISUAL: Safe house. Morning. Aeron preparing to go out.
     # LIGHTING: Gray dawn through window. Cold but hopeful.
@@ -40,6 +44,14 @@ label act2_activity_05_earn_reputation:
     l "I mean it. You go out there trying to save everyone and you'll end up dead in an alley."
     l "Small steps. One person at a time. Like Zira said."
     a "One person at a time. Right."
+
+    # Optional EMP/OB flavor: pre-departure mindset
+    if get_empathy_band() != "obedience":
+        a "{i}One person at a time. Names, not numbers.{/i}"
+        $ adjust_empathy_once("act2_rep_pre_departure_emp", +1)
+    else:
+        a "{i}Small wins compound. Optimize for visible outcomes.{/i}"
+        $ adjust_empathy_once("act2_rep_pre_departure_ob", -1)
 
     # TRANSITION: Out into the Unders. Morning market. People moving. Life happening.
     # VISUAL: Lower Spans market district. Vendors setting up. Crowds thin but growing.
@@ -67,6 +79,7 @@ label act2_activity_05_earn_reputation:
         "The old woman struggles. No one helps. Everyone's too busy surviving."
         
         "Approach and help":
+            # TODO migrate reputation_unders to helper
             $ reputation_unders += 1
             $ helped_elder = True
             
@@ -192,6 +205,7 @@ label act2_activity_05_earn_reputation:
             "{i}Saved his life. One person. That's one more than Glass would have saved.{/i}"
             "{i}One more name for Tessa's count. If I can keep him alive.{/i}"
             
+            # TODO migrate contacts to helper
             $ contacts["dren"] = {"trust": 2, "debt": "vouched_for", "met": True}
             
         "Walk away - not your fight":
@@ -258,9 +272,18 @@ label act2_activity_05_earn_reputation:
     "{i}One more name. Kara. Saved. Alive.{/i}"
     "{i}That's two. Dren and Kara. Two names for Tessa.{/i}"
 
+    # TODO migrate reputation/contacts to helpers
     $ reputation_unders += 3
     $ saved_child = True
     $ contacts["lira"] = {"trust": 5, "gratitude": "infinite", "met": True, "child": "kara"}
+
+    # Optional EMP/OB flavor: the save
+    if get_empathy_band() != "obedience":
+        a "{i}Hands still shaking. Relief tastes like rain after fire.{/i}"
+        $ adjust_empathy_once("act2_rep_child_save_emp", +1)
+    else:
+        a "{i}Response time acceptable. Outcome optimal. Log and move.{/i}"
+        $ adjust_empathy_once("act2_rep_child_save_ob", -1)
 
     # VISUAL: Market continuing. But people are looking at Aeron differently now.
     # Whispers. Nods. Small acknowledgments.
@@ -285,6 +308,7 @@ label act2_activity_05_earn_reputation:
     # VISUAL: He leaves. Another contact. Another thread.
     "{i}Another offer. Another connection. Reputation building thread by thread.{/i}"
 
+    # TODO migrate contacts to helper
     $ contacts["kellan"] = {"trust": 1, "job_offer": True, "met": True, "work": "deliveries"}
 
     # VISUAL: Aeron continues. One more encounter. Final test.
@@ -346,6 +370,7 @@ label act2_activity_05_earn_reputation:
             "{i}She doesn't forgive me. Doesn't have to. But she didn't call for my head either.{/i}"
             "{i}That's something. Maybe enough to build on. One day.{/i}"
             
+            # TODO migrate contacts to helper
             $ contacts["sweep_survivor"] = {"trust": 0, "trauma": "husband_killed", "met": True, "saved": True}
             
         "Avoid her - not ready":
@@ -388,6 +413,14 @@ label act2_activity_05_earn_reputation:
     l "You did good today."
     a "I did something. Good is... subjective."
     l "Take the win, Aeron. You earned it."
+
+    # Optional EMP/OB flavor: debrief tone
+    if get_empathy_band() != "obedience":
+        a "{i}Tessa was right. Count the living.{/i}"
+        $ adjust_empathy_once("act2_rep_debrief_emp", +1)
+    else:
+        a "{i}Three confirmed positives. Iterate tomorrow.{/i}"
+        $ adjust_empathy_once("act2_rep_debrief_ob", -1)
     
     # VISUAL: He nods. Small. Accepting it. For now.
     a "{i}One day. Three lives. Multiple connections.{/i}"
@@ -401,6 +434,9 @@ label act2_activity_05_earn_reputation:
     else:
         "{i}Small progress. Barely noticeable. But progress nonetheless.{/i}"
         "{i}One day at a time. One person at a time. Until reputation becomes reality.{/i}"
+
+    # Mark completion
+    $ mark_scene("act2_activity_05_reputation", "completed")
 
     # TRANSITION: Back to hub
     jump act2_activity_hub
@@ -419,4 +455,3 @@ label act2_activity_05_earn_reputation:
     # canon_note: Enemy made: debt collector remembers Aeron (future consequence)
     # canon_note: One week deadline for Dren's debt - subplot introduced
 
-    jump act2_activity_hub

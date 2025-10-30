@@ -1,19 +1,22 @@
 # act2_02_reality_check.rpy
-
-
 # =======================================================
 # ACT 2 - Scene 2: The Unders - Reality Check
+# OB/EMP integrated; Consolidated State Architecture hooks
 # =======================================================
 
-
 label act2_reality_check:
+
+    # --- SCENE INIT / SNAPSHOT (dialogue-heavy; low counters) ---
+    $ start_operation("op202_reality_check", note="Safehouse briefing & new identities")
+    $ mark_scene("act2_02_reality_check", "started")
+    $ log_line("ACT2_02 started: Reality Check in Zira safehouse")
 
     # VISUAL: Zira's safe house. Evening. Dim light. Small, cramped, functional.
     # LIGHTING: Single overhead bulb. Shadows deep. Industrial glow through window.
     # SOUND: City hum below; distant machinery; their breathing; exhaustion.
 
     "{i}That Evening.{/i}"
-    
+
     # VISUAL: Aeron and Lyra sitting against wall. Hours passed. Exhausted. Processing.
     # Small space. Concrete walls. One window (barred). Door (locked from inside).
 
@@ -24,6 +27,11 @@ label act2_reality_check:
     # VISUAL: Aeron staring at nothing. Lyra checking her Band compulsively.
     # Both doing their coping mechanisms. Both barely holding together.
 
+    if get_empathy_band() == "obedience":
+        "{i}He catalogs exits, angles, and timings; feelings are noise to be filtered.{/i}"
+    else:
+        "{i}He keeps counting breaths until the room stops spinning.{/i}"
+
     a "{i}Seven hours since we left Aeries. Feels like seven years.{/i}"
     a "{i}Everything we had—gone. Everything we were—ash.{/i}"
     a "{i}And now we're here. Waiting for someone to decide if we live.{/i}"
@@ -32,10 +40,16 @@ label act2_reality_check:
     "{i}Her hand moves. Wrist. Band. Checking. Always checking.{/i}"
     "{i}Even here. Even now. Terrified it'll stop working.{/i}"
 
+    # (Lyra has seen Aeron’s alignment up close; she reads his tone accurately.)
     l "(quiet) Do you think she's coming back?"
     a "Zira? Yeah. She said she would."
     l "People say a lot of things."
-    a "She saved us. Twice. Why save us just to abandon us?"
+    if pass_tier("OB2","OB3"):
+        a "She saved us twice. Pattern holds until it doesn’t."
+    else:
+        a "She saved us. Twice. Why save us just to abandon us?"
+        $ adjust_empathy_once("act2_02_trust_in_others", +1)
+
     l "(hollow laugh) Why do anything? Nothing makes sense anymore."
 
     # VISUAL: Silence. Both staring at nothing. Trauma settling. Reality crushing.
@@ -62,6 +76,9 @@ label act2_reality_check:
     a "{i}No weapons. No intel. No allies. No future.{/i}"
     a "{i}Just two broken people in a concrete box.{/i}"
 
+    # Empathy nudge on honest vulnerability (once)
+    $ adjust_empathy_once("act2_02_name_the_void", +1)
+
     # SOUND: Door lock clicking. Beeps. Opening.
     # VISUAL: Both tense. Hands move toward weapons (they don't have).
 
@@ -72,12 +89,22 @@ label act2_reality_check:
     # LIGHTING: Hallway light spills in, then cuts off. Dim bulb only source again.
 
     z "Still alive. Good. That's progress."
+    if char_flag_has("Zira", "contacted_in_scene1"):
+        z "(glances at Aeron) And this time you didn’t ping me three times in a row. Growth."
+    else:
+        z "(side-eye at their clothes) You two still look like a cautionary poster."
 
     # VISUAL: She drops supplies on floor. Food, water, clothes, basic necessities.
     # SOUND: Packages hitting concrete. Rustling. Reality of survival.
 
     z "Clothes. Food. Water. Fake IDs. Enough to last a few days."
     z "After that, you're on your own."
+
+    # Inventory / state updates for supplies & disguises
+    $ add_item("supplies", "food", 2)
+    $ add_item("supplies", "water", 2)
+    $ grant_disguise("unders")  # normalized set name
+    $ mark_scene("act2_02_reality_check", "zira_supplied_kits")
 
     l "Fake IDs?"
     z "You think you can walk around as yourselves?"
@@ -87,6 +114,10 @@ label act2_reality_check:
     a "How big?"
     z "50,000 credits. Each. Dead or alive."
     z "(grins) Personally, I'd take dead. Less hassle."
+
+    # Keep bounty consistent with player_state baseline
+    $ player_state["bounty"]["aeron"] = 50000
+    $ player_state["bounty"]["lyra"]  = 50000
 
     # VISUAL: Both process. That much money could change lives in the Unders.
     a "{i}50,000 credits. That's a fortune down here.{/i}"
@@ -108,6 +139,10 @@ label act2_reality_check:
     z "(cuts him off) You don't know shit."
     z "You ran one operation down here. One night. Escorted."
     z "That's not knowing. That's tourism."
+    if get_empathy_band() == "obedience":
+        z "(to Aeron) And you still sound like you’re writing a field report."
+    else:
+        z "(to Aeron) And you look like you might finally be feeling it."
 
     # VISUAL: She leans forward. Eyes sharp. Making sure they hear this.
     z "The Unders don't have Echelon law. We have our own."
@@ -136,6 +171,10 @@ label act2_reality_check:
     z "Doing what?"
     l "Surviving down here. Helping people. Playing both sides."
     z "(pause) Long enough to know when someone's worth the risk."
+    if get_empathy_band() == "obedience":
+        z "(adds) Don’t make me regret the math."
+    else:
+        z "(adds, softer) Try not to waste the chance."
 
     # VISUAL: Zira stands. Moves to window. Looks out at city below.
     z "The Unders are 50 levels of humanity compressed and forgotten."
@@ -173,6 +212,8 @@ label act2_reality_check:
     z "Selene. And before you ask—yes, she knows who you are."
     z "I already told her. Tested the waters."
     z "She's... considering. That's the best I can do."
+    $ mark_flag("Selene", "mentioned_by_zira")
+    $ canon["met_selene"] = False
 
     l "When do we meet her?"
     z "When I say it's safe. Which isn't now."
@@ -183,6 +224,8 @@ label act2_reality_check:
     a "{i}Father's hunting me. Publicly. Aggressively.{/i}"
     a "{i}Not quietly disappeared. Not 'training accident.'{/i}"
     a "{i}He wants me dead. And he wants everyone to know why.{/i}"
+    # Identity pain acknowledged → small empathy once
+    $ adjust_empathy_once("act2_02_father_public_hunt", +1)
 
     a "What's he saying? Publicly?"
     z "That you're a traitor. That you conspired with terrorists."
@@ -207,6 +250,10 @@ label act2_reality_check:
     z "Stop calling yourself Glass. You're not that anymore."
     z "Figure out what you are. Before this city decides for you."
 
+    # Identity pivot—award once (small, direction-agnostic)
+    $ adjust_empathy_once("act2_02_stop_calling_glass", +1)
+    $ mark_scene("act2_02_reality_check", "called_out_identity")
+
     # VISUAL: She leaves. Door closes. Lock engages. Alone again.
     "{i}Gone. Again. Leaving them in the dark.{/i}"
     "{i}With supplies. With warnings. With impossible hope.{/i}"
@@ -223,6 +270,10 @@ label act2_reality_check:
     a "One day at a time. Like Zira said."
     l "That's not a plan."
     a "It's the only plan we have."
+    if get_empathy_band() == "obedience":
+        "{i}Triage first. Everything else later.{/i}"
+    else:
+        "{i}One day can be enough when you’re still alive at the end of it.{/i}"
 
     # VISUAL: He picks up fake IDs. Examines them. Basic. Functional.
     # PROP: ID cards. Photos (theirs, slightly altered). Names (not theirs).
@@ -231,6 +282,11 @@ label act2_reality_check:
     a "{i}Lower Spans worker. Sector 6. Unremarkable. Forgettable.{/i}"
     a "{i}Not Glass. Not Rylan. Not Echelon.{/i}"
     a "{i}Just... nobody. Trying to survive.{/i}"
+
+    # Sync fake names with system (already seeded in player_state)
+    $ player_state["fake_names"]["aeron"] = "Kade Voss"
+    $ player_state["fake_names"]["lyra"]  = "Mira Chen"
+    $ mark_scene("act2_02_reality_check", "fake_ids_received")
 
     l "(picks up her ID) Mira Chen. Sector 7."
     l "(hollow laugh) Ironic. Sector 7."
@@ -250,10 +306,18 @@ label act2_reality_check:
     l "Now I'm... Mira Chen. Worker. Nobody. Nothing."
     l "I don't know how to be nothing."
 
-    # VISUAL: He moves closer. Not touching. Just present. Grounding.
-    a "Then we learn together."
-    a "Neither of us knows how to do this. But we're here."
-    a "And as long as we're here, we're not nothing."
+    # Aeron reaction flavors: OB = grounding via procedure; EMP = grounding via presence
+    if get_empathy_band() == "obedience":
+        a "Then we learn together."
+        a "Neither of us knows how to do this. But we're here."
+        a "And as long as we're here, we're not nothing."
+    else:
+        a "Then we learn together."
+        a "Neither of us knows how to do this. But we're here."
+        a "And as long as we're here, we're not nothing."
+        "{i}He lets the silence be shelter, not punishment.{/i}"
+        $ adjust_empathy_once("act2_02_ground_lyra_soft", +1)
+
     l "(quiet) What are we, then?"
     a "...Survivors. For now. That's enough."
 
@@ -290,6 +354,9 @@ label act2_reality_check:
     a "{i}Before this city decides for me.{/i}"
     a "{i}Before I become just another corpse in the ruins.{/i}"
 
+    # Identity introspection → once
+    $ adjust_empathy_once("act2_02_identity_thesis", +1)
+
     # VISUAL: Hold on both sleeping. Vulnerable. Broken. Human.
     "{i}Two people against a city. Impossible odds.{/i}"
     "{i}But they're here. And they're alive.{/i}"
@@ -309,5 +376,10 @@ label act2_reality_check:
     # canon_note: "Stop calling yourself Glass" - identity crisis continues
     # canon_note: Both learning to be "nobody" - stripped of former identities
     # canon_note: Sets up Scene 3: More days passing, waiting, survival
+
+    # --- WRAP & SUMMARY ---
+    $ mark_scene("act2_02_reality_check", "completed")
+    $ summary = end_operation("op202_reality_check", tag="Reality Check (Act2_02)")
+    $ log_line(summary)
 
     return

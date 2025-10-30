@@ -1,12 +1,26 @@
 # act2_16_established_base.rpy
 
-
 # =======================================================
 # ACT 2 - Scene 16: Established Base (Two Months Later)
+# (New helper system + OB/EMP flavor; no dialogue trimmed)
 # =======================================================
 
+# NOTE: Helper system references:
+# - mark_scene(key)
+# - mark_flag(key, value=True)
+# - rel(who, **kwargs)
+# - log_line(tag, text)
+# - set_emp(subject, delta)
+# - set_ob(subject, delta)
+# - snapshot_state(subject, **fields)
 
 label act2_establishing_base:
+
+    # --- OB/EMP alignment read (light flavor only; no momentum) ---
+    $ tier = get_alignment_tier()            # OB3..EMP3
+    $ is_ob_hard = pass_tier("OB3","OB2")    # ≈ <= -4
+    $ is_mid     = pass_tier("OB1","C")      # ≈ -3..+1
+    # empathy side = else
 
     # VISUAL: Temp shelter. Final night. People packing. Preparing to move.
     # LIGHTING: Dim. Transitional. Ending and beginning.
@@ -28,6 +42,14 @@ label act2_establishing_base:
 
     # VISUAL: Lights dimming. Night settling. Tomorrow approaching.
     "{i}Night falling. Last night in temporary shelter. Tomorrow permanent. Tomorrow real. Tomorrow everything changes. Again. Always again. But this time toward something instead of away from something. That's different. That matters.{/i}"
+
+    # --- OB/EMP FLAVOR #1: pre time-skip inner monologue (very light) ---
+    if is_ob_hard:
+        "{i}{ob}Checklist: pack count, exit route, staggered watch, comms test, last sweep for trace. Keep hands busy; keep noise down.{/ob}{/i}"
+    elif is_mid:
+        "{i}Pack tight, move quiet. Leave the ghosts nothing to follow.{/i}"
+    else:
+        "{i}{emp}Count the living. Breathe in fours. We carry more than bags tonight—names, promises, the thin thread called tomorrow.{/emp}{/i}"
 
     # TRANSITION: Fade to black. Time passing. Work happening. Base building.
     #scene black with fade
@@ -81,6 +103,14 @@ label act2_establishing_base:
 
     # VISUAL: Comfortable banter. Routine established. This is life now.
     "{i}Banter. Easy. Comfortable. This is life now. Not just surviving. Actually living. Having routines. Having coffee arguments. Having moments that aren't life or death. Just moments. That's progress.{/i}"
+
+    # --- OB/EMP FLAVOR #2: morning scan in the established base (very light) ---
+    if is_ob_hard:
+        "{i}{ob}Headcount, choke points, watch turnover, sightlines to both entrances. Routines hold. Discipline holds. That’s how we live.{/ob}{/i}"
+    elif is_mid:
+        "{i}People, patterns, posts. You can feel when a place starts keeping you alive.{/i}"
+    else:
+        "{i}{emp}Names at tables, laughter by the kettle, tired shoulders easing. Home isn’t walls—it’s the people who exhale inside them.{/emp}{/i}"
 
     # VISUAL: Noelle at corner table. Surrounded by datapads. Working. Always working.
     n "(not looking up) Aeron. Morning. Current Echelon patrol efficiency has decreased 13% over past two months. Predictive models suggest our operational security is holding. Probability of discovery remains under 10% per month."
@@ -172,13 +202,21 @@ label act2_establishing_base:
     a "Somewhere between the Sweep and now. Just became default state. Functional terror."
 
     # VISUAL: Lyra's hand finds his. Brief contact. Grounding. Partnership.
-    $ if characters["lyra"].get("lewd_scene_completed", False):
-        l "We've survived everything so far. Together. We'll survive this too."
-        a "Together. Yeah. That's the only way any of this works."
-        "{i}Her hand in mine. Warm. Familiar. Comfort. We've been through too much to face things alone now. Whatever happens, we face it together. That's something. That's everything.{/i}"
-    $ else:
+$ if has_char_flag("Lyra", "lewd_scene_completed"):
+    l "We've survived everything so far. Together. We'll survive this too."
+    a "Together. Yeah. That's the only way any of this works."
+    "{i}Her hand in mine. Warm. Familiar. Comfort. We've been through too much to face things alone now. Whatever happens, we face it together. That's something. That's everything.{/i}"
+$ else:
+    # Light alignment flavor (no momentum change)
+    if is_ob_hard:
+        a "I'll handle it. Like I handle everything else."
+        l "Ok."
+    elif is_mid:
         l "We'll handle it. Like we handle everything. Together."
         a "Together. Best strategy we have."
+    else:
+        l "We'll handle it. Like we handle everything. Together."
+        a "Together. Yeah. That's the only way any of this works."
 
     # VISUAL: Looking around established base. Two months of work visible. Success tangible.
     a "{i}Two months. Twelve people became twenty. Temp shelter became home. Fugitives became resistance. And now we're about to prove it. About to hit Echelon. About to show them we're dangerous. Glass became ash became ember. Now ember becomes fire. And fire burns everything.{/i}"
@@ -186,29 +224,53 @@ label act2_establishing_base:
     # VISUAL: Base continuing around them. People working. Living. Preparing. Resistance real.
     "{i}Base functioning. People moving with purpose. This is what we built. Not just walls and security. Community. Team. Family. Resistance. From nothing. From twelve broken people. Now something real. Something dangerous. Something that matters. This is home. This is hope. This is war.{/i}"
 
-    # Mark scene complete
-    $ scenes["base_established"] = True
-    $ canon["resistance_operational"] = True
-    $ canon["first_mission_approaching"] = True
-    
-    # Update resistance stats
-    $ stats["resistance_strength"] = 20  # Grew from 12 to 20
-    $ resistance_fighters_count = 20
+    # ---------------------------
+    # NEWEST-SYSTEM STATE UPDATES
+    # ---------------------------
 
-    # TRANSITION: Base established. First mission planned. Resistance real.
-    # Next scenes will be mission prep, execution, aftermath, character deepening.
+    # Scene completion
+    $ scene_done("base_established")
+
+    # Canon / global flags
+    $ flag_on("resistance_operational")
+    $ flag_on("first_mission_approaching")
+
+    # Persist base location choice (string value)
+    $ world_set("base_location", base_location)
+
+    # Relationships (light goodwill)
+    $ rel_add("Lyra",   trust=+1)
+    $ rel_add("Selene", trust=+1)
+    $ rel_add("Noelle", trust=+1)
+    $ rel_add("Tessa",  trust=+1)
+    $ rel_add("Zira",   trust=+1) if has_char_flag("Zira", "kiss_happened") else None
+
+    # Logs
+    $ log_add("time_skip", "Two-month build complete; base functional; headcount ~20; routines established.")
+    $ log_add("ops",       "Sector 9 depot raid set for T+3; roles: Noelle(data), Zira(intel), Lyra(tactics), Tessa(med).")
+    $ log_add("theme",     "Shelter→home; survival→operations; leadership distributed; collective choice honored.")
+
+    # OB/EMP taps (neutral routine)
+    $ emp_add("Aeron", +1)
+    $ ob_add("Aeron",  +1)
+
+    $ snapshot("Aeron",
+        context="base_established_two_months_later",
+        emp_delta=1,
+        ob_delta=1,
+        note="Stabilizes via routine; accepts co-lead role. EMP: community belonging; OB: procedural clarity before first op."
+    )
+
+    # Global counters
+    $ world_set("resistance_strength",        20)
+    $ world_set("resistance_fighters_count",  20)
 
     return
 
-    # canon_note: Scene 10 complete - base established after two month time skip
-    # canon_note: 12 fighters became 20 through recruitment
-    # canon_note: Base fully functional (location-dependent descriptions)
-    # canon_note: Routines established - people living here, not just hiding
-    # canon_note: First mission planned - Sector 9 supply depot raid
-    # canon_note: Each character contributing expertise (Noelle data, Zira intel, Lyra tactics, Tessa medical needs)
-    # canon_note: Zira warmth if kiss happened - comfortable intimacy present
-    # canon_note: Aeron emerging as leadership voice - opinion matters to Selene
-    # canon_note: Resistance operational now - moving from building to fighting
-    # canon_note: Three days to mission - allows for prep scenes and character moments
-    # canon_note: Theme: From fugitives to resistance, from nothing to something dangerous
-    # canon_note: Sets up Act 2 Part 2 - missions, character arcs, building toward Act 3
+    # canon_note: Scene 10 complete - base established after time skip
+    # canon_note: Headcount +8 (12 → 20); routines & cover solid
+    # canon_note: First mission planned (Sector 9 depot raid; T+3)
+    # canon_note: Roles: Noelle(data), Zira(intel), Lyra(tactics), Tessa(med)
+    # canon_note: Zira warmth waypoint if kiss happened (present, not escalated)
+    # canon_note: Aeron co-decision voice acknowledged by Selene
+    # canon_note: Theme: From fugitives to resistance; ash → ember → fire

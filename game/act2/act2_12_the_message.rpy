@@ -8,6 +8,10 @@
 
 label act2_the_message:
 
+    # --- SCENE START (new helper system) ---
+    $ mark_scene("act2_the_message", start=True)
+    $ log_line("act2_the_message", "enter")
+
     # VISUAL: Safe house. Evening of Day 8. All activities complete.
     # LIGHTING: Dim. Tired. Accomplished but anxious.
     # SOUND: City hum. Waiting. Tension.
@@ -15,6 +19,7 @@ label act2_the_message:
     scene bg_safe_house with fade
 
     "{i}Day 8. Seven tasks complete. Every single one. Now we wait for Selene's answer.{/i}"
+    "{i}[ob] Waiting is just combat without bullets—same pulse, same math.{/i}"
     
     # VISUAL: Aeron and Lyra sitting. Exhausted. Week of survival behind them.
     # Different people than they were seven days ago.
@@ -28,11 +33,13 @@ label act2_the_message:
 
     # VISUAL: Lyra quiet. Both processing. Week of growth but still hunted.
     "{i}Seven days ago we fled Aeries with nothing. Now we're armed, connected, skilled. Different. Stronger maybe. Still hunted but less helpless.{/i}"
+    "{i}[emp] Progress doesn’t erase guilt, but it gives it somewhere to stand.{/i}"
 
     # Show what they've accomplished
     $ total_scrip = inventory["scrip"]
     $ weapon_count = len(inventory["weapons"])
     $ reputation_score = reputation["unders"]
+    $ log_line("act2_the_message", f"status scrip={total_scrip} weapons={weapon_count} rep_unders={reputation_score}")
 
     a "{i}We have [total_scrip] scrip. [weapon_count] weapons. Reputation in the Unders at [reputation_score]. Contacts who might not kill us on sight. That's progress.{/i}"
 
@@ -45,11 +52,13 @@ label act2_the_message:
 
     # VISUAL: Moment of quiet confidence. Changed from broken fugitives to something more.
     "{i}She looks at me different now. Not like Glass. Not like a weapon. Like someone who might actually do what he says. Maybe I'm starting to believe it too.{/i}"
+    "{i}[emp] Belief is a thin blanket, but it’s warmer than fear.{/i}"
 
     # SOUND: Encrypted device beeps. Loud. Sudden. Both tense immediately.
     # VISUAL: Zira's device on table. Message incoming. This is it.
 
     "{i}The device. Beeping. Message incoming. This is it. Selene's answer.{/i}"
+    "{i}[ob] Hope arrives dressed like an alarm.{/i}"
 
     # VISUAL: Both stare at device. Neither moving. Moment of truth.
     l "Are you going to check it?"
@@ -78,6 +87,7 @@ label act2_the_message:
 
     # VISUAL: Both processing. Tomorrow everything changes. Again.
     "{i}Tomorrow. Dawn. Sector 6. Meeting Selene. The woman whose people I killed. Who lost everything in the Purge. Who might kill us on sight or give us a chance. Everything rides on this.{/i}"
+    "{i}[ob] The future has a trigger; we’re walking toward it.{/i}"
 
     l "We should rest. Tomorrow's going to be intense."
     a "Rest. Right. Like I'm going to sleep tonight."
@@ -88,12 +98,13 @@ label act2_the_message:
     # VISUAL: They settle in. Makeshift bed. Close proximity natural now.
     # After the intimate scene (if it happened), this is comfortable. If not, still close but less intimate.
 
-    $ if characters["lyra"]["lewd_scene_completed"]:
+    if characters["lyra"]["lewd_scene_completed"]:
         "{i}She curls against me. Natural now. Comfortable. Her warmth grounding. We've been through too much to sleep apart anymore.{/i}"
         l "(quiet) No matter what happens tomorrow, we face it together. Right?"
         a "Always together. That's how we've survived everything. That's how we'll survive this."
         l "Good. Because I don't want to do any of this without you."
         a "You won't have to. I'm here. I'm not going anywhere."
+        "{i}[emp] The city takes, but tonight it leaves us this: a steady breath against my chest.{/i}"
     else:
         "{i}She lies close. Not touching but near. Presence comforting even without intimacy. We've been through enough that proximity means trust.{/i}"
         l "(quiet) Tomorrow changes everything."
@@ -101,15 +112,18 @@ label act2_the_message:
         l "This feels different. Bigger. Like we're standing at a cliff edge."
         a "Then we jump together. Like always."
         l "...Yeah. Together."
+        "{i}[emp] Distance measured in inches can still mean safety.{/i}"
 
     # VISUAL: Darkness. Quiet. Both pretending to sleep. Neither succeeding.
     "{i}Hours pass. Neither of us sleeps. Just lie there thinking. Planning. Preparing. Tomorrow we meet Selene. Tomorrow we either join the resistance or die trying. No middle ground. No safety net. Just one chance to prove we're more than the monsters we were.{/i}"
+    "{i}[ob] Plans line up like bullets in a magazine; dawn is the chamber.{/i}"
 
     # VISUAL: Check weapons. Check gear. Check everything twice.
     a "{i}Weapons ready. Gear packed. Fake IDs solid. Everything prepared. But preparation only goes so far. Eventually you have to face the moment. Face the person. Face the choice.{/i}"
 
     # VISUAL: Pre-dawn darkness. Time passing.
     "{i}Pre-dawn. The city quiet. That strange hour when night dies but day hasn't born yet. Time to move.{/i}"
+    "{i}[ob] Night exhales; we hold our breath for the reply.{/i}"
 
     # VISUAL: Both rising. Dressing. Gearing up. Professional. Focused.
     scene bg_safe_house_dawn with fade
@@ -122,6 +136,7 @@ label act2_the_message:
 
     # VISUAL: One last look at safe house. Might not return. Everything on the line.
     "{i}One last look. This room kept us alive for eight days. Might never see it again. Might die in Sector 6. Might join the resistance. Might start a war. Everything uncertain except one thing: we're doing this together.{/i}"
+    "{i}[emp] Together has been our best armor.{/i}"
 
     # VISUAL: Door opens. Dawn light spills in. Step into uncertain future.
     a "Let's go. Time to face Selene."
@@ -133,11 +148,13 @@ label act2_the_message:
     scene bg_lower_spans_dawn with fade
 
     "{i}Walking through dawn-lit streets. Sector 6 ahead. Ruins where Selene waits. Where everything either begins or ends. Eight days of preparation leading to this moment. Seven tasks completed. One final test remains.{/i}"
+    "{i}[ob] The light is thin and honest; it shows the cracks and keeps going.{/i}"
 
     # Check inventory and relationships one final time
     $ weapons_ready = len(inventory["weapons"]) > 0
     $ lyra_trust_final = characters["lyra"]["trust"]
     $ reputation_final = reputation["unders"]
+    $ log_line("act2_the_message", f"premeet armed={weapons_ready} lyra_trust={lyra_trust_final} rep_unders={reputation_final}")
 
     "{i}Armed: [weapons_ready]. Lyra's trust: [lyra_trust_final]. Reputation: [reputation_final]. Everything we've built. Everything we've earned. All riding on the next hour.{/i}"
 
@@ -156,9 +173,15 @@ label act2_the_message:
     scene bg_sector6_ruins with fade
 
     "{i}Sector 6. Ruins from the Purge. Buildings collapsed. Streets torn. Perfect place for an ambush. Perfect place for a meeting. Perfect place to die or be reborn.{/i}"
+    "{i}[emp] My pulse hammers a steady drum: approach, breathe, don’t flinch.{/i}"
 
     # SOUND: Footsteps ahead. Multiple. Armed. Approaching.
     "{i}Footsteps. Multiple. Armed. Coming closer. This is it. No turning back. Face Selene. Face judgment. Face the future.{/i}"
+    "{i}[ob] History arrives in boots.{/i}"
+
+    # Mark scene state for downstream logic and UI
+    $ mark_scene("act2_the_message", complete=True)
+    $ log_line("act2_the_message", "exit_to_meet_selene")
 
     # TRANSITION: Meeting Selene begins
 

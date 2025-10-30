@@ -4,9 +4,13 @@
 # =======================================================
 # ACT 2 - Activity 4: Medical Supplies (Meet Tessa)
 # =======================================================
+# TODO migrate legacy currency/contacts/reputation/activity counters to helper APIs
+# Legacy touched below: activities_completed, days_remaining, medkits,
+# contacts["tessa"], reputation_unders, favors_owed_list, activity_medical_done,
+# tessa_count_the_living
 
 
-label activity_medical_supplies:
+label act2_activity_04_medical_supplies:
 
     # VISUAL: Lower Spans. Day. Sector 7. Hidden alley leading to underground clinic.
     # LIGHTING: Dim natural light filtered through grates above. Warm amber glow from clinic entrance.
@@ -58,6 +62,8 @@ label activity_medical_supplies:
     # VISUAL: Tessa looks up. Eyes meet his. Recognition immediate and complete.
     # Her hands don't stop working. Gel continues spreading. Patient comes first.
 
+    $ mark_flag("Tessa", "met")
+
     t "(quiet, not stopping) You're Glass."
 
     # VISUAL: Injured man's eyes snap open. Others in clinic turn. Tension spikes instantly.
@@ -108,6 +114,8 @@ label activity_medical_supplies:
     a "Because I watched 100,000 people die and I couldn't be part of that system anymore."
     a "Because I'm trying to fix what I broke. Even if I can't. Even if it kills me."
 
+    $ adjust_empathy_once("act2_med_tessa_confession", +1)
+
     # VISUAL: She studies him. Eyes deep and warm and infinitely sad. Measuring truth.
     t "You can't fix 100,000 dead, Aeron. You can't patch souls with medicine."
     t "But you can help the living. If that's truly what you want."
@@ -132,6 +140,9 @@ label activity_medical_supplies:
     t "I heal. You fight. We both serve life in different ways."
     t "(gentle but firm) Take the medkit. Use it to save someone. Then come back."
     t "Show me Glass can do more than cut."
+
+    $ mark_flag("Tessa", "gave_medkits")
+    $ adjust_empathy_once("act2_med_tessa_mercy", +1)
 
     # VISUAL: He takes medkit. Heavy. Not just weight. Responsibility. Expectation.
     a "Thank you."
@@ -177,23 +188,49 @@ label activity_medical_supplies:
     t "(firm) Because Glass killed 600 people. I want to know how many Aeron saves."
     t "Keep count. It matters."
 
-    # VISUAL: She walks away. Returns to patients. Hands glowing green again. Life continuing.
-    "{i}She didn't forgive me. Didn't absolve me. Didn't make it easier.{/i}"
-    "{i}She just gave me work to do. People to save. A way forward.{/i}"
-    "{i}Maybe that's better than forgiveness. Maybe that's what I need.{/i}"
+    $ mark_flag("Tessa", "count_the_living")
+    $ rel("Tessa", trust=3)
 
-    # VISUAL: He looks at medkits. Two of them. Heavy with expectation.
-    a "{i}Keep count, she said. Remember their names.{/i}"
-    a "{i}600 dead. How many living to balance that?{/i}"
-    a "{i}Infinite, probably. But I have to start somewhere.{/i}"
+    # --- EMP/OB flavor: Post-Tessa resolve & medkit weight ---
+    if get_empathy_band() != "obedience":
+        # (EMP) keep original text verbatim
+        "{i}She didn't forgive me. Didn't absolve me. Didn't make it easier.{/i}"
+        "{i}She just gave me work to do. People to save. A way forward.{/i}"
+        "{i}Maybe that's better than forgiveness. Maybe that's what I need.{/i}"
+
+        a "{i}Keep count, she said. Remember their names.{/i}"
+        a "{i}600 dead. How many living to balance that?{/i}"
+        a "{i}Infinite, probably. But I have to start somewhere.{/i}"
+
+        $ adjust_empathy_once("act2_med_post_tessa_resolve_emp", +1)
+
+    else:
+        # (OB) clinical framing; same dramatic beat, different lens
+        "{i}She didn't forgive me. She assigned a queue.{/i}"
+        "{i}Not absolution—operations. Triage. Throughput. Deliverables.{/i}"
+        "{i}Forgiveness is nonfunctional. Output is not.{/i}"
+
+        a "{i}Two medkits: finite resources, measurable outcomes.{/i}"
+        a "{i}Stop optimizing for the dead ledger. Maximize marginal lives saved.{/i}"
+        a "{i}Start now. Iterate until failure rate trends down.{/i}"
+
+        $ adjust_empathy_once("act2_med_post_tessa_resolve_ob", -1)
 
     # VISUAL: He turns to leave. Stops at doorway. Looks back one more time.
     # Tessa kneeling beside another patient. Green glow surrounding her hands. Healing.
-
-    a "{i}Tessa Kael. Healer. Heart of the Unders.{/i}"
-    a "{i}She sees the worst humanity has to offer and chooses compassion anyway.{/i}"
-    a "{i}Glass killed. Tessa heals.{/i}"
-    a "{i}Maybe that's who I need to learn from.{/i}"
+    # --- EMP/OB flavor on Tessa reflection ---
+    if get_empathy_band() != "obedience":
+        a "{i}Tessa Kael. Healer. Heart of the Unders.{/i}"
+        a "{i}She sees the worst humanity has to offer and chooses compassion anyway.{/i}"
+        a "{i}Glass killed. Tessa heals.{/i}"
+        a "{i}Maybe that's who I need to learn from.{/i}"
+        $ adjust_empathy_once("act2_med_tessa_reverence", +1)
+    else:
+        a "{i}Tessa Kael. Field asset. High-value node in the Unders’ care network.{/i}"
+        a "{i}She absorbs systemic damage and outputs survival. Throughput matters.{/i}"
+        a "{i}Glass executed directives. Tessa executes outcomes.{/i}"
+        a "{i}I don't need her compassion. I need her protocols.{/i}"
+        $ adjust_empathy_once("act2_med_tessa_pragmatic", -1)
 
     # TRANSITION: Return to safe house. Report to Zira. Activity complete.
     scene bg_safe_house with fade
@@ -229,9 +266,17 @@ label activity_medical_supplies:
     z "Then let Tessa help you grow a new one. She's good at that."
 
     # VISUAL: Aeron stores medkits carefully. Precious cargo. Lives waiting.
-    a "{i}Keep count. Remember their names.{/i}"
-    a "{i}600 dead. Now I count the living.{/i}"
-    a "{i}Starting now. Starting with whoever I save next.{/i}"
+    # --- EMP/OB flavor on the "count the living" vow ---
+    if get_empathy_band() != "obedience":
+        a "{i}Keep count. Remember their names.{/i}"
+        a "{i}600 dead. Now I count the living.{/i}"
+        a "{i}Starting now. Starting with whoever I save next.{/i}"
+        $ adjust_empathy_once("act2_med_count_living_ack", +1)
+    else:
+        a "{i}Inventory secured. Two kits, two chances.{/i}"
+        a "{i}Names don't stop bleeding. Procedures do.{/i}"
+        a "{i}Triage. Stabilize. Move. Save who can be saved.{/i}"
+        $ adjust_empathy_once("act2_med_count_living_hardline", -1)
 
     # TRANSITION: End of activity. Rewards gained. Contact added.
 
@@ -253,6 +298,7 @@ label activity_medical_supplies:
     Return after using medkits to deepen relationship.
     "
 
+    # Legacy counters/inventory (awaiting migration helpers)
     $ activities_completed += 1
     $ days_remaining -= 1
     $ medkits += 2
