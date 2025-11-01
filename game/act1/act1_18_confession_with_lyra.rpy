@@ -1,36 +1,43 @@
-# act1_18_confession_with_lyra.rpy
-
-
 # =======================================================
 # ACT 1 - Scene 18: Confession with Lyra - The Breakdown
+# File: act1_18_confession_with_lyra.rpy
 # =======================================================
 
+# ========= SCENE START TASKS =========
+$ _current_scene_id = "act1_18_confession_lyra"
+$ scene_mark(_current_scene_id, "entered")
 
 label act1_confession_lyra:
 
-    # Read alignment via helpers
+    # Read alignment via helpers (flavor only; no momentum)
     $ band = get_empathy_band()            # "obedience" | "conflicted" | "empathy"
     $ is_obedient_path = (band == "obedience")
 
-    # VISUAL: Aeron's apartment. Late afternoon light. Door opens—Aeron enters.
-    # LIGHTING/SOUND: Warm window amber; interior cold. Door close, breath, stillness.
+    # VISUAL: Aeron's apartment. Late afternoon light sliding across the floor; corridor spill behind Lyra.
+    # LIGHTING: Window amber vs interior cold; dust motes visible in the beam.
+    # SOUND: Door seal hiss; faint ventilation; distant city hum as a low bed.
+    # CAMERA: Slow push from doorway to a mid on Aeron; keep Lyra soft in BG, then rack focus on her first line.
 
     "{i}The door seals behind him. The room is too quiet.{/i}"
     "{i}And Lyra is there. Sitting on his bed. Waiting.{/i}"
 
     l "Aeron."
 
-    # VISUAL: Aeron stops just inside. Blood on the uniform (not his).
+    # CAMERA: Hold. Beat. Let the stillness bite.
+    pause 0.4
+
+    # VISUAL: Aeron stops just inside; dried blood flecks on the sleeve (not his).
     "{i}He stands there. Can't move forward. Can't turn back.{/i}"
+
     a "{i}She's here. Why is she here?{/i}"
 
     l "(steps closer) I heard about the mission. Sector Ten."
     a "(flat) It's done. Mission complete."
     l "That's not what I asked."
-
     l "(softer) What happened down there?"
 
     # ---- HOLDING GLASS TOGETHER ----
+    # CAMERA: Over-shoulder on Aeron; jaw clenched; eyes not tracking her.
     a "Sweep operation. Standard protocol. Within parameters."
     if is_obedient_path:
         a "(quieter) It was efficient."
@@ -42,9 +49,11 @@ label act1_confession_lyra:
     l "Stop reporting and talk to me."
 
     "{i}Glass doesn’t break. Glass reports. Glass functions.{/i}"
+
     a "(strained) I’m fine. Just tired. I need to—"
 
     # TOUCH
+    # VISUAL: Lyra lifts a hand—hesitates—sets it on his forearm.
     a "(sharp) Don’t—"
     l "(quiet) Aeron. Look at me."
     a "{i}If I look at her, it’s over. The dam breaks.{/i}"
@@ -58,7 +67,7 @@ label act1_confession_lyra:
     a "(voice breaking) I—I tried to—"
     l "How many, Aeron?"
 
-    if player_state.get("evidence_of_mercy", 0) >= 2:
+    if mercy_ge(2):
         a "...Six hundred. Maybe more. I saved some. I tried. But—"
     else:
         if is_obedient_path:
@@ -70,6 +79,7 @@ label act1_confession_lyra:
     l "(breathes in sharply) Aeron..."
 
     # ---- THE FLOOD ----
+    # CAMERA: Slow dolly in; shallow depth—world narrows to two faces.
     a "There was a vendor. I bought coffee from him. Three nights ago."
     a "He recognized me. He knew I’d come. He didn’t run."
 
@@ -102,10 +112,12 @@ label act1_confession_lyra:
     a "They weren’t rebels. They were just trying to live. And Marcus said—"
     a "He said, 'prove your worth.' So I did."
 
+    # VISUAL: Aeron sways; grabs desk edge.
     "{i}His knees buckle. He catches the desk. Barely standing.{/i}"
 
     a "(yelling) I’ve done this three hundred ninety times! How many families? How many lies?"
 
+    # SFX: Fabric creak; knees hit floor.
     "{i}He falls. Crashes to his knees. The impact doesn’t register.{/i}"
 
     if is_obedient_path:
@@ -127,13 +139,16 @@ label act1_confession_lyra:
     else:
         a "{i}Her touch anchors me. Pulls me back to something human.{/i}"
 
+    # VISUAL: He collapses into her; foreheads touch; shoulders shake.
     "{i}He collapses into her. Full weight. Broken sound. Human sound.{/i}"
 
     a "(barely coherent) How do you live with it? I see their faces—every time—"
     a "(screaming) I DON’T WANT TO BE THIS ANYMORE—"
 
     # ---- LYRA BREAKS ----
+    # CAMERA: On Lyra; mask finally slips; tear track catches window light.
     "{i}Lyra’s mask shatters. Tears streak down.{/i}"
+
     l "(voice breaking) I know. I did it too. Sector Seven."
     l "Families. Children. I logged them. Three days later—they were gone."
     l "(crying) I told myself it was necessary. I can’t stop seeing them."
@@ -153,9 +168,11 @@ label act1_confession_lyra:
     a "He owns me. The system owns me."
     l "(fierce) Then we break free. Together."
 
+    # SOUND: City hum dips under; let breathing lead.
     "{i}They sit in the ruins of Glass. Time dissolves. Just breath. Just tears.{/i}"
 
     # ---- AFTER THE STORM ----
+    # CAMERA: Wider two-shot; window beam softer now; colors cooler.
     "{i}Silence settles. Not peace. Just emptiness after the flood.{/i}"
 
     l "(hoarse) How do you feel?"
@@ -189,6 +206,7 @@ label act1_confession_lyra:
     l "I’ve always seen you. Even when you couldn’t."
 
     "{i}She leans against him. He doesn’t pull away.{/i}"
+
     l "We’ll get through this."
     a "How can you be sure?"
     l "I’m not. But we’ll try."
@@ -212,4 +230,34 @@ label act1_confession_lyra:
         a "{i}Glass shattered on the floor of my apartment.{/i}"
         a "{i}And for the first time in ten years... I felt it all.{/i}"
 
+    # LIGHT SOCIAL STATE: vulnerability breeds trust
+    $ add_trust("Lyra", 1)
+    $ set_scene_flag(_current_scene_id, "completed")
     return
+
+
+# ========= CANON NOTES =========
+# cann.scene_id: act1_18_confession_lyra
+# cann.when_in_timeline: Late afternoon/evening, post–Sector 10 sweep (Op 391); pre–Obsidian Bridge contact.
+# cann.what_happened:
+#   - Aeron returns shattered; Lyra confronts/report-vs-truth; he breaks and confesses details (vendor/child/shelter).
+#   - Lyra reciprocates with Sector 7 guilt; they share grief; vow to “break free together.”
+# cann.aeron_state: VO tinted by empathy band only (no momentum changes). Obedience-band frames failure of perfection;
+#                   empathy-band frames moral injury & awakening.
+# cann.path_tracking:
+#   - No menus. **No OB/EMP delta** (NEU scene).
+#   - Pulls detail variants via flags from act1_17_sweep: vendor_spared / child_spared / shelter_warned.
+#   - Social: `add_trust("Lyra", +1)` baseline for vulnerability.
+#   - Running window BEFORE:   **≈ [-48, +48]**
+#   - Running window AFTER:    **≈ [-48, +48]** (unchanged; delta 0)
+# cann.thematic_flags: Report vs confession; moral injury; “Glass vs Human”; shared culpability as connection.
+# cann.block_status: ANCHOR (fixed outcome, variant details).
+# cann.true_path_integration: none (menu-free).
+# cann.visual_plate_economy:
+#   - REUSE: Apartment master; window amber pass; desk/floor 2-shot.
+#   - HERO: Knees hit floor; Lyra’s tear catching the window beam; hands interlace CU.
+# cann.requires_followup:
+#   - Next beats: Obsidian Bridge rendezvous setup; Marcus debrief tone colored by Op 391 outcomes/suspicion.
+# cann.consistency_asserts:
+#   - Aeries altitude weather grammar: no rain-on-glass FX; keep “window condensation/amber beam” language.
+#   - Count integrity: “391 operations” line consistent with prior scenes and debrief totals.

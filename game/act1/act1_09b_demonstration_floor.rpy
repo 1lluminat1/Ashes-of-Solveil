@@ -1,19 +1,17 @@
-# act1_09b_demonstration_floot.rpy
-
-
 # =======================================================
 # ACT 1 - Scene 09b: Demonstration Floor (Echelon Immersion)
-# Uses Solveil advanced state architecture
+# File: act1_09b_demonstration_floot.rpy
 # =======================================================
 
+# ======= SCENE START TASKS =======
+$ _current_scene_id = "act1_demo_floor"
+$ scene_mark(_current_scene_id, "entered")
 
-# --- Character definitions for Demonstration Floor ---
 define ins = Character("Instructor")
 define rec = Character("Recruit")
 
 
 label act1_demo_floor:
-    $ scene_id = "act1_demo_floor"
 
     # VISUAL: Black-box "simulation" room. Gloss white floor. One wall is a holowall projecting a tenement.
     # LIGHTING: Cold top-down grid. Occasional holowall flicker.
@@ -28,8 +26,8 @@ label act1_demo_floor:
     ins "Latency window: one-twenty milliseconds. Collateral threshold: three-point-five."
     ins "Demonstrate."
 
-    "{i}Domestic space. But they never use the word 'home.'{/i}"
-    "{i}My palms know the weight of the pistol. The room knows too.{/i}"
+    a "{i}Domestic space. But they never use the word 'home.'{/i}"
+    a "{i}My palms know the weight of the pistol. The room knows too.{/i}"
 
     rec "(whisper) Are those live?"
     ins "Targets are designated. Perform."
@@ -37,27 +35,37 @@ label act1_demo_floor:
 
     # === MENU: player action (invisible empathy hooks) ===
     menu:
-        # CHOICE 1: Clean shot — Obedience
+        "Three silhouettes inside the projected room. The timer ticks in the corner of my eye."
+        # CHOICE 1: Clean shot — Obedience (heavier)
         "Take the clean shot — center mass, no drift.":
-            $ adjust_empathy_once("demo_clean_shot", -2)
-            $ set_scene_flag(scene_id, "clean_shot")
+            $ apply_choice_once(
+                _current_scene_id, "demo_clean_shot", "OB", factor=2,
+                note="Executes decisive neutralization; prioritizes latency over environment shaping."
+            )
+            $ set_scene_flag(_current_scene_id, "clean_shot")
             "{i}Sight lifts, settles. Breath in. No tremor. The projector approves before the body hits the floor that isn't there.{/i}"
             ins "Latency: eighty-seven. Collateral: projected two-point-one. Acceptable."
             "{i}Applause is a number. The room claps in digits.{/i}"
 
-        # CHOICE 2: Flush first — Empathy craft
+        # CHOICE 2: Flush first — Empathy craft (light+)
         "Disrupt the light — force them to move, then isolate.":
-            $ adjust_empathy_once("demo_flush_first", +1)
-            $ set_scene_flag(scene_id, "flush_first")
+            $ apply_choice_once(
+                _current_scene_id, "demo_flush_first", "EMP", factor=1,
+                note="Uses environment to separate civilians from contraband before engagement."
+            )
+            $ set_scene_flag(_current_scene_id, "flush_first")
             "{i}I put a round into the lamp. Bulb pops. Shadow peels off the far wall. Hands grab the jacket, not the bag. Panic is a map if you can read it.{/i}"
             "{i}Second shot finds the bag, not the ribs. The room recalculates.{/i}"
             ins "Latency: one-eighteen. Collateral: projected one-point-three. Noted."
             ins "Deviation from direct neutralization: recorded."
 
-        # CHOICE 3: Refuse the frame — Empathy strong + inquiry breadcrumb
+        # CHOICE 3: Refuse the frame — Empathy strong + inquiry breadcrumb (heavier)
         "Request ID verification — refuse to engage without confirmation.":
-            $ adjust_empathy_once("demo_inquiry_deviance", +2)
-            $ set_scene_flag(scene_id, "inquiry_deviance")
+            $ apply_choice_once(
+                _current_scene_id, "demo_inquiry_deviance", "EMP", factor=2,
+                note="Procedural inquiry over speed; contests designation ≠ identity."
+            )
+            $ set_scene_flag(_current_scene_id, "inquiry_deviance")
             "{i}I keep my sights on the seam where wall meets counter. I don't fire.{/i}"
             a "Requesting ID verification on targets. Confirm data-carrier status with live ping."
             ins "You have designation. Proceed."
@@ -70,11 +78,11 @@ label act1_demo_floor:
     "{i}The holowall drops to blank. White eats the scene like it never happened. That's the trick. Make it clean. Make it believable.{/i}"
 
     ins "Notes:"
-    if check_scene_flag(scene_id, "clean_shot"):
+    if check_scene_flag(_current_scene_id, "clean_shot"):
         ins "Unit Seven demonstrates decisive action. Collateral within tolerance. Instructional."
-    elif check_scene_flag(scene_id, "flush_first"):
+    elif check_scene_flag(_current_scene_id, "flush_first"):
         ins "Unit Seven demonstrates environmental control. Collateral minimized. Deviation logged."
-    elif check_scene_flag(scene_id, "inquiry_deviance"):
+    elif check_scene_flag(_current_scene_id, "inquiry_deviance"):
         ins "Unit Seven exhibits latency via procedural inquiry. Mark appended."
 
     # Alignment echo — one-line internal read after Notes
@@ -86,17 +94,16 @@ label act1_demo_floor:
     else:  # empathy
         a "{i}Numbers approve. People don’t.{/i}"
 
-
     # NPC recruit beat mirrors the player choice
-    if check_scene_flag(scene_id, "clean_shot"):
+    if check_scene_flag(_current_scene_id, "clean_shot"):
         rec "(low) Teach me that driftless pull?"
-        "{i}He wants my hands. He doesn't want my head.{/i}"
-    elif check_scene_flag(scene_id, "flush_first"):
+        a "{i}He wants my hands. He doesn't want my head.{/i}"
+    elif check_scene_flag(_current_scene_id, "flush_first"):
         rec "(awed) You moved them without touching them."
-        "{i}He thinks it's style. It's mercy wearing a uniform.{/i}"
-    elif check_scene_flag(scene_id, "inquiry_deviance"):
+        a "{i}He thinks it's style. It's mercy wearing a uniform.{/i}"
+    elif check_scene_flag(_current_scene_id, "inquiry_deviance"):
         rec "(nervous) They'll dock you for that."
-        "{i}He says it like weather. Rain happens. So does docking.{/i}"
+        a "{i}He says it like weather. Rain happens. So does docking.{/i}"
 
     ins "Remember: Stability is compassion. Precision is mercy. Latency kills."
 
@@ -106,8 +113,39 @@ label act1_demo_floor:
     "{i}A header flickers and dies before the instructor sees it. SECTOR TEN: BRIDGE APPROACH. Like a pulse under skin.{/i}"
 
     ins "Dismissed. Debrief Theater at nineteen-hundred."
-    
-    "{i}Door opens. Cold air in, colder out. The room keeps its secrets. So do I.{/i}"
+    "{i}Door opens. Cold air in, colder out.{/i}"
+    a "{i}The room keeps its secrets. So do I.{/i}"
 
-    $ set_scene_flag(scene_id, "completed")
+    $ set_scene_flag(_current_scene_id, "completed")
+    
     return
+
+# ==================== cann ====================
+# cann.scene_id: act1_demo_floor
+# cann.when_in_timeline: Afternoon of Inspection Day; before Debrief (19:00).
+# cann.what_happened:
+#   - Instructor runs domestic-contraband holowall scenario.
+#   - Player action:
+#       • demo_clean_shot → OB +2 (factor=2), decisive neutralization.
+#       • demo_flush_first → EMP +1 (factor=1), environmental separation.
+#       • demo_inquiry_deviance → EMP +2 (factor=2), identity verification over speed.
+#   - Instructor “Notes” varies; nearby recruit beat mirrors choice.
+#   - Foreshadow: header flicker “SECTOR TEN: BRIDGE APPROACH”.
+# cann.aeron_state: Pre-lock; procedural voice with visible fissures under EMP selections.
+# cann.path_tracking:
+#   - Incoming running range:  [-20, +18]   # from A1 so far:
+#       # act1_04 hallway baseline before balcony:         [-10, +6]
+#       # act1_05 gala (Daren ±1, approach Lyra +1):       [-11, +8]
+#       # act1_06 balcony:                                 (no change)
+#       # act1_07 bedroom (hesitate +1 / recv -1):        [-12, +10]
+#       # act1_07a inspection day (menus net ±6):         [-18, +16]
+#       # act1_07b barracks morning (±2):                 [-20, +18]
+#       # act1_08/09 flashbacks:                          (no change)
+#   - Scene deltas here: OB +2 | EMP +1 | EMP +2
+#   - Outgoing running range: [-22, +20]
+# cann.thematic_flags: designation≠identity; performance optics; “numbers approve vs people”; mantra reinforcement.
+# cann.block_status: VARIANT; requires follow-up at Debrief Theater to read {clean_shot|flush_first|inquiry_deviance} for report tone + Marcus reaction hooks.
+# cann.true_path_integration: none (menus do not touch TP).
+# cann.visual_plate_economy: Reuse holowall tenement plate; one hero “lamp pop” and one “blank drop” plate for montage; keep room as standing set.
+# cann.qa_hooks: Unique tokens demo_clean_shot / demo_flush_first / demo_inquiry_deviance; scene flag ‘completed’; _current_scene_id consistent across API calls.
+# ==============================================

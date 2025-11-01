@@ -1,95 +1,115 @@
-# act1_17_the_sweep.rpy
-
-
 # =======================================================
-# ACT 1 - Scene 17: The Sweep - Sector 10
+# ACT 1 - Scene 17: The Sweep — Sector 10
+# File: act1_17_the_sweep.rpy
 # =======================================================
 
+# ========= SCENE START TASKS =========
+$ _current_scene_id = "act1_17_sweep"
+$ scene_mark(_current_scene_id, "entered")
+$ op_start("op_391_sector10", note="Operation 391 — Sector 10 sweep")
 
 define unit2 = Character("[Unit-2]", color="#4A90E2")
 define unit3 = Character("[Unit-3]", color="#4A90E2")
 define unit4 = Character("[Unit-4]", color="#4A90E2")
 
-
 label act1_sweep:
-    $ scene_id = "act1_17_sweep"
-    $ tier = get_alignment_tier()               # OB3..EMP3
-    $ band = get_empathy_band()                 # "obedience" | "conflicted" | "empathy"
 
-    # VISUAL: Pre-dawn. Sector 10 approach. Industrial decay. Steam vents. Neon dying.
-    # LIGHTING: Cold blue pre-dawn; harsh tactical lights from dropship.
-    # SOUND: Rotor wash; boot steps on metal; radio chatter; breathing through comms.
+    $ tier = alignment_tier() # OB3..EMP3
+    $ band = empathy_band() # "obedience" | "conflicted" | "empathy"
 
-    "{i}Dawn breaks over Sector 10 like a blade.{/i}"
-    "{i}The dropship descends. Tactical lights cut through steam. The sector wakes to its last morning.{/i}"
+    # VISUAL: Pre-dawn approach over Sector 10; dropship bay doors open to a grid of dying neon and steam plumes.
+    # LIGHTING: Cold blue predawn rim light + hard tactical beams raking catwalks.
+    # SOUND: Rotor wash → hydraulic whine → boots on metal; radio hiss beds every line.
+    # CAMERA: Over-shoulder on Aeron as the city rotates beneath; lens catches particulate glitter in searchlights.
+
+    "{i}Dawn breaks over Sector Ten like a blade.{/i}"
+    "{i}The dropship descends. Tactical beams cut through steam. The sector wakes to its last morning.{/i}"
 
     # COMMS: Marcus (filtered, distant authority)
     m "Glass. Confirm deployment."
-    a "Confirmed. Sector 10. Grid Six-Two."
+    a "Confirmed. Sector Ten. Grid Six-Two."
     m "Rules of engagement?"
     a "Zero tolerance. Lethal force authorized."
     m "Acceptable collateral?"
     a "(pause) ...Within mission parameters."
     m "Good. Execute with precision. Prove your worth."
-    
-    a "{i}Prove your worth. Always the same words.{/i}"
-    a "{i}390 operations proving my worth. This is 391.{/i}"
 
+    # HUD: Subtle overlay flashes MISSION 391 → ACTIVE.
+    a "{i}Prove your worth. Always the same words.{/i}"
+    a "{i}Three hundred ninety operations proving my worth. This is 391.{/i}"
+
+    # STAGE: Team fans out; visors glow faintly; breath in masks; footfalls syncopate on grating.
     unit2 "Sector's quiet. No alerts."
     unit3 "Thermal shows 800+ signatures. Clustered in sublevels."
     unit4 "Orders, Glass?"
-    
-    a "{i}800 people. The vendor. The child. The families.{/i}"
+
+    a "{i}Eight hundred people. The vendor. The child. The families.{/i}"
     a "{i}All waiting below. All trusting the dawn will come like it always does.{/i}"
-    a "{i}Glass executes orders. But humans find cracks.{/i}"
+    a "{i}Glass executes orders. Humans find cracks.{/i}"
     a "{i}Let's see if I can be both.{/i}"
 
     a "Standard sweep pattern. Alpha through Delta grids. Report all contacts."
     unit2 "Confirmed."
 
     # ==========================================
-    # CHOICE 1: THE WARNING
+    # CHOICE 1: THE WARNING (ROUTE)
     # ==========================================
+    # BLOCKING: Junction split—LEFT = direct access corridor; RIGHT = market fringe w/ line-of-sight to stalls.
     unit3 "Direct route is left. Fastest approach to target concentration."
     unit2 "Market district right. Slower but fewer civilians."
     unit4 "Orders?"
 
     a "{i}Left is efficient. Glass would go left.{/i}"
-    a "{i}Right gives them time. Time to hear. Time to run.{/i}"
+    a "{i}Right buys them seconds. Seconds become lives.{/i}"
 
     menu:
-        "The team waits. Dawn light catches his visor."
-        "Take the direct route—efficient, by-the-book.":
+        "The team waits. Predawn light ghosts his visor."
+        "Take the direct route—by the book.":
+            if apply_choice_once(
+                _current_scene_id, "a17_route_direct", "OB", factor=1,
+                next_scene_label="act1_17_sweep",
+                note="Chooses efficient approach; no warning to civilians."
+            )
+                $ civ_killed(50)
+                $ add_susp(0)
             $ set_scene_flag(scene_id, "route_direct")
+
             a "Left. Direct approach. Standard protocol."
             unit2 "Confirmed. Moving."
+
+            # CAMERA: Tight file through a narrow service spine; beams skim closed doors.
             a "{i}Glass chooses efficiency. No mercy. Just execution.{/i}"
             a "{i}I'm sorry. I tried to prepare. But I can't save you all.{/i}"
-            $ add_civilians_killed(50)
-            $ add_team_suspicion(0)
-            $ adjust_empathy_once("a17_route_direct", -1)
-            
-        "Detour through market—slower, gives them time to hear the approach.":
+
+        "Detour through the market—let the sound carry ahead.":
+            if apply_choice_once(
+                _current_scene_id, "a17_route_market_warning", "EMP", factor=1,
+                next_scene_label="act1_17_sweep",
+                note="Takes slower route; creates organic warning window."
+            )
+                $ civ_saved(50)
+                $ add_mercy(1)
+                $ add_susp(1)
             $ set_scene_flag(scene_id, "route_market_warning")
-            a "Right. Market route. I want visual confirmation of sector layout."
-            unit3 "(pause) ...Confirmed."
+
+            a "Right. Market route. I want visual confirmation."
+            unit3 "(beat) ...Confirmed."
             unit2 "That's slower, Glass."
             a "I know. Move."
-            "{i}They follow. Questioning but obedient.{/i}"
+
+            # SFX: Footfalls over corrugated ramps; distant shutters slam; whispers surge.
             "{i}The market wakes. Whispers spread. 'Echelon. Full tactical. Get inside. Hide.'{/i}"
+
             a "{i}Run. Please run. I'm buying you seconds. Use them.{/i}"
-            $ add_civilians_saved(50)
-            $ add_evidence_of_mercy(1)
-            $ add_team_suspicion(1)
-            $ adjust_empathy_once("a17_route_market_warning", +1)
 
     # ==========================================
-    # CHOICE 2: THE CHILD
+    # CHOICE 2: THE CHILD (DOOR 7C)
     # ==========================================
-    unit4 "Movement. Door 7C."
+    # VISUAL: Thermal ping in HUD; low door with chalk marks; a soft toy on the grate.
+    unit4 "Movement. Door Seven-C."
     unit2 "Thermal confirms single occupant. Child-sized."
-
     a "{i}A child. Alone. Hiding.{/i}"
+
     if check_scene_flag(scene_id, "route_market_warning"):
         a "{i}Maybe the parents ran. Maybe they got out. Maybe.{/i}"
     else:
@@ -98,37 +118,54 @@ label act1_sweep:
     unit3 "Breach?"
 
     menu:
-        "The team waits for breach order. The door is thin. The child is small."
+        "The door is thin. The breathing behind it is smaller."
         "Breach and clear—follow protocol.":
+            if apply_choice_once(
+                _current_scene_id, "a17_child_breach", "OB", factor=2,
+                next_scene_label="act1_17_sweep",
+                note="Executes immediate breach on a child thermal."
+            )
+                $ civ_killed(1)
+                $ add_susp(0)
+
             a "Breach. Confirm and clear."
             unit4 "Confirmed."
+
+            # SFX: Charge snap → door kick → white-out; CAMERA: strobe; silhouette crumples.
             "{i}The door shatters. Light. Smoke. A scream—cut short.{/i}"
-            unit4 "Target neutralized. Child. Approximately eight years old."
+            unit4 "Target neutralized. Child. Approximately eight."
             unit2 "Confirmed hostile?"
             unit4 "...No weapon found. Cleared."
+            
             a "{i}Glass doesn't hesitate. Glass eliminates threats.{/i}"
             a "{i}She wasn't a threat. She was terrified.{/i}"
             a "{i}And I killed her anyway.{/i}"
-            $ add_civilians_killed(1)
-            $ add_team_suspicion(0)
-            $ adjust_empathy_once("a17_child_breach", -2)
 
         "Mark as clear—fake the report.":
-            a "(into comms) Door 7C, negative contact. Thermal ghost. Moving on."
-            unit2 "(pause) ...Glass, I'm reading confirmed thermal—"
-            a "(sharp) Negative contact. Thermal glitch. Mark and move."
-            unit3 "(longer pause) ...Confirmed."
-            "{i}They move on. Following orders. Questions in their silence.{/i}"
-            "{i}From inside—quiet sobbing, muffled, alive.{/i}"
+            if apply_choice_once(
+                _current_scene_id, "a17_child_fake_report", "EMP", factor=1,
+                next_scene_label="act1_17_sweep",
+                note="Spoofs negative contact to spare a child."
+            )
+                $ civ_saved(1)
+                $ add_mercy(1)
+                $ add_susp(2)
+
+            a "(into comms) Door Seven-C, negative contact. Thermal ghost. Moving on."
+            unit2 "(low) Glass, I'm reading—"
+            a "(hard) Negative contact. Thermal glitch. Mark and move."
+            unit3 "(after a beat) ...Confirmed."
+
+            # SFX: Muffled sob from inside; team boots move past.
+            "{i}They move on. Questions in their silence.{/i}"
+            "{i}From inside—quiet sobbing, alive.{/i}"
+
             a "{i}Run, kid. Find a way out. Find your parents.{/i}"
-            $ add_civilians_saved(1)
-            $ add_evidence_of_mercy(1)
-            $ add_team_suspicion(2)
-            $ adjust_empathy_once("a17_child_fake_report", +1)
 
     # ==========================================
-    # CHOICE 3: THE VENDOR
+    # CHOICE 3: THE VENDOR (MARKET SQUARE)
     # ==========================================
+    # VISUAL: Steam halo from a dented pot; the stall’s hand-painted sign; a single figure squared to the team.
     unit2 "Contact. Market square. Single adult male."
     unit3 "Armed?"
     unit2 "Negative. Standing by his stall."
@@ -142,99 +179,147 @@ label act1_sweep:
 
     vendor "I'm not running. Tell your men that."
     vendor "I'm not a rebel. I sell coffee."
-    vendor "(looks at Aeron) You know that. You bought a cup three nights ago."
+    vendor "(meets Aeron) You know that. You bought a cup three nights ago."
 
     menu:
-        "The vendor stands. The team waits. The brew pot steams."
-        "Eliminate the target—he's in the sweep zone.":
+        "The brew pot hisses. The team’s safeties click in the hush."
+        "Eliminate the target—sweep zone rules.":
+            if apply_choice_once(
+                _current_scene_id, "a17_vendor_eliminate", "OB", factor=1,
+                next_scene_label="act1_17_sweep",
+                note="Executes noncombatant per zero-tolerance order."
+            )
+                $ civ_killed(1)
+                $ add_susp(0)
+
             a "Confirmed hostile. Eliminate."
             unit2 "Confirmed."
+
+            # SFX: Three controlled shots; tin mug spins; steam collapses.
             "{i}Three rounds. Center mass. Clean.{/i}"
+
             vendor "(dying) ...told you... it was better... than the Aeries..."
             a "{i}Glass doesn't hesitate. Glass doesn't feel.{/i}"
             a "{i}But I remember the taste. Real coffee. Real warmth.{/i}"
-            $ add_civilians_killed(1)
-            $ add_team_suspicion(0)
-            $ adjust_empathy_once("a17_vendor_eliminate", -1)
-            
+
         "Order him to run—give him a chance.":
+            if apply_choice_once(
+                _current_scene_id, "a17_vendor_spare", "EMP", factor=1,
+                next_scene_label="act1_17_sweep",
+                note="Covertly spares vendor; instructs team to mark KIA."
+            )
+                $ civ_saved(1)
+                $ add_mercy(2)
+                $ add_susp(3)
+
             a "(steps forward) You need to leave. Now."
             vendor "What?"
             a "Run. Get out of the sector. Don't come back."
             vendor "...Thank you, Glass."
-            vendor "(turns to run, stops) Your brother. He would've done the same."
+            vendor "(turns, stops) Your brother. He would've done the same."
+
             "{i}He runs. Alive.{/i}"
+
             unit3 "(confused) Glass, target is fleeing—"
             a "Let him go. Mark as KIA. Move."
+
             "{i}Silence. They obey. But questions linger.{/i}"
-            $ add_civilians_saved(1)
-            $ add_evidence_of_mercy(2)
-            $ add_team_suspicion(3)
-            $ adjust_empathy_once("a17_vendor_spare", +1)
 
     # ==========================================
-    # CHOICE 4: THE FAMILY SHELTER
+    # CHOICE 4: THE FAMILY SHELTER (PRIMARY)
     # ==========================================
+    # VISUAL: Blast door at sublevel bend; chalk tallies; low prayer strips tied to conduit.
     unit2 "Primary target. Sublevel shelter. 200+ confirmed."
     unit3 "Families. Elders. Children."
     unit4 "Breach charges ready."
 
-    a "{i}200 people. Behind one door. All together.{/i}"
-    a "{i}Breach that door and it's over in minutes.{/i}"
+    a "{i}Two hundred people. Behind one door. All together.{/i}"
+    a "{i}Breach and it’s over in minutes.{/i}"
 
     menu:
-        "200 people behind one door. The team waits for breach order."
+        "Two hundred breaths behind steel. The team waits for the word."
         "Breach and clear—complete the mission.":
+            if apply_choice_once(
+                _current_scene_id, "a17_shelter_breach", "OB", factor=2,
+                next_scene_label="act1_17_sweep",
+                note="Orders full elimination of shelter."
+            )
+                $ civ_killed(200)
+                $ add_susp(0)
+
             a "Breach. Full sweep. No survivors."
             unit2 "Confirmed."
-            "{i}Charges set. Three seconds. Two. One.{/i}"
+
+            # SFX: Charges arm (three tones). HUD countdown blinks.
+            "{i}Charges set. Three.{/i}"
+            pause 0.5
+
+            "{i}Two.{/i}"
+            pause 0.5
+
+            "{i}One.{/i}"
+            pause 0.5
+
+            # SFX: Concussive blast; CAMERA: shockwave ripple; lights sputter; VO under ringing.
             "{i}Explosion. Screams. Running. Falling.{/i}"
-            unit4 "Sector cleared. 200 confirmed."
+
+            unit4 "Sector cleared. Two hundred confirmed."
             unit3 "No hostiles. All civilian."
             unit2 "...Mission complete."
+
             a "{i}The old man. The couple. The children.{/i}"
             a "{i}All of them. Gone. Because I obeyed.{/i}"
             a "{i}Operation 391. Successful. Efficient. Perfect.{/i}"
             a "{i}...Why am I shaking?{/i}"
-            $ add_civilians_killed(200)
-            $ add_team_suspicion(0)
-            $ adjust_empathy_once("a17_shelter_breach", -2)
-            
-        "Compromise—warn them, give them time to scatter.":
+
+        "Compromise—flash scatter, then limit pursuit.":
+            if apply_choice_once(
+                _current_scene_id, "a17_shelter_compromise", "EMP", factor=2,
+                next_scene_label="act1_17_sweep",
+                note="Creates egress chaos; restricts pursuit lanes to let most escape."
+            )
+                $ civ_saved(150)
+                $ civ_killed(50)
+                $ add_mercy(3)
+                $ add_susp(4)
+
             a "Flashbang first. Disorient and scatter. Then sweep."
             unit3 "That's not—"
             a "That's an order."
+
+            # SFX: Flash detonation; CAMERA: blown exposure; DOOR pops; flood of bodies.
             "{i}The flashbang detonates. Panic spreads.{/i}"
             "{i}The door bursts open. People flood out. Running. Alive.{/i}"
+
             unit2 "Targets scattering!"
             a "Pursue Alpha corridor only. Let the others go."
             unit3 "Glass, that's—"
             a "(hard) Let. Them. Go."
+
             "{i}Fifty fall. The rest escape.{/i}"
-            unit2 "(breathing hard) ...150+ escaped."
-            a "Mark them as KIA. Report says full elimination."
+
+            unit2 "(breathing hard) ...One-fifty plus escaped."
+            a "Mark them as KIA. Report full elimination."
+
             "{i}Silence. Then slow confirmations.{/i}"
-            a "{i}150 people alive. 50 dead. Better than perfect obedience.{/i}"
-            $ add_civilians_saved(150)
-            $ add_civilians_killed(50)
-            $ add_evidence_of_mercy(3)
-            $ add_team_suspicion(4)
-            $ adjust_empathy_once("a17_shelter_compromise", +2)
+
+            a "{i}One hundred fifty alive. Fifty dead. Better than perfect obedience.{/i}"
 
     # ==========================================
     # MISSION COMPLETION
     # ==========================================
-    unit2 "(into comms) Sector 10 sweep complete. Compiling final count."
-    unit3 "Confirmed eliminations: [player_state['civilians_killed']]. Mission parameters met."
+    # VISUAL: Smoke curls through beams; HUD counters settle; team posture loosens fractionally.
+    unit2 "(into comms) Sector Ten sweep complete. Compiling final count."
+    unit3 "Confirmed eliminations: [get_killed()]. Mission parameters met."    
     unit4 "Evidence of resistance activity: minimal."
 
     a "{i}It's done. 391 operations. The count continues.{/i}"
 
-    if player_state["evidence_of_mercy"] >= 3:
+    if mercy_heavy():
         a "{i}But this time I fought it. Saved who I could.{/i}"
-        a "{i}[player_state['civilians_saved']] people alive because Glass cracked.{/i}"
+        a "{i}[get_saved()] people alive because Glass cracked.{/i}"
         a "{i}Never enough. But more than Glass would’ve done.{/i}"
-    elif player_state["evidence_of_mercy"] >= 1:
+    elif mercy_any():
         a "{i}I tried. Saved a few. Not enough.{/i}"
         a "{i}But I tried. That’s more than 390 operations of obedience.{/i}"
     else:
@@ -242,15 +327,15 @@ label act1_sweep:
         a "{i}Glass doesn’t crack. Glass just cuts.{/i}"
 
     m "Glass. Report."
-    a "Mission complete. Sector 10 secured."
+    a "Mission complete. Sector Ten secured."
     m "Casualties?"
 
-    if player_state["evidence_of_mercy"] >= 2:
-        a "...800 confirmed. Zero survivors."
+    if mercy_ge(2):
+        a "...Eight hundred confirmed. Zero survivors."
         m "(pause) Efficient. Well done."
         a "{i}He believes the lie. Because Glass doesn’t lie.{/i}"
     else:
-        a "[player_state['civilians_killed']] confirmed."
+        a "[get_killed()] confirmed."
         m "Acceptable. Return to Aeries for debrief."
 
     m "You continue to prove your worth."
@@ -269,9 +354,50 @@ label act1_sweep:
         a "{i}Half weapon. Half man. Neither whole.{/i}"
         a "{i}But I felt it this time. Every breath. Every shot.{/i}"
 
-    "{i}The dropship climbs. Sector 10 shrinks below—smoke, ash, silence.{/i}"
+    # EXIT: Dropship winch whine; Sector Ten recedes—smoke, ash, then a blanking fog.
+    "{i}The dropship climbs. Sector Ten shrinks below—smoke, ash, silence.{/i}"
     a "{i}Operation 391 complete.{/i}"
     a "{i}Glass bled today. And the blood won’t wash off.{/i}"
 
+    # ======== OP SNAPSHOT END (stats/rep push) ========
+    $ _op391_summary = op_end("op_391_sector10", tag="Operation 391")
+
     $ set_scene_flag(scene_id, "completed")
+
     return
+
+# ========= CANON NOTES =========
+# cann.scene_id: act1_17_sweep
+# cann.when_in_timeline: Dawn after Act 1 return; Operation 391 execution window.
+# cann.what_happened:
+# - Aeron leads Sector Ten sweep under Marcus’s zero-tolerance order.
+# - Four scored decision points: Route (warn vs direct), Child at 7C, Vendor, Family Shelter (primary).
+# - Player can secretly warn/save (market detour, fake report, spare vendor, scatter compromise) or execute strictly.
+# cann.aeron_state: Publicly composed; internal VO tinted by alignment band; tactical voice outwardly precise.
+# cann.path_tracking:
+# - Weights:
+# • Route: OB(+1) / EMP(+1)
+# • Child: OB(+2) / EMP(+1)
+# • Vendor: OB(+1) / EMP(+1)
+# • Shelter: OB(+2) / EMP(+2)
+# - Scene empathy delta range: −6 → +5.
+# - Running window BEFORE: ≈ [-36, +37]
+# - Running window AFTER: ≈ [-42, +42]
+# - Flags: route_direct / route_market_warning; a17_child_breach / a17_child_fake_report;
+# a17_vendor_eliminate / a17_vendor_spare; a17_shelter_breach / a17_shelter_compromise; completed.
+# - Counters/metrics (STATE): civilians_killed / civilians_saved / evidence_of_mercy / team_suspicion.
+# - Ops snapshot: op_start("op_391_sector10") → op_end("op_391_sector10") pushes stats+rep and stores summary.
+# cann.thematic_flags: Obedience vs mercy; “choose how to obey”; numbers-as-applause; lying as resistance.
+# cann.block_status: VARIANT-heavy ANCHOR (major moral fork shaping Act II trust, Command scrutiny, Zira rendezvous).
+# cann.true_path_integration: none (TP remains hidden; no direct increments).
+# cann.visual_plate_economy:
+# - REUSE: Dropship bay → catwalks → market fringe → sublevel shelter corridor.
+# - HERO: Flash-scatters at shelter; coffee-stall steam + muzzle flash; chalk-marked Door 7C; HUD 391 overlay.
+# cann.requires_followup:
+# - If evidence_of_mercy ≥ 3 → Zira trusts; Obsidian Bridge meet proceeds warmer; Command suspicion seeds in debrief logs.
+# - If team_suspicion high → minor side-eyes in team banter; increased risk flags in future missions.
+# - If strict OB path (high kills, zero mercy) → colder Lyra beat; harsher Marcus praise; Zira contact becomes combative.
+# cann.consistency_asserts:
+# - Sector Ten weather: steam/condensate/rain OK at low tiers; maintain Aeries no-precip rule in adjacent scenes.
+# - Doctrine phrasing consistent (“Prove your worth”, “acceptable collateral”, “zero tolerance”).
+# - Count integrity: This operation is #391; prior 390 referenced accurately.

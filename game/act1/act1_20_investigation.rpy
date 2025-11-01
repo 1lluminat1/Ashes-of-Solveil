@@ -1,8 +1,12 @@
-# act1_20_investigation.rpy
-
 # =======================================================
 # ACT 1 - Scene 20: Investigation - Morning After
+# File: act1_20_investigation.rpy
 # =======================================================
+
+# ========= SCENE START TASKS =========
+$ _current_scene_id = "act1_20_investigation"
+$ scene_mark(_current_scene_id, "entered")
+
 
 label act1_investigation:
 
@@ -100,29 +104,26 @@ label act1_investigation:
     a "{i}Safety protocol is to keep shields UP during repairs...{/i}"
 
     menu:
-        "The energy data sits on screen. Something feels wrong. But what?"
-        "Investigate further—check historical maintenance patterns.":
+        "The energy data sits on screen. Something feels wrong. But what?":
+            "Investigate further—check historical maintenance patterns.":
+                $ record_choice_once(_current_scene_id, "investigated_energy")
+                "{i}Historical maintenance logs. Comparing patterns.{/i}"
+                "{i}Past maintenance: Shields stay active. Repairs done in sections. Never full shutdown.{/i}"
+                "{i}Tonight: All shields offline. All sectors simultaneously. Complete shutdown.{/i}"
 
-            # store as scene flag
-            $ set_scene_flag("act1_20_investigation", "investigated_energy")
+                a "{i}That's not standard. That's not... safe.{/i}"
+                a "{i}Why would they expose three sectors completely?{/i}"
+                a "{i}Unless...{/i}"
+                a "{i}Unless they're not worried about protection. Because nothing's there to protect.{/i}"
+                a "{i}But that doesn't make sense. Thousands of people live in those sectors.{/i}"
+                a "{i}...Don't they?{/i}"
+                a "{i}I'm missing something. But I can't see it.{/i}"
 
-            "{i}Historical maintenance logs. Comparing patterns.{/i}"
-            "{i}Past maintenance: Shields stay active. Repairs done in sections. Never full shutdown.{/i}"
-            "{i}Tonight: All shields offline. All sectors simultaneously. Complete shutdown.{/i}"
-
-            a "{i}That's not standard. That's not... safe.{/i}"
-            a "{i}Why would they expose three sectors completely?{/i}"
-            a "{i}Unless...{/i}"
-            a "{i}Unless they're not worried about protection. Because nothing's there to protect.{/i}"
-            a "{i}But that doesn't make sense. Thousands of people live in those sectors.{/i}"
-            a "{i}...Don't they?{/i}"
-            a "{i}I'm missing something. But I can't see it.{/i}"
-
-        "Dismiss it—too exhausted to think clearly.":
-            $ set_scene_flag("act1_20_investigation", "dismissed_energy")
-            a "{i}I'm too tired for this. Seeing problems where there aren't any.{/i}"
-            a "{i}It's maintenance. Routine. Boring. Nothing to worry about.{/i}"
-            a "{i}I need to stop looking for horror everywhere.{/i}"
+            "Dismiss it—too exhausted to think clearly.":
+                $ record_choice_once(_current_scene_id, "dismissed_energy")
+                a "{i}I'm too tired for this. Seeing problems where there aren't any.{/i}"
+                a "{i}It's maintenance. Routine. Boring. Nothing to worry about.{/i}"
+                a "{i}I need to stop looking for horror everywhere.{/i}"
 
     # ==========================================
     # DISCOVERY 3: MARCUS'S ORDERS
@@ -212,25 +213,24 @@ label act1_investigation:
     a "{i}...Doesn't it?{/i}"
 
     menu:
-        "The data sits there. Pieces scattered. Picture incomplete. Dread building."
-        "Keep digging—try to find the full picture.":
+        "The data sits there. Pieces scattered. Picture incomplete. Dread building.":
 
-            $ set_scene_flag("act1_20_investigation", "kept_investigating")
+            "Keep digging—try to find the full picture.":
+                $ record_choice_once(_current_scene_id, "kept_investigating")
+                "{i}He searches. Hours pass. Data upon data. Fragments. Pieces.{/i}"
+                "{i}But the picture won't form. Too classified. Too compartmentalized.{/i}"
+                a "{i}I can't find it. Whatever's happening, it's locked down tight.{/i}"
+                a "{i}Only Marcus knows. And he's not telling Glass.{/i}"
+                a "{i}He wants me to watch. To witness. To learn something.{/i}"
+                a "{i}But what?{/i}"
+                a "{i}I can't do this. I need air. I need to think.{/i}"
 
-            "{i}He searches. Hours pass. Data upon data. Fragments. Pieces.{/i}"
-            "{i}But the picture won't form. Too classified. Too compartmentalized.{/i}"
-            a "{i}I can't find it. Whatever's happening, it's locked down tight.{/i}"
-            a "{i}Only Marcus knows. And he's not telling Glass.{/i}"
-            a "{i}He wants me to watch. To witness. To learn something.{/i}"
-            a "{i}But what?{/i}"
-            a "{i}I can't do this. I need air. I need to think.{/i}"
-
-        "Stop investigating—too exhausted to continue.":
-            $ set_scene_flag("act1_20_investigation", "stopped_investigating")
-            a "{i}I can't. I'm too tired. Too broken.{/i}"
-            a "{i}Whatever's happening... I'll find out at 2000 hours.{/i}"
-            a "{i}Marcus wants me on command deck. I'll see it then.{/i}"
-            a "{i}Right now I just need... air. Space. Distance from all of this.{/i}"
+            "Stop investigating—too exhausted to continue.":
+                $ record_choice_once(_current_scene_id, "stopped_investigating")
+                a "{i}I can't. I'm too tired. Too broken.{/i}"
+                a "{i}Whatever's happening... I'll find out at 2000 hours.{/i}"
+                a "{i}Marcus wants me on command deck. I'll see it then.{/i}"
+                a "{i}Right now I just need... air. Space. Distance from all of this.{/i}"
 
     # ==========================================
     # DECISION TO GO TO ROOFTOP
@@ -263,6 +263,31 @@ label act1_investigation:
     a "{i}Maybe I need to make mine.{/i}"
 
     # Bookkeeping
-    $ set_scene_flag("act1_20_investigation", "completed")
-
+    $ set_scene_flag(_current_scene_id, "completed")
     return
+
+
+# ========= CANON NOTES =========
+# cann.scene_id: act1_20_investigation
+# cann.when_in_timeline: Morning/afternoon after Sector 10 sweep; before 20:00 “Project Renewal” observation.
+# cann.what_happened:
+#   - Processes aftermath; device vs. official-feed fork; confirms survivor chatter and grid anomaly.
+#   - Marcus assigns OBSERVER role for Project Renewal; troops evacuated; civilians shelter-in-place.
+# cann.aeron_state: Exhausted; denial→dread; cognition > action.
+# cann.path_tracking:
+#   - Choices are record-only (no momentum):
+#       • record_choice_once("investigated_energy" | "dismissed_energy")
+#       • record_choice_once("kept_investigating" | "stopped_investigating")
+#   - Scene empathy delta: **0**.
+#   - Running window BEFORE:   **≈ [-55, +57]**
+#   - Running window AFTER:    **≈ [-55, +57]** (unchanged)
+# cann.thematic_flags: Seeing vs doing; compartmentalization; denial as armor.
+# cann.block_status: ANCHOR (Act I setup for command deck/rooftop).
+# cann.true_path_integration: none.
+# cann.visual_plate_economy:
+#   - REUSE Aeries apartment master; UI plates (encrypted vs official), grid map 8–10 offline, secure-call frame.
+# cann.requires_followup:
+#   - Route to rooftop reflection, then command-deck observation at 20:00.
+# cann.consistency_asserts:
+#   - Aeries altitude weather grammar only (no rain).
+#   - Keep Marcus phrasing consistent (“observation only”, “perfection”).

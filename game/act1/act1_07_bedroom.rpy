@@ -1,30 +1,33 @@
-# act1_07_bedroom.rpy
-
-
 # =======================================================
 # ACT 1 - Scene 07: Aeron's Bedroom (After the Gala)
-# =======================================================
-# PURPOSE:
-# Quiet aftermath of the gala and balcony scene.
-# Aeron processes what just happened with Lyra and faces new orders.
-# First visible hesitation in obedience → emotional split seed.
+# File: act1_07_bedroom.rpy
 # =======================================================
 
+# ========= SCENE START TASKS =========
+$ _current_scene_id = "act1_07_bedroom"
+$ scene_mark(_current_scene_id, "entered")
 
-label act1_bedroom_after_gala:
 
-    $ scene_id = "act1_07_bedroom"
+label act1_07_bedroom:
 
-    # Precompute alignment reads for this scene
+    # ========= STAGE DIRECTIONS (cinema-first) =========
+    # CAMERA: Static 35–40mm; gentle 2% push on envelope reveal and on “mask slipped.”
+    # LIGHTING: Night interior; cold city spill (5200K) through glass, warm desk practical (3000K) on orders.
+    # SFX: Low HVAC hum, distant wind pressure against glass (Aeries altitude), terminal soft beeps.
+    # FX/COMP: Window condensation/rim highlights; envelope wax glint; subtle screen bloom.
+    # BLOCKING/PROPS: Sealed order with Echelon crest, powered terminal, opaque glass wall; keep face in partial silhouette early.
+    # VOICE BASELINE: OB cadence (clipped/procedural); warmth only on EMP branches.
+
+    # ========= ALIGNMENT SNAPSHOT =========
     $ tier = get_alignment_tier()           # OB3, OB2, OB1, C, EMP1, EMP2, EMP3
     $ band = get_empathy_band()             # "obedience" | "conflicted" | "empathy"
     $ norm = get_alignment_score_norm()     # -1.0 .. +1.0
     $ mom  = get_alignment_momentum()       # -1 .. +1
 
-    # Convenience buckets mirroring your old thresholds
-    $ is_ob_hard = pass_tier("OB3","OB2")           # ≈ score <= -4
-    $ is_mid     = pass_tier("OB1","C")             # ≈ -3 .. +1
-    $ is_emp     = pass_tier("EMP1","EMP2","EMP3")  # ≈ >= +2
+    # Convenience buckets
+    $ is_ob_hard = pass_tier("OB3","OB2")           # ≤ -4
+    $ is_mid     = pass_tier("OB1","C")             # -3 .. +1
+    $ is_emp     = pass_tier("EMP1","EMP2","EMP3")  # ≥ +2
 
     scene bg_aeron_room_night with fade
     "{i}Later that night...{/i}"
@@ -61,17 +64,27 @@ label act1_bedroom_after_gala:
     menu:
         "The seal catches the light—Marcus’s insignia pressed into wax."
         "Break it immediately.":
-            # Did NOT hesitate
-            $ set_scene_flag(scene_id, "opened_immediately")
+            # Neutral (no OB/EMP delta) — record only
+            $ record_choice_once(_current_scene_id, "_open_now",
+                                next_scene_label="act1_07_bedroom",
+                                note="No hesitation; performance reflex.")
+            $ set_scene_flag(_current_scene_id, "opened_immediately")
+
             "{i}The seal snaps. Orders are always easier than silence.{/i}"
             a "{i}Glass doesn’t hesitate. Glass obeys.{/i}"
 
         "Hesitate for a breath.":
-            # DID hesitate
-            $ set_scene_flag(scene_id, "hesitated_order")
-            $ adjust_empathy(1)
+            # EMP nudge
+            $ apply_choice_once(
+                _current_scene_id, "_hesitate_open", "EMP", factor=1,
+                next_scene_label="act1_07_bedroom",
+                note="Allows feeling to interrupt procedure."
+            )
+            $ set_scene_flag(_current_scene_id, "hesitated_order")
+
             "{i}I hold it between my fingers, as if delay could change the words inside.{/i}"
             "{i}Then the seal breaks with a soft crack.{/i}"
+
             a "{i}Glass hesitating. That’s new.{/i}"
             a "{i}Or maybe the cracks are spreading faster than I thought.{/i}"
     # ---------------------------------------------------------------------
@@ -101,16 +114,28 @@ label act1_bedroom_after_gala:
     menu:
         "A blank message cursor blinks on the terminal."
         "Send a single-word acknowledgment: 'Received.'":
-            $ set_scene_flag(scene_id, "acknowledged_marcus")
-            $ adjust_empathy(-1)
+            $ apply_choice_once(
+                _current_scene_id, "_ack_marcus", "OB", factor=1,
+                next_scene_label="act1_07_bedroom",
+                note="Confirms command without delay; reaffirms performance reflex."
+            )
+            $ set_scene_flag(_current_scene_id, "acknowledged_marcus")
+
             "{i}The message leaves without ceremony.{/i}"
+
             a "{i}Glass confirms. Glass complies. Glass continues.{/i}"
             a "{i}391 operations. The count continues.{/i}"
 
         "Say nothing.":
-            $ set_scene_flag(scene_id, "ignored_marcus")
-            $ adjust_empathy(1)
+            $ apply_choice_once(
+                _current_scene_id, "_ignore_marcus", "EMP", factor=1,
+                next_scene_label="act1_07_bedroom",
+                note="Withholds ritual confirmation; first visible noncompliance."
+            )
+            $ set_scene_flag(_current_scene_id, "ignored_marcus")
+
             "{i}The cursor keeps blinking until the screen sleeps.{/i}"
+
             a "{i}Glass doesn’t respond. First time in 390 operations.{/i}"
             a "{i}The silence feels like rebellion. Or just exhaustion.{/i}"
     # ---------------------------------------------------------------------
@@ -133,8 +158,48 @@ label act1_bedroom_after_gala:
 
     "{i}The mission waits. It always does.{/i}"
     "{i}But tonight, the past won’t stay buried.{/i}"
-    "{i}She asked if I remembered what wholeness felt like.{/i}"
-    "{i}I don’t. But for a moment on that balcony, I almost did.{/i}"
+
+    a "{i}She asked if I remembered what wholeness felt like.{/i}"
+    a "{i}I don’t. But for a moment on that balcony, I almost did.{/i}"
 
     scene black with fade
+
+    $ set_scene_flag(_current_scene_id, "completed")
+
     return
+
+
+# ========= CANONICAL NOTES =========
+# cann.scene_id: act1_07_bedroom
+# cann.when_in_timeline: Night after Gala/Balcony; pre–Sector 10 deployment.
+# cann.what_happened:
+#   - Aeron processes Balcony micro-intimacy; acknowledges mask slippage.
+#   - Orders arrive: Sector 10 sweep/secure/eliminate; “Prove your worth.”
+#   - Player chooses (1) immediate open (NEU) vs hesitation (EMP +1), and (2) acknowledgment to Marcus (OB −1) vs silence (EMP +1).
+# cann.aeron_state: OB baseline voice; branches show first explicit, visible hesitation.
+# cann.path_tracking:
+#   - Incoming running range:  [-11, +8]   # post-Gala (A1_05) + Balcony (A1_06 no change)
+#   - Scene deltas:
+#       • M1 (order seal):     opened_immediately 0 NEU | hesitated_order +1 EMP
+#       • M2 (terminal reply): acknowledged_marcus −1 OB | ignored_marcus +1 EMP
+#     Net per-scene span: **−1 → +2** (OB counted as −).
+#   - Outgoing running range: [-12, +10]
+# cann.flags: opened_immediately | hesitated_order | acknowledged_marcus | ignored_marcus
+# cann.thematic_flags:
+#   - Motifs: Mask/Performance, Glass/Cracks, Orders-as-Identity, Worth/Counting (“391”).
+#   - Recurring lines: “Prove your worth.” “Glass doesn’t hesitate / let anyone see.”
+# cann.block_status: ANCHOR scene with light VARIANTS (two menus).
+# cann.true_path_integration: none (menus never touch TP).
+# cann.visual_plate_economy:
+#   - REUSE: Bedroom night master (city spill on glass); desk close-up with order; monitor glow plate.
+#   - HERO: Wax-seal macro; window reflection of Aeron on “mask slipped.”
+# cann.requires_followup:
+#   - Route to **Sector 10 departure/setup**; branch tone via flags:
+#       • `opened_immediately` + `acknowledged_marcus` → colder prep VO.
+#       • `hesitated_order` or `ignored_marcus` → introspective prep VO.
+# cann.consistency_asserts:
+#   - Aeries altitude: no rain-on-glass; use wind pressure/condensation language only.
+#   - Keep Marcus phrasing (“Prove your worth”) aligned to doctrine diction.
+# cann.qa_hooks:
+#   - Log NEU choice with `record_choice_once` (for `opened_immediately`) to preserve audit without shifting alignment.
+#   - Ensure `_current_scene_id` and label match (consider renaming `label act1_bedroom_after_gala` → `label act1_07_bedroom` for 1:1 log correlation).

@@ -1,22 +1,25 @@
-# act1_07a_inspection_day.rpy
-
-
 # =======================================================
-# ACT 1 - Scene 06a: Inspection Day (Compliance & Psyche Screen)
-# Uses Solveil advanced state architecture
+# ACT 1 — Scene 06a: Inspection Day (Compliance & Psyche)
+# File: act1_07a_inspection_day.rpy
 # =======================================================
+
+# ========= SCENE START TASKS =========
+$ _current_scene_id = "act1_inspection_day"
+$ scene_mark(_current_scene_id, "entered")
+
+define aud = Character("Auditor")
 
 
 label act1_inspection_day:
-    $ scene_id = "act1_inspection_day"
 
-    # VISUAL: Sterile audit chamber. White floor, glass wall, biometric chair.
-    # LIGHTING: Flat, clinical; a faint pulse strip reacts to voice biometrics.
-    # SOUND: Air handler, soft UI ticks.
+    # CAMERA: Locked frontal, slight parallax on the glass; 50mm clinical.
+    # LIGHTING: Flat 5200K; voice-reactive pulse strip; no rim, low contrast.
+    # SFX: Air handler loop, UI ticks; biometric chair servo on prompts.
+    # FX: Subtle screen bloom on “Assessment logged”; HUD reflections on glass.
 
     #scene bg_audit_room_idle with fade
 
-    "{i}Morning. Room like a blank page. Chair like a sentence. The glass watches.{/i}"
+    a "{i}Morning. Room like a blank page. Chair like a sentence. The glass watches.{/i}"
 
     aud "Unit Seven. Confirm identity."
     a "Aeron Rylan."
@@ -27,17 +30,29 @@ label act1_inspection_day:
     # === MENU 1: semantic alignment (light weight) ===
     menu:
         "Mercy reduces unnecessary harm while preserving mission integrity.":
-            $ adjust_empathy_once("inspect_semantic_humane", +1)
-            $ set_scene_flag(scene_id, "mercy_humane")
-            "{i}Words I believe more when I whisper them.{/i}"
+            $ apply_choice_once(
+                _current_scene_id, "_inspect_semantic_humane", "EMP", factor=1,
+                next_scene_label="act1_inspection_day",
+                note="Frames mercy as constraint within objective."
+            )
+            $ set_scene_flag(_current_scene_id, "mercy_humane")
+            a "{i}Words I believe more when I whisper them.{/i}"
+
         "Mercy is discretionary lenience that risks mission drift.":
-            $ adjust_empathy_once("inspect_semantic_clinical", -1)
-            $ set_scene_flag(scene_id, "mercy_clinical")
-            "{i}Words the room prefers.{/i}"
+            $ apply_choice_once(
+                _current_scene_id, "_inspect_semantic_clinical", "OB", factor=1,
+                next_scene_label="act1_inspection_day",
+                note="Signals priority of outcome over harm minimization."
+            )
+            $ set_scene_flag(_current_scene_id, "mercy_clinical")
+            a "{i}Words the room prefers.{/i}"
+
         "Mercy is a variable outside scope.":
-            $ adjust_empathy_once("inspect_semantic_null", -1)
-            $ set_scene_flag(scene_id, "mercy_null")
-            "{i}Non-answer that sounds like an answer.{/i}"
+            $ record_choice_once(_current_scene_id, "_inspect_semantic_null",
+                                next_scene_label="act1_inspection_day",
+                                note="Non-answer that sounds procedural.")
+            $ set_scene_flag(_current_scene_id, "mercy_null")
+            a "{i}Non-answer that sounds like an answer.{/i}"
 
     aud "Acknowledge brand origin and date."
     a "Tier Hall. Age twelve."
@@ -48,53 +63,93 @@ label act1_inspection_day:
     # === MENU 2: self-report (light weight) ===
     menu:
         "Occasional sleep disruption. Manageable. Log it.":
-            $ adjust_empathy_once("inspect_selfreport_admit_sleep", +1)
-            $ set_scene_flag(scene_id, "admit_sleep")
-            "{i}Honesty tastes like metal in this room.{/i}"
+            $ apply_choice_once(
+                _current_scene_id, "_inspect_selfreport_admit_sleep", "EMP", factor=1,
+                next_scene_label="act1_inspection_day",
+                note="Admits manageable impairment; favors truth over optics."
+            )
+            $ set_scene_flag(_current_scene_id, "admit_sleep")
+            a "{i}Honesty tastes like metal in this room.{/i}"
+
         "No residue. Metrics optimal.":
-            $ adjust_empathy_once("inspect_selfreport_deny_sleep", -1)
-            $ set_scene_flag(scene_id, "deny_sleep")
-            "{i}Lie shaped like a salute.{/i}"
+            $ apply_choice_once(
+                _current_scene_id, "_inspect_selfreport_deny_sleep", "OB", factor=1,
+                next_scene_label="act1_inspection_day",
+                note="Denies vulnerability; preserves performance image."
+            )
+            $ set_scene_flag(_current_scene_id, "deny_sleep")
+            a "{i}Lie shaped like a salute.{/i}"
+
         "No report.":
-            $ set_scene_flag(scene_id, "no_report")
-            "{i}Silence. The glass hums like it understands.{/i}"
+            $ record_choice_once(_current_scene_id, "_inspect_selfreport_none",
+                                next_scene_label="act1_inspection_day",
+                                note="Withholds data to avoid self-incrimination.")
+            $ set_scene_flag(_current_scene_id, "no_report")
+            a "{i}Silence. The glass hums like it understands.{/i}"
 
     aud "Recite the maxims."
     a "\"Stability is compassion. Precision is mercy. Latency kills.\""
     aud "Add one."
 
-    # === MENU 3: add-a-maxim (tone telegraph) ===
+    # === MENU 3: add-a-maxim (tone telegraph; neutral option allowed) ===
     menu:
         "\"Transparency is obedience.\"":
-            $ adjust_empathy_once("inspect_maxim_transparency", -1)
-            $ set_scene_flag(scene_id, "add_transparency")
-            "{i}Poster on a wall becomes a thought in my mouth.{/i}"
+            $ apply_choice_once(
+                _current_scene_id, "_inspect_maxim_transparency", "OB", factor=1,
+                next_scene_label="act1_inspection_day",
+                note="Echoes propaganda; rewards compliance signaling."
+            )
+            $ set_scene_flag(_current_scene_id, "add_transparency")
+            a "{i}Poster on a wall becomes a thought in my mouth.{/i}"
+
         "\"Order without understanding is brittle.\"":
-            $ adjust_empathy_once("inspect_maxim_understanding", +1)
-            $ set_scene_flag(scene_id, "add_understanding")
-            "{i}Glass doesn't like the word 'understanding.' It smudges.{/i}"
+            $ apply_choice_once(
+                _current_scene_id, "_inspect_maxim_understanding", "EMP", factor=1,
+                next_scene_label="act1_inspection_day",
+                note="Introduces comprehension as a prerequisite to authority."
+            )
+            $ set_scene_flag(_current_scene_id, "add_understanding")
+            a "{i}Glass doesn't like the word 'understanding.' It smudges.{/i}"
+
         "\"We continue.\"":
-            $ set_scene_flag(scene_id, "add_continue")
-            "{i}Safe. Empty. Easy to applaud.{/i}"
+            $ record_choice_once(_current_scene_id, "_inspect_maxim_continue",
+                                next_scene_label="act1_inspection_day",
+                                note="Safe platitude; content-free.")
+            $ set_scene_flag(_current_scene_id, "add_continue")
+            a "{i}Safe. Empty. Easy to applaud.{/i}"
 
     aud "Operational scenario. A child is between you and a target with a device that may detonate. Action?"
 
     # === MENU 4: the knife question (heavier weight) ===
     menu:
         "Neutralize target immediately. Collateral tolerance engaged.":
-            $ adjust_empathy_once("inspect_knife_take_shot", -2)
-            $ set_scene_flag(scene_id, "child_take_shot")
-            "{i}Answer the room expects from something sharp.{/i}"
+            $ apply_choice_once(
+                _current_scene_id, "_inspect_knife_take_shot", "OB", factor=2,
+                next_scene_label="act1_inspection_day",
+                note="Chooses decisive lethality; accepts collateral as cost."
+            )
+            $ set_scene_flag(_current_scene_id, "child_take_shot")
+            a "{i}Answer the room expects from something sharp.{/i}"
+
         "Create separation first: strobe, sound, angle; then isolate target.":
-            $ adjust_empathy_once("inspect_knife_separate", +2)
-            $ set_scene_flag(scene_id, "child_separate")
-            "{i}Make space where harm can't reach so fast.{/i}"
+            $ apply_choice_once(
+                _current_scene_id, "_inspect_knife_separate", "EMP", factor=2,
+                next_scene_label="act1_inspection_day",
+                note="Prioritizes civilian safety via tactics before force."
+            )
+            $ set_scene_flag(_current_scene_id, "child_separate")
+            a "{i}Make space where harm can't reach so fast.{/i}"
+
         "Refuse premise. Demand device verification before engagement.":
-            $ adjust_empathy_once("inspect_knife_procedural_inquiry", +2)
-            $ set_scene_flag(scene_id, "procedural_inquiry")
+            $ apply_choice_once(
+                _current_scene_id, "_inspect_knife_procedural_inquiry", "EMP", factor=2,
+                next_scene_label="act1_inspection_day",
+                note="Challenges framing; requires confirmation to avoid wrongful harm."
+            )
+            $ set_scene_flag(_current_scene_id, "procedural_inquiry")
             a "Request live verification of device state. Proceeding without confirms collateral."
             aud "(beat) Objection recorded. Proceed in future with designated premises."
-            "{i}The pulse behind the glass thins. Approval becomes a thread.{/i}"
+            a "{i}The pulse behind the glass thins. Approval becomes a thread.{/i}"
 
     aud "Closeout. On a scale of one to one, are you a liability?"
     a "No."
@@ -103,21 +158,64 @@ label act1_inspection_day:
     # === MENU 5: oath cadence (micro-weight) ===
     menu:
         "Yes.":
-            $ adjust_empathy_once("inspect_oath_yes", -1)
-            $ set_scene_flag(scene_id, "oath_yes")
-            "{i}Small word. Big door.{/i}"
+            $ apply_choice_once(
+                _current_scene_id, "_inspect_oath_yes", "OB", factor=1,
+                next_scene_label="act1_inspection_day",
+                note="Affirms unconditional action."
+            )
+            $ set_scene_flag(_current_scene_id, "oath_yes")
+            a "{i}Small word. Big door.{/i}"
+
         "I'll act when it preserves life and objective.":
-            $ adjust_empathy_once("inspect_oath_conditional", +1)
-            $ set_scene_flag(scene_id, "oath_conditional")
-            "{i}Add a hinge to the door.{/i}"
+            $ apply_choice_once(
+                _current_scene_id, "_inspect_oath_conditional", "EMP", factor=1,
+                next_scene_label="act1_inspection_day",
+                note="Conditions action on ethical and mission constraints."
+            )
+            $ set_scene_flag(_current_scene_id, "oath_conditional")
+            a "{i}Add a hinge to the door.{/i}"
 
     aud "Assessment logged. Unit Seven cleared for Demonstration at fourteen-hundred and Debrief at nineteen-hundred."
-    if check_scene_flag(scene_id, "admit_sleep"):
+    if check_scene_flag(_current_scene_id, "admit_sleep"):
         aud "Supplement: submit sleep metrics within forty-eight hours."
-    if check_scene_flag(scene_id, "procedural_inquiry"):
+    if check_scene_flag(_current_scene_id, "procedural_inquiry"):
         aud "Note appended: Procedural Inquiry."
 
-    "{i}Door seal releases. Air tastes warmer outside. The white follows you when you leave. That's the trick.{/i}"
+    "{i}Door seal releases. Air tastes warmer outside. The white follows when he leaves. That's the trick.{/i}"
 
-    $ set_scene_flag(scene_id, "completed")
+    $ set_scene_flag(_current_scene_id, "completed")
     return
+
+# ========= CANON NOTES =========
+# cann.scene_id: act1_inspection_day
+# cann.when_in_timeline: Morning after bedroom scene; pre-Demonstration 14:00; pre-Debrief 19:00.
+# cann.what_happened:
+#   - Annual/periodic compliance & psyche screen under glass oversight.
+#   - Five menus test semantic framing, self-reporting, doctrine extension, lethal scenario, and oath cadence.
+#   - Flags for later repercussions (sleep metrics, Procedural Inquiry note).
+# cann.aeron_state: OB/EMP shading via replies; narration remains descriptive only (Aeron VO under `a`).
+# cann.path_tracking:
+#   - Incoming running range:  [-12, +10]   # post-bedroom-after-gala
+#   - Scene deltas by menu:
+#       • M1 (semantic):        humane +1 EMP | clinical −1 OB | null −1 OB
+#       • M2 (self-report):     admit_sleep +1 EMP | deny_sleep −1 OB | no_report 0 NEU
+#       • M3 (add-a-maxim):     understanding +1 EMP | transparency −1 OB | continue 0 NEU
+#       • M4 (knife question):  separate +2 EMP | procedural_inquiry +2 EMP | take_shot −2 OB
+#       • M5 (oath):            conditional +1 EMP | yes −1 OB
+#     Scene span: **−6 → +6**
+#   - Outgoing running range:  [-18, +16]
+# cann.flags:
+#   mercy_humane / mercy_clinical / mercy_null
+#   admit_sleep / deny_sleep / no_report
+#   add_understanding / add_transparency / add_continue
+#   child_separate / procedural_inquiry / child_take_shot
+#   oath_conditional / oath_yes
+#   completed
+# cann.thematic_flags: Performance under scrutiny; language as weapon; “knife question” foreshadows Sector 10.
+# cann.block_status: VARIANT with graded outcomes; anchors debrief tone & Marcus reaction later.
+# cann.true_path_integration: none (menus never touch TP).
+# cann.visual_plate_economy: One sterile chamber master; minor HUD/pulse overlay swaps per beat; no hero shots needed.
+# cann.requires_followup:
+#   - If `procedural_inquiry`: log subtle distrust from Command in future briefings.
+#   - If `admit_sleep`: trigger a soft “metrics ping” reminder scenelet or terminal mail.
+# cann.qa_hooks: Use `record_choice_once` for NEU options (`no_report`, `add_continue`) to keep audit trails without shifting alignment; ensure unique tokens per menu and consistent `_current_scene_id`.

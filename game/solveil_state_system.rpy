@@ -181,6 +181,40 @@ init python:
     def add_susp(n=1):    STATE["player"]["team_suspicion"] += n
 
     # =========================
+    # PLAYER VALUE GETTERS
+    # =========================
+    python early:
+        def get_saved() -> int:
+            return max(0, STATE["player"].get("civilians_saved", 0))
+
+        def get_killed() -> int:
+            return max(0, STATE["player"].get("civilians_killed", 0))
+
+        def get_mercy() -> int:
+            return max(0, STATE["player"].get("evidence_of_mercy", 0))
+
+        def get_suspicion() -> int:
+            return max(0, STATE["player"].get("team_suspicion", 0))
+
+        # Convenience thresholds
+        def mercy_ge(n: int) -> bool:
+            return get_mercy() >= n
+
+        def mercy_any() -> bool:
+            return get_mercy() >= 1
+
+        def mercy_heavy() -> bool:
+            return get_mercy() >= 3
+
+        # Optional: small formatter helpers if you prefer explicit strings in text tags
+        def saved_str() -> str:
+            return str(get_saved())
+
+        def killed_str() -> str:
+            return str(get_killed())
+
+
+    # =========================
     # ALIGNMENT / EMP–OB
     # =========================
     USE_EMPATHY_CLAMP = False     # Toggle: set True to enforce rails

@@ -1,13 +1,14 @@
-# act_12_lyra_visit.rpy
-
-
 # ======================================================
 # ACT 1 - Scene 12: Lyra's Visit (Empathy-Integrated)
+# File: act1_12_lyra_visit.rpy
 # ======================================================
+
+# ========= SCENE START TASKS =========
+$ _current_scene_id = "act1_12_lyra_visit"
+$ scene_mark(_current_scene_id, "entered")
 
 
 label act1_lyra_visit:
-    $ scene_id = "act1_12_lyra_visit"
 
     # Precompute alignment reads for light flavor only (no momentum here)
     $ tier = get_alignment_tier()                  # OB3..EMP3
@@ -15,18 +16,24 @@ label act1_lyra_visit:
     $ is_mid     = pass_tier("OB1","C")           # ≈ -3..+1
     # empathy side = else
 
-    # VISUAL: Door in frame left; balcony open; ash thread in air.
-    # SOUND: Room hush; distant gala muffled by height.
+    # VISUAL: Door frame left; balcony door cracked open frame right; faint ash ribbon drifting inward.
+    # LIGHTING: Corridor spill warm; interior cooler cyan from skyline; slow moving city strip across floor.
+    # SFX: Distant city wind through facade fins; building ventilation hush; muffled high-tier traffic.
 
     "{i}Another knock. Softer. Patient.{/i}"
-    a "{i}...Lyra?{/i}"
-    "{i}He crosses the room and opens the door.{/i}"
 
-    # LIGHTING: Corridor spill on Lyra; interior cooler.
+    a "{i}...Lyra?{/i}"
+
+    "{i}He crosses the room and opens the door.{/i}"
+    # CAMERA: Over-shoulder on Aeron; reveal Lyra in corridor half-profile.
+
+    # LIGHTING: Warm corridor rim on Lyra; Aeron in cooler backlight.
     l "You look like hell."
     a "(tries a smile) You should see the other guy."
-    a "{i}The joke falls flat. Her smile doesn't reach her eyes.{/i}"
-    a "{i}She didn't come for me. She came because she couldn't be alone.{/i}"
+
+    "{i}The joke dies halfway out. Her smile doesn't reach her eyes.{/i}"
+    "{i}She didn’t come for laughter. She came because silence was worse.{/i}"
+
     l "(arches a brow) Not amusing."
     l "Glass is cracking. Badly."
     a "How did you know I'd be—"
@@ -38,8 +45,11 @@ label act1_lyra_visit:
     a "(freezes) You saw."
     l "I see everything, Aeron. Especially when Glass thinks no one is watching."
 
+    # BLOCKING: Lyra glides past; perches on desk corner; keeps him in peripheral.
     l "(perches on the desk) I needed out of that gala. All those smiles felt like knives."
+
     "{i}He lights her cigarette. Their fingers brush.{/i}"
+
     a "(quietly) Thanks for knocking."
     l "(studies him) You're shaking."
     a "Cold air. Nothing more."
@@ -47,22 +57,25 @@ label act1_lyra_visit:
 
     "{i}Silence settles—thin, tight.{/i}"
 
-    # ------------------------------------------------------
-    # EMPATHY VARIATION — Aeron's guardedness
-    # ------------------------------------------------------
+    # CAMERA: Two-shot in profile; balcony haze behind.
+
+    # ---------- EMPATHY VARIATION — Aeron's guardedness ----------
+    # LIGHTING: OB-hard keeps him in silhouette; mid adds faint fill; empathy gets a soft rim off the skyline.
     if is_ob_hard:
         a "{i}Connection is inefficiency. She should've stayed away.{/i}"
     elif is_mid:
         a "{i}Part of me wants her to leave. Part of me doesn't.{/i}"
     else:
         a "{i}Her voice sounds like the first warm thing I've heard in years.{/i}"
-    # ------------------------------------------------------
+    # -------------------------------------------------------------
 
     l "You don't have to keep doing this."
     a "Doing what?"
     l "Carrying everything alone. Pretending you're made of stone."
     l "Pretending you're made of Glass."
-    a "{i}Her words land heavier than she knows.{/i}"
+
+    "{i}Her words land heavier than she knows.{/i}"
+
     a "(looks away) Stones don't crack. People do."
     l "(softly) Glass cracks too. And you're not Glass, Aeron."
     a "Everyone says I am. Father made me Glass."
@@ -73,6 +86,8 @@ label act1_lyra_visit:
 
     "{i}Neon washes the room; neither speaks for a beat.{/i}"
 
+    # FX: Slow moving cyan/pink spill across floor.
+
     a "390 operations. Ten years of being Glass."
     a "When did I start feeling it again?"
     l "Perhaps you never stopped. Perhaps you were just very good at lying to yourself."
@@ -82,6 +97,11 @@ label act1_lyra_visit:
     # ======================================================
     menu:
         "Tell her to leave":
+            $ apply_choice_once(
+                _current_scene_id, "lyra_visit_tell_leave", "OB", factor=1,
+                next_scene_label="act1_12_lyra_visit",
+                note="Pushes Lyra away; preserves mask; OB-lean."
+            )
             $ set_scene_flag(scene_id, "told_her_to_leave")
 
             a "It's late. You shouldn't be here."
@@ -92,8 +112,14 @@ label act1_lyra_visit:
             "{i}The door clicks. Quiet returns.{/i}"
             a "{i}She sees it. The cracks. The breaking.{/i}"
             a "{i}Maybe that's why she came.{/i}"
+            # VISUAL: Corridor warm spill disappears; room cools another notch.
 
         "Let Lyra stay":
+            $ apply_choice_once(
+                _current_scene_id, "lyra_visit_let_stay", "EMP", factor=1,
+                next_scene_label="act1_12_lyra_visit",
+                note="Allows proximity; admits need; EMP-lean."
+            )
             $ add_affection("Lyra", 1)
             $ set_scene_flag(scene_id, "let_her_stay")
 
@@ -105,22 +131,23 @@ label act1_lyra_visit:
 
             "{i}The city hum fades; slower quiet replaces it.{/i}"
 
-            # ------------------------------------------------------
-            # EMPATHY VARIATION — Tone of connection
-            # ------------------------------------------------------
+            # SFX: Wind dips 3 dB; room tone closer.
+
+            # ---------- EMPATHY VARIATION — Tone of connection ----------
             if is_ob_hard:
                 a "{i}This is proximity, not comfort. I know the difference.{/i}"
             elif is_mid:
                 a "{i}I should tell her to go. I don't.{/i}"
             else:
                 a "{i}For the first time, being seen doesn't hurt.{/i}"
-            # ------------------------------------------------------
+            # ------------------------------------------------------------
 
             a "You ever wonder if any of this means anything?"
             l "(arches a brow) Define 'this.'"
             a "Solveil. Echelon. The theater we keep playing."
             l "(dry) Only every waking moment."
-            a "{i}He almost laughs. It dies halfway out.{/i}"
+
+            "{i}He almost laughs. It dies halfway out.{/i}"
 
             a "You're lucky. They see purpose when they look at you."
             l "(faint) You think that's luck?"
@@ -136,11 +163,14 @@ label act1_lyra_visit:
             l "(looks at him directly) It was meant to be."
 
             "{i}She stands. Moves to the window. Puts space between them like armor.{/i}"
+
             l "They sent me to evaluate a residential block. Efficiency metrics. Loyalty indexes."
             a "Sounds routine."
             l "It was. Until I found the children."
 
-            "{i}Her reflection fractures in the rain-streaked glass.{/i}"
+            # WEATHER GRAMMAR: No rain at Aeries altitude; use wind/condensation.
+            "{i}Her reflection fractures in the condensation-slick glass.{/i}"
+
             a "(carefully) What children?"
             l "Unregistered. Hidden in the sublevels. Families who couldn't afford the Branding fees."
             l "They were... surviving. That's all. Just surviving."
@@ -150,6 +180,7 @@ label act1_lyra_visit:
             l "(cuts him off) Three days later, that block was rezoned. Everyone relocated. The children... disappeared into the system."
 
             "{i}Her shoulders tighten. She doesn't turn around.{/i}"
+
             l "I told myself it was necessary. That the system knows better than I do."
             l "But I can't stop seeing their faces."
             l "I am Glass too, Aeron. Transparent. Empty. Obedient."
@@ -158,11 +189,13 @@ label act1_lyra_visit:
             a "(softly) That's because you're not a weapon. You're a person."
             l "Am I? Am I really?"
             "{i}She turns. Eyes meet. Distance shrinks without either moving.{/i}"
+
             l "Am I? Sometimes I'm not sure where the orders end and I begin."
             a "I know the feeling."
             l "Of course you do. Glass recognizes glass."
 
-            "{i}Rain hammers the glass. The world narrows to this room.{/i}"
+            # WEATHER GRAMMAR: Pressure thrum, not rain.
+            "{i}Wind presses against the facade; the world narrows to this room.{/i}"
 
             l "When I was at the door... you hesitated before opening it."
             a "I didn't expect anyone."
@@ -174,9 +207,12 @@ label act1_lyra_visit:
             l "Perhaps we find out what was underneath all along."
 
             "{i}She moves. Sits beside him. Close enough to feel the warmth.{/i}"
+
             l "Then say nothing. Just... don't be alone tonight."
             a "(voice rough) Lyra, I—"
+
             "{i}The words lodge in his throat. Too big. Too true.{/i}"
+
             l "(gently) What?"
             a "I don't know how to do this. Any of this."
             l "Do what?"
@@ -186,9 +222,12 @@ label act1_lyra_visit:
             l "(barely a whisper) Who says you can't?"
 
             "{i}The space between them disappears. Almost touching. Almost.{/i}"
+
             a "(standing abruptly) You should rest. It's late."
             l "(hurt flickers, then hides) Right. Of course."
+
             "{i}She stands. Composure slides back into place like a mask.{/i}"
+
             l "Glass to glass again. Both afraid to touch."
 
             l "For what it's worth..."
@@ -211,21 +250,39 @@ label act1_lyra_visit:
 
             "{i}She's gone. The room feels different now.{/i}"
             "{i}Lighter. Or maybe just less empty.{/i}"
+
             a "{i}Glass recognizes glass.{/i}"
             a "{i}And maybe... maybe we can break together.{/i}"
             a "{i}Find out what's underneath. What we used to be. What we could still become.{/i}"
 
-    # ======================================================
-    # SCENE FLAGS
-    # ======================================================
     $ set_scene_flag(scene_id, "completed")
-    $ add_trust("Lyra", 1)
-
-    # canon_notes:
-    # - Mirrors Breaking Point emotional recovery
-    # - Empathy tones: low = efficiency, mid = hesitation, high = connection
-    # - Establishes Lyra as emotional counterbalance to Marcus
-    # - Scene flags: told_her_to_leave / let_her_stay / completed
-    # - Affects early Act 2 trust dialogue
+    $ add_trust("Lyra", 1)  # visit itself increases trust
 
     return
+
+
+# ========= CANON NOTES =========
+# cann.scene_id: act1_12_lyra_visit
+# cann.when_in_timeline: Immediately after Breaking Point; same night; pre–Sector 10 departure.
+# cann.what_happened:
+#   - Lyra checks on Aeron after rooftop brink; names the crack; offers presence.
+#   - Player either pushes her away (OB-lean) or lets her stay (EMP-lean); deeper talk if she stays.
+#   - Sector Seven “children audit” confession seeds Act I empathy spine + Echelon cost.
+# cann.aeron_state: Alignment tints VO only (no momentum). OB = guarded/clinical; mid = ambivalent; EMP = receptive.
+# cann.path_tracking:
+#   - Menu weights: Leave → OB(+1); Stay → EMP(+1). Scene delta range: **−1 → +1**.
+#   - Running empathy window BEFORE:  **≈ [-29, +27]**  (after Debrief + Breaking Point[0]).
+#   - Running empathy window AFTER:   **≈ [-30, +28]**  (applies one-side expansion by ±1).
+#   - Flags: told_her_to_leave / let_her_stay / completed. Affection+1 if stay; Trust+1 baseline for the visit.
+# cann.thematic_flags: Glass vs Person; presence over doctrine; “waking up” vs “weakness.”
+# cann.block_status: VARIANT (two-route scene; extended content if stay).
+# cann.true_path_integration: none (menu-free TP rule stands).
+# cann.visual_plate_economy:
+#   - REUSE: Bedroom night master; corridor spill toggle; balcony haze plate (door cracked).
+#   - HERO: Desk-perch two-shot; condensation-slick window reflection CU; finger-brush on lighter.
+# cann.requires_followup:
+#   - If `told_her_to_leave`: colder tone in next morning prep; lower early Act II openness.
+#   - If `let_her_stay`: unlocks warmer micro-beats in Sector 10 prep + future rooftop callback.
+# cann.consistency_asserts:
+#   - Aeries altitude weather grammar only (wind/condensation/haze; no rain language).
+#   - Keep Marcus doctrine phrasing consistent; maintain 390 ops count continuity.

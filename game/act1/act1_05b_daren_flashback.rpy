@@ -1,9 +1,11 @@
-# act1_05b_daren_flashback.rpy
-
-
 # =======================================================
 # ACT 1 – Scene 5b: Daren Flashback
+# File: act1_05b_daren_flashback.rpy
 # =======================================================
+
+# ========= SCENE START TASKS =========
+$ _current_scene_id = "act1_daren_flashback"
+$ scene_mark(_current_scene_id, "entered")
 
 
 label act1_daren_flashback:
@@ -34,5 +36,7 @@ label act1_daren_flashback:
     # VISUAL: Final image — Aeron alone in the sim room, lights dimming.
     a "{i}That night, I stared at the wall until the lights went out.{/i}"
     a "{i}Trying to remember the girl’s face. I couldn’t.{/i}"
+
+    $ set_scene_flag(_current_scene_id, "completed")
 
     return

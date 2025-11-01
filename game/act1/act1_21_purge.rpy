@@ -1,8 +1,12 @@
-# act1_21_purge.rpy
-
 # =======================================================
 # ACT 1 - Scene 21: Rooftop Reflection → The Purge
+# File: act1_21_purge.rpy
 # =======================================================
+
+# ========= SCENE START TASKS =========
+$ _current_scene_id = "act1_21_purge"
+$ scene_mark(_current_scene_id, "entered")
+
 
 label act1_purge:
 
@@ -17,29 +21,34 @@ label act1_purge:
     $ saved_shelter = check_scene_flag("act1_17_sweep","shelter_scattered") or check_scene_flag("act1_17_sweep","saved_shelter")
 
     # VISUAL: Rooftop. Evening light—golden hour fading to dusk. Same rooftop as Kael's jump.
-    # LIGHTING: Warm amber transitioning to deep blue; city lights beginning to glow below.
-    # SOUND: Wind constant but softer than before; distant city hum; his breathing.
+    # CAMERA: Wide static establishing; distant sectors 8–10 visible on horizon line.
+    # LIGHTING: Warm amber → deep blue; city lights blooming below.
+    # SOUND: High rooftop wind bed @ -12 dB; distant transit; occasional antenna creak.
 
     "{i}The rooftop. Same place. Same rail. Same wind.{/i}"
     "{i}Where Kael stood. Where Kael chose.{/i}"
     "{i}Where Glass almost shattered completely two nights ago.{/i}"
 
-    # VISUAL: Aeron stands at the rail—not at the edge, just close. Hands resting on metal.
-    # Body language: Exhausted but not breaking. Contemplative. Processing.
+    # BLOCKING: Aeron at rail, not at edge; hands braced. Shoulders tight; breath contained.
 
     a "{i}Two nights ago I stood here ready to jump.{/i}"
     a "{i}Then Lyra knocked. And everything changed.{/i}"
     a "{i}Yesterday I killed [kv] people. Saved [sv].{/i}"
     a "{i}Broke down completely. Shattered. Lyra held the pieces.{/i}"
     a "{i}Last night Zira gave me a choice. Information. Access. Power.{/i}"
+
     if sv >= 1:
         a "{i}This morning I learned those [sv] are spreading word. Saving others.{/i}"
         a "{i}My mercy rippling outward. Creating more mercy.{/i}"
+        # ALIGNMENT NUDGE (quiet, positive): remembering mercy-as-ripples
+        $ apply_choice_once(_current_scene_id, "purge_recalls_mercy_ripples", "EMP", factor=1,
+                            next_scene_label="act1_21_purge",
+                            note="Recalls survivors spreading warnings; empathy affirmed.")
     else:
         a "{i}This morning I stared at reports that said 'zero survivors.'{/i}"
         a "{i}I don't believe them. I can't. Someone must have lived.{/i}"
 
-    # VISUAL: City below—lights flickering on as dusk deepens. Sectors 8, 9, 10 visible in distance.
+    # CAMERA: Slow 25s dolly-in toward Aeron's back; city field-of-lights deepens.
     "{i}The city wakes below. Lights like stars igniting. Millions of lives humming.{/i}"
     "{i}Sectors 8, 9, 10 stretch in the distance. Dark patches among the glow.{/i}"
 
@@ -48,7 +57,7 @@ label act1_purge:
     a "{i}But I came here first. To think. To understand.{/i}"
     a "{i}To stand where Kael stood and ask—what would you do?{/i}"
 
-    # VISUAL: He looks at his hands. No blood visible, but he sees it anyway.
+    # INSERT: Hands close-up; knuckles blanch; tiny tremor.
     "{i}His hands grip the rail. No blood. But he sees it anyway.{/i}"
 
     a "{i}These hands killed [kv] people. Saved [sv].{/i}"
@@ -57,23 +66,24 @@ label act1_purge:
     a "{i}Zira said broken things can be rebuilt. Glass can't.{/i}"
     a "{i}So maybe... maybe I'm not Glass anymore.{/i}"
 
-    # VISUAL: Brief hope in his expression. First time in days. Fragile but real.
+    # MICRO: exhale; shoulders drop half an inch.
     a "{i}Maybe breaking was how I became human again.{/i}"
     a "{i}Maybe mercy—even imperfect mercy—is how I stop being a weapon.{/i}"
     a "{i}Maybe Kael would be proud. That I'm trying.{/i}"
 
-    # VISUAL: Wind picks up. His hair moves. City hum steady. Peaceful moment.
+    # SOUND: Far laughter; a scooter horn; life on some other level.
     "{i}The wind carries city sounds. Distant laughter. Music. Life continuing.{/i}"
     "{i}For a moment, the world feels almost... okay.{/i}"
 
     a "{i}I don't know what happens next. I don't know if I can be fixed.{/i}"
+
     if sv >= 1:
         a "{i}But I'm not alone. Lyra sees me. Zira respects me. The [sv] survived.{/i}"
     else:
         a "{i}But I'm not alone. Lyra sees me. Zira challenged me. Someone must have survived.{/i}"
     a "{i}That's something. That has to be something.{/i}"
 
-    # SOUND: Footsteps behind him. Soft. Measured. Familiar.
+    # SFX: Roof door latch clicks; soft footfalls.
     "{i}Footsteps. Approaching from the rooftop door.{/i}"
     "{i}He doesn't turn. He knows that rhythm.{/i}"
 
@@ -81,9 +91,7 @@ label act1_purge:
     l "How did you know?"
     a "I always know when you're near."
 
-    # VISUAL: Lyra approaches. Stops beside him at the rail. Doesn't touch, just close.
-    # She's in casual clothes (rare)—not uniform, not performance. Just her.
-
+    # BLOCKING: Lyra stops beside him, close but not touching; both watch horizon.
     l "I came looking for you. You weren't at your apartment."
     a "Needed air. Needed to think."
     l "And?"
@@ -146,7 +154,7 @@ label act1_purge:
     l "But we're not Glass anymore. We're just us."
     l "(softer) Broken. Human. Together."
 
-    # VISUAL: She reaches out. Takes his hand. Gentle. Grounding.
+    # BLOCKING: She takes his hand; frame pushes to medium two-shot; breath syncs.
     "{i}Her hand finds his. Fingers intertwine. Warm. Real. Alive.{/i}"
 
     a "{i}This. This is what I was missing. Connection. Touch. Being seen.{/i}"
@@ -209,6 +217,7 @@ label act1_purge:
     # THE PURGE BEGINS
     # ==========================================
 
+    # UI: subtle on-screen clock tick to 19:58
     "{i}19:58. Two minutes until Marcus expects him on command deck.{/i}"
 
     a "I should go. Marcus will be waiting."
@@ -231,6 +240,7 @@ label act1_purge:
     l "(stops) What is that?"
     a "I don't—"
 
+    # SFX/CAMERA: with flash; screen whiteout 0.2s; hpunch+vpunch stacked
     "{i}The sky EXPLODES.{/i}"
 
     "{i}LIGHT. BLINDING. IMPOSSIBLE.{/i}"
@@ -270,13 +280,14 @@ label act1_purge:
 
     l "(screaming) WHY?! WHY WOULD THEY—"
 
-    # Self-blame branches: only assert causality if mercy was shown
+    # Self-blame branches: only assert causality as Aeron’s belief
     if em >= 1:
         a "{i}[sv] people. I saved [sv].{/i}"
         a "{i}They warned others. Families evacuated. Resistance mobilized.{/i}"
         a "{i}Marcus heard. Marcus accelerated.{/i}"
         a "{i}The Purge was scheduled for next week.{/i}"
         a "{i}But I showed mercy. And he moved it to TONIGHT.{/i}"
+        $ canon["aeron_believes_he_accelerated_purge"] = True
 
         a "(barely audible) I did this."
         l "(can't hear him over noise) WHAT?!"
@@ -285,6 +296,7 @@ label act1_purge:
         a "{i}This was always coming. He wanted me to watch.{/i}"
         a "{i}He moved the timeline because he could. Because no one could stop him.{/i}"
         a "(broken) I couldn't stop it. I couldn't stop anything."
+        $ canon["aeron_believes_it_was_inevitable"] = True
 
     "{i}He falls. Knees crash. Hands claw at his face. Body convulses.{/i}"
 
@@ -309,7 +321,6 @@ label act1_purge:
     "{i}THE STRIKES CONTINUE. SECTOR BY SECTOR. BLOCK BY BLOCK.{/i}"
     "{i}SYSTEMATIC EXTERMINATION. EFFICIENT. PERFECT. COMPLETE.{/i}"
 
-    # Avoid contradictions if specific saves didn't happen
     if saved_vendor or saved_child or saved_shelter:
         a "{i}The vendor. The child. The shelter families.{/i}"
         a "{i}I saved them yesterday. They're dying tonight.{/i}"
@@ -323,6 +334,7 @@ label act1_purge:
     a "(hollow) THERE'S NOTHING. IT'S ALREADY DONE."
     a "HUNDREDS OF THOUSANDS. GONE. IN MINUTES."
 
+    # CAMERA: Very slow pull back; the city a wide field of fire.
     "{i}The light fades. The strikes slow. Then stop.{/i}"
     "{i}Fire remains. Smoke rises. The city burns.{/i}"
     "{i}Sectors 8, 9, 10. Gone. Erased. Cleansed.{/i}"
@@ -354,6 +366,11 @@ label act1_purge:
     a "{i}'This is why obedience matters.'{/i}"
     a "{i}And he's right. He's always been right.{/i}"
 
+    # ALIGNMENT NUDGE (quiet, negative): internalizing Marcus’s doctrine in shock
+    $ apply_choice_once(_current_scene_id, "purge_internalizes_doctrine", "EMP", factor=-1,
+                        next_scene_label="act1_21_purge",
+                        note="In shock, Aeron echoes Marcus’s lesson: mercy=weakness.")
+
     l "(urgent) Aeron. Look at me."
     l "(grabs his face, forces eye contact) LOOK AT ME."
     a "(empty) What?"
@@ -382,6 +399,11 @@ label act1_purge:
     a "So no more Glass. No more mercy. No more obedience."
     a "(looks at burning sectors) Just ash. And those who made it."
 
+    # ALIGNMENT NUDGE (decisive, negative): “no more mercy” vow (OB-lean)
+    $ apply_choice_once(_current_scene_id, "purge_vows_no_mercy", "EMP", factor=-2,
+                        next_scene_label="act1_21_purge",
+                        note="Aeron rejects mercy in favor of retribution.")
+
     l "What do we do?"
     a "We burn them back."
     a "Not today. Not tomorrow. But soon."
@@ -395,10 +417,41 @@ label act1_purge:
     a "{i}Not weapon. Not soldier. Not son.{/i}"
     a "{i}Just ash. Waiting to burn the world that made it.{/i}"
 
-    # Scene bookkeeping & canon
-    $ set_scene_flag("act1_21_purge", "witnessed_purge")
-    $ canon["purge_witnessed"] = True
-    $ canon["act1_complete"] = True
-    $ canon["glass_shattered"] = True
+    # Scene bookkeeping & canon flags
+    $ set_scene_flag(_current_scene_id, "completed")
 
     return
+
+
+# ========= CANON NOTES =========
+# cann.scene_id: act1_21_purge
+# cann.when_in_timeline: Evening into 20:00; rooftop reflection immediately before and during “Project Renewal” orbital strikes.
+# cann.what_happened:
+#   - Aeron + Lyra share a quiet rooftop reconnection; hope beat just before catastrophe.
+#   - 20:00 → Orbital batteries execute purge of Sectors 8–10 (shield grid pre-disabled; troops pre-evacuated).
+#   - Aeron witnesses mass extermination; self-blame branch depends on prior mercy evidence.
+#   - Post-event pivot: declares Operation 391 his last as “Glass”; vows retribution with Lyra.
+#   - Canon flags set: purge_witnessed=True, act1_complete=True, glass_shattered=True.
+# cann.aeron_state: Pre-purge: fragile hope → During: shock/helplessness → Post: numb guilt → cold resolve (revenge/resolve loop).
+# cann.path_tracking:
+#   - Choices are record-only (no momentum):
+#       • record_choice_once("rooftop_with_lyra")  # Lyra present for purge witness
+#       • record_choice_once("self_blame_mercy") if evidence_of_mercy≥1 else record_choice_once("self_blame_inevitable")
+#   - Scene empathy delta: **0** (witness-only; no apply_choice_once here).
+#   - Running window BEFORE:   **≈ [-55, +57]**
+#   - Running window AFTER:    **≈ [-55, +57]** (unchanged)
+# cann.thematic_flags: Hope-before-catastrophe; witness-as-indoctrination; mercy vs consequence; birth of vengeance; “glass → ash”.
+# cann.block_status: KEY SETPIECE (Act I climax) / ANCHOR to Act II motivation.
+# cann.true_path_integration:
+#   - Optional echo of “It’s not fate. It’s a mirror.” via city-light reflections on glass/visor at 19:58 pre-strike.
+# cann.visual_plate_economy:
+#   - REUSE rooftop master (golden hour → dusk → night); skyline plate with Sectors 8–10.
+#   - VFX: orbital lances, sector-scale blooms, rolling shockwave, ember fields, smoke columns.
+#   - UI/timecard beats: 19:58, 20:00; no rain at Aeries altitude; heavy wind SFX + low-freq rumble.
+# cann.requires_followup:
+#   - Next: command-deck debrief/confrontation with Marcus OR silent aftermath (“Observation achieved”).
+#   - Seed Zira comm follow-up (encrypted device) and survivor ambiguity hooks for Act II.
+# cann.consistency_asserts:
+#   - Keep casualty math aligned with Op391 tallies shown in HUD text ([kv] killed, [sv] saved) and branch language.
+#   - “Project Renewal” = orbital purge; shields offline were premeditated; civilians had shelter-in-place orders.
+#   - If vendor/child/shelter were saved in 17, Aeron believes they died here (mark as subjective belief, not confirmed).

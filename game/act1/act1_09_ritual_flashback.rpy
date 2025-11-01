@@ -1,26 +1,36 @@
-# act1_09_ritual_flashback.rpy
-
-
 # ======================================================
-# ACT 1 - Scene 9: Flashback: Aeron's Branding Ritual
+# ACT 1 — Scene 09: Flashback — Aeron's Branding Ritual
+# File: act1_09_ritual_flashback.rpy
 # ======================================================
 
+# ========= SCENE START TASKS =========
+$ _current_scene_id = "act1_09_ritual_flashback"
+$ scene_mark(_current_scene_id, "entered")
 
 define c1 = Character("Cleric 1")
 define c2 = Character("Cleric 2")
 define c3 = Character("Cleric 3")
 define c4 = Character("Cleric 4")
 
-label act1_ritual:
+
+label act1_09_ritual_flashback:
+
+    # ---------- Stage directions ----------
+    # CAMERA: Slow 180° arc around altar (40–50mm), incense in foreground; later push-in on Marcus reveal.
+    # LIGHTING: White oculus shafts; particulate incense visible; low gold bounce from filigree.
+    # SFX: Low choral bed + sub HVAC; relic hum rises to tinnitus whine at peak.
+    # FX/COMP: Overexposure pulse on failure; hairline light cracks under skin; falling Band sparks.
+    # BLOCKING/PROPS: Relic suspended; silk pillow with Band; Marcus in column shadow, half-profile.
+    # ---------------------------------------------------
+
     # VISUAL: Circular chamber; relic suspended midair; gold filigree walls.
     # LIGHTING: White shafts from oculus; particulate incense visible.
     # COSTUME: Aeron in white; clerics in muted gold; Marcus in shadow behind column.
     # SOUND: Low choral bed + quiet machine hum under it.
 
-    # NEW: Corrected age reference
-    ya "{i}This is it. The day the Rylan legacy passes to me.{/i}"
-    ya "{i}Twelve years old. Same age Kael was when he got his Band.{/i}"
-    ya "{i}At least, that's what they always said.{/i}"
+    a "{i}This is it. The day the Rylan legacy was supposed to pass to me.{/i}"
+    a "{i}Twelve years old. Same age Kael was when he got his Band.{/i}"
+    a "{i}At least, that’s what they always said.{/i}"
 
     # CAMERA: Slow 180° around altar; incense smoke trails.
     "{i}Low voices rise, threaded with hidden speakers.{/i}"
@@ -35,34 +45,33 @@ label act1_ritual:
 
     # VISUAL: Close-up on young Aeron's face—eyes wide, breathing shallow.
     "{i}His heart hammers. Sweat beads at his temples despite the cool air.{/i}"
-    ya "{i}Kael said it hurt. He didn't say how much.{/i}"
-    ya "{i}Just hold still. Don't embarrass Father. Don't fail.{/i}"
+    a "{i}Kael said it hurt. He didn’t say how much.{/i}"
+    a "{i}Hold still. Don’t embarrass Father. Don’t fail.{/i}"
 
     # VISUAL: Cleric lifts the Band; it hovers over Aeron's wrist.
     "{i}The Band rises. Light refracts through its core. Beautiful. Deadly.{/i}"
-
     "{i}Metal touches skin. The Band cinches.{/i}"
 
     # VISUAL: The Band contracts—tightening like a living thing.
     "{i}It tightens. Cold metal warming against his pulse.{/i}"
-    ya "{i}Wait for it. The sync. The bond. Like Kael described.{/i}"
+    a "{i}Wait for it. The sync. The bond. Like Kael described.{/i}"
 
     # VISUAL: Young Aeron's expression shifts—confusion, then pain.
-    "{i}But something's wrong. The pressure doesn't ease. It builds.{/i}"
+    "{i}But something’s wrong. The pressure doesn’t ease. It builds.{/i}"
 
     # FX: Relic core glow ramps; subtle vibration passes into altar.
     "{i}The relic hums—low at first, rising like a blade under breath.{/i}"
     "{i}Light lashes from its core, strikes the Band. Sparks race across his skin.{/i}"
 
-    ya "{i}It sears—but I hold still. This is what I trained for.{/i}"
+    a "{i}It sears—but I hold still. This is what I trained for.{/i}"
 
     # VISUAL: Symbols bloom along his arm—then immediately begin to crack and splinter.
     "{i}Symbols bloom along his arm, burrowing beneath the flesh.{/i}"
     "{i}Then—cracks. Hairline fractures spreading like ice breaking.{/i}"
 
     # VISUAL: Young Aeron's face contorts—pain beyond what he expected.
-    ya "{i}It's burning. Not warming. Burning.{/i}"
-    ya "{i}Something's wrong. Why won't it stop?{/i}"
+    a "{i}It’s burning. Not warming. Burning.{/i}"
+    a "{i}Something’s wrong. Why won’t it stop?{/i}"
 
     # SOUND: High-pitched whine building; relic resonance unstable.
     "{i}The whine builds. Pressure splits the air. His teeth clench.{/i}"
@@ -73,36 +82,34 @@ label act1_ritual:
 
     # VISUAL: The Band flares white-hot; young Aeron screams.
     "{i}White heat. Blinding. The world reduces to pain and light.{/i}"
-    ya "{i}Make it stop make it stop make it STOP—{/i}"
+    a "{i}Make it stop make it stop make it STOP—{/i}"
 
     "{i}Marks surge—then recoil, vanishing like retreating fire.{/i}"
     "{i}The Band flares white, fractures, and drops away—dead metal on stone.{/i}"
 
     # SOUND: Choir cuts; only altar hum remains.
 
-    # NEW/REVISED: More visceral collapse
     # VISUAL: Young Aeron collapses to his knees; gasping, trembling.
     "{i}He falls. Knees hit stone. Hard. The impact barely registers.{/i}"
-    # VISUAL: His hands brace against the floor; fingers splayed, shaking.
-    "{i}Breath won't come. Chest heaves. Nothing fills the space.{/i}"
-    ya "{i}What... what happened? Why did it...?{/i}"
+    "{i}Breath won’t come. Chest heaves. Nothing fills the space.{/i}"
+    a "{i}What… what happened? Why did it…?{/i}"
 
     # VISUAL: His wrist—unmarked. No scar. No symbol. Nothing.
     "{i}His wrist is bare. Unblemished. Empty.{/i}"
-    ya "{i}Nothing. There's nothing.{/i}"
+    a "{i}Nothing. There’s nothing.{/i}"
 
-    # NEW/REVISED: Varied cleric reactions
+    # Varied cleric reactions
     c2 "(breathless) The Band—it rejected him—"
     c3 "(stepping back) Impossible—this has never—"
     c4 "(to Marcus) General, we should attempt the binding again—"
-    c1 "(quiet, awed) The relic... it recoiled from him."
+    c1 "(quiet, awed) The relic… it recoiled from him."
 
     # CAMERA: Push on Marcus stepping from shadow; edges vignette.
     m "Enough."
 
     # VISUAL: Marcus crosses to Aeron; stands over him; face unreadable.
-    "{i}Father's shadow falls across him. Aeron can't meet his eyes.{/i}"
-    ya "{i}I failed. I failed him. I failed everyone.{/i}"
+    "{i}Father’s shadow falls across him. Aeron can’t meet his eyes.{/i}"
+    a "{i}I failed. I failed him. I failed everyone.{/i}"
 
     # VISUAL: Marcus's hand rests briefly on Aeron's shoulder—firm, not comforting.
     "{i}A hand on his shoulder. Heavy. Claiming.{/i}"
@@ -111,7 +118,7 @@ label act1_ritual:
     m "My son has a purpose you cannot comprehend."
     m "The relic spoke. Not rejection—revelation."
 
-    # NEW: Marcus already planning what Aeron will become
+    # Marcus already planning what Aeron will become
     m "(quieter, to clerics) He will serve in other ways."
     m "The Band grants faith. I will grant him skill."
     m "One makes believers. The other makes tools."
@@ -146,39 +153,46 @@ label act1_ritual:
     a "{i}Transparent. Efficient. Predictable.{/i}"
     a "{i}And we both pretended that meant strength.{/i}"
 
-    # Connection to present-day cracks (branch tone by alignment)
-    $ tier = get_alignment_tier()       # OB3, OB2, OB1, C, EMP1, EMP2, EMP3
-    $ norm = get_alignment_score_norm() # -1..+1
-    $ is_ob_hard = pass_tier("OB3","OB2")      # ≈ <= -4
-    $ is_mid     = pass_tier("OB1","C")        # ≈ -3..+1
+    # Alignment-tinted present reflection
+    $ tier = get_alignment_tier()
+    $ norm = get_alignment_score_norm()
+    $ is_ob_hard = pass_tier("OB3","OB2")
+    $ is_mid     = pass_tier("OB1","C")
 
     if is_ob_hard:
         a "{i}That precision still holds. Mostly. A system shouldn’t question its code.{/i}"
-        a "{i}But sometimes I feel the old lines flex — like metal under strain.{/i}"
+        a "{i}But sometimes I feel the old lines flex—like metal under strain.{/i}"
         a "{i}If that’s weakness, I’ll cauterize it. Like he taught me.{/i}"
     elif is_mid:
         a "{i}That precision still holds. But lately, it falters.{/i}"
         a "{i}Lyra sees it. Maybe others do too.{/i}"
         a "{i}I can’t tell if that’s a crack forming or a door opening.{/i}"
-    else:  # empathy side (≈ >= +2)
+    else:
         a "{i}That precision was never strength. It was silence.{/i}"
         a "{i}Lyra saw through it. Saw me.{/i}"
         a "{i}Maybe the Band rejected me because it knew I wasn’t meant to obey forever.{/i}"
         a "{i}Maybe I was meant to feel.{/i}"
 
-    # Optional: momentum whisper (very light touch)
+    # Momentum whisper (very light)
     $ mom = get_alignment_momentum()
     if mom >= 0.5:
         a "{i}Lately the edges are softening. On purpose.{/i}"
     elif mom <= -0.5:
         a "{i}Lately the edge returns faster. Reflex over choice.{/i}"
-    
-    # canon_note: Aeron is 12 years old during Branding (corrected)
-    # canon_note: Kael got his Band at 12 (worked for 3 years, failed at 15)
-    # canon_note: Marcus immediately begins planning to make Aeron "useful without faith"
-    # canon_note: This is the origin of Glass - Marcus's solution to the failed Branding
-    # canon_note: "If he cannot have faith, I will make him useful" - Marcus's core philosophy
-    # canon_note: Connection to present: Glass is cracking, Lyra sees it, Band rejection was prescient
-    # canon_note: 10 years from this moment (age 12 to 22) = 390 operations of becoming Glass
-    
+
+    $ set_scene_flag(_current_scene_id, "completed")
+
     return
+
+# ========= CANON NOTES =========
+# cann.scene_id: act1_09_ritual_flashback
+# cann.when_in_timeline: Age 12, Tier Hall Branding; immediately precedes Marcus’s “useful without faith” program.
+# cann.what_happened:
+#   - Branding attempt; relic recoils; Band fractures and falls away.
+#   - Marcus reframes as revelation; commits Aeron to precision over faith.
+#   - Kael context: branded at 12, rejection at 15.
+# cann.aeron_state: Adult Aeron VO reflects; child Aeron speaks only when diegetic (scream/brief lines).
+# cann.path_tracking: No choices; no deltas. Pure anchor memory.
+# cann.thematic_flags: Glass origin; Faith vs Utility; Performance; Father’s narrative control.
+# cann.block_status: ANCHOR; feeds later Marcus holo-call tone and OB/EMP shading.
+# cann.visual_plate_economy: One chamber master + effects plates (overexposure pulse, Band fall) reusable in later montage.

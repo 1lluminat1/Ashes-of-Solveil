@@ -1,15 +1,14 @@
-# act1_02_bedroom.rpy
-
-
 # ===================================================
 # ACT 1 - Scene 2: Aeron's Bedroom
+# File: act1_02_bedroom.rpy
 # ===================================================
+
+# ========= SCENE START TASKS =========
+$ _current_scene_id = "act1_02_bedroom"
+$ scene_mark(_current_scene_id, "entered")
 
 
 label act1_bedroom:
-
-    $ _current_scene_id = "act1_02_bedroom"
-    $ scene_mark(_current_scene_id, "entered")
 
     # VISUAL: Aeron's quarters. Dim. Sterile.
     # CAMERA: Wide static shot of the room — cold blue spill from the floor-to-ceiling glass, no character in frame.
@@ -17,22 +16,18 @@ label act1_bedroom:
     # SOUND: High-altitude wind scraping the exterior. Low mechanical hum in the walls.
 
     a "{i}Wind sweeps the glass. The tower hums back — steady, mechanical. Almost a heartbeat.{/i}"
-    pause 0.7
 
     # PHYSICAL SENSATION / ENVIRONMENT
     "{i}Cold air hisses through the vents. Dry. Recycled.{/i}"
     pause 0.6
     "{i}He doesn't mind. Comfort dulls the edge.{/i}"
     pause 0.6
+
     a "{i}Cold keeps you sharp. Warm makes you forget.{/i}"
-    pause 0.8
 
     # IDENTITY, NOT BELONGING
     a "{i}The city's still out there. I'm just another piece of it now.{/i}"
-    pause 0.7
-
     a "{i}A tool. A function.{/i}"
-    pause 0.7
 
     # VISUAL: Glass motif
     # CAMERA: Push in on the window itself — distorted reflection in the pane, but keep Aeron off-screen.
@@ -43,26 +38,14 @@ label act1_bedroom:
     pause 0.6
 
     a "{i}Fractured. Like something held together past its limit.{/i}"
-    pause 0.8
 
     # PURPOSE VS OUTPUT
     a "{i}The Band was supposed to give me purpose.{/i}"
-    pause 0.6
-
     a "{i}Instead, I carry out orders. Three hundred eighty-nine of them.{/i}"
-    pause 0.8
-
     a "{i}Father calls me Glass.{/i}"
-    pause 0.5
-
     a "{i}Transparent. Sharp. Useful.{/i}"
-    pause 0.7
-
     a "{i}Perfect metrics. Perfect form.{/i}"
-    pause 0.6
-
     a "{i}Perfectly empty.{/i}"
-    pause
 
     # TRANSITION — SILENCE FALLS
     # SOUND: The tower hum fades down a few decibels. Wind outside softens to near silence.
@@ -92,13 +75,8 @@ label act1_bedroom:
     play sound "sfx_wind_low.ogg" fadein 2.0
 
     a "{i}He always smiled like he belonged.{/i}"
-    pause 0.6
-
     a "{i}Even after his Band failed. Even when the whispers started.{/i}"
-    pause 0.8
-
     a "{i}He kept smiling for three years.{/i}"
-    pause 0.9
 
     # VISUAL: Aeron's hand begins to reach — stops just shy of the frame.
     # SYMBOL: Touch withheld. Reflection avoided.
@@ -107,31 +85,17 @@ label act1_bedroom:
     pause 0.8
 
     a "{i}Looking doesn't change anything.{/i}"
-    pause 0.7
-
     a "{i}Neither does not looking.{/i}"
-    pause 0.8
-
     a "{i}But I can't put it away.{/i}"
-    pause
-    
+
     # VISUAL: The low hum returns, slightly louder — the pulse of the room steady again.
     # CAMERA: Still on the nightstand photo. Then a slow rack focus as the background sharpens — the closed wardrobe in frame.
 
     a "{i}Kael couldn't live with being broken.{/i}"
-    pause 0.7
-
     a "{i}I became perfect at it.{/i}"
-    pause 0.9
-
     a "{i}Father made me Glass.{/i}"
-    pause 0.6
-
     a "{i}And Glass doesn't break.{/i}"
-    pause 0.8
-
     a "{i}...Does it?{/i}"
-    pause 1.0
 
     # VISUAL: The wardrobe door creaks open on its own as the air system cycles.
     # Inside — the black Echelon uniform, pristine, untouched.
@@ -144,25 +108,12 @@ label act1_bedroom:
     # SOUND: Low drone resumes — same pitch as the hum earlier. Mechanical continuity.
 
     a "{i}Right clothes. Right words. Right performance.{/i}"
-    pause 0.7
-
     a "{i}Tomorrow's the gala.{/i}"
-    pause 0.6
-
     a "{i}Father's exhibition.{/i}"
-    pause 0.5
-
     a "{i}'Look at what I made from failure,' he'll say.{/i}"
-    pause 0.9
-
     a "{i}A tool that follows orders — that's what he wants them to see.{/i}"
-    pause 0.8
-
     a "{i}He wants perfection on display.{/i}"
-    pause 0.6
-
     a "{i}But even perfection hesitates.{/i}"
-    pause
 
     # OPTIONAL ACTION — Obedience test (Empathy metric seed)
     menu:
@@ -187,7 +138,6 @@ label act1_bedroom:
             a "{i}Doctrine’s just noise anyway — it’s the pauses they listen to.{/i}"
             a "{i}And Father always listens.{/i}"
 
-
     # VISUAL: Terminal on the desk blinks; red notification light pulses.
     # SOUND: Soft chime; message alert cuts through the quiet.
     "{i}The terminal chimes. Mission orders.{/i}"
@@ -195,20 +145,12 @@ label act1_bedroom:
 
     # CAMERA: Cold red glow spills across the desk.
     a "{i}Sector Seven. Containment sweep. Pre-dawn deployment.{/i}"
-    pause 0.7
-
     a "{i}Tonight. Before the gala. Before I smile for the cameras.{/i}"
-    pause 0.7
 
     # ROUTINE — NOT NEW
     a "{i}Operation three-nine-zero.{/i}"
-    pause 0.6
-
     a "{i}Just another number. Just another night.{/i}"
-    pause 0.7
-
     a "{i}Feel nothing. Ask nothing. Do what you're told.{/i}"
-    pause 0.8
 
     # VISUAL: Aeron stands; silhouette against the window; city hums far below.
     "{i}He stands. The tower vibrates with the heartbeat of Solveil. The mission waits.{/i}"
@@ -216,58 +158,57 @@ label act1_bedroom:
 
     # TRANSITION — ROUTINE, NOT UNCERTAINTY
     a "{i}First the blade. Then the smile.{/i}"
-    pause 0.7
     a "{i}First Glass. Then the performance.{/i}"
-    pause 0.8
     a "{i}Same as always.{/i}"
-    pause
-    
-    # cann: ===============================
-    # cann.scene_id:
-    #   act1_02_mission_order  (Act I — Scene 2A)
 
-    # cann.when_in_timeline:
-    #   Immediately before the Sector 7 mission; Aeron receives Operation 390 orders.
-    #   Anchors the transition from introspection to field execution.
-
-    # cann.what_happened (objective canon summary):
-    #   - Aeron receives his 390th mission order: Sector Seven containment sweep.
-    #   - Exhibits total procedural obedience; emotion reduced to ritual habit.
-    #   - “Glass” identity solidified as systemic function, not individuality.
-    #   - Final lines (“First the blade. Then the smile.”) emphasize performance motif.
-    #   - First flicker of doubt appears in the line “Glass doesn’t break … does it?”
-
-    # cann.aeron_state:
-    #   OB-lean read:
-    #     Fully conditioned soldier; obedience equated with purpose; detached and precise.
-    #   EMP-lean read:
-    #     Minimal deviation — faint questioning impulse present but instantly repressed.
-    #   Neutral (pre-lock) summary:
-    #     Disassociated, procedural cognition; perceives self as extension of Echelon’s order.
-
-    # cann.path_tracking:
-    #   empathy_score_range_so_far:
-    #     min_emp_possible: -1   # from “Say it anyway”
-    #     max_emp_possible:  1   # from “Stay silent”
-    #   notes:
-    #     - This choice seeds the first minor path_pressure adjustment (×1 weight).
-    #     - Establishes baseline for later empathy/obedience divergence during Act I.
-
-    # cann.thematic_flags:
-    #   motifs_used:
-    #     - Glass / Performance / Routine vs Identity
-    #   recurring_lines_seeded:
-    #     - “Glass doesn’t break … does it?”   /   “First the blade. Then the smile.”
-    #   continuity_asserts:
-    #     - Operation count = 389 completed → 390 pending.
-    #     - Kael failed at 15 → survived 3 years → suicide at 17.
-    #     - Mission framed as ordinary containment (not exceptional).
-
-    # cann.block_status:
-    #   anchor_or_variant:
-    #     ANCHOR   # establishes Aeron’s identity foundation; flavor diverges later
-    #   requires_followup:
-    #     - act1_02b_sector7_mission  (execution of Operation 390)
-    # cann: ===============================
+    $ set_scene_flag(_current_scene_id, "completed")
 
     return
+
+
+# ========= CANONICAL NOTES =========
+# cann.scene_id:
+#   act1_02_mission_order  (Act I — Scene 2A)
+
+# cann.when_in_timeline:
+#   Immediately before the Sector 7 mission; Aeron receives Operation 390 orders.
+#   Anchors the transition from introspection to field execution.
+
+# cann.what_happened (objective canon summary):
+#   - Aeron receives his 390th mission order: Sector Seven containment sweep.
+#   - Exhibits total procedural obedience; emotion reduced to ritual habit.
+#   - “Glass” identity solidified as systemic function, not individuality.
+#   - Final lines (“First the blade. Then the smile.”) emphasize performance motif.
+#   - First flicker of doubt appears in the line “Glass doesn’t break … does it?”
+
+# cann.aeron_state:
+#   OB-lean read:
+#     Fully conditioned soldier; obedience equated with purpose; detached and precise.
+#   EMP-lean read:
+#     Minimal deviation — faint questioning impulse present but instantly repressed.
+#   Neutral (pre-lock) summary:
+#     Disassociated, procedural cognition; perceives self as extension of Echelon’s order.
+
+# cann.path_tracking:
+#   empathy_score_range_so_far:
+#     min_emp_possible: -1   # from “Say it anyway”
+#     max_emp_possible:  1   # from “Stay silent”
+#   notes:
+#     - This choice seeds the first minor path_pressure adjustment (×1 weight).
+#     - Establishes baseline for later empathy/obedience divergence during Act I.
+
+# cann.thematic_flags:
+#   motifs_used:
+#     - Glass / Performance / Routine vs Identity
+#   recurring_lines_seeded:
+#     - “Glass doesn’t break … does it?”   /   “First the blade. Then the smile.”
+#   continuity_asserts:
+#     - Operation count = 389 completed → 390 pending.
+#     - Kael failed at 15 → survived 3 years → suicide at 17.
+#     - Mission framed as ordinary containment (not exceptional).
+
+# cann.block_status:
+#   anchor_or_variant:
+#     ANCHOR   # establishes Aeron’s identity foundation; flavor diverges later
+#   requires_followup:
+#     - act1_02b_sector7_mission  (execution of Operation 390)

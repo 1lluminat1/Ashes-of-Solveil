@@ -5,9 +5,10 @@
 
 # ========= SCENE START TASKS =========
 $ _current_scene_id = "act1_04_hallway"
-$ scene_mark(_current_scene_id, "entered")   # log entry for telemetry & path math
+$ scene_mark(_current_scene_id, "entered")
 
 define servant = Character("Attendant")
+
 
 label act1_04_hallway:
 
@@ -28,91 +29,75 @@ label act1_04_hallway:
     # Baseline cadence: OB-lean (clipped/procedural). If player state shifts EMP later, localized warmth only.
 
     a "{i}The hallway runs like a runway—each polished tile a reminder of who I'm supposed to be.{/i}"
-    pause 0.6
 
     # VISUAL: Officials in quiet clusters; smiles rehearsed, eyes measuring. CAMERA: slow glide past faces.
     a "{i}Their eyes trace edges, not faces. Judging the outline, never the person.{/i}"
-    pause 0.6
+
     # NEW: Glass makes them uncomfortable
     a "{i}They see something they don’t understand. And that makes them nervous.{/i}"
-    pause 0.8
 
     # VISUAL: Floor tiles—concentric circles radiating from the center, like ripples frozen in stone.
     "{i}The floor tiles form rings within rings—the Echelon sigil stamped into the earth itself.{/i}"
     pause 0.6
+
     a "{i}Walk the path. Stay in your circle. Step outside, and the system corrects you.{/i}"
-    pause 0.9
 
     # VISUAL: Vaulted ceiling; light fixtures descend like judging eyes.
     "{i}The ceiling arches overhead, so high it swallows sound. Every footstep dies before it escapes.{/i}"
     pause 0.7
+
     "{i}Footsteps carry down the length of the hall, thinned by distant strings and laughter.{/i}"
     pause 0.7
 
     # VISUAL: Insert — his bare wrist catches light. No Band.
     a "{i}No Band, no worth. That's the first thing they see.{/i}"
-    pause 0.6
+
     # NEW: But not the only thing
     a "{i}Then they see the uniform. The medals. The record.{/i}"
-    pause 0.6
     a "{i}And they look away even faster.{/i}"
-    pause 0.8
 
     # VISUAL: An older attendant approaches with a tray; pauses at Aeron.
     servant "(quietly) Master Aeron."
-    pause 0.6
+
     # VISUAL: The man's eyes flicker—recognition, then something softer.
     a "(stops) Do I know you?"
-    pause 0.6
     servant "I served your family for sixteen years, sir. I was there the night your brother..."
-    pause 0.8
+
     "{i}He trails off. The silence finishes the sentence.{/i}"
     pause 0.9
 
     # VISUAL: Aeron's jaw tightens; the man notices, lowers his gaze.
     servant "(softer) He spoke of you often. Said you'd be the one to change things."
-    pause 0.8
     a "{i}Change what? The world? Or just his mind about leaving it?{/i}"
-    pause 0.9
     a "(carefully) He said a lot of things."
-    pause 0.6
     servant "That he did, sir."
-    pause 0.6
 
     # NEW: Servant sees the change
     # VISUAL: The man's eyes linger on Aeron's face—searching for something.
     servant "(quieter) I watched you become... this."
-    pause 0.7
     a "Become what?"
-    pause 0.6
     servant "Efficient, sir. Like your father wanted."
-    pause 0.9
     servant "(barely audible) Your brother never became Glass. You... I'm not sure there was ever anything else left."
-    pause 1.0
 
     # VISUAL: The man adjusts the tray, prepares to move on.
     servant "For what it's worth... I hope you find what he was looking for."
-    pause 0.8
+
     # VISUAL: He bows—genuine; continues down the hall.
     "{i}His footsteps fade into the chamber music.{/i}"
     pause 0.7
 
     a "{i}What he was looking for? He was looking for the edge of a roof.{/i}"
-    pause 0.9
     a "{i}And he found it.{/i}"
-    pause 0.9
 
     # VISUAL: Staff reaction — butler steps aside, gaze to floor.
     a "{i}Obedient in public. Honest in silence.{/i}"
-    pause 0.8
 
     # VISUAL: Another elite passes—eyes flick wrist→face→away.
     "{i}Another glance. This one lingers on the medals, then recoils.{/i}"
     pause 0.6
+
     a "{i}They know what I’ve done. What I’m capable of.{/i}"
-    pause 0.8
     a "{i}And they don’t want to be seen looking too long.{/i}"
-    pause 0.8
 
     # ========= CHOICE (standardized API; psychologically ambiguous) =========
     menu:
@@ -123,10 +108,9 @@ label act1_04_hallway:
                 next_scene_label="act1_05_gala",
                 note="Performs conformity to reduce scrutiny; self-erasure coping, not belief… yet."
             )
+
             a "{i}An old reflex. As if fabric could fix the silence.{/i}"
-            pause 0.7
             a "{i}Let them think I belong. Let them stop wondering.{/i}"
-            pause 0.8
 
         "Let it show.":
             $ apply_choice_once(
@@ -134,12 +118,11 @@ label act1_04_hallway:
                 next_scene_label="act1_05_gala",
                 note="Accepts stigma without concealment; micro-assertion of self vs performance."
             )
+
             # Hidden True Path increment: unrepressed self-acceptance
             #$ adjust_true_path_resonance_once("a1.hallway.wrist_show", 1)
             a "{i}No Band. No need to lie about it.{/i}"
-            pause 0.7
             a "{i}Let them feel uneasy. Let them remember what this uniform really means.{/i}"
-            pause 0.9
 
     # VISUAL: Portraits of Aeries elites — immaculate propaganda, eyes following.
     "{i}Portraits line the walls—heroes painted to outlast their mistakes.{/i}"
@@ -148,40 +131,29 @@ label act1_04_hallway:
     # Marcus portrait with Glass reference
     # CAMERA: Lateral drift; Aeron’s silhouette eclipses half the face.
     a "{i}Marcus Rylan. Hero, legend, father. Depends who you ask.{/i}"
-    pause 0.8
+
     "{i}The portrait doesn't look back. It never does.{/i}"
     pause 0.7
+
     a "{i}He trained me well. Too well, maybe.{/i}"
-    pause 0.7
     a "{i}I can kill without hesitation. Lead without doubt. Obey without question.{/i}"
-    pause 0.8
     a "{i}Everything he wanted. Everything but faith.{/i}"
-    pause 0.7
     a "{i}All function, no soul. Just enough to pass for human.{/i}"
-    pause 0.8
     a "{i}And that makes me his greatest failure.{/i}"
-    pause 1.0
 
     # VISUAL: Two elites whisper as he passes—light catches mirrored glasses.
     "{i}Voices drop as he approaches. Not mockery. Something else.{/i}"
-    pause 0.7
     "{i}He catches fragments:{/i}"
-    pause 0.5
+
     "{i}\"...Marcus Rylan's son. Glass.\"{/i}"
-    pause 0.6
     "{i}\"...390 operations. Zero failures.\"{/i}"
-    pause 0.6
     "{i}\"...technically perfect, but have you seen his eyes?\"{/i}"
-    pause 0.6
     "{i}\"...nothing behind them...\"{/i}"
     pause 0.8
 
     a "{i}They're not wrong.{/i}"
-    pause 0.7
     a "{i}I don’t feel. I don’t question.{/i}"
-    pause 0.7
     a "{i}I just cut.{/i}"
-    pause 0.9
 
     "{i}The whispers fade as he passes. Relief in their silence.{/i}"
     pause 0.7
@@ -192,31 +164,28 @@ label act1_04_hallway:
 
     # Threshold hesitation with physicality; hand hovers near frame.
     a "{i}I could turn around. Slip into the dark.{/i}"
-    pause 0.9
     a "{i}Would anyone stop me? Would anyone care?{/i}"
-    pause 1.0
 
     # But Glass doesn't retreat
     "{i}His hand drops. The choice was already made.{/i}"
     pause 0.7
+
     a "{i}No. Not tonight.{/i}"
-    pause 0.8
     a "{i}I show up when I’m told. That’s what I’m built for.{/i}"
-    pause 0.9
 
     # Doors open—gold light floods; sound swells, then cut to silence to hand control to player.
     "{i}Hinges sigh. Light and voices flood the marble hush.{/i}"
     pause 0.8
-    a "{i}Time to smile. Time to lie. Time to perform.{/i}"
-    pause
 
-    # ========= QA HOOK =========
+    a "{i}Time to smile. Time to lie. Time to perform.{/i}"
+
     #$ telemetry(_current_scene_id, gates_met=True)
+    $ set_scene_flag(_current_scene_id, "completed")
 
     return
 
 
-# ========= CANONICAL NOTES (grep-able block) =========
+# ========= CANONICAL NOTES =========
 # cann.scene_id: act1_04_hallway
 # cann.when_in_timeline: Act I, immediately pre-Gala entry; before Balcony scene.
 # cann.what_happened:
