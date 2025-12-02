@@ -30,11 +30,11 @@ label act2_activity_07_confront_past:
     # LIGHTING: Cold pre-dawn light. Gray. Heavy.
     # SOUND: City still sleeping. Quiet. Too quiet.
 
-    "{i}Day [current_day]. Time to go back.{/i}"
+    "Day [current_day]. Time to go back."
     
     # VISUAL: Aeron checking fake ID. Kade Voss. But today feels like Aeron Rylan.
-    a "{i}Sector 10. The Sweep. Where 600 died and 200 lived. I've been avoiding it, running from it. Time to stop running.{/i}"
-    "{i}[ob] Names are doors; some only open from the inside. Today I knock as Aeron, not Glass.{/i}"
+    athought "Sector 10. The Sweep. Where 600 died and 200 lived. I've been avoiding it, running from it. Time to stop running."
+    "[ob] Names are doors; some only open from the inside. Today I knock as Aeron, not Glass."
 
     # VISUAL: Lyra awake. Watching him. Concerned.
     l "You don't have to do this."
@@ -60,8 +60,8 @@ label act2_activity_07_confront_past:
 
     scene bg_lower_spans_descent with fade
 
-    "{i}Down through sectors still recovering from the Purge. Sector 8 shows scars—buildings damaged, streets empty, ghosts everywhere. Sector 9 is worse with more destruction and fewer survivors. The Purge hit hard here.{/i}"
-    "{i}[ob] The city breathes through cracked ribs; every exhale tastes like old fire.{/i}"
+    "Down through sectors still recovering from the Purge. Sector 8 shows scars—buildings damaged, streets empty, ghosts everywhere. Sector 9 is worse with more destruction and fewer survivors. The Purge hit hard here."
+    "[ob] The city breathes through cracked ribs; every exhale tastes like old fire."
 
     l "(quiet) It's so empty."
     a "Most fled. The ones who stayed... most died in the Purge."
@@ -69,8 +69,8 @@ label act2_activity_07_confront_past:
     a "Not gone. Murdered. By Marcus, by Echelon, by the system we served."
 
     # VISUAL: Continue descent. Sector 10 ahead. Ruins visible.
-    "{i}Sector 10 ahead. Where I swept, where it started, where Glass cracked.{/i}"
-    "{i}[ob] Distance shrinks; consequences don’t.{/i}"
+    "Sector 10 ahead. Where I swept, where it started, where Glass cracked."
+    "[ob] Distance shrinks; consequences don’t."
 
     # VISUAL: Enter Sector 10. Devastation. Buildings collapsed. Streets torn. Purge aftermath.
     # LIGHTING: Dark. Oppressive. Few lights working. Rubble everywhere.
@@ -78,12 +78,12 @@ label act2_activity_07_confront_past:
 
     scene bg_sector10_ruins with fade
 
-    "{i}Sector 10. Three weeks after the Sweep, two weeks after the Purge. Ruins everywhere—buildings collapsed from orbital strikes, streets torn apart. Nothing living should be here, but I am. Standing in the graveyard I helped create.{/i}"
-    "{i}[ob] Buildings remember how to kneel; the street keeps its head bowed.{/i}"
+    "Sector 10. Three weeks after the Sweep, two weeks after the Purge. Ruins everywhere—buildings collapsed from orbital strikes, streets torn apart. Nothing living should be here, but I am. Standing in the graveyard I helped create."
+    "[ob] Buildings remember how to kneel; the street keeps its head bowed."
 
     # VISUAL: Aeron stops. Staring. Memories flooding back. Overwhelming.
-    a "{i}This corner. The child I saved stood right here. I logged her as terminated and she ran. She lived for two more weeks before the Purge. Did she survive the Purge or did I just delay her death?{/i}"
-    "{i}[emp] Mercy felt like oxygen then; now it burns going down.{/i}"
+    athought "This corner. The child I saved stood right here. I logged her as terminated and she ran. She lived for two more weeks before the Purge. Did she survive the Purge or did I just delay her death?"
+    "[emp] Mercy felt like oxygen then; now it burns going down."
 
     l "(hand on his shoulder) Aeron."
     a "(shaking) I walked these streets with orders to kill everyone. And I did. Most of them. 600 people."
@@ -92,27 +92,27 @@ label act2_activity_07_confront_past:
     a "Does it? I saved 200 and then the Purge killed most of them anyway. What's the point of mercy if it just delays death?"
 
     # VISUAL: Lyra quiet. No answer. Because there isn't one.
-    "{i}Silence. Because what can she say? She's right and I'm right and nothing fixes it.{/i}"
+    "Silence. Because what can she say? She's right and I'm right and nothing fixes it."
 
     # VISUAL: Continue walking. Deeper into ruins. Looking for something. Someone.
     a "Zira said there's a survivor here. Someone who stayed, someone who remembers."
     l "How do we find them?"
     a "We don't. They find us. If they want to."
-    "{i}[ob] In places like this, the ground does introductions.{/i}"
+    "[ob] In places like this, the ground does introductions."
 
     # VISUAL: Walk through devastation. Each step a memory. Each corner a ghost.
-    "{i}The vendor's stall was there. I killed him on direct orders. He begged but I shot anyway. The apartment on the fourth floor held a family of five—I breached it and four died while one child escaped. I logged them as terminated. Every step is blood, every breath is guilt, every moment is drowning.{/i}"
+    "The vendor's stall was there. I killed him on direct orders. He begged but I shot anyway. The apartment on the fourth floor held a family of five—I breached it and four died while one child escaped. I logged them as terminated. Every step is blood, every breath is guilt, every moment is drowning."
 
     # VISUAL: Aeron stops. Breathing hard. Panic building. Too much. Too fast.
-    a "{i}Can't breathe. Too much, too many ghosts, too much blood.{/i}"
+    athought "Can't breathe. Too much, too many ghosts, too much blood."
 
     l "(grabs him) Aeron. Look at me. Breathe."
     a "(gasping) I can't—there's too many—I killed—"
     l "Breathe. In. Out. Focus on my voice. Just my voice."
     
     # VISUAL: She grounds him. Hands on his shoulders. Eye contact. Breathing together.
-    "{i}Her voice, her breath, her presence grounding me before I drown completely. In. Out. In. Out. Slowly the panic recedes. Barely, but enough.{/i}"
-    "{i}[emp] She lends me a heartbeat until mine remembers its job.{/i}"
+    "Her voice, her breath, her presence grounding me before I drown completely. In. Out. In. Out. Slowly the panic recedes. Barely, but enough."
+    "[emp] She lends me a heartbeat until mine remembers its job."
 
     a "(shaking) Thank you."
     l "Don't thank me. Just keep breathing. We'll get through this."
@@ -125,8 +125,8 @@ label act2_activity_07_confront_past:
     # VISUAL: Both turn. Man emerges from ruins. 50s. Scarred. Hollow eyes. Survivor.
     # SOUND: Footsteps on rubble. Slow. Deliberate.
 
-    "{i}A man emerging from shadows, watching us. How long has he been there?{/i}"
-    "{i}[ob] He is built from edges—rib, ruin, resolve.{/i}"
+    "A man emerging from shadows, watching us. How long has he been there?"
+    "[ob] He is built from edges—rib, ruin, resolve."
 
     a "Who are you?"
     man "Someone who lived. Barely. Someone who remembers you."
@@ -156,7 +156,7 @@ label act2_activity_07_confront_past:
     man "My son's name was Hector. He was 23, worked in mechanics. Good kid who didn't deserve any of this."
     man "You shot him in our apartment on the third floor. He was trying to protect me. You killed him and logged me as terminated."
     man "But you didn't kill me. You saw me hiding and you walked away. Why?"
-    "{i}[emp] A name turns a crater into a map; everything in me tilts toward it.{/i}"
+    "[emp] A name turns a crater into a map; everything in me tilts toward it."
 
     # VISUAL: Aeron remembers. Vaguely. So many apartments. So many faces.
     a "I... I don't remember specifically. But by that point I was cracking. Saving who I could while failing everyone else."
@@ -167,7 +167,6 @@ label act2_activity_07_confront_past:
     # ACTION: Player choice - how to respond?
     menu:
         "The father stands there. Broken. Angry. Waiting."
-        
         "Offer to help him - try to make amends":
             $ mark_flag("activity7_past.offered_help")
             $ rep("unders", +2)
@@ -186,7 +185,7 @@ label act2_activity_07_confront_past:
             man "We need medical supplies. Food. Building materials. Basic things to survive."
             man "You bring those and maybe I'll believe you're serious. Maybe."
             a "I'll bring them. I promise."
-            "{i}[emp] Promises are brittle until carried; this one sits in my pocket like a tool, not a word.{/i}"
+            "[emp] Promises are brittle until carried; this one sits in my pocket like a tool, not a word."
             man "Promises from Glass should mean nothing. But... I'll give you one chance. Don't waste it."
             
         "Just listen - let him speak his pain":
@@ -207,7 +206,7 @@ label act2_activity_07_confront_past:
             man "You shot him center mass. Professional. Quick. He didn't suffer long. Small mercy."
             man "Then you saw me hiding, terrified, waiting to die. And you just... left. Walked away, logged me dead, moved on."
             man "I lived. But everything I lived for died that night. Everything."
-            "{i}[emp] I make myself a vessel and try not to leak; his story deserves a steady container.{/i}"
+            "[emp] I make myself a vessel and try not to leak; his story deserves a steady container."
             
             # VISUAL: Silence. Heavy. Nothing to say. Just witness his pain.
             a "Thank you for telling me. For letting me know who Hector was. He mattered. He still matters."
@@ -231,9 +230,9 @@ label act2_activity_07_confront_past:
             
             # VISUAL: Man turns away. Conversation over. Disgusted.
             man "Get out. Don't come back. You're not welcome here."
-            "{i}[ob] He leaves a door-shaped absence behind, and it closes on my tongue.{/i}"
+            "[ob] He leaves a door-shaped absence behind, and it closes on my tongue."
 
-            "{i}He walks away and disappears into ruins. I fucked that up completely by defending myself, by explaining, by making excuses—everything Tessa told me not to do.{/i}"
+            "He walks away and disappears into ruins. I fucked that up completely by defending myself, by explaining, by making excuses—everything Tessa told me not to do."
 
     # VISUAL: Aftermath of conversation. Processing. Heavy.
     if renpy.has_label("_dummy_check"):  # harmless no-op to keep Ren'Py parser happy on empty blocks
@@ -253,24 +252,24 @@ label act2_activity_07_confront_past:
         l "Maybe. But you faced it. That's more than Glass would have done."
 
     # VISUAL: Continue through ruins. Alone with thoughts. Ghosts everywhere.
-    "{i}Sector 10. Graveyard of my making. Every step is a reminder, every breath is guilt.{/i}"
-    "{i}[ob] The wind catalogs what we leave unsaid; the rubble files it under 'too late.'{/i}"
+    "Sector 10. Graveyard of my making. Every step is a reminder, every breath is guilt."
+    "[ob] The wind catalogs what we leave unsaid; the rubble files it under 'too late.'"
 
     # VISUAL: Find memorial. Makeshift. Names scratched on metal. Hundreds of names.
     # VISUAL: Wall of the dead. Each name a person. A life. A story ended.
 
-    "{i}A wall with names scratched into metal. Hundreds of names. The dead memorialized by survivors. Hector's name is there, fourth from the top, and hundreds more below.{/i}"
+    "A wall with names scratched into metal. Hundreds of names. The dead memorialized by survivors. Hector's name is there, fourth from the top, and hundreds more below."
 
-    a "{i}Every single name. People I killed or helped kill. All here.{/i}"
-    "{i}[emp] Each letter is a weight; together they’re a gravity that refuses to let me float away from what I’ve done.{/i}"
+    athought "Every single name. People I killed or helped kill. All here."
+    "[emp] Each letter is a weight; together they’re a gravity that refuses to let me float away from what I’ve done."
 
     l "(reading names) This is... all of them?"
     a "No. These are just the ones they could identify. Bodies recovered, names remembered."
     a "The rest are ash. Scattered, anonymous, forgotten except by those who loved them."
 
     # VISUAL: Aeron reaches out. Touches wall. Fingers tracing names. Heavy silence.
-    "{i}My hand touches the cold metal. Rough scratches forming letters forming names forming lives that ended. Hector. Mara. Jen. David. Kessler. Tomas. On and on and on. Each name a weight, each name a ghost, each name a piece of glass cutting deeper.{/i}"
-    "{i}[ob] The wall doesn’t forgive—walls never do. It only agrees to remember.{/i}"
+    "My hand touches the cold metal. Rough scratches forming letters forming names forming lives that ended. Hector. Mara. Jen. David. Kessler. Tomas. On and on and on. Each name a weight, each name a ghost, each name a piece of glass cutting deeper."
+    "[ob] The wall doesn’t forgive—walls never do. It only agrees to remember."
 
     a "(whispers) I'm sorry. All of you. I'm sorry."
     
@@ -283,8 +282,8 @@ label act2_activity_07_confront_past:
     # VISUAL: Aeron pulls out small knife. Considers. Then scratches something into wall.
     # CARVING: "I'm sorry. - Glass"
 
-    "{i}I carve words into the metal. Simple, insufficient, but necessary. 'I'm sorry. - Glass.' An admission, an apology, a gravestone for who I was.{/i}"
-    "{i}[emp] The blade bites cleaner than truth, but the sting lands where it should.{/i}"
+    "I carve words into the metal. Simple, insufficient, but necessary. 'I'm sorry. - Glass.' An admission, an apology, a gravestone for who I was."
+    "[emp] The blade bites cleaner than truth, but the sting lands where it should."
 
     l "Glass?"
     a "Yeah. Because Aeron didn't do this. Glass did. And Glass is dead. This is his grave too."
@@ -292,10 +291,10 @@ label act2_activity_07_confront_past:
     a "True. Glass died in the Purge along with everyone else. What's left is something else. Someone trying to be better."
     l "And if you fail?"
     a "Then at least I tried. That has to count for something."
-    "{i}[ob] Names are masks until you bleed through them; this one finally sticks to skin.{/i}"
+    "[ob] Names are masks until you bleed through them; this one finally sticks to skin."
 
     # VISUAL: They stand there. Minutes passing. Honoring the dead. Carrying the weight.
-    "{i}We stand for minutes or hours. Time loses meaning in graveyards. 600 names I helped create, thousands more from the Purge. All dead, all remembered, all haunting.{/i}"
+    "We stand for minutes or hours. Time loses meaning in graveyards. 600 names I helped create, thousands more from the Purge. All dead, all remembered, all haunting."
 
     # VISUAL: Finally, Aeron turns away. Can't stay here forever.
     a "We should go. Nothing more we can do here."
@@ -305,16 +304,16 @@ label act2_activity_07_confront_past:
     a "Honesty's all I have left. Everything else burned."
 
     # VISUAL: Walk back through ruins. Changed. Heavier. Clearer.
-    "{i}Walking back through ruins. Each step away from ghosts, each step toward something new. Maybe.{/i}"
-    "{i}[emp] Step, breathe, carry—rituals for not breaking where the city already has.{/i}"
+    "Walking back through ruins. Each step away from ghosts, each step toward something new. Maybe."
+    "[emp] Step, breathe, carry—rituals for not breaking where the city already has."
 
     # VISUAL: Hector's father watching from distance. Sees them leave. Doesn't approach.
-    "{i}Hector's father watches from the shadows. Sees us leave but doesn't stop us, doesn't bless us, just watches. That's enough for now. Maybe forever, but enough.{/i}"
+    "Hector's father watches from the shadows. Sees us leave but doesn't stop us, doesn't bless us, just watches. That's enough for now. Maybe forever, but enough."
 
     # TRANSITION: Return to safe house. Evening. Exhausted. Changed.
     scene bg_safe_house with fade
 
-    "{i}Back at the safe house. Evening. Body exhausted, mind more so. But something shifted. Facing ghosts, naming them, remembering them. Doesn't fix anything, doesn't redeem anything, but it's something.{/i}"
+    "Back at the safe house. Evening. Body exhausted, mind more so. But something shifted. Facing ghosts, naming them, remembering them. Doesn't fix anything, doesn't redeem anything, but it's something."
 
     # VISUAL: Lyra watching him. Concerned but understanding.
     l "How are you?"
@@ -331,7 +330,7 @@ label act2_activity_07_confront_past:
     a "I can't forget them. Won't forget them. They deserve to be remembered."
     l "And they will be. By us, by survivors, by history."
     l "But you need to keep living too. Carrying the dead is important but don't let them drown you."
-    "{i}[ob] Ledger of a life: debts in bone, payments in breath.{/i}"
+    "[ob] Ledger of a life: debts in bone, payments in breath."
 
     # VISUAL: He looks at her. Grateful. Grounded. Connected.
     a "Thank you for coming with me. For keeping me from drowning."
@@ -340,13 +339,13 @@ label act2_activity_07_confront_past:
 
     # Show outcome summary based on choice (reads flags from helpers; works even if UI hides them)
     if renpy.python.py_eval("get_flag('activity7_past.offered_help')"):
-        "{i}I offered help and promised supplies. Gave Hector's father a reason to maybe trust me. Maybe. One more thread, one more connection, building toward something slowly.{/i}"
+        "I offered help and promised supplies. Gave Hector's father a reason to maybe trust me. Maybe. One more thread, one more connection, building toward something slowly."
     elif renpy.python.py_eval("get_flag('activity7_past.just_listened')"):
-        "{i}I listened and let him speak his pain. Honored Hector's memory by hearing it, by remembering. Small and insufficient, but real. Sometimes that's all you can do.{/i}"
+        "I listened and let him speak his pain. Honored Hector's memory by hearing it, by remembering. Small and insufficient, but real. Sometimes that's all you can do."
     else:
-        "{i}I defended myself and made excuses. Proved I'm still carrying Glass's instincts, his cowardice. I need to do better, be better, before those instincts poison everything.{/i}"
+        "I defended myself and made excuses. Proved I'm still carrying Glass's instincts, his cowardice. I need to do better, be better, before those instincts poison everything."
 
-    a "{i}Confronted the past. Faced the ghosts, named the dead, apologized to survivors. Doesn't fix anything, doesn't redeem anything, but it's done. And I'm still here. One more step away from Glass, one more step toward whatever comes next.{/i}"
+    athought "Confronted the past. Faced the ghosts, named the dead, apologized to survivors. Doesn't fix anything, doesn't redeem anything, but it's done. And I'm still here. One more step away from Glass, one more step toward whatever comes next."
 
     # Mark activity complete (new helper)
     $ mark_scene("act2_activity", complete="past")

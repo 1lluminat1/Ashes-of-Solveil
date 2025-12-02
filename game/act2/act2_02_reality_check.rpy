@@ -15,30 +15,30 @@ label act2_reality_check:
     # LIGHTING: Single overhead bulb. Shadows deep. Industrial glow through window.
     # SOUND: City hum below; distant machinery; their breathing; exhaustion.
 
-    "{i}That Evening.{/i}"
+    "That Evening."
 
     # VISUAL: Aeron and Lyra sitting against wall. Hours passed. Exhausted. Processing.
     # Small space. Concrete walls. One window (barred). Door (locked from inside).
 
-    "{i}Hours in the dark. Waiting. Thinking. Surviving.{/i}"
-    "{i}The safe house is small. Cold. But it's shelter.{/i}"
-    "{i}And shelter is everything when the world wants you dead.{/i}"
+    "Hours in the dark. Waiting. Thinking. Surviving."
+    "The safe house is small. Cold. But it's shelter."
+    "And shelter is everything when the world wants you dead."
 
     # VISUAL: Aeron staring at nothing. Lyra checking her Band compulsively.
     # Both doing their coping mechanisms. Both barely holding together.
 
     if get_empathy_band() == "obedience":
-        "{i}He catalogs exits, angles, and timings; feelings are noise to be filtered.{/i}"
+        "He catalogs exits, angles, and timings; feelings are noise to be filtered."
     else:
-        "{i}He keeps counting breaths until the room stops spinning.{/i}"
+        "He keeps counting breaths until the room stops spinning."
 
-    a "{i}Seven hours since we left Aeries. Feels like seven years.{/i}"
-    a "{i}Everything we had—gone. Everything we were—ash.{/i}"
-    a "{i}And now we're here. Waiting for someone to decide if we live.{/i}"
+    athought "Seven hours since we left Aeries. Feels like seven years."
+    athought "Everything we had—gone. Everything we were—ash."
+    athought "And now we're here. Waiting for someone to decide if we live."
 
     # VISUAL: Lyra's hand moves to Band. Touches it. Checking. Automatic.
-    "{i}Her hand moves. Wrist. Band. Checking. Always checking.{/i}"
-    "{i}Even here. Even now. Terrified it'll stop working.{/i}"
+    "Her hand moves. Wrist. Band. Checking. Always checking."
+    "Even here. Even now. Terrified it'll stop working."
 
     # (Lyra has seen Aeron’s alignment up close; she reads his tone accurately.)
     l "(quiet) Do you think she's coming back?"
@@ -53,7 +53,7 @@ label act2_reality_check:
     l "(hollow laugh) Why do anything? Nothing makes sense anymore."
 
     # VISUAL: Silence. Both staring at nothing. Trauma settling. Reality crushing.
-    "{i}Silence. Heavy. The kind that presses on your chest.{/i}"
+    "Silence. Heavy. The kind that presses on your chest."
 
     a "We can't stay here forever."
     l "Where else would we go?"
@@ -72,9 +72,9 @@ label act2_reality_check:
     l "With what? We have nothing."
 
     # VISUAL: Aeron looks around. Small space. Minimal supplies. No resources.
-    a "{i}She's right. We have nothing.{/i}"
-    a "{i}No weapons. No intel. No allies. No future.{/i}"
-    a "{i}Just two broken people in a concrete box.{/i}"
+    athought "She's right. We have nothing."
+    athought "No weapons. No intel. No allies. No future."
+    athought "Just two broken people in a concrete box."
 
     # Empathy nudge on honest vulnerability (once)
     $ adjust_empathy_once("act2_02_name_the_void", +1)
@@ -82,8 +82,8 @@ label act2_reality_check:
     # SOUND: Door lock clicking. Beeps. Opening.
     # VISUAL: Both tense. Hands move toward weapons (they don't have).
 
-    "{i}The door opens. They freeze.{/i}"
-    "{i}No weapons. Nothing but fists. And fists don't stop bullets.{/i}"
+    "The door opens. They freeze."
+    "No weapons. Nothing but fists. And fists don't stop bullets."
 
     # VISUAL: Zira enters. Arms full of supplies. Kicks door closed behind her.
     # LIGHTING: Hallway light spills in, then cuts off. Dim bulb only source again.
@@ -120,8 +120,8 @@ label act2_reality_check:
     $ player_state["bounty"]["lyra"]  = 50000
 
     # VISUAL: Both process. That much money could change lives in the Unders.
-    a "{i}50,000 credits. That's a fortune down here.{/i}"
-    a "{i}Everyone we meet is a potential killer. For the right price.{/i}"
+    athought "50,000 credits. That's a fortune down here."
+    athought "Everyone we meet is a potential killer. For the right price."
 
     l "Why haven't you turned us in?"
     z "Because 50,000 credits spends fast. But what you represent?"
@@ -221,9 +221,9 @@ label act2_reality_check:
     z "Marcus wants you bad. And he's willing to burn the Unders to find you."
 
     # VISUAL: Both process. Marcus. Father. Hunting his son.
-    a "{i}Father's hunting me. Publicly. Aggressively.{/i}"
-    a "{i}Not quietly disappeared. Not 'training accident.'{/i}"
-    a "{i}He wants me dead. And he wants everyone to know why.{/i}"
+    athought "Father's hunting me. Publicly. Aggressively."
+    athought "Not quietly disappeared. Not 'training accident.'"
+    athought "He wants me dead. And he wants everyone to know why."
     # Identity pain acknowledged → small empathy once
     $ adjust_empathy_once("act2_02_father_public_hunt", +1)
 
@@ -255,8 +255,8 @@ label act2_reality_check:
     $ mark_scene("act2_02_reality_check", "called_out_identity")
 
     # VISUAL: She leaves. Door closes. Lock engages. Alone again.
-    "{i}Gone. Again. Leaving them in the dark.{/i}"
-    "{i}With supplies. With warnings. With impossible hope.{/i}"
+    "Gone. Again. Leaving them in the dark."
+    "With supplies. With warnings. With impossible hope."
 
     # VISUAL: Both sit. Processing everything. Reality fully settling now.
     l "We're fucked."
@@ -271,17 +271,17 @@ label act2_reality_check:
     l "That's not a plan."
     a "It's the only plan we have."
     if get_empathy_band() == "obedience":
-        "{i}Triage first. Everything else later.{/i}"
+        "Triage first. Everything else later."
     else:
-        "{i}One day can be enough when you’re still alive at the end of it.{/i}"
+        "One day can be enough when you’re still alive at the end of it."
 
     # VISUAL: He picks up fake IDs. Examines them. Basic. Functional.
     # PROP: ID cards. Photos (theirs, slightly altered). Names (not theirs).
 
-    a "{i}Kade Voss. That's my new name.{/i}"
-    a "{i}Lower Spans worker. Sector 6. Unremarkable. Forgettable.{/i}"
-    a "{i}Not Glass. Not Rylan. Not Echelon.{/i}"
-    a "{i}Just... nobody. Trying to survive.{/i}"
+    athought "Kade Voss. That's my new name."
+    athought "Lower Spans worker. Sector 6. Unremarkable. Forgettable."
+    athought "Not Glass. Not Rylan. Not Echelon."
+    athought "Just... nobody. Trying to survive."
 
     # Sync fake names with system (already seeded in player_state)
     $ player_state["fake_names"]["aeron"] = "Kade Voss"
@@ -294,9 +294,9 @@ label act2_reality_check:
     l "Nothing. Just... ghosts everywhere."
 
     # VISUAL: Both stare at fake identities. Their old lives gone. New ones forced.
-    a "{i}Kade Voss. Aeron Rylan died on that rooftop.{/i}"
-    a "{i}Glass shattered in the Purge.{/i}"
-    a "{i}What's left... I don't know yet.{/i}"
+    athought "Kade Voss. Aeron Rylan died on that rooftop."
+    athought "Glass shattered in the Purge."
+    athought "What's left... I don't know yet."
 
     # VISUAL: Lyra sets ID down. Looks at Aeron. Vulnerable. Scared.
     l "I don't know how to do this."
@@ -315,16 +315,16 @@ label act2_reality_check:
         a "Then we learn together."
         a "Neither of us knows how to do this. But we're here."
         a "And as long as we're here, we're not nothing."
-        "{i}He lets the silence be shelter, not punishment.{/i}"
+        "He lets the silence be shelter, not punishment."
         $ adjust_empathy_once("act2_02_ground_lyra_soft", +1)
 
     l "(quiet) What are we, then?"
     a "...Survivors. For now. That's enough."
 
     # VISUAL: She leans against him. Shoulder to shoulder. Exhaustion winning.
-    "{i}She leans. He doesn't move. Both too tired for anything else.{/i}"
-    "{i}Two people in a concrete box. Hunted. Hated. Alone.{/i}"
-    "{i}But not dead. Not yet.{/i}"
+    "She leans. He doesn't move. Both too tired for anything else."
+    "Two people in a concrete box. Hunted. Hated. Alone."
+    "But not dead. Not yet."
 
     l "Do you think we'll make it?"
     a "I don't know."
@@ -344,24 +344,24 @@ label act2_reality_check:
     # LIGHTING: Dim bulb stays on (too dangerous to sleep in dark).
     # SOUND: City hum. Distant sirens. Their breathing. Exhaustion.
 
-    "{i}They sleep. Or try to. Bodies exhausted. Minds racing.{/i}"
-    "{i}Tomorrow: Zira returns. Maybe with Selene. Maybe with hope.{/i}"
-    "{i}Tonight: Just survival. Just breathing. Just existing.{/i}"
+    "They sleep. Or try to. Bodies exhausted. Minds racing."
+    "Tomorrow: Zira returns. Maybe with Selene. Maybe with hope."
+    "Tonight: Just survival. Just breathing. Just existing."
 
-    a "{i}From Aeries to Unders. From Glass to Kade.{/i}"
-    a "{i}From everything to nothing.{/i}"
-    a "{i}But Zira's right. I need to figure out what I am.{/i}"
-    a "{i}Before this city decides for me.{/i}"
-    a "{i}Before I become just another corpse in the ruins.{/i}"
+    athought "From Aeries to Unders. From Glass to Kade."
+    athought "From everything to nothing."
+    athought "But Zira's right. I need to figure out what I am."
+    athought "Before this city decides for me."
+    athought "Before I become just another corpse in the ruins."
 
     # Identity introspection → once
     $ adjust_empathy_once("act2_02_identity_thesis", +1)
 
     # VISUAL: Hold on both sleeping. Vulnerable. Broken. Human.
-    "{i}Two people against a city. Impossible odds.{/i}"
-    "{i}But they're here. And they're alive.{/i}"
-    "{i}Tomorrow brings either hope or death.{/i}"
-    "{i}Tonight brings only darkness. And that's enough.{/i}"
+    "Two people against a city. Impossible odds."
+    "But they're here. And they're alive."
+    "Tomorrow brings either hope or death."
+    "Tonight brings only darkness. And that's enough."
 
     # TRANSITION: Fade to black. Time passes. Morning comes.
     # TEXT: "The Next Day"

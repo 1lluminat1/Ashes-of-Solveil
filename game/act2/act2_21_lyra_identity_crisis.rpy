@@ -14,11 +14,11 @@ label act2_lyra_identity_crisis:
 
     #scene bg_training_yard with fade
 
-    "{i}Training yard. Lyra running drills. Squad of new recruits learning formations. Tactical movements. Combat basics. She's good at this. Patient. Clear. Effective instructor. Natural leader. People listen to her. Follow her orders. Respect her skill. She's valuable here. Important. But does she see that? Or does she only see what she's not?{/i}"
+    "Training yard. Lyra running drills. Squad of new recruits learning formations. Tactical movements. Combat basics. She's good at this. Patient. Clear. Effective instructor. Natural leader. People listen to her. Follow her orders. Respect her skill. She's valuable here. Important. But does she see that? Or does she only see what she's not?"
 
     # VISUAL: Watching from distance. Lyra commanding squad. Confident. Competent. Then... hesitation. Hand to wrist. Checking Band. Again. Third time in five minutes.
 
-    "{i}She's checking the Band. Again. That's the fourth time this training session. Fifth? Losing count. She does this more now. More frequently. More compulsively. Touching it. Verifying it's working. Making sure it's still there. Still functional. Still keeping her... what? Human? Valuable? Alive? What does she think the Band does?{/i}"
+    "She's checking the Band. Again. That's the fourth time this training session. Fifth? Losing count. She does this more now. More frequently. More compulsively. Touching it. Verifying it's working. Making sure it's still there. Still functional. Still keeping her... what? Human? Valuable? Alive? What does she think the Band does?"
 
     # VISUAL: Training concludes. Squad dismissed. Well done. Effective session. But Lyra looks exhausted. Drained beyond physical exertion.
 
@@ -27,7 +27,7 @@ label act2_lyra_identity_crisis:
 
     # VISUAL: Recruits leaving. Chattering. Positive. Energized. Lyra standing alone. Hand on Band. Again. Staring at nothing.
 
-    "{i}She's alone now. Guard down. Exhaustion showing. Not physical. Mental. Emotional. Spiritual maybe. She's running on empty. Has been for weeks. Pushing through. Functioning. But barely. Something's breaking. Or already broken. Just holding pieces together through willpower and terror.{/i}"
+    "She's alone now. Guard down. Exhaustion showing. Not physical. Mental. Emotional. Spiritual maybe. She's running on empty. Has been for weeks. Pushing through. Functioning. But barely. Something's breaking. Or already broken. Just holding pieces together through willpower and terror."
 
     # VISUAL: Aeron approaching. Concerned. She doesn't notice immediately. Lost in thoughts. Dark thoughts.
 
@@ -66,7 +66,7 @@ label act2_lyra_identity_crisis:
 
     # VISUAL: She's crying now. Full breakdown. Years of identity crisis and Band dependence crashing down. Can't hold it anymore.
 
-    "{i}She's breaking. Completely. This isn't new. This has been building for months. Since defection. Since losing Echelon identity. Since becoming 'Glass's partner' instead of 'Elite proof.' She lost who she was. And the Band is the only thing tethering her to feeling like she's anything at all. Without it? She thinks she's empty. Worthless. Gone.{/i}"
+    "She's breaking. Completely. This isn't new. This has been building for months. Since defection. Since losing Echelon identity. Since becoming 'Glass's partner' instead of 'Elite proof.' She lost who she was. And the Band is the only thing tethering her to feeling like she's anything at all. Without it? She thinks she's empty. Worthless. Gone."
 
     # VISUAL: Aeron moving closer. Not crowding. Present. Grounding. Careful.
 
@@ -158,7 +158,7 @@ label act2_lyra_identity_crisis:
 
     # VISUAL: Moment holding. Connection deep. Trust absolute. Partnership stronger. Changed by crisis but stronger for it.
 
-    "{i}She's changed. Can see it in her eyes. In her posture. In the way she's not touching the Band compulsively anymore. The fear's still there. Probably always will be. But it's not defining her. Not controlling her. She's found self underneath. Found Lyra. That's everything. That's what she needed. That's what we all need. To know we're more than our tools. More than our roles. More than what others made us. We're ourselves. Real. Valuable. Enough.{/i}"
+    "She's changed. Can see it in her eyes. In her posture. In the way she's not touching the Band compulsively anymore. The fear's still there. Probably always will be. But it's not defining her. Not controlling her. She's found self underneath. Found Lyra. That's everything. That's what she needed. That's what we all need. To know we're more than our tools. More than our roles. More than what others made us. We're ourselves. Real. Valuable. Enough."
 
     # VISUAL: Standing together. Training yard empty. Sun setting. New understanding reached. Foundation stronger.
 
@@ -171,7 +171,7 @@ label act2_lyra_identity_crisis:
     # ==============================================================
 
     # Check relationship status with Lyra
-    $ if characters["lyra"].get("lewd_scene_completed", False) or characters["lyra"]["trust"] >= 10:
+    if characters["lyra"].get("lewd_scene_completed", False) or characters["lyra"]["trust"] >= 10:
         jump lyra_romance_moment
     else:
         jump lyra_platonic_moment
@@ -189,7 +189,7 @@ label lyra_romance_moment:
 
     # VISUAL: She moves into his arms. Holding tight. Not desperate. Not panicked. Just present. Just needing connection. Just being held.
 
-    "{i}She's in my arms. Holding tight. Not clinging. Just connected. Just present. Just being here with me. Proof she's real. Proof she matters. Proof she's more than Band. More than role. Just Lyra. Just herself. Just enough.{/i}"
+    "She's in my arms. Holding tight. Not clinging. Just connected. Just present. Just being here with me. Proof she's real. Proof she matters. Proof she's more than Band. More than role. Just Lyra. Just herself. Just enough."
 
     # VISUAL: She pulls back slightly. Looking up. Eyes clear. Certain. Choosing.
 
@@ -201,7 +201,7 @@ label lyra_romance_moment:
 
     # VISUAL: She kisses him. Soft. Certain. Real. Not desperate. Not proving anything. Just connecting. Just loving. Just being.
 
-    "{i}She kisses me. Soft. Real. Certain. This isn't panic. This isn't dependency. This is choice. This is Lyra choosing connection. Choosing love. Choosing me. Because she wants to. Not because she has to. Not because she's lost. Because she found herself and chose anyway. That's real. That's love. That's us.{/i}"
+    "She kisses me. Soft. Real. Certain. This isn't panic. This isn't dependency. This is choice. This is Lyra choosing connection. Choosing love. Choosing me. Because she wants to. Not because she has to. Not because she's lost. Because she found herself and chose anyway. That's real. That's love. That's us."
 
     # VISUAL: Kiss ending. Holding each other. Comfortable. Real. Changed. Stronger.
 
@@ -247,7 +247,7 @@ label lyra_resolution:
 
     # VISUAL: Pulling apart. Changed. Stronger. Clearer. Resolved. Moving forward together.
 
-    "{i}Crisis resolved. Band trauma addressed. Lyra found underneath Enhancement. Identity discovered beyond tool. She's real. She's valuable. She's enough. Band or no Band. That's truth. That's healing. That's growth. That's everything.{/i}"
+    "Crisis resolved. Band trauma addressed. Lyra found underneath Enhancement. Identity discovered beyond tool. She's real. She's valuable. She's enough. Band or no Band. That's truth. That's healing. That's growth. That's everything."
 
     # VISUAL: Walking back toward base. Together. Sun setting. Day ending. New understanding beginning.
 
@@ -257,11 +257,11 @@ label lyra_resolution:
 
     # VISUAL: Brief moment. Connection. Then separating. Each to own space. Processing. Growing. Healing.
 
-    "{i}She's leaving. Walking to quarters. Not touching Band compulsively. Not checking. Not verifying. Just walking. Just existing. Just being Lyra. That's growth. That's healing. That's proof that words matter. That truth matters. That seeing people for who they are matters. She's found herself. Finally. And she won't lose herself again. That's permanent. That's real. That's everything.{/i}"
+    "She's leaving. Walking to quarters. Not touching Band compulsively. Not checking. Not verifying. Just walking. Just existing. Just being Lyra. That's growth. That's healing. That's proof that words matter. That truth matters. That seeing people for who they are matters. She's found herself. Finally. And she won't lose herself again. That's permanent. That's real. That's everything."
 
     # VISUAL: Aeron standing alone. Training yard empty. Crisis handled. Person saved. Not from death. From lost identity. From terror. From thinking she was nothing. Saved her from that. That counts. That matters.
 
-    "{i}Another name for the list. Not saved from death. Saved from dissolution. Saved from thinking she was nothing. Saved Lyra from losing Lyra. That counts. That goes on Tessa's board. That's proof I'm doing something right. Something good. Something worth continuing. Twenty-two names. Now twenty-three. Lyra. Saved. Real. Enough. That's everything.{/i}"
+    "Another name for the list. Not saved from death. Saved from dissolution. Saved from thinking she was nothing. Saved Lyra from losing Lyra. That counts. That goes on Tessa's board. That's proof I'm doing something right. Something good. Something worth continuing. Twenty-two names. Now twenty-three. Lyra. Saved. Real. Enough. That's everything."
 
     # Mark scene complete
     $ scenes["lyra_identity_crisis"] = True

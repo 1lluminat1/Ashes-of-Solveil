@@ -68,14 +68,14 @@ label act2_meeting_selene:
 
     scene bg_sector6_ruins_dawn with fade
 
-    "{i}Sector 6 ruins. Dawn barely breaking. The Purge left this place shattered—collapsed buildings, torn streets, ghosts everywhere. Perfect neutral ground because nobody wants it anymore.{/i}"
-    "{i}[ob] {scenes['meeting_selene']['ob_state']}. Snipers east ridge; two flank routes choke to killing funnels.{/i}"
-    "{i}[emp] {scenes['meeting_selene']['emp_state']}. If this goes bad, count the living on the way out.{/i}"
+    "Sector 6 ruins. Dawn barely breaking. The Purge left this place shattered—collapsed buildings, torn streets, ghosts everywhere. Perfect neutral ground because nobody wants it anymore."
+    "[ob] {scenes['meeting_selene']['ob_state']}. Snipers east ridge; two flank routes choke to killing funnels."
+    "[emp] {scenes['meeting_selene']['emp_state']}. If this goes bad, count the living on the way out."
 
     # VISUAL: Figures emerge from ruins. Armed. Cautious. Resistance fighters.
     # 4-5 people. Battle-worn. Survivors. Angry. Grieving. Dangerous.
 
-    "{i}Movement. Figures emerging from cover. Armed. Four of them. Maybe five. Hard to tell in the shadows. All pointing weapons at us.{/i}"
+    "Movement. Figures emerging from cover. Armed. Four of them. Maybe five. Hard to tell in the shadows. All pointing weapons at us."
 
     # VISUAL: Aeron and Lyra stop. Hands visible. Not reaching for weapons. Non-threatening.
     l "(quiet) Five visible. Probably more we can't see."
@@ -86,7 +86,7 @@ label act2_meeting_selene:
     # VISUAL: Resistance fighters part. Woman walks through. Mid-30s. Scarred. Exhausted. Determined.
     # SELENE: Leader. Survivor. Epitome of determination despite everything lost.
 
-    "{i}They part. One woman walks forward. Mid-thirties, scarred face, eyes that have seen too much death. This is Selene. The woman whose people I killed. Whose sector I swept. Who lost everything twice—once to me, once to the Purge.{/i}"
+    "They part. One woman walks forward. Mid-thirties, scarred face, eyes that have seen too much death. This is Selene. The woman whose people I killed. Whose sector I swept. Who lost everything twice—once to me, once to the Purge."
 
     # VISUAL: Selene stops. Ten feet away. Evaluating. Cold. Professional.
     selene "Glass."
@@ -188,8 +188,8 @@ label act2_meeting_selene:
 
 label crisis_tracked_weapons:
 
-    "{i}Beeping. Loud. Proximity alarm. Someone's resistance fighter's device lighting up. Red. Urgent. Incoming.{/i}"
-    "{i}[ob] Heat-map in my head: eight vectors, two probable decoy pushes.{/i}"
+    "Beeping. Loud. Proximity alarm. Someone's resistance fighter's device lighting up. Red. Urgent. Incoming."
+    "[ob] Heat-map in my head: eight vectors, two probable decoy pushes."
 
     resistance_fighter "Contact! Multiple signatures! Echelon patrol converging on this position!"
 
@@ -201,7 +201,7 @@ label crisis_tracked_weapons:
 
     selene "(cold) You led them here. Deliberately or stupidly, doesn't matter. My people are in danger because of you."
 
-    a "{i}The weapons. We stole them from Echelon patrol. Ambushed them, took their gear. Of course they were tracked. Of course. How did I not think of that?{/i}"
+    athought "The weapons. We stole them from Echelon patrol. Ambushed them, took their gear. Of course they were tracked. Of course. How did I not think of that?"
 
     a "We didn't know. The weapons—we stole them from Echelon. We didn't know they were tracked."
     selene "You didn't CHECK? You brought enemy gear to a resistance meeting and didn't check for trackers?"
@@ -210,12 +210,12 @@ label crisis_tracked_weapons:
     l "We can fix this. Drop the weapons. Scatter. Lead them away—"
     selene "Too late. They're already here. We fight or we die."
 
-    "{i}Gunfire. Sudden. Loud. Echelon forces pouring into ruins from multiple angles. Eight of them. Ten. Professional. Coordinated. We led them right here.{/i}"
-    "{i}[emp] Own it. Fix it. Keep people breathing.{/i}"
+    "Gunfire. Sudden. Loud. Echelon forces pouring into ruins from multiple angles. Eight of them. Ten. Professional. Coordinated. We led them right here."
+    "[emp] Own it. Fix it. Keep people breathing."
 
     selene "(shouting) Defensive positions! Cover fire! Get the wounded out!"
 
-    a "{i}Their tactics. I know them. Taught them. Trained with them. Pincer movement, suppressing fire, flanking maneuver. Textbook Echelon assault.{/i}"
+    athought "Their tactics. I know them. Taught them. Trained with them. Pincer movement, suppressing fire, flanking maneuver. Textbook Echelon assault."
 
     menu:
         "Chaos. Gunfire. People dying because we brought tracked weapons. How do we fix this?"
@@ -228,7 +228,7 @@ label crisis_tracked_weapons:
             selene "You want to help? Don't get my people killed trying!"
             a "I won't. I promise. Just trust me for five minutes."
 
-            "{i}Move. Cover. Return fire. Muscle memory from years of Echelon training. But fighting against them now. Using their tactics against them. Poetic. Necessary. Desperate.{/i}"
+            "Move. Cover. Return fire. Muscle memory from years of Echelon training. But fighting against them now. Using their tactics against them. Poetic. Necessary. Desperate."
 
             a "(shouting) Two flanking left! They'll come through that archway in ten seconds!"
 
@@ -240,7 +240,7 @@ label crisis_tracked_weapons:
             l "They're regrouping! Standard retreat pattern! Three. Two. One."
             a "When they pull back, they'll drop smoke. Don't chase. It's a trap."
 
-            "{i}Smoke clears. Echelon forces retreating. Defeated. We won. Somehow. Despite everything. Because we know them. Because we were them.{/i}"
+            "Smoke clears. Echelon forces retreating. Defeated. We won. Somehow. Despite everything. Because we know them. Because we were them."
 
             selene "(breathing hard) Status!"
             resistance_fighter "Two wounded. Minor. Everyone else intact. They're retreating."
@@ -282,14 +282,14 @@ label crisis_tracked_weapons:
             l "Don't. We do this together. Always. You run, I run. You fight, I fight. You die, I die."
             a "...Together. Always together."
 
-            "{i}Run. Tracked weapons in hand. Shouting. Drawing attention. Making ourselves targets. Echelon forces see us. Recognize us. Turn pursuit our direction.{/i}"
-            "{i}[emp] Debt paid in motion. Keep them on us, not on the wounded.{/i}"
+            "Run. Tracked weapons in hand. Shouting. Drawing attention. Making ourselves targets. Echelon forces see us. Recognize us. Turn pursuit our direction."
+            "[emp] Debt paid in motion. Keep them on us, not on the wounded."
 
             a "(shouting back at Selene) Get your people out! We'll lead them away!"
             selene "You'll die!"
             a "Then we die! But your people live! That's what matters! Go!"
 
-            "{i}Rooftop. Trapped. Echelon forces below. No way out. No way down. This is it. This is where we die. But Selene's people got away. That's enough. That has to be enough.{/i}"
+            "Rooftop. Trapped. Echelon forces below. No way out. No way down. This is it. This is where we die. But Selene's people got away. That's enough. That has to be enough."
 
             echelon_commander "Glass! Surrender! Marcus wants you alive! Comply and you won't be harmed!"
 
@@ -299,10 +299,10 @@ label crisis_tracked_weapons:
             l "We fight. Together."
             a "Together. Until the end."
 
-            "{i}Gunfire. From behind. Echelon forces caught by surprise. Turning. Confusion. Who—?{/i}"
+            "Gunfire. From behind. Echelon forces caught by surprise. Turning. Confusion. Who—?"
             selene "(shouting) Now! Hit them now!"
 
-            "{i}Caught between us. Resistance behind, us above. Crossfire. Echelon forces breaking. Retreating. Defeated. Selene came back. She came back for us.{/i}"
+            "Caught between us. Resistance behind, us above. Crossfire. Echelon forces breaking. Retreating. Defeated. Selene came back. She came back for us."
 
             selene "You idiots. Running off to die nobly. What did you think that would accomplish?"
             a "Saving your people. They got away. That's all that mattered."
@@ -337,9 +337,9 @@ label crisis_tracked_weapons:
             a "We can help—"
             selene "You've DONE enough! Leave! If I see you again I'll shoot you myself!"
 
-            "{i}Fleeing. Leaving them to fight. Leaving them to die. Because I argued instead of helped. Because Glass's instincts took over. Defend. Deflect. Never admit. And people died.{/i}"
-            "{i}[ob] Debrief note: I chose ego under fire. Unacceptable.{/i}"
-            "{i}[emp] And they bled for it.{/i}"
+            "Fleeing. Leaving them to fight. Leaving them to die. Because I argued instead of helped. Because Glass's instincts took over. Defend. Deflect. Never admit. And people died."
+            "[ob] Debrief note: I chose ego under fire. Unacceptable."
+            "[emp] And they bled for it."
 
             $ scenes["meeting_selene"]["casualties"] = 5
             $ reputation["resistance"] -= 10
@@ -357,13 +357,13 @@ label crisis_tracked_weapons:
 
 label crisis_vex_favor:
 
-    "{i}Device. Beeping. Mine. Urgent message. Can't ignore it. Not now. Vex.{/i}"
-    "{i}[ob] Priority collision: alliance vs. debt.{/i}"
+    "Device. Beeping. Mine. Urgent message. Can't ignore it. Not now. Vex."
+    "[ob] Priority collision: alliance vs. debt."
 
     selene "You're answering messages during our meeting?"
     a "I'm sorry. This might be important. Give me one second."
 
-    a "{i}Vex. The favor I owe. Being called in right now. During the meeting. Perfect fucking timing.{/i}"
+    athought "Vex. The favor I owe. Being called in right now. During the meeting. Perfect fucking timing."
 
     selene "Problem?"
     a "...Yes. The weapons dealer I got our gear from. I owe them a favor. They're calling it in now. Echelon's raiding their workshop."
@@ -386,16 +386,16 @@ label crisis_vex_favor:
 
             scene bg_sector7_market with fade
 
-            "{i}Running. Sector 7. Vex's workshop ahead. Smoke rising. Gunfire. Echelon raid in progress. We're not too late. Not yet.{/i}"
-            "{i}[ob] Entry angles: right side blind; left has overlapping fields.{/i}"
+            "Running. Sector 7. Vex's workshop ahead. Smoke rising. Gunfire. Echelon raid in progress. We're not too late. Not yet."
+            "[ob] Entry angles: right side blind; left has overlapping fields."
 
-            "{i}There. Workshop. Echelon forces. Six of them. Tearing the place apart. Vex behind cover. Wounded. Bleeding. Trapped.{/i}"
+            "There. Workshop. Echelon forces. Six of them. Tearing the place apart. Vex behind cover. Wounded. Bleeding. Trapped."
 
             a "(whisper) Six soldiers. Vex is hurt. We need to hit fast and hard."
             l "Agreed. I'll take left flank. You take right. Signal when ready."
             a "Ready. Three. Two. One. Now."
 
-            "{i}Move. Fire. Cover. Two soldiers down before they know we're there. Four remaining. Reacting. Professional. Dangerous. But we're faster.{/i}"
+            "Move. Fire. Cover. Two soldiers down before they know we're there. Four remaining. Reacting. Professional. Dangerous. But we're faster."
 
             vex "(pained) Took your time."
             a "You're welcome. Can you move?"
@@ -407,7 +407,7 @@ label crisis_vex_favor:
             vex "Would've worked too if you hadn't shown. Guess that favor paid off."
             a "You helped us. We help you. That's how it works."
 
-            "{i}Workshop exploding. Echelon destroying evidence. Everything Vex built. Gone. But Vex is alive. That's what matters.{/i}"
+            "Workshop exploding. Echelon destroying evidence. Everything Vex built. Gone. But Vex is alive. That's what matters."
 
             scene bg_sector6_ruins with fade
 
@@ -437,7 +437,7 @@ label crisis_vex_favor:
             $ scenes["meeting_selene"]["ob_score"]  += 1
             $ log_line("act2_meeting_selene", "choice=stay_with_selene trust+2 ob+1")
 
-            "{i}Vex survived. Barely. Lost everything. And now hates me. I broke my word. Chose the mission over the debt. Was it right? I don't know. But it's done.{/i}"
+            "Vex survived. Barely. Lost everything. And now hates me. I broke my word. Chose the mission over the debt. Was it right? I don't know. But it's done."
 
             $ scenes["meeting_selene"]["alliance_formed"] = True
             $ reputation["resistance"] += 4
@@ -455,7 +455,7 @@ label crisis_vex_favor:
 
 label crisis_kelvin_mole:
 
-    "{i}Movement. Someone approaching. Confident. Not combat. Casual. Familiar. Wait. I know that walk.{/i}"
+    "Movement. Someone approaching. Confident. Not combat. Casual. Familiar. Wait. I know that walk."
 
     kelvin "Well well. Glass and the perfect soldier. Never thought I'd see you here."
 
@@ -467,14 +467,14 @@ label crisis_kelvin_mole:
     selene "Then how—"
     kelvin "(laughs) Because I set it up. Well, me and my Echelon handlers. Nice little trap. You all walked right in."
 
-    "{i}Mole. Kelvin works for Echelon. The smuggling job. The package. It was all surveillance.{/i}"
-    "{i}[ob] If he’s here, outer ring’s netted. Time window measured in seconds.{/i}"
+    "Mole. Kelvin works for Echelon. The smuggling job. The package. It was all surveillance."
+    "[ob] If he’s here, outer ring’s netted. Time window measured in seconds."
 
     kelvin "I'd save the ammunition. You're surrounded. Echelon strike team. Twenty strong. Positioned around this entire block."
     kelvin "I've been feeding them intel for months..."
     kelvin "(to Aeron) And you helped. That delivery you made? Tracker inside."
 
-    a "{i}The package. I delivered it. Helped them. Didn't even know.{/i}"
+    athought "The package. I delivered it. Helped them. Didn't even know."
 
     kelvin "So here's how this ends. You all surrender... Or I press this—"
 
@@ -486,12 +486,12 @@ label crisis_kelvin_mole:
             $ scenes["meeting_selene"]["ob_score"]  += 1
             $ log_line("act2_meeting_selene", "choice=rush_kelvin trust+2 ob+1")
 
-            "{i}Lunge. Kelvin's hand moving. Button pressing. Too slow. Too late. Signal going—{/i}"
-            "{i}Gunshot. Lyra. Perfect shot. Device destroyed. Kelvin's hand mangled. Signal not sent.{/i}"
+            "Lunge. Kelvin's hand moving. Button pressing. Too slow. Too late. Signal going—"
+            "Gunshot. Lyra. Perfect shot. Device destroyed. Kelvin's hand mangled. Signal not sent."
 
             selene "Move! Evacuation plan Delta! Now!"
 
-            "{i}Underground tunnels. Escape routes. Old smuggling paths. We got lucky. Barely.{/i}"
+            "Underground tunnels. Escape routes. Old smuggling paths. We got lucky. Barely."
 
             selene "You acted fast. Stopped the signal. Saved everyone."
             a "When I found out, I stopped him. Actions matter more than words."
@@ -510,7 +510,7 @@ label crisis_kelvin_mole:
             $ scenes["meeting_selene"]["negotiated_kelvin"] = True
             $ log_line("act2_meeting_selene", "choice=negotiate_kelvin")
 
-            "{i}Gunshot. Kelvin drops. Dead before he hits ground. Selene's sniper never trusted negotiation.{/i}"
+            "Gunshot. Kelvin drops. Dead before he hits ground. Selene's sniper never trusted negotiation."
 
             selene "Talking doesn't work on traitors. Only bullets. Remember that."
             a "You could have told me you had a sniper ready."
@@ -530,10 +530,10 @@ label crisis_kelvin_mole:
             $ scenes["meeting_selene"]["ob_score"]  += 1
             $ log_line("act2_meeting_selene", "choice=kill_kelvin trust+3 ob+1")
 
-            "{i}Draw. Aim. Fire. Muscle memory. Glass training. Kill the threat. Fast. Clean. Efficient.{/i}"
+            "Draw. Aim. Fire. Muscle memory. Glass training. Kill the threat. Fast. Clean. Efficient."
 
-            "{i}Dead before he hits ground. Device secured. Signal not sent. Threat neutralized. Glass would be proud. I feel sick.{/i}"
-            "{i}[emp] Note the sickness. Keep it. It means I'm still human.{/i}"
+            "Dead before he hits ground. Device secured. Signal not sent. Threat neutralized. Glass would be proud. I feel sick."
+            "[emp] Note the sickness. Keep it. It means I'm still human."
 
             selene "...Efficient."
             a "He was a threat. I ended him."
@@ -556,15 +556,15 @@ label crisis_kelvin_mole:
 
 label crisis_sector10_rescue:
 
-    "{i}Footsteps. Running. Fast. Someone panicked. Young voice. Messenger. Bad news incoming.{/i}"
+    "Footsteps. Running. Fast. Someone panicked. Young voice. Messenger. Bad news incoming."
 
     messenger "(gasping) Selene! Sector 10! Echelon raid! They're killing everyone!"
 
     selene "Sector 10? There's nothing left there. Just ruins and survivors."
     messenger "That's what they're raiding! Thirty people! They're executing them!"
 
-    a "{i}The survivors. Hector's father. I promised to help. And now they're dying.{/i}"
-    "{i}[emp] Promise on the line. Lives on the line.{/i}"
+    athought "The survivors. Hector's father. I promised to help. And now they're dying."
+    "[emp] Promise on the line. Lives on the line."
 
     messenger "(to Aeron) One of them sent message! Said you promised to help! Said you owed them!"
     selene "You made promises to Sector 10 survivors? When?"
@@ -592,15 +592,15 @@ label crisis_sector10_rescue:
 
             scene bg_sector10_ruins with fade
 
-            "{i}Twelve Echelon soldiers. Thirty survivors lined up. Minutes from death.{/i}"
-            "{i}[ob] Break the line at the command node; buy chaos for the run.{/i}"
+            "Twelve Echelon soldiers. Thirty survivors lined up. Minutes from death."
+            "[ob] Break the line at the command node; buy chaos for the run."
 
             selene "(whisper) Twelve soldiers. Seven of us."
             a "Bad odds are all we have."
             selene "Hit fast. Hit hard."
 
-            "{i}Attack. Three down on entry. Nine left. Survivors scatter. Some hit. Some escape.{/i}"
-            "{i}Last Echelon falls. Twenty-two made it. Eight died. Count the living.{/i}"
+            "Attack. Three down on entry. Nine left. Survivors scatter. Some hit. Some escape."
+            "Last Echelon falls. Twenty-two made it. Eight died. Count the living."
 
             selene "Twenty-two saved. Could have been worse."
             a "Could have been better."
@@ -625,12 +625,12 @@ label crisis_sector10_rescue:
 
             scene bg_sector10_ruins with fade
 
-            "{i}We make noise. They bite. Selene extracts. Twenty-five out; five dead before arrival.{/i}"
+            "We make noise. They bite. Selene extracts. Twenty-five out; five dead before arrival."
 
             selene "(comms) Extraction complete! Twenty-five out! Disengage!"
             a "(comms) Copy! Moving! Cover us!"
 
-            "{i}Retreat under cover. Together. This is how it looks.{/i}"
+            "Retreat under cover. Together. This is how it looks."
 
             selene "Twenty-five saved. Better than I expected... Welcome to the resistance."
 
@@ -650,7 +650,7 @@ label crisis_sector10_rescue:
             $ scenes["meeting_selene"]["emp_score"] -= 1
             $ log_line("act2_meeting_selene", "choice=sector10_refuse trust+2 ob+1 emp-1")
 
-            "{i}Thirty dead. Hector's father among them. I broke my word. Chose alliance over promise. Was it right? I don't know. But it's done.{/i}"
+            "Thirty dead. Hector's father among them. I broke my word. Chose alliance over promise. Was it right? I don't know. But it's done."
 
             $ scenes["meeting_selene"]["alliance_formed"] = True
             $ scenes["meeting_selene"]["broke_promise"] = True
@@ -669,7 +669,7 @@ label crisis_sector10_rescue:
 
 label crisis_debt_collector:
 
-    "{i}Footsteps. Angry. Aggressive. Man approaching. Armed. I know him. The debt collector. From the vendor situation. Fuck.{/i}"
+    "Footsteps. Angry. Aggressive. Man approaching. Armed. I know him. The debt collector. From the vendor situation. Fuck."
 
     debt_collector "There you are. Been looking for you."
     a "Let him go."
@@ -731,7 +731,7 @@ label crisis_debt_collector:
             $ scenes["meeting_selene"]["fought_collector"] = True
             $ log_line("act2_meeting_selene", "choice=fight_collector")
 
-            "{i}Draw. Fast. Brutal. He’s down, wounded, fleeing. Threat ended. For now.{/i}"
+            "Draw. Fast. Brutal. He’s down, wounded, fleeing. Threat ended. For now."
 
             dren "Now he'll come back with more."
             a "Then run."
@@ -751,8 +751,8 @@ label crisis_debt_collector:
             $ scenes["meeting_selene"]["emp_score"] -= 1
             $ log_line("act2_meeting_selene", "choice=let_dren_pay trust+1 emp-1")
 
-            "{i}Dren screaming. Beaten. Dragged away. I don't watch. I know what happens to people who don't pay debts down here.{/i}"
-            "{i}[emp] Silence is a kind of consent. I hear it anyway.{/i}"
+            "Dren screaming. Beaten. Dragged away. I don't watch. I know what happens to people who don't pay debts down here."
+            "[emp] Silence is a kind of consent. I hear it anyway."
 
             $ characters["dren"]["trust"] = -10
             $ characters["dren"]["beaten"] = True
@@ -768,14 +768,14 @@ label crisis_debt_collector:
 
 label crisis_kren_warning:
 
-    "{i}Running. Fast. Desperate. Someone coming. Kren. The vendor I worked for.{/i}"
+    "Running. Fast. Desperate. Someone coming. Kren. The vendor I worked for."
 
     kren "(gasping) Aeron! ...Echelon patrol... asked about you... I got away... barely. They're coming. Minutes."
 
     selene "You led them here?"
     kren "I tried to warn you!"
 
-    a "{i}Kren's wounded. Can't run. Liability. But he came to warn us. That loyalty means something.{/i}"
+    athought "Kren's wounded. Can't run. Liability. But he came to warn us. That loyalty means something."
 
     menu:
         "Echelon patrol incoming. Five minutes. Kren wounded. What do we do?"
@@ -789,7 +789,7 @@ label crisis_kren_warning:
             selene "He'll slow us."
             a "Then we move slower."
 
-            "{i}Underground. Engines above. We made it. Barely.{/i}"
+            "Underground. Engines above. We made it. Barely."
 
             kren "Thank you. I won't forget this."
             selene "You value your contacts. Good leadership. Welcome to the resistance."
@@ -808,7 +808,7 @@ label crisis_kren_warning:
             $ scenes["meeting_selene"]["emp_score"] -= 1
             $ log_line("act2_meeting_selene", "choice=leave_kren trust+1 ob+1 emp-1")
 
-            "{i}Underground. Safe. Above, Kren screaming. Executed. He warned us. We abandoned him.{/i}"
+            "Underground. Safe. Above, Kren screaming. Executed. He warned us. We abandoned him."
 
             selene "Clean escape. Hard call—but good."
             a "Kren died."
@@ -826,8 +826,8 @@ label crisis_kren_warning:
             $ scenes["meeting_selene"]["fought_at_location"] = True
             $ log_line("act2_meeting_selene", "choice=fight_here")
 
-            "{i}They’re here. Twenty soldiers. We’re seven. Bad math. We bleed for it.{/i}"
-            "{i}Kren dies. Two resistance down. Three wounded. Disaster. Because I was stubborn.{/i}"
+            "They’re here. Twenty soldiers. We’re seven. Bad math. We bleed for it."
+            "Kren dies. Two resistance down. Three wounded. Disaster. Because I was stubborn."
 
             selene "Three dead. Three wounded. For pride?"
             a "I thought—"
@@ -847,13 +847,13 @@ label crisis_kren_warning:
 
 label crisis_noelle_algorithm:
 
-    "{i}Device. Alert. Noelle. Analysis complete. Timing suspicious. What did she find?{/i}"
+    "Device. Alert. Noelle. Analysis complete. Timing suspicious. What did she find?"
 
     a "(reading) Noelle's algorithm shows multiple Echelon strikes in twenty minutes. Including here."
     selene "How do I know this isn't false intel?"
     a "Her predictions are solid. 89 percent. If she says evacuate, we evacuate."
     l "If she's right and we stay, we die. If she's wrong and we run, we're inconvenienced. The math is clear."
-    "{i}[ob] Take the low-cost branch. Live to verify.{/i}"
+    "[ob] Take the low-cost branch. Live to verify."
 
     menu:
         "Trust Noelle's data or stay?"
@@ -863,8 +863,8 @@ label crisis_noelle_algorithm:
             $ scenes["meeting_selene"]["ob_score"]  += 1
             $ log_line("act2_meeting_selene", "choice=trust_noelle trust+3 ob+1")
 
-            "{i}Evacuation. Old subway. Nineteen. Eighteen. Seventeen.{/i}"
-            "{i}Zero. Explosions above. Four locations. Ours included. We’d be dead if we stayed.{/i}"
+            "Evacuation. Old subway. Nineteen. Eighteen. Seventeen."
+            "Zero. Explosions above. Four locations. Ours included. We’d be dead if we stayed."
 
             selene "(reading) Three cells didn't evacuate. Gone. We're the only ones who made it out."
             a "Because we trusted Noelle."
@@ -884,12 +884,12 @@ label crisis_noelle_algorithm:
             $ scenes["meeting_selene"]["ob_score"]  -= 1
             $ log_line("act2_meeting_selene", "choice=ignore_noelle trust-1 ob-1")
 
-            "{i}Waiting. Ten. Five. Nothing...{/i}"
-            "{i}EXPLOSION. Building collapses. Exactly on time.{/i}"
+            "Waiting. Ten. Five. Nothing..."
+            "EXPLOSION. Building collapses. Exactly on time."
 
             selene "(shouting) Defensive positions! Fight out!"
 
-            "{i}We escape, but bleed. Three down.{/i}"
+            "We escape, but bleed. Three down."
 
             selene "Your analyst was right. I didn’t listen."
             selene "...You're in. Bring her. I need people who are right when I’m wrong."
@@ -910,8 +910,8 @@ label crisis_resolution_success:
 
     scene bg_sector6_ruins_aftermath with fade
 
-    "{i}Aftermath. Crisis resolved. Alliance forged. Not through words. Through action. Through fire. Through choice.{/i}"
-    "{i}[emp] People alive. Names to add. [ob] Lessons logged; patterns updated.{/i}"
+    "Aftermath. Crisis resolved. Alliance forged. Not through words. Through action. Through fire. Through choice."
+    "[emp] People alive. Names to add. [ob] Lessons logged; patterns updated."
 
     selene "We survived."
     a "We did more than survive. We proved we can work together."
@@ -928,7 +928,7 @@ label crisis_resolution_success:
     selene "Now we bleed Echelon instead. Together."
     a "Burn it all down."
 
-    "{i}Sun rising. New beginning. We're resistance now. No going back.{/i}"
+    "Sun rising. New beginning. We're resistance now. No going back."
 
     $ scenes["meeting_selene"]["alliance_formed"] = True
     $ canon["resistance_joined"] = True
@@ -938,27 +938,27 @@ label crisis_resolution_success:
     $ selene_final_trust = scenes["meeting_selene"]["selene_trust"]
 
     if selene_final_trust >= 5:
-        "{i}Selene trusts us. Not fully, not yet. But enough to fight beside us.{/i}"
+        "Selene trusts us. Not fully, not yet. But enough to fight beside us."
     elif selene_final_trust >= 2:
-        "{i}Cautious probation. One mistake and we're out. But we're in. That's a start.{/i}"
+        "Cautious probation. One mistake and we're out. But we're in. That's a start."
     else:
-        "{i}Useful tools. Disposable. We prove it every mission or we die. Understood.{/i}"
+        "Useful tools. Disposable. We prove it every mission or we die. Understood."
 
     # Casualty reflection
     $ total_casualties = scenes["meeting_selene"].get("casualties", 0)
 
     if total_casualties == 0:
-        "{i}No casualties. Rare. Precious. Selene noticed.{/i}"
+        "No casualties. Rare. Precious. Selene noticed."
     elif total_casualties <= 3:
-        "{i}[total_casualties] casualties. Not catastrophic. Not acceptable. We do better.{/i}"
+        "[total_casualties] casualties. Not catastrophic. Not acceptable. We do better."
     else:
-        "{i}[total_casualties] casualties. Too many. Different cause, same result: blood on my hands. Make it mean something.{/i}"
+        "[total_casualties] casualties. Too many. Different cause, same result: blood on my hands. Make it mean something."
 
     selene "First mission briefing tomorrow. Dawn. Don't be late."
     a "We'll be there."
     selene "Good. Go find a bed. Tomorrow we start breaking Echelon."
 
-    "{i}Leaving. We came as fugitives. We leave forged. Still broken. But forged into something that might matter.{/i}"
+    "Leaving. We came as fugitives. We leave forged. Still broken. But forged into something that might matter."
     l "We did it."
     a "That was the easy part."
     l "The hard part?"
@@ -966,7 +966,7 @@ label crisis_resolution_success:
     l "Together."
     a "Together."
 
-    "{i}Act 2 complete. Fugitives to resistance. Hunted to hunters. The war begins.{/i}"
+    "Act 2 complete. Fugitives to resistance. Hunted to hunters. The war begins."
 
     $ mark_scene("act2_meeting_selene", complete=True)
     $ log_line("act2_meeting_selene", f"exit success trust={selene_final_trust} casualties={total_casualties} OB/EMP end: emp={scenes['meeting_selene']['emp_score']} ob={scenes['meeting_selene']['ob_score']}")
@@ -982,14 +982,14 @@ label crisis_resolution_failure:
 
     scene bg_sector6_ruins_disaster with fade
 
-    "{i}Disaster. Too many mistakes. Too much Glass through the cracks. Selene's done with us.{/i}"
-    "{i}[ob] After-action: ego spikes under stress, mission discipline collapses. [emp] People died for that spike.{/i}"
+    "Disaster. Too many mistakes. Too much Glass through the cracks. Selene's done with us."
+    "[ob] After-action: ego spikes under stress, mission discipline collapses. [emp] People died for that spike."
 
     selene "Get out."
     a "Selene, wait—"
     selene "(cold) GET. OUT."
 
-    "{i}Leaving. Alliance destroyed. Alone again.{/i}"
+    "Leaving. Alliance destroyed. Alone again."
 
     l "(quiet) What do we do now?"
     a "...I don't know."

@@ -28,33 +28,33 @@ label act1_04_hallway:
     # ========= VOICE BASELINE =========
     # Baseline cadence: OB-lean (clipped/procedural). If player state shifts EMP later, localized warmth only.
 
-    a "{i}The hallway runs like a runway—each polished tile a reminder of who I'm supposed to be.{/i}"
+    athought "The hallway runs like a runway—each polished tile a reminder of who I'm supposed to be."
 
     # VISUAL: Officials in quiet clusters; smiles rehearsed, eyes measuring. CAMERA: slow glide past faces.
-    a "{i}Their eyes trace edges, not faces. Judging the outline, never the person.{/i}"
+    athought "Their eyes trace edges, not faces. Judging the outline, never the person."
 
     # NEW: Glass makes them uncomfortable
-    a "{i}They see something they don’t understand. And that makes them nervous.{/i}"
+    athought "They see something they don’t understand. And that makes them nervous."
 
     # VISUAL: Floor tiles—concentric circles radiating from the center, like ripples frozen in stone.
-    "{i}The floor tiles form rings within rings—the Echelon sigil stamped into the earth itself.{/i}"
+    "The floor tiles form rings within rings—the Echelon sigil stamped into the earth itself."
     pause 0.6
 
-    a "{i}Walk the path. Stay in your circle. Step outside, and the system corrects you.{/i}"
+    athought "Walk the path. Stay in your circle. Step outside, and the system corrects you."
 
     # VISUAL: Vaulted ceiling; light fixtures descend like judging eyes.
-    "{i}The ceiling arches overhead, so high it swallows sound. Every footstep dies before it escapes.{/i}"
+    "The ceiling arches overhead, so high it swallows sound. Every footstep dies before it escapes."
     pause 0.7
 
-    "{i}Footsteps carry down the length of the hall, thinned by distant strings and laughter.{/i}"
+    "Footsteps carry down the length of the hall, thinned by distant strings and laughter."
     pause 0.7
 
     # VISUAL: Insert — his bare wrist catches light. No Band.
-    a "{i}No Band, no worth. That's the first thing they see.{/i}"
+    athought "No Band, no worth. That's the first thing they see."
 
     # NEW: But not the only thing
-    a "{i}Then they see the uniform. The medals. The record.{/i}"
-    a "{i}And they look away even faster.{/i}"
+    athought "Then they see the uniform. The medals. The record."
+    athought "And they look away even faster."
 
     # VISUAL: An older attendant approaches with a tray; pauses at Aeron.
     servant "(quietly) Master Aeron."
@@ -63,12 +63,12 @@ label act1_04_hallway:
     a "(stops) Do I know you?"
     servant "I served your family for sixteen years, sir. I was there the night your brother..."
 
-    "{i}He trails off. The silence finishes the sentence.{/i}"
+    "He trails off. The silence finishes the sentence."
     pause 0.9
 
     # VISUAL: Aeron's jaw tightens; the man notices, lowers his gaze.
     servant "(softer) He spoke of you often. Said you'd be the one to change things."
-    a "{i}Change what? The world? Or just his mind about leaving it?{/i}"
+    athought "Change what? The world? Or just his mind about leaving it?"
     a "(carefully) He said a lot of things."
     servant "That he did, sir."
 
@@ -83,37 +83,37 @@ label act1_04_hallway:
     servant "For what it's worth... I hope you find what he was looking for."
 
     # VISUAL: He bows—genuine; continues down the hall.
-    "{i}His footsteps fade into the chamber music.{/i}"
+    "His footsteps fade into the chamber music."
     pause 0.7
 
-    a "{i}What he was looking for? He was looking for the edge of a roof.{/i}"
-    a "{i}And he found it.{/i}"
+    athought "What he was looking for? He was looking for the edge of a roof."
+    athought "And he found it."
 
     # VISUAL: Staff reaction — butler steps aside, gaze to floor.
-    a "{i}Obedient in public. Honest in silence.{/i}"
+    athought "Obedient in public. Honest in silence."
 
     # VISUAL: Another elite passes—eyes flick wrist→face→away.
-    "{i}Another glance. This one lingers on the medals, then recoils.{/i}"
+    "Another glance. This one lingers on the medals, then recoils."
     pause 0.6
 
-    a "{i}They know what I’ve done. What I’m capable of.{/i}"
-    a "{i}And they don’t want to be seen looking too long.{/i}"
+    athought "They know what I’ve done. What I’m capable of."
+    athought "And they don’t want to be seen looking too long."
 
     # ========= CHOICE (standardized API; psychologically ambiguous) =========
     menu:
         "His wrist catches the light — naked, unmarked. A dozen eyes pretend not to see."
         "Cover it.":
-            $ apply_choice_once(
+            $ choice_and_dev(
                 _current_scene_id, "_cover_wrist", "OB", factor=1,
                 next_scene_label="act1_05_gala",
                 note="Performs conformity to reduce scrutiny; self-erasure coping, not belief… yet."
             )
 
-            a "{i}An old reflex. As if fabric could fix the silence.{/i}"
-            a "{i}Let them think I belong. Let them stop wondering.{/i}"
+            athought "An old reflex. As if fabric could fix the silence."
+            athought "Let them think I belong. Let them stop wondering."
 
         "Let it show.":
-            $ apply_choice_once(
+            $ choice_and_dev(
                 _current_scene_id, "_bare_wrist", "EMP", factor=1,
                 next_scene_label="act1_05_gala",
                 note="Accepts stigma without concealment; micro-assertion of self vs performance."
@@ -121,63 +121,63 @@ label act1_04_hallway:
 
             # Hidden True Path increment: unrepressed self-acceptance
             #$ adjust_true_path_resonance_once("a1.hallway.wrist_show", 1)
-            a "{i}No Band. No need to lie about it.{/i}"
-            a "{i}Let them feel uneasy. Let them remember what this uniform really means.{/i}"
+            athought "No Band. No need to lie about it."
+            athought "Let them feel uneasy. Let them remember what this uniform really means."
 
     # VISUAL: Portraits of Aeries elites — immaculate propaganda, eyes following.
-    "{i}Portraits line the walls—heroes painted to outlast their mistakes.{/i}"
+    "Portraits line the walls—heroes painted to outlast their mistakes."
     pause 0.7
 
     # Marcus portrait with Glass reference
     # CAMERA: Lateral drift; Aeron’s silhouette eclipses half the face.
-    a "{i}Marcus Rylan. Hero, legend, father. Depends who you ask.{/i}"
+    athought "Marcus Rylan. Hero, legend, father. Depends who you ask."
 
-    "{i}The portrait doesn't look back. It never does.{/i}"
+    "The portrait doesn't look back. It never does."
     pause 0.7
 
-    a "{i}He trained me well. Too well, maybe.{/i}"
-    a "{i}I can kill without hesitation. Lead without doubt. Obey without question.{/i}"
-    a "{i}Everything he wanted. Everything but faith.{/i}"
-    a "{i}All function, no soul. Just enough to pass for human.{/i}"
-    a "{i}And that makes me his greatest failure.{/i}"
+    athought "He trained me well. Too well, maybe."
+    athought "I can kill without hesitation. Lead without doubt. Obey without question."
+    athought "Everything he wanted. Everything but faith."
+    athought "All function, no soul. Just enough to pass for human."
+    athought "And that makes me his greatest failure."
 
     # VISUAL: Two elites whisper as he passes—light catches mirrored glasses.
-    "{i}Voices drop as he approaches. Not mockery. Something else.{/i}"
-    "{i}He catches fragments:{/i}"
+    "Voices drop as he approaches. Not mockery. Something else."
+    "He catches fragments:"
 
-    "{i}\"...Marcus Rylan's son. Glass.\"{/i}"
-    "{i}\"...390 operations. Zero failures.\"{/i}"
-    "{i}\"...technically perfect, but have you seen his eyes?\"{/i}"
-    "{i}\"...nothing behind them...\"{/i}"
+    "\"...Marcus Rylan's son. Glass.\""
+    "\"...390 operations. Zero failures.\""
+    "\"...technically perfect, but have you seen his eyes?\""
+    "\"...nothing behind them...\""
     pause 0.8
 
-    a "{i}They're not wrong.{/i}"
-    a "{i}I don’t feel. I don’t question.{/i}"
-    a "{i}I just cut.{/i}"
+    athought "They're not wrong."
+    athought "I don’t feel. I don’t question."
+    athought "I just cut."
 
-    "{i}The whispers fade as he passes. Relief in their silence.{/i}"
+    "The whispers fade as he passes. Relief in their silence."
     pause 0.7
 
     # VISUAL: End doors glow—warm light spilling into the cold hall; guards motionless.
-    "{i}At the far end, twin doors leak warm light into the cold hall.{/i}"
+    "At the far end, twin doors leak warm light into the cold hall."
     pause 0.7
 
     # Threshold hesitation with physicality; hand hovers near frame.
-    a "{i}I could turn around. Slip into the dark.{/i}"
-    a "{i}Would anyone stop me? Would anyone care?{/i}"
+    athought "I could turn around. Slip into the dark."
+    athought "Would anyone stop me? Would anyone care?"
 
     # But Glass doesn't retreat
-    "{i}His hand drops. The choice was already made.{/i}"
+    "His hand drops. The choice was already made."
     pause 0.7
 
-    a "{i}No. Not tonight.{/i}"
-    a "{i}I show up when I’m told. That’s what I’m built for.{/i}"
+    athought "No. Not tonight."
+    athought "I show up when I’m told. That’s what I’m built for."
 
     # Doors open—gold light floods; sound swells, then cut to silence to hand control to player.
-    "{i}Hinges sigh. Light and voices flood the marble hush.{/i}"
+    "Hinges sigh. Light and voices flood the marble hush."
     pause 0.8
 
-    a "{i}Time to smile. Time to lie. Time to perform.{/i}"
+    athought "Time to smile. Time to lie. Time to perform."
 
     #$ telemetry(_current_scene_id, gates_met=True)
     $ set_scene_flag(_current_scene_id, "completed")

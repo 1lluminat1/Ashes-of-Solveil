@@ -22,23 +22,23 @@ label act1_lower_spans:
     # SOUND: Distant market; pipe drip; elevator chain clatter; occasional drone pass.
     # LIGHTING: Sodium/blue mix; signage flicker; steam plumes catching light.
 
-    "{i}Each level bleeds more color—red, green, electric blue. The edges run brightest.{/i}"
+    "Each level bleeds more color—red, green, electric blue. The edges run brightest."
 
-    a "{i}I couldn’t sleep. Not after Marcus’s order.{/i}"
-    a "{i}Not after Lyra. Not after standing on that edge.{/i}"
-    a "{i}Air tastes different down here—metal and rainwater. Not clean, but honest.{/i}"
+    athought "I couldn’t sleep. Not after Marcus’s order."
+    athought "Not after Lyra. Not after standing on that edge."
+    athought "Air tastes different down here—metal and rainwater. Not clean, but honest."
 
-    "{i}Condensation taps the concrete. The walls breathe.{/i}"
+    "Condensation taps the concrete. The walls breathe."
 
-    "{i}The lower spans pulse with another kind of life. No marble. No velvet. Just rust, steam, survival.{/i}"
-    "{i}A child laughs; a blade slides through an oil rag. Voices rise, barter, vanish.{/i}"
+    "The lower spans pulse with another kind of life. No marble. No velvet. Just rust, steam, survival."
+    "A child laughs; a blade slides through an oil rag. Voices rise, barter, vanish."
 
-    a "{i}They call this 'forgotten.' It feels more awake than the Aeries.{/i}"
-    a "{i}Tomorrow at dawn, I’m ordered to sweep this sector.{/i}"
-    a "{i}200 to 500 targets. 'Acceptable collateral.'{/i}"
-    a "{i}Glass executes orders. But tonight... tonight I wanted to see what Glass destroys.{/i}"
+    athought "They call this 'forgotten.' It feels more awake than the Aeries."
+    athought "Tomorrow at dawn, I’m ordered to sweep this sector."
+    athought "200 to 500 targets. 'Acceptable collateral.'"
+    athought "Glass executes orders. But tonight... tonight I wanted to see what Glass destroys."
 
-    "{i}A vendor works a makeshift stand—heat coils glowing beneath a dented pot. The smell cuts through rust and rain.{/i}"
+    "A vendor works a makeshift stand—heat coils glowing beneath a dented pot. The smell cuts through rust and rain."
 
     vendor "(calls out) Therm-brew! Hot! Real beans, not synth!"
 
@@ -50,7 +50,7 @@ label act1_lower_spans:
     menu:
         "The vendor’s eyes track him—wary, but not hostile."
         "Buy a cup.":
-            $ apply_choice_once(
+            $ choice_and_dev(
                 _current_scene_id, "lower_spans_buy_brew", "EMP", factor=1,
                 next_scene_label="act1_14_lower_spans",
                 note="Buys therm-brew; humane contact with Unders vendor"
@@ -64,9 +64,9 @@ label act1_lower_spans:
             a "It smells better than anything in the Aeries."
             vendor "(softens) Well. Ain’t that the truth."
 
-            "{i}The cup is warm. Bitter, earthy, real.{/i}"
+            "The cup is warm. Bitter, earthy, real."
 
-            a "{i}When was the last time I tasted something that wasn’t sanitized?{/i}"
+            athought "When was the last time I tasted something that wasn’t sanitized?"
 
             vendor "You’re Marcus Rylan’s boy, yeah?"
             a "(carefully) I am."
@@ -74,40 +74,40 @@ label act1_lower_spans:
             a "...Yeah. It was."
             vendor "(nods) You’re alright in my book. Stay warm."
 
-            "{i}Down here, respect isn’t inherited. It’s earned.{/i}"
+            "Down here, respect isn’t inherited. It’s earned."
 
-            a "{i}Tomorrow, I’m ordered to clear this sector. Will he survive the sweep?{/i}"
-            a "{i}Glass doesn’t ask these questions. But I’m asking now.{/i}"
+            athought "Tomorrow, I’m ordered to clear this sector. Will he survive the sweep?"
+            athought "Glass doesn’t ask these questions. But I’m asking now."
 
         "Walk past without stopping.":
-            $ apply_choice_once(
+            $ choice_and_dev(
                 _current_scene_id, "lower_spans_ignore_vendor", "OB", factor=1,
                 next_scene_label="act1_14_lower_spans",
                 note="Ignores vendor; maintains emotional distance"
             )
             $ set_scene_flag(scene_id, "ignored_vendor")
 
-            a "{i}Not here to make friends.{/i}"
+            athought "Not here to make friends."
 
-            "{i}The vendor watches him pass. Doesn’t call out again.{/i}"
+            "The vendor watches him pass. Doesn’t call out again."
 
-            a "{i}Tomorrow, I might kill him. Better not to know his face.{/i}"
-            a "{i}That’s what Glass would think. ...Why does it feel wrong tonight?{/i}"
+            athought "Tomorrow, I might kill him. Better not to know his face."
+            athought "That’s what Glass would think. ...Why does it feel wrong tonight?"
 
-    "{i}A drone sweeps past; the light skims and moves on. Even the machines look tired here.{/i}"
+    "A drone sweeps past; the light skims and moves on. Even the machines look tired here."
 
-    a "{i}Eyes are everywhere. People don’t bow. They keep moving.{/i}"
+    athought "Eyes are everywhere. People don’t bow. They keep moving."
 
-    "{i}Movement—quick, low to the ground. A child slips between the pipes.{/i}"
+    "Movement—quick, low to the ground. A child slips between the pipes."
 
     child "(freezes) ...You’re one of them."
     a "One of who?"
     child "Echelon. The ones that took my dad."
 
-    "{i}Small hands. Dirty knuckles. Eyes too old for the face.{/i}"
+    "Small hands. Dirty knuckles. Eyes too old for the face."
 
-    a "{i}Tomorrow, this child might be on the casualty list.{/i}"
-    a "{i}'Acceptable collateral.'{/i}"
+    athought "Tomorrow, this child might be on the casualty list."
+    athought "'Acceptable collateral.'"
 
     # ------------------------------------------------------
     # PLAYER CHOICE – empathy toward child
@@ -115,7 +115,7 @@ label act1_lower_spans:
     menu:
         "The child’s breath fogs the air between them."
         "Try to reassure the child.":
-            $ apply_choice_once(
+            $ choice_and_dev(
                 _current_scene_id, "lower_spans_reassure_child", "EMP", factor=1,
                 next_scene_label="act1_14_lower_spans",
                 note="Crouches; reassures; admits uncertainty"
@@ -130,44 +130,44 @@ label act1_lower_spans:
             child "My dad said some soldiers still got hearts."
             a "Where did they take him?"
             child "(shrugs) Dunno. He didn’t come back."
-            a "{i}How many stories like this are there? How many I’ll never hear?{/i}"
-            a "{i}How many more after tomorrow’s sweep?{/i}"
+            athought "How many stories like this are there? How many I’ll never hear?"
+            athought "How many more after tomorrow’s sweep?"
             child "You gonna take people too?"
             a "(honest) I hope not."
             child "(nods) ...Okay."
-            "{i}The child backs away, then disappears into the pipes.{/i}"
-            a "{i}Tomorrow, that child is a target. Glass obeys. But something’s breaking.{/i}"
+            "The child backs away, then disappears into the pipes."
+            athought "Tomorrow, that child is a target. Glass obeys. But something’s breaking."
 
         "Say nothing and keep walking.":
-            $ apply_choice_once(
+            $ choice_and_dev(
                 _current_scene_id, "lower_spans_ignore_child", "OB", factor=1,
                 next_scene_label="act1_14_lower_spans",
                 note="Ignores child; preserves mission persona"
             )
             $ set_scene_flag(scene_id, "ignored_child")
 
-            "{i}He says nothing. What could he say?{/i}"
+            "He says nothing. What could he say?"
 
             child "(bitter) Yeah. That’s what I thought."
 
-            "{i}The child vanishes into shadow. Contempt lingers.{/i}"
+            "The child vanishes into shadow. Contempt lingers."
 
-            a "{i}Can’t blame them. I’d spit too.{/i}"
-            a "{i}Tomorrow, that child might die in the sweep. And they’ll die hating me.{/i}"
+            athought "Can’t blame them. I’d spit too."
+            athought "Tomorrow, that child might die in the sweep. And they’ll die hating me."
 
-    "{i}He stops at a railing; far below, scattered fires stubborn as stars.{/i}"
+    "He stops at a railing; far below, scattered fires stubborn as stars."
 
-    a "{i}No spires. No chandeliers. Just humanity, unpolished.{/i}"
+    athought "No spires. No chandeliers. Just humanity, unpolished."
 
-    "{i}Below, people gather around barrel fires. Laughter rises through the steam.{/i}"
-    "{i}Someone plays a broken guitar. The notes are wrong, but no one cares.{/i}"
-    "{i}A couple shares food from a dented tin. An old man tells stories to children.{/i}"
+    "Below, people gather around barrel fires. Laughter rises through the steam."
+    "Someone plays a broken guitar. The notes are wrong, but no one cares."
+    "A couple shares food from a dented tin. An old man tells stories to children."
 
-    a "{i}They have nothing. And somehow, they have everything I don’t.{/i}"
-    a "{i}Tomorrow at dawn, this courtyard is a target zone.{/i}"
-    a "{i}Those fires will be extinguished. Those voices silenced.{/i}"
+    athought "They have nothing. And somehow, they have everything I don’t."
+    athought "Tomorrow at dawn, this courtyard is a target zone."
+    athought "Those fires will be extinguished. Those voices silenced."
 
-    "{i}A child points up. The music stops. Eyes find him in the dark.{/i}"
+    "A child points up. The music stops. Eyes find him in the dark."
 
     # ------------------------------------------------------
     # PLAYER CHOICE – acknowledge or hide
@@ -175,55 +175,56 @@ label act1_lower_spans:
     menu:
         "They watch him. Waiting."
         "Nod in acknowledgment.":
-            $ apply_choice_once(
+            $ choice_and_dev(
                 _current_scene_id, "lower_spans_acknowledge_crowd", "EMP", factor=1,
                 next_scene_label="act1_14_lower_spans",
                 note="Acknowledges Unders crowd; non-threatening signal"
             )
             $ set_scene_flag(scene_id, "acknowledged_unders")
 
-            "{i}He lifts his hand. Not a threat. Just recognition.{/i}"
-            "{i}After a beat, the old man nods back. The guitar resumes.{/i}"
+            "He lifts his hand. Not a threat. Just recognition."
+            "After a beat, the old man nods back. The guitar resumes."
 
-            a "{i}Not forgiveness. Not trust. But not hatred either. It’s more than I deserve.{/i}"
-            a "{i}Tomorrow, I’ll kill them. And tonight, they acknowledged me.{/i}"
-            a "{i}Glass is cracking. I can feel it.{/i}"
+            athought "Not forgiveness. Not trust. But not hatred either. It’s more than I deserve."
+            athought "Tomorrow, I’ll kill them. And tonight, they acknowledged me."
+            athought "Glass is cracking. I can feel it."
 
         "Step back into shadow.":
-            $ apply_choice_once(
+            $ choice_and_dev(
                 _current_scene_id, "lower_spans_hide_from_crowd", "OB", factor=1,
                 next_scene_label="act1_14_lower_spans",
                 note="Hides in shadow; avoids recognition"
             )
             $ set_scene_flag(scene_id, "hid_from_unders")
 
-            "{i}He steps back—out of the light, out of sight.{/i}"
-            "{i}The guitar picks up again. Life continues without him.{/i}"
-            a "{i}I don’t belong down here. I don’t belong anywhere.{/i}"
-            a "{i}Tomorrow, I’ll belong to the mission. Glass always does.{/i}"
+            "He steps back—out of the light, out of sight."
+            "The guitar picks up again. Life continues without him."
+            
+            athought "I don’t belong down here. I don’t belong anywhere."
+            athought "Tomorrow, I’ll belong to the mission. Glass always does."
 
     # ------------------------------------------------------
     # EMPATHY-TIER INTERNAL REFLECTION
     # ------------------------------------------------------
     if is_ob_hard:
-        a "{i}Observation complete. Data confirmed. Sector alive but noncompliant.{/i}"
-        a "{i}Tomorrow it will be corrected. Efficiently.{/i}"
+        athought "Observation complete. Data confirmed. Sector alive but noncompliant."
+        athought "Tomorrow it will be corrected. Efficiently."
     elif is_mid:
-        a "{i}This edge is a mirror. Everyone’s running from something. Me too.{/i}"
-        a "{i}Maybe the mission isn’t the cure. Maybe it’s the infection.{/i}"
+        athought "This edge is a mirror. Everyone’s running from something. Me too."
+        athought "Maybe the mission isn’t the cure. Maybe it’s the infection."
     else:
-        a "{i}Every face tonight was a reason not to follow that order.{/i}"
-        a "{i}Maybe the cracks aren’t breaking me. Maybe they’re letting the light in.{/i}"
+        athought "Every face tonight was a reason not to follow that order."
+        athought "Maybe the cracks aren’t breaking me. Maybe they’re letting the light in."
 
-    "{i}Wind carries rain and iron. The lights dip, then steady.{/i}"
-    "{i}He keeps walking. Deeper into the shadows.{/i}"
+    "Wind carries rain and iron. The lights dip, then steady."
+    "He keeps walking. Deeper into the shadows."
 
-    a "{i}Tomorrow, I’m ordered to sweep this sector. The vendor. The child. The families around the fires.{/i}"
-    a "{i}All of them. Gone.{/i}"
-    a "{i}Glass obeys orders. Glass doesn’t question.{/i}"
-    a "{i}But I came here tonight to see their faces. To know what Glass destroys.{/i}"
-    a "{i}Maybe that’s the crack spreading. Maybe that’s Glass breaking.{/i}"
-    a "{i}Or maybe... maybe it’s what’s underneath that's finally waking up.{/i}"
+    athought "Tomorrow, I’m ordered to sweep this sector. The vendor. The child. The families around the fires."
+    athought "All of them. Gone."
+    athought "Glass obeys orders. Glass doesn’t question."
+    athought "But I came here tonight to see their faces. To know what Glass destroys."
+    athought "Maybe that’s the crack spreading. Maybe that’s Glass breaking."
+    athought "Or maybe... maybe it’s what’s underneath that's finally waking up."
 
     $ set_scene_flag(scene_id, "completed")
     return

@@ -30,18 +30,18 @@ label act1_06_balcony:
     $ is_emp     = pass_tier("EMP1","EMP2","EMP3")  # ≈ >= +2
 
     # VISUAL: Neon-lit skyline beyond the rail; high wind skims the parapet; condensation gathers on stone.
-    "{i}The city's glow cuts hard lines across the stone.{/i}"
+    "The city's glow cuts hard lines across the stone."
     pause 0.7
 
     if is_ob_hard:
-        a "{i}They look down at the Unders like another species. Maybe they’re right.{/i}"
-        a "{i}Glass doesn’t care about altitude. Glass just reflects orders.{/i}"
+        athought "They look down at the Unders like another species. Maybe they’re right."
+        athought "Glass doesn’t care about altitude. Glass just reflects orders."
     elif is_mid:
-        a "{i}They look down at the Unders like another species. Still human. All of us.{/i}"
-        a "{i}Glass doesn’t care about altitude. It only mirrors whoever’s watching.{/i}"
+        athought "They look down at the Unders like another species. Still human. All of us."
+        athought "Glass doesn’t care about altitude. It only mirrors whoever’s watching."
     else:  # empathy
-        a "{i}They look down at the Unders like another species. Still human. All of us — even the ones pretending not to be.{/i}"
-        a "{i}Glass catches their reflection and gives it back. Cracked, but still human.{/i}"
+        athought "They look down at the Unders like another species. Still human. All of us — even the ones pretending not to be."
+        athought "Glass catches their reflection and gives it back. Cracked, but still human."
 
     # --- LYRA ARRIVES ---
     l "Got a light?"
@@ -63,15 +63,15 @@ label act1_06_balcony:
             )
             $ set_scene_flag(_current_scene_id, "shared_light")
 
-            "{i}He lifts the flame. She leans in; her eyes don’t leave his.{/i}"
+            "He lifts the flame. She leans in; her eyes don’t leave his."
             pause 0.7
 
             if norm >= 0.17:  # ~ >= +2
-                a "{i}Close enough to see the cracks — and the warmth leaking through them.{/i}"
+                athought "Close enough to see the cracks — and the warmth leaking through them."
             elif is_ob_hard:
-                a "{i}Too close. Distance blurred. Glass doesn’t allow that.{/i}"
+                athought "Too close. Distance blurred. Glass doesn’t allow that."
             else:
-                a "{i}Close enough to see reflection, not truth.{/i}"
+                athought "Close enough to see reflection, not truth."
 
         "Offer the lighter and step back.":
             $ record_choice_once(
@@ -80,15 +80,15 @@ label act1_06_balcony:
                 note="Maintains distance; preserves performance shell."
             )
 
-            "{i}He hands her the lighter. Distance holds.{/i}"
+            "He hands her the lighter. Distance holds."
             pause 0.7
 
             if is_ob_hard:
-                a "{i}Glass doesn’t touch. Glass maintains form.{/i}"
+                athought "Glass doesn’t touch. Glass maintains form."
             elif norm >= 0.17:
-                a "{i}Even distance has weight when you want to close it.{/i}"
+                athought "Even distance has weight when you want to close it."
             else:
-                a "{i}Space feels safe. Familiar. But not right.{/i}"
+                athought "Space feels safe. Familiar. But not right."
 
     # --- OPTIONAL GAZE BEAT ---
     menu:
@@ -102,12 +102,12 @@ label act1_06_balcony:
             $ set_scene_flag(_current_scene_id, "held_gaze")
 
             if is_ob_hard:
-                a "{i}Observation, not connection. I catalog her expression — nothing more.{/i}"
+                athought "Observation, not connection. I catalog her expression — nothing more."
             elif is_mid:
-                a "{i}Color on smoke. For once, no audience.{/i}"
-                a "{i}She’s not looking at Glass. She’s looking for what’s left underneath.{/i}"
+                athought "Color on smoke. For once, no audience."
+                athought "She’s not looking at Glass. She’s looking for what’s left underneath."
             else:
-                a "{i}The world falls away. Just her eyes and the reflection inside them.{/i}"
+                athought "The world falls away. Just her eyes and the reflection inside them."
 
         "Look past her to the city.":
             $ record_choice_once(
@@ -116,7 +116,7 @@ label act1_06_balcony:
                 note="Deflects intimacy; re-centers on environment."
             )
 
-            a "{i}The skyline answers for me. Easier to look at light than at someone who might actually see.{/i}"
+            athought "The skyline answers for me. Easier to look at light than at someone who might actually see."
 
     # --- SMALL TALK VARIANTS ---
     if check_scene_flag("act1_05_gala", "approach_lyra"):
@@ -131,7 +131,7 @@ label act1_06_balcony:
             l "Crossing the floor like that—bold, considering the room."
             a "Bold or stupid?"
             l "Maybe both."
-            a "{i}Her tone almost sounds human again.{/i}"
+            athought "Her tone almost sounds human again."
         else:
             l "Crossing the floor like that—brave, for someone under orders."
             a "Orders said twenty-two hundred sharp."
@@ -145,7 +145,7 @@ label act1_06_balcony:
         l "I recognize my own reflection."
 
     # --- QUIET BEAT AT THE RAIL ---
-    "{i}They stand at the rail; the city's noise folds over itself below.{/i}"
+    "They stand at the rail; the city's noise folds over itself below."
     pause 0.8
 
     if not check_scene_flag("act1_05_gala", "approach_lyra"):
@@ -160,7 +160,7 @@ label act1_06_balcony:
 
     # --- PERFORMANCE DISCUSSION ---
     l "Take away the performance and there’s not much left."
-    a "{i}Her voice drops — not the formal Lyra, something underneath.{/i}"
+    athought "Her voice drops — not the formal Lyra, something underneath."
     a "You’ve done it your whole life."
     l "Since I could walk. That doesn’t mean I’m blind."
     l "They call me the system’s proof. Polished. Perfect. Pristine."
@@ -195,7 +195,7 @@ label act1_06_balcony:
     l "Let them. Fear’s loud when it’s small."
     a "They just respect my father."
     a "I’m just a rumor. An heir to a name that doesn’t fit."
-    a "{i}Rylan. Heavy word. Hollow sound.{/i}"
+    athought "Rylan. Heavy word. Hollow sound."
 
     # --- MICRO-CHOICE: ash gesture ---
     menu:
@@ -208,15 +208,15 @@ label act1_06_balcony:
             )
             $ set_scene_flag(_current_scene_id, "ash_flick")
 
-            "{i}Ash falls and vanishes into neon.{/i}"
+            "Ash falls and vanishes into neon."
             pause 0.7
 
             if norm >= 0.17:
-                a "{i}Let it fall. Maybe some things deserve to land where light can’t reach.{/i}"
+                athought "Let it fall. Maybe some things deserve to land where light can’t reach."
             elif is_ob_hard:
-                a "{i}Let it fall. Out of sight, out of system.{/i}"
+                athought "Let it fall. Out of sight, out of system."
             else:
-                a "{i}Let it fall. Easier than holding on.{/i}"
+                athought "Let it fall. Easier than holding on."
 
         "Tap ash into the tray.":
             $ record_choice_once(
@@ -225,15 +225,15 @@ label act1_06_balcony:
                 note="Maintains control; keeps mess contained."
             )
 
-            "{i}He taps the tray’s edge; the ember settles.{/i}"
+            "He taps the tray’s edge; the ember settles."
             pause 0.7
             
             if is_ob_hard:
-                a "{i}Controlled. Contained. Like everything else.{/i}"
+                athought "Controlled. Contained. Like everything else."
             elif norm >= 0.17:
-                a "{i}Still control. But less certainty in why.{/i}"
+                athought "Still control. But less certainty in why."
             else:
-                a "{i}Routine gesture. Keeps the silence steady.{/i}"
+                athought "Routine gesture. Keeps the silence steady."
 
     # --- TRUTH AND LEASH ---
     a "Why are you really out here?"
@@ -242,7 +242,7 @@ label act1_06_balcony:
     l "No. Glass is what they made you pretend to be."
     l "The person asking that question is the one I came to see."
 
-    "{i}They smoke in the hush between gusts of wind.{/i}"
+    "They smoke in the hush between gusts of wind."
     pause 0.8
 
     a "How long are you back from assignment?"
@@ -257,12 +257,12 @@ label act1_06_balcony:
     a "And you—"
     a "—you don’t belong to anyone."
 
-    "{i}She doesn’t step away. Neither does he.{/i}"
+    "She doesn’t step away. Neither does he."
     pause 0.7
 
-    a "{i}The city hums below. Up here, the silence is louder.{/i}"
-    a "{i}Two pieces of glass, leaning close enough to touch.{/i}"
-    a "{i}Wondering if contact will shatter both.{/i}"
+    athought "The city hums below. Up here, the silence is louder."
+    athought "Two pieces of glass, leaning close enough to touch."
+    athought "Wondering if contact will shatter both."
     l "(quiet) Always so serious."
     l "And here I thought I was the dramatic one."
 
@@ -279,8 +279,8 @@ label act1_06_balcony:
 
             a "Who holds the leash tonight—Council or Command?"
             l "(a beat) Does it matter, if they pull the same direction?"
-            a "{i}She looks away. Jaw tight. Breath unsteady.{/i}"
-            a "{i}She’s not deflecting. She’s drowning.{/i}"
+            athought "She looks away. Jaw tight. Breath unsteady."
+            athought "She’s not deflecting. She’s drowning."
             a "It matters if you’re the one being pulled."
             l "(studies him) And what about you? Who pulls your leash?"
             a "Father. Always Father."
@@ -295,13 +295,13 @@ label act1_06_balcony:
             )
 
             if is_ob_hard:
-                a "{i}Questions disrupt function. Silence keeps form.{/i}"
+                athought "Questions disrupt function. Silence keeps form."
             elif norm >= 0.17:
-                a "{i}I let the question stay between us. Some truths deserve air, not pressure.{/i}"
+                athought "I let the question stay between us. Some truths deserve air, not pressure."
             else:
-                a "{i}I leave the question where it belongs—in the smoke.{/i}"
+                athought "I leave the question where it belongs—in the smoke."
 
-    "{i}Two faint sparks hang in the night—then dim with the wind.{/i}"
+    "Two faint sparks hang in the night—then dim with the wind."
     pause 0.8
 
     # --- VULNERABILITY BEAT ---
@@ -315,19 +315,19 @@ label act1_06_balcony:
     l "Even if that means shattering first."
 
     # --- CLOSING EMOTIONAL BEAT ---
-    "{i}For a moment, the world feels smaller. Just two people. Just smoke and silence.{/i}"
+    "For a moment, the world feels smaller. Just two people. Just smoke and silence."
     pause 0.9
 
     if is_ob_hard:
-        a "{i}Six hours ago, I executed four liabilities. Nothing personal.{/i}"
-        a "{i}Yet standing here, something personal tries to surface. I push it down.{/i}"
+        athought "Six hours ago, I executed four liabilities. Nothing personal."
+        athought "Yet standing here, something personal tries to surface. I push it down."
     elif is_mid:
-        a "{i}Six hours ago, I killed four people. The thought keeps returning like a pulse I can’t ignore.{/i}"
-        a "{i}Standing here, I finally feel its weight.{/i}"
+        athought "Six hours ago, I killed four people. The thought keeps returning like a pulse I can’t ignore."
+        athought "Standing here, I finally feel its weight."
     else:
-        a "{i}Six hours ago, I killed four people. The echo still vibrates in my chest.{/i}"
-        a "{i}And for the first time, I let it hurt.{/i}"
-    a "{i}Maybe that’s what she means. Maybe feeling it is how Glass breaks.{/i}"
+        athought "Six hours ago, I killed four people. The echo still vibrates in my chest."
+        athought "And for the first time, I let it hurt."
+    athought "Maybe that’s what she means. Maybe feeling it is how Glass breaks."
 
     $ set_scene_flag(_current_scene_id, "completed")
     #$ telemetry(_current_scene_id, gates_met=True)

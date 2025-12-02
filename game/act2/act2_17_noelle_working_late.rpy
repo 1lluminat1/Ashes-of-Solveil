@@ -18,18 +18,18 @@ label act2_11_noelle_working_late:
     $ is_ob_hard = pass_tier("OB3","OB2")
     $ is_mid     = pass_tier("OB1","C")  # else = empathy side
 
-    "{i}Late night. Can't sleep. Again. Nightmares. Glass. Sweep. 600 faces. Same dream every night. Different details but same ending. Blood. Screaming. Waking up in cold sweat. Gave up trying. Came to operations room instead. Maybe work will quiet the noise.{/i}"
+    "Late night. Can't sleep. Again. Nightmares. Glass. Sweep. 600 faces. Same dream every night. Different details but same ending. Blood. Screaming. Waking up in cold sweat. Gave up trying. Came to operations room instead. Maybe work will quiet the noise."
 
     # VISUAL: Walking through dark base. People sleeping in quarters. Peaceful. Contrasts with Aeron's insomnia.
-    "{i}Base quiet. Everyone sleeping. Peaceful. Normal. They can sleep. I can't. Glass doesn't sleep. Glass doesn't deserve peace. Old habit. Old punishment. Carrying ghosts. They're heavy tonight.{/i}"
+    "Base quiet. Everyone sleeping. Peaceful. Normal. They can sleep. I can't. Glass doesn't sleep. Glass doesn't deserve peace. Old habit. Old punishment. Carrying ghosts. They're heavy tonight."
 
     # VISUAL: Operations room ahead. Single light on. Someone else awake. Who?
-    "{i}Operations room. Light on. Someone else awake. Who works this late? Everyone should be sleeping. Tactically inefficient to skip rest. But I'm doing it too. Hypocrite.{/i}"
+    "Operations room. Light on. Someone else awake. Who works this late? Everyone should be sleeping. Tactically inefficient to skip rest. But I'm doing it too. Hypocrite."
 
     # VISUAL: Door opening. NOELLE at workstation. Surrounded by datapads. Working. Intense focus.
     scene bg_operations_room_night with fade
 
-    "{i}Noelle. Of course. She's always working. Always analyzing. Always processing. Surrounded by datapads and holographic displays. Data everywhere. She's... frustrated? That's new. Noelle doesn't do frustration. Noelle does efficiency.{/i}"
+    "Noelle. Of course. She's always working. Always analyzing. Always processing. Surrounded by datapads and holographic displays. Data everywhere. She's... frustrated? That's new. Noelle doesn't do frustration. Noelle does efficiency."
 
     # VISUAL: Noelle hasn't noticed Aeron. Too focused. Muttering to herself. Calculations. Frustrated.
     n "(muttering) No. That's incorrect. The variable coefficient is wrong. Recalculate. Forty-seven iterations and it's still non-functional. This is unacceptable."
@@ -138,7 +138,7 @@ label act2_11_noelle_working_late:
     n "Most people think in straight lines. You think in... networks. Connections. Webs of causality. It's compelling to observe."
 
     # VISUAL: Silence. Comfortable. Both processing. Moment stretching.
-    "{i}She's looking at me like I'm data. But good data. Interesting data. Data worth studying. Coming from Noelle, that's something. She doesn't waste attention on boring things. If I'm interesting to her, that matters somehow.{/i}"
+    "She's looking at me like I'm data. But good data. Interesting data. Data worth studying. Coming from Noelle, that's something. She doesn't waste attention on boring things. If I'm interesting to her, that matters somehow."
 
     # VISUAL: Noelle still looking at display. Then at Aeron. Then back. Processing something.
     n "You're still awake at 0248 hours. Insomnia?"
@@ -233,7 +233,7 @@ label act2_11_noelle_working_late:
     n "Existing without productivity. That's illogical. But... acceptable. In this specific context. With you. Ninety-one percent acceptable. Possibly 94%."
 
     # VISUAL: They sit together. Silence. Comfortable. Her hand still under his. Quiet moment. No words needed.
-    "{i}Sitting with Noelle. Operations room. 0312 hours. Both exhausted. Both awake. Both together. She's processing feelings like data. I'm processing data like feelings. Maybe we're teaching each other. Maybe that's what connection is—learning each other's language, speaking across the difference, understanding without full comprehension.{/i}"
+    "Sitting with Noelle. Operations room. 0312 hours. Both exhausted. Both awake. Both together. She's processing feelings like data. I'm processing data like feelings. Maybe we're teaching each other. Maybe that's what connection is—learning each other's language, speaking across the difference, understanding without full comprehension."
 
     # VISUAL: Time passing. Minutes. Just being together. Eventually Noelle speaks.
     n "Thank you. For solving the problem with me. For letting me process this emotional situation. For not demanding that I understand it immediately. For being patient with my inefficient emotional processing."
@@ -259,14 +259,14 @@ label act2_11_noelle_working_late:
 
     # VISUAL: She leaves. Door closing. Aeron alone. But less alone. Connection made. Important. Real.
     if is_ob_hard:
-        "{i}Alone in operations room. Connection acknowledged. Recalibrating, not surrendering.{/i}"
+        "Alone in operations room. Connection acknowledged. Recalibrating, not surrendering."
     elif is_mid:
-        "{i}Alone in operations room. Connection noted. Feels… steadying.{/i}"
+        "Alone in operations room. Connection noted. Feels… steadying."
     else:
-        "{i}Alone in operations room. Connection, fragile and warm, enough to dull the knives.{/i}"
+        "Alone in operations room. Connection, fragile and warm, enough to dull the knives."
 
     # VISUAL: Returning to quarters. Maybe sleep will come easier. Maybe nightmares quieter. Maybe.
-    "{i}Returning to quarters. 0327 hours. Exhausted. But a different kind of exhausted. Connected exhausted. Noelle's trying to understand feelings. I'm trying to understand redemption. We're both uncertain. Both processing. Both learning. Maybe that's enough. Maybe that's everything. Maybe that's 97% pleasant. Possibly 99%.{/i}"
+    "Returning to quarters. 0327 hours. Exhausted. But a different kind of exhausted. Connected exhausted. Noelle's trying to understand feelings. I'm trying to understand redemption. We're both uncertain. Both processing. Both learning. Maybe that's enough. Maybe that's everything. Maybe that's 97% pleasant. Possibly 99%."
 
     # ---- STATE (leave as-is if you haven't migrated this scene yet) ----
     $ scenes["noelle_working_late"] = True

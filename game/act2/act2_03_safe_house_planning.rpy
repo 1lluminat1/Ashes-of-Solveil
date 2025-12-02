@@ -17,15 +17,15 @@ label act2_safe_house_planning:
     # LIGHTING: Dim gray dawn filtering in. Single bulb still on. Cold.
     # SOUND: City waking up below; distant machinery; footsteps in hallway.
 
-    "{i}Day 2.{/i}"
+    "Day 2."
 
     # VISUAL: Aeron wakes on concrete floor. Body stiff. Lyra already awake, staring at wall.
     # Both look like hell. Dark circles. Exhaustion. Trauma settling into bones.
 
-    "{i}Morning. If you can call it that. Concrete floor leaves you cold and aching, mind worse than the body.{/i}"
-    "{i}Lyra's already awake, staring at nothing. Her hand moves to her Band in that automatic way she can't seem to stop.{/i}"
+    "Morning. If you can call it that. Concrete floor leaves you cold and aching, mind worse than the body."
+    "Lyra's already awake, staring at nothing. Her hand moves to her Band in that automatic way she can't seem to stop."
 
-    a "{i}Day 2 in the Unders. Still alive. That has to count for something.{/i}"
+    athought "Day 2 in the Unders. Still alive. That has to count for something."
 
     # VISUAL: Lyra glances at him. Nods. No words. What is there to say?
     l "(quiet) Did you sleep?"
@@ -35,8 +35,8 @@ label act2_safe_house_planning:
     l "Memories. Same thing at this point."
 
     # SOUND: Door lock beeping. Both tense immediately. Hands move toward weapons they don't have.
-    "{i}The lock beeps. They freeze, hands moving instinctively toward weapons that aren't there.{/i}"
-    "{i}Still defenseless. Still terrified every time that door opens.{/i}"
+    "The lock beeps. They freeze, hands moving instinctively toward weapons that aren't there."
+    "Still defenseless. Still terrified every time that door opens."
 
     # VISUAL: Door opens. Zira enters. Arms full of supplies again. Looks tired but alert.
     z "Morning, fugitives. Still breathing, so that's a good start."
@@ -125,8 +125,8 @@ label act2_safe_house_planning:
     z "Either way, don't waste it."
 
     # VISUAL: She leaves. Door closes. Lock engages. Alone again.
-    "{i}Gone again. Leaving them with seven impossible tasks and one week to complete them.{/i}"
-    "{i}Everything rides on this. Every single thing.{/i}"
+    "Gone again. Leaving them with seven impossible tasks and one week to complete them."
+    "Everything rides on this. Every single thing."
 
     # VISUAL: Both sit. Looking at each other. Overwhelmed but determined.
     l "Seven tasks."
@@ -135,8 +135,8 @@ label act2_safe_house_planning:
     a "...I don't know. But we have to start somewhere."
 
     # VISUAL: Aeron stands. Looks at door. The city beyond. Terrifying and necessary.
-    a "{i}One week to prove we're worth keeping alive. One week to build something from nothing.{/i}"
-    a "{i}Seven tasks. Every single one could kill us.{/i}"
+    athought "One week to prove we're worth keeping alive. One week to build something from nothing."
+    athought "Seven tasks. Every single one could kill us."
 
     l "(stands beside him) We do this together. Like everything else."
     a "Together. Yeah."
@@ -178,10 +178,10 @@ label act2_activity_hub:
         current_day = 2 + done_count
 
     if done_count > 0:
-        "{i}Day [current_day]. Another day, another task to complete.{/i}"
-        "{i}Still alive. Still moving forward. That has to mean something.{/i}"
+        "Day [current_day]. Another day, another task to complete."
+        "Still alive. Still moving forward. That has to mean something."
     else:
-        "{i}Day 2. The first step into this new life. Choose carefully.{/i}"
+        "Day 2. The first step into this new life. Choose carefully."
 
     # --- POST-ACTIVITY EVENT-SPECIFIC FLAVOR (fires once per task) ---
     python:
@@ -262,11 +262,10 @@ label act2_continue_hub:
         current_day = 2 + done_count
 
     if activities_remaining > 0:
-        "{i}[activities_remaining] tasks remaining before Selene decides our fate.{/i}"
+        "[activities_remaining] tasks remaining before Selene decides our fate."
 
         menu:
-            "What should we focus on today?":
-
+            "What should we focus on today?"
             "Find Work - Earn scrip, establish cover" if not check_scene_flag("act2_activity","work_done"):
                 $ mark_scene("act2_activity","work_done")
                 $ player_state["days_remaining"] = max(0, player_state["days_remaining"] - 1)
@@ -310,8 +309,8 @@ label act2_continue_hub:
                 jump act2_activity_07_confront_past
 
     else:
-        "{i}Seven days. Seven tasks. All completed, every single one of them.{/i}"
-        "{i}Time to see if it was enough to earn Selene's attention.{/i}"
+        "Seven days. Seven tasks. All completed, every single one of them."
+        "Time to see if it was enough to earn Selene's attention."
         $ mark_scene("act2_03_safe_house_planning", "all_tasks_completed")
         $ summary = end_operation("op203_safehouse_hub", tag="Safehouse Hub (All tasks done)")
         $ log_line(summary)
@@ -337,7 +336,7 @@ label act2_check_lyra_scene_hub:
         # LIGHTING: Dim. Single light. Intimate space.
         # SOUND: City quiet below. Their breathing. Silence comfortable.
 
-        "{i}Evening. Quiet. Just the two of us in this small space. Something's different tonight.{/i}"
+        "Evening. Quiet. Just the two of us in this small space. Something's different tonight."
 
         # VISUAL: Lyra looking at him. Different energy. Vulnerable. Open.
         l "Aeron."
@@ -346,11 +345,10 @@ label act2_check_lyra_scene_hub:
         a "...Yeah. We can do that."
 
         # VISUAL: They sit. Close. Not touching yet. But proximity different.
-        "{i}She sits close. Closer than usual. Not accidental. Intentional. Something unspoken between us.{/i}"
+        "She sits close. Closer than usual. Not accidental. Intentional. Something unspoken between us."
 
         menu:
-            "The space between them feels charged. Different. Significant.":
-
+            "The space between them feels charged. Different. Significant."
             "Spend the evening with Lyra":
                 # Inside act2_lyra_intimate_scene, remember to:
                 #   $ mark_flag("Lyra", "lewd_scene_completed")
@@ -362,7 +360,7 @@ label act2_check_lyra_scene_hub:
                 l "(slight disappointment) Oh. Yeah. Of course. Rest is important."
                 l "Goodnight, Aeron."
                 a "Goodnight, Lyra."
-                "{i}The moment passes. Maybe it was nothing. Maybe it was everything. Too late to know now.{/i}"
+                "The moment passes. Maybe it was nothing. Maybe it was everything. Too late to know now."
                 jump act2_continue_hub
     else:
         jump act2_continue_hub

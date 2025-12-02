@@ -14,15 +14,15 @@ label act2_tessa_mercy_death:
 
     scene bg_medical_station_critical with fade
 
-    "{i}Medical station. Night. Three days since we hit 587 fighters. Three days since Noelle's countdown started. Eleven days left until probable Echelon discovery. But right now? Right now there's just one person. One fighter. One name. Dying. And nothing we can do to stop it.{/i}"
+    "Medical station. Night. Three days since we hit 587 fighters. Three days since Noelle's countdown started. Eleven days left until probable Echelon discovery. But right now? Right now there's just one person. One fighter. One name. Dying. And nothing we can do to stop it."
 
     # VISUAL: TESSA at bedside. Exhausted. Hands bloody. Been working for hours. Trying. Failing. Knowing it.
 
-    "{i}Tessa's been here for six hours. Trying everything. Every technique. Every medication. Every procedure. Nothing working. Patient's dying. Slowly. Painfully. Inevitably. And she knows it. Can see it in her face. In her hands. In the way she's stopped moving. Just standing. Just watching. Just witnessing death she can't prevent.{/i}"
+    "Tessa's been here for six hours. Trying everything. Every technique. Every medication. Every procedure. Nothing working. Patient's dying. Slowly. Painfully. Inevitably. And she knows it. Can see it in her face. In her hands. In the way she's stopped moving. Just standing. Just watching. Just witnessing death she can't prevent."
 
     # VISUAL: PATIENT on bed. Young man. Early twenties. Named MARCUS (ironic, painful name). Training accident three days ago. Sparring went wrong. Internal bleeding. Infection set in. Sepsis spreading. Dying.
 
-    "{i}Torin. Young. Twenty-two. Joined two weeks ago. Enthusiastic. Dedicated. Good fighter. Then training accident. Sparring partner's strike landed wrong. Internal damage. Tried to treat it. Infection anyway. Sepsis. Spreading. Killing him. Three days of trying. Three days of failing. Now just watching. Waiting. Witnessing.{/i}"
+    "Torin. Young. Twenty-two. Joined two weeks ago. Enthusiastic. Dedicated. Good fighter. Then training accident. Sparring partner's strike landed wrong. Internal damage. Tried to treat it. Infection anyway. Sepsis. Spreading. Killing him. Three days of trying. Three days of failing. Now just watching. Waiting. Witnessing."
 
     # VISUAL: Torin breathing. Labored. Painful. Conscious. Aware. Suffering. Begging with eyes.
 
@@ -42,7 +42,7 @@ label act2_tessa_mercy_death:
 
     # VISUAL: Tessa freezing. The question. The impossible question. The mercy question. Assisted death. Murder. Compassion. Sin. Salvation. All at once.
 
-    "{i}He's asking. The question. The one that destroys everything. Can you make it stop? Can you kill me? Can you end this suffering? That's not medical question. That's moral question. That's philosophical question. That's impossible question. And she has to answer. Has to choose. Has to decide if mercy means healing or mercy means ending. And there's no right answer. Just less wrong ones.{/i}"
+    "He's asking. The question. The one that destroys everything. Can you make it stop? Can you kill me? Can you end this suffering? That's not medical question. That's moral question. That's philosophical question. That's impossible question. And she has to answer. Has to choose. Has to decide if mercy means healing or mercy means ending. And there's no right answer. Just less wrong ones."
 
     # VISUAL: Tessa's hands shaking. Professional composure breaking. This is the nightmare. The scenario. The choice.
 
@@ -62,7 +62,7 @@ label act2_tessa_mercy_death:
 
     # VISUAL: Door opening. AERON entering. Heard voices. Concerned. Then sees scene. Understands immediately. Freezes.
 
-    "{i}Aeron. Here. Why is he here? Doesn't matter. He's here. He sees. He understands. Can see it in his face. Torin dying. Tessa breaking. Choice pending. Death approaching. Mercy requested. Impossible decision. He knows. He's made impossible decisions. Killed 390 people. Saved 23. He knows what killing feels like. What mercy feels like. What impossible choices cost.{/i}"
+    "Aeron. Here. Why is he here? Doesn't matter. He's here. He sees. He understands. Can see it in his face. Torin dying. Tessa breaking. Choice pending. Death approaching. Mercy requested. Impossible decision. He knows. He's made impossible decisions. Killed 390 people. Saved 23. He knows what killing feels like. What mercy feels like. What impossible choices cost."
 
     # VISUAL: Aeron approaches. Quiet. Not intruding. Just present. Supporting. Witnessing.
 
@@ -111,7 +111,7 @@ label act2_tessa_mercy_death:
 
     # VISUAL: Tessa preparing medication. Hands shaking but moving. Professional even through grief. Preparing final injection. Morphine. Massive dose. Peaceful death. Mercy.
 
-    "{i}She's preparing it. The injection. The mercy. The murder. The compassion. The death. Her hands shake. But they move. Professional. Trained. Efficient. Even now. Even breaking. Even killing. She functions. She completes. She delivers mercy. Because he asked. Because he chose. Because honoring that choice is what healers do. Even when honoring means ending. Even when mercy means death.{/i}"
+    "She's preparing it. The injection. The mercy. The murder. The compassion. The death. Her hands shake. But they move. Professional. Trained. Efficient. Even now. Even breaking. Even killing. She functions. She completes. She delivers mercy. Because he asked. Because he chose. Because honoring that choice is what healers do. Even when honoring means ending. Even when mercy means death."
 
     # VISUAL: Tessa approaching bed. Injection ready. Last chance to stop. Last chance to refuse. Last chance to choose differently. But she doesn't stop. She continues. She's chosen.
 
@@ -127,11 +127,11 @@ label act2_tessa_mercy_death:
 
     # VISUAL: Injection administered. Morphine flowing. Torin's face relaxing. Pain fading. Breathing easier. Peaceful. Then slower. Then stopping. Then nothing. Gone. Dead. Released. Mercy delivered.
 
-    "{i}It's done. He's gone. Breathing stopped. Heart stopped. Pain stopped. Everything stopped. He's dead. She killed him. She delivered mercy. She ended suffering. She broke her count. She saved him from hours of agony. She murdered him. She healed him. She failed him. She honored him. All of it. All at once. All true. All contradictory. All impossible to reconcile. But done. Mercy delivered. Death witnessed. Choice honored.{/i}"
+    "It's done. He's gone. Breathing stopped. Heart stopped. Pain stopped. Everything stopped. He's dead. She killed him. She delivered mercy. She ended suffering. She broke her count. She saved him from hours of agony. She murdered him. She healed him. She failed him. She honored him. All of it. All at once. All true. All contradictory. All impossible to reconcile. But done. Mercy delivered. Death witnessed. Choice honored."
 
     # VISUAL: Tessa standing. Frozen. Staring at body. At hands. At proof. At death. At mercy. At murder. At everything she never wanted to be.
 
-    "{i}She's frozen. Staring. Processing. She just killed someone. Intentionally. Deliberately. Compassionately. She ended a life. Stopped a heart. Delivered death. That's murder. That's also mercy. That's both. That's neither. That's impossible to process. So she stands. She stares. She breaks.{/i}"
+    "She's frozen. Staring. Processing. She just killed someone. Intentionally. Deliberately. Compassionately. She ended a life. Stopped a heart. Delivered death. That's murder. That's also mercy. That's both. That's neither. That's impossible to process. So she stands. She stares. She breaks."
 
     # VISUAL: Then collapse. Knees giving. Falling. Crying. Full breakdown. Everything releasing. Grief and guilt and horror and compassion all at once.
 
@@ -140,7 +140,7 @@ label act2_tessa_mercy_death:
 
     # VISUAL: Aeron dropping to knees beside her. Holding her. Not speaking yet. Just present. Just supporting. Just witnessing her break.
 
-    "{i}She's breaking. Completely. Everything she believed. Everything she built. Everything she counted. Shattered by one mercy death. One impossible choice. One moment where saving meant killing. She can't reconcile. Can't process. Can't accept. She just breaks. And I hold her. Because that's all I can do. Hold her while she breaks. Witness her pain. Share her burden. That's all anyone can do with impossible choices. Witness them. Share them. Hold each other while they crush us.{/i}"
+    "She's breaking. Completely. Everything she believed. Everything she built. Everything she counted. Shattered by one mercy death. One impossible choice. One moment where saving meant killing. She can't reconcile. Can't process. Can't accept. She just breaks. And I hold her. Because that's all I can do. Hold her while she breaks. Witness her pain. Share her burden. That's all anyone can do with impossible choices. Witness them. Share them. Hold each other while they crush us."
 
     # VISUAL: Time passing. Minutes. Her sobbing. Him holding. Silent presence. Shared weight. Eventually she speaks. Quiet. Broken. Lost.
 
@@ -171,13 +171,13 @@ label act2_tessa_mercy_death:
     t "I don't know if I believe that. Don't know if I can accept what I did. Don't know if I'll ever think it was right choice. But I know I made it with compassion. I know I honored his request. I know I ended suffering instead of prolonging it. That has to mean something. Has to count for something. Even if it still feels like murder."
 
     # VISUAL: She stands. Slowly. Shakily. But standing. Functional despite breaking. Moving despite weight.    
-    "{i}She leans against me, just for a moment—exhausted, empty, but breathing. The silence that follows isn’t peace, exactly. It’s aftermath. The space where pain stops screaming and starts echoing.{/i}"
+    "She leans against me, just for a moment—exhausted, empty, but breathing. The silence that follows isn’t peace, exactly. It’s aftermath. The space where pain stops screaming and starts echoing."
 
     t "I need to add his name. To the board. But not to the living. To... to the other side. The side I never made. The side I never wanted. The dead. The ones I couldn't save. The ones I lost. The ones I failed. He goes there. First name. Won't be last. When Echelon comes? When raids happen? When fighting starts? There will be more. More impossible choices. More mercy deaths. More names on wrong side of board. I need to prepare for that. Need to accept that. Need to be able to do this again if necessary."
 
     # VISUAL: Moving to board. Her 347 names. His 23 names. 370 living. And now... new section. The dead. Torin. First name. First failure. First mercy. First murder. First of many.
 
-    "{i}She's adding section to board. New section. The dead. Names of people she couldn't save. Torin first. First mercy death. First impossible choice. First name on wrong side. First of many. When war comes? This list grows. This list becomes long. This list becomes weight she carries. Forever. Every name. Every death. Every failure. Every mercy. All of them. Forever. That's cost of resistance. That's price of war. That's weight of healing in combat. She accepts it. She adds the name. She witnesses the cost. She continues anyway.{/i}"
+    "She's adding section to board. New section. The dead. Names of people she couldn't save. Torin first. First mercy death. First impossible choice. First name on wrong side. First of many. When war comes? This list grows. This list becomes long. This list becomes weight she carries. Forever. Every name. Every death. Every failure. Every mercy. All of them. Forever. That's cost of resistance. That's price of war. That's weight of healing in combat. She accepts it. She adds the name. She witnesses the cost. She continues anyway."
 
     # VISUAL: Writing name. Careful. Precise. Reverent. Torin. Dead. Failed. Mercy. First. Not last.
 
@@ -194,7 +194,7 @@ label act2_tessa_mercy_death:
 
     # VISUAL: They stand together. Looking at board. At count. At living and dead. At cost and hope. At everything resistance means. At everything war costs. Together. Witnessing. Sharing. Continuing.
 
-    "{i}Standing with Tessa. Looking at board. 370 living. 1 dead. First death. First mercy. First impossible choice. First of many. When Echelon comes? When war starts? This ratio flips. This side grows. Names accumulate. Deaths multiply. And she counts them all. Witnesses them all. Honors them all. Because that's what healers do in war. They save who they can. They mercy who they can't. They count everyone. Living and dead. And they carry that weight. Forever. That's Tessa. That's resistance. That's war. That's us.{/i}"
+    "Standing with Tessa. Looking at board. 370 living. 1 dead. First death. First mercy. First impossible choice. First of many. When Echelon comes? When war starts? This ratio flips. This side grows. Names accumulate. Deaths multiply. And she counts them all. Witnesses them all. Honors them all. Because that's what healers do in war. They save who they can. They mercy who they can't. They count everyone. Living and dead. And they carry that weight. Forever. That's Tessa. That's resistance. That's war. That's us."
 
     # VISUAL: Tessa turning. Looking at him. Changed. Heavier. But functional. Continuing despite weight.
 
@@ -206,7 +206,7 @@ label act2_tessa_mercy_death:
 
     # VISUAL: She moves to body. Professional. Functional. But hands still shaking. Weight still visible. Break still present. But continuing anyway. That's strength. That's Tessa.
 
-    "{i}She moves again. Working through the shake, through the weight, through the cost. She witnesses, she counts, she continues. That’s what healers do in war: survive the choice and keep healing anyway. Strength through heartbreak. Compassion through ruin. That’s Tessa. That’s enough.{/i}"
+    "She moves again. Working through the shake, through the weight, through the cost. She witnesses, she counts, she continues. That’s what healers do in war: survive the choice and keep healing anyway. Strength through heartbreak. Compassion through ruin. That’s Tessa. That’s enough."
 
     # Mark scene complete
     $ scenes["tessa_mercy_death"] = True

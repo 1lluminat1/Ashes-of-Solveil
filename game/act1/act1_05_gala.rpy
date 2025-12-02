@@ -30,26 +30,26 @@ label act1_05_gala:
     # OB baseline cadence (clipped/procedural). Local warmth permitted on EMP-gated branches.
 
     # VISUAL: Lavish gold wash over marble; chandeliers; strings under low conversation.
-    "{i}The ballroom breathes manufactured warmth—chandeliers, velvet, the sweet smell of curated luxury.{/i}"
+    "The ballroom breathes manufactured warmth—chandeliers, velvet, the sweet smell of curated luxury."
     pause 0.7
 
-    a "{i}All this gold to smooth over the cracks. Plaster over decay with opulence.{/i}"
-    a "{i}Six hours ago, I killed four people in Sector 7.{/i}"
-    a "{i}Now I’m here. Smiling. Composed. As if blood rinses off that easily.{/i}"
-    a "{i}But that's what they want, right? No conflict. No conscience. Just transition.{/i}"
+    athought "All this gold to smooth over the cracks. Plaster over decay with opulence."
+    athought "Six hours ago, I killed four people in Sector 7."
+    athought "Now I’m here. Smiling. Composed. As if blood rinses off that easily."
+    athought "But that's what they want, right? No conflict. No conscience. Just transition."
 
     # VISUAL: The ballroom swells—music crescendos, voices layer, chandeliers pulse with reflected motion.
-    "{i}The air thickens. Perfume, wine, polished metal. Too much of everything.{/i}"
+    "The air thickens. Perfume, wine, polished metal. Too much of everything."
     pause 0.7
 
-    a "{i}Every surface reflects. Every sound echoes. No silence. No stillness. Just performance layered on performance.{/i}"
+    athought "Every surface reflects. Every sound echoes. No silence. No stillness. Just performance layered on performance."
 
     # NEW: Pressure without break — subtle internal crack
-    a "{i}This is protocol. Eyes ahead. Breath steady. Form intact.{/i}"
-    a "{i}Still, something in the rhythm skips—half a heartbeat off.{/i}"
-    a "{i}No one would notice.{/i}"
-    a "{i}But I do.{/i}"
-    a "{i}And cracks never start loud.{/i}"
+    athought "This is protocol. Eyes ahead. Breath steady. Form intact."
+    athought "Still, something in the rhythm skips—half a heartbeat off."
+    athought "No one would notice."
+    athought "But I do."
+    athought "And cracks never start loud."
 
     # VISUAL: A young man in full ceremonial dress approaches—confident stride, silver Band glinting.
     cadet "Aeron Rylan. Thought that was you."
@@ -67,7 +67,7 @@ label act1_05_gala:
     cadet "(nervous laugh) Cold. They really call you that?"
     a "They do."
 
-    "{i}He respects the record. Fears the person.{/i}"
+    "He respects the record. Fears the person."
     pause 0.7
 
     cadet "Look, I just wanted to say... your record is insane. 390 operations, zero failures?"
@@ -77,10 +77,10 @@ label act1_05_gala:
     cadet "(uncomfortable) I didn't mean—"
     a "You did. And you're right."
 
-    "{i}He touches his Band like a talisman. Proof he belongs. Proof he's safe.{/i}"
+    "He touches his Band like a talisman. Proof he belongs. Proof he's safe."
     pause 0.7
 
-    "{i}And proof he's not like me.{/i}"
+    "And proof he's not like me."
     pause 0.7
 
     cadet "Your father must be... proud."
@@ -88,14 +88,14 @@ label act1_05_gala:
     cadet "That's... that's all any of us can do, right?"
     a "(looks at him directly) Is it?"
 
-    "{i}For a moment, something passes between them. Not quite understanding. Just... distance.{/i}"
+    "For a moment, something passes between them. Not quite understanding. Just... distance."
     pause 0.8
 
     # --- PLAYER CHOICE: How does Aeron respond to Daren ---
     menu:
         "Daren's smile wavers."
         "Respond with cold courtesy.":
-            $ apply_choice_once(
+            $ choice_and_dev(
                 _current_scene_id, "_daren_cold_courtesy", "OB", factor=1,
                 next_scene_label="act1_06_balcony",
                 note="Reasserts performance persona; reinforces fear/respect myth."
@@ -106,14 +106,14 @@ label act1_05_gala:
             # VISUAL: Aeron turns away; Daren's smile collapses into relief.
             cadet "Yeah. You too. Stay... stay sharp."
 
-            "{i}He retreats into the crowd, grateful for the exit.{/i}"
+            "He retreats into the crowd, grateful for the exit."
             pause 0.7
 
-            a "{i}He’ll tell that story tomorrow. ‘Didn’t flinch. Didn’t blink.’{/i}"
-            a "{i}Let him.{/i}"
+            athought "He’ll tell that story tomorrow. ‘Didn’t flinch. Didn’t blink.’"
+            athought "Let him."
 
         "Acknowledge the awkwardness.":
-            $ apply_choice_once(
+            $ choice_and_dev(
                 _current_scene_id, "_daren_acknowledge", "EMP", factor=1,
                 next_scene_label="act1_06_balcony",
                 note="Permits vulnerability without breaking form; micro-connection."
@@ -131,33 +131,33 @@ label act1_05_gala:
 
             cadet "(pause) …No. I guess we’re not."
 
-            "{i}For a moment, something real passes between them. Fragile. Brief.{/i}"
+            "For a moment, something real passes between them. Fragile. Brief."
             pause 0.8
 
             cadet "(quieter) Take care of yourself, Aeron. If you still can."
             a "I’ll try."
-            a "{i}He walks away. Not relieved. Just... sad.{/i}"
-            a "{i}He sees it. What I’ve become.{/i}"
-            a "{i}Maybe that's why he looked at me like that.{/i}"
-            a "{i}Like he remembered something I forgot...{/i}"
-            a "{i}Something from before I became this.{/i}"
+            athought "He walks away. Not relieved. Just... sad."
+            athought "He sees it. What I’ve become."
+            athought "Maybe that's why he looked at me like that."
+            athought "Like he remembered something I forgot..."
+            athought "Something from before I became this."
             jump act1_daren_flashback
     # ------------------------------------------------------
 
     if check_scene_flag(_current_scene_id, "acknowledge_daren"):
         # VISUAL: Ambient reset — golden wash, camera resumes slow glide.
-        "{i}The music resumes like it never stopped. Conversations blur back into motion.{/i}"
+        "The music resumes like it never stopped. Conversations blur back into motion."
         pause 0.7
 
-        a "{i}The past is always closer than I think.{/i}"
-        a "{i}Even now, I see him. Not Daren today—Daren then. When we still thought this meant something.{/i}"
+        athought "The past is always closer than I think."
+        athought "Even now, I see him. Not Daren today—Daren then. When we still thought this meant something."
 
     # VISUAL: Overhead drone—live feeds rotate; Aeron's face flickers on a screen.
-    a "{i}Even here, there's no room without a camera.{/i}"
-    a "{i}Every movement measured. Every breath filed away.{/i}"
+    athought "Even here, there's no room without a camera."
+    athought "Every movement measured. Every breath filed away."
 
     # REVISED: Elite whispers — definitive block
-    "{i}Nearby, whispers slide beneath the music — rehearsed, polite, just loud enough.{/i}"
+    "Nearby, whispers slide beneath the music — rehearsed, polite, just loud enough."
     pause 0.7
 
     e1 "...Marcus Rylan's son. Glass."
@@ -171,70 +171,70 @@ label act1_05_gala:
     $ mom  = get_alignment_momentum()  # -1..+1 (recent push)
 
     if tier in ("OB3","OB2"):
-        a "{i}Let them think I don’t hear. Let them wonder what kind of machine watches them back.{/i}"
+        athought "Let them think I don’t hear. Let them wonder what kind of machine watches them back."
         if mom <= -0.5:
-            a "{i}Their fear is a tool. I keep it sharp.{/i}"
+            athought "Their fear is a tool. I keep it sharp."
         else:
-            a "{i}Their fear is useful. Fear doesn’t ask questions.{/i}"
+            athought "Their fear is useful. Fear doesn’t ask questions."
     elif tier in ("OB1","C"):
-        a "{i}Even their fear feels rehearsed. Like everything else in this place.{/i}"
-        a "{i}They don’t know whether to admire or avoid me. Maybe both.{/i}"
+        athought "Even their fear feels rehearsed. Like everything else in this place."
+        athought "They don’t know whether to admire or avoid me. Maybe both."
     else:  # EMP1/EMP2/EMP3
-        a "{i}Even their fear feels rehearsed. Like everything else in this place.{/i}"
+        athought "Even their fear feels rehearsed. Like everything else in this place."
         if mom >= 0.5:
-            a "{i}They want a myth. I can’t unsee the people behind it.{/i}"
+            athought "They want a myth. I can’t unsee the people behind it."
         else:
-            a "{i}They want a myth. I keep giving them the cracks instead.{/i}"
+            athought "They want a myth. I keep giving them the cracks instead."
 
     # VISUAL: Marcus entrance—ceremonial armor; Enforcers flank; room tension rises.
-    "{i}General Marcus Rylan steps into the light—armor flawless, formation exact.{/i}"
+    "General Marcus Rylan steps into the light—armor flawless, formation exact."
     pause 0.7
 
-    "{i}The room exhales. Every conversation pauses. Every eye tracks.{/i}"
+    "The room exhales. Every conversation pauses. Every eye tracks."
     pause 0.7
 
-    a "{i}The gravity tilts when he arrives. No applause—just fear dressed as respect.{/i}"
-    a "{i}He doesn’t need announcements. The silence does it for him.{/i}"
+    athought "The gravity tilts when he arrives. No applause—just fear dressed as respect."
+    athought "He doesn’t need announcements. The silence does it for him."
 
     # BRANCHING — Marcus’s reaction to Aeron (tiers + momentum)
     if tier in ("OB3","OB2"):
-        a "{i}His gaze finds mine—for the briefest second. A subtle nod. Approval measured in microseconds.{/i}"
+        athought "His gaze finds mine—for the briefest second. A subtle nod. Approval measured in microseconds."
         if mom <= -0.5:
-            a "{i}He sees the edge he honed and knows I kept it sharp.{/i}"
+            athought "He sees the edge he honed and knows I kept it sharp."
         else:
-            a "{i}He’s read the reports. Sector 7. The body count. No hesitation noted.{/i}"
-        a "{i}This is what he wanted. Precision. Purity. Obedience.{/i}"
+            athought "He’s read the reports. Sector 7. The body count. No hesitation noted."
+        athought "This is what he wanted. Precision. Purity. Obedience."
         $ set_scene_flag(_current_scene_id, "marcus_approval")
 
     elif tier in ("OB1","C"):
-        a "{i}His gaze meets mine, unreadable. A flicker—approval, or warning?{/i}"
-        a "{i}Hard to tell anymore. Harder to care.{/i}"
+        athought "His gaze meets mine, unreadable. A flicker—approval, or warning?"
+        athought "Hard to tell anymore. Harder to care."
         $ set_scene_flag(_current_scene_id, "marcus_uncertain")
 
     else:  # EMP1/EMP2/EMP3
-        a "{i}His eyes sweep past mine. No pause. No nod. Just calculation.{/i}"
+        athought "His eyes sweep past mine. No pause. No nod. Just calculation."
         if mom >= 0.5:
-            a "{i}He’s seen the hesitation. He’ll call it deviation. I call it breathing.{/i}"
+            athought "He’s seen the hesitation. He’ll call it deviation. I call it breathing."
         else:
-            a "{i}He’s read the report. Saw the hesitation. The deviation from protocol.{/i}"
-        a "{i}This isn’t what he trained me for.{/i}"
+            athought "He’s read the report. Saw the hesitation. The deviation from protocol."
+        athought "This isn’t what he trained me for."
         $ set_scene_flag(_current_scene_id, "marcus_disapproval")
 
     # VISUAL: Lyra across the hall with a Councilwoman—composed, precise, unmissable.
-    "{i}Across the hall, Lyra stands with a Councilwoman—composed, precise, unmissable.{/i}"
+    "Across the hall, Lyra stands with a Councilwoman—composed, precise, unmissable."
     pause 0.7
 
-    a "{i}They parade her like proof the system still works.{/i}"
-    a "{i}Another perfect soldier. Another polished surface.{/i}"
-    a "{i}I wonder if she's as empty as I am.{/i}"
-    "{i}Her eyes flick to Aeron for a heartbeat—then back.{/i}"
+    athought "They parade her like proof the system still works."
+    athought "Another perfect soldier. Another polished surface."
+    athought "I wonder if she's as empty as I am."
+    "Her eyes flick to Aeron for a heartbeat—then back."
     pause 0.6
 
     # --- PLAYER CHOICE: acknowledge Lyra or not ---
     menu:
         "Lyra's eyes meet yours for a heartbeat."
         "Acknowledge her.":
-            $ apply_choice_once(
+            $ choice_and_dev(
                 _current_scene_id, "_ack_lyra", "EMP", factor=1,
                 next_scene_label="act1_06_balcony",
                 note="Micro-acknowledgment; tests willingness for connection under surveillance."
@@ -243,28 +243,30 @@ label act1_05_gala:
             if pass_emp_gate():
                 $ add_affection("Lyra", 1)
             $ set_scene_flag(_current_scene_id, "acknowledge_lyra")
-            a "{i}I nod—barely. Memory, not invitation.{/i}"
-            a "{i}The space between us tightens. Just for a second.{/i}"
+
+            athought "I nod—barely. Memory, not invitation."
+            athought "The space between us tightens. Just for a second."
 
         "Look away.":
-            $ apply_choice_once(
+            $ choice_and_dev(
                 _current_scene_id, "_ignore_lyra", "OB", factor=1,
                 next_scene_label="act1_06_balcony",
                 note="Maintains performance seal; avoids signaling under optics."
             )
             $ set_scene_flag(_current_scene_id, "ignored_lyra")
-            a "{i}I let the moment pass. Safer that way.{/i}"
-            a "{i}Eyes forward. No room for ghosts tonight.{/i}"
+            
+            athought "I let the moment pass. Safer that way."
+            athought "Eyes forward. No room for ghosts tonight."
     # ----------------------------------------------
 
     # BRANCHING THOUGHT BASED ON EMPATHY (slight positive vs not)
     $ norm = get_alignment_score_norm()   # -1.0 .. +1.0
     if norm > 0.0:
-        a "{i}She sees it. Not the medals. Not the posture. The strain.{/i}"
-        a "{i}Maybe she remembers what I was before the edges hardened.{/i}"
+        athought "She sees it. Not the medals. Not the posture. The strain."
+        athought "Maybe she remembers what I was before the edges hardened."
     else:
-        a "{i}She sees exactly what they built. And doesn’t flinch.{/i}"
-        a "{i}No pity. No softness. Just recognition.{/i}"
+        athought "She sees exactly what they built. And doesn’t flinch."
+        athought "No pity. No softness. Just recognition."
 
     # REVISED: Younger elites nearby - fear/fascination with Glass
     ye1 "I heard he's done nearly 400 operations."
@@ -278,41 +280,41 @@ label act1_05_gala:
     ye2 "How can you tell if something empty is breaking?"
     ye3 "You can't. Until it shatters."
 
-    a "{i}They're not wrong.{/i}"
-    a "{i}Cracks are forming. Last night, I felt one spread.{/i}"
-    a "{i}'Who taught me that word?' Mercy.{/i}"
-    a "{i}Glass doesn't ask questions. But I did.{/i}"
-    a "{i}They laugh like the world belongs to them.{/i}"
-    a "{i}And I'm expected to smile like I believe it.{/i}"
+    athought "They're not wrong."
+    athought "Cracks are forming. Last night, I felt one spread."
+    athought "'Who taught me that word?' Mercy."
+    athought "Glass doesn't ask questions. But I did."
+    athought "They laugh like the world belongs to them."
+    athought "And I'm expected to smile like I believe it."
 
     # NEW: What changed
-    a "{i}Six hours ago, I executed four people without hesitation.{/i}"
-    a "{i}Now I'm here, holding wine, making small talk.{/i}"
-    a "{i}This is what Glass does. Transitions seamlessly.{/i}"
-    a "{i}...So why does it feel different tonight?{/i}"
+    athought "Six hours ago, I executed four people without hesitation."
+    athought "Now I'm here, holding wine, making small talk."
+    athought "This is what Glass does. Transitions seamlessly."
+    athought "...So why does it feel different tonight?"
 
     # --- PLAYER CHOICE: Approach Lyra or Keep Distance ---
     menu:
         "Across the room, Lyra is momentarily alone."
         "Cross the floor toward her.":
-            $ apply_choice_once(
+            $ choice_and_dev(
                 _current_scene_id, "_approach_lyra", "EMP", factor=1,
                 next_scene_label="act1_06_balcony",
                 note="Chooses connection under optics; seeds balcony rendezvous."
             )
             $ set_scene_flag(_current_scene_id, "approach_lyra")
 
-            "{i}He threads through silk and medals, closing the distance.{/i}"
+            "He threads through silk and medals, closing the distance."
             pause 0.7
 
             # VISUAL: Councilwoman lingers, then steps aside.
             a "Lyra."
-            "{i}She pivots, posture precise, eyes reading him in a single beat.{/i}"
+            "She pivots, posture precise, eyes reading him in a single beat."
             pause 0.7
 
             l "You are on time."
-            a "{i}Her voice is steady. But her eyes aren't.{/i}"
-            a "{i}How long since she slept? Days? Weeks?{/i}"
+            athought "Her voice is steady. But her eyes aren't."
+            athought "How long since she slept? Days? Weeks?"
 
             $ norm = get_alignment_score_norm()
             $ band = get_empathy_band()  # "obedience" | "conflicted" | "empathy"
@@ -332,41 +334,41 @@ label act1_05_gala:
                 l "Willingness was never part of the design."
                 a "(half-smile) I’m starting to notice."
 
-            "{i}A council attaché leans in with a whisper. Lyra’s attention splits—only for a moment.{/i}"
+            "A council attaché leans in with a whisper. Lyra’s attention splits—only for a moment."
             pause 0.7
 
             l "The balcony. Five minutes."
             a "I’ll be there."
             l "(softer) We will see if Glass still reflects."
 
-            "{i}She’s gone before the room notices she moved.{/i}"
+            "She’s gone before the room notices she moved."
             pause 0.7
 
-            a "{i}She sees it—what I am, what she is. Maybe that’s why she wants to talk.{/i}"
+            athought "She sees it—what I am, what she is. Maybe that’s why she wants to talk."
             $ set_scene_flag(_current_scene_id, "balcony_meet_set")
 
         "Keep your distance.":
-            $ apply_choice_once(
+            $ choice_and_dev(
                 _current_scene_id, "_keep_distance", "OB", factor=1,
                 next_scene_label="act1_06_balcony",
                 note="Avoids connection; preserves performance shell."
             )
 
-            "{i}He holds position. The moment passes.{/i}"
+            "He holds position. The moment passes."
             pause 0.7
 
-            a "{i}Glass doesn’t need connection. Glass functions alone.{/i}"
-            a "{i}...So why does that feel wrong tonight?{/i}"
+            athought "Glass doesn’t need connection. Glass functions alone."
+            athought "...So why does that feel wrong tonight?"
     # ----------------------------------------------
 
     # --- TRANSITION TO BALCONY SEQUENCE ---
-    "{i}The crowd shifts again. Music fades. The air feels thinner now—like the room knows something’s about to fracture.{/i}"
+    "The crowd shifts again. Music fades. The air feels thinner now—like the room knows something’s about to fracture."
     pause 0.8
 
-    "{i}The doors open. Cold air rushes in.{/i}"
+    "The doors open. Cold air rushes in."
     pause 0.8
 
-    a "{i}Time to stop performing. Time to breathe.{/i}"
+    athought "Time to stop performing. Time to breathe."
 
     $ set_scene_flag(_current_scene_id, "completed")
     #$ telemetry(_current_scene_id, gates_met=True)

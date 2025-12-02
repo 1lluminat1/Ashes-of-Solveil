@@ -18,10 +18,11 @@ label act1_archive_merit:
 
     #scene bg_archive_corridor with fade
 
-    "{i}The Archive smells like money and disinfectant. History behind glass, polished until it stops bleeding.{/i}"
+    "The Archive smells like money and disinfectant. History behind glass, polished until it stops bleeding."
 
     docent "We do not rewrite history. We restore it."
-    "{i}Words glide over the glass like oil over water.{/i}"
+    
+    "Words glide over the glass like oil over water."
 
     # PLAQUE: OBSIDIAN BRIDGE PACIFICATION (foreshadow—no names)
     #scene bg_archive_plaque_bridge with dissolve
@@ -33,7 +34,7 @@ label act1_archive_merit:
     # === MENU 1: Aeron’s response to the plaque ===
     menu:
         "Ask a pointed question about evac corridors and casualty verification.":
-            $ apply_choice_once(
+            $ choice_and_dev(
                 _current_scene_id, "archive_plaque_question", "EMP", factor=1,
                 next_scene_label="act1_10c_debrief_theater",
                 note="Challenges curated record; insists on verification over designation."
@@ -43,10 +44,11 @@ label act1_archive_merit:
 
             a "Where were evac corridors staged? Who verified casualty counts?"
             docent "(beat) Evacuation was deemed unnecessary within tolerance."
-            "{i}'Within tolerance' is a museum way to say 'we didn't look.'{/i}"
+
+            "'Within tolerance' is a museum way to say 'we didn't look.'"
 
         "Compliment the efficiency of the pacification.":
-            $ apply_choice_once(
+            $ choice_and_dev(
                 _current_scene_id, "archive_plaque_praise_efficiency", "OB", factor=1,
                 next_scene_label="act1_10c_debrief_theater",
                 note="Performs doctrinal approval of force as metrics."
@@ -55,7 +57,7 @@ label act1_archive_merit:
             $ add_trust("Lyra", -1)
 
             a "Effective containment at scale."
-            "{i}The glass likes sentences that sound like metrics.{/i}"
+            "The glass likes sentences that sound like metrics."
 
         "Say nothing and keep walking.":
             $ record_choice_once(
@@ -65,18 +67,18 @@ label act1_archive_merit:
             )
             $ set_scene_flag(_current_scene_id, "_plaque_silent")
 
-            "{i}Silence is easy to curate. No fingerprints.{/i}"
+            "Silence is easy to curate. No fingerprints."
 
     # SECOND PLAQUE: FOUNDERS' MAXIMS
     #scene bg_archive_plaque_maxims with dissolve
 
     docent "Maxims of Order: Stability is compassion. Precision is mercy. Latency kills."
-    "{i}The font is softer than the meaning.{/i}"
+    "The font is softer than the meaning."
 
     # === MENU 2: Doctrine echo or subvert ===
     menu:
         "Add a quiet line under your breath: 'Order without understanding is brittle.'":
-            $ apply_choice_once(
+            $ choice_and_dev(
                 _current_scene_id, "archive_add_understanding", "EMP", factor=1,
                 next_scene_label="act1_10b_archive_merit",
                 note="Subverts doctrine with context principle; favors understanding."
@@ -88,7 +90,7 @@ label act1_archive_merit:
             a "(low) I just did."
 
         "Repeat the maxims exactly, for the room to hear.":
-            $ apply_choice_once(
+            $ choice_and_dev(
                 _current_scene_id, "archive_repeat_maxims", "OB", factor=1,
                 next_scene_label="act1_10b_archive_merit",
                 note="Signals conformity; reinforces civic catechism."
@@ -98,18 +100,19 @@ label act1_archive_merit:
             l "(measured) Adequate."
 
         "Deflect with a neutral 'We continue.'":
-            $ apply_choice_once_neutral(
+            $ record_choice_once(
                 _current_scene_id, "archive_we_continue",
                 next_scene_label="act1_10b_archive_merit",
                 note="Neutral deflection; avoids signaling."
             )
             $ set_scene_flag(_current_scene_id, "we_continue")
 
-            "{i}Safe words for dangerous glass.{/i}"
+            "Safe words for dangerous glass."
 
     # EXIT
     docent "Witnesses become records; records become order."
-    "{i}Order smiles from behind its teeth and thanks us for visiting.{/i}"
+
+    "Order smiles from behind its teeth and thanks us for visiting."
 
     $ set_scene_flag(_current_scene_id, "completed")
 

@@ -14,15 +14,15 @@ label act2_temp_base:
 
     #scene bg_temp_shelter with fade
 
-    "{i}Temp shelter. Selene called it temporary and she meant it. Basement of a half-collapsed building in Sector 6. Cramped, dark, smells like mold and desperation. Walls cracked. Water dripping. This isn't a base. This is a hole to hide in until Echelon finds us.{/i}"
+    "Temp shelter. Selene called it temporary and she meant it. Basement of a half-collapsed building in Sector 6. Cramped, dark, smells like mold and desperation. Walls cracked. Water dripping. This isn't a base. This is a hole to hide in until Echelon finds us."
 
     # [EMP/OB FLAVOR - additive]
-    "{i}{ob}Load-bearing cracks step at irregular intervals; dust plumes on each rumble.{/ob} {emp}Everyone sits too straight—hypervigilance eating the slouch from spines.{/emp}{/i}"
+    "{ob}Load-bearing cracks step at irregular intervals; dust plumes on each rumble.{/ob} {emp}Everyone sits too straight—hypervigilance eating the slouch from spines.{/emp}"
 
     # VISUAL: Resistance fighters gathered. 12 total. Shell-shocked. Exhausted. Traumatized.
     # Mix of ages. All looking at Selene. Waiting for leadership. For hope. For anything.
 
-    "{i}Twelve people. That's what's left. Twelve fighters sitting on rubble and broken crates, looking at Selene like she has answers. Looking broken. Looking lost. Looking like I feel.{/i}"
+    "Twelve people. That's what's left. Twelve fighters sitting on rubble and broken crates, looking at Selene like she has answers. Looking broken. Looking lost. Looking like I feel."
 
     # VISUAL: Selene standing. Addressing group. No podium. No ceremony. Just reality.
     s "Everyone here? Good. Let's talk about where we are. And where we're going."
@@ -33,7 +33,7 @@ label act2_temp_base:
     s "Command structure: myself as overall tactical lead, four division commanders, twenty squad leaders, fifty support staff."
 
     # VISUAL: Resistance fighters listening. Some remembering. Some weren't there. All grieving.
-    "{i}847 fighters. I killed 600 in one night during the Sweep. Then the Purge killed most of what remained. The math is sickening.{/i}"
+    "847 fighters. I killed 600 in one night during the Sweep. Then the Purge killed most of what remained. The math is sickening."
 
     s "We had infrastructure. Training facilities. Medical stations. We weren't just surviving. We were winning."
     s "Echelon feared us. Marcus knew we could challenge him in open combat. That's why he launched the Purge. Not to stop terrorism. To stop us."
@@ -50,7 +50,7 @@ label act2_temp_base:
     s "Weapons. Supplies. Medical equipment. Everything that made us dangerous. Gone."
 
     # VISUAL: Long silence. Weight of loss settling. 847 to 12. Army to squad.
-    "{i}847 to 12. From army to squad. From winning to barely surviving. That's what the Purge accomplished. Marcus didn't just kill civilians. He gutted the resistance. And he knew exactly what he was doing.{/i}"
+    "847 to 12. From army to squad. From winning to barely surviving. That's what the Purge accomplished. Marcus didn't just kill civilians. He gutted the resistance. And he knew exactly what he was doing."
 
     s "Command structure? Dead. All four division commanders died in Sector 10. Most squad leaders too. Support staff scattered or killed."
     s "I'm the last of the leadership. Just me. And twelve of you."
@@ -76,10 +76,10 @@ label act2_temp_base:
     s "Echelon thinks they broke us. They're wrong. They just made us angrier."
 
     # VISUAL: Aeron watching. Impressed. She's good. Turning despair into determination.
-    a "{i}She's good at this. Leadership. Taking a disaster and making it sound like opportunity. I can see why 847 people followed her. Why they died for her.{/i}"
+    athought "She's good at this. Leadership. Taking a disaster and making it sound like opportunity. I can see why 847 people followed her. Why they died for her."
 
     # [EMP/OB FLAVOR - additive]
-    "{i}{emp}Her voice threads grief through steel; the room catches it, breath by breath.{/emp}{/i}"
+    "{emp}Her voice threads grief through steel; the room catches it, breath by breath.{/emp}"
 
     # VISUAL: Lyra beside him. Watching. Processing. Both newcomers to this.
     l "(whisper) Do you think we can? Rebuild from this?"
@@ -88,7 +88,7 @@ label act2_temp_base:
     a "No. But it's what keeps you standing when bullets miss. We need that."
 
     # SOUND: Door opening. Alert. Everyone tenses. Weapons readied. Visitor.
-    "{i}Door. Opening. Everyone tenses. Weapons up. Ready for threat. Ready for Echelon. Ready for death.{/i}"
+    "Door. Opening. Everyone tenses. Weapons up. Ready for threat. Ready for Echelon. Ready for death."
 
     # VISUAL: ZIRA enters. Hands visible. Calm. Expected. Selene relaxes. Others follow.
     z "Easy. Just me. Heard you had new recruits. Came to see if they're still alive."
@@ -202,12 +202,12 @@ label act2_temp_base:
     s "Good. Now go. Clock's running."
 
     # VISUAL: They leave. Door closing behind them. Into the Unders. Into uncertainty. Into hope.
-    "{i}Out into the Unders. Scouting for home. For foundation. For future. Five locations to find. One day to find them. Everything riding on getting this right. No pressure. Just the entire resistance depending on us finding the perfect place to rebuild from ruins. Simple.{/i}"
+    "Out into the Unders. Scouting for home. For foundation. For future. Five locations to find. One day to find them. Everything riding on getting this right. No pressure. Just the entire resistance depending on us finding the perfect place to rebuild from ruins. Simple."
 
     # TRANSITION: Journey beginning. Sector 6 streets. Morning light. Purpose.
     #scene bg_lower_spans_morning with fade
 
-    "{i}Morning in the Lower Spans. City waking. People moving. Life continuing despite everything. And us moving through it. Looking for the place that becomes everything. The place that becomes home. The place that becomes resistance.{/i}"
+    "Morning in the Lower Spans. City waking. People moving. Life continuing despite everything. And us moving through it. Looking for the place that becomes everything. The place that becomes home. The place that becomes resistance."
 
     # VISUAL: Zira leading. Confident. Knows these streets. Aeron following. Observing. Learning.
     z "First stop: old subway station. Haven't been down there in years but it might work. Deep underground. Multiple tunnels. Could be perfect or could be death trap. Only one way to find out."
@@ -215,7 +215,7 @@ label act2_temp_base:
     z "Always are. That's one of your better qualities."
 
     # VISUAL: Moving together. Into the city. Into the search. Into the future.
-    "{i}Into the Unders. Looking for home. Looking for hope. Looking for the place that becomes ours. Day one of rebuilding. Everything starts here. Everything changes here. Find the right place and we have foundation. Find the wrong place and we die slowly. No pressure. Just everything.{/i}"
+    "Into the Unders. Looking for home. Looking for hope. Looking for the place that becomes ours. Day one of rebuilding. Everything starts here. Everything changes here. Find the right place and we have foundation. Find the wrong place and we die slowly. No pressure. Just everything."
 
     # ---------------------------
     # NEW HELPER STATE UPDATES

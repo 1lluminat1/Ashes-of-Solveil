@@ -14,7 +14,7 @@ label act2_noelle_no_unit:
 
     #scene bg_operations_room_night with fade
 
-    "{i}Late evening. Operations room. Noelle at her station. Surrounded by datapads and holographic displays. Working on something. Always working. But tonight feels different. Energy different. She's not just analyzing data. She's analyzing something else. Something internal. Something that's been bothering her for weeks.{/i}"
+    "Late evening. Operations room. Noelle at her station. Surrounded by datapads and holographic displays. Working on something. Always working. But tonight feels different. Energy different. She's not just analyzing data. She's analyzing something else. Something internal. Something that's been bothering her for weeks."
 
     # VISUAL: Aeron entering. Looking for Noelle specifically. Hasn't seen her much lately. She's been avoiding? Or just busy?
 
@@ -134,11 +134,11 @@ label act2_noelle_no_unit:
 
     # VISUAL: They kiss. Soft. Tentative. First kiss. Gentle. Sweet. Perfect. Noelle's first romantic kiss. Measured in data for three weeks. Now happening. Now real.
 
-    "{i}Kissing Noelle. She's tense. Uncertain. Analytical brain trying to catalog experience even as it happens. But also present. Also feeling. Also here. She tastes like coffee and determination. She's careful. Precise. Even in kissing. Very Noelle. Very perfect.{/i}"
+    "Kissing Noelle. She's tense. Uncertain. Analytical brain trying to catalog experience even as it happens. But also present. Also feeling. Also here. She tastes like coffee and determination. She's careful. Precise. Even in kissing. Very Noelle. Very perfect."
 
     # VISUAL: Kiss continuing. She relaxes. Stops analyzing. Starts feeling. Hands moving to his shoulders. Tentative but growing confident. Learning. Experiencing. Enjoying.
 
-    "{i}She's relaxing. Learning the rhythm. The connection. The experience of kissing without quantifying it. Her hands on my shoulders. Gentle. Exploring. Testing. Finding what feels good. What feels right. She's a quick learner. Even in this. Even in unmeasurable territory. She's finding her way. Finding us.{/i}"
+    "She's relaxing. Learning the rhythm. The connection. The experience of kissing without quantifying it. Her hands on my shoulders. Gentle. Exploring. Testing. Finding what feels good. What feels right. She's a quick learner. Even in this. Even in unmeasurable territory. She's finding her way. Finding us."
 
     # VISUAL: Finally pulling apart. Slowly. Gently. Eyes opening. Looking at each other. Changed. Connected. Together.
 
@@ -161,7 +161,7 @@ label act2_noelle_no_unit:
 
     # VISUAL: They sit together. Close. Comfortable. Her head on his shoulder. His arm around her. Silent. Content. Connected.
 
-    "{i}Sitting with Noelle. Her head on my shoulder. My arm around her. She's not talking. Not analyzing. Not measuring. Just existing. Just being present. Just feeling. That's growth. That's trust. That's her learning to exist in unmeasurable space. With me. Together. That's everything.{/i}"
+    "Sitting with Noelle. Her head on my shoulder. My arm around her. She's not talking. Not analyzing. Not measuring. Just existing. Just being present. Just feeling. That's growth. That's trust. That's her learning to exist in unmeasurable space. With me. Together. That's everything."
 
     # VISUAL: Time passing. Minutes. Comfortable silence. Then Noelle speaks. Soft. Thoughtful. Content.
 
@@ -182,7 +182,7 @@ label act2_noelle_no_unit:
 
     # VISUAL: She kisses him again. Initiated by her. Confident now. Learning. Growing. Choosing. Together.
 
-    "{i}She kisses me. Again. More confident. More certain. More present. She's learning. She's growing. She's choosing this. Choosing me. Choosing us. Choosing to exist in unmeasurable space because it's worth it. Because we're worth it. Because love is worth it. That's growth. That's trust. That's everything.{/i}"
+    "She kisses me. Again. More confident. More certain. More present. She's learning. She's growing. She's choosing this. Choosing me. Choosing us. Choosing to exist in unmeasurable space because it's worth it. Because we're worth it. Because love is worth it. That's growth. That's trust. That's everything."
 
     # VISUAL: Kiss ending. Comfortable. Real. Changed. Together. Forward.
 
@@ -196,7 +196,7 @@ label act2_noelle_no_unit:
 
     # VISUAL: They settle back. Together. Comfortable. Content. Just being. Just existing. Just loving. No units. No measurements. Just them.
 
-    "{i}Sitting with Noelle. Operations room dark except her workstation. Data everywhere. Graphs measuring feelings. Three weeks of research. All leading to this. To us. To love. To unmeasurable space that she's learning to navigate. Together. She's perfect. Analytical and awkward and brilliant and perfect. And she loves me. That's unmeasurable. That's everything. That's 100% pleasant. Possibly infinity percent. No unit for measuring happiness this complete. Just happiness. Just us. Just perfect.{/i}"
+    "Sitting with Noelle. Operations room dark except her workstation. Data everywhere. Graphs measuring feelings. Three weeks of research. All leading to this. To us. To love. To unmeasurable space that she's learning to navigate. Together. She's perfect. Analytical and awkward and brilliant and perfect. And she loves me. That's unmeasurable. That's everything. That's 100% pleasant. Possibly infinity percent. No unit for measuring happiness this complete. Just happiness. Just us. Just perfect."
 
     # Mark scene complete
     $ scenes["noelle_no_unit"] = True

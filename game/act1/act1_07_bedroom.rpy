@@ -30,35 +30,35 @@ label act1_07_bedroom:
     $ is_emp     = pass_tier("EMP1","EMP2","EMP3")  # ≥ +2
 
     scene bg_aeron_room_night with fade
-    "{i}Later that night...{/i}"
+    "Later that night..."
 
-    a "{i}She didn’t say goodbye.{/i}"
-    a "{i}Just gone. Like she was never there.{/i}"
+    athought "She didn’t say goodbye."
+    athought "Just gone. Like she was never there."
 
     # --- Balcony callback ------------------------------------------------
     if check_scene_flag("act1_05_gala", "approach_lyra"):
         if check_scene_flag("act1_06_balcony", "shared_light") and check_scene_flag("act1_06_balcony", "held_gaze"):
-            a "{i}But I can still feel the space between us. Close enough to matter.{/i}"
-            a "{i}Glass leaning toward glass. Almost touching. Almost shattering.{/i}"
+            athought "But I can still feel the space between us. Close enough to matter."
+            athought "Glass leaning toward glass. Almost touching. Almost shattering."
         elif check_scene_flag("act1_06_balcony", "shared_light"):
-            a "{i}The flame. Her eyes. For a moment, we were just... us.{/i}"
-            a "{i}Not Glass. Not performance. Just two people remembering what that felt like.{/i}"
+            athought "The flame. Her eyes. For a moment, we were just... us."
+            athought "Not Glass. Not performance. Just two people remembering what that felt like."
 
-    a "{i}Still... something was different in her eyes tonight.{/i}"
-    a "{i}Not duty. Not protocol. Something real.{/i}"
-    a "{i}She sees Glass. And she sees what’s underneath.{/i}"
-    a "{i}Maybe I’m not the only one tired of pretending.{/i}"
+    athought "Still... something was different in her eyes tonight."
+    athought "Not duty. Not protocol. Something real."
+    athought "She sees Glass. And she sees what’s underneath."
+    athought "Maybe I’m not the only one tired of pretending."
 
     # VISUAL: On the desk—sealed mission order with Echelon crest; faint terminal glow.
-    "{i}A sealed mission order waits on the desk. The Echelon crest bleeds crimson in the light.{/i}"
+    "A sealed mission order waits on the desk. The Echelon crest bleeds crimson in the light."
 
     # --- Empathy-based flavor --------------------------------------------
     if is_ob_hard:
-        a "{i}Silence is clarity. The hum beneath everything. The system breathing through me.{/i}"
+        athought "Silence is clarity. The hum beneath everything. The system breathing through me."
     elif is_mid:
-        a "{i}It’s quiet. Too quiet to tell if it’s peace or pressure.{/i}"
+        athought "It’s quiet. Too quiet to tell if it’s peace or pressure."
     else:
-        a "{i}The room feels heavier than before. Every order adds weight. Even silence sounds like expectation.{/i}"
+        athought "The room feels heavier than before. Every order adds weight. Even silence sounds like expectation."
 
     # --- PLAYER CHOICE: Break or hesitate before opening the order -------
     menu:
@@ -70,97 +70,97 @@ label act1_07_bedroom:
                                 note="No hesitation; performance reflex.")
             $ set_scene_flag(_current_scene_id, "opened_immediately")
 
-            "{i}The seal snaps. Orders are always easier than silence.{/i}"
-            a "{i}Glass doesn’t hesitate. Glass obeys.{/i}"
+            "The seal snaps. Orders are always easier than silence."
+            athought "Glass doesn’t hesitate. Glass obeys."
 
         "Hesitate for a breath.":
             # EMP nudge
-            $ apply_choice_once(
+            $ choice_and_dev(
                 _current_scene_id, "_hesitate_open", "EMP", factor=1,
                 next_scene_label="act1_07_bedroom",
                 note="Allows feeling to interrupt procedure."
             )
             $ set_scene_flag(_current_scene_id, "hesitated_order")
 
-            "{i}I hold it between my fingers, as if delay could change the words inside.{/i}"
-            "{i}Then the seal breaks with a soft crack.{/i}"
+            "I hold it between my fingers, as if delay could change the words inside."
+            "Then the seal breaks with a soft crack."
 
-            a "{i}Glass hesitating. That’s new.{/i}"
-            a "{i}Or maybe the cracks are spreading faster than I thought.{/i}"
+            athought "Glass hesitating. That’s new."
+            athought "Or maybe the cracks are spreading faster than I thought."
     # ---------------------------------------------------------------------
 
-    "{i}The words are clean. Precise. Impersonal.{/i}"
-    a "{i}(reading) 'Sector 10 breach confirmed. Possible rebel intel leaks within Unders comm-grid.'{/i}"
-    a "{i}'Sweep. Secure. Eliminate. Prove your worth.'{/i}"
-    "{i}Prove your worth. Always the same.{/i}"
+    "The words are clean. Precise. Impersonal."
+    athought "(reading) 'Sector 10 breach confirmed. Possible rebel intel leaks within Unders comm-grid.'"
+    athought "'Sweep. Secure. Eliminate. Prove your worth.'"
+    "Prove your worth. Always the same."
 
-    a "{i}Sweep. Secure. Eliminate. Like I’m a task to complete, not a person.{/i}"
-    a "{i}Sector 10 makes 391.{/i}"
-    a "{i}Different orders. Same result. Same words. Same emptiness.{/i}"
+    athought "Sweep. Secure. Eliminate. Like I’m a task to complete, not a person."
+    athought "Sector 10 makes 391."
+    athought "Different orders. Same result. Same words. Same emptiness."
 
     if is_ob_hard:
-        a "{i}They call it progress. They’re right. Every mission cleaner than the last.{/i}"
+        athought "They call it progress. They’re right. Every mission cleaner than the last."
     elif is_mid:
-        a "{i}Progress, repetition—same thing after enough cycles.{/i}"
+        athought "Progress, repetition—same thing after enough cycles."
     else:
-        a "{i}They call it progress. I call it perfected apathy.{/i}"
+        athought "They call it progress. I call it perfected apathy."
 
-    a "{i}Still wearing the mask. Even alone.{/i}"
-    a "{i}But tonight... the mask slipped.{/i}"
-    a "{i}Lyra saw through Glass. And I let her.{/i}"
-    a "{i}That’s not what Glass does. Glass doesn’t let anyone see.{/i}"
+    athought "Still wearing the mask. Even alone."
+    athought "But tonight... the mask slipped."
+    athought "Lyra saw through Glass. And I let her."
+    athought "That’s not what Glass does. Glass doesn’t let anyone see."
 
     # --- PLAYER CHOICE: Acknowledge Marcus or not ------------------------
     menu:
         "A blank message cursor blinks on the terminal."
         "Send a single-word acknowledgment: 'Received.'":
-            $ apply_choice_once(
+            $ choice_and_dev(
                 _current_scene_id, "_ack_marcus", "OB", factor=1,
                 next_scene_label="act1_07_bedroom",
                 note="Confirms command without delay; reaffirms performance reflex."
             )
             $ set_scene_flag(_current_scene_id, "acknowledged_marcus")
 
-            "{i}The message leaves without ceremony.{/i}"
+            "The message leaves without ceremony."
 
-            a "{i}Glass confirms. Glass complies. Glass continues.{/i}"
-            a "{i}391 operations. The count continues.{/i}"
+            athought "Glass confirms. Glass complies. Glass continues."
+            athought "391 operations. The count continues."
 
         "Say nothing.":
-            $ apply_choice_once(
+            $ choice_and_dev(
                 _current_scene_id, "_ignore_marcus", "EMP", factor=1,
                 next_scene_label="act1_07_bedroom",
                 note="Withholds ritual confirmation; first visible noncompliance."
             )
             $ set_scene_flag(_current_scene_id, "ignored_marcus")
 
-            "{i}The cursor keeps blinking until the screen sleeps.{/i}"
+            "The cursor keeps blinking until the screen sleeps."
 
-            a "{i}Glass doesn’t respond. First time in 390 operations.{/i}"
-            a "{i}The silence feels like rebellion. Or just exhaustion.{/i}"
+            athought "Glass doesn’t respond. First time in 390 operations."
+            athought "The silence feels like rebellion. Or just exhaustion."
     # ---------------------------------------------------------------------
 
     # VISUAL: Window reflection—Unders glowing like embers far below.
-    a "{i}The Unders stay the same. The rest of us just pretend we’re different.{/i}"
+    athought "The Unders stay the same. The rest of us just pretend we’re different."
 
     # --- Closing reflection ----------------------------------------------
     if is_ob_hard:
-        a "{i}Tonight changed nothing. Connection is noise. I can’t afford noise.{/i}"
-        a "{i}'Glass recognizes glass'—and still chooses to hold form.{/i}"
-        a "{i}Wholeness is a myth for those who hesitate.{/i}"
+        athought "Tonight changed nothing. Connection is noise. I can’t afford noise."
+        athought "'Glass recognizes glass'—and still chooses to hold form."
+        athought "Wholeness is a myth for those who hesitate."
     elif is_mid:
-        a "{i}She said, 'Glass recognizes glass.' Maybe she was right. Maybe she was wrong.{/i}"
-        a "{i}But the thought won’t leave me.{/i}"
+        athought "She said, 'Glass recognizes glass.' Maybe she was right. Maybe she was wrong."
+        athought "But the thought won’t leave me."
     else:
-        a "{i}But tonight felt different. Lyra made it different.{/i}"
-        a "{i}'Glass recognizes glass,' she said. Two polished surfaces. Both cracking. Both wondering if breaking means freedom or falling.{/i}"
-        a "{i}Maybe breaking is the only way back to being whole.{/i}"
+        athought "But tonight felt different. Lyra made it different."
+        athought "'Glass recognizes glass,' she said. Two polished surfaces. Both cracking. Both wondering if breaking means freedom or falling."
+        athought "Maybe breaking is the only way back to being whole."
 
-    "{i}The mission waits. It always does.{/i}"
-    "{i}But tonight, the past won’t stay buried.{/i}"
+    "The mission waits. It always does."
+    "But tonight, the past won’t stay buried."
 
-    a "{i}She asked if I remembered what wholeness felt like.{/i}"
-    a "{i}I don’t. But for a moment on that balcony, I almost did.{/i}"
+    athought "She asked if I remembered what wholeness felt like."
+    athought "I don’t. But for a moment on that balcony, I almost did."
 
     scene black with fade
 

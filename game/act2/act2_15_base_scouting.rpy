@@ -14,8 +14,8 @@ label act2_base_scouting:
 
     #scene bg_lower_spans_streets with fade
 
-    "{i}Moving through the Lower Spans with Zira. Morning crowds thin but present. Workers heading to jobs. Vendors setting up stalls. Normal life pretending the Purge never happened. Pretending 100,000 deaths don't matter. Maybe that's how you survive down here. By pretending.{/i}"
-    "{i}{ob}Air carries fryer oil and brake dust; patrol drone hums fade in and out at ~40s intervals.{/ob} {emp}We match the city’s rhythm, not fighting it—blend first, scout second.{/emp}{/i}"
+    "Moving through the Lower Spans with Zira. Morning crowds thin but present. Workers heading to jobs. Vendors setting up stalls. Normal life pretending the Purge never happened. Pretending 100,000 deaths don't matter. Maybe that's how you survive down here. By pretending."
+    "{ob}Air carries fryer oil and brake dust; patrol drone hums fade in and out at ~40s intervals.{/ob} {emp}We match the city’s rhythm, not fighting it—blend first, scout second.{/emp}"
 
     # VISUAL: Zira navigating confidently. Knows every street. Every shortcut. Home territory.
     z "Five locations to scout. Subway station, abandoned clinic, warehouse ruins, apartment complex, maintenance tunnels. Full day's work if we're thorough."
@@ -30,7 +30,7 @@ label act2_base_scouting:
     # TRANSITION: Descending into subway. Dark. Damp. Underground.
     #scene bg_subway_station_old with fade
 
-    "{i}Down into darkness. Old subway station. Tiles cracked. Water dripping. Smell of mold and rust. Emergency lights flickering on motion sensors. Place has been abandoned for years but infrastructure's still here. Rails. Platforms. Tunnels stretching into darkness.{/i}"
+    "Down into darkness. Old subway station. Tiles cracked. Water dripping. Smell of mold and rust. Emergency lights flickering on motion sensors. Place has been abandoned for years but infrastructure's still here. Rails. Platforms. Tunnels stretching into darkness."
 
     # VISUAL: Exploring. Zira checking exits. Aeron examining structure. Professional assessment.
     z "Multiple tunnels. At least six directions from this central platform. That's good. Means multiple escape routes if Echelon finds us."
@@ -51,7 +51,7 @@ label act2_base_scouting:
     # TRANSITION: Back above ground. Journey to Sector 7. Walking. Talking.
     #scene bg_lower_spans_day with fade
 
-    "{i}Back above ground. Sunlight feels harsh after subway darkness. Moving toward Sector 7. Twenty minute walk. Zira knows shortcuts. I follow. Good rhythm. Comfortable silence between us. Easy partnership.{/i}"
+    "Back above ground. Sunlight feels harsh after subway darkness. Moving toward Sector 7. Twenty minute walk. Zira knows shortcuts. I follow. Good rhythm. Comfortable silence between us. Easy partnership."
 
     # VISUAL: Conversation starting. Light. Building rapport.
     a "How long have you been doing this? Scouting bases. Running operations."
@@ -69,7 +69,7 @@ label act2_base_scouting:
     # VISUAL: Arriving at abandoned clinic. Sector 7. Medical signage faded but visible.
     #scene bg_abandoned_clinic with fade
 
-    "{i}Abandoned clinic. Sector 7. Three story building. Windows broken. Doors hanging off hinges. But structure intact. Medical signage still visible. This was real clinic once. Helping people. Now empty. Waiting. Could help people again.{/i}"
+    "Abandoned clinic. Sector 7. Three story building. Windows broken. Doors hanging off hinges. But structure intact. Medical signage still visible. This was real clinic once. Helping people. Now empty. Waiting. Could help people again."
 
     # VISUAL: Exploring. Exam rooms. Storage. Operating theater. Medical infrastructure intact.
     z "This is solid. Exam rooms can become living quarters. Operating theater for actual medical work. Storage rooms for weapons and supplies. Three floors means vertical compartmentalization."
@@ -89,7 +89,7 @@ label act2_base_scouting:
     # TRANSITION: Journey to warehouse. Longer. Gives time for deeper conversation.
     #scene bg_lower_spans_afternoon with fade
 
-    "{i}Walking toward warehouse district. Afternoon now. Crowds thicker. More people. More noise. Easier to blend. Harder to talk privately. We stick to less traveled paths. Alleys. Maintenance corridors. Places where conversations stay private.{/i}"
+    "Walking toward warehouse district. Afternoon now. Crowds thicker. More people. More noise. Easier to blend. Harder to talk privately. We stick to less traveled paths. Alleys. Maintenance corridors. Places where conversations stay private."
 
     # VISUAL: Zira quieter now. Memories surfacing. Grief showing through usual toughness.
     z "Kai loved the warehouses. Said they reminded him of possibility. Big empty spaces waiting to be filled with something better than Echelon's control."
@@ -103,7 +103,7 @@ label act2_base_scouting:
     # VISUAL: Arriving at warehouse ruins. Partially collapsed. Massive. Empty. Haunted.
     #scene bg_warehouse_ruins with fade
 
-    "{i}Warehouse ruins. Massive. Five stories. Partially collapsed on east side but west side intact. Huge open spaces. Multiple levels. Catwalks. Loading docks. Storage areas. Could hold hundred people easily. Could hold army if we rebuilt it properly. Could hold everything. Or could collapse and kill everyone. Both possible.{/i}"
+    "Warehouse ruins. Massive. Five stories. Partially collapsed on east side but west side intact. Huge open spaces. Multiple levels. Catwalks. Loading docks. Storage areas. Could hold hundred people easily. Could hold army if we rebuilt it properly. Could hold everything. Or could collapse and kill everyone. Both possible."
 
     # VISUAL: Zira stops. Staring. Memories flooding. Pain visible now. Grief raw.
     z "(quiet) There. That catwalk. Third level. That's where we sat. Where he told me he was going to defect. Where I tried to talk him out of it."
@@ -116,7 +116,7 @@ label act2_base_scouting:
     z "And I couldn't save him. Couldn't stop it. Could only watch him die and know I failed."
 
     # VISUAL: Tears now. Openly crying. Toughness cracked. Grief pouring through.
-    "{i}She's crying. Zira's crying. I've never seen her cry. Never seen her crack. She's always steel and sharp edges and dark humor. But right now she's just person who lost her brother. Just sister grieving. Just human breaking.{/i}"
+    "She's crying. Zira's crying. I've never seen her cry. Never seen her crack. She's always steel and sharp edges and dark humor. But right now she's just person who lost her brother. Just sister grieving. Just human breaking."
 
     # VISUAL: Aeron moves to her. Not touching yet. Present. Witness. Support.
     a "I'm sorry. I'm so sorry. You shouldn't have had to watch that. Nobody should."
@@ -163,16 +163,16 @@ label zira_kiss_scene:
     # VISUAL: Zira closes distance. Kisses him. Soft. Not rushed. Intentional.
     # SOUND: Silence except breathing. City noise distant. This moment isolated.
 
-    "{i}She kisses me. Soft but certain. Not frantic. Not desperate. Deliberate. Her hand comes up to my chest. Not pushing away. Just resting there. Feeling heartbeat. Grounding herself in something real. Something present. Something alive.{/i}"
+    "She kisses me. Soft but certain. Not frantic. Not desperate. Deliberate. Her hand comes up to my chest. Not pushing away. Just resting there. Feeling heartbeat. Grounding herself in something real. Something present. Something alive."
 
     # VISUAL: Kiss lasting. Not quick peck. Real kiss. Tender. Meaningful. Time stretching.
-    "{i}Time stretches. Seconds becoming minutes becoming moment that exists outside normal time. Her lips soft against mine. Warm. Real. She tastes like coffee and determination and grief being held at bay. She's not pulling away. Not rushing. Just present. Just here. Just kissing me like she means it.{/i}"
+    "Time stretches. Seconds becoming minutes becoming moment that exists outside normal time. Her lips soft against mine. Warm. Real. She tastes like coffee and determination and grief being held at bay. She's not pulling away. Not rushing. Just present. Just here. Just kissing me like she means it."
 
     # VISUAL: Her other hand moves to his shoulder. Steadying herself. Or him. Or both.
-    "{i}Her other hand finds my shoulder. Holding on. Not desperate grip. Just connection. Anchor. We're standing in ruins of her brother's dreams and she's kissing me and it feels like both ending and beginning. Like grief finding outlet. Like hope finding form.{/i}"
+    "Her other hand finds my shoulder. Holding on. Not desperate grip. Just connection. Anchor. We're standing in ruins of her brother's dreams and she's kissing me and it feels like both ending and beginning. Like grief finding outlet. Like hope finding form."
 
     # VISUAL: Finally pulls back. Slowly. Not jerking away. Gentle separation. Eyes opening.
-    "{i}She pulls back slowly. Eyes still closed for beat longer. Then opening. Looking at me. Searching my face for reaction. For judgment. For rejection. For anything that says I regret this. That she shouldn't have done this.{/i}"
+    "She pulls back slowly. Eyes still closed for beat longer. Then opening. Looking at me. Searching my face for reaction. For judgment. For rejection. For anything that says I regret this. That she shouldn't have done this."
 
     # VISUAL: Zira's face. Vulnerable. Scared. But also... relieved. Soft. Open.
     z "(breathless, quiet) I've been wanting to do that. For weeks maybe. Since you saved me from that crowd. Since you kept your promises. Since you became someone who made me feel less alone."
@@ -203,7 +203,7 @@ label zira_kiss_scene:
     z "That's not failure. That's... that's everything."
 
     # VISUAL: Moment stretching. Neither pulling away. Comfortable in closeness. New intimacy.
-    "{i}Standing close. Her hand on my chest. Mine on her face. Breathing synchronized. Not kissing anymore but not separating either. Just existing in this space. This moment. This new thing between us that doesn't have name but feels right. Feels real. Feels like something worth protecting.{/i}"
+    "Standing close. Her hand on my chest. Mine on her face. Breathing synchronized. Not kissing anymore but not separating either. Just existing in this space. This moment. This new thing between us that doesn't have name but feels right. Feels real. Feels like something worth protecting."
 
     # VISUAL: Zira finally steps back slightly. Not fleeing. Just breathing room. Processing.
     z "(taking breath) I don't know what this means. Where this goes. If it goes anywhere. But I know I wanted it. I know I liked it. I know I'm glad it happened."
@@ -219,7 +219,7 @@ label zira_kiss_scene:
     z "Good. Because Glass wouldn't have kissed me back. Wouldn't have touched my face like that. Wouldn't have made me feel like person instead of tool. You're better than Glass. Remember that."
 
     # VISUAL: Comfortable silence. Changed. Closer. Different kind of partnership now.
-    "{i}Silence between us but not empty. Full of everything we're not saying. Full of possibilities. Full of something that feels like hope and comfort and connection. She kissed me. I kissed her back. She liked it. I liked it. It's real. It's wanted. It's ours.{/i}"
+    "Silence between us but not empty. Full of everything we're not saying. Full of possibilities. Full of something that feels like hope and comfort and connection. She kissed me. I kissed her back. She liked it. I liked it. It's real. It's wanted. It's ours."
 
     # VISUAL: Zira glancing around warehouse. Kai's memory present but not crushing.
     z "Kai would have liked you. Would have been glad I found someone who makes me remember being human is worth it. He always said surviving wasn't enough. Had to live too. Had to feel things. Had to want things."
@@ -232,7 +232,7 @@ label zira_kiss_scene:
     z "And for the record? If you want to do that again sometime... I wouldn't object. Just saying."
 
     # VISUAL: She leaves. Confident. Changed. Lighter somehow. Aeron following. Both changed.
-    "{i}She walks away. Confident. Not running from what happened. Not ashamed. Just acknowledging it and moving forward. And I follow. Because that's what we do. We move forward together. Changed now. Closer. Something unnamed but real between us. Something worth protecting. Something that feels like it might become everything.{/i}"
+    "She walks away. Confident. Not running from what happened. Not ashamed. Just acknowledging it and moving forward. And I follow. Because that's what we do. We move forward together. Changed now. Closer. Something unnamed but real between us. Something worth protecting. Something that feels like it might become everything."
 
     # Update relationship with deeper connection (NEW SYSTEM)
     $ rel("zira", trust=+2)
@@ -253,7 +253,7 @@ label zira_almost_kiss_scene:
     # VISUAL: Zira moves closer. Almost. Hesitates. Catches herself. Pulls back.
     # SOUND: Sharp breath. Moment passing. Opportunity lost.
 
-    "{i}She moves closer. Almost touches me. Almost closes distance. Then catches herself. Hesitates. Pulls back. Moment passing. Whatever was about to happen doesn't. Gone. Lost.{/i}"
+    "She moves closer. Almost touches me. Almost closes distance. Then catches herself. Hesitates. Pulls back. Moment passing. Whatever was about to happen doesn't. Gone. Lost."
 
     # VISUAL: Zira stepping back. Walls back up. Vulnerability hidden again. Professional.
     z "(clears throat) Sorry. Got lost in memories. This place does that. Too many ghosts."
@@ -261,7 +261,7 @@ label zira_almost_kiss_scene:
     z "Yeah. Fine. Just... need to keep moving. Standing here makes it worse. Let's check the rest of the warehouse and get out."
 
     # VISUAL: She turns away. Moment lost. Walls rebuilt. Whatever was there hidden again.
-    "{i}She turns away. Whatever was about to happen stays buried. Maybe trust wasn't deep enough. Maybe I didn't show enough empathy. Maybe timing was wrong. Whatever the reason, the moment's gone. Might not come back.{/i}"
+    "She turns away. Whatever was about to happen stays buried. Maybe trust wasn't deep enough. Maybe I didn't show enough empathy. Maybe timing was wrong. Whatever the reason, the moment's gone. Might not come back."
 
     # VISUAL: Continue scouting. Professional. Distant. Something lost between them.
     jump act2_15_continue_scouting
@@ -276,7 +276,7 @@ label act2_15_continue_scouting:
     # VISUAL: Exploring warehouse. Professional assessment. Processing what happened (or didn't).
     #scene bg_warehouse_interior with fade
 
-    "{i}Exploring warehouse. Large spaces. Multiple levels. Good sightlines. Defensible if reinforced. Structural issues on east side but fixable. Could work. Could be perfect. Or could be where we die when ceiling collapses. Architecture's always gamble down here.{/i}"
+    "Exploring warehouse. Large spaces. Multiple levels. Good sightlines. Defensible if reinforced. Structural issues on east side but fixable. Could work. Could be perfect. Or could be where we die when ceiling collapses. Architecture's always gamble down here."
 
     # VISUAL: Zira back to professional. Evaluating. Taking notes. Changed or unchanged depending on kiss.
     z "Warehouse has potential. Biggest space of all options. Could hold a hundred people if we renovate. Multiple levels for different operations. Loading docks for supply deliveries."
@@ -291,12 +291,12 @@ label act2_15_continue_scouting:
     # TRANSITION: Journey to apartment complex. Late afternoon. Processing.
     #scene bg_lower_spans_lateafternoon with fade
 
-    "{i}Late afternoon now. Been scouting for hours. Feet tired. Mind more tired. Processing everything. Locations. Possibilities. And what happened with Zira. Or didn't happen. Depending on which timeline we're in. Either way, something changed. Something shifted. Can't quite name it but it's there.{/i}"
+    "Late afternoon now. Been scouting for hours. Feet tired. Mind more tired. Processing everything. Locations. Possibilities. And what happened with Zira. Or didn't happen. Depending on which timeline we're in. Either way, something changed. Something shifted. Can't quite name it but it's there."
 
     # VISUAL: Arriving at apartment complex. Abandoned. Eight stories. Residential exterior. Tactical interior.
     #scene bg_apartment_complex with fade
 
-    "{i}Apartment complex. Eight stories. Abandoned after Purge. Building took structural damage but remained standing. Residential from outside. Just another housing block. But inside? Tactical dream. Multiple levels. Clear sightlines. Rooftop access. This is what Lyra saw. This is what her military mind recognized. Fortress disguised as apartment.{/i}"
+    "Apartment complex. Eight stories. Abandoned after Purge. Building took structural damage but remained standing. Residential from outside. Just another housing block. But inside? Tactical dream. Multiple levels. Clear sightlines. Rooftop access. This is what Lyra saw. This is what her military mind recognized. Fortress disguised as apartment."
 
     # VISUAL: Exploring. Checking apartments. Rooms. Layout. Potential.
     z "Multiple apartments means compartmentalization. Different operations in different units. Living quarters separate from operations separate from storage. Organized."
@@ -314,12 +314,12 @@ label act2_15_continue_scouting:
     # TRANSITION: Journey to maintenance tunnels. Evening approaching. Last location.
     #scene bg_lower_spans_evening with fade
 
-    "{i}Evening approaching. Last location. Maintenance tunnels beneath city infrastructure. Hidden. Unknown to most. Selene's choice because survival over comfort. Because hidden means alive. And alive means fighting another day. Practical. Cold. But practical.{/i}"
+    "Evening approaching. Last location. Maintenance tunnels beneath city infrastructure. Hidden. Unknown to most. Selene's choice because survival over comfort. Because hidden means alive. And alive means fighting another day. Practical. Cold. But practical."
 
     # VISUAL: Entering maintenance access. Hidden door. Narrow stairs. Descending into infrastructure.
     #scene bg_maintenance_tunnels with fade
 
-    "{i}Maintenance tunnels. City's hidden veins. Water pipes. Power conduits. Access corridors. Narrow. Damp. Industrial. Uncomfortable. But completely hidden. Not on civilian maps. Not on Echelon maps. Secret. Unknown. Safe in obscurity if not comfort.{/i}"
+    "Maintenance tunnels. City's hidden veins. Water pipes. Power conduits. Access corridors. Narrow. Damp. Industrial. Uncomfortable. But completely hidden. Not on civilian maps. Not on Echelon maps. Secret. Unknown. Safe in obscurity if not comfort."
 
     # VISUAL: Exploring. Tight spaces. Low ceilings. Oppressive but secure.
     z "This is as hidden as it gets. Maintenance workers come through occasionally but rarely. Could set up security to avoid them. Echelon has no reason to patrol infrastructure tunnels."
@@ -338,12 +338,12 @@ label act2_15_continue_scouting:
     # VISUAL: Returning to surface. Evening now. Day spent scouting. Exhausted but accomplished.
     #scene bg_lower_spans_night with fade
 
-    "{i}Evening. Full day of scouting complete. Five locations explored. All data gathered. All possibilities assessed. Time to bring it home. Time to present findings. Time to choose foundation for everything we're building. No pressure. Just deciding where resistance lives or dies. Simple.{/i}"
+    "Evening. Full day of scouting complete. Five locations explored. All data gathered. All possibilities assessed. Time to bring it home. Time to present findings. Time to choose foundation for everything we're building. No pressure. Just deciding where resistance lives or dies. Simple."
 
     # TRANSITION: Return to temp shelter. Resistance gathered. Waiting. Hoping.
     #scene bg_temp_shelter_evening with fade
 
-    "{i}Back to temp shelter. Everyone waiting. Selene. Lyra. Resistance fighters. All looking at us for answers. For options. For hope that we found something worth fighting for. Time to deliver.{/i}"
+    "Back to temp shelter. Everyone waiting. Selene. Lyra. Resistance fighters. All looking at us for answers. For options. For hope that we found something worth fighting for. Time to deliver."
 
     # VISUAL: Selene steps forward. Expectant. Hopeful. Leader waiting for intel.
     s "Report. What did you find?"
@@ -424,7 +424,7 @@ label act2_15_continue_scouting:
     # ==============================================================
 
     # VISUAL: All options presented. Advocates made their cases. Decision time.
-    "{i}Five options. Five visions. Each character advocating based on expertise and values. Noelle's data. Tessa's compassion. Zira's pragmatism. Lyra's tactics. Selene's survival. All valid. All strategic. All represent different future for resistance. Time to choose which future we build.{/i}"
+    "Five options. Five visions. Each character advocating based on expertise and values. Noelle's data. Tessa's compassion. Zira's pragmatism. Lyra's tactics. Selene's survival. All valid. All strategic. All represent different future for resistance. Time to choose which future we build."
 
     menu:
         "Five locations. Five visions. Which becomes our foundation?"
@@ -507,7 +507,7 @@ label act2_15_continue_scouting:
     s "Tomorrow we move to new base. Tomorrow we start building for real. Tonight we rest. Because tomorrow's going to be long day."
 
     # VISUAL: Resistance fighters moving. Packing. Preparing. Energy different. Hope present. Direction clear.
-    "{i}Movement. Purpose. Direction. We have foundation now. Place to build from. Not just hiding. Building. That's different. That changes everything. From fugitives to resistance. From running to fighting. From surviving to planning. One base location. Changed everything.{/i}"
+    "Movement. Purpose. Direction. We have foundation now. Place to build from. Not just hiding. Building. That's different. That changes everything. From fugitives to resistance. From running to fighting. From surviving to planning. One base location. Changed everything."
 
     # VISUAL: Lyra approaches Aeron. Proud. Supportive. Team.
     l "Good scouting. You and Zira make good team. Found us real options. Made real difference."
@@ -520,14 +520,14 @@ label act2_15_continue_scouting:
 
     # VISUAL: Zira watching from distance. Small smile. Complex emotions if kiss happened.
     if mark_flag("zira.kiss_happened") == True:  # see TODO note above re: getters
-        "{i}Zira watching from across room. Small smile. Complicated emotions. We kissed today. In warehouse ruins. In her brother's memory. Don't know what it means. But it happened. And it changed something. Made us closer. Made us something undefined but real. That's enough for now. Maybe forever. But enough.{/i}"
+        "Zira watching from across room. Small smile. Complicated emotions. We kissed today. In warehouse ruins. In her brother's memory. Don't know what it means. But it happened. And it changed something. Made us closer. Made us something undefined but real. That's enough for now. Maybe forever. But enough."
 
     # VISUAL: Group settling for night. Tomorrow everything changes. Tonight they rest.
     s "Get rest. Tomorrow we move. Day after we start building. Real resistance. Real threat to Echelon. From ashes. From ruins. From twelve broken people. We build army. We build hope. We build future."
     s "Sleep well. Tomorrow we make them regret ever thinking they broke us."
 
     # VISUAL: Lights dimming. People settling. Night falling. Tomorrow approaching.
-    "{i}Night falling. Tomorrow we move. Tomorrow we build. Tomorrow resistance becomes real. But tonight we rest. Tonight we're just twelve people who survived another day. That's enough. That's everything. That's hope.{/i}"
+    "Night falling. Tomorrow we move. Tomorrow we build. Tomorrow resistance becomes real. But tonight we rest. Tonight we're just twelve people who survived another day. That's enough. That's everything. That's hope."
 
     # ---------------------------
     # NEW HELPER STATE UPDATES

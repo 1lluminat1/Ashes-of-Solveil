@@ -3,6 +3,8 @@
 # File: act1_21_purge.rpy
 # =======================================================
 
+# TODO: Fix variable usage in this file
+
 # ========= SCENE START TASKS =========
 $ _current_scene_id = "act1_21_purge"
 $ scene_mark(_current_scene_id, "entered")
@@ -25,67 +27,67 @@ label act1_purge:
     # LIGHTING: Warm amber → deep blue; city lights blooming below.
     # SOUND: High rooftop wind bed @ -12 dB; distant transit; occasional antenna creak.
 
-    "{i}The rooftop. Same place. Same rail. Same wind.{/i}"
-    "{i}Where Kael stood. Where Kael chose.{/i}"
-    "{i}Where Glass almost shattered completely two nights ago.{/i}"
+    "The rooftop. Same place. Same rail. Same wind."
+    "Where Kael stood. Where Kael chose."
+    "Where Glass almost shattered completely two nights ago."
 
     # BLOCKING: Aeron at rail, not at edge; hands braced. Shoulders tight; breath contained.
 
-    a "{i}Two nights ago I stood here ready to jump.{/i}"
-    a "{i}Then Lyra knocked. And everything changed.{/i}"
-    a "{i}Yesterday I killed [kv] people. Saved [sv].{/i}"
-    a "{i}Broke down completely. Shattered. Lyra held the pieces.{/i}"
-    a "{i}Last night Zira gave me a choice. Information. Access. Power.{/i}"
+    athought "Two nights ago I stood here ready to jump."
+    athought "Then Lyra knocked. And everything changed."
+    athought "Yesterday I killed [kv] people. Saved [sv]."
+    athought "Broke down completely. Shattered. Lyra held the pieces."
+    athought "Last night Zira gave me a choice. Information. Access. Power."
 
     if sv >= 1:
-        a "{i}This morning I learned those [sv] are spreading word. Saving others.{/i}"
-        a "{i}My mercy rippling outward. Creating more mercy.{/i}"
+        athought "This morning I learned those [sv] are spreading word. Saving others."
+        athought "My mercy rippling outward. Creating more mercy."
         # ALIGNMENT NUDGE (quiet, positive): remembering mercy-as-ripples
         $ apply_choice_once(_current_scene_id, "purge_recalls_mercy_ripples", "EMP", factor=1,
                             next_scene_label="act1_21_purge",
                             note="Recalls survivors spreading warnings; empathy affirmed.")
     else:
-        a "{i}This morning I stared at reports that said 'zero survivors.'{/i}"
-        a "{i}I don't believe them. I can't. Someone must have lived.{/i}"
+        athought "This morning I stared at reports that said 'zero survivors.'"
+        athought "I don't believe them. I can't. Someone must have lived."
 
     # CAMERA: Slow 25s dolly-in toward Aeron's back; city field-of-lights deepens.
-    "{i}The city wakes below. Lights like stars igniting. Millions of lives humming.{/i}"
-    "{i}Sectors 8, 9, 10 stretch in the distance. Dark patches among the glow.{/i}"
+    "The city wakes below. Lights like stars igniting. Millions of lives humming."
+    "Sectors 8, 9, 10 stretch in the distance. Dark patches among the glow."
 
-    a "{i}Something's happening there tonight. 'Project Renewal.' Whatever that means.{/i}"
-    a "{i}Marcus wants me to watch from command deck. 'Witness history.'{/i}"
-    a "{i}But I came here first. To think. To understand.{/i}"
-    a "{i}To stand where Kael stood and ask—what would you do?{/i}"
+    athought "Something's happening there tonight. 'Project Renewal.' Whatever that means."
+    athought "Marcus wants me to watch from command deck. 'Witness history.'"
+    athought "But I came here first. To think. To understand."
+    athought "To stand where Kael stood and ask—what would you do?"
 
     # INSERT: Hands close-up; knuckles blanch; tiny tremor.
-    "{i}His hands grip the rail. No blood. But he sees it anyway.{/i}"
+    "His hands grip the rail. No blood. But he sees it anyway."
 
-    a "{i}These hands killed [kv] people. Saved [sv].{/i}"
-    a "{i}Is that redemption? Or just less horror?{/i}"
-    a "{i}Lyra said trying matters. Even when you fail.{/i}"
-    a "{i}Zira said broken things can be rebuilt. Glass can't.{/i}"
-    a "{i}So maybe... maybe I'm not Glass anymore.{/i}"
+    athought "These hands killed [kv] people. Saved [sv]."
+    athought "Is that redemption? Or just less horror?"
+    athought "Lyra said trying matters. Even when you fail."
+    athought "Zira said broken things can be rebuilt. Glass can't."
+    athought "So maybe... maybe I'm not Glass anymore."
 
     # MICRO: exhale; shoulders drop half an inch.
-    a "{i}Maybe breaking was how I became human again.{/i}"
-    a "{i}Maybe mercy—even imperfect mercy—is how I stop being a weapon.{/i}"
-    a "{i}Maybe Kael would be proud. That I'm trying.{/i}"
+    athought "Maybe breaking was how I became human again."
+    athought "Maybe mercy—even imperfect mercy—is how I stop being a weapon."
+    athought "Maybe Kael would be proud. That I'm trying."
 
     # SOUND: Far laughter; a scooter horn; life on some other level.
-    "{i}The wind carries city sounds. Distant laughter. Music. Life continuing.{/i}"
-    "{i}For a moment, the world feels almost... okay.{/i}"
+    "The wind carries city sounds. Distant laughter. Music. Life continuing."
+    "For a moment, the world feels almost... okay."
 
-    a "{i}I don't know what happens next. I don't know if I can be fixed.{/i}"
+    athought "I don't know what happens next. I don't know if I can be fixed."
 
     if sv >= 1:
-        a "{i}But I'm not alone. Lyra sees me. Zira respects me. The [sv] survived.{/i}"
+        athought "But I'm not alone. Lyra sees me. Zira respects me. The [sv] survived."
     else:
-        a "{i}But I'm not alone. Lyra sees me. Zira challenged me. Someone must have survived.{/i}"
-    a "{i}That's something. That has to be something.{/i}"
+        athought "But I'm not alone. Lyra sees me. Zira challenged me. Someone must have survived."
+    athought "That's something. That has to be something."
 
     # SFX: Roof door latch clicks; soft footfalls.
-    "{i}Footsteps. Approaching from the rooftop door.{/i}"
-    "{i}He doesn't turn. He knows that rhythm.{/i}"
+    "Footsteps. Approaching from the rooftop door."
+    "He doesn't turn. He knows that rhythm."
 
     a "(quiet) Lyra."
     l "How did you know?"
@@ -98,7 +100,7 @@ label act1_purge:
     a "(small smile) Still thinking."
 
     # VISUAL: They stand in comfortable silence. Watching the city together.
-    "{i}Silence settles. Not awkward. Just two people existing together.{/i}"
+    "Silence settles. Not awkward. Just two people existing together."
 
     l "How are you feeling? After yesterday?"
     a "(honest) Empty. But not the Glass kind of empty."
@@ -113,7 +115,7 @@ label act1_purge:
     l "(soft smile) It's the best thing."
 
     # VISUAL: Their eyes meet. Hold. Connection visible. Not quite romantic but close.
-    "{i}Something passes between them. Understanding. Recognition. Hope.{/i}"
+    "Something passes between them. Understanding. Recognition. Hope."
 
     a "I checked the networks this morning. The resistance chatter."
     if sv >= 1:
@@ -142,8 +144,8 @@ label act1_purge:
     l "Let's not find out."
 
     # VISUAL: Comfortable silence. Both watching the city. Peaceful moment.
-    "{i}They stand together. The city hums. The wind carries warmth.{/i}"
-    "{i}For a moment, everything feels... possible.{/i}"
+    "They stand together. The city hums. The wind carries warmth."
+    "For a moment, everything feels... possible."
 
     a "Lyra?"
     l "Yes?"
@@ -155,10 +157,10 @@ label act1_purge:
     l "(softer) Broken. Human. Together."
 
     # BLOCKING: She takes his hand; frame pushes to medium two-shot; breath syncs.
-    "{i}Her hand finds his. Fingers intertwine. Warm. Real. Alive.{/i}"
+    "Her hand finds his. Fingers intertwine. Warm. Real. Alive."
 
-    a "{i}This. This is what I was missing. Connection. Touch. Being seen.{/i}"
-    a "{i}Not as Glass. Not as weapon. Just as Aeron.{/i}"
+    athought "This. This is what I was missing. Connection. Touch. Being seen."
+    athought "Not as Glass. Not as weapon. Just as Aeron."
 
     l "What time is Marcus expecting you?"
     a "2000 hours. Command deck. Observation duty."
@@ -180,8 +182,8 @@ label act1_purge:
     l "(squeezes his hand) Then that's what we'll do."
 
     # VISUAL: They turn back to the city. Hands still joined. Watching together.
-    "{i}The city glows. Peaceful. Beautiful. Unaware.{/i}"
-    "{i}Two people on a rooftop. Holding hands. Finding hope.{/i}"
+    "The city glows. Peaceful. Beautiful. Unaware."
+    "Two people on a rooftop. Holding hands. Finding hope."
 
     a "Do you think we can fix this? Any of it?"
     l "Fix what?"
@@ -192,17 +194,17 @@ label act1_purge:
     l "Together."
 
     # VISUAL: Small smile on both faces. Tentative. Fragile. Real.
-    "{i}Hope. Fragile and small. But real.{/i}"
-    "{i}For the first time in days—maybe years—hope.{/i}"
+    "Hope. Fragile and small. But real."
+    "For the first time in days—maybe years—hope."
 
-    a "{i}Maybe this is what breaking Glass means. Maybe this is freedom.{/i}"
-    a "{i}Not perfection. Not obedience. Just... being human.{/i}"
-    a "{i}Feeling things. Connecting. Choosing mercy.{/i}"
-    a "{i}Maybe Kael would be proud.{/i}"
+    athought "Maybe this is what breaking Glass means. Maybe this is freedom."
+    athought "Not perfection. Not obedience. Just... being human."
+    athought "Feeling things. Connecting. Choosing mercy."
+    athought "Maybe Kael would be proud."
 
     # VISUAL: The sky. Still peaceful. City lights twinkling. Stars beginning to show.
-    "{i}The stars appear. Faint against city glow. But there.{/i}"
-    "{i}Everything feels... possible.{/i}"
+    "The stars appear. Faint against city glow. But there."
+    "Everything feels... possible."
 
     l "(quiet) It's beautiful up here."
     a "It is."
@@ -210,15 +212,15 @@ label act1_purge:
     a "Thank you for looking."
 
     # VISUAL: Time stretches. Peaceful. Connected. Two people finding each other.
-    "{i}Minutes pass. Maybe hours. Time loses meaning.{/i}"
-    "{i}Just two people. One rooftop. One city. One moment.{/i}"
+    "Minutes pass. Maybe hours. Time loses meaning."
+    "Just two people. One rooftop. One city. One moment."
 
     # ==========================================
     # THE PURGE BEGINS
     # ==========================================
 
     # UI: subtle on-screen clock tick to 19:58
-    "{i}19:58. Two minutes until Marcus expects him on command deck.{/i}"
+    "19:58. Two minutes until Marcus expects him on command deck."
 
     a "I should go. Marcus will be waiting."
     l "Do you have to?"
@@ -232,36 +234,36 @@ label act1_purge:
     l "I'm not letting you face whatever this is alone."
     a "(quiet) Okay. Together."
 
-    "{i}They turn. Hands still joined. Ready to face whatever comes.{/i}"
+    "They turn. Hands still joined. Ready to face whatever comes."
 
-    "{i}20:00. Exactly.{/i}"
-    "{i}A hum builds. Low. Deep. Vibrating through the air.{/i}"
+    "20:00. Exactly."
+    "A hum builds. Low. Deep. Vibrating through the air."
 
     l "(stops) What is that?"
     a "I don't—"
 
     # SFX/CAMERA: with flash; screen whiteout 0.2s; hpunch+vpunch stacked
-    "{i}The sky EXPLODES.{/i}"
+    "The sky EXPLODES."
 
-    "{i}LIGHT. BLINDING. IMPOSSIBLE.{/i}"
-    "{i}THE SKY TEARS OPEN.{/i}"
-    "{i}SECTORS 8, 9, 10 IGNITE.{/i}"
+    "LIGHT. BLINDING. IMPOSSIBLE."
+    "THE SKY TEARS OPEN."
+    "SECTORS 8, 9, 10 IGNITE."
 
     l "(screaming over noise) WHAT IS THAT?!"
     a "(horror dawning) Oh god—"
 
-    "{i}STRIKE. STRIKE. STRIKE.{/i}"
-    "{i}ORBITAL WEAPONS. SURGICAL. DEVASTATING.{/i}"
-    "{i}ENTIRE SECTORS ERASED IN SECONDS.{/i}"
+    "STRIKE. STRIKE. STRIKE."
+    "ORBITAL WEAPONS. SURGICAL. DEVASTATING."
+    "ENTIRE SECTORS ERASED IN SECONDS."
 
-    "{i}SHOCKWAVE. THE ROOFTOP SHUDDERS.{/i}"
-    "{i}WIND SCREAMS. THEY HOLD THE RAIL OR FALL.{/i}"
+    "SHOCKWAVE. THE ROOFTOP SHUDDERS."
+    "WIND SCREAMS. THEY HOLD THE RAIL OR FALL."
 
     a "(shouting) NO—NO NO NO—"
     l "(horror) THE SECTORS—THE PEOPLE—"
 
-    "{i}BUILDINGS COLLAPSE. ONE. TEN. HUNDREDS.{/i}"
-    "{i}FIRES BLOOM. SMOKE RISES. THE CITY BURNS.{/i}"
+    "BUILDINGS COLLAPSE. ONE. TEN. HUNDREDS."
+    "FIRES BLOOM. SMOKE RISES. THE CITY BURNS."
 
     a "(realization crushing) The energy maintenance—"
     a "The shield generators offline—"
@@ -272,8 +274,8 @@ label act1_purge:
     a "IT WAS ALWAYS—"
     a "THEY PLANNED THIS—"
 
-    "{i}MORE STRIKES. THE LIGHT NEVER STOPS.{/i}"
-    "{i}SECTOR AFTER SECTOR. SYSTEMATIC. EFFICIENT. COMPLETE.{/i}"
+    "MORE STRIKES. THE LIGHT NEVER STOPS."
+    "SECTOR AFTER SECTOR. SYSTEMATIC. EFFICIENT. COMPLETE."
 
     l "(sobbing) HOW MANY—"
     a "(horror) HUNDREDS OF THOUSANDS—"
@@ -282,23 +284,23 @@ label act1_purge:
 
     # Self-blame branches: only assert causality as Aeron’s belief
     if em >= 1:
-        a "{i}[sv] people. I saved [sv].{/i}"
-        a "{i}They warned others. Families evacuated. Resistance mobilized.{/i}"
-        a "{i}Marcus heard. Marcus accelerated.{/i}"
-        a "{i}The Purge was scheduled for next week.{/i}"
-        a "{i}But I showed mercy. And he moved it to TONIGHT.{/i}"
+        athought "[sv] people. I saved [sv]."
+        athought "They warned others. Families evacuated. Resistance mobilized."
+        athought "Marcus heard. Marcus accelerated."
+        athought "The Purge was scheduled for next week."
+        athought "But I showed mercy. And he moved it to TONIGHT."
         $ canon["aeron_believes_he_accelerated_purge"] = True
 
         a "(barely audible) I did this."
         l "(can't hear him over noise) WHAT?!"
         a "(louder, breaking) I DID THIS. MY MERCY CAUSED THIS."
     else:
-        a "{i}This was always coming. He wanted me to watch.{/i}"
-        a "{i}He moved the timeline because he could. Because no one could stop him.{/i}"
+        athought "This was always coming. He wanted me to watch."
+        athought "He moved the timeline because he could. Because no one could stop him."
         a "(broken) I couldn't stop it. I couldn't stop anything."
         $ canon["aeron_believes_it_was_inevitable"] = True
 
-    "{i}He falls. Knees crash. Hands claw at his face. Body convulses.{/i}"
+    "He falls. Knees crash. Hands claw at his face. Body convulses."
 
     if em >= 1:
         a "(screaming) I KILLED THEM. I KILLED THEM ALL."
@@ -318,29 +320,29 @@ label act1_purge:
     else:
         a "YES IT IS. I LET THIS HAPPEN. I STOOD HERE AND LET IT HAPPEN."
 
-    "{i}THE STRIKES CONTINUE. SECTOR BY SECTOR. BLOCK BY BLOCK.{/i}"
-    "{i}SYSTEMATIC EXTERMINATION. EFFICIENT. PERFECT. COMPLETE.{/i}"
+    "THE STRIKES CONTINUE. SECTOR BY SECTOR. BLOCK BY BLOCK."
+    "SYSTEMATIC EXTERMINATION. EFFICIENT. PERFECT. COMPLETE."
 
     if saved_vendor or saved_child or saved_shelter:
-        a "{i}The vendor. The child. The shelter families.{/i}"
-        a "{i}I saved them yesterday. They're dying tonight.{/i}"
+        athought "The vendor. The child. The shelter families."
+        athought "I saved them yesterday. They're dying tonight."
     else:
-        a "{i}Faces from yesterday. The market. The doors. The shelter.{/i}"
-        a "{i}They're dying tonight.{/i}"
+        athought "Faces from yesterday. The market. The doors. The shelter."
+        athought "They're dying tonight."
 
-    a "{i}Because I tried to be human.{/i}"
+    athought "Because I tried to be human."
 
     l "(sobbing) WE HAVE TO DO SOMETHING—"
     a "(hollow) THERE'S NOTHING. IT'S ALREADY DONE."
     a "HUNDREDS OF THOUSANDS. GONE. IN MINUTES."
 
     # CAMERA: Very slow pull back; the city a wide field of fire.
-    "{i}The light fades. The strikes slow. Then stop.{/i}"
-    "{i}Fire remains. Smoke rises. The city burns.{/i}"
-    "{i}Sectors 8, 9, 10. Gone. Erased. Cleansed.{/i}"
+    "The light fades. The strikes slow. Then stop."
+    "Fire remains. Smoke rises. The city burns."
+    "Sectors 8, 9, 10. Gone. Erased. Cleansed."
 
-    "{i}Silence. Not peace. Just absence.{/i}"
-    "{i}Two people on a rooftop. Holding each other. Broken beyond words.{/i}"
+    "Silence. Not peace. Just absence."
+    "Two people on a rooftop. Holding each other. Broken beyond words."
 
     a "(whisper) My hands."
     l "Aeron—"
@@ -354,22 +356,22 @@ label act1_purge:
     a "Except I cracked. Showed mercy. Became human."
     a "(voice breaking) And humanity murdered hundreds of thousands."
 
-    "{i}Silence stretches. The city burns. The world has ended.{/i}"
-    "{i}And they sit in the ruins. Together. Shattered. Human.{/i}"
+    "Silence stretches. The city burns. The world has ended."
+    "And they sit in the ruins. Together. Shattered. Human."
 
-    a "{i}Ten minutes ago I had hope. I thought breaking Glass meant freedom.{/i}"
-    a "{i}I thought mercy mattered. That trying counted. That being human was good.{/i}"
-    a "{i}But Glass was right all along.{/i}"
-    a "{i}Mercy is weakness. Humanity is failure. Trying gets everyone killed.{/i}"
-    a "{i}Father wanted me to witness this. To learn this lesson.{/i}"
-    a "{i}'This is what happens when Glass cracks,' he'll say.{/i}"
-    a "{i}'This is why obedience matters.'{/i}"
-    a "{i}And he's right. He's always been right.{/i}"
+    athought "Ten minutes ago I had hope. I thought breaking Glass meant freedom."
+    athought "I thought mercy mattered. That trying counted. That being human was good."
+    athought "But Glass was right all along."
+    athought "Mercy is weakness. Humanity is failure. Trying gets everyone killed."
+    athought "Father wanted me to witness this. To learn this lesson."
+    athought "'This is what happens when Glass cracks,' he'll say."
+    athought "'This is why obedience matters.'"
+    athought "And he's right. He's always been right."
 
     # ALIGNMENT NUDGE (quiet, negative): internalizing Marcus’s doctrine in shock
-    $ apply_choice_once(_current_scene_id, "purge_internalizes_doctrine", "EMP", factor=-1,
-                        next_scene_label="act1_21_purge",
-                        note="In shock, Aeron echoes Marcus’s lesson: mercy=weakness.")
+    # $ choice_and_dev(_current_scene_id, "purge_internalizes_doctrine", "EMP", factor=-1,
+    #                     next_scene_label="act1_21_purge",
+    #                     note="In shock, Aeron echoes Marcus’s lesson: mercy=weakness.")
 
     l "(urgent) Aeron. Look at me."
     l "(grabs his face, forces eye contact) LOOK AT ME."
@@ -393,16 +395,16 @@ label act1_purge:
     l "Yes."
     a "(cold) Then I'll learn. But not what he wanted."
 
-    "{i}He stands. Different. Colder. Harder. Not Glass. Something new.{/i}"
+    "He stands. Different. Colder. Harder. Not Glass. Something new."
 
     a "Glass followed orders. Glass showed mercy. Glass failed."
     a "So no more Glass. No more mercy. No more obedience."
     a "(looks at burning sectors) Just ash. And those who made it."
 
     # ALIGNMENT NUDGE (decisive, negative): “no more mercy” vow (OB-lean)
-    $ apply_choice_once(_current_scene_id, "purge_vows_no_mercy", "EMP", factor=-2,
-                        next_scene_label="act1_21_purge",
-                        note="Aeron rejects mercy in favor of retribution.")
+    # $ choice_and_dev(_current_scene_id, "purge_vows_no_mercy", "EMP", factor=-2,
+    #                     next_scene_label="act1_21_purge",
+    #                     note="Aeron rejects mercy in favor of retribution.")
 
     l "What do we do?"
     a "We burn them back."
@@ -410,12 +412,12 @@ label act1_purge:
     a "We learn. We prepare. We find every crack in the system."
     a "And we shatter it from within."
 
-    "{i}Two silhouettes against burning sky. Glass shattered. Humanity murdered. Rage born.{/i}"
+    "Two silhouettes against burning sky. Glass shattered. Humanity murdered. Rage born."
 
-    a "{i}Operation 391. My last mission as Glass.{/i}"
-    a "{i}Everything after is something new.{/i}"
-    a "{i}Not weapon. Not soldier. Not son.{/i}"
-    a "{i}Just ash. Waiting to burn the world that made it.{/i}"
+    athought "Operation 391. My last mission as Glass."
+    athought "Everything after is something new."
+    athought "Not weapon. Not soldier. Not son."
+    athought "Just ash. Waiting to burn the world that made it."
 
     # Scene bookkeeping & canon flags
     $ set_scene_flag(_current_scene_id, "completed")

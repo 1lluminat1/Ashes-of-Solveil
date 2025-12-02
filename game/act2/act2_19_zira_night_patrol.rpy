@@ -14,10 +14,10 @@ label act2_zira_night_patrol:
 
     #scene bg_base_evening with fade
 
-    "{i}Evening. Base settling into night routine. Day shift ending. Night shift beginning. Guard rotations. Patrol assignments. Someone has to watch the perimeter. Someone has to make sure Echelon doesn't find us sleeping. Tonight that's someone's job. Maybe mine.{/i}"
+    "Evening. Base settling into night routine. Day shift ending. Night shift beginning. Guard rotations. Patrol assignments. Someone has to watch the perimeter. Someone has to make sure Echelon doesn't find us sleeping. Tonight that's someone's job. Maybe mine."
 
     # VISUAL: Zira at equipment station. Checking gear. Preparing for patrol. Standard routine.
-    "{i}Zira. Gearing up. Night patrol. She does this most nights. Perimeter check. Tunnel sweep. Sector surveillance. Whatever base location requires. She's good at it. Spent years doing solo operations. This is familiar territory for her. Comfortable in darkness.{/i}"
+    "Zira. Gearing up. Night patrol. She does this most nights. Perimeter check. Tunnel sweep. Sector surveillance. Whatever base location requires. She's good at it. Spent years doing solo operations. This is familiar territory for her. Comfortable in darkness."
 
     # VISUAL: Aeron approaching. Casual. Not assigned but volunteering.
     a "Need company?"
@@ -33,7 +33,7 @@ label act2_zira_night_patrol:
     a "Wouldn't dream of asking you to."
 
     # VISUAL: Aeron gearing up. Light pack. Sidearm. Radio. Standard patrol equipment. Quick. Efficient.
-    "{i}Gearing up. Fast. Efficient. Glass muscle memory. Some habits stick. Being prepared is one of them. Zira's watching. Evaluating. Making sure I'm not liability. I won't be. Haven't been. Won't start now.{/i}"
+    "Gearing up. Fast. Efficient. Glass muscle memory. Some habits stick. Being prepared is one of them. Zira's watching. Evaluating. Making sure I'm not liability. I won't be. Haven't been. Won't start now."
 
     # VISUAL: Ready. Both equipped. Heading to exit. Night patrol beginning.
     z "Route tonight is perimeter check, then sector sweep, then return. Three hours total if we're efficient. Four if we're careful. We're being careful."
@@ -43,28 +43,28 @@ label act2_zira_night_patrol:
     # TRANSITION: Leaving base. Into the city. Night settling. Shadows lengthening.
     # Base location determines specific route - adjust visuals accordingly
     
-    $ if base_location == "subway":
+    if base_location == "subway":
         #scene bg_subway_tunnels_night with fade
-        "{i}Tunnel patrol. Underground. Dark. Damp. Sound carries differently down here. Echoes. Distortions. Easy to get disoriented. But Zira knows these tunnels. Mapped them herself. She moves like she owns them. Confident. Sure. I follow. Trust her navigation. Trust her instincts.{/i}"
+        "Tunnel patrol. Underground. Dark. Damp. Sound carries differently down here. Echoes. Distortions. Easy to get disoriented. But Zira knows these tunnels. Mapped them herself. She moves like she owns them. Confident. Sure. I follow. Trust her navigation. Trust her instincts."
         
-    $ elif base_location == "clinic":
+    elif base_location == "clinic":
         #scene bg_sector7_streets_night with fade
-        "{i}Street patrol. Sector 7. Above ground. Visible but blending with normal foot traffic. Clinic location means residential disguise. We look like residents. Just walking. Just existing. Nothing suspicious. Zira's good at this. Years of practice. I match her pace. Her posture. Her casual invisibility.{/i}"
+        "Street patrol. Sector 7. Above ground. Visible but blending with normal foot traffic. Clinic location means residential disguise. We look like residents. Just walking. Just existing. Nothing suspicious. Zira's good at this. Years of practice. I match her pace. Her posture. Her casual invisibility."
         
-    $ elif base_location == "warehouse":
+    elif base_location == "warehouse":
         #scene bg_warehouse_district_night with fade
-        "{i}Warehouse district. Industrial. Empty at night. Our footsteps echo. Plenty of hiding spots. Plenty of vantage points. Plenty of danger if Echelon patrols through. But also plenty of escape routes. Zira knows every exit. Every shortcut. Every hiding place. This is her territory. Her domain. I'm just visiting.{/i}"
+        "Warehouse district. Industrial. Empty at night. Our footsteps echo. Plenty of hiding spots. Plenty of vantage points. Plenty of danger if Echelon patrols through. But also plenty of escape routes. Zira knows every exit. Every shortcut. Every hiding place. This is her territory. Her domain. I'm just visiting."
         
-    $ elif base_location == "apartment":
+    elif base_location == "apartment":
         #scene bg_apartment_rooftops_night with fade
-        "{i}Rooftop patrol. Apartment complex advantage. Height. Visibility. Can see Echelon patrols blocks away. Can spot threats before they spot us. Zira moves across rooftops like she's part of them. Jumps gaps. Climbs walls. Natural. I keep up. Barely. She makes it look easy. It's not.{/i}"
+        "Rooftop patrol. Apartment complex advantage. Height. Visibility. Can see Echelon patrols blocks away. Can spot threats before they spot us. Zira moves across rooftops like she's part of them. Jumps gaps. Climbs walls. Natural. I keep up. Barely. She makes it look easy. It's not."
         
-    $ else:  # tunnels
+    else:  # tunnels
         #scene bg_maintenance_tunnels_night with fade
-        "{i}Maintenance tunnels. Deep infrastructure. Hidden. Secret. Unknown to Echelon. Zira checking access points. Making sure no maintenance workers discovered our presence. Making sure seals are intact. Making sure we're still invisible. I watch for threats. She watches for evidence. Good team.{/i}"
+        "Maintenance tunnels. Deep infrastructure. Hidden. Secret. Unknown to Echelon. Zira checking access points. Making sure no maintenance workers discovered our presence. Making sure seals are intact. Making sure we're still invisible. I watch for threats. She watches for evidence. Good team."
 
     # VISUAL: Patrolling together. Moving in sync. Comfortable rhythm. Professional. Efficient.
-    "{i}Moving together. She leads. I follow. Sometimes I lead. She follows. No words needed. Just movement. Just awareness. Just two people who trust each other not to fuck up. That's partnership. That's what months of working together builds. Trust without speaking. Understanding without explaining.{/i}"
+    "Moving together. She leads. I follow. Sometimes I lead. She follows. No words needed. Just movement. Just awareness. Just two people who trust each other not to fuck up. That's partnership. That's what months of working together builds. Trust without speaking. Understanding without explaining."
 
     # VISUAL: First checkpoint. Pause. Visual sweep. Listening. Assessing. Clear.
     z "(quiet) Clear. No Echelon presence. No unusual activity. Moving to checkpoint two."
@@ -83,7 +83,7 @@ label act2_zira_night_patrol:
     z "Eventually had to stop. Eventually had to feel it. Hurt like hell. But running forever isn't living. It's just slower dying. You'll figure that out. Or you won't. But at least you're running somewhere useful. Running toward resistance instead of away from everything."
 
     # VISUAL: Second checkpoint. Pause. Check. Clear. Moving on.
-    "{i}She's right. Running isn't solution. But running toward something is better than running away from everything. That's progress. Small progress. But progress. Maybe that's enough for now. Maybe small steps count.{/i}"
+    "She's right. Running isn't solution. But running toward something is better than running away from everything. That's progress. Small progress. But progress. Maybe that's enough for now. Maybe small steps count."
 
     # VISUAL: Third checkpoint approaching. Longer walk. More time to talk. Conversation natural. Easy.
     z "Recruitment's going well. Fifty-five people now. You're good at the interviews. Good at reading people. Spotting liars. Finding truth. That's valuable skill. Didn't know Glass had that."
@@ -129,7 +129,7 @@ label act2_zira_night_patrol:
     z "I want to try. That's the scary part. I actually want this. Want you. Specifically. Not just as proxy for Kai. Not just as convenient company. Actually you. Aeron. The person you're becoming. That person's worth trying for."
 
     # VISUAL: Moment stretching. Both vulnerable. Both open. Both scared. Both trying anyway.
-    "{i}She wants to try. With me. Despite fear. Despite loss. Despite pattern of everyone she cares about dying. She's choosing to try anyway. That's brave. That's trust. That's... that's everything.{/i}"
+    "She wants to try. With me. Despite fear. Despite loss. Despite pattern of everyone she cares about dying. She's choosing to try anyway. That's brave. That's trust. That's... that's everything."
 
     # VISUAL: They move closer. Slow. Deliberate. Testing. Checking. Mutual.
     z "So if we're trying... can I...?"
@@ -142,7 +142,7 @@ label act2_zira_night_patrol:
     # ==============================================================
 
     # Check if Zira kiss happened in Scene 9 and trust is still high
-    $ if characters["zira"].get("kiss_happened", False) and characters["zira"]["trust"] >= 8:
+    if characters["zira"].get("kiss_happened", False) and characters["zira"]["trust"] >= 8:
         jump zira_second_kiss
     else:
         jump zira_no_second_kiss
@@ -153,13 +153,13 @@ label zira_second_kiss:
     # VISUAL: She kisses him. Softer than warehouse. Less desperate. More certain. More real.
     # SOUND: City noise distant. Their breathing. This moment. Connection.
 
-    "{i}She kisses me. Softer than warehouse. Less desperate. Less proof-of-concept. More certainty. More choice. More us. Her lips warm. Familiar. Two months later and it's still 93% pleasant. Possibly 97%. Possibly everything.{/i}"
+    "She kisses me. Softer than warehouse. Less desperate. Less proof-of-concept. More certainty. More choice. More us. Her lips warm. Familiar. Two months later and it's still 93% pleasant. Possibly 97%. Possibly everything."
 
     # VISUAL: Kiss lasting. Not rushed. Comfortable. Deepening. Both present. Both choosing. Both wanting.
-    "{i}Time stretches again. Different than warehouse. That was grief finding outlet. This is connection finding form. That was testing if good feelings existed. This is knowing they do and choosing them anyway. Choosing her. Choosing us. Choosing forward.{/i}"
+    "Time stretches again. Different than warehouse. That was grief finding outlet. This is connection finding form. That was testing if good feelings existed. This is knowing they do and choosing them anyway. Choosing her. Choosing us. Choosing forward."
 
     # VISUAL: Her hands move to his shoulders. Grounding. Anchoring. Steadying. Both of them.
-    "{i}Her hands on my shoulders. Steady. Sure. Not desperate grip. Just connection. Just anchor. She's here. I'm here. We're choosing this. Scared. Uncertain. But choosing anyway. That's brave. That's trust. That's hope.{/i}"
+    "Her hands on my shoulders. Steady. Sure. Not desperate grip. Just connection. Just anchor. She's here. I'm here. We're choosing this. Scared. Uncertain. But choosing anyway. That's brave. That's trust. That's hope."
 
     # VISUAL: Finally pulling back. Slowly. Gently. Eyes opening. Looking at each other. Smiling.
     z "(breathless) Okay. That was... that was good. Better than warehouse. More real. More us."
@@ -185,7 +185,7 @@ label zira_second_kiss:
     a "One more minute. We can do that."
 
     # VISUAL: They stand together. City around them. Night settling. Just existing. Together. Comfortable. Real.
-    "{i}Standing together. Her head against my chest. My arms around her. Just existing. Just being. No words needed. No analysis needed. Just connection. Just us. Just this. That's enough. That's everything. That's 98% pleasant. Possibly 100%.{/i}"
+    "Standing together. Her head against my chest. My arms around her. Just existing. Just being. No words needed. No analysis needed. Just connection. Just us. Just this. That's enough. That's everything. That's 98% pleasant. Possibly 100%."
 
     # VISUAL: Eventually pulling apart. Smiling. Soft. Real. Ready to continue patrol. Changed but functioning.
     z "Okay. Patrol. Right. That's why we're out here. Definitely not just an excuse to spend time together."
@@ -231,7 +231,7 @@ label zira_no_second_kiss:
 label continue_patrol:
 
     # VISUAL: Continuing patrol. Moving to checkpoint three. Both changed by conversation. Closer. More certain.
-    "{i}Moving again. Patrol continuing. But different now. We talked. We addressed it. We're trying. Together. That changes everything. Makes patrol feel less like duty and more like time together. Makes night feel less heavy. Makes future feel less impossible.{/i}"
+    "Moving again. Patrol continuing. But different now. We talked. We addressed it. We're trying. Together. That changes everything. Makes patrol feel less like duty and more like time together. Makes night feel less heavy. Makes future feel less impossible."
 
     # VISUAL: Third checkpoint. Visual sweep. Listening. Clear. No threats. Safe. For now.
     z "Clear. Final checkpoint coming up. Then we loop back to base. Hour left on patrol."
@@ -258,7 +258,7 @@ label continue_patrol:
     a "(laughing) Moment granted. Continue being poetic. It's nice."
 
     # VISUAL: She laughs too. Comfortable humor. Affection. Ease. This is what connection looks like. Simple. Real. Easy.
-    "{i}Laughing together. On patrol. In middle of night. In middle of war. In middle of complicated attempt at relationship. And it's easy. Natural. Good. That's what she meant by beautiful. This. Us. Trying. Succeeding. Being human together. Yeah. That's beautiful.{/i}"
+    "Laughing together. On patrol. In middle of night. In middle of war. In middle of complicated attempt at relationship. And it's easy. Natural. Good. That's what she meant by beautiful. This. Us. Trying. Succeeding. Being human together. Yeah. That's beautiful."
 
     # VISUAL: Fourth checkpoint. Final location. Clear. Patrol complete. Time to return.
     z "Final checkpoint clear. Patrol complete. Time to head back. Four hours instead of three. Careful and scenic. Mission accomplished."
@@ -268,7 +268,7 @@ label continue_patrol:
     z "(smiling) Good answer. Come on. Let's go home."
 
     # VISUAL: Returning to base. Together. Changed. Relationship defined. Moving forward. Together.
-    "{i}Returning to base. Patrol complete. But more than patrol completed. We talked. We addressed the kiss. We're trying. Together. Undefined but real. Complicated but wanted. Scared but moving forward. That's relationship. That's us. That's enough.{/i}"
+    "Returning to base. Patrol complete. But more than patrol completed. We talked. We addressed the kiss. We're trying. Together. Undefined but real. Complicated but wanted. Scared but moving forward. That's relationship. That's us. That's enough."
 
     # TRANSITION: Arriving back at base. Late night. Quiet. People sleeping. Just them. Moment before separating.
     #scene bg_base_night_late with fade
@@ -286,10 +286,10 @@ label continue_patrol:
     z "Me too. Definitely me too."
 
     # VISUAL: She leaves. Heading to quarters. Glancing back once. Smiling. Then disappearing into base.
-    "{i}She's gone. Heading to quarters. But not really gone. Still here. Still present. Still trying. Still choosing us. That matters. That's everything. Tonight we talked. We kissed. We tried. We moved forward. That's progress. That's hope. That's us.{/i}"
+    "She's gone. Heading to quarters. But not really gone. Still here. Still present. Still trying. Still choosing us. That matters. That's everything. Tonight we talked. We kissed. We tried. We moved forward. That's progress. That's hope. That's us."
 
     # VISUAL: Aeron standing alone. Night quiet. Base sleeping. But he's not alone. Not really. Connected now. Committed now. Trying now.
-    "{i}Alone but not lonely. Connected but not trapped. Trying but not forcing. That's balance. That's healthy. That's what relationship should be. And we're building it. Slowly. Carefully. Honestly. Together. That's enough. That's everything. That's 98% pleasant. Possibly 100%.{/i}"
+    "Alone but not lonely. Connected but not trapped. Trying but not forcing. That's balance. That's healthy. That's what relationship should be. And we're building it. Slowly. Carefully. Honestly. Together. That's enough. That's everything. That's 98% pleasant. Possibly 100%."
 
     # Mark scene complete
     $ scenes["zira_night_patrol"] = True

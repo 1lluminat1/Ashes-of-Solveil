@@ -10,28 +10,28 @@ label act2_zira_commitment:
 
     scene bg_secondary_base_night with fade
 
-    "{i}Night. Hours after evacuation. Secondary base. Sector 9. Vex’s location. We’re here. Alive. Exhausted. Wounded. Traumatized. But alive. That’s everything. That’s all that matters. Just alive. Just breathing. Just continuing. That’s victory. That’s enough.{/i}"
+    "Night. Hours after evacuation. Secondary base. Sector 9. Vex’s location. We’re here. Alive. Exhausted. Wounded. Traumatized. But alive. That’s everything. That’s all that matters. Just alive. Just breathing. Just continuing. That’s victory. That’s enough."
 
     # VISUAL: Base settling. People finding spaces. Sleeping where they can. Wounded being treated. Exhaustion everywhere.
     # MOOD: Survival’s cost, collective silence.
 
-    "{i}People everywhere. Sleeping on floors, against walls, wherever space exists. Wounded treated in makeshift stations. Fighters too tired to move. Just existing. Just recovering. War happened. We survived. That’s all anyone can process. Just survival. Just breath. Just continuing.{/i}"
+    "People everywhere. Sleeping on floors, against walls, wherever space exists. Wounded treated in makeshift stations. Fighters too tired to move. Just existing. Just recovering. War happened. We survived. That’s all anyone can process. Just survival. Just breath. Just continuing."
 
     # VISUAL: AERON sitting alone. Corner of base. Shadowed, withdrawn.
     # MOOD: Survivor’s guilt.
 
-    "{i}I sit alone in a corner—away from noise, away from people. Forty dead. Forty names. Forty people I recruited. Forty people who believed me. Their deaths are mine to carry. I break under it, but I don’t stop. If I stop, they died for nothing. If I continue, they died for something. So I continue. I carry. I break. I continue. That’s all I can do.{/i}"
+    "I sit alone in a corner—away from noise, away from people. Forty dead. Forty names. Forty people I recruited. Forty people who believed me. Their deaths are mine to carry. I break under it, but I don’t stop. If I stop, they died for nothing. If I continue, they died for something. So I continue. I carry. I break. I continue. That’s all I can do."
 
     # VISUAL: ZIRA approaching. Exhausted, bloodied, bandaged arm. Quiet presence.
     # SOUND: The low hum of generators, distant murmurs of the wounded.
 
-    "{i}Zira approaches. Quiet. Exhausted. Her uniform still smells of smoke; a blood-soaked bandage wraps her arm. The air between us tastes like ash. Romance shouldn’t exist here—but somehow it does. She sits beside me. We don’t speak. We just breathe the same burnt air and exist in it together. Two people too tired for words, too human for silence. That’s enough—for now.{/i}"
+    "Zira approaches. Quiet. Exhausted. Her uniform still smells of smoke; a blood-soaked bandage wraps her arm. The air between us tastes like ash. Romance shouldn’t exist here—but somehow it does. She sits beside me. We don’t speak. We just breathe the same burnt air and exist in it together. Two people too tired for words, too human for silence. That’s enough—for now."
 
     # VISUAL: Long silence. Both breathing, staring ahead.
     # LIGHTING: Faint red emergency glow across their faces.
     # TONE: Shared trauma turned into shared presence.
 
-    "{i}Minutes pass. Still silence. Still breathing. That’s all either of us can offer: presence. Witness. Shared weight. She saw things today. Killed people. I lost people. Both of us carrying too much, both barely holding. But together. That’s connection in war—not perfect, just real.{/i}"
+    "Minutes pass. Still silence. Still breathing. That’s all either of us can offer: presence. Witness. Shared weight. She saw things today. Killed people. I lost people. Both of us carrying too much, both barely holding. But together. That’s connection in war—not perfect, just real."
 
     # VISUAL: ZIRA breaking silence. Exhausted honesty.
     # SOUND: Distant echo of metal clatter; otherwise quiet.
@@ -71,7 +71,7 @@ label act2_zira_commitment:
     # VISUAL: AERON watching her. Overwhelmed but calm.
     # SOUND: Heartbeat-like thrum from base machinery.
 
-    "{i}She’s trembling—not from fear, but from honesty. The bravest thing I’ve ever seen isn’t on a battlefield; it’s her, right now, risking everything for love. And she’s waiting—for me to risk it too.{/i}"
+    "She’s trembling—not from fear, but from honesty. The bravest thing I’ve ever seen isn’t on a battlefield; it’s her, right now, risking everything for love. And she’s waiting—for me to risk it too."
 
     # VISUAL: AERON answering quietly but firmly. Tone of truth.
     # LIGHTING: Gentle contrast—cool shadows vs. red light.
@@ -81,13 +81,13 @@ label act2_zira_commitment:
     # VISUAL: ZIRA exhaling. Shoulders drop. Relief and tears.
     # SOUND: A soft exhale audible; silence after storm.
 
-    "{i}She exhales like she’s been holding her breath since the war began. Tears glint in the dim red light. We don’t need more words; we already said everything that matters.{/i}"
+    "She exhales like she’s been holding her breath since the war began. Tears glint in the dim red light. We don’t need more words; we already said everything that matters."
 
     # VISUAL: Their first kiss. Desperate and human.
     # LIGHTING: Red glow flickering, reflecting intensity.
     # SOUND: Ambient hum fading beneath their movement.
 
-    "{i}She leans in. I meet her halfway. The first kiss tastes of smoke and salt and survival. It isn’t gentle—it’s proof we’re still alive. She’s trembling; so am I. The world outside keeps burning, but here, in this flickering dark, we make something else: a moment that’s ours.{/i}"
+    "She leans in. I meet her halfway. The first kiss tastes of smoke and salt and survival. It isn’t gentle—it’s proof we’re still alive. She’s trembling; so am I. The world outside keeps burning, but here, in this flickering dark, we make something else: a moment that’s ours."
 
     # VISUAL: ZIRA pulling back slightly. Tears and resolve.
     # THEME: Fear coexisting with certainty.
@@ -107,7 +107,7 @@ label act2_zira_commitment:
     # VISUAL: AERON pulling her close. Urgent kiss.
     # SOUND: Brief silence except their breathing.
 
-    "{i}I pull her close. The kiss is desperate, alive, full of everything we’re too broken to say. She tastes like dust and blood and something achingly human. For the first time since the war began, I feel alive instead of just surviving.{/i}"
+    "I pull her close. The kiss is desperate, alive, full of everything we’re too broken to say. She tastes like dust and blood and something achingly human. For the first time since the war began, I feel alive instead of just surviving."
 
     # ============================================================== 
     # INTIMATE SCENE SETUP
@@ -118,7 +118,7 @@ label act2_zira_commitment:
 
     scene bg_private_space with fade
 
-    "{i}We find a private room—small, quiet, smelling of metal and dust. Outside, a generator hums and someone coughs. The world keeps burning, but for one breath, we reclaim a piece of it for ourselves.{/i}"
+    "We find a private room—small, quiet, smelling of metal and dust. Outside, a generator hums and someone coughs. The world keeps burning, but for one breath, we reclaim a piece of it for ourselves."
 
     # VISUAL: ZIRA nervous, honest confession before intimacy.
     # LIGHTING: Soft red fading to amber glow from portable lamp.
@@ -137,14 +137,14 @@ label act2_zira_commitment:
     # VISUAL: Their movements. Slow. Careful. Certain.
     # LIGHTING: Warm shadows, intimate atmosphere.
 
-    "{i}We move together—slow, uncertain, certain. Touching, learning, breathing. Fear and tenderness share the same heartbeat. The war fades beyond the walls. The only sound left is breath, the only truth left is us.{/i}"
+    "We move together—slow, uncertain, certain. Touching, learning, breathing. Fear and tenderness share the same heartbeat. The war fades beyond the walls. The only sound left is breath, the only truth left is us."
 
     # FADE TO BLACK for explicit intimacy
     # SOUND: Faint breath, fade to silence.
 
     scene black with fade
 
-    "{i}Together. Fully. Completely. Committed. Real. Everything we are. Everything we choose. For tonight, there is no war—only this. Only us.{/i}"
+    "Together. Fully. Completely. Committed. Real. Everything we are. Everything we choose. For tonight, there is no war—only this. Only us."
 
     # ============================================================== 
     # POST-INTIMACY AFTERMATH
@@ -156,7 +156,7 @@ label act2_zira_commitment:
 
     scene bg_private_space_after with fade
 
-    "{i}Afterwards. We lie tangled in the dark, skin warm against cold air. Exhausted. Fulfilled. Alive. The base groans somewhere distant; life continues beyond these walls, but here it finally pauses. Here there’s quiet. Here there’s love.{/i}"
+    "Afterwards. We lie tangled in the dark, skin warm against cold air. Exhausted. Fulfilled. Alive. The base groans somewhere distant; life continues beyond these walls, but here it finally pauses. Here there’s quiet. Here there’s love."
 
     # VISUAL: ZIRA speaking softly, half-asleep smile.
 
@@ -173,7 +173,7 @@ label act2_zira_commitment:
     # VISUAL: Both drifting into sleep. Shadows softening.
     # SOUND: Faint static from comms in distance; otherwise silence.
 
-    "{i}Sleep finds us. War still breathes beyond the walls, but here there’s peace. Tomorrow the fight returns—but tonight, we’re human again. That’s enough.{/i}"
+    "Sleep finds us. War still breathes beyond the walls, but here there’s peace. Tomorrow the fight returns—but tonight, we’re human again. That’s enough."
 
     # Mark scene complete
     $ scenes["zira_commitment"] = True

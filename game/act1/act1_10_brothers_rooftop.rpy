@@ -20,10 +20,10 @@ label act1_10_brothers:
     # LIGHTING: Late afternoon → dusk; warm rim from sun, cool lift from city bounce.
     # SOUND: Distant city hum; soft wind; no sirens; occasional turbine flutter.
 
-    a "{i}Before the ritual. Before the rejection. Before everything broke.{/i}"
-    a "{i}Before Glass.{/i}"
-    a "{i}There was a time when this rooftop felt like freedom.{/i}"
-    a "{i}I was ten. Kael was fifteen. His Band had been working for three years.{/i}"
+    athought "Before the ritual. Before the rejection. Before everything broke."
+    athought "Before Glass."
+    athought "There was a time when this rooftop felt like freedom."
+    athought "I was ten. Kael was fifteen. His Band had been working for three years."
 
     # Two silhouettes at the rail; Kael’s silver Band visible.
     k "You ever think about what's past the edge?"
@@ -33,8 +33,8 @@ label act1_10_brothers:
     k "(smirks) Father says a lot of things."
 
     # Kael’s Band catches the fading sun; he rubs it like a hidden bruise.
-    "{i}His Band gleams. Three years old. Still working. Barely.{/i}"
-    "{i}He touches it more than he used to. Like checking a wound.{/i}"
+    "His Band gleams. Three years old. Still working. Barely."
+    "He touches it more than he used to. Like checking a wound."
 
     ya "Does it still hurt?"
     k "(glances at his wrist) The Band? ...Sometimes. Lately."
@@ -59,7 +59,7 @@ label act1_10_brothers:
     ya "(uneasy) That's not how physics works."
     k "(grins back) Physics. Listen to you, little professor."
 
-    "{i}He steps back. Relief loosens my chest.{/i}"
+    "He steps back. Relief loosens my chest."
 
     k "(serious) You ever feel like you're not really... you?"
     ya "What do you mean?"
@@ -74,7 +74,7 @@ label act1_10_brothers:
     ya "You improvise?"
     k "(hollow laugh) Or you fall off the stage."
 
-    "{i}The city wakes below—a thousand lights igniting like distant stars.{/i}"
+    "The city wakes below—a thousand lights igniting like distant stars."
 
     k "Promise me something."
     ya "What?"
@@ -82,7 +82,9 @@ label act1_10_brothers:
     ya "(confused) Why would the Band fail? It's been working for three years."
     k "Nothing works forever. Not even faith."
     k "(grips his shoulder) Just promise, Aeron."
-    "{i}His grip is tight. Too tight. Then it eases.{/i}"
+
+    "His grip is tight. Too tight. Then it eases."
+    
     ya "(hesitant) ...I promise."
     k "(softer) And if Father ever tries to make you into something you're not..."
     k "...don't let him. Fight it. Stay you."
@@ -111,32 +113,32 @@ label act1_10_brothers:
     k "(grins) Anytime, little brother. Anytime."
 
     # They exit; hold on empty rail.
-    "{i}The wind stirs. The city hums. The edge remains.{/i}"
+    "The wind stirs. The city hums. The edge remains."
 
     # Match cut: present-day angle; colder palette.
-    a "{i}Six months later, his Band rejected him completely. Age fifteen.{/i}"
-    a "{i}Father pulled strings. Kept him in the Aeries. Called it mercy.{/i}"
-    a "{i}Kael called it a cage.{/i}"
-    a "{i}The whispers followed him everywhere. 'Protected failure.' 'General's broken son.'{/i}"
-    a "{i}Two years after that, he stood here alone. Age seventeen.{/i}"
-    a "{i}And he jumped.{/i}"
+    athought "Six months later, his Band rejected him completely. Age fifteen."
+    athought "Father pulled strings. Kept him in the Aeries. Called it mercy."
+    athought "Kael called it a cage."
+    athought "The whispers followed him everywhere. 'Protected failure.' 'General's broken son.'"
+    athought "Two years after that, he stood here alone. Age seventeen."
+    athought "And he jumped."
 
-    a "{i}I kept my promise. I remembered who you were.{/i}"
-    a "{i}But I didn't understand what you meant. Not then.{/i}"
-    a "{i}'Don't let Father turn you into a weapon,' you said.{/i}"
-    a "{i}Two years after your jump, my Band failed. Age twelve.{/i}"
-    a "{i}And Father did exactly what you warned me about.{/i}"
-    a "{i}He made me Glass. Transparent. Empty. Useful.{/i}"
-    a "{i}A weapon without faith. A tool without purpose.{/i}"
-    a "{i}390 operations. Ten years of becoming what you told me to fight.{/i}"
-    a "{i}The cage. The whispers. Father's 'mercy.' The weight of being saved when you wanted to fall.{/i}"
-    a "{i}You knew. You tried to warn me. I didn't hear it until too late.{/i}"
-    a "{i}But now... now Glass is cracking.{/i}"
-    a "{i}Maybe I can still fight it. Maybe it's not too late.{/i}"
-    a "{i}Maybe breaking is how I finally keep my promise to you.{/i}"
+    athought "I kept my promise. I remembered who you were."
+    athought "But I didn't understand what you meant. Not then."
+    athought "'Don't let Father turn you into a weapon,' you said."
+    athought "Two years after your jump, my Band failed. Age twelve."
+    athought "And Father did exactly what you warned me about."
+    athought "He made me Glass. Transparent. Empty. Useful."
+    athought "A weapon without faith. A tool without purpose."
+    athought "390 operations. Ten years of becoming what you told me to fight."
+    athought "The cage. The whispers. Father's 'mercy.' The weight of being saved when you wanted to fall."
+    athought "You knew. You tried to warn me. I didn't hear it until too late."
+    athought "But now... now Glass is cracking."
+    athought "Maybe I can still fight it. Maybe it's not too late."
+    athought "Maybe breaking is how I finally keep my promise to you."
 
-    "{i}The memory fades. But the weight remains.{/i}"
-    "{i}Present day. His apartment.{/i}"
+    "The memory fades. But the weight remains."
+    "Present day. His apartment."
 
     $ set_scene_flag(scene_id, "completed")
 

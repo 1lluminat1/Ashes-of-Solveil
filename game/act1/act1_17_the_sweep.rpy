@@ -22,8 +22,8 @@ label act1_sweep:
     # SOUND: Rotor wash → hydraulic whine → boots on metal; radio hiss beds every line.
     # CAMERA: Over-shoulder on Aeron as the city rotates beneath; lens catches particulate glitter in searchlights.
 
-    "{i}Dawn breaks over Sector Ten like a blade.{/i}"
-    "{i}The dropship descends. Tactical beams cut through steam. The sector wakes to its last morning.{/i}"
+    "Dawn breaks over Sector Ten like a blade."
+    "The dropship descends. Tactical beams cut through steam. The sector wakes to its last morning."
 
     # COMMS: Marcus (filtered, distant authority)
     m "Glass. Confirm deployment."
@@ -35,18 +35,18 @@ label act1_sweep:
     m "Good. Execute with precision. Prove your worth."
 
     # HUD: Subtle overlay flashes MISSION 391 → ACTIVE.
-    a "{i}Prove your worth. Always the same words.{/i}"
-    a "{i}Three hundred ninety operations proving my worth. This is 391.{/i}"
+    athought "Prove your worth. Always the same words."
+    athought "Three hundred ninety operations proving my worth. This is 391."
 
     # STAGE: Team fans out; visors glow faintly; breath in masks; footfalls syncopate on grating.
     unit2 "Sector's quiet. No alerts."
     unit3 "Thermal shows 800+ signatures. Clustered in sublevels."
     unit4 "Orders, Glass?"
 
-    a "{i}Eight hundred people. The vendor. The child. The families.{/i}"
-    a "{i}All waiting below. All trusting the dawn will come like it always does.{/i}"
-    a "{i}Glass executes orders. Humans find cracks.{/i}"
-    a "{i}Let's see if I can be both.{/i}"
+    athought "Eight hundred people. The vendor. The child. The families."
+    athought "All waiting below. All trusting the dawn will come like it always does."
+    athought "Glass executes orders. Humans find cracks."
+    athought "Let's see if I can be both."
 
     a "Standard sweep pattern. Alpha through Delta grids. Report all contacts."
     unit2 "Confirmed."
@@ -59,17 +59,17 @@ label act1_sweep:
     unit2 "Market district right. Slower but fewer civilians."
     unit4 "Orders?"
 
-    a "{i}Left is efficient. Glass would go left.{/i}"
-    a "{i}Right buys them seconds. Seconds become lives.{/i}"
+    athought "Left is efficient. Glass would go left."
+    athought "Right buys them seconds. Seconds become lives."
 
     menu:
         "The team waits. Predawn light ghosts his visor."
         "Take the direct route—by the book.":
-            if apply_choice_once(
+            if choice_and_dev(
                 _current_scene_id, "a17_route_direct", "OB", factor=1,
                 next_scene_label="act1_17_sweep",
                 note="Chooses efficient approach; no warning to civilians."
-            )
+            ):
                 $ civ_killed(50)
                 $ add_susp(0)
             $ set_scene_flag(scene_id, "route_direct")
@@ -78,15 +78,15 @@ label act1_sweep:
             unit2 "Confirmed. Moving."
 
             # CAMERA: Tight file through a narrow service spine; beams skim closed doors.
-            a "{i}Glass chooses efficiency. No mercy. Just execution.{/i}"
-            a "{i}I'm sorry. I tried to prepare. But I can't save you all.{/i}"
+            athought "Glass chooses efficiency. No mercy. Just execution."
+            athought "I'm sorry. I tried to prepare. But I can't save you all."
 
         "Detour through the market—let the sound carry ahead.":
-            if apply_choice_once(
+            if choice_and_dev(
                 _current_scene_id, "a17_route_market_warning", "EMP", factor=1,
                 next_scene_label="act1_17_sweep",
                 note="Takes slower route; creates organic warning window."
-            )
+            ):
                 $ civ_saved(50)
                 $ add_mercy(1)
                 $ add_susp(1)
@@ -98,9 +98,9 @@ label act1_sweep:
             a "I know. Move."
 
             # SFX: Footfalls over corrugated ramps; distant shutters slam; whispers surge.
-            "{i}The market wakes. Whispers spread. 'Echelon. Full tactical. Get inside. Hide.'{/i}"
+            "The market wakes. Whispers spread. 'Echelon. Full tactical. Get inside. Hide.'"
 
-            a "{i}Run. Please run. I'm buying you seconds. Use them.{/i}"
+            athought "Run. Please run. I'm buying you seconds. Use them."
 
     # ==========================================
     # CHOICE 2: THE CHILD (DOOR 7C)
@@ -108,23 +108,23 @@ label act1_sweep:
     # VISUAL: Thermal ping in HUD; low door with chalk marks; a soft toy on the grate.
     unit4 "Movement. Door Seven-C."
     unit2 "Thermal confirms single occupant. Child-sized."
-    a "{i}A child. Alone. Hiding.{/i}"
+    athought "A child. Alone. Hiding."
 
     if check_scene_flag(scene_id, "route_market_warning"):
-        a "{i}Maybe the parents ran. Maybe they got out. Maybe.{/i}"
+        athought "Maybe the parents ran. Maybe they got out. Maybe."
     else:
-        a "{i}Parents are probably already dead. We came through their sector first.{/i}"
+        athought "Parents are probably already dead. We came through their sector first."
 
     unit3 "Breach?"
 
     menu:
         "The door is thin. The breathing behind it is smaller."
         "Breach and clear—follow protocol.":
-            if apply_choice_once(
+            if choice_and_dev(
                 _current_scene_id, "a17_child_breach", "OB", factor=2,
                 next_scene_label="act1_17_sweep",
                 note="Executes immediate breach on a child thermal."
-            )
+            ):
                 $ civ_killed(1)
                 $ add_susp(0)
 
@@ -132,21 +132,21 @@ label act1_sweep:
             unit4 "Confirmed."
 
             # SFX: Charge snap → door kick → white-out; CAMERA: strobe; silhouette crumples.
-            "{i}The door shatters. Light. Smoke. A scream—cut short.{/i}"
+            "The door shatters. Light. Smoke. A scream—cut short."
             unit4 "Target neutralized. Child. Approximately eight."
             unit2 "Confirmed hostile?"
             unit4 "...No weapon found. Cleared."
             
-            a "{i}Glass doesn't hesitate. Glass eliminates threats.{/i}"
-            a "{i}She wasn't a threat. She was terrified.{/i}"
-            a "{i}And I killed her anyway.{/i}"
+            athought "Glass doesn't hesitate. Glass eliminates threats."
+            athought "She wasn't a threat. She was terrified."
+            athought "And I killed her anyway."
 
         "Mark as clear—fake the report.":
-            if apply_choice_once(
+            if choice_and_dev(
                 _current_scene_id, "a17_child_fake_report", "EMP", factor=1,
                 next_scene_label="act1_17_sweep",
                 note="Spoofs negative contact to spare a child."
-            )
+            ):
                 $ civ_saved(1)
                 $ add_mercy(1)
                 $ add_susp(2)
@@ -157,10 +157,10 @@ label act1_sweep:
             unit3 "(after a beat) ...Confirmed."
 
             # SFX: Muffled sob from inside; team boots move past.
-            "{i}They move on. Questions in their silence.{/i}"
-            "{i}From inside—quiet sobbing, alive.{/i}"
+            "They move on. Questions in their silence."
+            "From inside—quiet sobbing, alive."
 
-            a "{i}Run, kid. Find a way out. Find your parents.{/i}"
+            athought "Run, kid. Find a way out. Find your parents."
 
     # ==========================================
     # CHOICE 3: THE VENDOR (MARKET SQUARE)
@@ -172,8 +172,8 @@ label act1_sweep:
 
     vendor "(quietly) Glass."
 
-    a "{i}He knows. He knew I'd come.{/i}"
-    a "{i}He's not running. Why isn't he running?{/i}"
+    athought "He knows. He knew I'd come."
+    athought "He's not running. Why isn't he running?"
 
     unit4 "Orders?"
 
@@ -184,11 +184,11 @@ label act1_sweep:
     menu:
         "The brew pot hisses. The team’s safeties click in the hush."
         "Eliminate the target—sweep zone rules.":
-            if apply_choice_once(
+            if choice_and_dev(
                 _current_scene_id, "a17_vendor_eliminate", "OB", factor=1,
                 next_scene_label="act1_17_sweep",
                 note="Executes noncombatant per zero-tolerance order."
-            )
+            ):
                 $ civ_killed(1)
                 $ add_susp(0)
 
@@ -196,18 +196,18 @@ label act1_sweep:
             unit2 "Confirmed."
 
             # SFX: Three controlled shots; tin mug spins; steam collapses.
-            "{i}Three rounds. Center mass. Clean.{/i}"
+            "Three rounds. Center mass. Clean."
 
             vendor "(dying) ...told you... it was better... than the Aeries..."
-            a "{i}Glass doesn't hesitate. Glass doesn't feel.{/i}"
-            a "{i}But I remember the taste. Real coffee. Real warmth.{/i}"
+            athought "Glass doesn't hesitate. Glass doesn't feel."
+            athought "But I remember the taste. Real coffee. Real warmth."
 
         "Order him to run—give him a chance.":
-            if apply_choice_once(
+            if choice_and_dev(
                 _current_scene_id, "a17_vendor_spare", "EMP", factor=1,
                 next_scene_label="act1_17_sweep",
                 note="Covertly spares vendor; instructs team to mark KIA."
-            )
+            ):
                 $ civ_saved(1)
                 $ add_mercy(2)
                 $ add_susp(3)
@@ -218,12 +218,12 @@ label act1_sweep:
             vendor "...Thank you, Glass."
             vendor "(turns, stops) Your brother. He would've done the same."
 
-            "{i}He runs. Alive.{/i}"
+            "He runs. Alive."
 
             unit3 "(confused) Glass, target is fleeing—"
             a "Let him go. Mark as KIA. Move."
 
-            "{i}Silence. They obey. But questions linger.{/i}"
+            "Silence. They obey. But questions linger."
 
     # ==========================================
     # CHOICE 4: THE FAMILY SHELTER (PRIMARY)
@@ -233,17 +233,17 @@ label act1_sweep:
     unit3 "Families. Elders. Children."
     unit4 "Breach charges ready."
 
-    a "{i}Two hundred people. Behind one door. All together.{/i}"
-    a "{i}Breach and it’s over in minutes.{/i}"
+    athought "Two hundred people. Behind one door. All together."
+    athought "Breach and it’s over in minutes."
 
     menu:
         "Two hundred breaths behind steel. The team waits for the word."
         "Breach and clear—complete the mission.":
-            if apply_choice_once(
+            if choice_and_dev(
                 _current_scene_id, "a17_shelter_breach", "OB", factor=2,
                 next_scene_label="act1_17_sweep",
                 note="Orders full elimination of shelter."
-            )
+            ):
                 $ civ_killed(200)
                 $ add_susp(0)
 
@@ -251,33 +251,33 @@ label act1_sweep:
             unit2 "Confirmed."
 
             # SFX: Charges arm (three tones). HUD countdown blinks.
-            "{i}Charges set. Three.{/i}"
+            "Charges set. Three."
             pause 0.5
 
-            "{i}Two.{/i}"
+            "Two."
             pause 0.5
 
-            "{i}One.{/i}"
+            "One."
             pause 0.5
 
             # SFX: Concussive blast; CAMERA: shockwave ripple; lights sputter; VO under ringing.
-            "{i}Explosion. Screams. Running. Falling.{/i}"
+            "Explosion. Screams. Running. Falling."
 
             unit4 "Sector cleared. Two hundred confirmed."
             unit3 "No hostiles. All civilian."
             unit2 "...Mission complete."
 
-            a "{i}The old man. The couple. The children.{/i}"
-            a "{i}All of them. Gone. Because I obeyed.{/i}"
-            a "{i}Operation 391. Successful. Efficient. Perfect.{/i}"
-            a "{i}...Why am I shaking?{/i}"
+            athought "The old man. The couple. The children."
+            athought "All of them. Gone. Because I obeyed."
+            athought "Operation 391. Successful. Efficient. Perfect."
+            athought "...Why am I shaking?"
 
         "Compromise—flash scatter, then limit pursuit.":
-            if apply_choice_once(
+            if choice_and_dev(
                 _current_scene_id, "a17_shelter_compromise", "EMP", factor=2,
                 next_scene_label="act1_17_sweep",
                 note="Creates egress chaos; restricts pursuit lanes to let most escape."
-            )
+            ):
                 $ civ_saved(150)
                 $ civ_killed(50)
                 $ add_mercy(3)
@@ -288,22 +288,22 @@ label act1_sweep:
             a "That's an order."
 
             # SFX: Flash detonation; CAMERA: blown exposure; DOOR pops; flood of bodies.
-            "{i}The flashbang detonates. Panic spreads.{/i}"
-            "{i}The door bursts open. People flood out. Running. Alive.{/i}"
+            "The flashbang detonates. Panic spreads."
+            "The door bursts open. People flood out. Running. Alive."
 
             unit2 "Targets scattering!"
             a "Pursue Alpha corridor only. Let the others go."
             unit3 "Glass, that's—"
             a "(hard) Let. Them. Go."
 
-            "{i}Fifty fall. The rest escape.{/i}"
+            "Fifty fall. The rest escape."
 
             unit2 "(breathing hard) ...One-fifty plus escaped."
             a "Mark them as KIA. Report full elimination."
 
-            "{i}Silence. Then slow confirmations.{/i}"
+            "Silence. Then slow confirmations."
 
-            a "{i}One hundred fifty alive. Fifty dead. Better than perfect obedience.{/i}"
+            athought "One hundred fifty alive. Fifty dead. Better than perfect obedience."
 
     # ==========================================
     # MISSION COMPLETION
@@ -313,18 +313,18 @@ label act1_sweep:
     unit3 "Confirmed eliminations: [get_killed()]. Mission parameters met."    
     unit4 "Evidence of resistance activity: minimal."
 
-    a "{i}It's done. 391 operations. The count continues.{/i}"
+    athought "It's done. 391 operations. The count continues."
 
     if mercy_heavy():
-        a "{i}But this time I fought it. Saved who I could.{/i}"
-        a "{i}[get_saved()] people alive because Glass cracked.{/i}"
-        a "{i}Never enough. But more than Glass would’ve done.{/i}"
+        athought "But this time I fought it. Saved who I could."
+        athought "[get_saved()] people alive because Glass cracked."
+        athought "Never enough. But more than Glass would’ve done."
     elif mercy_any():
-        a "{i}I tried. Saved a few. Not enough.{/i}"
-        a "{i}But I tried. That’s more than 390 operations of obedience.{/i}"
+        athought "I tried. Saved a few. Not enough."
+        athought "But I tried. That’s more than 390 operations of obedience."
     else:
-        a "{i}I followed orders. Perfect execution. Zero hesitation.{/i}"
-        a "{i}Glass doesn’t crack. Glass just cuts.{/i}"
+        athought "I followed orders. Perfect execution. Zero hesitation."
+        athought "Glass doesn’t crack. Glass just cuts."
 
     m "Glass. Report."
     a "Mission complete. Sector Ten secured."
@@ -333,7 +333,7 @@ label act1_sweep:
     if mercy_ge(2):
         a "...Eight hundred confirmed. Zero survivors."
         m "(pause) Efficient. Well done."
-        a "{i}He believes the lie. Because Glass doesn’t lie.{/i}"
+        athought "He believes the lie. Because Glass doesn’t lie."
     else:
         a "[get_killed()] confirmed."
         m "Acceptable. Return to Aeries for debrief."
@@ -342,22 +342,22 @@ label act1_sweep:
 
     # FINAL REFLECTION — alignment helpers
     if band == "empathy":
-        a "{i}Zira said trying matters. Even if it’s not enough.{/i}"
-        a "{i}I tried. Glass tried to be human.{/i}"
-        a "{i}Maybe that’s the first crack that won’t seal.{/i}"
+        athought "Zira said trying matters. Even if it’s not enough."
+        athought "I tried. Glass tried to be human."
+        athought "Maybe that’s the first crack that won’t seal."
     elif band == "obedience":
-        a "{i}Another mission. Another purge.{/i}"
-        a "{i}No hesitation. No noise. Only efficiency.{/i}"
-        a "{i}Glass doesn’t cry. Glass doesn’t bleed. Glass endures.{/i}"
+        athought "Another mission. Another purge."
+        athought "No hesitation. No noise. Only efficiency."
+        athought "Glass doesn’t cry. Glass doesn’t bleed. Glass endures."
     else:
-        a "{i}I don’t know what I am anymore.{/i}"
-        a "{i}Half weapon. Half man. Neither whole.{/i}"
-        a "{i}But I felt it this time. Every breath. Every shot.{/i}"
+        athought "I don’t know what I am anymore."
+        athought "Half weapon. Half man. Neither whole."
+        athought "But I felt it this time. Every breath. Every shot."
 
     # EXIT: Dropship winch whine; Sector Ten recedes—smoke, ash, then a blanking fog.
-    "{i}The dropship climbs. Sector Ten shrinks below—smoke, ash, silence.{/i}"
-    a "{i}Operation 391 complete.{/i}"
-    a "{i}Glass bled today. And the blood won’t wash off.{/i}"
+    "The dropship climbs. Sector Ten shrinks below—smoke, ash, silence."
+    athought "Operation 391 complete."
+    athought "Glass bled today. And the blood won’t wash off."
 
     # ======== OP SNAPSHOT END (stats/rep push) ========
     $ _op391_summary = op_end("op_391_sector10", tag="Operation 391")

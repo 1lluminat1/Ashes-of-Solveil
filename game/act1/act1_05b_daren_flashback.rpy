@@ -12,7 +12,7 @@ label act1_daren_flashback:
 
     # VISUAL: Academy training room – dusk lighting, hard shadow; simulated urban environment.
     # SOUND: Soft electric hum of projectors; distant simulation gunfire.
-    a "{i}The past doesn’t ask permission. It just arrives.{/i}"
+    athought "The past doesn’t ask permission. It just arrives."
 
     # VISUAL: A younger Aeron (18) kneels behind cover—simulation weapon in hand, breath held.
     # VISUAL: Daren beside him—more polished, less anxious.
@@ -21,21 +21,21 @@ label act1_daren_flashback:
     cadet "Orders are clear. Clean sweep. No exceptions."
 
     # VISUAL: Aeron hesitates. Crosshairs hover. His finger lingers over the trigger.
-    a "{i}I saw her. Just a girl. Simulation or not... she hesitated too.{/i}"
+    athought "I saw her. Just a girl. Simulation or not... she hesitated too."
     cadet "(sharper) Aeron."
 
     # VISUAL: Aeron fires. Sim target drops. Silence.
-    a "{i}Scored a hit. Passed the test.{/i}"
-    a "{i}Daren smiled. The instructor nodded.{/i}"
-    a "{i}And I looked at my hands, like they’d done it on their own.{/i}"
+    athought "Scored a hit. Passed the test."
+    athought "Daren smiled. The instructor nodded."
+    athought "And I looked at my hands, like they’d done it on their own."
 
     # VISUAL: Cut to instructor clipboard — “PASS: RYLAN, A.”
-    a "{i}They called it decisive. Said I had potential.{/i}"
-    a "{i}Said hesitation gets soldiers killed.{/i}"
+    athought "They called it decisive. Said I had potential."
+    athought "Said hesitation gets soldiers killed."
 
     # VISUAL: Final image — Aeron alone in the sim room, lights dimming.
-    a "{i}That night, I stared at the wall until the lights went out.{/i}"
-    a "{i}Trying to remember the girl’s face. I couldn’t.{/i}"
+    athought "That night, I stared at the wall until the lights went out."
+    athought "Trying to remember the girl’s face. I couldn’t."
 
     $ set_scene_flag(_current_scene_id, "completed")
 

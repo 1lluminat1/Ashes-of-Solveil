@@ -14,7 +14,7 @@ label act2_echelon_raid_defense:
 
     scene bg_base_alarm with fade
 
-    "{i}ALARM. Loud. Urgent. Persistent. This is it. This isn't drill. This isn't preparation. This is real. Echelon found us. Nine days into fourteen day countdown. Noelle's 73% became 100%. They're here. They're coming. War has arrived. Ready or not. Here it comes.{/i}"
+    "ALARM. Loud. Urgent. Persistent. This is it. This isn't drill. This isn't preparation. This is real. Echelon found us. Nine days into fourteen day countdown. Noelle's 73% became 100%. They're here. They're coming. War has arrived. Ready or not. Here it comes."
 
     # VISUAL: NOELLE at command station. Data streaming. Multiple screens. Tracking. Analyzing. Coordinating.
 
@@ -22,7 +22,7 @@ label act2_echelon_raid_defense:
 
     # VISUAL: BASE erupting. People moving. Grabbing weapons. Taking positions. Training becoming reality. 587 fighters mobilizing. Organized chaos. Controlled panic. War beginning.
 
-    "{i}Base erupting. 587 people moving simultaneously. Some to defensive positions. Some to evacuation routes. Some to weapons. Some to medical. Everyone moving. Everyone functioning. Training taking over. Muscle memory replacing thought. That's good. That's what keeps people alive. Training. Discipline. Muscle memory. Don't think. Just move. Just function. Just survive.{/i}"
+    "Base erupting. 587 people moving simultaneously. Some to defensive positions. Some to evacuation routes. Some to weapons. Some to medical. Everyone moving. Everyone functioning. Training taking over. Muscle memory replacing thought. That's good. That's what keeps people alive. Training. Discipline. Muscle memory. Don't think. Just move. Just function. Just survive."
 
     # VISUAL: SELENE at command table. Map displayed. Tactical overview. Enemy approach vectors marked. Defensive positions assigned. Commander mode fully engaged.
 
@@ -64,7 +64,7 @@ label act2_echelon_raid_defense:
 
     # VISUAL: Everyone dispersing. Moving to positions. Roles assigned. Synergy beginning. Team functioning. War starting.
 
-    "{i}Everyone moving. Everyone functioning. Everyone scared. Everyone doing it anyway. That's courage. That's resistance. That's us. Noelle coordinating. Zira sabotaging. Lyra defending. Tessa healing. Selene commanding. Aeron supporting. All of us. Together. Functioning. Surviving. Fighting. That's everything. That's all we have. That's enough.{/i}"
+    "Everyone moving. Everyone functioning. Everyone scared. Everyone doing it anyway. That's courage. That's resistance. That's us. Noelle coordinating. Zira sabotaging. Lyra defending. Tessa healing. Selene commanding. Aeron supporting. All of us. Together. Functioning. Surviving. Fighting. That's everything. That's all we have. That's enough."
 
     # ==============================================================
     # ZIRA - SABOTAGE PHASE
@@ -74,7 +74,7 @@ label act2_echelon_raid_defense:
 
     scene bg_exterior_approach with fade
 
-    "{i}Zira outside. Enemy approaching. Four blocks now. Three. Time running out. She's moving. Fast. Efficient. Professional. This is her expertise. Sabotage. Disruption. Making enemies bleed before engagement. She's done this before. Solo operations. Guerrilla tactics. This is familiar. This is comfortable. This is her.{/i}"
+    "Zira outside. Enemy approaching. Four blocks now. Three. Time running out. She's moving. Fast. Efficient. Professional. This is her expertise. Sabotage. Disruption. Making enemies bleed before engagement. She's done this before. Solo operations. Guerrilla tactics. This is familiar. This is comfortable. This is her."
 
     # VISUAL: Zira planting explosive charges. Streetside. Building support. Entryways. Tactical placements. Creating killzone. Creating delay. Creating cost.
 
@@ -82,13 +82,13 @@ label act2_echelon_raid_defense:
 
     # VISUAL: Echelon force entering killzone. Fifty-two soldiers. Professional. Confident. Unaware. Walking into trap.
 
-    "{i}They're here. Fifty-two soldiers. Banded. Enhanced. Armed. Confident. They think they're hunting. They think they're overwhelming. They think they're winning. They don't know Zira's watching. Don't know charges are set. Don't know they're walking into prepared killzone. That ignorance? That costs. That costs everything.{/i}"
+    "They're here. Fifty-two soldiers. Banded. Enhanced. Armed. Confident. They think they're hunting. They think they're overwhelming. They think they're winning. They don't know Zira's watching. Don't know charges are set. Don't know they're walking into prepared killzone. That ignorance? That costs. That costs everything."
 
     # VISUAL: ZIRA detonating. Multiple explosions. Street erupting. Buildings collapsing. Dust. Chaos. Confusion. Enemy scattered.
 
     # SOUND: EXPLOSIONS. LOUD. Multiple. Overlapping. Destruction. Chaos. War announcing itself.
 
-    "{i}EXPLOSIONS. Buildings collapsing. Street erupting. Dust everywhere. Can't see. Can't hear. Just chaos. Just destruction. Just Zira's welcome to our territory. She made them bleed. Made them cautious. Made them slow. That's advantage. That's time. That's Zira. Perfect.{/i}"
+    "EXPLOSIONS. Buildings collapsing. Street erupting. Dust everywhere. Can't see. Can't hear. Just chaos. Just destruction. Just Zira's welcome to our territory. She made them bleed. Made them cautious. Made them slow. That's advantage. That's time. That's Zira. Perfect."
 
     # VISUAL: Dust clearing. Casualties visible. Five Echelon soldiers down. Dead or wounded. Forty-seven remain. Slowed. Cautious. Angry. But still coming.
 
@@ -96,7 +96,7 @@ label act2_echelon_raid_defense:
 
     # VISUAL: Zira disappearing. Shadows. Alleys. Ghost mode. She's doing her part. Now others do theirs.
 
-    "{i}Zira gone. Five enemies down. Forty-seven remain. Three minutes until contact. She did her job. Made them bleed. Made them slow. Made them angry. Now we do ours. We hold. We fight. We survive. Three minutes. That's all we have. That's enough. Has to be enough.{/i}"
+    "Zira gone. Five enemies down. Forty-seven remain. Three minutes until contact. She did her job. Made them bleed. Made them slow. Made them angry. Now we do ours. We hold. We fight. We survive. Three minutes. That's all we have. That's enough. Has to be enough."
 
     # ==============================================================
     # LYRA - NORTH PERIMETER DEFENSE
@@ -106,7 +106,7 @@ label act2_echelon_raid_defense:
 
     scene bg_north_perimeter with fade
 
-    "{i}North perimeter. Lyra commanding. Fifty fighters. Mix of experienced and new. All scared. All armed. All following her orders. She's military. She's trained. She's what they need. And she knows it. Can see it in her posture. In her voice. In her command. She's found her role. She's owning it. That's Lyra. That's leader. That's us.{/i}"
+    "North perimeter. Lyra commanding. Fifty fighters. Mix of experienced and new. All scared. All armed. All following her orders. She's military. She's trained. She's what they need. And she knows it. Can see it in her posture. In her voice. In her command. She's found her role. She's owning it. That's Lyra. That's leader. That's us."
 
     # VISUAL: Lyra organizing squads. Positioning fighters. Directing fire lanes. Establishing fallback routes. Professional. Efficient. Military perfection.
 
@@ -120,7 +120,7 @@ label act2_echelon_raid_defense:
 
     # VISUAL: Enemy approaching. Visible now. Forty-seven soldiers. Banded. Enhanced. Armed. Advancing carefully. Professional. Dangerous. Real.
 
-    "{i}They're here. Forty-seven remaining. Can see them. Moving carefully. Zira's explosions taught them caution. They're advancing with discipline. With coordination. With enhancement. They're professionals. They're dangerous. They're everything we feared. And they're here. And we're fighting. Now. This is it. This is war. This is real.{/i}"
+    "They're here. Forty-seven remaining. Can see them. Moving carefully. Zira's explosions taught them caution. They're advancing with discipline. With coordination. With enhancement. They're professionals. They're dangerous. They're everything we feared. And they're here. And we're fighting. Now. This is it. This is war. This is real."
 
     # VISUAL: Lyra raising hand. Waiting. Calculating range. Timing. Perfect timing. Then... signal.
 
@@ -130,7 +130,7 @@ label act2_echelon_raid_defense:
 
     # SOUND: GUNFIRE. Overwhelming. Continuous. Wall of sound. Wall of death. War at full volume.
 
-    "{i}GUNFIRE. Fifty weapons firing. Continuous. Coordinated. Enemy taking hits. Five down. Seven down. Ten down. We're doing damage. We're effective. We're fighting. But they're still coming. Still advancing. Still dangerous. Bands keeping them moving. Enhancement keeping them fighting. They're bleeding but they're not breaking. Not yet. Not easily.{/i}"
+    "GUNFIRE. Fifty weapons firing. Continuous. Coordinated. Enemy taking hits. Five down. Seven down. Ten down. We're doing damage. We're effective. We're fighting. But they're still coming. Still advancing. Still dangerous. Bands keeping them moving. Enhancement keeping them fighting. They're bleeding but they're not breaking. Not yet. Not easily."
 
     # VISUAL: Echelon soldiers returning fire. Superior weapons. Superior training. Superior enhancement. Resistance fighters taking casualties. Three down. Five down. Eight down. Cost mounting. Reality hitting.
 
@@ -138,7 +138,7 @@ label act2_echelon_raid_defense:
 
     # VISUAL: Fighters scared. Some breaking. Some retreating early. Discipline fracturing. Reality of combat overwhelming training. This is real. This is death. This is terrifying.
 
-    "{i}Fighters breaking. Some retreating. Some panicking. This isn't training. This is real combat. Real bullets. Real death. Real terror. Training only goes so far. Reality breaks everyone eventually. They're breaking. Lyra's trying to hold them. But they're breaking. We're losing cohesion. Losing discipline. Losing fight. This is bad. This is disaster forming.{/i}"
+    "Fighters breaking. Some retreating. Some panicking. This isn't training. This is real combat. Real bullets. Real death. Real terror. Training only goes so far. Reality breaks everyone eventually. They're breaking. Lyra's trying to hold them. But they're breaking. We're losing cohesion. Losing discipline. Losing fight. This is bad. This is disaster forming."
 
     # VISUAL: Lyra in center. Exposed. Commanding. Visible. Rallying. Refusing to break. Refusing to let them break.
 
@@ -146,7 +146,7 @@ label act2_echelon_raid_defense:
 
     # VISUAL: Her words working. Fighters steadying. Discipline returning. Not because orders. Because Lyra. Because belief. Because leadership. She's holding them together through will alone. That's leadership. That's Lyra. That's everything.
 
-    "{i}She's holding them. Through voice. Through presence. Through refusing to break herself. They see her standing. See her fighting. See her not breaking. And they don't break either. They hold. They fight. They believe. Because she believes. That's leadership. That's what Lyra brings. That's what makes her invaluable. Not tactics. Not training. Belief. She makes them believe. That's everything.{/i}"
+    "She's holding them. Through voice. Through presence. Through refusing to break herself. They see her standing. See her fighting. See her not breaking. And they don't break either. They hold. They fight. They believe. Because she believes. That's leadership. That's what Lyra brings. That's what makes her invaluable. Not tactics. Not training. Belief. She makes them believe. That's everything."
 
     # ==============================================================
     # NOELLE - COORDINATION HUB
@@ -156,7 +156,7 @@ label act2_echelon_raid_defense:
 
     scene bg_command_station with fade
 
-    "{i}Noelle coordinating. Twenty conversations simultaneously. Tracking positions. Tracking casualties. Tracking ammunition. Tracking everything. She's central nervous system. Everyone reports to her. She processes. She coordinates. She directs. Without her? Chaos. With her? Organized defense. She's critical. She's irreplaceable. She's everything.{/i}"
+    "Noelle coordinating. Twenty conversations simultaneously. Tracking positions. Tracking casualties. Tracking ammunition. Tracking everything. She's central nervous system. Everyone reports to her. She processes. She coordinates. She directs. Without her? Chaos. With her? Organized defense. She's critical. She's irreplaceable. She's everything."
 
     # VISUAL: Noelle processing data. Updating tactical map. Predicting enemy movements. Calculating optimal responses. Real-time battle analysis. Computer brain in action.
 
@@ -164,7 +164,7 @@ label act2_echelon_raid_defense:
 
     # VISUAL: Everyone responding to her coordination. Moving. Adapting. Functioning. She's making them effective. Making them survive. Making them work.
 
-    "{i}She's conducting symphony. Battle symphony. Every fighter is instrument. She's conductor. Making them harmonize. Making them function. Making them survive. Without her? Individuals fighting alone. With her? Army fighting together. That's difference between survival and massacre. That's Noelle. That's invaluable. That's love working through data. That's perfect.{/i}"
+    "She's conducting symphony. Battle symphony. Every fighter is instrument. She's conductor. Making them harmonize. Making them function. Making them survive. Without her? Individuals fighting alone. With her? Army fighting together. That's difference between survival and massacre. That's Noelle. That's invaluable. That's love working through data. That's perfect."
 
     # VISUAL: Enemy adapting. Changing tactics. Flanking. Pressuring. Professional response to organized defense. They're good. Coordinated. Dangerous. This is hard fight.
 
@@ -182,7 +182,7 @@ label act2_echelon_raid_defense:
 
     scene bg_medical_triage with fade
 
-    "{i}Medical station. Casualties everywhere. Wounded. Bleeding. Screaming. Dying. Tessa moving between them. Fast. Efficient. Triaging. Saving who she can. Letting go who she can't. Adding names to both sides of board. Living and dead. Counting all of them. Witnessing all of them. Honoring all of them. This is war. This is cost. This is Tessa's hell. And she's functioning. She's saving. She's continuing. That's strength. That's courage. That's her.{/i}"
+    "Medical station. Casualties everywhere. Wounded. Bleeding. Screaming. Dying. Tessa moving between them. Fast. Efficient. Triaging. Saving who she can. Letting go who she can't. Adding names to both sides of board. Living and dead. Counting all of them. Witnessing all of them. Honoring all of them. This is war. This is cost. This is Tessa's hell. And she's functioning. She's saving. She's continuing. That's strength. That's courage. That's her."
 
     # VISUAL: Tessa treating fighter. Gunshot wound. Chest. Critical. Bleeding. Dying. Working fast. Hands bloody. Focused. Professional despite chaos.
 
@@ -194,7 +194,7 @@ label act2_echelon_raid_defense:
 
     # VISUAL: Next patient. Worse. Much worse. Abdominal wound. Internal bleeding. No equipment. No time. No hope. Dying. Looking at Tessa. Seeking miracle. Finding reality.
 
-    "{i}Next patient. Dying. Obviously dying. Internal bleeding. Can't stop it. Can't fix it. Don't have equipment. Don't have time. Don't have anything except mercy. Again. Second time. Two days after Torin. Another impossible choice. Another mercy death. Another name for dead side. Another weight for forever. This is war. This is cost. This is what she prepared for. And she does it. She delivers mercy. Again. Because that's what healers do in war. They save who they can. They mercy who they can't. They count everyone. They continue. That's Tessa. That's strength. That's everything.{/i}"
+    "Next patient. Dying. Obviously dying. Internal bleeding. Can't stop it. Can't fix it. Don't have equipment. Don't have time. Don't have anything except mercy. Again. Second time. Two days after Torin. Another impossible choice. Another mercy death. Another name for dead side. Another weight for forever. This is war. This is cost. This is what she prepared for. And she does it. She delivers mercy. Again. Because that's what healers do in war. They save who they can. They mercy who they can't. They count everyone. They continue. That's Tessa. That's strength. That's everything."
 
     # VISUAL: Tessa moving to dying fighter. Gentle. Compassionate. Honest. Professional despite breaking inside.
 
@@ -210,7 +210,7 @@ label act2_echelon_raid_defense:
 
     # VISUAL: Fighter dying. Peaceful. Witnessed. Honored. Counted. Tessa adding another name. Another weight. Another cost. War continues. She continues. Always continuing.
 
-    "{i}Dead. Another one. Another name. Another weight. Tessa adds it. Dead side of board. Growing. She prepared for this. Accepted this. Does it anyway. Counts them anyway. Witnesses them anyway. Continues anyway. That's healer in war. That's cost she carries. That's strength that saves everyone else. She breaks so others survive. That's Tessa. That's sacrifice. That's everything.{/i}"
+    "Dead. Another one. Another name. Another weight. Tessa adds it. Dead side of board. Growing. She prepared for this. Accepted this. Does it anyway. Counts them anyway. Witnesses them anyway. Continues anyway. That's healer in war. That's cost she carries. That's strength that saves everyone else. She breaks so others survive. That's Tessa. That's sacrifice. That's everything."
 
     # ==============================================================
     # FALLBACK - SECONDARY POSITIONS
@@ -224,7 +224,7 @@ label act2_echelon_raid_defense:
 
     # VISUAL: Fighters retreating. Some carrying wounded. Some covering retreat. All moving. Discipline holding. Retreat controlled. This is working. Barely. But working.
 
-    "{i}Retreat. Controlled. Covered. Professional. They're doing it. Falling back without breaking. Without panicking. Without becoming massacre. That's training. That's Lyra. That's success. We're losing ground but we're not losing people. Not all of them. Some. But not all. That's victory in retreat. That's survival. That's enough.{/i}"
+    "Retreat. Controlled. Covered. Professional. They're doing it. Falling back without breaking. Without panicking. Without becoming massacre. That's training. That's Lyra. That's success. We're losing ground but we're not losing people. Not all of them. Some. But not all. That's victory in retreat. That's survival. That's enough."
 
     # VISUAL: Enemy pursuing. Pressing advantage. But cautious. Zira's sabotage taught them. Resistance effectiveness taught them. They're winning but they're bleeding. They're advancing but they're dying. Cost mounting for them too. That's important. That's what matters. We make them bleed. We make them pay. We make them remember. This isn't Purge. This isn't massacre. This is fight. This is war. This is resistance. And resistance bites back.
 
@@ -236,7 +236,7 @@ label act2_echelon_raid_defense:
 
     scene bg_secondary_positions with fade
 
-    "{i}Secondary positions. Five hundred forty remaining. Forty dead. Forty names for Tessa's board. Forty weights to carry. But five hundred forty alive. Five hundred forty still fighting. Still resisting. Still dangerous. We lost people. But we didn't lose. Not yet. Not while we're fighting. Not while we're breathing. Not while we're choosing resistance over submission. That's victory. That's us.{/i}"
+    "Secondary positions. Five hundred forty remaining. Forty dead. Forty names for Tessa's board. Forty weights to carry. But five hundred forty alive. Five hundred forty still fighting. Still resisting. Still dangerous. We lost people. But we didn't lose. Not yet. Not while we're fighting. Not while we're breathing. Not while we're choosing resistance over submission. That's victory. That's us."
 
     # VISUAL: Selene and Aeron coordinating. Final stand decisions. Evacuation timing. Survival calculations. How much longer? How many more casualties? When do we run? Impossible questions. Leadership questions. Their questions.
 
@@ -250,7 +250,7 @@ label act2_echelon_raid_defense:
 
     # SOUND: GUNFIRE intensifying. EXPLOSIONS. SHOUTING. WAR at peak volume. Peak intensity. Peak terror. Peak everything.
 
-    "{i}Final push. They're desperate. We're desperate. Everyone's desperate. Everyone's bleeding. Everyone's dying. Everyone's fighting. This is war. This is what it looks like. This is what it costs. This is what it means. And we're doing it. We're surviving it. We're winning it. Barely. Bloodily. Costly. But winning. Because we're still here. Still fighting. Still choosing. That's victory. That's resistance. That's us.{/i}"
+    "Final push. They're desperate. We're desperate. Everyone's desperate. Everyone's bleeding. Everyone's dying. Everyone's fighting. This is war. This is what it looks like. This is what it costs. This is what it means. And we're doing it. We're surviving it. We're winning it. Barely. Bloodily. Costly. But winning. Because we're still here. Still fighting. Still choosing. That's victory. That's resistance. That's us."
 
     # ==============================================================
     # EVACUATION - DISPERSAL
@@ -262,11 +262,11 @@ label act2_echelon_raid_defense:
 
     # VISUAL: Resistance evacuating. Fast. Disciplined. Covered. Professional to the end. They're getting out. They're surviving. This is success. This is victory. Bloody victory. Costly victory. But victory.
 
-    "{i}Evacuating. Everyone moving. Wounded carried. Equipment grabbed. Base abandoned. We're leaving. We're surviving. We're dispersing. Echelon takes the base. But we take ourselves. We take our people. We take our resistance. That's what matters. Buildings are replaceable. People aren't. We save the people. We survive. That's victory. That's enough. That's everything.{/i}"
+    "Evacuating. Everyone moving. Wounded carried. Equipment grabbed. Base abandoned. We're leaving. We're surviving. We're dispersing. Echelon takes the base. But we take ourselves. We take our people. We take our resistance. That's what matters. Buildings are replaceable. People aren't. We save the people. We survive. That's victory. That's enough. That's everything."
 
     # VISUAL: Core team evacuating together. Selene. Aeron. Lyra. Noelle. Zira. Tessa. All alive. All wounded in ways. All exhausted. All surviving. All together. Still together. That's what matters.
 
-    "{i}Core team together. Evacuating. Alive. All of us. Selene. Aeron. Lyra. Noelle. Zira. Tessa. We made it. We survived. We're together. That's victory. That's proof we can do this. Can fight Echelon. Can survive their assault. Can resist. Can continue. That's everything. That's hope. That's us.{/i}"
+    "Core team together. Evacuating. Alive. All of us. Selene. Aeron. Lyra. Noelle. Zira. Tessa. We made it. We survived. We're together. That's victory. That's proof we can do this. Can fight Echelon. Can survive their assault. Can resist. Can continue. That's everything. That's hope. That's us."
 
     # VISUAL: Final look back. Base burning. Echelon occupying. Victory claimed. But empty victory. We took everything important. We took ourselves. They took building. We took resistance. That's difference. That's why we win. That's us.
 
@@ -278,7 +278,7 @@ label act2_echelon_raid_defense:
 
     scene bg_secondary_base_aftermath with fade
 
-    "{i}Hours later. Secondary base. Sector 9. Vex's location. We're here. Regrouping. Counting. Forty dead. Thirty-five wounded. Seventy-five total casualties. 13% casualty rate. Started with 587. Now 512 operational. 547 if you count wounded recovering. We survived. We bled. We lost people. But we survived. That's victory. Costly victory. But victory.{/i}"
+    "Hours later. Secondary base. Sector 9. Vex's location. We're here. Regrouping. Counting. Forty dead. Thirty-five wounded. Seventy-five total casualties. 13% casualty rate. Started with 587. Now 512 operational. 547 if you count wounded recovering. We survived. We bled. We lost people. But we survived. That's victory. Costly victory. But victory."
 
     # VISUAL: Tessa updating board. Forty names added. Dead side. Growing. First was Torin. Now forty more. Forty-one total. 370 living became 547 living and 41 dead. Count changed. Weight increased. Cost visible. But continuing. Always continuing.
 
@@ -317,7 +317,7 @@ label act2_echelon_raid_defense:
 
     # VISUAL: Team together. Exhausted. Traumatized. Bloodied. But alive. But together. But continuing. That's resistance. That's victory. That's enough.
 
-    "{i}We survived. Forty died. But we survived. 547 fighters alive. Wounded. Exhausted. Traumatized. But alive. But fighting. But resisting. That's victory. That's proof we can do this. Can fight Echelon. Can survive their assaults. Can continue despite cost. That's everything. That's hope. That's resistance. That's us. And we continue. Tomorrow we rebuild. Tomorrow we grow. Tomorrow we prepare. Tomorrow we fight again. That's cycle. That's war. That's what we chose. And we choose it again. And again. And again. Until victory or death. That's us. That's resistance. That's Phoenix. Rising from every fire. Burning brighter every time. That's enough. That's everything. That's perfect.{/i}"
+    "We survived. Forty died. But we survived. 547 fighters alive. Wounded. Exhausted. Traumatized. But alive. But fighting. But resisting. That's victory. That's proof we can do this. Can fight Echelon. Can survive their assaults. Can continue despite cost. That's everything. That's hope. That's resistance. That's us. And we continue. Tomorrow we rebuild. Tomorrow we grow. Tomorrow we prepare. Tomorrow we fight again. That's cycle. That's war. That's what we chose. And we choose it again. And again. And again. Until victory or death. That's us. That's resistance. That's Phoenix. Rising from every fire. Burning brighter every time. That's enough. That's everything. That's perfect."
 
     # Mark scene complete
     $ scenes["echelon_raid_defense"] = True

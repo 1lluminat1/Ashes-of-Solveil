@@ -14,8 +14,8 @@ label act1_investigation:
     # LIGHTING: Cold morning white; sterile, clinical, unforgiving.
     # SOUND: City hum; ventilation; his breathing; terminal beeping softly.
 
-    "{i}Morning. The light is too bright. The room too quiet.{/i}"
-    "{i}He didn't sleep. Couldn't. Every time he closed his eyes—faces.{/i}"
+    "Morning. The light is too bright. The room too quiet."
+    "He didn't sleep. Couldn't. Every time he closed his eyes—faces."
 
     # Setup (BC-safe reads)
     $ em = player_state.get("evidence_of_mercy", 0)
@@ -30,109 +30,111 @@ label act1_investigation:
     # VISUAL: Aeron sitting on edge of bed. Still in clothes from yesterday (changed from tactical gear).
     # Body language: Exhausted. Hollow. Broken but still breathing.
 
-    a "{i}Yesterday I killed 600 people.{/i}"
-    a "{i}Then I broke down completely. Shattered. Lyra held me together.{/i}"
-    a "{i}Last night I met Zira. She gave me... something. Information. Access.{/i}"
-    a "{i}I should feel different. Changed.{/i}"
-    a "{i}...I just feel empty.{/i}"
+    athought "Yesterday I killed 600 people."
+    athought "Then I broke down completely. Shattered. Lyra held me together."
+    athought "Last night I met Zira. She gave me... something. Information. Access."
+    athought "I should feel different. Changed."
+    athought "...I just feel empty."
 
     # --- Device? ---
     if has_device or em >= 1:
-        "{i}The device blinks. Soft red pulse. Waiting.{/i}"
-        a "{i}Zira said use it when I'm ready. Ready for what?{/i}"
-        a "{i}To see what's really happening. To choose.{/i}"
-        "{i}The interface loads. Clean. Simple. Civilian-grade encryption.{/i}"
-        "{i}Data streams scroll—resistance network chatter, energy readings, movement logs.{/i}"
-        a "{i}Let's see what Glass couldn't.{/i}"
+        "The device blinks. Soft red pulse. Waiting."
+        athought "Zira said use it when I'm ready. Ready for what?"
+        athought "To see what's really happening. To choose."
+        "The interface loads. Clean. Simple. Civilian-grade encryption."
+        "Data streams scroll—resistance network chatter, energy readings, movement logs."
+        athought "Let's see what Glass couldn't."
     else:
-        "{i}No device. No secret network. Just official channels.{/i}"
-        a "{i}Glass sees what Echelon allows Glass to see.{/i}"
-        a "{i}Maybe that's safer. Maybe ignorance is mercy.{/i}"
-        "{i}The terminal loads. Standard protocols. Clean data. Approved information.{/i}"
+        "No device. No secret network. Just official channels."
+        athought "Glass sees what Echelon allows Glass to see."
+        athought "Maybe that's safer. Maybe ignorance is mercy."
+        "The terminal loads. Standard protocols. Clean data. Approved information."
 
     # ==========================================
     # DISCOVERY 1: RESISTANCE CHATTER
     # ==========================================
     if has_device or em >= 1:
-        "{i}Messages flood the screen. Resistance networks. Active. Urgent.{/i}"
-        "{i}[ENCRYPTED] - Sector 10 survivors confirm: Echelon sweep yesterday.{/i}"
-        "{i}[ENCRYPTED] - Glass unit showed mercy. Some escaped. Spread word.{/i}"
-        "{i}[ENCRYPTED] - Evacuate Sectors 8, 9, 10 immediately. Something coming.{/i}"
-        "{i}[ENCRYPTED] - Move families to safe zones. Time unknown. Days? Hours?{/i}"
+        "Messages flood the screen. Resistance networks. Active. Urgent."
+        "[ENCRYPTED] - Sector 10 survivors confirm: Echelon sweep yesterday."
+        "[ENCRYPTED] - Glass unit showed mercy. Some escaped. Spread word."
+        "[ENCRYPTED] - Evacuate Sectors 8, 9, 10 immediately. Something coming."
+        "[ENCRYPTED] - Move families to safe zones. Time unknown. Days? Hours?"
 
-        a "{i}They're alive. The ones I saved. They're warning others.{/i}"
-        a "{i}200 people spreading word. Families evacuating.{/i}"
-        a "{i}My mercy... it's helping. It's actually helping.{/i}"
-        a "{i}Maybe breaking Glass was right. Maybe humanity isn't weakness.{/i}"
+        athought "They're alive. The ones I saved. They're warning others."
+        athought "200 people spreading word. Families evacuating."
+        athought "My mercy... it's helping. It's actually helping."
+        athought "Maybe breaking Glass was right. Maybe humanity isn't weakness."
 
         if saved_shelter:
-            "{i}[ENCRYPTED] - Shelter survivors organizing evacuation routes.{/i}"
-            a "{i}The shelter. 150 people. They're organizing. Leading others out.{/i}"
-            a "{i}I saved them. And now they're saving more.{/i}"
+            "[ENCRYPTED] - Shelter survivors organizing evacuation routes."
+            athought "The shelter. 150 people. They're organizing. Leading others out."
+            athought "I saved them. And now they're saving more."
 
         if saved_vendor:
-            "{i}[ENCRYPTED] - Contact 'Brew' establishing safe house in Sector 6.{/i}"
-            a "{i}'Brew.' The vendor. He's alive. Setting up safe houses.{/i}"
-            a "{i}I let him run. And he's helping others run too.{/i}"
+            "[ENCRYPTED] - Contact 'Brew' establishing safe house in Sector 6."
+            athought "'Brew.' The vendor. He's alive. Setting up safe houses."
+            athought "I let him run. And he's helping others run too."
 
-        a "{i}This is what Zira meant. This is why trying matters.{/i}"
-        a "{i}I can't save everyone. But the ones I save... they save others.{/i}"
-        a "{i}Ripples. Small mercies creating bigger ones.{/i}"
+        athought "This is what Zira meant. This is why trying matters."
+        athought "I can't save everyone. But the ones I save... they save others."
+        athought "Ripples. Small mercies creating bigger ones."
     else:
-        "{i}No chatter. No intercepts. Just official Echelon reports.{/i}"
-        "{i}[OFFICIAL] - Sector 10 sweep complete. 800 eliminated. Zero survivors.{/i}"
-        "{i}[OFFICIAL] - Sector secured. Mission success. No complications.{/i}"
-        a "{i}That's what the report says. 800 eliminated. Zero survivors.{/i}"
-        a "{i}But I know better. 200 are alive. Somewhere.{/i}"
-        a "{i}The system doesn't know. Or doesn't care to know.{/i}"
-        a "{i}Maybe that's good. Maybe their survival depends on invisibility.{/i}"
+        "No chatter. No intercepts. Just official Echelon reports."
+        "[OFFICIAL] - Sector 10 sweep complete. 800 eliminated. Zero survivors."
+        "[OFFICIAL] - Sector secured. Mission success. No complications."
+        athought "That's what the report says. 800 eliminated. Zero survivors."
+        athought "But I know better. 200 are alive. Somewhere."
+        athought "The system doesn't know. Or doesn't care to know."
+        athought "Maybe that's good. Maybe their survival depends on invisibility."
 
     # ==========================================
     # DISCOVERY 2: ENERGY GRID ANOMALIES
     # ==========================================
-    "{i}Energy grid data loads. Sectors 8, 9, 10. Scheduled maintenance tonight.{/i}"
-    "{i}[GRID ALERT] - Scheduled power reduction: Sectors 8-10.{/i}"
-    "{i}[MAINTENANCE] - Infrastructure repairs following sweep operations.{/i}"
-    "{i}[TIMELINE] - Execution window: 2000-2300 hours. Duration: 3 hours.{/i}"
+    "Energy grid data loads. Sectors 8, 9, 10. Scheduled maintenance tonight."
+    "[GRID ALERT] - Scheduled power reduction: Sectors 8-10."
+    "[MAINTENANCE] - Infrastructure repairs following sweep operations."
+    "[TIMELINE] - Execution window: 2000-2300 hours. Duration: 3 hours."
 
-    a "{i}Power reduction? Three-hour window? That's... extensive.{/i}"
-    "{i}[TECHNICAL] - Grid sectors 8A through 10F: Complete shutdown.{/i}"
-    "{i}[TECHNICAL] - Shield generators offline during maintenance.{/i}"
-    "{i}[TECHNICAL] - Emergency protocols suspended: 2000-2300 hours.{/i}"
-    a "{i}Shield generators offline? That's... unusual.{/i}"
-    a "{i}Why would they shut down shields during maintenance?{/i}"
-    a "{i}Safety protocol is to keep shields UP during repairs...{/i}"
+    athought "Power reduction? Three-hour window? That's... extensive."
+    "[TECHNICAL] - Grid sectors 8A through 10F: Complete shutdown."
+    "[TECHNICAL] - Shield generators offline during maintenance."
+    "[TECHNICAL] - Emergency protocols suspended: 2000-2300 hours."
+    athought "Shield generators offline? That's... unusual."
+    athought "Why would they shut down shields during maintenance?"
+    athought "Safety protocol is to keep shields UP during repairs..."
 
     menu:
-        "The energy data sits on screen. Something feels wrong. But what?":
-            "Investigate further—check historical maintenance patterns.":
-                $ record_choice_once(_current_scene_id, "investigated_energy")
-                "{i}Historical maintenance logs. Comparing patterns.{/i}"
-                "{i}Past maintenance: Shields stay active. Repairs done in sections. Never full shutdown.{/i}"
-                "{i}Tonight: All shields offline. All sectors simultaneously. Complete shutdown.{/i}"
+        "The energy data sits on screen. Something feels wrong. But what?"
+        "Investigate further—check historical maintenance patterns.":
+            $ record_choice_once(_current_scene_id, "investigated_energy")
 
-                a "{i}That's not standard. That's not... safe.{/i}"
-                a "{i}Why would they expose three sectors completely?{/i}"
-                a "{i}Unless...{/i}"
-                a "{i}Unless they're not worried about protection. Because nothing's there to protect.{/i}"
-                a "{i}But that doesn't make sense. Thousands of people live in those sectors.{/i}"
-                a "{i}...Don't they?{/i}"
-                a "{i}I'm missing something. But I can't see it.{/i}"
+            "Historical maintenance logs. Comparing patterns."
+            "Past maintenance: Shields stay active. Repairs done in sections. Never full shutdown."
+            "Tonight: All shields offline. All sectors simultaneously. Complete shutdown."
 
-            "Dismiss it—too exhausted to think clearly.":
-                $ record_choice_once(_current_scene_id, "dismissed_energy")
-                a "{i}I'm too tired for this. Seeing problems where there aren't any.{/i}"
-                a "{i}It's maintenance. Routine. Boring. Nothing to worry about.{/i}"
-                a "{i}I need to stop looking for horror everywhere.{/i}"
+            athought "That's not standard. That's not... safe."
+            athought "Why would they expose three sectors completely?"
+            athought "Unless..."
+            athought "Unless they're not worried about protection. Because nothing's there to protect."
+            athought "But that doesn't make sense. Thousands of people live in those sectors."
+            athought "...Don't they?"
+            athought "I'm missing something. But I can't see it."
+
+        "Dismiss it—too exhausted to think clearly.":
+            $ record_choice_once(_current_scene_id, "dismissed_energy")
+
+            athought "I'm too tired for this. Seeing problems where there aren't any."
+            athought "It's maintenance. Routine. Boring. Nothing to worry about."
+            athought "I need to stop looking for horror everywhere."
 
     # ==========================================
     # DISCOVERY 3: MARCUS'S ORDERS
     # ==========================================
-    "{i}Notification. Incoming transmission. High priority. Command level.{/i}"
-    "{i}Source: High Marshal Marcus Rylan.{/i}"
+    "Notification. Incoming transmission. High priority. Command level."
+    "Source: High Marshal Marcus Rylan."
 
-    a "{i}Father. He only calls when he needs Glass.{/i}"
-    a "{i}What now? Another mission? Another sector to erase?{/i}"
+    athought "Father. He only calls when he needs Glass."
+    athought "What now? Another mission? Another sector to erase?"
 
     m "Glass. Status report."
     a "Sector 10 sweep complete. Mission successful."
@@ -141,7 +143,7 @@ label act1_investigation:
     if em >= 2:
         a "800 confirmed. Zero survivors."
         m "(pause) ...Excellent. Clean execution."
-        a "{i}He believes it. The lie holds.{/i}"
+        athought "He believes it. The lie holds."
     else:
         a "800 confirmed."
         m "Within parameters. Good."
@@ -153,9 +155,9 @@ label act1_investigation:
     m "(cuts him off) You've earned rest, Glass. Tonight, you watch. You don't act."
     m "Report to command deck. Observation only. Understood?"
 
-    a "{i}Observation duty? Marcus never assigns me observation.{/i}"
-    a "{i}He uses me to cut. Not to watch.{/i}"
-    a "{i}What's happening tonight that he wants me to SEE but not DO?{/i}"
+    athought "Observation duty? Marcus never assigns me observation."
+    athought "He uses me to cut. Not to watch."
+    athought "What's happening tonight that he wants me to SEE but not DO?"
 
     a "...Understood. 2000 hours. Command deck."
     m "Good. Project Renewal executes tonight. You'll witness history."
@@ -163,104 +165,106 @@ label act1_investigation:
 
     # If has device, try searching for 'Project Renewal'
     if has_device or em >= 1:
-        "{i}Searches Zira's network: 'Project Renewal.'{/i}"
-        "{i}No results. No mentions. Completely dark.{/i}"
-        a "{i}Nothing. Either it's too classified or too new.{/i}"
-        a "{i}Zira doesn't know. Resistance doesn't know.{/i}"
-        a "{i}Only Marcus knows. And he wants me to watch.{/i}"
+        "Searches Zira's network: 'Project Renewal.'"
+        "No results. No mentions. Completely dark."
+        athought "Nothing. Either it's too classified or too new."
+        athought "Zira doesn't know. Resistance doesn't know."
+        athought "Only Marcus knows. And he wants me to watch."
 
     # ==========================================
     # DISCOVERY 4: TROOP MOVEMENTS
     # ==========================================
-    "{i}Deployment schedules. Troop movements. Routine checks.{/i}"
-    "{i}[DEPLOYMENT] - All Echelon units: Evacuate Sectors 8-10 by 1900 hours.{/i}"
-    "{i}[DEPLOYMENT] - Redeployment to Upper Aeries. Command deck observation stations.{/i}"
-    "{i}[DEPLOYMENT] - Civilian personnel: Shelter-in-place orders. Sectors 8-10.{/i}"
+    "Deployment schedules. Troop movements. Routine checks."
+    "[DEPLOYMENT] - All Echelon units: Evacuate Sectors 8-10 by 1900 hours."
+    "[DEPLOYMENT] - Redeployment to Upper Aeries. Command deck observation stations."
+    "[DEPLOYMENT] - Civilian personnel: Shelter-in-place orders. Sectors 8-10."
 
-    a "{i}Evacuate Echelon personnel. But civilians shelter-in-place?{/i}"
-    a "{i}That's backwards. If something dangerous is happening, you evacuate civilians first.{/i}"
-    a "{i}Unless...{/i}"
-    a "{i}Unless you don't want civilians to leave.{/i}"
-    a "{i}Unless you want them exactly where they are.{/i}"
-    a "{i}Contained. Counted. Targeted.{/i}"
+    athought "Evacuate Echelon personnel. But civilians shelter-in-place?"
+    athought "That's backwards. If something dangerous is happening, you evacuate civilians first."
+    athought "Unless..."
+    athought "Unless you don't want civilians to leave."
+    athought "Unless you want them exactly where they are."
+    athought "Contained. Counted. Targeted."
 
-    a "{i}No. No, that's not—{/i}"
-    a "{i}Father wouldn't—{/i}"
-    a "{i}The system wouldn't—{/i}"
-    a "{i}It's a drill. Security exercise. Testing evacuation protocols.{/i}"
-    a "{i}That's why Echelon evacuates and civilians shelter. It's a test.{/i}"
-    a "{i}It has to be a test.{/i}"
+    athought "No. No, that's not—"
+    athought "Father wouldn't—"
+    athought "The system wouldn't—"
+    athought "It's a drill. Security exercise. Testing evacuation protocols."
+    athought "That's why Echelon evacuates and civilians shelter. It's a test."
+    athought "It has to be a test."
 
     # ==========================================
     # SYNTHESIS
     # ==========================================
-    "{i}He stands. Paces. The room feels smaller.{/i}"
+    "He stands. Paces. The room feels smaller."
 
-    a "{i}Resistance networks active. Survivors evacuating. That's good.{/i}"
-    a "{i}Energy maintenance scheduled. Shields offline. That's... concerning.{/i}"
-    a "{i}Project Renewal. Marcus wants me to witness. That's... what?{/i}"
-    a "{i}Troop evacuations. Civilians locked down. That's...{/i}"
-    a "{i}The pieces don't fit. Or they do and I'm not seeing it.{/i}"
-    a "{i}Something's happening tonight. Something big.{/i}"
-    a "{i}Zira warned me. 'Days not weeks.' She meant tonight.{/i}"
+    athought "Resistance networks active. Survivors evacuating. That's good."
+    athought "Energy maintenance scheduled. Shields offline. That's... concerning."
+    athought "Project Renewal. Marcus wants me to witness. That's... what?"
+    athought "Troop evacuations. Civilians locked down. That's..."
+    athought "The pieces don't fit. Or they do and I'm not seeing it."
+    athought "Something's happening tonight. Something big."
+    athought "Zira warned me. 'Days not weeks.' She meant tonight."
 
-    a "{i}I can't think. I'm too exhausted. Too broken.{/i}"
-    a "{i}Yesterday I killed 600 people. Shattered completely. Lyra held me together.{/i}"
-    a "{i}I can't handle more horror. Not today. Not yet.{/i}"
-    a "{i}It's a drill. Or a lockdown. Or infrastructure work.{/i}"
-    a "{i}It's not—it can't be—{/i}"
-    a "{i}Father wouldn't order mass extermination. The system has limits.{/i}"
-    a "{i}...Doesn't it?{/i}"
+    athought "I can't think. I'm too exhausted. Too broken."
+    athought "Yesterday I killed 600 people. Shattered completely. Lyra held me together."
+    athought "I can't handle more horror. Not today. Not yet."
+    athought "It's a drill. Or a lockdown. Or infrastructure work."
+    athought "It's not—it can't be—"
+    athought "Father wouldn't order mass extermination. The system has limits."
+    athought "...Doesn't it?"
 
     menu:
-        "The data sits there. Pieces scattered. Picture incomplete. Dread building.":
+        "The data sits there. Pieces scattered. Picture incomplete. Dread building."
+        "Keep digging—try to find the full picture.":
+            $ record_choice_once(_current_scene_id, "kept_investigating")
 
-            "Keep digging—try to find the full picture.":
-                $ record_choice_once(_current_scene_id, "kept_investigating")
-                "{i}He searches. Hours pass. Data upon data. Fragments. Pieces.{/i}"
-                "{i}But the picture won't form. Too classified. Too compartmentalized.{/i}"
-                a "{i}I can't find it. Whatever's happening, it's locked down tight.{/i}"
-                a "{i}Only Marcus knows. And he's not telling Glass.{/i}"
-                a "{i}He wants me to watch. To witness. To learn something.{/i}"
-                a "{i}But what?{/i}"
-                a "{i}I can't do this. I need air. I need to think.{/i}"
+            "He searches. Hours pass. Data upon data. Fragments. Pieces."
+            "But the picture won't form. Too classified. Too compartmentalized."
+            athought "I can't find it. Whatever's happening, it's locked down tight."
 
-            "Stop investigating—too exhausted to continue.":
-                $ record_choice_once(_current_scene_id, "stopped_investigating")
-                a "{i}I can't. I'm too tired. Too broken.{/i}"
-                a "{i}Whatever's happening... I'll find out at 2000 hours.{/i}"
-                a "{i}Marcus wants me on command deck. I'll see it then.{/i}"
-                a "{i}Right now I just need... air. Space. Distance from all of this.{/i}"
+            athought "Only Marcus knows. And he's not telling Glass."
+            athought "He wants me to watch. To witness. To learn something."
+            athought "But what?"
+            athought "I can't do this. I need air. I need to think."
+
+        "Stop investigating—too exhausted to continue.":
+            $ record_choice_once(_current_scene_id, "stopped_investigating")
+            
+            athought "I can't. I'm too tired. Too broken."
+            athought "Whatever's happening... I'll find out at 2000 hours."
+            athought "Marcus wants me on command deck. I'll see it then."
+            athought "Right now I just need... air. Space. Distance from all of this."
 
     # ==========================================
     # DECISION TO GO TO ROOFTOP
     # ==========================================
-    "{i}Afternoon light slants through the window. Hours until 2000.{/i}"
-    "{i}Time moves like sludge. Every minute heavy with dread.{/i}"
+    "Afternoon light slants through the window. Hours until 2000."
+    "Time moves like sludge. Every minute heavy with dread."
 
-    a "{i}I can't stay here. Staring at data I don't understand.{/i}"
-    a "{i}I need air. I need to think. I need to...{/i}"
-    a "{i}...I need to be somewhere Kael used to be.{/i}"
+    athought "I can't stay here. Staring at data I don't understand."
+    athought "I need air. I need to think. I need to..."
+    athought "...I need to be somewhere Kael used to be."
 
-    a "{i}The rooftop. Where you stood. Where you chose.{/i}"
-    a "{i}Maybe being there will help me understand.{/i}"
-    a "{i}Understand what's coming. Understand what I'm supposed to do.{/i}"
-    a "{i}Understand if any of this matters.{/i}"
+    athought "The rooftop. Where you stood. Where you chose."
+    athought "Maybe being there will help me understand."
+    athought "Understand what's coming. Understand what I'm supposed to do."
+    athought "Understand if any of this matters."
 
-    "{i}He grabs his jacket. The device goes in his pocket.{/i}"
-    "{i}One last look at the room. The terminal still glowing. Data still waiting.{/i}"
+    "He grabs his jacket. The device goes in his pocket."
+    "One last look at the room. The terminal still glowing. Data still waiting."
 
-    a "{i}200 people alive because I broke Glass.{/i}"
-    a "{i}Something big happening tonight because they warned others.{/i}"
-    a "{i}My mercy rippling outward. But into what?{/i}"
-    a "{i}Victory? Or catastrophe?{/i}"
+    athought "200 people alive because I broke Glass."
+    athought "Something big happening tonight because they warned others."
+    athought "My mercy rippling outward. But into what?"
+    athought "Victory? Or catastrophe?"
 
-    "{i}The corridor is empty. No officers. No servants. No witnesses.{/i}"
-    "{i}Just Glass, walking toward answers he doesn't want.{/i}"
+    "The corridor is empty. No officers. No servants. No witnesses."
+    "Just Glass, walking toward answers he doesn't want."
 
-    a "{i}2000 hours. Command deck. 'Witness history,' Father said.{/i}"
-    a "{i}But first... the rooftop. Where Kael made his choice.{/i}"
-    a "{i}Maybe I need to make mine.{/i}"
+    athought "2000 hours. Command deck. 'Witness history,' Father said."
+    athought "But first... the rooftop. Where Kael made his choice."
+    athought "Maybe I need to make mine."
 
     # Bookkeeping
     $ set_scene_flag(_current_scene_id, "completed")

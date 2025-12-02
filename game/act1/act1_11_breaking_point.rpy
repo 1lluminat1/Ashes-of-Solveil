@@ -22,24 +22,24 @@ label act1_breaking_point:
     # PROP: Brother photo face-up; mission envelope ajar (red seal catching specular).
     # SFX: Low wind through facade fins; HVAC click every ~10s; distant city thrum.
 
-    "{i}He lifts the photo. Glass cold against his fingertips.{/i}"
+    "He lifts the photo. Glass cold against his fingertips."
 
     # CAMERA: Tight on Aeron’s thumb smudge; micro hand-tremor (2–3 px bob).
     # FX: Subtle breath-condensation puff when he exhales near the glass.
 
-    a "{i}You always smiled like you belonged.{/i}"
-    a "{i}Fifteen. Your Band had three years. Then it turned on you.{/i}"
+    athought "You always smiled like you belonged."
+    athought "Fifteen. Your Band had three years. Then it turned on you."
 
-    "{i}He sets it down. Face-up. Eyes still smiling.{/i}"
+    "He sets it down. Face-up. Eyes still smiling."
 
     # CAMERA: Photo lands; tilt up to Aeron’s reflection in the glass; hold 1 beat.
     # LIGHTING: City stripe slides off the photo as if time passed.
 
-    a "{i}I used to hate you for leaving me here.{/i}"
-    a "{i}Now I think I understand why.{/i}"
-    a "{i}You couldn’t live as Glass. You couldn’t be Father’s weapon.{/i}"
-    a "{i}You jumped because the cage was worse than falling.{/i}"
-    a "{i}Not sadness. Not anger. Just the weight of breathing when there’s no reason left to.{/i}"
+    athought "I used to hate you for leaving me here."
+    athought "Now I think I understand why."
+    athought "You couldn’t live as Glass. You couldn’t be Father’s weapon."
+    athought "You jumped because the cage was worse than falling."
+    athought "Not sadness. Not anger. Just the weight of breathing when there’s no reason left to."
     # BLOCKING: Aeron stays half-lit, shoulders rounded; fingers flex once, unclench.
 
     # ------------------------------------------------------
@@ -47,73 +47,73 @@ label act1_breaking_point:
     # ------------------------------------------------------
     # LIGHTING: For OB-hard, keep him darker; mid adds a faint fill; EMP adds a soft rim from the balcony.
     if is_ob_hard:
-        a "{i}I don’t know if I’m angry anymore. Just tired.{/i}"
-        a "{i}Tired of pretending any of this means something. Tired of wasting efficiency on meaning.{/i}"
-        a "{i}Glass doesn’t dream. Glass concludes.{/i}"
+        athought "I don’t know if I’m angry anymore. Just tired."
+        athought "Tired of pretending any of this means something. Tired of wasting efficiency on meaning."
+        athought "Glass doesn’t dream. Glass concludes."
     elif is_mid:
-        a "{i}I don’t know if I’m angry anymore. Just tired.{/i}"
-        a "{i}Tired of pretending any of this means something.{/i}"
-        a "{i}Tired of following orders just to keep breathing.{/i}"
+        athought "I don’t know if I’m angry anymore. Just tired."
+        athought "Tired of pretending any of this means something."
+        athought "Tired of following orders just to keep breathing."
     else:
-        a "{i}I don’t know if I’m angry anymore. Just tired.{/i}"
-        a "{i}Tired of pretending any of this means something.{/i}"
-        a "{i}Maybe it could, if I still remembered how to feel.{/i}"
+        athought "I don’t know if I’m angry anymore. Just tired."
+        athought "Tired of pretending any of this means something."
+        athought "Maybe it could, if I still remembered how to feel."
     # ------------------------------------------------------
 
-    "{i}He opens the balcony door. Cold air moves through the room.{/i}"
+    "He opens the balcony door. Cold air moves through the room."
 
     # SFX: Door seal hiss; wind rush ramps + fabric flap.
     # FX: Papers lift a centimeter, envelope flutters, then settle.
-    "{i}He steps outside.{/i}"
+    "He steps outside."
 
     # CAMERA: Follow at shoulder; slight handheld drift (subtle).
-    "{i}The wind hits like a wall. Cold. Relentless. The kind that strips everything bare.{/i}"
+    "The wind hits like a wall. Cold. Relentless. The kind that strips everything bare."
 
     # LIGHTING: Cooler palette; add moving aerial beacons sweeping faintly.
 
-    "{i}Solveil stretches beneath him. Aeries above. Middle grinding between. Unders drowning below.{/i}"
+    "Solveil stretches beneath him. Aeries above. Middle grinding between. Unders drowning below."
 
     # CAMERA: Wide establishing — three-tier stack; tiny drone paths as moving specks.
     # FX: Low haze over the Unders; faint heat shimmer on distant stacks.
 
-    a "{i}All that structure. All that order. And none of it leaves room for people like me.{/i}"
-    a "{i}People like Kael.{/i}"
-    a "{i}Just Glass. Reflecting what they want. Cutting when commanded. Empty always.{/i}"
+    athought "All that structure. All that order. And none of it leaves room for people like me."
+    athought "People like Kael."
+    athought "Just Glass. Reflecting what they want. Cutting when commanded. Empty always."
 
     # BLOCKING: He leans into wind a degree; coat hem snaps; one foot inches closer to the rail.
 
-    "{i}A drone cuts through the lower air. Searchlight raking the tiers. Hunting. Always hunting.{/i}"
+    "A drone cuts through the lower air. Searchlight raking the tiers. Hunting. Always hunting."
 
     # LIGHTING: Volumetric cone sweeps across lower city; faint spill kisses balcony edge for a beat.
     # SFX: Far rotor thrum dopplers; scanner ping (very soft).
 
-    a "{i}They’ll keep searching long after I’m gone. The system doesn’t stop. It just replaces.{/i}"
-    a "{i}Glass breaks. They’ll make more. They always do.{/i}"
+    athought "They’ll keep searching long after I’m gone. The system doesn’t stop. It just replaces."
+    athought "Glass breaks. They’ll make more. They always do."
 
-    "{i}His hands find the rail. Metal bites through the cold—sharp, real.{/i}"
+    "His hands find the rail. Metal bites through the cold—sharp, real."
 
     # CAMERA: Insert on knuckles whitening; vein pulse visible.
     # FX: Condensation plume tears sideways in the wind.
 
-    a "{i}This is real. The only real thing left.{/i}"
+    athought "This is real. The only real thing left."
 
-    "{i}Below, the city breathes. Lights pulse like veins. Distance warps perspective.{/i}"
+    "Below, the city breathes. Lights pulse like veins. Distance warps perspective."
 
     # CAMERA: Slow tilt down; parallax exaggeration (shallow DOF).
 
-    a "{i}How far is it? Does it matter?{/i}"
-    a "{i}Glass shatters when it falls. Quick. Clean. Final.{/i}"
+    athought "How far is it? Does it matter?"
+    athought "Glass shatters when it falls. Quick. Clean. Final."
 
     # SFX: Wind peak gust; one loose antenna wire sings briefly.
 
-    "{i}His breath comes faster. Shallow. The air won’t fill his lungs.{/i}"
+    "His breath comes faster. Shallow. The air won’t fill his lungs."
 
     # FX: Breath plumes shorten; chest rise quickens (2x baseline).
-    a "{i}One last smoke...{/i}"
+    athought "One last smoke..."
 
     # PROP: Cigarette + matte-black lighter.
 
-    "{i}His hands shake as he lights it. Smoke climbs into the dark.{/i}"
+    "His hands shake as he lights it. Smoke climbs into the dark."
 
     # LIGHTING: Warm match pop lights his face for 0.5s; ember becomes tiny moving eye.
     # CAMERA: Profile CU; smoke shears sideways in gust; ash fleck lifts, disappears.
@@ -122,22 +122,22 @@ label act1_breaking_point:
 
     # SFX: Memory VO (Kael) with slight roof-echo IR; -6 dB, low-pass 3.5kHz.
 
-    a "{i}You stood right here. Right here.{/i}"
-    a "{i}Did it feel like this? Like the world was holding its breath?{/i}"
-    a "{i}Did you hesitate? Or did you just... let go?{/i}"
-    a "{i}You couldn’t be Glass. You refused to be Father’s weapon.{/i}"
-    a "{i}I became exactly what you warned me not to.{/i}"
-    a "{i}And now I understand why you jumped.{/i}"
-    a "{i}I wish you’d left a note. Something. Anything but silence.{/i}"
+    athought "You stood right here. Right here."
+    athought "Did it feel like this? Like the world was holding its breath?"
+    athought "Did you hesitate? Or did you just... let go?"
+    athought "You couldn’t be Glass. You refused to be Father’s weapon."
+    athought "I became exactly what you warned me not to."
+    athought "And now I understand why you jumped."
+    athought "I wish you’d left a note. Something. Anything but silence."
 
     # CAMERA: Drift toward toes at edge; reveal micro scuff marks on stone.
 
-    "{i}Gravity pulls. Subtle. Patient. It doesn’t demand. It waits.{/i}"
+    "Gravity pulls. Subtle. Patient. It doesn’t demand. It waits."
 
     # FX: Gentle camera down-tilt, 1–2° over two beats to sell pull.
 
-    a "{i}It would be easy. Easier than this.{/i}"
-    a "{i}Glass falls. Glass shatters. Glass doesn’t feel it.{/i}"
+    athought "It would be easy. Easier than this."
+    athought "Glass falls. Glass shatters. Glass doesn’t feel it."
 
     # LIGHTING: City strobes blink; balcony remains static, isolating him.
 
@@ -145,33 +145,33 @@ label act1_breaking_point:
 
     # SFX: Memory VO (Marcus), dry hall reverb; -4 dB; mono.
 
-    a "{i}Fate. Destiny. Providence. Just prettier words for failure.{/i}"
-    a "{i}You said fate. Then you made me Glass.{/i}"
-    a "{i}Ten years. 390 operations. Perfect obedience. Perfect emptiness.{/i}"
+    athought "Fate. Destiny. Providence. Just prettier words for failure."
+    athought "You said fate. Then you made me Glass."
+    athought "Ten years. 390 operations. Perfect obedience. Perfect emptiness."
 
     l "Glass is breaking. That might be what saves you."
 
     # SFX: Memory VO (Lyra), intimate proximity; + breath; very light stereo.
 
-    a "{i}She sees it. The cracks spreading.{/i}"
-    a "{i}Glass recognizes glass.{/i}"
-    a "{i}Maybe she’s right. Maybe breaking is the only way out.{/i}"
+    athought "She sees it. The cracks spreading."
+    athought "Glass recognizes glass."
+    athought "Maybe she’s right. Maybe breaking is the only way out."
 
-    "{i}Inside, the mission waits. Orders. Objectives. Another way to be useful without being whole.{/i}"
+    "Inside, the mission waits. Orders. Objectives. Another way to be useful without being whole."
 
     # CAMERA: Over-shoulder back toward room: red seal on envelope glows faint in darkness.
 
-    a "{i}Sweep. Secure. Eliminate. As if purpose and violence are the same thing.{/i}"
-    a "{i}Operation 391. Glass completes missions. Glass obeys.{/i}"
-    a "{i}Maybe that’s all I am now. A weapon Father points at problems he can’t solve with speeches.{/i}"
+    athought "Sweep. Secure. Eliminate. As if purpose and violence are the same thing."
+    athought "Operation 391. Glass completes missions. Glass obeys."
+    athought "Maybe that’s all I am now. A weapon Father points at problems he can’t solve with speeches."
 
     # BLOCKING: His heel lifts, wobbles, then settles back to rail contact.
 
-    "{i}One more step. That’s all it takes.{/i}"
+    "One more step. That’s all it takes."
 
     # CAMERA: Extreme CU on boot edge over the drop; hold 1 beat.
 
-    a "{i}Gravity does the rest.{/i}"
+    athought "Gravity does the rest."
 
     # FX: Wind lull (duck ambience -5 dB) to create vacuum before choice.
 
@@ -180,12 +180,12 @@ label act1_breaking_point:
     # ------------------------------------------------------
     # LIGHTING: OB-hard → balcony darkens slightly; EMP → faint, warmer rim from room interior.
     if is_ob_hard:
-        a "{i}Father made me efficient. Ending myself would just be another operation.{/i}"
-        a "{i}Quick. Clean. No deviation.{/i}"
+        athought "Father made me efficient. Ending myself would just be another operation."
+        athought "Quick. Clean. No deviation."
     elif is_mid:
-        a "{i}I don’t know if I want to die or stop being this thing he made.{/i}"
+        athought "I don’t know if I want to die or stop being this thing he made."
     else:
-        a "{i}Maybe breaking doesn’t mean ending. Maybe it means finally beginning.{/i}"
+        athought "Maybe breaking doesn’t mean ending. Maybe it means finally beginning."
     # ------------------------------------------------------
 
     # === MENU: no alignment change; record only ===
@@ -200,8 +200,8 @@ label act1_breaking_point:
 
             # BLOCKING: Weight shifts forward; center of mass crosses toes.
             # CAMERA: Micro dolly-in (10 cm); vertigo lens breath (very slight).
-            a "{i}Just one more step...{/i}"
-            a "{i}Glass falls. Glass breaks. Glass—{/i}"
+            athought "Just one more step..."
+            athought "Glass falls. Glass breaks. Glass—"
 
         "Step back":
             $ record_choice_once(
@@ -213,22 +213,22 @@ label act1_breaking_point:
 
             # BLOCKING: Heel plants; knee unlocks; grip loosens on rail (fingers unclench).
             # CAMERA: Gentle pull-back to chest; breath steadies by 10%.
-            a "{i}I can’t keep living like this...{/i}"
-            a "{i}But maybe... maybe breaking doesn’t mean falling.{/i}"
-            a "{i}Maybe it means shattering the Glass and finding what’s underneath.{/i}"
+            athought "I can’t keep living like this..."
+            athought "But maybe... maybe breaking doesn’t mean falling."
+            athought "Maybe it means shattering the Glass and finding what’s underneath."
 
-    "{i}A knock at the door. Sharp. Sudden. Like fate rapping on the walls.{/i}"
+    "A knock at the door. Sharp. Sudden. Like fate rapping on the walls."
 
     # SFX: Three distinct knocks (wood on metal), 180ms apart; slight room slapback.
     # CAMERA: Whip-pan to door frame silhouette; balcony wind drops 30% momentarily.
-    "{i}He drops back to stone. The city noise thins; his heartbeat doesn’t.{/i}"
+    "He drops back to stone. The city noise thins; his heartbeat doesn’t."
 
     # FX: Heartbeat underlay (40 Hz thump), -16 dB, 2 beats then fade.
 
-    a "{i}Who...?{/i}"
+    athought "Who...?"
 
     # BLOCKING: Hand leaves rail; other hand wipes at eye line with back of knuckles.
-    "{i}His hands won’t stop shaking. He wipes his eyes—just in case.{/i}"
+    "His hands won’t stop shaking. He wipes his eyes—just in case."
 
     # CAMERA: CU on glove back crossing lower lid; catch tiny moisture line; cut.
 
@@ -237,18 +237,18 @@ label act1_breaking_point:
     # ------------------------------------------------------
     # LIGHTING: Slight warm spill from interior on his cheek when he turns.
     if is_ob_hard:
-        a "{i}Efficiency interrupted. Fate disagrees.{/i}"
+        athought "Efficiency interrupted. Fate disagrees."
         $ set_scene_flag(scene_id, "aeron_accepted_death")
     elif is_mid:
-        a "{i}Someone always knocks before the fall.{/i}"
+        athought "Someone always knocks before the fall."
         $ set_scene_flag(scene_id, "aeron_contemplated")
     else:
-        a "{i}Maybe that knock was the world reminding me I’m still here.{/i}"
+        athought "Maybe that knock was the world reminding me I’m still here."
         $ set_scene_flag(scene_id, "aeron_reconsidered")
     # ------------------------------------------------------
 
-    a "{i}Glass doesn’t cry. Glass doesn’t break.{/i}"
-    a "{i}Not in front of anyone.{/i}"
+    athought "Glass doesn’t cry. Glass doesn’t break."
+    athought "Not in front of anyone."
     
     # CAMERA: End on profile silhouette; ember dims; wind carries smoke away; hold 1 beat, then cut.
 

@@ -6,6 +6,14 @@
 # - Telemetry (Mermaid/JSONL) only writes when config.developer and telemetry_on = True.
 
 init python:
+    # Dev hook: default no-op; dev_tools.rpy will install a real one in dev.
+    DEV_AFTER_CHOICE = None
+
+    def _set_dev_after_choice(fn):
+        global DEV_AFTER_CHOICE
+        DEV_AFTER_CHOICE = fn
+
+init python:
     import os, re, json, datetime
 
     # =========================
@@ -74,6 +82,8 @@ init python:
         },
 
         "stats": { "people_saved": 0, "people_killed": 600, "resistance_strength": 0, "major_victories": 0, "major_losses": 0 },
+
+        "codex": {},
 
         "sys":   {
             "debug_mode": False,
@@ -183,113 +193,15 @@ init python:
     # =========================
     # PLAYER VALUE GETTERS
     # =========================
-    python early:
-        def get_saved() -> int:
-            return max(0, STATE["player"].get("civilians_saved", 0))
-
-        def get_killed() -> int:
-            return max(0, STATE["player"].get("civilians_killed", 0))
-
-        def get_mercy() -> int:
-            return max(0, STATE["player"].get("evidence_of_mercy", 0))
-
-        def get_suspicion() -> int:
-            return max(0, STATE["player"].get("team_suspicion", 0))
-
-        # Convenience thresholds
-        def mercy_ge(n: int) -> bool:
-            return get_mercy() >= n
-
-        def mercy_any() -> bool:
-            return get_mercy() >= 1
-
-        def mercy_heavy() -> bool:
-            return get_mercy() >= 3
-
-        # Optional: small formatter helpers if you prefer explicit strings in text tags
-        def saved_str() -> str:
-            return str(get_saved())
-
-        def killed_str() -> str:
-            return str(get_killed())
-
-
-    # =========================
-    # ALIGNMENT / EMP–OB
-    # =========================
-    USE_EMPATHY_CLAMP = False     # Toggle: set True to enforce rails
-    EMPATHY_MIN = -12
-    EMPATHY_MAX =  12
-    EMP_EDGE = 3
-    RECENT_N = 6
-
-    def _push_recent(delta):
-        arr = STATE["player"]["recent_empathy"]
-        arr.append(int(delta))
-        if len(arr) > RECENT_N:
-            del arr[0:len(arr)-RECENT_N]
-
-    def clamp_empathy():
-        if not USE_EMPATHY_CLAMP:
-            return
-        s = STATE["player"]["empathy_score"]
-        STATE["player"]["empathy_score"] = max(EMPATHY_MIN, min(EMPATHY_MAX, s))
-
-    def adjust_empathy(amount):
-        _push_recent(amount)
-        STATE["player"]["empathy_score"] += int(amount)
-        clamp_empathy()
-
-    def adjust_empathy_once(scene_id: str, token: str, amount: int) -> bool:
-        """
-        Increase/decrease empathy exactly once per (scene_id, token).
-        Returns True if applied now, False if it was already granted.
-        """
-        key = f"emp_once:{token}"
-        if scene_has(scene_id, key):
-            return False
-        adjust_empathy(amount)
-        scene_mark(scene_id, key)
-        return True
-
-    def empathy_norm():
-        # 0..1 normalized for UI (clamped)
-        rng = float(EMPATHY_MAX - EMPATHY_MIN)
-        s = float(STATE["player"]["empathy_score"])
-        v = (s - EMPATHY_MIN) / rng
-        return max(0.0, min(1.0, v))
-
-    def empathy_band():
-        s = STATE["player"]["empathy_score"]
-        if s >= EMP_EDGE: return "empathy"
-        if s <= -EMP_EDGE: return "obedience"
-        return "conflicted"
-
-    def alignment_tier():
-        s = int(STATE["player"]["empathy_score"])
-        if s <= -9: return "OB3"
-        if s <= -5: return "OB2"
-        if s <= -1: return "OB1"
-        if s == 0:  return "C"
-        if s <= 4:  return "EMP1"
-        if s <= 8:  return "EMP2"
-        return "EMP3"
-
-    def alignment_desc():
-        return {
-            "OB3":"Iron Obedience","OB2":"Hard Obedience","OB1":"Leaning Obedience",
-            "C":"Conflicted","EMP1":"Leaning Empathy","EMP2":"Strong Empathy","EMP3":"Conviction Empathy"
-        }[alignment_tier()]
-
-    def alignment_momentum():
-        arr = STATE["player"]["recent_empathy"]
-        if not arr: return 0.0
-        total = sum(arr); max_sum = max(1.0, RECENT_N * 3.0)
-        return max(-1.0, min(1.0, total / max_sum))
-
-    def pass_tier(*tiers): return alignment_tier() in tiers
-    def pass_emp(): return STATE["player"]["empathy_score"] >= EMP_EDGE
-    def pass_ob():  return STATE["player"]["empathy_score"] <= -EMP_EDGE
+    def get_saved() -> int:      return max(0, STATE["player"].get("civilians_saved", 0))
+    def get_killed() -> int:     return max(0, STATE["player"].get("civilians_killed", 0))
+    def get_mercy() -> int:      return max(0, STATE["player"].get("evidence_of_mercy", 0))
+    def get_suspicion() -> int:  return max(0, STATE["player"].get("team_suspicion", 0))
+    def mercy_ge(n: int) -> bool:    return get_mercy() >= n
+    def mercy_any() -> bool:         return get_mercy() >= 1
+    def mercy_heavy() -> bool:       return get_mercy() >= 3
+    def saved_str() -> str:          return str(get_saved())
+    def killed_str() -> str:         return str(get_killed())
 
     # =========================
     # PATHING (RATIO-BASED) — Candidate & Lock
@@ -341,114 +253,52 @@ init python:
         STATE["canon"]["chip_accepted"] = bool(accepted)
 
     # =========================
-    # ONE-CALL CHOICE (idempotent + ratios + logged)
+    # ALIGNMENT / EMP–OB
     # =========================
-    # Per-act files (rename per act if you want separate graphs/logs)
-    MERMAID_PATH = os.path.join(config.basedir, "dev_graph_act1.mmd")
-    JSONL_PATH   = os.path.join(config.basedir, "devlog_act1.jsonl")
+    USE_EMPATHY_CLAMP = False     # Toggle: set True to enforce rails
+    EMPATHY_MIN = -12
+    EMPATHY_MAX =  12
+    EMP_EDGE = 3
+    RECENT_N = 6
 
-    # Mermaid helpers
-    def _sanitize_id(s): return re.sub(r"[^A-Za-z0-9_]", "_", s)
-    def _ensure_mermaid_header():
-        if not os.path.exists(MERMAID_PATH) or os.path.getsize(MERMAID_PATH) == 0:
-            with open(MERMAID_PATH, "w", encoding="utf-8") as f:
-                f.write("flowchart TD\n")
+    def empathy_norm():
+        # 0..1 normalized for UI (clamped)
+        rng = float(EMPATHY_MAX - EMPATHY_MIN)
+        s = float(STATE["player"]["empathy_score"])
+        v = (s - EMPATHY_MIN) / rng
+        return max(0.0, min(1.0, v))
 
-    def _telemetry_enabled():
-        return bool(getattr(config, "developer", True) and STATE["sys"].get("telemetry_on", True))
+    def empathy_band():
+        s = STATE["player"]["empathy_score"]
+        if s >= EMP_EDGE: return "empathy"
+        if s <= -EMP_EDGE: return "obedience"
+        return "conflicted"
 
-    # --- ONE CALL to rule them all ---
-    def apply_choice_once(scene_id: str,
-                        token: str,
-                        weight: str,                 # "EMP" | "OB" | "NEU"
-                        factor: int = 1,
-                        next_scene_label: str = "",
-                        echelon_delta: int = 0,
-                        resistance_delta: int = 0,
-                        note: str = None) -> bool:
-        """
-        Adjusts empathy ONCE (w/ momentum), updates ratio counters,
-        applies rep deltas, writes JSONL + Mermaid (if telemetry enabled),
-        and logs a short overlay line.
-        Returns True if the empathy/record was applied now (first time).
-        """
-        w = (weight or "NEU").upper()
-        delta = 0
-        if w == "EMP": delta = +abs(int(factor))
-        elif w == "OB": delta = -abs(int(factor))
+    def alignment_tier():
+        s = int(STATE["player"]["empathy_score"])
+        if s <= -9: return "OB3"
+        if s <= -5: return "OB2"
+        if s <= -1: return "OB1"
+        if s == 0:  return "C"
+        if s <= 4:  return "EMP1"
+        if s <= 8:  return "EMP2"
+        return "EMP3"
 
-        # --- Idempotent empathy (or neutral once-mark) ---
-        applied = False
-        if delta != 0:
-            applied = adjust_empathy_once(scene_id, token, delta)
-        else:
-            key = f"choice_once:{token}"
-            if not scene_has(scene_id, key):
-                scene_mark(scene_id, key)
-                applied = True  # recorded this neutral choice once
+    def alignment_desc():
+        return {
+            "OB3":"Iron Obedience","OB2":"Hard Obedience","OB1":"Leaning Obedience",
+            "C":"Conflicted","EMP1":"Leaning Empathy","EMP2":"Strong Empathy","EMP3":"Conviction Empathy"
+        }[alignment_tier()]
 
-        # --- Ratio counters (opportunity + taken) ---
-        if w in ("EMP","OB"):
-            if w == "EMP": STATE["player"]["opp_emp"]  += 1
-            else:          STATE["player"]["opp_ob"]   += 1
-            if applied:
-                if w == "EMP": STATE["player"]["took_emp"] += 1
-                else:          STATE["player"]["took_ob"]  += 1
+    def alignment_momentum():
+        arr = STATE["player"]["recent_empathy"]
+        if not arr: return 0.0
+        total = sum(arr); max_sum = max(1.0, RECENT_N * 3.0)
+        return max(-1.0, min(1.0, total / max_sum))
 
-        # --- Reputation (optional deltas) ---
-        if echelon_delta:    STATE["rep"]["echelon"]    += int(echelon_delta)
-        if resistance_delta: STATE["rep"]["resistance"] += int(resistance_delta)
-
-        # --- Overlay log (debug) ---
-        if note:
-            log_line(f"{scene_id}:{token} -> {w} x{factor} | ΔECH {echelon_delta} ΔRES {resistance_delta} | applied={applied}")
-
-        # --- JSONL telemetry ---
-        if _telemetry_enabled():
-            try:
-                ts = datetime.datetime.utcnow().isoformat()
-                row = {
-                    "ts": ts, "scene_id": scene_id, "token": token,
-                    "weight": w, "factor": factor, "applied": applied,
-                    "emp_score": STATE["player"]["empathy_score"],
-                    "emp_band": empathy_band(), "tier": alignment_tier(),
-                    "momentum": alignment_momentum(),
-                    "rep_echelon": STATE["rep"]["echelon"],
-                    "rep_resistance": STATE["rep"]["resistance"],
-                    "candidate": STATE["canon"].get("path_candidate"),
-                    "path_state": STATE["canon"].get("path_state"),
-                    "next_scene_label": next_scene_label,
-                }
-                with open(JSONL_PATH, "a", encoding="utf-8") as jf:
-                    jf.write(json.dumps(row) + "\n")
-            except Exception:
-                pass
-
-        # --- Mermaid edge (deduped) ---
-        if next_scene_label and _telemetry_enabled():
-            try:
-                _ensure_mermaid_header()
-                src_id = _sanitize_id(scene_id or "Unknown")
-                dst_id = _sanitize_id(next_scene_label)
-                parts = []
-                if w == "EMP" and factor: parts.append(f"EMP+{abs(int(factor))}")
-                if w == "OB"  and factor: parts.append(f"OB+{abs(int(factor))}")
-                if echelon_delta:    parts.append(("ECH+" if echelon_delta>0 else "ECH") + str(echelon_delta))
-                if resistance_delta: parts.append(("RES+" if resistance_delta>0 else "RES") + str(resistance_delta))
-                edge_label = f"{token} / " + " ".join(parts) if parts else token
-                edge_line = f'  {src_id}["{scene_id}"] -->|{edge_label}| {dst_id}["{next_scene_label}"]\n'
-                if edge_line not in STATE["sys"]["edges_seen"]:
-                    with open(MERMAID_PATH, "a", encoding="utf-8") as mf:
-                        mf.write(edge_line)
-                    STATE["sys"]["edges_seen"].add(edge_line)
-            except Exception:
-                pass
-
-        return applied
-
-    def record_choice_once(scene_id: str, token: str, next_scene_label: str = "", note: str = None):
-        return apply_choice_once(scene_id, token, "NEU", factor=0,
-                                next_scene_label=next_scene_label, note=note)
+    def pass_tier(*tiers): return alignment_tier() in tiers
+    def pass_emp(): return STATE["player"]["empathy_score"] >= EMP_EDGE
+    def pass_ob():  return STATE["player"]["empathy_score"] <= -EMP_EDGE
 
     # Flavor gate helper (kept for convenience)
     def align_flavor():
@@ -462,6 +312,132 @@ init python:
         if is_ob_hard: return ob
         if is_mid:     return mid
         return emp
+
+    def _push_recent(delta):
+        arr = STATE["player"]["recent_empathy"]
+        arr.append(int(delta))
+        if len(arr) > RECENT_N:
+            del arr[0:len(arr)-RECENT_N]
+
+    def clamp_empathy():
+        if not USE_EMPATHY_CLAMP:
+            return
+        s = STATE["player"]["empathy_score"]
+        STATE["player"]["empathy_score"] = max(EMPATHY_MIN, min(EMPATHY_MAX, s))
+
+    # Optional, used by your doctrine soft-lock scene
+    def apply_empathy_with_mod(base_delta: int) -> int:
+        """
+        Apply per-scene empathy with temporary decay/boost windows (if you've set them).
+        Returns the actual applied delta (for UI flavor if needed).
+        """
+        mod = 0
+        if STATE.get("empathy_decay_steps", 0) > 0:
+            mod -= STATE.get("empathy_decay", 0)
+            STATE["empathy_decay_steps"] -= 1
+        if STATE.get("emp_boost_window", 0) > 0:
+            mod += 1
+            STATE["emp_boost_window"] -= 1
+
+        actual = base_delta + mod
+        if actual != 0:
+            adjust_empathy(actual)
+        return actual
+
+    def adjust_empathy(amount):
+        _push_recent(amount)
+        STATE["player"]["empathy_score"] += int(amount)
+        clamp_empathy()
+
+    def _mark_once(scene_id: str, prefix: str, token: str) -> bool:
+        """
+        Idempotent scene marker. Returns True if we're marking this now (first time).
+        """
+        key = f"{prefix}:{token}"
+        if scene_has(scene_id, key): return False
+        scene_mark(scene_id, key)
+        return True
+
+    def adjust_empathy_once(scene_id: str, token: str, amount: int) -> bool:
+        key = f"emp_once:{token}"
+        if scene_has(scene_id, key):
+            return False
+        adjust_empathy(amount)
+        scene_mark(scene_id, key)
+        return True
+
+    # =========================
+    # ONE-CALL CHOICE (idempotent + ratios + logged)
+    # =========================
+    def apply_choice_once(scene_id: str,
+                        token: str,
+                        weight: str,              # "EMP" | "OB" | "NEU"
+                        factor: int = 1,
+                        next_scene_label: str = "",   # kept for caller convenience; no dev I/O here
+                        echelon_delta: int = 0,
+                        resistance_delta: int = 0,
+                        note: str = None) -> bool:
+        """
+        RUNTIME ONLY: adjust empathy once, update ratio counters (with idempotent opportunity),
+        apply optional reputation deltas. Returns True if the empathy/taken mark applied now.
+        No files, no mermaid, no dev logs.
+        """
+        w = (weight or "NEU").upper()
+        # -- 1 Mark the opportunity exactly once --
+        if w in ("EMP", "OB"):
+            if _mark_once(scene_id, "opp", token):
+                if w == "EMP": STATE["player"]["opp_emp"] += 1
+                else:          STATE["player"]["opp_ob"]  += 1
+
+        # -- 2 Idempotent empathy/taken mark --
+        delta = 0
+        if w == "EMP": delta = +abs(int(factor))
+        elif w == "OB": delta = -abs(int(factor))
+
+        applied = False
+        if delta != 0:
+            applied = adjust_empathy_once(scene_id, token, delta)
+            if applied:
+                if w == "EMP": STATE["player"]["took_emp"] += 1
+                else:          STATE["player"]["took_ob"]  += 1
+        else:
+            # NEU choice recorded once (for flow analytics / gates if you need)
+            applied = _mark_once(scene_id, "choice", token)
+
+        # -- 3 Optional rep deltas --
+        if echelon_delta:    STATE["rep"]["echelon"]    += int(echelon_delta)
+        if resistance_delta: STATE["rep"]["resistance"] += int(resistance_delta)
+
+        # Keep any quick overlay note in memory only (no file I/O)
+        if note:
+            log_line(f"{scene_id}:{token} -> {w} x{factor} | ΔECH {echelon_delta} ΔRES {resistance_delta} | applied={applied}")
+
+        return applied
+
+    def record_choice_once(scene_id: str, token: str, next_scene_label: str = "", note: str = None) -> bool:
+        """
+        RUNTIME ONLY: record a neutral branch selection exactly once. No dev I/O.
+        """
+        return apply_choice_once(scene_id, token, "NEU", factor=0,
+                                next_scene_label=next_scene_label, note=note)
+
+    def choice_and_dev(scene_id, token, weight, factor=1,
+                    next_scene_label="", echelon_delta=0, resistance_delta=0, note=None):
+        """
+            Story-safe wrapper:
+            1 applies state via apply_choice_once(...)
+            2 if a dev hook is installed, mirrors to JSONL/Mermaid (dev only)
+        """
+        applied = apply_choice_once(scene_id, token, weight, factor=factor,
+                                    next_scene_label=next_scene_label,
+                                    echelon_delta=echelon_delta, resistance_delta=resistance_delta,
+                                    note=note)
+        fn = DEV_AFTER_CHOICE
+        if fn:
+            fn(scene_id, token, weight, factor, applied,
+            next_scene_label=next_scene_label,
+            echelon_delta=echelon_delta, resistance_delta=resistance_delta)
+        return applied
 
     # =========================
     # OPERATIONS SNAPSHOT (start/end)
@@ -535,24 +511,37 @@ init python:
         q = STATE["sys"]["logs"]
         q.append(str(text))
         if len(q) > 12: del q[:len(q)-12]
+    
+    # ---------- Foundations / schema ----------
+    STATE_SCHEMA_VERSION = 2  # bump if you change structure
 
-screen solveil_debug_overlay():
-    if STATE["sys"]["debug_mode"]:
-        frame:
-            xalign 0.01 yalign 0.01
-            vbox:
-                text "DEBUG MODE: ON" size 16 color "#00ff00"
-                text "Lyra Trust: [trust('Lyra')]" size 12
-                text "Zira Loyalty: [loyalty('Zira')]" size 12
-                text "Rep(Unders): [STATE['rep']['unders']]" size 12
-                text "Credits: [STATE['inv']['credits']]" size 12
-                text "Days Remaining: [STATE['player']['days_remaining']]" size 12
-                $ s  = STATE['player']['empathy_score']
-                $ b  = empathy_band()
-                $ t  = alignment_tier()
-                $ m  = round(alignment_momentum(), 2)
-                text "Empathy: [s]  Band: [b]  Tier: [t]  Momentum: [m]" size 12
+    def is_dev_build() -> bool:
+        # True ONLY when Ren'Py developer mode is on
+        return bool(getattr(config, "developer", False))
 
-init python:
-    if "solveil_debug_overlay" not in config.overlay_screens:
-        config.overlay_screens.append("solveil_debug_overlay")
+    # Top-level, author-friendly facades (doesn't change your existing shape)
+    STATE.setdefault("flags", {})     # generic story flags (soft/one-off)
+    STATE.setdefault("metrics", {})   # counters that aren't "stats"
+
+    def flag(k, v=None):
+        if v is None:
+            return bool(STATE["flags"].get(k, False))
+        STATE["flags"][k] = bool(v)
+
+    def metric(k, delta=0, set_to=None):
+        if set_to is not None:
+            STATE["metrics"][k] = int(set_to)
+        else:
+            STATE["metrics"][k] = int(STATE["metrics"].get(k, 0)) + int(delta)
+        return STATE["metrics"][k]
+
+    def ensure_schema_migrations():
+        # Example guard expansion; add real migrations as you evolve
+        STATE.setdefault("flags", {})
+        STATE.setdefault("metrics", {})
+        sys = STATE.setdefault("sys", {})
+        sys.setdefault("edges_seen", set())
+        sys.setdefault("telemetry_on", True)
+
+    if ensure_schema_migrations not in config.after_load_callbacks:
+        config.after_load_callbacks.append(ensure_schema_migrations)

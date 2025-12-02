@@ -25,11 +25,11 @@ label act2_activity_05_earn_reputation:
     # LIGHTING: Gray dawn through window. Cold but hopeful.
     # SOUND: City waking. Distant voices. Life continuing.
 
-    "{i}Day [current_day]. Time to face the people who hate me.{/i}"
+    "Day [current_day]. Time to face the people who hate me."
     
     # VISUAL: Aeron adjusting Unders clothes. Lyra watching.
-    a "{i}Zira said earn reputation. Help people. Change perceptions.{/i}"
-    a "{i}Sounds simple. Except everyone down here wants me dead.{/i}"
+    athought "Zira said earn reputation. Help people. Change perceptions."
+    athought "Sounds simple. Except everyone down here wants me dead."
 
     l "You sure about this?"
     a "No. But we need allies. This is how we get them."
@@ -47,10 +47,10 @@ label act2_activity_05_earn_reputation:
 
     # Optional EMP/OB flavor: pre-departure mindset
     if get_empathy_band() != "obedience":
-        a "{i}One person at a time. Names, not numbers.{/i}"
+        athought "One person at a time. Names, not numbers."
         $ adjust_empathy_once("act2_rep_pre_departure_emp", +1)
     else:
-        a "{i}Small wins compound. Optimize for visible outcomes.{/i}"
+        athought "Small wins compound. Optimize for visible outcomes."
         $ adjust_empathy_once("act2_rep_pre_departure_ob", -1)
 
     # TRANSITION: Out into the Unders. Morning market. People moving. Life happening.
@@ -60,19 +60,19 @@ label act2_activity_05_earn_reputation:
 
     scene bg_lower_spans_market with fade
 
-    "{i}The market. Where I swept. Where they died. Where some lived.{/i}"
-    "{i}Every corner holds ghosts. Every face could be someone I saved or someone who lost everything because of me.{/i}"
+    "The market. Where I swept. Where they died. Where some lived."
+    "Every corner holds ghosts. Every face could be someone I saved or someone who lost everything because of me."
 
     # VISUAL: Aeron moving through crowd. Eyes down. Not drawing attention.
     # People glance at him. Some recognize something. Most ignore.
 
-    a "{i}Kade Voss. Just another worker. Nobody important. Nobody dangerous.{/i}"
-    a "{i}Except I'm terrible at being nobody.{/i}"
+    athought "Kade Voss. Just another worker. Nobody important. Nobody dangerous."
+    athought "Except I'm terrible at being nobody."
 
     # VISUAL: Old woman struggling with heavy crate. Vendor stall. No help coming.
-    "{i}There. Old woman. Heavy crate. No one helping.{/i}"
+    "There. Old woman. Heavy crate. No one helping."
 
-    a "{i}Small steps. One person at a time.{/i}"
+    athought "Small steps. One person at a time."
 
     # ACTION: Approach and help or keep walking?
     menu:
@@ -98,8 +98,8 @@ label act2_activity_05_earn_reputation:
             # VISUAL: They lift together. Heavy. Aeron's muscles strain but he manages.
             # SOUND: Crate scraping. Grunting effort. Set down with thud.
             
-            "{i}Heavy. Whatever's in here weighs more than it looks.{/i}"
-            "{i}But we manage. Set it down without dropping it.{/i}"
+            "Heavy. Whatever's in here weighs more than it looks."
+            "But we manage. Set it down without dropping it."
             
             elder "(catches breath) Not bad. For nobody."
             a "Glad I could help."
@@ -120,24 +120,24 @@ label act2_activity_05_earn_reputation:
             elder "But... thank you. Don't make a habit of it."
             a "I'll try not to."
             
-            "{i}She turns back to her stall. Dismissing me. But I caught something in her eyes.{/i}"
-            "{i}Not trust. Not yet. But maybe... less hostility. That's something.{/i}"
+            "She turns back to her stall. Dismissing me. But I caught something in her eyes."
+            "Not trust. Not yet. But maybe... less hostility. That's something."
             
         "Keep walking - too risky":
             $ reputation_unders += 0
             $ helped_elder = False
             
-            "{i}Too risky. She might recognize me. Might call others.{/i}"
-            "{i}I keep walking. One less chance to help. One less person who might remember me differently.{/i}"
-            a "{i}Small steps. But I just took one backwards.{/i}"
+            "Too risky. She might recognize me. Might call others."
+            "I keep walking. One less chance to help. One less person who might remember me differently."
+            athought "Small steps. But I just took one backwards."
 
     # VISUAL: Continue through market. More opportunities. More chances.
-    "{i}The market continues. More people. More needs. More opportunities to prove I'm not Glass anymore.{/i}"
+    "The market continues. More people. More needs. More opportunities to prove I'm not Glass anymore."
 
     # VISUAL: Commotion ahead. Voices raised. Crowd gathering.
     # SOUND: Shouting. Angry. Escalating.
 
-    "{i}Voices. Angry. Something's happening.{/i}"
+    "Voices. Angry. Something's happening."
 
     # VISUAL: Push through crowd. See what's happening.
     # MAN (young, angry) confronting VENDOR. Knife visible. Threatening.
@@ -149,11 +149,11 @@ label act2_activity_05_earn_reputation:
     man "I gave you three weeks already! No more extensions!"
 
     # VISUAL: Knife moves closer. Vendor backing up. Scared. Crowd watching but not intervening.
-    "{i}Debt collection. Violent. Public. And no one's helping.{/i}"
-    "{i}Because down here, you don't interfere in debts. That's how you get killed.{/i}"
+    "Debt collection. Violent. Public. And no one's helping."
+    "Because down here, you don't interfere in debts. That's how you get killed."
 
-    a "{i}Walk away. Not your business. Not your problem.{/i}"
-    a "{i}...Except it is. Because Glass walked away from 600 people. And they died.{/i}"
+    athought "Walk away. Not your business. Not your problem."
+    athought "...Except it is. Because Glass walked away from 600 people. And they died."
 
     # ACTION: Intervene or walk away?
     menu:
@@ -190,8 +190,8 @@ label act2_activity_05_earn_reputation:
             man "(to vendor) One week. Don't make me regret this."
             
             # VISUAL: Man sheathes knife. Walks away. Crowd disperses. Crisis averted.
-            "{i}He leaves. Knife goes away. Vendor's still alive.{/i}"
-            "{i}I just made a promise I have no idea how to keep. One week. Great.{/i}"
+            "He leaves. Knife goes away. Vendor's still alive."
+            "I just made a promise I have no idea how to keep. One week. Great."
             
             # VISUAL: Vendor approaches. Shaking. Grateful. Overwhelmed.
             vendor "Thank you. I don't... thank you. I thought he was going to kill me."
@@ -202,8 +202,8 @@ label act2_activity_05_earn_reputation:
             a "Kade. And Dren? Find a way to pay him. Because I can't protect you forever."
             vendor "I will. I promise. And thank you again. You... you saved my life."
             
-            "{i}Saved his life. One person. That's one more than Glass would have saved.{/i}"
-            "{i}One more name for Tessa's count. If I can keep him alive.{/i}"
+            "Saved his life. One person. That's one more than Glass would have saved."
+            "One more name for Tessa's count. If I can keep him alive."
             
             # TODO migrate contacts to helper
             $ contacts["dren"] = {"trust": 2, "debt": "vouched_for", "met": True}
@@ -212,40 +212,40 @@ label act2_activity_05_earn_reputation:
             $ reputation_unders += 0
             $ intervened_debt = False
             
-            "{i}Not my fight. Not my business. Interfering in debts gets you killed.{/i}"
-            "{i}I walk away. The vendor's on his own.{/i}"
+            "Not my fight. Not my business. Interfering in debts gets you killed."
+            "I walk away. The vendor's on his own."
             
             # SOUND: Scuffle behind. Cry of pain. Then silence.
-            "{i}Behind me, a cry. Pain. Then silence.{/i}"
-            "{i}I don't look back. Can't look back. Glass taught me that.{/i}"
-            "{i}But it still feels like I'm walking away from the Sweep all over again.{/i}"
+            "Behind me, a cry. Pain. Then silence."
+            "I don't look back. Can't look back. Glass taught me that."
+            "But it still feels like I'm walking away from the Sweep all over again."
 
     # VISUAL: Continue through market. Processing what just happened.
-    a "{i}Two chances. Two choices. Each one builds or destroys what little reputation I have.{/i}"
-    a "{i}This is how it works down here. One interaction at a time. One person at a time.{/i}"
+    athought "Two chances. Two choices. Each one builds or destroys what little reputation I have."
+    athought "This is how it works down here. One interaction at a time. One person at a time."
 
     # VISUAL: Child runs past. Chasing something. Ball rolls into street ahead.
     # SOUND: Heavy vehicle approaching. Fast. Not slowing.
 
-    "{i}Child. Ball. Street. Vehicle coming fast.{/i}"
-    "{i}Shit.{/i}"
+    "Child. Ball. Street. Vehicle coming fast."
+    "Shit."
 
     # VISUAL: Child runs into street after ball. Doesn't see vehicle.
     # Time slows. Split second to decide.
 
-    a "{i}No time to think. Only react.{/i}"
+    athought "No time to think. Only react."
 
     # ACTION: Automatic - save the child. No choice presented. Aeron acts.
     # VISUAL: Aeron lunges. Grabs child. Pulls them back. Vehicle rushes past. Close. Too close.
     # SOUND: Screech. Engine roar. Wind. Heart pounding.
 
-    "{i}Move. Grab. Pull.{/i}"
-    "{i}Vehicle roars past. Inches. Wind tears at us.{/i}"
-    "{i}Close. Too fucking close.{/i}"
+    "Move. Grab. Pull."
+    "Vehicle roars past. Inches. Wind tears at us."
+    "Close. Too fucking close."
 
     # VISUAL: They fall. Aeron on ground. Child on top. Safe. Shaken. Alive.
-    "{i}Ground. Hard. Child on top of me. Crying. Scared. Alive.{/i}"
-    "{i}That's what matters. Alive.{/i}"
+    "Ground. Hard. Child on top of me. Crying. Scared. Alive."
+    "That's what matters. Alive."
 
     # VISUAL: Mother runs over. Panicked. Scoops up child. Checks for injuries.
     mother "Kara! Oh stars, Kara! Are you hurt?"
@@ -268,9 +268,9 @@ label act2_activity_05_earn_reputation:
     mother "(nods, crying) I will. I promise. Thank you. Thank you."
     
     # VISUAL: She leaves. Child looking back. Small wave. Aeron waves back.
-    "{i}They leave. The child waves. I wave back.{/i}"
-    "{i}One more name. Kara. Saved. Alive.{/i}"
-    "{i}That's two. Dren and Kara. Two names for Tessa.{/i}"
+    "They leave. The child waves. I wave back."
+    "One more name. Kara. Saved. Alive."
+    "That's two. Dren and Kara. Two names for Tessa."
 
     # TODO migrate reputation/contacts to helpers
     $ reputation_unders += 3
@@ -279,17 +279,17 @@ label act2_activity_05_earn_reputation:
 
     # Optional EMP/OB flavor: the save
     if get_empathy_band() != "obedience":
-        a "{i}Hands still shaking. Relief tastes like rain after fire.{/i}"
+        athought "Hands still shaking. Relief tastes like rain after fire."
         $ adjust_empathy_once("act2_rep_child_save_emp", +1)
     else:
-        a "{i}Response time acceptable. Outcome optimal. Log and move.{/i}"
+        athought "Response time acceptable. Outcome optimal. Log and move."
         $ adjust_empathy_once("act2_rep_child_save_ob", -1)
 
     # VISUAL: Market continuing. But people are looking at Aeron differently now.
     # Whispers. Nods. Small acknowledgments.
 
-    "{i}The market continues. But something's different. People are looking at me.{/i}"
-    "{i}Not with hostility. Not exactly. But... awareness. Recognition. Maybe respect.{/i}"
+    "The market continues. But something's different. People are looking at me."
+    "Not with hostility. Not exactly. But... awareness. Recognition. Maybe respect."
 
     # VISUAL: Man approaches. Older. Weathered. Cautious but not hostile.
     man2 "You're Kade?"
@@ -306,7 +306,7 @@ label act2_activity_05_earn_reputation:
     kellan "Do that. You know where to find me if you need work. Ask around for Kellan. They'll point you my way."
     
     # VISUAL: He leaves. Another contact. Another thread.
-    "{i}Another offer. Another connection. Reputation building thread by thread.{/i}"
+    "Another offer. Another connection. Reputation building thread by thread."
 
     # TODO migrate contacts to helper
     $ contacts["kellan"] = {"trust": 1, "job_offer": True, "met": True, "work": "deliveries"}
@@ -315,9 +315,9 @@ label act2_activity_05_earn_reputation:
     # VISUAL: Recognizes someone. From the Sweep. Woman. Mid-30s. Scar on face.
     # She's setting up stall. Hasn't seen him yet.
 
-    "{i}Wait. I know her.{/i}"
-    "{i}The Sweep. Sector 10. I let her run. Didn't report her. She's one of the 200.{/i}"
-    "{i}Does she remember me?{/i}"
+    "Wait. I know her."
+    "The Sweep. Sector 10. I let her run. Didn't report her. She's one of the 200."
+    "Does she remember me?"
 
     # ACTION: Approach or avoid?
     menu:
@@ -336,7 +336,7 @@ label act2_activity_05_earn_reputation:
             woman "Hard to forget Glass."
             
             # VISUAL: Tension. Crowd notices. Some move closer. Ready to intervene.
-            "{i}She knows. She remembers. And everyone's watching now.{/i}"
+            "She knows. She remembers. And everyone's watching now."
             
             a "I'm not Glass anymore. I'm... trying not to be."
             woman "Trying. That's nice. Try doesn't bring back the dead."
@@ -367,8 +367,8 @@ label act2_activity_05_earn_reputation:
             a "I won't expect forgiveness. But I'll earn it anyway."
             woman "(doesn't look back) We'll see."
             
-            "{i}She doesn't forgive me. Doesn't have to. But she didn't call for my head either.{/i}"
-            "{i}That's something. Maybe enough to build on. One day.{/i}"
+            "She doesn't forgive me. Doesn't have to. But she didn't call for my head either."
+            "That's something. Maybe enough to build on. One day."
             
             # TODO migrate contacts to helper
             $ contacts["sweep_survivor"] = {"trust": 0, "trauma": "husband_killed", "met": True, "saved": True}
@@ -376,16 +376,16 @@ label act2_activity_05_earn_reputation:
         "Avoid her - not ready":
             $ approached_survivor = False
             
-            "{i}Not ready. Can't face her. Not yet. Not today.{/i}"
-            "{i}I turn away. One more chance wasted. One more person I failed.{/i}"
+            "Not ready. Can't face her. Not yet. Not today."
+            "I turn away. One more chance wasted. One more person I failed."
 
     # VISUAL: Return to safe house. Evening. Exhausted. Changed.
     # TRANSITION: Back to safe house. Lyra waiting.
 
     scene bg_safe_house with fade
 
-    "{i}Back. Safe house. Evening. Exhausted. Body and mind both drained.{/i}"
-    "{i}But something's different. Something changed today.{/i}"
+    "Back. Safe house. Evening. Exhausted. Body and mind both drained."
+    "But something's different. Something changed today."
 
     # VISUAL: Lyra looks up. Sees him. Evaluates.
     l "You're alive. That's better than I expected."
@@ -407,8 +407,8 @@ label act2_activity_05_earn_reputation:
     l "That's three people who wouldn't be without you. That's not nothing."
     
     # VISUAL: Silence. Processing. Accepting. Maybe believing.
-    a "{i}Three people. Kara. Dren. The elder.{/i}"
-    a "{i}Three names to balance against 600. Doesn't seem like enough. But it's a start.{/i}"
+    athought "Three people. Kara. Dren. The elder."
+    athought "Three names to balance against 600. Doesn't seem like enough. But it's a start."
     
     l "You did good today."
     a "I did something. Good is... subjective."
@@ -416,24 +416,24 @@ label act2_activity_05_earn_reputation:
 
     # Optional EMP/OB flavor: debrief tone
     if get_empathy_band() != "obedience":
-        a "{i}Tessa was right. Count the living.{/i}"
+        athought "Tessa was right. Count the living."
         $ adjust_empathy_once("act2_rep_debrief_emp", +1)
     else:
-        a "{i}Three confirmed positives. Iterate tomorrow.{/i}"
+        athought "Three confirmed positives. Iterate tomorrow."
         $ adjust_empathy_once("act2_rep_debrief_ob", -1)
     
     # VISUAL: He nods. Small. Accepting it. For now.
-    a "{i}One day. Three lives. Multiple connections.{/i}"
-    a "{i}Reputation built one interaction at a time. One person at a time.{/i}"
-    a "{i}Tessa was right. Count the living. Three today. How many tomorrow?{/i}"
+    athought "One day. Three lives. Multiple connections."
+    athought "Reputation built one interaction at a time. One person at a time."
+    athought "Tessa was right. Count the living. Three today. How many tomorrow?"
 
     # Show reputation gain summary
     if reputation_unders >= 6:
-        "{i}The Unders are starting to see me differently. Not as Glass. But as someone trying.{/i}"
-        "{i}That's enough. For now.{/i}"
+        "The Unders are starting to see me differently. Not as Glass. But as someone trying."
+        "That's enough. For now."
     else:
-        "{i}Small progress. Barely noticeable. But progress nonetheless.{/i}"
-        "{i}One day at a time. One person at a time. Until reputation becomes reality.{/i}"
+        "Small progress. Barely noticeable. But progress nonetheless."
+        "One day at a time. One person at a time. Until reputation becomes reality."
 
     # Mark completion
     $ mark_scene("act2_activity_05_reputation", "completed")

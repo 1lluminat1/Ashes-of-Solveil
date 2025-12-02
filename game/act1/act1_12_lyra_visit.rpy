@@ -20,19 +20,19 @@ label act1_lyra_visit:
     # LIGHTING: Corridor spill warm; interior cooler cyan from skyline; slow moving city strip across floor.
     # SFX: Distant city wind through facade fins; building ventilation hush; muffled high-tier traffic.
 
-    "{i}Another knock. Softer. Patient.{/i}"
+    "Another knock. Softer. Patient."
 
-    a "{i}...Lyra?{/i}"
+    athought "...Lyra?"
 
-    "{i}He crosses the room and opens the door.{/i}"
+    "He crosses the room and opens the door."
     # CAMERA: Over-shoulder on Aeron; reveal Lyra in corridor half-profile.
 
     # LIGHTING: Warm corridor rim on Lyra; Aeron in cooler backlight.
     l "You look like hell."
     a "(tries a smile) You should see the other guy."
 
-    "{i}The joke dies halfway out. Her smile doesn't reach her eyes.{/i}"
-    "{i}She didn’t come for laughter. She came because silence was worse.{/i}"
+    "The joke dies halfway out. Her smile doesn't reach her eyes."
+    "She didn’t come for laughter. She came because silence was worse."
 
     l "(arches a brow) Not amusing."
     l "Glass is cracking. Badly."
@@ -48,25 +48,25 @@ label act1_lyra_visit:
     # BLOCKING: Lyra glides past; perches on desk corner; keeps him in peripheral.
     l "(perches on the desk) I needed out of that gala. All those smiles felt like knives."
 
-    "{i}He lights her cigarette. Their fingers brush.{/i}"
+    "He lights her cigarette. Their fingers brush."
 
     a "(quietly) Thanks for knocking."
     l "(studies him) You're shaking."
     a "Cold air. Nothing more."
     l "Glass doesn't shake from cold. Glass shakes when it's about to shatter."
 
-    "{i}Silence settles—thin, tight.{/i}"
+    "Silence settles—thin, tight."
 
     # CAMERA: Two-shot in profile; balcony haze behind.
 
     # ---------- EMPATHY VARIATION — Aeron's guardedness ----------
     # LIGHTING: OB-hard keeps him in silhouette; mid adds faint fill; empathy gets a soft rim off the skyline.
     if is_ob_hard:
-        a "{i}Connection is inefficiency. She should've stayed away.{/i}"
+        athought "Connection is inefficiency. She should've stayed away."
     elif is_mid:
-        a "{i}Part of me wants her to leave. Part of me doesn't.{/i}"
+        athought "Part of me wants her to leave. Part of me doesn't."
     else:
-        a "{i}Her voice sounds like the first warm thing I've heard in years.{/i}"
+        athought "Her voice sounds like the first warm thing I've heard in years."
     # -------------------------------------------------------------
 
     l "You don't have to keep doing this."
@@ -74,7 +74,7 @@ label act1_lyra_visit:
     l "Carrying everything alone. Pretending you're made of stone."
     l "Pretending you're made of Glass."
 
-    "{i}Her words land heavier than she knows.{/i}"
+    "Her words land heavier than she knows."
 
     a "(looks away) Stones don't crack. People do."
     l "(softly) Glass cracks too. And you're not Glass, Aeron."
@@ -84,7 +84,7 @@ label act1_lyra_visit:
     l "Glass doesn't shake. Glass doesn't question. Glass doesn't feel."
     l "(steps closer) And you... you feel everything."
 
-    "{i}Neon washes the room; neither speaks for a beat.{/i}"
+    "Neon washes the room; neither speaks for a beat."
 
     # FX: Slow moving cyan/pink spill across floor.
 
@@ -97,7 +97,7 @@ label act1_lyra_visit:
     # ======================================================
     menu:
         "Tell her to leave":
-            $ apply_choice_once(
+            $ choice_and_dev(
                 _current_scene_id, "lyra_visit_tell_leave", "OB", factor=1,
                 next_scene_label="act1_12_lyra_visit",
                 note="Pushes Lyra away; preserves mask; OB-lean."
@@ -106,16 +106,20 @@ label act1_lyra_visit:
 
             a "It's late. You shouldn't be here."
             l "(contained) Right. Forget I knocked."
-            "{i}She hesitates; looks back once.{/i}"
+
+            "She hesitates; looks back once."
+
             l "Glass and glass, Aeron. We recognize each other."
             l "And I see you breaking. That is not weakness. That is waking up."
-            "{i}The door clicks. Quiet returns.{/i}"
-            a "{i}She sees it. The cracks. The breaking.{/i}"
-            a "{i}Maybe that's why she came.{/i}"
+
+            "The door clicks. Quiet returns."
+            
+            athought "She sees it. The cracks. The breaking."
+            athought "Maybe that's why she came."
             # VISUAL: Corridor warm spill disappears; room cools another notch.
 
         "Let Lyra stay":
-            $ apply_choice_once(
+            $ choice_and_dev(
                 _current_scene_id, "lyra_visit_let_stay", "EMP", factor=1,
                 next_scene_label="act1_12_lyra_visit",
                 note="Allows proximity; admits need; EMP-lean."
@@ -129,17 +133,17 @@ label act1_lyra_visit:
             l "You're still here. That's better."
             l "Glass would've already shattered. You haven't."
 
-            "{i}The city hum fades; slower quiet replaces it.{/i}"
+            "The city hum fades; slower quiet replaces it."
 
             # SFX: Wind dips 3 dB; room tone closer.
 
             # ---------- EMPATHY VARIATION — Tone of connection ----------
             if is_ob_hard:
-                a "{i}This is proximity, not comfort. I know the difference.{/i}"
+                athought "This is proximity, not comfort. I know the difference."
             elif is_mid:
-                a "{i}I should tell her to go. I don't.{/i}"
+                athought "I should tell her to go. I don't."
             else:
-                a "{i}For the first time, being seen doesn't hurt.{/i}"
+                athought "For the first time, being seen doesn't hurt."
             # ------------------------------------------------------------
 
             a "You ever wonder if any of this means anything?"
@@ -147,7 +151,7 @@ label act1_lyra_visit:
             a "Solveil. Echelon. The theater we keep playing."
             l "(dry) Only every waking moment."
 
-            "{i}He almost laughs. It dies halfway out.{/i}"
+            "He almost laughs. It dies halfway out."
 
             a "You're lucky. They see purpose when they look at you."
             l "(faint) You think that's luck?"
@@ -155,21 +159,21 @@ label act1_lyra_visit:
             l "They don't see me. They see what they built. A weapon in a dress."
             l "Glass in a different shape. Same emptiness."
 
-            "{i}Her hands fold, unfold. A rare break in composure.{/i}"
+            "Her hands fold, unfold. A rare break in composure."
 
             a "Where were you? Before tonight, I mean. You said you were on assignment."
             l "(pause) Sector Seven. Compliance audit."
             a "That's... vague."
             l "(looks at him directly) It was meant to be."
 
-            "{i}She stands. Moves to the window. Puts space between them like armor.{/i}"
+            "She stands. Moves to the window. Puts space between them like armor."
 
             l "They sent me to evaluate a residential block. Efficiency metrics. Loyalty indexes."
             a "Sounds routine."
             l "It was. Until I found the children."
 
             # WEATHER GRAMMAR: No rain at Aeries altitude; use wind/condensation.
-            "{i}Her reflection fractures in the condensation-slick glass.{/i}"
+            "Her reflection fractures in the condensation-slick glass."
 
             a "(carefully) What children?"
             l "Unregistered. Hidden in the sublevels. Families who couldn't afford the Branding fees."
@@ -179,7 +183,7 @@ label act1_lyra_visit:
             a "Lyra—"
             l "(cuts him off) Three days later, that block was rezoned. Everyone relocated. The children... disappeared into the system."
 
-            "{i}Her shoulders tighten. She doesn't turn around.{/i}"
+            "Her shoulders tighten. She doesn't turn around."
 
             l "I told myself it was necessary. That the system knows better than I do."
             l "But I can't stop seeing their faces."
@@ -188,14 +192,14 @@ label act1_lyra_visit:
 
             a "(softly) That's because you're not a weapon. You're a person."
             l "Am I? Am I really?"
-            "{i}She turns. Eyes meet. Distance shrinks without either moving.{/i}"
+            "She turns. Eyes meet. Distance shrinks without either moving."
 
             l "Am I? Sometimes I'm not sure where the orders end and I begin."
             a "I know the feeling."
             l "Of course you do. Glass recognizes glass."
 
             # WEATHER GRAMMAR: Pressure thrum, not rain.
-            "{i}Wind presses against the facade; the world narrows to this room.{/i}"
+            "Wind presses against the facade; the world narrows to this room."
 
             l "When I was at the door... you hesitated before opening it."
             a "I didn't expect anyone."
@@ -206,12 +210,12 @@ label act1_lyra_visit:
             a "We're both Glass. Both cracking. What happens when we both shatter?"
             l "Perhaps we find out what was underneath all along."
 
-            "{i}She moves. Sits beside him. Close enough to feel the warmth.{/i}"
+            "She moves. Sits beside him. Close enough to feel the warmth."
 
             l "Then say nothing. Just... don't be alone tonight."
             a "(voice rough) Lyra, I—"
 
-            "{i}The words lodge in his throat. Too big. Too true.{/i}"
+            "The words lodge in his throat. Too big. Too true."
 
             l "(gently) What?"
             a "I don't know how to do this. Any of this."
@@ -221,12 +225,12 @@ label act1_lyra_visit:
             a "But I want... I want to be more than Glass."
             l "(barely a whisper) Who says you can't?"
 
-            "{i}The space between them disappears. Almost touching. Almost.{/i}"
+            "The space between them disappears. Almost touching. Almost."
 
             a "(standing abruptly) You should rest. It's late."
             l "(hurt flickers, then hides) Right. Of course."
 
-            "{i}She stands. Composure slides back into place like a mask.{/i}"
+            "She stands. Composure slides back into place like a mask."
 
             l "Glass to glass again. Both afraid to touch."
 
@@ -248,12 +252,12 @@ label act1_lyra_visit:
             l "(tiny smile) Maybe. Or maybe I just knock loudly."
             l "Or maybe... two pieces of glass break better together than alone."
 
-            "{i}She's gone. The room feels different now.{/i}"
-            "{i}Lighter. Or maybe just less empty.{/i}"
+            "She's gone. The room feels different now."
+            "Lighter. Or maybe just less empty."
 
-            a "{i}Glass recognizes glass.{/i}"
-            a "{i}And maybe... maybe we can break together.{/i}"
-            a "{i}Find out what's underneath. What we used to be. What we could still become.{/i}"
+            athought "Glass recognizes glass."
+            athought "And maybe... maybe we can break together."
+            athought "Find out what's underneath. What we used to be. What we could still become."
 
     $ set_scene_flag(scene_id, "completed")
     $ add_trust("Lyra", 1)  # visit itself increases trust

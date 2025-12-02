@@ -22,16 +22,16 @@ label act1_zira:
     # CAMERA: Slow lateral dolly along catwalk; shallow depth; bokeh neon below; cut-ins on boots/hand/holster.
     # PROP: Folded mission order in coat pocket; Zira’s wrist glove (micro-ports, filament glow), open access plate.
 
-    "{i}Northeast edge. Grid Six-Two.{/i}"
-    "{i}The coordinates from the message.{/i}"
-    "{i}I walk the crumbling spine of Sector Ten’s edge—Marcus’s order folded in my coat like a threat.{/i}"
+    "Northeast edge. Grid Six-Two."
+    "The coordinates from the message."
+    "I walk the crumbling spine of Sector Ten’s edge—Marcus’s order folded in my coat like a threat."
 
-    a "{i}No eyes. No witnesses. No backup.{/i}"
-    a "{i}Perfect place to bury the truth.{/i}"
-    a "{i}Or perfect place for Glass to finally see what it's been cutting.{/i}"
+    athought "No eyes. No witnesses. No backup."
+    athought "Perfect place to bury the truth."
+    athought "Or perfect place for Glass to finally see what it's been cutting."
 
     # VISUAL: Movement at knee height—fiber bundle pulled; sparks spit; a hooded figure stays low, precise.
-    "{i}Movement. Quick. Intentional. Hands vanish into an access plate. Rhythm says practice, not panic.{/i}"
+    "Movement. Quick. Intentional. Hands vanish into an access plate. Rhythm says practice, not panic."
 
     a "Stop right there."
     # CAMERA: Over-shoulder on Aeron to the figure; faint blue interference glow lifts as she pauses.
@@ -72,7 +72,7 @@ label act1_zira:
     z "(bitter) 'Acceptable collateral.' That’s the word, right?"
 
     # SOUND/FX: Low hum grows; drone cone grazes the railing; dust motes flash.
-    "{i}A patrol drone climbs the column; searchlight scrapes rust and warnings.{/i}"
+    "A patrol drone climbs the column; searchlight scrapes rust and warnings."
     a "They’re sweeping. You triggered a ping."
     z "No, your boots did."
 
@@ -84,13 +84,13 @@ label act1_zira:
     # ---------------------------------------------------
     menu:
         "Stop her":
-            $ apply_choice_once(
+            if choice_and_dev(
                 _current_scene_id, "stop_zira_honesty_trade", "EMP", factor=1,
                 next_scene_label="act1_15_zira_first_contact",
                 note="Stops Zira; trades honesty for information (empathy +1)."
-            )
+            ):
+                $ rel_bump("Zira", trust=+1)
             $ set_scene_flag(scene_id, "stopped_zira")
-            $ add_trust("Zira", 1)
 
             # CAMERA: Hand half-raise (not to the gun); open palm—de-escalation.
             a "Wait. I need information."
@@ -115,15 +115,16 @@ label act1_zira:
             z "(grins) The best kind."
 
         "Let her go":
-            $ apply_choice_once(
+            if choice_and_dev(
                 _current_scene_id, "let_zira_walk", "OB", factor=1,
                 next_scene_label="act1_15_zira_first_contact",
                 note="Allows Zira to leave; maintains distance (obedience +1)."
-            )
+            ):
+                $ rel_bump("Zira", trust=-1)
             $ set_scene_flag(scene_id, "let_zira_go")
-            $ add_trust("Zira", -1)
 
             a "Fine. Walk away."
+
             # CAMERA: Over-shoulder as she moves; silhouette threads through piping.
             z "Suit yourself. But if you’re down here for truth, you’re already bleeding."
             z "(over shoulder) Glass doesn’t bleed. People do. Figure out which one you are before dawn."
@@ -132,7 +133,7 @@ label act1_zira:
     # SHARED FOLLOW-UP
     # ---------------------------------------------------
     # BLOCKING: Both tuck into the shadow of a service pylon; light sweeps past, then fades.
-    "{i}Another drone drifts overhead. We flatten to steel. The cone moves on.{/i}"
+    "Another drone drifts overhead. We flatten to steel. The cone moves on."
     pause 0.4
 
     a "You know this area well."
@@ -148,8 +149,8 @@ label act1_zira:
     z "Is propaganda. Sector Ten isn’t a rebel hub. It’s a cleanup. A purge."
     z "Too many unregistered. Too much independence. Too much humanity."
 
-    a "{i}Not a military target. A civilian purge.{/i}"
-    a "{i}Glass has been cutting civilians for years. But this one... deliberate.{/i}"
+    athought "Not a military target. A civilian purge."
+    athought "Glass has been cutting civilians for years. But this one... deliberate."
 
     a "How do you know?"
 
@@ -163,21 +164,21 @@ label act1_zira:
 
     # Empathy-tone internal read
     if is_ob_hard:
-        a "{i}Humanity. A liability. But she reads me too easily—and I don’t correct her.{/i}"
+        athought "Humanity. A liability. But she reads me too easily—and I don’t correct her."
     elif is_mid:
-        a "{i}Humanity. A word I stopped using. It doesn’t sound wrong tonight.{/i}"
+        athought "Humanity. A word I stopped using. It doesn’t sound wrong tonight."
     else:
-        a "{i}She’s right. Glass doesn’t question. I’m here because I needed to see.{/i}"
+        athought "She’s right. Glass doesn’t question. I’m here because I needed to see."
 
     z "Tomorrow’s sweep hits eight hundred people, not five. I tracked them—families, elders, kids."
     z "Your report calls them 'targets.' You still think this is about rebels?"
 
-    a "{i}Eight hundred. The vendor. The child. The fires below. All of them.{/i}"
+    athought "Eight hundred. The vendor. The child. The fires below. All of them."
 
     if check_scene_flag("act1_14_lower_spans", "bought_brew") or check_scene_flag("act1_14_lower_spans", "acknowledged_unders"):
-        a "{i}I saw their faces tonight. Laughter. Trade. Ordinary life.{/i}"
+        athought "I saw their faces tonight. Laughter. Trade. Ordinary life."
     else:
-        a "{i}I kept my distance. Pretended they were numbers. I can’t now.{/i}"
+        athought "I kept my distance. Pretended they were numbers. I can’t now."
 
     # CAMERA: Push-in on Zira; wind strands of hair across her cheek; she doesn’t flinch.
     z "You can’t refuse the order—Marcus owns you. But you can choose how you obey."
@@ -194,12 +195,12 @@ label act1_zira:
     z "If you just followed orders... don’t bother coming."
 
     # BLOCKING: She slips behind a vent baffle and is gone; only the filament afterglow remains.
-    "{i}She’s gone before I can answer. The alley hum stays—steady, low. A heartbeat that refuses to die.{/i}"
+    "She’s gone before I can answer. The alley hum stays—steady, low. A heartbeat that refuses to die."
 
     a "(quiet) What the hell am I getting into..."
-    a "{i}Eight hundred people. Dawn deployment. My orders.{/i}"
-    a "{i}Glass obeys. Glass always obeys.{/i}"
-    a "{i}If I obey tomorrow... what’s left of me afterward?{/i}"
+    athought "Eight hundred people. Dawn deployment. My orders."
+    athought "Glass obeys. Glass always obeys."
+    athought "If I obey tomorrow... what’s left of me afterward?"
 
     $ set_scene_flag(scene_id, "completed")
     return

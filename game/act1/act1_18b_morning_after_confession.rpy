@@ -18,71 +18,71 @@ label act1_morning_after_confession:
     # SOUND: Building ventilation; a faint city hum under the silence.
     # CAMERA: Slow reveal from floor-level to the two of them.
 
-    "{i}Morning light cuts through the window. Sharp. Unforgiving.{/i}"
-    "{i}He wakes slowly. Floor hard beneath him. Something warm against his side.{/i}"
+    "Morning light cuts through the window. Sharp. Unforgiving."
+    "He wakes slowly. Floor hard beneath him. Something warm against his side."
 
     # Still dressed; survival closeness
     # CAMERA: Tight two-shot on their tangle; shallow depth on hands over chest.
-    "{i}Lyra. Still here. Face pressed into his shoulder. Our legs tangled, her hand resting on my chest—like we held on through the night without words.{/i}"
-    "{i}Dark circles under her eyes. Even in sleep, tension in her jaw. But her breath... warm against my skin.{/i}"
+    "Lyra. Still here. Face pressed into his shoulder. Our legs tangled, her hand resting on my chest—like we held on through the night without words."
+    "Dark circles under her eyes. Even in sleep, tension in her jaw. But her breath... warm against my skin."
 
-    a "{i}We fell asleep here. On the floor. Too exhausted to move.{/i}"
-    a "{i}Too broken to care. But this closeness... it's something real in the ruin.{/i}"
+    athought "We fell asleep here. On the floor. Too exhausted to move."
+    athought "Too broken to care. But this closeness... it's something real in the ruin."
 
-    a "{i}I've never seen her like this. Unguarded. Undone.{/i}"
-    a "{i}No performance. No polish. Just... her. Beautiful in the breaking.{/i}"
+    athought "I've never seen her like this. Unguarded. Undone."
+    athought "No performance. No polish. Just... her. Beautiful in the breaking."
 
     # CAMERA: His micro-shift; her fingers tighten by reflex.
-    "{i}He shifts. She stirs. Eyes open slowly. Her hand tightens on his shirt briefly, instinctive.{/i}"
+    "He shifts. She stirs. Eyes open slowly. Her hand tightens on his shirt briefly, instinctive."
 
     l "(disoriented) I—where—"
 
     # VISUAL: She tries to rise, body locks; stays half-tangled.
-    "{i}She tries to rise. Too fast. Body locks. Pain visible. But she doesn't untangle fully—our legs still brush, warmth lingering.{/i}"
+    "She tries to rise. Too fast. Body locks. Pain visible. But she doesn't untangle fully—our legs still brush, warmth lingering."
 
     a "(gentle) Easy. We're in my apartment. Floor. You fell asleep."
     l "(remembering, quiet) ...Oh."
 
     # CAMERA: Hold the quiet; let breathing lead.
-    "{i}Silence settles. Morning after. Everything exposed. Her breath quickens, close enough to feel.{/i}"
+    "Silence settles. Morning after. Everything exposed. Her breath quickens, close enough to feel."
 
     l "(attempting composure) I should go. I have—"
 
-    "{i}Her voice cracks. She stops. Can't finish.{/i}"
+    "Her voice cracks. She stops. Can't finish."
 
     a "Lyra."
     l "(not looking at him) I'm fine. I just need—"
 
     # INSERT: subtle tremor on hands.
-    "{i}Her hands tremble. She clasps them. Still shaking.{/i}"
+    "Her hands tremble. She clasps them. Still shaking."
 
     a "You're not fine."
     l "(quiet) ...No. I'm not."
 
     # CAMERA: Close on eyes—no mask, raw need.
-    "{i}She meets his eyes. No mask. No polish. Just exhaustion. And something else—need, raw and unspoken.{/i}"
+    "She meets his eyes. No mask. No polish. Just exhaustion. And something else—need, raw and unspoken."
 
     l "How do you do this? Exist like this? Without the performance?"
     a "I don't know. I only learned yesterday."
     l "(hollow laugh) And look how well that's working."
 
     # VISUAL: Shoulders to wall; slow slide down; shared frame.
-    "{i}They sit against the wall. Floor hard. Bodies aching. Neither moves. Shoulders touch—grounding, warm in the cold light.{/i}"
+    "They sit against the wall. Floor hard. Bodies aching. Neither moves. Shoulders touch—grounding, warm in the cold light."
 
     a "When did you last sleep? Really sleep?"
     l "(pause) ...I don't remember."
     a "Lyra—"
     l "Weeks. Maybe. I close my eyes and—"
 
-    "{i}She stops. Breath catches. Can't continue. Her shoulder leans into his, seeking anchor.{/i}"
+    "She stops. Breath catches. Can't continue. Her shoulder leans into his, seeking anchor."
 
     a "You see them."
     l "(quiet) Every time."
 
     # CAMERA: Wrist CU; her fingers at the Band.
-    "{i}Silence. They both know. Faces that won't leave. Breaths syncing, slow and shared.{/i}"
-    "{i}Her hand moves. Wrist. Fingers brush the Band. Checking.{/i}"
-    "{i}He's seen her do this before. But now... now he's watching.{/i}"
+    "Silence. They both know. Faces that won't leave. Breaths syncing, slow and shared."
+    "Her hand moves. Wrist. Fingers brush the Band. Checking."
+    "He's seen her do this before. But now... now he's watching."
 
     a "Your Band. You keep touching it."
     l "(realizes, pulls hand away) I don't—"
@@ -95,7 +95,7 @@ label act1_morning_after_confession:
     a "Why wouldn't it be?"
     l "Because..."
 
-    "{i}She trails off. Can't say more. Too much. Her hand finds his arm instead—grip light, seeking contact.{/i}"
+    "She trails off. Can't say more. Too much. Her hand finds his arm instead—grip light, seeking contact."
 
     a "Because what?"
     l "(shakes head) It's nothing. Paranoia. Ignore me."
@@ -110,7 +110,7 @@ label act1_morning_after_confession:
     l "(sharp) Yes it is. Without this Band, I'm worthless. Disposable. Forgotten."
     l "You know that. You've lived it."
 
-    "{i}He has no answer. She's right. He lived it.{/i}"
+    "He has no answer. She's right. He lived it."
 
     l "(softer) I'm sorry. That was—"
     a "True. It was true."
@@ -121,74 +121,74 @@ label act1_morning_after_confession:
     a "Lyra—"
     l "I can't. Food doesn't... I can't keep anything down."
 
-    "{i}Her hand touches her stomach. Brief. Unconscious.{/i}"
-    "{i}Stress. Trauma. Body rejecting everything.{/i}"
+    "Her hand touches her stomach. Brief. Unconscious."
+    "Stress. Trauma. Body rejecting everything."
 
     a "At least drink something. Water. Coffee."
     l "(small nod) Coffee. I can try coffee."
 
     # VISUAL: He rises; kettle; steam plume catches the beam.
-    "{i}He stands. Moves to make coffee. She stays on floor.{/i}"
-    "{i}Too tired to move. Or too afraid to trust her legs.{/i}"
+    "He stands. Moves to make coffee. She stays on floor."
+    "Too tired to move. Or too afraid to trust her legs."
 
-    "{i}Her hand moves again. Wrist. Band. Checking. Compulsive.{/i}"
-    "{i}She doesn't notice. Automatic. Constant.{/i}"
+    "Her hand moves again. Wrist. Band. Checking. Compulsive."
+    "She doesn't notice. Automatic. Constant."
 
-    a "{i}How many times a day? Dozens? Hundreds?{/i}"
-    a "{i}She's terrified of something. Something about that Band.{/i}"
-    a "{i}But what?{/i}"
+    athought "How many times a day? Dozens? Hundreds?"
+    athought "She's terrified of something. Something about that Band."
+    athought "But what?"
 
     # CAMERA: Pass the cup; fingertips linger a breath.
-    "{i}He brings coffee. Hands it to her. Fingers brush—accidental, but the touch lingers a second too long. Warmth in the cold.{/i}"
-    "{i}She steadies cup with both hands. Careful not to spill.{/i}"
+    "He brings coffee. Hands it to her. Fingers brush—accidental, but the touch lingers a second too long. Warmth in the cold."
+    "She steadies cup with both hands. Careful not to spill."
 
     l "Thank you."
     a "Don't thank me. Just drink."
 
-    "{i}She sips. Slowly. Body fighting it. But stays down.{/i}"
+    "She sips. Slowly. Body fighting it. But stays down."
 
     l "(quiet) I lied to you. Last night."
     a "About what?"
     l "Sector Seven."
 
-    "{i}He sits. Close but not touching. Listening.{/i}"
+    "He sits. Close but not touching. Listening."
 
     l "I said I logged the families. Reported them. Let others... do the rest."
     a "..."
     l "(voice breaking) That wasn't true."
 
-    "{i}She stares into the cup. Can't meet his eyes.{/i}"
+    "She stares into the cup. Can't meet his eyes."
 
     l "I didn't just log them. I executed them."
     l "Compliance audit. Direct termination protocol."
     l "They gave me the weapon. The list. The orders."
     l "(barely audible) And I obeyed."
 
-    "{i}Silence. Heavy as stone.{/i}"
+    "Silence. Heavy as stone."
 
     a "How many?"
     l "Twelve families. Thirty-eight people total."
     l "Including..."
 
-    "{i}Her voice breaks. Can't finish.{/i}"
+    "Her voice breaks. Can't finish."
 
     l "...seven children."
 
     # CAMERA: Tiny spill; she doesn’t flinch.
-    "{i}The cup shakes. Coffee spills on her hand. She doesn't feel it.{/i}"
+    "The cup shakes. Coffee spills on her hand. She doesn't feel it."
 
     a "(takes cup from her, sets it aside) Lyra—"
     l "I told myself they were relocated. Gave myself the mercy of that lie."
     l "But I remember the sounds. The looks. The—"
 
-    "{i}She can't continue. Gasping. Hyperventilating.{/i}"
+    "She can't continue. Gasping. Hyperventilating."
 
     a "(moves closer) Breathe. Just breathe."
     l "I CAN'T. Every time I close my eyes I see them—"
 
     # VISUAL: He takes her hand; breaths match; long beat.
-    "{i}He doesn't speak. Just sits. Takes her hand—gentle, not demanding. Her fingers curl into his, holding on like a lifeline. Breaths sync, slow and shared.{/i}"
-    "{i}Like she did for him yesterday.{/i}"
+    "He doesn't speak. Just sits. Takes her hand—gentle, not demanding. Her fingers curl into his, holding on like a lifeline. Breaths sync, slow and shared."
+    "Like she did for him yesterday."
 
     l "(through tears) You killed six hundred. I killed thirty-eight."
     l "Your horror is bigger. But mine is..."
@@ -204,28 +204,28 @@ label act1_morning_after_confession:
     else:
         a "(soft) I know. I'm here. Breathe with me."
 
-    "{i}He shifts closer. Shoulder touching shoulder. Grounding.{/i}"
+    "He shifts closer. Shoulder touching shoulder. Grounding."
 
     l "Sector Seven wasn't the first time."
     a "..."
     l "There was another mission. Years ago. Before I became... this."
 
-    "{i}She looks at him. Something raw. Then shuts down.{/i}"
+    "She looks at him. Something raw. Then shuts down."
 
     l "I don't want to talk about it."
     a "Okay."
     l "Not yet. Maybe not ever."
     a "That's okay too."
 
-    "{i}Silence. She expected pressure. Got space instead.{/i}"
+    "Silence. She expected pressure. Got space instead."
 
     l "(quiet) Thank you."
     a "For what?"
     l "For not making me explain."
     a "I know what it's like. Carrying something too heavy to voice."
 
-    "{i}Her hand moves. Wrist. Band. She notices. Stops.{/i}"
-    "{i}Looks at her hand. Confused by her own compulsion.{/i}"
+    "Her hand moves. Wrist. Band. She notices. Stops."
+    "Looks at her hand. Confused by her own compulsion."
 
     l "(staring at her hand) Why do I keep doing that?"
     a "I don't know. Do you?"
@@ -233,7 +233,7 @@ label act1_morning_after_confession:
     a "Of what?"
     l "That it'll stop working. That I'll become... nothing."
 
-    "{i}Real fear. Not performance. Not deflection. Terror.{/i}"
+    "Real fear. Not performance. Not deflection. Terror."
 
     a "The Band doesn't make you something. You already are."
     l "Am I? Or am I just what the Band lets me be?"
@@ -241,21 +241,21 @@ label act1_morning_after_confession:
     l "(shakes head) I don't know anymore. I don't know where I end and the Band begins."
 
     # VISUAL: She stands too quickly; steadies herself; mask assembling.
-    "{i}She stands. Fast. Needs movement. Needs escape.{/i}"
+    "She stands. Fast. Needs movement. Needs escape."
 
     l "I have to go. Council meeting. Performance required."
     a "Can you do it? After last night?"
     l "(steadies herself) I have to."
 
     # CAMERA: Watch the mask return, piece by piece.
-    "{i}She smooths her hair. Straightens spine. Mask returning.{/i}"
-    "{i}Before his eyes, she transforms. Lyra the Weapon restored.{/i}"
+    "She smooths her hair. Straightens spine. Mask returning."
+    "Before his eyes, she transforms. Lyra the Weapon restored."
 
     l "(formal voice) Thank you for... last night. And this morning."
     a "Lyra, you don't have to—"
     l "(softer, real voice breaking through) I know. But if I don't practice the mask now..."
 
-    "{i}She stops. Looks at him. Mask cracks. Just for a second.{/i}"
+    "She stops. Looks at him. Mask cracks. Just for a second."
 
     l "(quietly) Do you see them? When you close your eyes?"
     a "Every time."
@@ -269,7 +269,7 @@ label act1_morning_after_confession:
 
     l "...I hope so too."
 
-    "{i}She walks to the door. Stops. Hand on handle.{/i}"
+    "She walks to the door. Stops. Hand on handle."
 
     l "(without turning) Tonight. After your meeting with Zira. Find me."
     a "Where?"
@@ -278,7 +278,7 @@ label act1_morning_after_confession:
     # ---- One-time log + empathy nudge (event, not a menu choice) ----
     if "Sector 7 confession (38/7)." not in characters["Lyra"]["notes"]:
         $ characters["Lyra"]["notes"].append("Sector 7 confession (38/7).")
-        $ apply_choice_once(
+        $ choice_and_dev(
             _current_scene_id, "lyra_s7_confession_logged", "EMP", factor=1,
             next_scene_label="act1_morning_after_confession",
             note="Lyra admits executing 38 (incl. 7 children) in Sector 7; Aeron witnesses."
@@ -291,7 +291,7 @@ label act1_morning_after_confession:
 
     menu:
         "Call her back." if ((band == "empathy" and _lyra_ok) or (band == "obedience" and _lyra_ok_ob) or (band == "conflicted" and _lyra_ok)):
-            $ apply_choice_once(
+            $ choice_and_dev(
                 _current_scene_id, "a18b_call_her_back", "EMP", factor=1,
                 next_scene_label="act1_morning_after_confession",
                 note="Vulnerable physical comfort; small step toward connection."
@@ -302,72 +302,72 @@ label act1_morning_after_confession:
 
             a "Lyra—wait."
 
-            "{i}She pauses, hand on the handle. Doesn't turn, but her shoulders tense.{/i}"
-            "{i}He stands, closes the distance. Gentle—calls her name again, softer.{/i}"
+            "She pauses, hand on the handle. Doesn't turn, but her shoulders tense."
+            "He stands, closes the distance. Gentle—calls her name again, softer."
 
             a "(quiet) Lyra."
 
-            "{i}She turns slowly. Eyes meet. No words needed.{/i}"
-            "{i}He pulls her into a hug—careful, not demanding. Arms around her, holding the pieces together.{/i}"
+            "She turns slowly. Eyes meet. No words needed."
+            "He pulls her into a hug—careful, not demanding. Arms around her, holding the pieces together."
 
             l "(stiff at first, then softens) Aeron..."
 
-            "{i}She melts into it. Head on his shoulder, breath warm against his neck. Hands clutch his back.{/i}"
-            "{i}No rush. Just presence. Heartbeats syncing, a quiet promise in the touch.{/i}"
+            "She melts into it. Head on his shoulder, breath warm against his neck. Hands clutch his back."
+            "No rush. Just presence. Heartbeats syncing, a quiet promise in the touch."
 
-            a "{i}She's warm. Real. Broken but here. And for a moment, the world fades.{/i}"
+            athought "She's warm. Real. Broken but here. And for a moment, the world fades."
             l "(whisper) I needed this."
             a "(quiet) Me too."
 
-            "{i}They part slowly. Eyes linger—a spark unspoken.{/i}"
+            "They part slowly. Eyes linger—a spark unspoken."
 
             l "(small smile) Tonight."
             a "Tonight."
 
         "Let her go.":
-            $ apply_choice_once(
+            $ choice_and_dev(
                 _current_scene_id, "a18b_let_her_go", "OB", factor=1,
                 next_scene_label="act1_morning_after_confession",
                 note="Keeps distance; withdraws after vulnerability."
             )
             $ set_scene_flag(_current_scene_id, "let_her_go")
 
-            "{i}He watches her leave. Door clicks shut. Silence returns, heavier now.{/i}"
+            "He watches her leave. Door clicks shut. Silence returns, heavier now."
 
-            a "{i}Maybe next time. When we're both ready.{/i}"
+            athought "Maybe next time. When we're both ready."
 
     # OUTRO BEATS
-    "{i}The door closes. Silence floods back.{/i}"
-    "{i}He's alone. She's gone. But something changed.{/i}"
+    "The door closes. Silence floods back."
+    "He's alone. She's gone. But something changed."
 
-    a "{i}She's been barely holding on. Just like me.{/i}"
-    a "{i}All this time I thought she was saving me.{/i}"
-    a "{i}But we've been saving each other.{/i}"
+    athought "She's been barely holding on. Just like me."
+    athought "All this time I thought she was saving me."
+    athought "But we've been saving each other."
 
     # VISUAL: Small brown ring on floor; a red dot beside it.
-    "{i}Coffee spilled where she sat. And something else.{/i}"
-    "{i}Blood. Small drop. Her hand. She didn't even notice.{/i}"
+    "Coffee spilled where she sat. And something else."
+    "Blood. Small drop. Her hand. She didn't even notice."
 
     if is_obedient_path:
-        a "{i}Note the injury. Note the numbness. Proceed.{/i}"
+        athought "Note the injury. Note the numbness. Proceed."
     else:
-        a "{i}Pain doesn't register when you're already drowning.{/i}"
+        athought "Pain doesn't register when you're already drowning."
 
-    a "{i}38 people. 7 children. And something before that. Something worse.{/i}"
-    a "{i}Her Band compulsion. Her terror. Her mask.{/i}"
-    a "{i}She's not just broken. She's terrified of breaking more.{/i}"
+    athought "38 people. 7 children. And something before that. Something worse."
+    athought "Her Band compulsion. Her terror. Her mask."
+    athought "She's not just broken. She's terrified of breaking more."
 
-    a "{i}No Band. No worth. That's what the system teaches.{/i}"
-    a "{i}I learned that at twelve. Failed and forgotten.{/i}"
-    a "{i}But she has hers. And she's still terrified.{/i}"
-    a "{i}What happened to make her fear it so much?{/i}"
+    athought "No Band. No worth. That's what the system teaches."
+    athought "I learned that at twelve. Failed and forgotten."
+    athought "But she has hers. And she's still terrified."
+    athought "What happened to make her fear it so much?"
 
     # WIDE: City comes alive; cold daylight swallows the room’s warmth.
-    "{i}The city wakes beyond the glass. Another day. Another performance.{/i}"
+    "The city wakes beyond the glass. Another day. Another performance."
 
-    a "{i}Glass recognizes glass. Broken recognizes broken.{/i}"
-    a "{i}We're both drowning. But at least we're drowning together.{/i}"
-    a "{i}Maybe that's enough. For now.{/i}"
+    athought "Glass recognizes glass. Broken recognizes broken."
+    athought "We're both drowning. But at least we're drowning together."
+    athought "Maybe that's enough. For now."
 
     # Bookkeeping
     $ set_scene_flag(_current_scene_id, "forward_to_zira_meet")

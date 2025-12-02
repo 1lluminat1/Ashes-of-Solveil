@@ -20,68 +20,72 @@ label act1_07b_barracks_morning:
 
     #scene bg_barracks_corridor_morning with fade
 
-    "{i}Barracks breathing in unison. Intercom teaches the day how to speak.{/i}"
+    "Barracks breathing in unison. Intercom teaches the day how to speak."
 
     voice "Stability is compassion. Precision is mercy. Latency kills."
 
     # RATION LINE — WORKER INCIDENT
-    "{i}Ration line. Green lights snap for ranks. Red for everyone else. A worker holds a chipped card like an apology.{/i}"
+    "Ration line. Green lights snap for ranks. Red for everyone else. A worker holds a chipped card like an apology."
     guard "Priority queue. Step aside."
     worker "My child—"
     guard "Step. Aside."
 
+    $ apply_ch
     menu:
         "Worker’s card faults red while the guard looks away."
         "Quietly restore the worker's ration chip.":
-            $ apply_choice_once(
+            $ choice_and_dev(
                 _current_scene_id, "_worker_help", "EMP", factor=1,
                 next_scene_label="act1_07b_barracks_morning",
                 note="Micro-intervention; reduce harm without confrontation."
             )
             $ set_scene_flag(_current_scene_id, "helped_worker")
             $ add_item("supplies", "food", 1)
-            a "{i}I tilt the card under the scanner. A green blink pretends nothing happened.{/i}"
+
+            athought "I tilt the card under the scanner. A green blink pretends nothing happened."
             worker "(whisper) Thank you."
 
         "Ignore it and move forward in line.":
             $ record_choice_once(_current_scene_id, "_worker_ignore",
                                 next_scene_label="act1_07b_barracks_morning",
                                 note="Flavor-only; maintains flow without engagement.")
-            "{i}Green opens for me. Red stays red. The line learns its lesson.{/i}"
+
+            "Green opens for me. Red stays red. The line learns its lesson."
 
         "Tell the guard to advance priority flow per protocol.":
-            $ apply_choice_once(
+            $ choice_and_dev(
                 _current_scene_id, "_worker_endorse_priority", "OB", factor=1,
                 next_scene_label="act1_07b_barracks_morning",
                 note="Reasserts hierarchy; protects throughput over individual need."
             )
             $ set_scene_flag(_current_scene_id, "endorsed_priority")
+
             guard "(approving) Copy. Keep the lane clean."
-            "{i}Order is a broom. People are dust.{/i}"
+            "Order is a broom. People are dust."
 
     # Alignment flavor: ration incident
     $ band = get_empathy_band()
     if check_scene_flag(_current_scene_id, "helped_worker"):
         if band == "obedience":
-            a "{i}Anomalous gesture. File under throughput optimization and keep moving.{/i}"
+            athought "Anomalous gesture. File under throughput optimization and keep moving."
         elif band == "conflicted":
-            a "{i}Small fix in a broken queue. Not nothing. Not enough.{/i}"
+            athought "Small fix in a broken queue. Not nothing. Not enough."
         else:
-            a "{i}One green light where it mattered. The system won’t notice. I will.{/i}"
+            athought "One green light where it mattered. The system won’t notice. I will."
     elif check_scene_flag(_current_scene_id, "endorsed_priority"):
         if band == "obedience":
-            a "{i}Flow restored. Metrics satisfied. Silence resumes.{/i}"
+            athought "Flow restored. Metrics satisfied. Silence resumes."
         elif band == "conflicted":
-            a "{i}Protocol holds. Something in my chest doesn’t.{/i}"
+            athought "Protocol holds. Something in my chest doesn’t."
         else:
-            a "{i}The lane is clean. My conscience isn’t.{/i}"
+            athought "The lane is clean. My conscience isn’t."
 
     # Momentum whisper (ration)
     $ mom = get_alignment_momentum()  # -1..+1 recent trend
     if mom >= 0.5:
-        a "{i}Lately the choices lean human. Maybe that’s the point.{/i}"
+        athought "Lately the choices lean human. Maybe that’s the point."
     elif mom <= -0.5:
-        a "{i}Lately the edge comes easier. Habit wearing a uniform.{/i}"
+        athought "Lately the edge comes easier. Habit wearing a uniform."
 
     # QUARTERMASTER / JUNIOR RECRUIT — REPUTATION POLISH
     qm "Unit Seven. Pull ticket, sign. Ammunition allotment registered."
@@ -90,58 +94,61 @@ label act1_07b_barracks_morning:
     menu:
         "The recruit waits for phrasing that will keep him alive."
         "Teach a humane frame: 'Stabilize civilians first; then pursue objective.'":
-            $ apply_choice_once(
+            $ choice_and_dev(
                 _current_scene_id, "_mentor_humane", "EMP", factor=1,
                 next_scene_label="act1_07b_barracks_morning",
                 note="Centers civilian stability as primary constraint."
             )
             $ set_scene_flag(_current_scene_id, "mentored_humane")
+
             jr "(relieved) Stabilize first. Then objective. Got it."
-            "{i}He writes it like a prayer that might pass for policy.{/i}"
+            "He writes it like a prayer that might pass for policy."
 
         "Teach the clinical script: 'Neutralize; collateral within tolerance.'":
-            $ apply_choice_once(
+            $ choice_and_dev(
                 _current_scene_id, "_mentor_clinical", "OB", factor=1,
                 next_scene_label="act1_07b_barracks_morning",
                 note="Optimizes outcome language for audits; normalizes collateral."
             )
             $ set_scene_flag(_current_scene_id, "mentored_clinical")
+
             jr "(grim) Neutralize. Tolerance."
-            "{i}He looks smaller repeating it.{/i}"
+            "He looks smaller repeating it."
 
         "Tell him to keep his head down and copy senior phrasing.":
             $ record_choice_once(_current_scene_id, "_mentor_survival",
                                 next_scene_label="act1_07b_barracks_morning",
                                 note="Neutral survival advice; no alignment delta.")
-            "{i}He nods. Survival as grammar.{/i}"
+                                
+            "He nods. Survival as grammar."
 
     # Alignment flavor: recruit advice
     $ band = get_empathy_band()
     if check_scene_flag(_current_scene_id, "mentored_humane"):
         if band == "obedience":
-            a "{i}Language won’t save him. Maybe it buys him a breath.{/i}"
+            athought "Language won’t save him. Maybe it buys him a breath."
         elif band == "conflicted":
-            a "{i}The right words can tilt a trigger finger. Sometimes that’s enough.{/i}"
+            athought "The right words can tilt a trigger finger. Sometimes that’s enough."
         else:
-            a "{i}If he remembers people first, maybe the report won’t have to lie for him.{/i}"
+            athought "If he remembers people first, maybe the report won’t have to lie for him."
     elif check_scene_flag(_current_scene_id, "mentored_clinical"):
         if band == "obedience":
-            a "{i}He’ll pass the audit. Passing keeps you alive here.{/i}"
+            athought "He’ll pass the audit. Passing keeps you alive here."
         elif band == "conflicted":
-            a "{i}I handed him the script that hollows you out. I know how it ends.{/i}"
+            athought "I handed him the script that hollows you out. I know how it ends."
         else:
-            a "{i}I put the weight in his mouth and told him to carry it. The system calls that training.{/i}"
+            athought "I put the weight in his mouth and told him to carry it. The system calls that training."
 
     # Momentum whisper (recruit)
     $ mom = get_alignment_momentum()
     if mom >= 0.5:
-        a "{i}The trend’s been softer. Maybe I’m teaching myself as much as him.{/i}"
+        athought "The trend’s been softer. Maybe I’m teaching myself as much as him."
     elif mom <= -0.5:
-        a "{i}The trend’s been colder. Easier to hand out the mask than take it off.{/i}"
+        athought "The trend’s been colder. Easier to hand out the mask than take it off."
 
     # EXIT
     voice "Units scheduled for demonstration: report at 14:00."
-    "{i}The hallway empties like a throat clearing. Fourteen-hundred writes itself behind his eyes.{/i}"
+    "The hallway empties like a throat clearing. Fourteen-hundred writes itself behind his eyes."
 
     $ set_scene_flag(_current_scene_id, "completed")
     

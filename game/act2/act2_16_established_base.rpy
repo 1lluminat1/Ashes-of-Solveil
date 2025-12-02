@@ -28,7 +28,7 @@ label act2_establishing_base:
 
     #scene bg_temp_shelter_night with fade
 
-    "{i}Final night in temp shelter. Tomorrow we move. Tomorrow we start building for real. Tonight we pack everything we have. Which isn't much. But it's ours. And tomorrow it becomes foundation.{/i}"
+    "Final night in temp shelter. Tomorrow we move. Tomorrow we start building for real. Tonight we pack everything we have. Which isn't much. But it's ours. And tomorrow it becomes foundation."
 
     # VISUAL: Resistance fighters packing gear. Weapons. Supplies. Hope.
     s "Pack everything. Leave nothing. We were never here. Ghosts don't leave traces."
@@ -41,15 +41,15 @@ label act2_establishing_base:
     a "So does running. Eventually. At least standing means something."
 
     # VISUAL: Lights dimming. Night settling. Tomorrow approaching.
-    "{i}Night falling. Last night in temporary shelter. Tomorrow permanent. Tomorrow real. Tomorrow everything changes. Again. Always again. But this time toward something instead of away from something. That's different. That matters.{/i}"
+    "Night falling. Last night in temporary shelter. Tomorrow permanent. Tomorrow real. Tomorrow everything changes. Again. Always again. But this time toward something instead of away from something. That's different. That matters."
 
     # --- OB/EMP FLAVOR #1: pre time-skip inner monologue (very light) ---
     if is_ob_hard:
-        "{i}{ob}Checklist: pack count, exit route, staggered watch, comms test, last sweep for trace. Keep hands busy; keep noise down.{/ob}{/i}"
+        "{ob}Checklist: pack count, exit route, staggered watch, comms test, last sweep for trace. Keep hands busy; keep noise down.{/ob}"
     elif is_mid:
-        "{i}Pack tight, move quiet. Leave the ghosts nothing to follow.{/i}"
+        "Pack tight, move quiet. Leave the ghosts nothing to follow."
     else:
-        "{i}{emp}Count the living. Breathe in fours. We carry more than bags tonight—names, promises, the thin thread called tomorrow.{/emp}{/i}"
+        "{emp}Count the living. Breathe in fours. We carry more than bags tonight—names, promises, the thin thread called tomorrow.{/emp}"
 
     # TRANSITION: Fade to black. Time passing. Work happening. Base building.
     #scene black with fade
@@ -60,35 +60,35 @@ label act2_establishing_base:
     # VISUAL: Fade in to ESTABLISHED BASE. Morning. Functional. Lived-in.
     # Location varies based on player choice. Will use generic description then branch.
 
-    $ if base_location == "subway":
+    if base_location == "subway":
         #scene bg_subway_base_established with fade
-        "{i}Two months of work. Subway station transformed. Platforms cleaned. Service rooms converted to living quarters. Power restored. Water filtration installed. Multiple tunnel exits secured and mapped. Central hub operational. This is home now. Underground. Hidden. Ours.{/i}"
+        "Two months of work. Subway station transformed. Platforms cleaned. Service rooms converted to living quarters. Power restored. Water filtration installed. Multiple tunnel exits secured and mapped. Central hub operational. This is home now. Underground. Hidden. Ours."
         
-    $ elif base_location == "clinic":
+    elif base_location == "clinic":
         #scene bg_clinic_base_established with fade
-        "{i}Two months of work. Clinic rebuilt. Exam rooms now living quarters. Operating theater functional for actual medical work. Storage organized. Three floors compartmentalized for different operations. Windows reinforced. Sector 7 locals aware and supportive. This is home now. Visible but protected. Ours.{/i}"
+        "Two months of work. Clinic rebuilt. Exam rooms now living quarters. Operating theater functional for actual medical work. Storage organized. Three floors compartmentalized for different operations. Windows reinforced. Sector 7 locals aware and supportive. This is home now. Visible but protected. Ours."
         
-    $ elif base_location == "warehouse":
+    elif base_location == "warehouse":
         #scene bg_warehouse_base_established with fade
-        "{i}Two months of work. Warehouse reinforced. East side structural damage repaired. Multiple levels cleared and organized. Training space established. Supply storage secured. Smuggling route access confirmed. Massive space ready for expansion. This is home now. Room to grow. Ours.{/i}"
+        "Two months of work. Warehouse reinforced. East side structural damage repaired. Multiple levels cleared and organized. Training space established. Supply storage secured. Smuggling route access confirmed. Massive space ready for expansion. This is home now. Room to grow. Ours."
         
-    $ elif base_location == "apartment":
+    elif base_location == "apartment":
         #scene bg_apartment_base_established with fade
-        "{i}Two months of work. Apartment complex fortified. Multiple units converted. Living quarters separate from operations. Rooftop observation posts established. Stairwells secured. Residential disguise maintained. Eight stories of tactical advantage. This is home now. High ground held. Ours.{/i}"
+        "Two months of work. Apartment complex fortified. Multiple units converted. Living quarters separate from operations. Rooftop observation posts established. Stairwells secured. Residential disguise maintained. Eight stories of tactical advantage. This is home now. High ground held. Ours."
         
-    $ else:  # tunnels
+    else:  # tunnels
         #scene bg_tunnels_base_established with fade
-        "{i}Two months of work. Maintenance tunnels mapped and secured. Multiple cache points established throughout network. Living areas as comfortable as possible given constraints. Mobile infrastructure tested. Unknown to Echelon. Hidden in city's veins. This is home now. Secret. Safe. Ours.{/i}"
+        "Two months of work. Maintenance tunnels mapped and secured. Multiple cache points established throughout network. Living areas as comfortable as possible given constraints. Mobile infrastructure tested. Unknown to Echelon. Hidden in city's veins. This is home now. Secret. Safe. Ours."
 
     # VISUAL: Morning in established base. People waking. Moving. Living here.
     # Resistance fighters going about routines. Breakfast. Training. Operations. Normal life in abnormal circumstances.
 
-    "{i}Morning. People waking. Moving through base like they live here. Because they do. This isn't shelter anymore. This is home. Makeshift. Dangerous. But home. We built this. From nothing. From twelve people and desperation. Now it's real. Now it's ours.{/i}"
+    "Morning. People waking. Moving through base like they live here. Because they do. This isn't shelter anymore. This is home. Makeshift. Dangerous. But home. We built this. From nothing. From twelve people and desperation. Now it's real. Now it's ours."
 
     # VISUAL: Common area. People gathering. Breakfast happening. Community forming.
     # More people than before. Recruitment worked. 12 became 18, maybe 20.
 
-    "{i}Common area. People eating breakfast. Not just the original twelve. More. Eighteen now. Maybe twenty. Hard to keep exact count with people coming and going on missions. Recruitment worked. We're growing. Slowly. But growing.{/i}"
+    "Common area. People eating breakfast. Not just the original twelve. More. Eighteen now. Maybe twenty. Hard to keep exact count with people coming and going on missions. Recruitment worked. We're growing. Slowly. But growing."
 
     # VISUAL: Aeron entering common area. Morning routine established. Familiar.
     resistance_fighter1 "Morning, Aeron. Sleep okay?"
@@ -102,15 +102,15 @@ label act2_establishing_base:
     l "No. But I claimed it anyway. Principle of the thing."
 
     # VISUAL: Comfortable banter. Routine established. This is life now.
-    "{i}Banter. Easy. Comfortable. This is life now. Not just surviving. Actually living. Having routines. Having coffee arguments. Having moments that aren't life or death. Just moments. That's progress.{/i}"
+    "Banter. Easy. Comfortable. This is life now. Not just surviving. Actually living. Having routines. Having coffee arguments. Having moments that aren't life or death. Just moments. That's progress."
 
     # --- OB/EMP FLAVOR #2: morning scan in the established base (very light) ---
     if is_ob_hard:
-        "{i}{ob}Headcount, choke points, watch turnover, sightlines to both entrances. Routines hold. Discipline holds. That’s how we live.{/ob}{/i}"
+        "{ob}Headcount, choke points, watch turnover, sightlines to both entrances. Routines hold. Discipline holds. That’s how we live.{/ob}"
     elif is_mid:
-        "{i}People, patterns, posts. You can feel when a place starts keeping you alive.{/i}"
+        "People, patterns, posts. You can feel when a place starts keeping you alive."
     else:
-        "{i}{emp}Names at tables, laughter by the kettle, tired shoulders easing. Home isn’t walls—it’s the people who exhale inside them.{/emp}{/i}"
+        "{emp}Names at tables, laughter by the kettle, tired shoulders easing. Home isn’t walls—it’s the people who exhale inside them.{/emp}"
 
     # VISUAL: Noelle at corner table. Surrounded by datapads. Working. Always working.
     n "(not looking up) Aeron. Morning. Current Echelon patrol efficiency has decreased 13% over past two months. Predictive models suggest our operational security is holding. Probability of discovery remains under 10% per month."
@@ -127,9 +127,9 @@ label act2_establishing_base:
     t "That's because you're not counting the living. We're all here. All breathing. That's beautiful. Gray's just aesthetic."
 
     # VISUAL: Her clinic setup (if clinic base) or medical station (other bases). Organized. Functional.
-    $ if base_location == "clinic":
+    if base_location == "clinic":
         t "Clinic's running smoothly. Treated three locals yesterday. Building goodwill and cover. Operating theater's fully functional now. We can do real surgeries if needed."
-    $ else:
+    else:
         t "Medical station's organized. Not as good as real clinic but functional. Can handle everything from minor wounds to major trauma. We're prepared."
 
     # VISUAL: Zira entering. Been out all night. Intel gathering. Returns. Safe.
@@ -139,8 +139,8 @@ label act2_establishing_base:
 
     # VISUAL: Brief moment. Eye contact. Something between them now. Undefined but present.
     # If kiss happened, there's warmth. Comfort. Shared secret.
-    $ if characters["zira"].get("kiss_happened", False):
-        "{i}Brief moment. Eye contact. Warmth there. Comfort. Memory of kiss in warehouse two months ago. Haven't talked about it. Haven't repeated it. But it's there. Between us. Changing how we exist around each other. Making proximity feel different. Better. Wanted.{/i}"
+    if characters["zira"].get("kiss_happened", False):
+        "Brief moment. Eye contact. Warmth there. Comfort. Memory of kiss in warehouse two months ago. Haven't talked about it. Haven't repeated it. But it's there. Between us. Changing how we exist around each other. Making proximity feel different. Better. Wanted."
         z "(quiet, just to him) Glad you're here when I get back. Makes coming back easier."
         a "(quiet) Glad you come back. Makes being here easier."
 
@@ -176,7 +176,7 @@ label act2_establishing_base:
     l "Access from north side. Two entry points. Exfil route through maintenance corridor. Standard grab and go. Military textbook operation. We can execute this clean."
 
     # VISUAL: Everyone contributing. Team functioning. Resistance real. Operational. Ready.
-    "{i}Everyone contributing. Each person adding expertise. Noelle's data. Tessa's medical needs. Zira's ground intel. Lyra's tactics. This is team. This is resistance. This is what we built. Twenty people working together toward common goal. That's dangerous. That's powerful. That's everything.{/i}"
+    "Everyone contributing. Each person adding expertise. Noelle's data. Tessa's medical needs. Zira's ground intel. Lyra's tactics. This is team. This is resistance. This is what we built. Twenty people working together toward common goal. That's dangerous. That's powerful. That's everything."
 
     # VISUAL: Selene looking at Aeron. Question implicit. You're part of leadership now.
     s "Aeron. You've been quiet. Thoughts?"
@@ -193,7 +193,7 @@ label act2_establishing_base:
     s "Good. Meeting adjourned. Operations planning this afternoon. Everyone involved in strike team attends. Everyone else continues base operations. Stay sharp. Stay ready. We're moving from building phase to fighting phase. Everything changes now."
 
     # VISUAL: People dispersing. Energy different. Purpose clear. Direction set.
-    "{i}People dispersing. But energy changed. We're not just hiding anymore. Not just building. We're about to fight. About to hit Echelon. About to prove we're dangerous. That changes everything. Makes it real. Makes it war.{/i}"
+    "People dispersing. But energy changed. We're not just hiding anymore. Not just building. We're about to fight. About to hit Echelon. About to prove we're dangerous. That changes everything. Makes it real. Makes it war."
 
     # VISUAL: Aeron and Lyra remaining. Processing. Moment together.
     l "First mission from new base. Nervous?"
@@ -202,27 +202,27 @@ label act2_establishing_base:
     a "Somewhere between the Sweep and now. Just became default state. Functional terror."
 
     # VISUAL: Lyra's hand finds his. Brief contact. Grounding. Partnership.
-$ if has_char_flag("Lyra", "lewd_scene_completed"):
-    l "We've survived everything so far. Together. We'll survive this too."
-    a "Together. Yeah. That's the only way any of this works."
-    "{i}Her hand in mine. Warm. Familiar. Comfort. We've been through too much to face things alone now. Whatever happens, we face it together. That's something. That's everything.{/i}"
-$ else:
-    # Light alignment flavor (no momentum change)
-    if is_ob_hard:
-        a "I'll handle it. Like I handle everything else."
-        l "Ok."
-    elif is_mid:
-        l "We'll handle it. Like we handle everything. Together."
-        a "Together. Best strategy we have."
-    else:
-        l "We'll handle it. Like we handle everything. Together."
+    if has_char_flag("Lyra", "lewd_scene_completed"):
+        l "We've survived everything so far. Together. We'll survive this too."
         a "Together. Yeah. That's the only way any of this works."
+        "Her hand in mine. Warm. Familiar. Comfort. We've been through too much to face things alone now. Whatever happens, we face it together. That's something. That's everything."
+    else:
+        # Light alignment flavor (no momentum change)
+        if is_ob_hard:
+            a "I'll handle it. Like I handle everything else."
+            l "Ok."
+        elif is_mid:
+            l "We'll handle it. Like we handle everything. Together."
+            a "Together. Best strategy we have."
+        else:
+            l "We'll handle it. Like we handle everything. Together."
+            a "Together. Yeah. That's the only way any of this works."
 
     # VISUAL: Looking around established base. Two months of work visible. Success tangible.
-    a "{i}Two months. Twelve people became twenty. Temp shelter became home. Fugitives became resistance. And now we're about to prove it. About to hit Echelon. About to show them we're dangerous. Glass became ash became ember. Now ember becomes fire. And fire burns everything.{/i}"
+    athought "Two months. Twelve people became twenty. Temp shelter became home. Fugitives became resistance. And now we're about to prove it. About to hit Echelon. About to show them we're dangerous. Glass became ash became ember. Now ember becomes fire. And fire burns everything."
 
     # VISUAL: Base continuing around them. People working. Living. Preparing. Resistance real.
-    "{i}Base functioning. People moving with purpose. This is what we built. Not just walls and security. Community. Team. Family. Resistance. From nothing. From twelve broken people. Now something real. Something dangerous. Something that matters. This is home. This is hope. This is war.{/i}"
+    "Base functioning. People moving with purpose. This is what we built. Not just walls and security. Community. Team. Family. Resistance. From nothing. From twelve broken people. Now something real. Something dangerous. Something that matters. This is home. This is hope. This is war."
 
     # ---------------------------
     # NEWEST-SYSTEM STATE UPDATES

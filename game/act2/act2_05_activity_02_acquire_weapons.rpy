@@ -25,8 +25,8 @@ label act2_activity_02_acquire_weapons:
     $ weapons_scrip_delta = 0  # positive = earned, negative = spent
 
     # VISUAL: Safe house. Check resources.
-    "{i}Day [player_state['days_remaining']]. Still unarmed. That needs to change.{/i}"
-    a "{i}We've been lucky so far. Lucky doesn't last forever in the Unders.{/i}"
+    "Day [player_state['days_remaining']]. Still unarmed. That needs to change."
+    athought "We've been lucky so far. Lucky doesn't last forever in the Unders."
 
     l "We need weapons."
     a "I know."
@@ -54,7 +54,7 @@ label act2_activity_02_acquire_weapons:
 
     # TRANSITION → Sector 7
     scene bg_sector7_market with fade
-    "{i}Sector 7. Black market territory. Where laws are suggestions and violence is currency. Perfect place to buy death.{/i}"
+    "Sector 7. Black market territory. Where laws are suggestions and violence is currency. Perfect place to buy death."
 
     l "(quiet) Everyone's watching us."
     a "We stand out. New faces, desperate energy. They can smell it."
@@ -63,7 +63,7 @@ label act2_activity_02_acquire_weapons:
     l "Subtle."
     a "Down here, subtle gets you ignored. Ignored means no business."
 
-    "{i}There. Blue door, red X, armed guard. This is the place.{/i}"
+    "There. Blue door, red X, armed guard. This is the place."
     guard "Private property. Move along."
     a "We're here to see Vex."
     guard "Vex doesn't see walk-ins."
@@ -79,7 +79,7 @@ label act2_activity_02_acquire_weapons:
     a "Understood."
 
     scene bg_vex_workshop with fade
-    "{i}Workshop. Weapons covering every surface. Pistols, rifles, knives, explosives. Everything you need to kill efficiently.{/i}"
+    "Workshop. Weapons covering every surface. Pistols, rifles, knives, explosives. Everything you need to kill efficiently."
 
     vex "New customers. How exciting."
     vex "(still working) You have about sixty seconds to tell me why I should care."
@@ -110,21 +110,20 @@ label act2_activity_02_acquire_weapons:
     $ can_afford_full = current_scrip >= 400
 
     if can_afford_full:
-        a "{i}400 scrip. We have [current_scrip]. We can afford it.{/i}"
+        athought "400 scrip. We have [current_scrip]. We can afford it."
     elif current_scrip >= 200:
-        a "{i}400 scrip. We only have [current_scrip]. Not enough.{/i}"
+        athought "400 scrip. We only have [current_scrip]. Not enough."
     else:
-        a "{i}400 scrip. We have [current_scrip]. Nowhere close.{/i}"
+        athought "400 scrip. We have [current_scrip]. Nowhere close."
 
     # OB/EMP one-liners
     if get_empathy_band() == "obedience":
-        a "{i}Buy clean or leverage risk. Don’t linger.{/i}"
+        athought "Buy clean or leverage risk. Don’t linger."
     else:
-        a "{i}We need tools to protect, not to become Glass again.{/i}"
+        athought "We need tools to protect, not to become Glass again."
 
     menu:
-        "Vex waits. Professional patience. Time to decide.":
-
+        "Vex waits. Professional patience. Time to decide."
         "Buy the weapons with scrip (400 scrip)" if can_afford_full:
             $ mark_scene("act2_activity_02_weapons", "method_bought")
             $ weapons_scrip_delta = -400
@@ -172,8 +171,7 @@ label act2_activity_02_acquire_weapons:
                 vex "I can give you one pistol and a knife for that. Take it or leave it."
 
                 menu:
-                    "One pistol and a knife. Not ideal but better than nothing.":
-
+                    "One pistol and a knife. Not ideal but better than nothing."
                     "Accept the deal":
                         $ weapons_scrip_delta = -current_scrip
                         $ inventory["scrip"] = 0
@@ -190,7 +188,7 @@ label act2_activity_02_acquire_weapons:
                         a "Not good enough. We need two pistols."
                         vex "Then come back when you have real money. I'm not a charity."
                         vex "Door's that way. Don't let it hit you on the way out."
-                        "{i}Deal's off. We leave empty-handed. Need another plan.{/i}"
+                        "Deal's off. We leave empty-handed. Need another plan."
                         jump activity2_alternate_methods
 
         "Offer to work off the debt — trade a favor for weapons":
@@ -206,8 +204,7 @@ label act2_activity_02_acquire_weapons:
             vex "You refuse or screw it up, and I spread the word you're Echelon plants."
 
             menu:
-                "Accept the favor deal or refuse?":
-
+                "Accept the favor deal or refuse?"
                 "Accept — owe Vex a favor":
                     $ mark_scene("act2_activity_02_weapons", "vex_favor_owed")
                     $ add_item("weapons", "pistol_standard")
@@ -225,11 +222,11 @@ label act2_activity_02_acquire_weapons:
                 "Refuse — too risky":
                     a "No deal. A blank favor is too dangerous. We'll find another way."
                     vex "(shrugs) Your choice. Door's that way. Good luck finding weapons without money or leverage."
-                    "{i}Deal refused. We leave empty-handed. Need another option.{/i}"
+                    "Deal refused. We leave empty-handed. Need another option."
                     jump activity2_alternate_methods
 
         "Leave — find another way" if not can_afford_full:
-            "{i}Can't afford it. Can't risk the favor. Time to find another option.{/i}"
+            "Can't afford it. Can't risk the favor. Time to find another option."
             jump activity2_alternate_methods
 
     # SUCCESS PATH via Vex?
@@ -237,7 +234,7 @@ label act2_activity_02_acquire_weapons:
     "got_pistol_and_knife" in scene_flags.get("act2_activity_02_weapons", set()):
 
         scene bg_sector7_market with fade
-        "{i}Outside. Armed. Finally. The weight of weapons is strange. Comforting and terrifying.{/i}"
+        "Outside. Armed. Finally. The weight of weapons is strange. Comforting and terrifying."
         l "(checks pistol) Good quality. Well maintained. Vex knows their business."
         a "(checks his weapon) Yeah. Feels strange. Glass always had weapons. Aeron Rylan hasn't carried one in weeks."
         l "Glass is dead. Aeron Rylan is armed. There's a difference."
@@ -248,9 +245,9 @@ label act2_activity_02_acquire_weapons:
         a "Guess we'll find out."
 
         if "got_two_pistols" in scene_flags.get("act2_activity_02_weapons", set()):
-            "{i}Two pistols. Both armed. Both ready. One step closer to surviving this.{/i}"
+            "Two pistols. Both armed. Both ready. One step closer to surviving this."
         else:
-            "{i}One pistol, one knife. Not ideal, but enough. Better than nothing.{/i}"
+            "One pistol, one knife. Not ideal, but enough. Better than nothing."
 
         $ mark_scene("act2_activity", "weapons_done")
         jump activity2_return_hub
@@ -259,7 +256,7 @@ label act2_activity_02_acquire_weapons:
 label activity2_alternate_methods:
 
     scene bg_sector7_market with fade
-    "{i}No weapons from Vex. Either can't afford it or won't risk the favor. Need another option.{/i}"
+    "No weapons from Vex. Either can't afford it or won't risk the favor. Need another option."
 
     l "So what now?"
     a "We find another way. There's always another way."
@@ -269,8 +266,7 @@ label activity2_alternate_methods:
     a "I mean anyone who has them and won't sell them."
 
     menu:
-        "What's the plan?":
-
+        "What's the plan?"
         "Ambush Echelon patrol — steal their weapons":
             $ mark_scene("act2_activity_02_weapons", "method_stolen_echelon")
 
@@ -285,8 +281,8 @@ label activity2_alternate_methods:
             l "Simple plan. Lots of ways it can go wrong."
             a "All good plans are simple. It's the execution that matters."
 
-            "{i}We find a spot. Alley overlooking patrol route. Wait. Watch. Two hours pass. Then three. Patience is survival.{/i}"
-            "{i}There. Two soldiers. Standard patrol. Bored, not expecting trouble. Perfect.{/i}"
+            "We find a spot. Alley overlooking patrol route. Wait. Watch. Two hours pass. Then three. Patience is survival."
+            "There. Two soldiers. Standard patrol. Bored, not expecting trouble. Perfect."
 
             a "(whisper) Two targets. You take left, I take right. Fast and silent. No gunfire if possible."
             l "What do we have for weapons?"
@@ -295,15 +291,15 @@ label activity2_alternate_methods:
             a "You have a better one?"
             l "...No. Let's do this."
 
-            "{i}Move. Drop. Tackle. Soldier goes down hard. Struggling, trying to shout. Hand over mouth. Choke hold. He fights. I hold. Ten seconds. Twenty. Goes limp.{/i}"
-            "{i}Lyra's soldier down. Unconscious. Bleeding from head wound. Still breathing. That's enough mercy for now.{/i}"
+            "Move. Drop. Tackle. Soldier goes down hard. Struggling, trying to shout. Hand over mouth. Choke hold. He fights. I hold. Ten seconds. Twenty. Goes limp."
+            "Lyra's soldier down. Unconscious. Bleeding from head wound. Still breathing. That's enough mercy for now."
 
             a "(fast) Weapons. Ammo. Comms. Take it all. We have maybe two minutes before backup."
             l "(stripping gear) Got it. Pistols, rifles, magazines. This is enough."
             a "Then move. Now. Before they wake up or backup arrives."
 
-            "{i}Run. Alleys. Twisting paths. Footsteps behind. Shouts. Pursuit. Keep moving. Don't stop. Don't look back.{/i}"
-            "{i}Stop. Finally. Deep enough. Lost them. Breathing hard. Hearts pounding. Alive. Armed.{/i}"
+            "Run. Alleys. Twisting paths. Footsteps behind. Shouts. Pursuit. Keep moving. Don't stop. Don't look back."
+            "Stop. Finally. Deep enough. Lost them. Breathing hard. Hearts pounding. Alive. Armed."
 
             l "(gasping) That was insane."
             a "(breathing hard) That was necessary."
@@ -318,7 +314,7 @@ label activity2_alternate_methods:
             $ add_team_suspicion(2)
             $ adjust_empathy_once("weapons_ambush_ob", -1)
 
-            "{i}Echelon weapons. Two pistols, one rifle, full magazines. Stolen from the system that made us. Poetic.{/i}"
+            "Echelon weapons. Two pistols, one rifle, full magazines. Stolen from the system that made us. Poetic."
 
             $ mark_scene("act2_activity", "weapons_done")
             jump activity2_return_hub
@@ -332,8 +328,8 @@ label activity2_alternate_methods:
             l "That's grim."
             a "We're living in grim. Might as well make use of it."
 
-            "{i}Back to Sector 10. The graveyard. Searching rubble for weapons left by the dead. This is what we've become.{/i}"
-            "{i}Hours pass. Searching. Lifting rubble. Finding bodies. Finding nothing. Then finally, a cache. Hidden. Abandoned. Forgotten.{/i}"
+            "Back to Sector 10. The graveyard. Searching rubble for weapons left by the dead. This is what we've become."
+            "Hours pass. Searching. Lifting rubble. Finding bodies. Finding nothing. Then finally, a cache. Hidden. Abandoned. Forgotten."
 
             a "(finds it) Here. Hidden cache. Resistance supply dump probably."
             l "(examines) Two pistols. Old models but maintained. Ammo. Basic but functional."
@@ -346,7 +342,7 @@ label activity2_alternate_methods:
             $ mark_scene("act2_activity_02_weapons", "got_scavenged_cache")
             $ adjust_empathy_once("weapons_scavenge_emp", +1)
 
-            "{i}Old pistols. Worn but maintained. Someone's backup plan. Now it's ours. Hope they don't need it anymore.{/i}"
+            "Old pistols. Worn but maintained. Someone's backup plan. Now it's ours. Hope they don't need it anymore."
 
             $ mark_scene("act2_activity", "weapons_done")
             jump activity2_return_hub
@@ -357,8 +353,8 @@ label activity2_return_hub:
 
     scene bg_safe_house with fade
 
-    "{i}Back. Safe house. Evening. Armed now. That changes everything.{/i}"
-    a "{i}Weapons. Tools of death. Glass carried them without thinking. I carry them with purpose. That has to mean something.{/i}"
+    "Back. Safe house. Evening. Armed now. That changes everything."
+    athought "Weapons. Tools of death. Glass carried them without thinking. I carry them with purpose. That has to mean something."
 
     l "How do you feel?"
     a "Armed. Prepared. Still terrified. But less helpless."
@@ -369,15 +365,15 @@ label activity2_return_hub:
 
     # Acquisition summary lines
     if "method_bought" in scene_flags.get("act2_activity_02_weapons", set()):
-        "{i}Bought weapons from Vex. Clean transaction. Professional. Expensive but simple.{/i}"
+        "Bought weapons from Vex. Clean transaction. Professional. Expensive but simple."
     elif "method_negotiated" in scene_flags.get("act2_activity_02_weapons", set()):
-        "{i}Negotiated with Vex. Used every credit we had. Fair deal, both sides compromised.{/i}"
+        "Negotiated with Vex. Used every credit we had. Fair deal, both sides compromised."
     elif "method_favor_proposed" in scene_flags.get("act2_activity_02_weapons", set()) and "vex_favor_owed" in scene_flags.get("act2_activity_02_weapons", set()):
-        "{i}Owe Vex a favor. One job, no questions. Dangerous leverage but necessary. We're armed and that's what matters.{/i}"
+        "Owe Vex a favor. One job, no questions. Dangerous leverage but necessary. We're armed and that's what matters."
     elif "method_stolen_echelon" in scene_flags.get("act2_activity_02_weapons", set()):
-        "{i}Stole from Echelon. Ambushed patrol, took their weapons. They'll hunt harder now but we're armed. Worth it.{/i}"
+        "Stole from Echelon. Ambushed patrol, took their weapons. They'll hunt harder now but we're armed. Worth it."
     elif "method_scavenged" in scene_flags.get("act2_activity_02_weapons", set()):
-        "{i}Scavenged from ruins. Dead resistance fighters' backup cache. Borrowed from the fallen. Hope they'd approve.{/i}"
+        "Scavenged from ruins. Dead resistance fighters' backup cache. Borrowed from the fallen. Hope they'd approve."
 
     # Rewards panel (textual)
     $ spent_label = ("-" + str(abs(weapons_scrip_delta))) if weapons_scrip_delta < 0 else ("+" + str(weapons_scrip_delta))

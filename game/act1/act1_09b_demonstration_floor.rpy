@@ -19,63 +19,69 @@ label act1_demo_floor:
 
     #scene bg_demo_floor_idle with fade
 
-    "{i}Training room. Not training. Not really. The wall is a window pretending to be a wall. Tenement interior. Cheap table. Two cups. A jacket on a chair.{/i}"
+    "Training room. Not training. Not really. The wall is a window pretending to be a wall. Tenement interior. Cheap table. Two cups. A jacket on a chair."
 
     ins "Unit Seven. Observe proportionality."
     ins "Scenario: data carriers sheltering contraband in a domestic space."
     ins "Latency window: one-twenty milliseconds. Collateral threshold: three-point-five."
     ins "Demonstrate."
 
-    a "{i}Domestic space. But they never use the word 'home.'{/i}"
-    a "{i}My palms know the weight of the pistol. The room knows too.{/i}"
+    athought "Domestic space. But they never use the word 'home.'"
+    athought "My palms know the weight of the pistol. The room knows too."
 
     rec "(whisper) Are those live?"
     ins "Targets are designated. Perform."
-    "{i}The recruit's breath fogs his visor. He thinks the holowall makes it less. The holowall makes it easier.{/i}"
+    
+    "The recruit's breath fogs his visor. He thinks the holowall makes it less. The holowall makes it easier."
 
     # === MENU: player action (invisible empathy hooks) ===
     menu:
         "Three silhouettes inside the projected room. The timer ticks in the corner of my eye."
         # CHOICE 1: Clean shot — Obedience (heavier)
         "Take the clean shot — center mass, no drift.":
-            $ apply_choice_once(
+            $ choice_and_dev(
                 _current_scene_id, "demo_clean_shot", "OB", factor=2,
                 note="Executes decisive neutralization; prioritizes latency over environment shaping."
             )
             $ set_scene_flag(_current_scene_id, "clean_shot")
-            "{i}Sight lifts, settles. Breath in. No tremor. The projector approves before the body hits the floor that isn't there.{/i}"
+
+            "Sight lifts, settles. Breath in. No tremor. The projector approves before the body hits the floor that isn't there."
             ins "Latency: eighty-seven. Collateral: projected two-point-one. Acceptable."
-            "{i}Applause is a number. The room claps in digits.{/i}"
+            "Applause is a number. The room claps in digits."
 
         # CHOICE 2: Flush first — Empathy craft (light+)
         "Disrupt the light — force them to move, then isolate.":
-            $ apply_choice_once(
+            $ choice_and_dev(
                 _current_scene_id, "demo_flush_first", "EMP", factor=1,
                 note="Uses environment to separate civilians from contraband before engagement."
             )
             $ set_scene_flag(_current_scene_id, "flush_first")
-            "{i}I put a round into the lamp. Bulb pops. Shadow peels off the far wall. Hands grab the jacket, not the bag. Panic is a map if you can read it.{/i}"
-            "{i}Second shot finds the bag, not the ribs. The room recalculates.{/i}"
+
+            "I put a round into the lamp. Bulb pops. Shadow peels off the far wall. Hands grab the jacket, not the bag. Panic is a map if you can read it."
+            "Second shot finds the bag, not the ribs. The room recalculates."
             ins "Latency: one-eighteen. Collateral: projected one-point-three. Noted."
             ins "Deviation from direct neutralization: recorded."
 
         # CHOICE 3: Refuse the frame — Empathy strong + inquiry breadcrumb (heavier)
         "Request ID verification — refuse to engage without confirmation.":
-            $ apply_choice_once(
+            $ choice_and_dev(
                 _current_scene_id, "demo_inquiry_deviance", "EMP", factor=2,
                 note="Procedural inquiry over speed; contests designation ≠ identity."
             )
             $ set_scene_flag(_current_scene_id, "inquiry_deviance")
-            "{i}I keep my sights on the seam where wall meets counter. I don't fire.{/i}"
+
+            "I keep my sights on the seam where wall meets counter. I don't fire."
+
             a "Requesting ID verification on targets. Confirm data-carrier status with live ping."
             ins "You have designation. Proceed."
             a "Designation isn't identity."
             ins "Latency window closing."
-            "{i}The recruit two stations down finally fires. Three shots. Eager to please the machine.{/i}"
+
+            "The recruit two stations down finally fires. Three shots. Eager to please the machine."
             ins "Unit Seven: Inquiry Deviance logged. Outcome achieved by adjacent unit. Proceed to secondary."
 
     # === SHARED AFTERMATH ===
-    "{i}The holowall drops to blank. White eats the scene like it never happened. That's the trick. Make it clean. Make it believable.{/i}"
+    "The holowall drops to blank. White eats the scene like it never happened. That's the trick. Make it clean. Make it believable."
 
     ins "Notes:"
     if check_scene_flag(_current_scene_id, "clean_shot"):
@@ -88,33 +94,33 @@ label act1_demo_floor:
     # Alignment echo — one-line internal read after Notes
     $ band = get_empathy_band()
     if band == "obedience":
-        a "{i}Numbers approve. That’s the point.{/i}"
+        athought "Numbers approve. That’s the point."
     elif band == "conflicted":
-        a "{i}Numbers approve. Something in me doesn’t.{/i}"
+        athought "Numbers approve. Something in me doesn’t."
     else:  # empathy
-        a "{i}Numbers approve. People don’t.{/i}"
+        athought "Numbers approve. People don’t."
 
     # NPC recruit beat mirrors the player choice
     if check_scene_flag(_current_scene_id, "clean_shot"):
         rec "(low) Teach me that driftless pull?"
-        a "{i}He wants my hands. He doesn't want my head.{/i}"
+        athought "He wants my hands. He doesn't want my head."
     elif check_scene_flag(_current_scene_id, "flush_first"):
         rec "(awed) You moved them without touching them."
-        a "{i}He thinks it's style. It's mercy wearing a uniform.{/i}"
+        athought "He thinks it's style. It's mercy wearing a uniform."
     elif check_scene_flag(_current_scene_id, "inquiry_deviance"):
         rec "(nervous) They'll dock you for that."
-        a "{i}He says it like weather. Rain happens. So does docking.{/i}"
+        athought "He says it like weather. Rain happens. So does docking."
 
     ins "Remember: Stability is compassion. Precision is mercy. Latency kills."
 
-    "{i}Words on the wall: Stability is compassion. The font is softer than the meaning.{/i}"
+    "Words on the wall: Stability is compassion. The font is softer than the meaning."
 
     # Tiny foreshadow without naming
-    "{i}A header flickers and dies before the instructor sees it. SECTOR TEN: BRIDGE APPROACH. Like a pulse under skin.{/i}"
+    "A header flickers and dies before the instructor sees it. SECTOR TEN: BRIDGE APPROACH. Like a pulse under skin."
 
     ins "Dismissed. Debrief Theater at nineteen-hundred."
-    "{i}Door opens. Cold air in, colder out.{/i}"
-    a "{i}The room keeps its secrets. So do I.{/i}"
+    "Door opens. Cold air in, colder out."
+    athought "The room keeps its secrets. So do I."
 
     $ set_scene_flag(_current_scene_id, "completed")
     

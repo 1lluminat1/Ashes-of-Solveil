@@ -21,13 +21,13 @@ label activity_survival_skills:
 
     # Light empathy/obedience opener
     if get_empathy_band() != "obedience":
-        a "{i}Day 5. Learn to be nobody. Maybe that’s the only way to live long enough to be someone new.{/i}"
+        athought "Day 5. Learn to be nobody. Maybe that’s the only way to live long enough to be someone new."
     else:
-        a "{i}Day 5. Objective: reduce profile. Blend. Avoid pattern-of-life flags.{/i}"
+        athought "Day 5. Objective: reduce profile. Blend. Avoid pattern-of-life flags."
 
-    "{i}Day 5. Activity: Survival Skills.{/i}"
-    "{i}Zira said I need to learn how to actually survive down here.{/i}"
-    "{i}Not just hide. Survive. Blend in. Become invisible.{/i}"
+    "Day 5. Activity: Survival Skills."
+    "Zira said I need to learn how to actually survive down here."
+    "Not just hide. Survive. Blend in. Become invisible."
 
     # VISUAL: Zira sitting cross-legged on floor. Spread of items before her.
     # Clothing, tools, maps, markers. Teaching materials.
@@ -108,7 +108,7 @@ label activity_survival_skills:
     a "These are... old military signals. Modified."
     z "Smart boy. Yeah, they're adapted from old resistance codes."
     z "My brother taught me these. Before..."
-    "{i}She stops. Cuts off. Didn't mean to mention that.{/i}"
+    "She stops. Cuts off. Didn't mean to mention that."
 
     # VISUAL: Aeron notices. Carefully approaches the opening she left.
     a "Brother?"
@@ -117,11 +117,10 @@ label activity_survival_skills:
     z "Drop it, Glass. We're here to teach you survival, not excavate my past."
 
     # VISUAL: Silence. Heavy. She's guarded now. Walls up. But something's cracking.
-    "{i}She's hiding something. Something painful. Something that explains her.{/i}"
+    "She's hiding something. Something painful. Something that explains her."
 
     menu:
-        "The moment hangs between them. Push or let it go?":
-        
+        "The moment hangs between them. Push or let it go?"
         "Press gently—'You mentioned him before. When you saved us. Who was he?'":
             $ rel("Zira", trust=2, loyalty=1)
             $ mark_flag("Zira", "opened_up_about_kai_prompted")
@@ -155,8 +154,8 @@ label activity_survival_skills:
     # VISUAL: The room temperature drops. Truth laid bare. Painful and raw.
     # SOUND: City hum fades. Just her breathing. Just this moment.
 
-    "{i}Kai. Her brother. Dead.{/i}"
-    "{i}Everything she's done suddenly makes sense.{/i}"
+    "Kai. Her brother. Dead."
+    "Everything she's done suddenly makes sense."
 
     a "(quiet) What happened?"
     z "(stares at notebook) He tried to defect. Like you. Four years ago."
@@ -185,9 +184,9 @@ label activity_survival_skills:
     z "Broadcasted it. 'This is what happens to traitors. This is Echelon's mercy.'"
 
     # VISUAL: Aeron's stomach drops. Father's cruelty familiar but still devastating.
-    a "{i}Father killed her brother. Made it public. Made it terror.{/i}"
-    a "{i}Four years ago. I was eighteen. Still Glass. Still obedient.{/i}"
-    a "{i}Did I see that broadcast? Did I watch her brother die and feel nothing?{/i}"
+    athought "Father killed her brother. Made it public. Made it terror."
+    athought "Four years ago. I was eighteen. Still Glass. Still obedient."
+    athought "Did I see that broadcast? Did I watch her brother die and feel nothing?"
 
     a "I'm sorry. I'm so sorry, Zira."
     z "Don't apologize for your father. You didn't pull the trigger."
@@ -274,27 +273,27 @@ label activity_survival_skills:
     z "Goodnight, Aeron. Sleep if you can."
 
     # VISUAL: She leaves. Door closes. He's alone with Kai's device and new understanding.
-    "{i}Zira the rogue. Zira the survivor. Zira the sister.{/i}"
-    "{i}She's not helping me out of belief or ideology.{/i}"
-    "{i}She's helping me because I'm her second chance. Her do-over. Her hope.{/i}"
+    "Zira the rogue. Zira the survivor. Zira the sister."
+    "She's not helping me out of belief or ideology."
+    "She's helping me because I'm her second chance. Her do-over. Her hope."
 
     # EMP/OB flavor pivot into resolve
     if get_empathy_band() != "obedience":
-        a "{i}For Kai. For Zira. For everyone Marcus destroyed.{/i}"
-        a "{i}We don't erase the past. We outlive it—and build something human on the other side.{/i}"
+        athought "For Kai. For Zira. For everyone Marcus destroyed."
+        athought "We don't erase the past. We outlive it—and build something human on the other side."
     else:
-        a "{i}Objective lock: dismantle Echelon. Asset acquired: Kai’s device. Next step: plan penetration points.{/i}"
+        athought "Objective lock: dismantle Echelon. Asset acquired: Kai’s device. Next step: plan penetration points."
 
     # VISUAL: He examines hacking device. Blue glow. Kai's legacy.
-    a "{i}Four years ago, Marcus killed her brother for trying to escape.{/i}"
-    a "{i}Now I'm trying to escape. And she's making sure I succeed.{/i}"
-    a "{i}Kai's second chance. That's a lot of weight to carry.{/i}"
-    a "{i}But if it means Zira gets her closure... I'll carry it.{/i}"
+    athought "Four years ago, Marcus killed her brother for trying to escape."
+    athought "Now I'm trying to escape. And she's making sure I succeed."
+    athought "Kai's second chance. That's a lot of weight to carry."
+    athought "But if it means Zira gets her closure... I'll carry it."
 
     # VISUAL: He stores device carefully. Precious. Irreplaceable. Mission.
-    a "{i}For Kai. For Zira. For everyone Marcus destroyed.{/i}"
-    a "{i}We're going to burn Echelon down. And Marcus with it.{/i}"
-    a "{i}That's not a promise. That's a guarantee.{/i}"
+    athought "For Kai. For Zira. For everyone Marcus destroyed."
+    athought "We're going to burn Echelon down. And Marcus with it."
+    athought "That's not a promise. That's a guarantee."
 
     # REWARD & STATE BREADCRUMBS (helpers-only; no legacy dict writes)
     $ mark_scene("act2_06_survival_skills", "kai_device_received")

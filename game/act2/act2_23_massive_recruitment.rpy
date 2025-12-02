@@ -14,11 +14,11 @@ label act2_massive_recruitment:
 
     scene bg_operations_room_crowded with fade
 
-    "{i}Operations room. Crowded. Really crowded. When did we get this many people? Last count was 55. Two weeks ago. Now? Can't even count them all. Everywhere. Training. Planning. Working. Moving. This isn't squad anymore. This isn't even platoon. This is company. This is army. This is visible.{/i}"
+    "Operations room. Crowded. Really crowded. When did we get this many people? Last count was 55. Two weeks ago. Now? Can't even count them all. Everywhere. Training. Planning. Working. Moving. This isn't squad anymore. This isn't even platoon. This is company. This is army. This is visible."
 
     # VISUAL: Selene at command table. Maps spread. Markers everywhere. Tracking growth. Managing expansion. Looking satisfied but... strained. Worried?
 
-    "{i}Selene looks exhausted. Good exhausted. Success exhausted. But there's something else. Tension in shoulders. Worry in eyes. She's managing something big. Something that's growing faster than expected. That's good problem. That's winning problem. But it's also exposure problem. Visibility problem. Target problem.{/i}"
+    "Selene looks exhausted. Good exhausted. Success exhausted. But there's something else. Tension in shoulders. Worry in eyes. She's managing something big. Something that's growing faster than expected. That's good problem. That's winning problem. But it's also exposure problem. Visibility problem. Target problem."
 
     # VISUAL: Aeron approaching. Navigating through crowd. People everywhere. Some recognize him. Some don't. Too many new faces. Too many unknowns.
 
@@ -57,7 +57,7 @@ label act2_massive_recruitment:
 
     # VISUAL: Room quieter now. Success euphoria dampened. Reality setting in. Growth has cost. Visibility is danger.
 
-    "{i}Noelle's data. Cold. Clinical. Honest. 73% discovery in two weeks. 89% in three. We're winning by growing. But growing makes us target. Success makes us visible. And visible means Echelon finds us. Finds all 575 of us. That's problem. That's danger. That's cost of winning.{/i}"
+    "Noelle's data. Cold. Clinical. Honest. 73% discovery in two weeks. 89% in three. We're winning by growing. But growing makes us target. Success makes us visible. And visible means Echelon finds us. Finds all 575 of us. That's problem. That's danger. That's cost of winning."
 
     # VISUAL: Zira joining discussion. Street-level intel confirms Noelle's data. Ground truth matches analysis.
 
@@ -74,7 +74,7 @@ label act2_massive_recruitment:
 
     # VISUAL: Everyone contributing. Problems identified. Success revealing weakness. Growth showing vulnerability. Reality check.
 
-    "{i}Everyone talking. But tone different now. Not celebration. Concern. We built this. From 12 to 575. That's success. That's hope. That's army. But it's also target. It's also vulnerability. It's also time running out before Echelon finds us. Before everything we built becomes everything we lose.{/i}"
+    "Everyone talking. But tone different now. Not celebration. Concern. We built this. From 12 to 575. That's success. That's hope. That's army. But it's also target. It's also vulnerability. It's also time running out before Echelon finds us. Before everything we built becomes everything we lose."
 
     # VISUAL: Selene raising hand. Quiet. Attention. Decision time. Leadership showing through concern.
 
@@ -93,7 +93,7 @@ label act2_massive_recruitment:
 
     # VISUAL: Assignments coming. Natural distribution of skills. But weight visible. This is preparation for war.
 
-s "We need commanders for the secondary bases. Capable leaders who can operate independently. People who've proven themselves. People who understand what we're building."
+    s "We need commanders for the secondary bases. Capable leaders who can operate independently. People who've proven themselves. People who understand what we're building."
     
     # VISUAL: Looking around room. At recruits who've risen. At people who've shown leadership. Not core team. Others.
     
@@ -127,7 +127,7 @@ s "We need commanders for the secondary bases. Capable leaders who can operate i
     
     # VISUAL: Four new commanders accepting responsibility. Growth visible. Resistance scaling beyond just main characters.
     
-    "{i}Four commanders. Daven. Kael. Theron. Risa. People who stepped up. People who proved themselves. People who can lead without us holding their hands. That's growth. That's resistance becoming real. Becoming organization. Becoming army with structure beyond just core team. That's success. That's what we built. That's proof we're not just personalities. We're movement. We're system. We're real.{/i}"
+    "Four commanders. Daven. Kael. Theron. Risa. People who stepped up. People who proved themselves. People who can lead without us holding their hands. That's growth. That's resistance becoming real. Becoming organization. Becoming army with structure beyond just core team. That's success. That's what we built. That's proof we're not just personalities. We're movement. We're system. We're real."
     
     # VISUAL: Selene turning to core team. Different assignments. Keeping them together. Central command.
     
@@ -141,11 +141,11 @@ s "We need commanders for the secondary bases. Capable leaders who can operate i
     
     # VISUAL: Core team staying together. Main base. Central command. Not fragmented. Not scattered. Together.
     
-    "{i}Core team stays together. Main base. Central command. We're not splitting up. We're not fragmenting. We're building organization around us. Building structure. Building capability. But we stay together. That's important. That's what keeps us strong. Not just tactical. Emotional. We're family. We function together. We fight together. We stay together. That's us.{/i}"
+    "Core team stays together. Main base. Central command. We're not splitting up. We're not fragmenting. We're building organization around us. Building structure. Building capability. But we stay together. That's important. That's what keeps us strong. Not just tactical. Emotional. We're family. We function together. We fight together. We stay together. That's us."
 
     # VISUAL: Team accepting assignments. Responsibility growing. But understanding weight. This isn't just organization. This is preparation for war. For loss. For sacrifice.
 
-    "{i}Assignments given. Structure established. We're distributing because we're preparing to be hit. We're decentralizing because we're preparing to lose locations. We're training because we're preparing to fight. This isn't celebration. This is preparation. This is knowing Echelon is coming. And preparing anyway. That's resistance. That's us.{/i}"
+    "Assignments given. Structure established. We're distributing because we're preparing to be hit. We're decentralizing because we're preparing to lose locations. We're training because we're preparing to fight. This isn't celebration. This is preparation. This is knowing Echelon is coming. And preparing anyway. That's resistance. That's us."
 
     # VISUAL: Selene's expression. Determined but heavy. She knows cost coming. She's seen it before. Purge taught her. Won't let it happen again without fight.
 
@@ -171,7 +171,7 @@ s "We need commanders for the secondary bases. Capable leaders who can operate i
 
     # VISUAL: Young recruit leaving to join others. Twelve more. 587 total. More tomorrow. More next week. Growth continuing. Target growing. Timer counting down.
 
-    "{i}Twelve more. 587 total. Tomorrow? 595. Next week? 650. End of month? 800. We're rebuilding to pre-Purge strength. But every number is person. Every person is potential casualty. Every recruit is name that might go on Tessa's wall of the dead instead of wall of the living. That's cost of growth. That's price of hope. That's weight we carry.{/i}"
+    "Twelve more. 587 total. Tomorrow? 595. Next week? 650. End of month? 800. We're rebuilding to pre-Purge strength. But every number is person. Every person is potential casualty. Every recruit is name that might go on Tessa's wall of the dead instead of wall of the living. That's cost of growth. That's price of hope. That's weight we carry."
 
     # VISUAL: Operations room. Still crowded. Still overwhelming. But energy different now. Not just celebration. Preparation. Awareness. Cost acknowledged.
 
@@ -179,7 +179,7 @@ s "We need commanders for the secondary bases. Capable leaders who can operate i
 
     scene bg_interview_area with fade
 
-    "{i}Interview area. The twelve from Sector 11. Ranging from teens to middle-aged. Mix of backgrounds. All desperate. All hopeful. All choosing resistance. All accepting risk without knowing full cost. That's courage. That's choice. That's what makes army from nothing. People choosing to fight. Even when fighting means dying.{/i}"
+    "Interview area. The twelve from Sector 11. Ranging from teens to middle-aged. Mix of backgrounds. All desperate. All hopeful. All choosing resistance. All accepting risk without knowing full cost. That's courage. That's choice. That's what makes army from nothing. People choosing to fight. Even when fighting means dying."
 
     # VISUAL: Aeron and Lyra conducting interviews. Process refined. Efficient. But heavier now. Each acceptance is person who might die.
 
@@ -199,7 +199,7 @@ s "We need commanders for the secondary bases. Capable leaders who can operate i
 
     # VISUAL: Story after story. Pain after pain. Hope after hope. All choosing resistance. All accepting risk. All approved. All added to count. All potential casualties.
 
-    "{i}Twelve interviews. Twelve approvals. Twelve people who chose to fight knowing death is possible. That's 587 now. Tomorrow more. Next week more. Each one person. Each one name. Each one potential loss. But also each one hope. Each one choice. Each one proof resistance matters. That's worth risk. That's worth danger. That's worth everything.{/i}"
+    "Twelve interviews. Twelve approvals. Twelve people who chose to fight knowing death is possible. That's 587 now. Tomorrow more. Next week more. Each one person. Each one name. Each one potential loss. But also each one hope. Each one choice. Each one proof resistance matters. That's worth risk. That's worth danger. That's worth everything."
 
     # VISUAL: Interviews complete. All twelve accepted. Directed to orientation. To training. To becoming fighters. To becoming casualties or victors. Time will tell.
 
@@ -243,7 +243,7 @@ s "We need commanders for the secondary bases. Capable leaders who can operate i
 
     # VISUAL: Team nodding. Agreement. Determination. Understanding stakes. Accepting cost. Moving forward despite danger.
 
-    "{i}Two weeks to two months until Echelon finds us. 35% combat readiness. Growth racing against discovery. Training racing against raid. Hope racing against fear. We're winning by metrics. But winning makes us target. And target means casualties. That's cost of resistance. That's price of hope. That's weight we accepted when we chose to fight instead of hide.{/i}"
+    "Two weeks to two months until Echelon finds us. 35% combat readiness. Growth racing against discovery. Training racing against raid. Hope racing against fear. We're winning by metrics. But winning makes us target. And target means casualties. That's cost of resistance. That's price of hope. That's weight we accepted when we chose to fight instead of hide."
 
     # VISUAL: Standing together. Core team. Built this. From twelve to 587. From hiding to threatening. From nothing to army. But also from safety to danger. From invisibility to target. From low risk to high casualties. Together. Choosing anyway.
 
@@ -257,7 +257,7 @@ s "We need commanders for the secondary bases. Capable leaders who can operate i
 
     # VISUAL: Collective moment. Team. Family. Resistance. Army. Burden. All of it. Together. Heavy. Real. Accepted.
 
-    "{i}Standing with the core team—Selene, Lyra, Noelle, Zira, Tessa. We built this from nothing into something that matters. But every new recruit is another potential name for Tessa’s wall. Hope isn’t free. Every choice we make buys it with blood. And we’ll keep paying, because submission is just slower dying. We chose to fight. We chose meaning over safety. That’s resistance. That’s us.{/i}"
+    "Standing with the core team—Selene, Lyra, Noelle, Zira, Tessa. We built this from nothing into something that matters. But every new recruit is another potential name for Tessa’s wall. Hope isn’t free. Every choice we make buys it with blood. And we’ll keep paying, because submission is just slower dying. We chose to fight. We chose meaning over safety. That’s resistance. That’s us."
 
     # VISUAL: Operations room. Crowded. Overwhelming. Beautiful. Dangerous. 587 people choosing resistance. Choosing hope. Choosing risk. That's everything. That's army. That's target. That's us.
 
@@ -265,7 +265,7 @@ s "We need commanders for the secondary bases. Capable leaders who can operate i
 
     n "Final data point for consideration. Echelon patrol convergence patterns suggest they're narrowing search area. Multiple sectors eliminated. Search focused on remaining possibilities. Our sectors included."
     n "(softly) Projection: discovery probability seventy-three percent within fourteen days..."
-    "{i}She hesitates, eyes flicking from the screen to us—like she’s not just reading data anymore, but seeing faces behind the numbers.{/i}"
+    "She hesitates, eyes flicking from the screen to us—like she’s not just reading data anymore, but seeing faces behind the numbers."
     n "...That’s two weeks. Two weeks until everything changes. Until theory becomes reality. Until we learn if we built an army—or a grave."
 
     # VISUAL: Room silent. Weight settling. Reality acknowledged. Timer counting. Fourteen days. Maybe less. Maybe more. But coming. Definitely coming.
@@ -275,17 +275,17 @@ s "We need commanders for the secondary bases. Capable leaders who can operate i
 
     # VISUAL: Team dispersing. Missions assigned. Preparations beginning. Clock ticking. Fourteen days. Timer started. War approaching.
 
-    "{i}Fourteen days. Maybe less. Maybe more. But coming. Echelon is coming. 587 fighters preparing. Training. Hoping. Risking. Choosing to fight despite knowing cost. That's army. That's resistance. That's us. Built from nothing. Grew too fast. Became visible. Became target. Became danger. And now we wait. We prepare. We hope. And we count down. Fourteen days until everything we built is tested. Until hope meets reality. Until resistance becomes war. Fourteen days. That's all we have. That's everything we need. That's enough. Has to be enough. Because alternative is submission. And we chose to fight. No matter cost. No matter danger. No matter casualties. We chose. That's resistance. That's us. That's Phoenix. Rising. Burning. Fighting. Winning or dying. But fighting. Always fighting. That's enough. That's everything.{/i}"
+    "Fourteen days. Maybe less. Maybe more. But coming. Echelon is coming. 587 fighters preparing. Training. Hoping. Risking. Choosing to fight despite knowing cost. That's army. That's resistance. That's us. Built from nothing. Grew too fast. Became visible. Became target. Became danger. And now we wait. We prepare. We hope. And we count down. Fourteen days until everything we built is tested. Until hope meets reality. Until resistance becomes war. Fourteen days. That's all we have. That's everything we need. That's enough. Has to be enough. Because alternative is submission. And we chose to fight. No matter cost. No matter danger. No matter casualties. We chose. That's resistance. That's us. That's Phoenix. Rising. Burning. Fighting. Winning or dying. But fighting. Always fighting. That's enough. That's everything."
 
     # VISUAL: Team dispersing. Selene remains for a moment. Watching recruits. Thinking. Heavy silence.
-    "{i}The others leave. Only Selene and I remain. The room still hums with energy, but underneath it—fear. She’s staring at the map, the patrol patterns, the converging lines of red light.{/i}"
+    "The others leave. Only Selene and I remain. The room still hums with energy, but underneath it—fear. She’s staring at the map, the patrol patterns, the converging lines of red light."
 
     s "(quietly) I’ve seen this pattern before. Different year, same shape. Before the Purge."
     a "You think it’s happening again."
     s "Not yet. But it will. They can’t allow something like us to exist twice."
     a "Then we make sure it’s not the same ending."
     s "(meeting his eyes) Then don’t die before the sequel, Commander."
-    "{i}She says it with half a smile, but her eyes say something else entirely—memory, fear, resolve. The kind that only people who’ve already survived the end of the world can have.{/i}"
+    "She says it with half a smile, but her eyes say something else entirely—memory, fear, resolve. The kind that only people who’ve already survived the end of the world can have."
 
 
     # Mark scene complete

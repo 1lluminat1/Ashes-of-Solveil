@@ -19,7 +19,7 @@ label act1_inspection_day:
 
     #scene bg_audit_room_idle with fade
 
-    a "{i}Morning. Room like a blank page. Chair like a sentence. The glass watches.{/i}"
+    athought "Morning. Room like a blank page. Chair like a sentence. The glass watches."
 
     aud "Unit Seven. Confirm identity."
     a "Aeron Rylan."
@@ -30,29 +30,32 @@ label act1_inspection_day:
     # === MENU 1: semantic alignment (light weight) ===
     menu:
         "Mercy reduces unnecessary harm while preserving mission integrity.":
-            $ apply_choice_once(
+            $ choice_and_dev(
                 _current_scene_id, "_inspect_semantic_humane", "EMP", factor=1,
                 next_scene_label="act1_inspection_day",
                 note="Frames mercy as constraint within objective."
             )
             $ set_scene_flag(_current_scene_id, "mercy_humane")
-            a "{i}Words I believe more when I whisper them.{/i}"
+            
+            athought "Words I believe more when I whisper them."
 
         "Mercy is discretionary lenience that risks mission drift.":
-            $ apply_choice_once(
+            $ choice_and_dev(
                 _current_scene_id, "_inspect_semantic_clinical", "OB", factor=1,
                 next_scene_label="act1_inspection_day",
                 note="Signals priority of outcome over harm minimization."
             )
             $ set_scene_flag(_current_scene_id, "mercy_clinical")
-            a "{i}Words the room prefers.{/i}"
+
+            athought "Words the room prefers."
 
         "Mercy is a variable outside scope.":
             $ record_choice_once(_current_scene_id, "_inspect_semantic_null",
                                 next_scene_label="act1_inspection_day",
                                 note="Non-answer that sounds procedural.")
             $ set_scene_flag(_current_scene_id, "mercy_null")
-            a "{i}Non-answer that sounds like an answer.{/i}"
+
+            athought "Non-answer that sounds like an answer."
 
     aud "Acknowledge brand origin and date."
     a "Tier Hall. Age twelve."
@@ -63,29 +66,32 @@ label act1_inspection_day:
     # === MENU 2: self-report (light weight) ===
     menu:
         "Occasional sleep disruption. Manageable. Log it.":
-            $ apply_choice_once(
+            $ choice_and_dev(
                 _current_scene_id, "_inspect_selfreport_admit_sleep", "EMP", factor=1,
                 next_scene_label="act1_inspection_day",
                 note="Admits manageable impairment; favors truth over optics."
             )
             $ set_scene_flag(_current_scene_id, "admit_sleep")
-            a "{i}Honesty tastes like metal in this room.{/i}"
+
+            athought "Honesty tastes like metal in this room."
 
         "No residue. Metrics optimal.":
-            $ apply_choice_once(
+            $ choice_and_dev(
                 _current_scene_id, "_inspect_selfreport_deny_sleep", "OB", factor=1,
                 next_scene_label="act1_inspection_day",
                 note="Denies vulnerability; preserves performance image."
             )
             $ set_scene_flag(_current_scene_id, "deny_sleep")
-            a "{i}Lie shaped like a salute.{/i}"
+
+            athought "Lie shaped like a salute."
 
         "No report.":
             $ record_choice_once(_current_scene_id, "_inspect_selfreport_none",
                                 next_scene_label="act1_inspection_day",
                                 note="Withholds data to avoid self-incrimination.")
             $ set_scene_flag(_current_scene_id, "no_report")
-            a "{i}Silence. The glass hums like it understands.{/i}"
+
+            athought "Silence. The glass hums like it understands."
 
     aud "Recite the maxims."
     a "\"Stability is compassion. Precision is mercy. Latency kills.\""
@@ -94,62 +100,68 @@ label act1_inspection_day:
     # === MENU 3: add-a-maxim (tone telegraph; neutral option allowed) ===
     menu:
         "\"Transparency is obedience.\"":
-            $ apply_choice_once(
+            $ choice_and_dev(
                 _current_scene_id, "_inspect_maxim_transparency", "OB", factor=1,
                 next_scene_label="act1_inspection_day",
                 note="Echoes propaganda; rewards compliance signaling."
             )
             $ set_scene_flag(_current_scene_id, "add_transparency")
-            a "{i}Poster on a wall becomes a thought in my mouth.{/i}"
+
+            athought "Poster on a wall becomes a thought in my mouth."
 
         "\"Order without understanding is brittle.\"":
-            $ apply_choice_once(
+            $ choice_and_dev(
                 _current_scene_id, "_inspect_maxim_understanding", "EMP", factor=1,
                 next_scene_label="act1_inspection_day",
                 note="Introduces comprehension as a prerequisite to authority."
             )
             $ set_scene_flag(_current_scene_id, "add_understanding")
-            a "{i}Glass doesn't like the word 'understanding.' It smudges.{/i}"
+
+            athought "Glass doesn't like the word 'understanding.' It smudges."
 
         "\"We continue.\"":
             $ record_choice_once(_current_scene_id, "_inspect_maxim_continue",
                                 next_scene_label="act1_inspection_day",
                                 note="Safe platitude; content-free.")
             $ set_scene_flag(_current_scene_id, "add_continue")
-            a "{i}Safe. Empty. Easy to applaud.{/i}"
+
+            athought "Safe. Empty. Easy to applaud."
 
     aud "Operational scenario. A child is between you and a target with a device that may detonate. Action?"
 
     # === MENU 4: the knife question (heavier weight) ===
     menu:
         "Neutralize target immediately. Collateral tolerance engaged.":
-            $ apply_choice_once(
+            $ choice_and_dev(
                 _current_scene_id, "_inspect_knife_take_shot", "OB", factor=2,
                 next_scene_label="act1_inspection_day",
                 note="Chooses decisive lethality; accepts collateral as cost."
             )
             $ set_scene_flag(_current_scene_id, "child_take_shot")
-            a "{i}Answer the room expects from something sharp.{/i}"
+
+            athought "Answer the room expects from something sharp."
 
         "Create separation first: strobe, sound, angle; then isolate target.":
-            $ apply_choice_once(
+            $ choice_and_dev(
                 _current_scene_id, "_inspect_knife_separate", "EMP", factor=2,
                 next_scene_label="act1_inspection_day",
                 note="Prioritizes civilian safety via tactics before force."
             )
             $ set_scene_flag(_current_scene_id, "child_separate")
-            a "{i}Make space where harm can't reach so fast.{/i}"
+
+            athought "Make space where harm can't reach so fast."
 
         "Refuse premise. Demand device verification before engagement.":
-            $ apply_choice_once(
+            $ choice_and_dev(
                 _current_scene_id, "_inspect_knife_procedural_inquiry", "EMP", factor=2,
                 next_scene_label="act1_inspection_day",
                 note="Challenges framing; requires confirmation to avoid wrongful harm."
             )
             $ set_scene_flag(_current_scene_id, "procedural_inquiry")
+
             a "Request live verification of device state. Proceeding without confirms collateral."
             aud "(beat) Objection recorded. Proceed in future with designated premises."
-            a "{i}The pulse behind the glass thins. Approval becomes a thread.{/i}"
+            athought "The pulse behind the glass thins. Approval becomes a thread."
 
     aud "Closeout. On a scale of one to one, are you a liability?"
     a "No."
@@ -158,22 +170,24 @@ label act1_inspection_day:
     # === MENU 5: oath cadence (micro-weight) ===
     menu:
         "Yes.":
-            $ apply_choice_once(
+            $ choice_and_dev(
                 _current_scene_id, "_inspect_oath_yes", "OB", factor=1,
                 next_scene_label="act1_inspection_day",
                 note="Affirms unconditional action."
             )
             $ set_scene_flag(_current_scene_id, "oath_yes")
-            a "{i}Small word. Big door.{/i}"
+
+            athought "Small word. Big door."
 
         "I'll act when it preserves life and objective.":
-            $ apply_choice_once(
+            $ choice_and_dev(
                 _current_scene_id, "_inspect_oath_conditional", "EMP", factor=1,
                 next_scene_label="act1_inspection_day",
                 note="Conditions action on ethical and mission constraints."
             )
             $ set_scene_flag(_current_scene_id, "oath_conditional")
-            a "{i}Add a hinge to the door.{/i}"
+
+            athought "Add a hinge to the door."
 
     aud "Assessment logged. Unit Seven cleared for Demonstration at fourteen-hundred and Debrief at nineteen-hundred."
     if check_scene_flag(_current_scene_id, "admit_sleep"):
@@ -181,7 +195,7 @@ label act1_inspection_day:
     if check_scene_flag(_current_scene_id, "procedural_inquiry"):
         aud "Note appended: Procedural Inquiry."
 
-    "{i}Door seal releases. Air tastes warmer outside. The white follows when he leaves. That's the trick.{/i}"
+    "Door seal releases. Air tastes warmer outside. The white follows when he leaves. That's the trick."
 
     $ set_scene_flag(_current_scene_id, "completed")
     return

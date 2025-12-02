@@ -12,15 +12,15 @@ label act2_finale:
 
     scene bg_secondary_base_morning with fade
 
-    "{i}Morning. A week since the battle. Secondary base, Sector 9. We’re still here. Still rebuilding. 547 fighters operational. 41 dead counted. Tessa’s board grows. The resistance continues. The war continues. That’s reality. That’s us. That’s what we do — we continue.{/i}"
+    "Morning. A week since the battle. Secondary base, Sector 9. We’re still here. Still rebuilding. 547 fighters operational. 41 dead counted. Tessa’s board grows. The resistance continues. The war continues. That’s reality. That’s us. That’s what we do — we continue."
 
-    "{i}The base has changed. Systems established, schedules posted, supplies moving. We’re not hiding anymore. Not just surviving. We’re functioning — organized, disciplined, dangerous. That’s growth. That’s resistance evolving. That’s us.{/i}"
+    "The base has changed. Systems established, schedules posted, supplies moving. We’re not hiding anymore. Not just surviving. We’re functioning — organized, disciplined, dangerous. That’s growth. That’s resistance evolving. That’s us."
 
     # VISUAL: SELENE at the command table. Maps, reports, schedules spread out.
     # LIGHTING: Morning light through cracked blinds, soft beams on data table.
     # CAMERA: Slow dolly in on Selene’s profile.
 
-    "{i}Selene at the table — commander through and through. Reports stacked high, numbers precise. She’s carried this burden for years, maybe since the Purge. 847 dead then. Now she carries hundreds more. But not alone anymore. Maybe not anymore.{/i}"
+    "Selene at the table — commander through and through. Reports stacked high, numbers precise. She’s carried this burden for years, maybe since the Purge. 847 dead then. Now she carries hundreds more. But not alone anymore. Maybe not anymore."
 
     # VISUAL: AERON entering, datapad in hand.
     # CAMERA: Medium two-shot — distance between equals not yet bridged.
@@ -42,7 +42,7 @@ label act2_finale:
     s "Will you lead with me?"
 
     # VISUAL: Beat — Aeron processing.
-    "{i}Co-command. Equality. Partnership. Recognition I never asked for, but somehow earned. The question isn’t if I want it — it’s if I can carry it. 547 lives. Every choice a weight. Every death a mark. But I’ve already been carrying it. Time to stop pretending otherwise.{/i}"
+    "Co-command. Equality. Partnership. Recognition I never asked for, but somehow earned. The question isn’t if I want it — it’s if I can carry it. 547 lives. Every choice a weight. Every death a mark. But I’ve already been carrying it. Time to stop pretending otherwise."
 
     a "Yes. I accept. I’ll lead with you. I’ll carry this with you. Partners. Equals. Co-commanders."
 
@@ -50,18 +50,18 @@ label act2_finale:
     s "Then it’s done. We lead together. Decide together. Share every weight. That’s command now."
 
     # VISUAL: Close-up on Aeron — feeling the title settle.
-    "{i}The title lands like gravity. Recognition comes with burden. 547 lives pressing down — heavy, permanent. This is what she’s felt all along. And I accept it. Because someone has to. Because she shouldn’t carry it alone. That’s leadership. That’s us.{/i}"
+    "The title lands like gravity. Recognition comes with burden. 547 lives pressing down — heavy, permanent. This is what she’s felt all along. And I accept it. Because someone has to. Because she shouldn’t carry it alone. That’s leadership. That’s us."
 
     s "You feel it. Good. Leadership should be heavy. If it isn’t, you’re doing it wrong. That’s why this works. Why *we* work. You carry the weight with awareness — that’s strength."
 
     # VISUAL: Both at the table, maps between them.
-    "{i}We stand on opposite sides of the same map. 547 lives in ink between us. Not commander and subordinate anymore — partners. Equals. Resistance feels real for the first time.{/i}"
+    "We stand on opposite sides of the same map. 547 lives in ink between us. Not commander and subordinate anymore — partners. Equals. Resistance feels real for the first time."
 
     s "We have work. Training, supply coordination, base management. Echelon will come again — harder. We need to be ready."
 
     a "Together. Let’s begin."
 
-    "{i}We work side by side. Planning, organizing, leading. Shared burden, shared strength. That’s resistance now. Not hierarchy — partnership. Not command — collaboration. We continue. Always continue. Together.{/i}"
+    "We work side by side. Planning, organizing, leading. Shared burden, shared strength. That’s resistance now. Not hierarchy — partnership. Not command — collaboration. We continue. Always continue. Together."
 
     # VISUAL: Map overlay. Echelon red zones dwarfing resistance blue.
     s "Look at this. Echelon has thousands — trained, enhanced, disciplined. We have hundreds — scared, untested, but growing. We’re not winning yet. We’re surviving, threatening. That’s a start, not victory."
@@ -79,7 +79,7 @@ label act2_finale:
     a "Let’s begin."
 
     # VISUAL: CAMERA: Slow pull-back — both working over the map.
-    "{i}From twelve to 547. From hiding to army. From Glass to Aeron to Co-Commander. Journey complete — and only beginning. We lead. We fight. We resist. Together. Until victory or death. That’s us. That’s enough.{/i}"
+    "From twelve to 547. From hiding to army. From Glass to Aeron to Co-Commander. Journey complete — and only beginning. We lead. We fight. We resist. Together. Until victory or death. That’s us. That’s enough."
 
     # =======================================================
     # CANON STATE UPDATES — ACT II COMPLETE
@@ -125,7 +125,7 @@ label act2_finale:
     # TRANSITION: Act 2 complete — Growth achieved. Leadership established. War beginning.
     scene black with fade
 
-    "{i}Act II complete. Glass became Aeron. Aeron became leader. Leader became co-commander. Twelve became 547. Hiding became army. Survival became resistance. Resistance became hope. And now? Now we lead. Now we fight. Now we win. Together. Forever. That’s Act III. That’s war. That’s us. That’s everything. Let’s begin.{/i}"
+    "Act II complete. Glass became Aeron. Aeron became leader. Leader became co-commander. Twelve became 547. Hiding became army. Survival became resistance. Resistance became hope. And now? Now we lead. Now we fight. Now we win. Together. Forever. That’s Act III. That’s war. That’s us. That’s everything. Let’s begin."
 
     return
 

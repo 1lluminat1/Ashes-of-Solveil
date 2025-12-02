@@ -14,7 +14,7 @@ label act2_recruitment_wave:
 
     #scene bg_operations_room_day with fade
 
-    "{i}Morning. Operations room. Busier than usual. More voices. More movement. More... people? When did we get more people? Last count was 20. Feels like more now. Growth. Actual growth. That's new. That's hope.{/i}"
+    "Morning. Operations room. Busier than usual. More voices. More movement. More... people? When did we get more people? Last count was 20. Feels like more now. Growth. Actual growth. That's new. That's hope."
 
     # VISUAL: Selene at command table. Map spread out. Marking locations. Looking satisfied.
     s "Aeron. Lyra. Good timing. We need to talk about our recruitment situation."
@@ -58,7 +58,7 @@ label act2_recruitment_wave:
     # RECRUIT 4: Young woman, late teens, orphaned by Echelon, burning rage
     # RECRUIT 5: Man, thirties, FAMILIAR FACE—it's someone from activities if alive (Kren? Repair shop owner?)
 
-    "{i}Five people. Five stories. Five reasons for being here. All hoping we'll accept them. All risking everything by being here. All choosing resistance over survival. That takes courage. Or desperation. Sometimes both.{/i}"
+    "Five people. Five stories. Five reasons for being here. All hoping we'll accept them. All risking everything by being here. All choosing resistance over survival. That takes courage. Or desperation. Sometimes both."
 
     # VISUAL: Setting up interview space. Table. Chairs. Professional but not cold.
     a "We'll interview you one at a time. Questions about your background, your reasons for joining, your skills. Standard process. Be honest. Lies get caught. Honesty gets respected."
@@ -99,7 +99,7 @@ label act2_recruitment_wave:
     recruit2 "So I'm here. Not to forgive you. Don't think I can do that. But to fight beside you. Because fighting beside you hurts Echelon more than hating you helps anyone."
 
     # VISUAL: Brutal honesty. She hates what he was. Respects what he's becoming. Complex. Real.
-    "{i}She lost family to Glass. To me. Maybe I killed them. Probably I killed them. Targets 247 and 248. I don't remember faces that early. Too many. Too fast. But I killed them. And she's here anyway. Choosing resistance over revenge. That's... that's something.{/i}"
+    "She lost family to Glass. To me. Maybe I killed them. Probably I killed them. Targets 247 and 248. I don't remember faces that early. Too many. Too fast. But I killed them. And she's here anyway. Choosing resistance over revenge. That's... that's something."
 
     a "I'm sorry. For your loss. For my part in it. For everything the Sweep took from you. I can't undo it. Can't fix it. Can only try to stop it from happening again."
     recruit2 "Words are cheap. Action matters. You want to make it right? Help me make Echelon pay. That's the only redemption worth anything."
@@ -141,7 +141,7 @@ label act2_recruitment_wave:
     recruit4 "I'll follow orders. As long as orders involve hurting Echelon. That's all I care about."
 
     # VISUAL: Difficult decision. She's motivated but unstable. Asset or liability?
-    "{i}She's a weapon looking for a target. That's useful. That's also dangerous. Weapons don't discriminate. They just destroy. Can we point her at Echelon without her destroying herself? Or us? Maybe. Maybe not. But turning her away sends her somewhere worse. At least here we can watch her. Channel her. Maybe save her from herself.{/i}"
+    "She's a weapon looking for a target. That's useful. That's also dangerous. Weapons don't discriminate. They just destroy. Can we point her at Echelon without her destroying herself? Or us? Maybe. Maybe not. But turning her away sends her somewhere worse. At least here we can watch her. Channel her. Maybe save her from herself."
 
     a "...You're in. But you work with Tessa first. Medical and psychological evaluation. We need to make sure you're stable enough to fight without getting everyone killed."
     recruit4 "I'm stable. I'm focused. I'm ready."
@@ -153,11 +153,11 @@ label act2_recruitment_wave:
     # RECRUIT 5: Familiar face—callback to activities (Kren if alive, or repair shop owner, or other)
 
     # Branch based on who's alive from activities
-    $ if characters.get("kren", {}).get("alive", False):
+    if characters.get("kren", {}).get("alive", False):
         jump recruit_kren
-    $ elif characters.get("repair_owner", {}).get("alive", False):
+    elif characters.get("repair_owner", {}).get("alive", False):
         jump recruit_repair_owner
-    $ else:
+    else:
         jump recruit_generic
 
 label recruit_kren:
@@ -220,7 +220,7 @@ label recruit_aftermath:
     # VISUAL: Interviews complete. Five recruits processed. Some accepted. Some pending verification.
     scene bg_operations_room_day with fade
 
-    "{i}Five interviews done. Five stories. Five reasons. Some personal. Some practical. Some vengeful. Some loyal. All valid. All choosing resistance. All making us stronger. 20 became 35 became 55. Growing. Actually growing. That's power. That's hope. That's dangerous to Echelon.{/i}"
+    "Five interviews done. Five stories. Five reasons. Some personal. Some practical. Some vengeful. Some loyal. All valid. All choosing resistance. All making us stronger. 20 became 35 became 55. Growing. Actually growing. That's power. That's hope. That's dangerous to Echelon."
 
     # VISUAL: Returning to Selene. Reporting results. Assessment complete.
     s "How'd it go? Anyone raise red flags?"
@@ -233,7 +233,7 @@ label recruit_aftermath:
     s "Word's spreading fast. We're becoming visible. Becoming real. People want to be part of something that fights back. That's what we're building. That's what we are now."
 
     # VISUAL: Looking around operations room. More people. More voices. More purpose. Growth tangible.
-    "{i}Operations room bustling. People everywhere. Training. Planning. Working. Building. This was twenty people two weeks ago. Now it's fifty-five. By week's end? Eighty? Hundred? Growing faster than we can process. That's good problem to have. That's resistance problem. That's winning problem.{/i}"
+    "Operations room bustling. People everywhere. Training. Planning. Working. Building. This was twenty people two weeks ago. Now it's fifty-five. By week's end? Eighty? Hundred? Growing faster than we can process. That's good problem to have. That's resistance problem. That's winning problem."
 
     # VISUAL: Noelle approaching. Analysis ready. Growth metrics calculated.
     n "Current recruitment rate is 5.2 people per day with 89% retention after screening. Projected growth: 85 fighters by end of week, 140 by end of month. We'll need expanded base capacity. Current infrastructure supports maximum 80. We're exceeding that threshold."
@@ -261,7 +261,7 @@ label recruit_aftermath:
     elara "That's all I want. Teach me. I'll learn. I'll fight. I'll make their deaths mean something."
 
     # VISUAL: She leaves. Determined. Strong. Survivor becoming fighter. Glass's victims becoming Glass's allies. Strange redemption. Complicated redemption. But redemption.
-    "{i}She lost family to me. Maybe. Probably. And she's here anyway. Fighting beside me. Against common enemy. That's not forgiveness. But it's something. It's choice. It's forward. It's resistance. Maybe that's enough. Maybe that's everything.{/i}"
+    "She lost family to me. Maybe. Probably. And she's here anyway. Fighting beside me. Against common enemy. That's not forgiveness. But it's something. It's choice. It's forward. It's resistance. Maybe that's enough. Maybe that's everything."
 
     # VISUAL: Lyra touching Aeron's arm. Grounding. Supporting. Understanding.
     l "You okay?"
@@ -270,7 +270,7 @@ label recruit_aftermath:
     a "...Yeah. Forward. Together. That's the only way this works."
 
     # VISUAL: Operations room. Bustling. Growing. Alive. Resistance becoming real. Becoming dangerous. Becoming hope.
-    "{i}Twenty became fifty-five. Next week? Eighty-five. Month? 140. Growing. Scaling. Building. This is what resistance looks like. Not just fighters. But community. People choosing together. People fighting together. People hoping together. That's power Echelon can't buy with Bands. That's power built on choice. On trust. On belief that better future is possible. That's dangerous power. That's winning power. That's us.{/i}"
+    "Twenty became fifty-five. Next week? Eighty-five. Month? 140. Growing. Scaling. Building. This is what resistance looks like. Not just fighters. But community. People choosing together. People fighting together. People hoping together. That's power Echelon can't buy with Bands. That's power built on choice. On trust. On belief that better future is possible. That's dangerous power. That's winning power. That's us."
 
     # Mark scene complete
     $ scenes["recruitment_wave"] = True

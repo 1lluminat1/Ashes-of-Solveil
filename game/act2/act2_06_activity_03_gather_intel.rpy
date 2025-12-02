@@ -16,27 +16,27 @@ label activity_gather_intel:
 
     #scene bg_sector6_rooftops with fade
 
-    "{i}Day 3. Activity: Gather Intel.{/i}"
-    "{i}Zira said know your enemy, so I'm learning.{/i}"
+    "Day 3. Activity: Gather Intel."
+    "Zira said know your enemy, so I'm learning."
 
     # VISUAL: Aeron crouched on rooftop edge. Binoculars (if acquired) or just eyes.
     # Watching Echelon patrols below. Taking notes on old datapad.
 
-    "{i}Echelon patrols move like clockwork—predictable, every 20 minutes, same routes.{/i}"
-    "{i}Or they were. Something's changed.{/i}"
+    "Echelon patrols move like clockwork—predictable, every 20 minutes, same routes."
+    "Or they were. Something's changed."
 
-    a "{i}The patrol patterns are shifting. Not random though. There's logic here—deliberate adaptation.{/i}"
-    a "{i}They're responding to resistance activity somehow.{/i}"
-    a "{i}But how? What's the underlying pattern?{/i}"
+    athought "The patrol patterns are shifting. Not random though. There's logic here—deliberate adaptation."
+    athought "They're responding to resistance activity somehow."
+    athought "But how? What's the underlying pattern?"
 
     # VISUAL: He reviews notes. Frustrated. Data incomplete. Can't see the bigger picture.
-    "{i}Three nights of tracking and I still can't predict them.{/i}"
-    "{i}There's an algorithm here somewhere. I'm just not seeing it.{/i}"
+    "Three nights of tracking and I still can't predict them."
+    "There's an algorithm here somewhere. I'm just not seeing it."
 
     # SOUND: Footstep. Soft. Behind him. Close.
     # VISUAL: He tenses. Hand moves toward weapon (if acquired).
 
-    "{i}Not alone.{/i}"
+    "Not alone."
 
     # He spins. Ready. Tense.
     # VISUAL: Figure stands 3 meters away. Female. Mid-20s. Arms crossed. Unimpressed.
@@ -53,7 +53,7 @@ label activity_gather_intel:
     n "That's why you can't predict them."
 
     # VISUAL: She steps closer. Not threatening. Just... analyzing. Like he's data.
-    "{i}She moves like she's solving an equation, every step calculated and deliberate.{/i}"
+    "She moves like she's solving an equation, every step calculated and deliberate."
 
     a "(hand still on weapon) How long have you been watching me?"
     n "Three nights, same as you've been watching them."
@@ -63,8 +63,8 @@ label activity_gather_intel:
     n "Yes."
 
     # VISUAL: No hesitation. No arrogance. Just fact. She believes it completely.
-    a "{i}No bravado, no performance. She states it like math.{/i}"
-    a "{i}Two plus two equals four. She's an expert. Same certainty.{/i}"
+    athought "No bravado, no performance. She states it like math."
+    athought "Two plus two equals four. She's an expert. Same certainty."
 
     a "Why tell me? Why not just keep doing your own thing?"
     n "Because I need field data—real-time observations from someone who knows what they're looking at."
@@ -92,9 +92,9 @@ label activity_gather_intel:
     n "Show me your data and I'll correct your analysis."
 
     # VISUAL: He hesitates. Sharing intel = risk. But she's right. He needs help.
-    a "{i}She's blunt, clinical, no social performance whatsoever.{/i}"
-    a "{i}Either completely genuine or the best actor I've ever encountered.{/i}"
-    a "{i}But she's right—I'm missing something. And I need answers.{/i}"
+    athought "She's blunt, clinical, no social performance whatsoever."
+    athought "Either completely genuine or the best actor I've ever encountered."
+    athought "But she's right—I'm missing something. And I need answers."
 
     # He shows her datapad. She scans it. Eyes moving rapidly. Processing.
     # VISUAL: Her face: focused, analytical, slight frown (data displeases her).
@@ -114,7 +114,7 @@ label activity_gather_intel:
     n "(points to map) Next shift happens in approximately 22 hours. Routes will change here, here, and here."
 
     # VISUAL: She points to specific locations. Precise. Confident.
-    a "{i}She's not guessing. She knows this. But how?{/i}"
+    athought "She's not guessing. She knows this. But how?"
 
     a "How can you be sure?"
     n "Bayesian probability combined with historical precedent and pattern recognition. I've modeled their decision-making algorithm across 47 shift cycles."
@@ -127,8 +127,8 @@ label activity_gather_intel:
     n "Yes, that's what I said initially. Are you experiencing comprehension delay or just processing the implications?"
 
     # VISUAL: Pause. He realizes: she's not being rude. She's literal. No social filter.
-    a "{i}She doesn't do sarcasm or hints. Just direct truth.{/i}"
-    a "{i}It's almost refreshing after years of performance and masks.{/i}"
+    athought "She doesn't do sarcasm or hints. Just direct truth."
+    athought "It's almost refreshing after years of performance and masks."
 
     a "No, just not used to people being this direct."
     n "Indirect communication is inefficient and introduces unnecessary ambiguity. I prefer clarity even when clarity creates social discomfort."
@@ -190,8 +190,8 @@ label activity_gather_intel:
     # VISUAL: She transfers data to his datapad. Files flowing. Advanced intel.
     # SOUND: Electronic beeps. Data transfer. His pad suddenly much more useful.
 
-    "{i}Her data fills my datapad—charts, models, predictions, analysis.{/i}"
-    "{i}More intelligence than I could gather in months. She's sharing it in seconds.{/i}"
+    "Her data fills my datapad—charts, models, predictions, analysis."
+    "More intelligence than I could gather in months. She's sharing it in seconds."
 
     a "This is extensive. You're sure you want to share all this?"
     n "Information hoarded is information wasted. Resistance requires distributed knowledge and redundant data storage."
@@ -208,8 +208,8 @@ label activity_gather_intel:
     n "We'll observe together, verify my model's accuracy, and I'll adjust variables if the prediction fails."
 
     # VISUAL: They stand side by side. Watching. Waiting. Silence comfortable (for her).
-    "{i}She doesn't fill silence with unnecessary words. Doesn't perform socially. Just exists.{/i}"
-    "{i}Watching data transform into reality. Equations becoming patrols.{/i}"
+    "She doesn't fill silence with unnecessary words. Doesn't perform socially. Just exists."
+    "Watching data transform into reality. Equations becoming patrols."
 
     # SOUND: Patrol approaches below. Boots. Voices. Echelon soldiers.
     # VISUAL: Exactly on schedule. Exactly the route she predicted.
@@ -227,8 +227,8 @@ label activity_gather_intel:
     n "(slight pause) Though I do miss reliable data infrastructure and climate-controlled environments."
 
     # VISUAL: She says it matter-of-fact. Missing climate control = missing family.
-    a "{i}She misses climate control, not people or comfort. Climate control.{/i}"
-    a "{i}I can't tell if that's sad or just... her. Just how her mind works.{/i}"
+    athought "She misses climate control, not people or comfort. Climate control."
+    athought "I can't tell if that's sad or just... her. Just how her mind works."
 
     a "Do you work with others or primarily solo?"
     n "Primarily solo. Social interaction requires significant energy that I prefer allocating toward research and analysis."
@@ -270,18 +270,18 @@ label activity_gather_intel:
     n "(nods once) Noted. I'll continue making attempts then."
 
     # VISUAL: She leaves. Disappears into shadows. Gone as suddenly as she appeared.
-    "{i}And just like that she's gone, like she was never here at all.{/i}"
-    "{i}But my datapad is full of her work—models, predictions, brilliant analysis.{/i}"
+    "And just like that she's gone, like she was never here at all."
+    "But my datapad is full of her work—models, predictions, brilliant analysis."
 
-    a "{i}Noelle Korr. Analyst. Former Compliance Division researcher.{/i}"
-    a "{i}Blunt, clinical, brilliant, and unexpectedly human beneath all that logic.{/i}"
-    a "{i}And somehow I think I just made an ally.{/i}"
+    athought "Noelle Korr. Analyst. Former Compliance Division researcher."
+    athought "Blunt, clinical, brilliant, and unexpectedly human beneath all that logic."
+    athought "And somehow I think I just made an ally."
 
     # VISUAL: He reviews her data. Page after page. Intricate. Beautiful in its logic.
-    a "{i}She sees the world in patterns, algorithms, probabilities.{/i}"
-    a "{i}No performance, no masks, no social games. Just unfiltered truth.{/i}"
-    a "{i}It's strange and uncomfortable, but there's something honest about it.{/i}"
-    a "{i}Maybe that's what I need right now. Someone who can't lie even if she wanted to.{/i}"
+    athought "She sees the world in patterns, algorithms, probabilities."
+    athought "No performance, no masks, no social games. Just unfiltered truth."
+    athought "It's strange and uncomfortable, but there's something honest about it."
+    athought "Maybe that's what I need right now. Someone who can't lie even if she wanted to."
 
     # TRANSITION: Return to safe house. Report to Zira. Activity complete.
     scene bg_safe_house with fade

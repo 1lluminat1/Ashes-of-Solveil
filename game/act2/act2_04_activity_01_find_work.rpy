@@ -35,26 +35,26 @@ label act2_activity_01_find_work:
     # LIGHTING: Natural light filtered through grates above. Neon signs. Smoky haze.
     # SOUND: Vendors calling out; haggling; machinery; life happening; survival economics.
 
-    "{i}Day 2. Activity: Find Work.{/i}"
-    a "{i}Zira said I need money. Scrip, not Aeries credits.{/i}"
-    a "{i}Credits might work at some places, but scrip is what the Unders actually use.{/i}"
+    "Day 2. Activity: Find Work."
+    athought "Zira said I need money. Scrip, not Aeries credits."
+    athought "Credits might work at some places, but scrip is what the Unders actually use."
 
     # VISUAL: Aeron walking through market. Wearing Unders clothes (if Activity 6 done) or civilian wear.
     # People bustle past. Vendors hawking goods. Life compressed and vibrant.
 
-    "{i}The market is chaos made economy. Everything's for sale. Everything's negotiable.{/i}"
-    "{i}Food, tech, weapons, medicine, information. If you need it, someone's selling it.{/i}"
-    "{i}And everyone's working. Because down here, you work or you starve.{/i}"
+    "The market is chaos made economy. Everything's for sale. Everything's negotiable."
+    "Food, tech, weapons, medicine, information. If you need it, someone's selling it."
+    "And everyone's working. Because down here, you work or you starve."
 
-    a "{i}I need work. Something that pays. Something that doesn't ask questions.{/i}"
-    a "{i}Zira said market stalls are always hiring. Manual labor. Loading. Repairs.{/i}"
-    a "{i}Nothing glamorous. But I'm not Glass anymore. Glamour isn't an option.{/i}"
+    athought "I need work. Something that pays. Something that doesn't ask questions."
+    athought "Zira said market stalls are always hiring. Manual labor. Loading. Repairs."
+    athought "Nothing glamorous. But I'm not Glass anymore. Glamour isn't an option."
 
     # Light alignment flavor
     if get_empathy_band() == "obedience":
-        a "{i}Pick the option with the cleanest risk-reward curve. Pay first. Everything else after.{/i}"
+        athought "Pick the option with the cleanest risk-reward curve. Pay first. Everything else after."
     elif get_empathy_band() == "empathy":
-        a "{i}Maybe earning it clean matters. Maybe who I help matters too.{/i}"
+        athought "Maybe earning it clean matters. Maybe who I help matters too."
 
     # VISUAL: Three options visible. Three different vendors needing help.
     # OPTION A: Food stall (heavy lifting, simple work)
@@ -81,7 +81,7 @@ label work_food_stall:
 
     $ mark_scene("act2_activity", "work_path_food")
 
-    "{i}Food stall. Owner looks exhausted. Crates piled high. Clearly needs help.{/i}"
+    "Food stall. Owner looks exhausted. Crates piled high. Clearly needs help."
 
     kren "You looking for work or just staring?"
 
@@ -120,13 +120,13 @@ label work_food_stall:
     a "I'll take it. When do I start?"
     kren "Now. Grab that crate and follow me."
 
-    "{i}The crate is heavier than it looks. Forty kilos at least.{/i}"
-    "{i}I've carried weapons. I've carried bodies. But this is different.{/i}"
-    "{i}This is survival. This is honest work. This is what being human means.{/i}"
+    "The crate is heavier than it looks. Forty kilos at least."
+    "I've carried weapons. I've carried bodies. But this is different."
+    "This is survival. This is honest work. This is what being human means."
 
-    a "{i}Hours blend together. Lift. Carry. Stack. Repeat.{/i}"
-    a "{i}My back aches. My hands blister. My legs scream.{/i}"
-    a "{i}But I keep moving. Because this is what I chose.{/i}"
+    athought "Hours blend together. Lift. Carry. Stack. Repeat."
+    athought "My back aches. My hands blister. My legs scream."
+    athought "But I keep moving. Because this is what I chose."
 
     kren "(hands water) You work hard. Didn't expect that from a newcomer."
     a "(drinks gratefully) Thanks. Needed this."
@@ -136,8 +136,8 @@ label work_food_stall:
     kren "(nods) Fair enough. We all got histories we don't talk about."
     kren "Down here, past doesn't matter much. Just what you do today."
 
-    a "{i}He doesn't ask more. Doesn't push. Just accepts.{/i}"
-    a "{i}That's the Unders. Everyone's running from something.{/i}"
+    athought "He doesn't ask more. Doesn't push. Just accepts."
+    athought "That's the Unders. Everyone's running from something."
 
     kren "You're good at this. Better than the last three I hired."
     kren "They quit after an hour. Said it was too hard."
@@ -155,9 +155,9 @@ label work_food_stall:
     kren "(slight pause) You need work again, come back. I'll hire you."
     kren "Good workers are hard to find. Don't waste talent."
 
-    a "{i}60 scrip. Earned through sweat and labor.{/i}"
-    a "{i}Not orders. Not violence. Just work.{/i}"
-    a "{i}It feels... clean. Like I'm washing off Glass one crate at a time.{/i}"
+    athought "60 scrip. Earned through sweat and labor."
+    athought "Not orders. Not violence. Just work."
+    athought "It feels... clean. Like I'm washing off Glass one crate at a time."
 
     a "Thank you. I'll remember that."
     kren "Don't thank me. Just show up if you come back."
@@ -180,7 +180,7 @@ label work_repair_shop:
 
     $ mark_scene("act2_activity", "work_path_repair")
 
-    "{i}Repair shop. Machines piled high. Everything broken. Everything salvageable.{/i}"
+    "Repair shop. Machines piled high. Everything broken. Everything salvageable."
 
     a "Sign says you're hiring."
     v "(not looking up) Can you solder? Do you know circuit architecture? Can you identify pre-Collapse tech?"
@@ -197,13 +197,13 @@ label work_repair_shop:
     v "70 scrip for the day. You break something expensive, I dock pay."
     v "Help me repair these salvaged units. We're behind schedule."
 
-    a "{i}I know weapons. I know combat systems. But civilian tech?{/i}"
-    a "{i}This is going to be harder than lifting crates.{/i}"
+    athought "I know weapons. I know combat systems. But civilian tech?"
+    athought "This is going to be harder than lifting crates."
 
-    "{i}Hours of delicate work. Circuit boards. Wiring. Components.{/i}"
-    "{i}Vika's patient but exacting. No mistakes allowed.{/i}"
+    "Hours of delicate work. Circuit boards. Wiring. Components."
+    "Vika's patient but exacting. No mistakes allowed."
 
-    a "{i}I learned fast. Military precision helps. But this is creation, not destruction.{/i}"
+    athought "I learned fast. Military precision helps. But this is creation, not destruction."
 
     v "Not bad. You learn quick."
     v "Most people I hire burn themselves out in the first hour."
@@ -213,8 +213,8 @@ label work_repair_shop:
     v "Military sniper training, I'd guess. But you're not sniping anymore."
     v "(doesn't push) Whatever you're running from, you're useful here."
 
-    "{i}She doesn't ask. Doesn't judge. Just works beside me.{/i}"
-    "{i}That's respect. Real respect. Earned through competence.{/i}"
+    "She doesn't ask. Doesn't judge. Just works beside me."
+    "That's respect. Real respect. Earned through competence."
 
     v "You're good at this. Really good. Better than me at your age."
     v "If you want steady work, I'll hire you regularly. 70 scrip per day."
@@ -228,9 +228,9 @@ label work_repair_shop:
     v "You can and you will. Can't have my worker using shit tools."
     v "Consider it an investment. Come back, that tool pays for itself."
 
-    a "{i}A tool. Given freely. Because she values my work.{/i}"
-    a "{i}Not weapons. Not violence. Tools for building.{/i}"
-    a "{i}Maybe I can be more than Glass. Maybe I can create instead of destroy.{/i}"
+    athought "A tool. Given freely. Because she values my work."
+    athought "Not weapons. Not violence. Tools for building."
+    athought "Maybe I can be more than Glass. Maybe I can create instead of destroy."
 
     # Rewards (helpers/state):
     $ work_scrip_delta = 70
@@ -251,8 +251,8 @@ label work_smuggling_run:
 
     $ mark_scene("act2_activity", "work_path_smuggle")
 
-    "{i}Smuggling run. The riskiest option. The highest pay.{/i}"
-    "{i}Rax doesn't look trustworthy. But I need money.{/i}"
+    "Smuggling run. The riskiest option. The highest pay."
+    "Rax doesn't look trustworthy. But I need money."
 
     rax "You looking for easy money or real money?"
     a "What's the difference?"
@@ -267,9 +267,9 @@ label work_smuggling_run:
 
     # OB/EMP nudge
     if get_empathy_band() == "obedience":
-        a "{i}Risk, pay, exposure. Calculate the margin. Take the hit if the ROI holds.{/i}"
+        athought "Risk, pay, exposure. Calculate the margin. Take the hit if the ROI holds."
     else:
-        a "{i}This isn't clean. But scrip buys medicine and time.{/i}"
+        athought "This isn't clean. But scrip buys medicine and time."
 
     menu:
         "Accept the smuggling run?"
@@ -282,7 +282,7 @@ label work_smuggling_run:
             $ mark_scene("act2_activity", "work_smuggle_decline")
             a "Too risky. I'll find work elsewhere."
             rax "(shrugs) Your loss. More for someone else."
-            "{i}I leave. Safer options exist. Not worth the risk yet.{/i}"
+            "I leave. Safer options exist. Not worth the risk yet."
             $ work_scrip_delta = 0
             jump work_complete  # Return to hub via standard exit
 
@@ -293,28 +293,28 @@ label smuggling_run_gameplay:
     rax "Route's marked on this map. Avoid main streets. Echelon patrols every 15 minutes."
     rax "Deliver to contact at this address. He'll pay you. I get my cut later."
 
-    "{i}The package feels dense. Could be tech. Could be drugs. Could be worse.{/i}"
-    "{i}I don't ask. Courier doesn't ask.{/i}"
+    "The package feels dense. Could be tech. Could be drugs. Could be worse."
+    "I don't ask. Courier doesn't ask."
 
-    "{i}I move through alleys. Staying low. Staying quiet.{/i}"
-    "{i}Echelon patrol passes. Twenty meters away. I hold breath.{/i}"
+    "I move through alleys. Staying low. Staying quiet."
+    "Echelon patrol passes. Twenty meters away. I hold breath."
 
     menu:
         "Echelon patrol approaching. How do you avoid them?"
 
         "Hide behind dumpster—Wait for them to pass.":
-            "{i}I duck behind dumpster. Hold still. Patrol passes.{/i}"
-            "{i}Close. Too close. But I'm safe.{/i}"
+            "I duck behind dumpster. Hold still. Patrol passes."
+            "Close. Too close. But I'm safe."
             $ stealth_success = True
 
         "Sprint across opening—Risk it to save time.":
-            "{i}I sprint. Fast. Quiet as possible.{/i}"
-            "{i}Patrol turns. Sees movement. Shouts.{/i}"
-            "{i}FUCK. Run. RUN.{/i}"
+            "I sprint. Fast. Quiet as possible."
+            "Patrol turns. Sees movement. Shouts."
+            "FUCK. Run. RUN."
             $ stealth_success = False
 
     if stealth_success:
-        "{i}I make it to delivery point. No detection. Clean run.{/i}"
+        "I make it to delivery point. No detection. Clean run."
 
         contact "Clean run. Impressive. Here's your 100 scrip."
         contact "Rax will be pleased. You need more work, come find us."
@@ -325,14 +325,14 @@ label smuggling_run_gameplay:
         $ char_note("Lyra", "Rax (shadows) – smuggling contact; paid 100 scrip for clean courier run.")
         $ mark_scene("act2_activity", "work_smuggle_paid")
 
-        "{i}100 scrip. Risky but successful. Highest pay I've earned.{/i}"
-        "{i}But it feels dirty. This isn't honest work. This is survival.{/i}"
-        "{i}Still... money is money. And I need it.{/i}"
+        "100 scrip. Risky but successful. Highest pay I've earned."
+        "But it feels dirty. This isn't honest work. This is survival."
+        "Still... money is money. And I need it."
 
     else:
-        "{i}Patrol chases. I drop package to run faster.{/i}"
-        "{i}Escape through maintenance tunnels. Lose them.{/i}"
-        "{i}But package is gone. Mission failed.{/i}"
+        "Patrol chases. I drop package to run faster."
+        "Escape through maintenance tunnels. Lose them."
+        "But package is gone. Mission failed."
 
         rax "You lost the package?!"
         a "Had to. Patrol was on me. It was the package or capture."
@@ -343,8 +343,8 @@ label smuggling_run_gameplay:
         $ mark_scene("act2_activity", "work_smuggle_failed")
         $ add_team_suspicion(1)
 
-        "{i}No pay. Reputation damaged. Lesson learned.{/i}"
-        "{i}Smuggling isn't as easy as it looks. Risk isn't always worth reward.{/i}"
+        "No pay. Reputation damaged. Lesson learned."
+        "Smuggling isn't as easy as it looks. Risk isn't always worth reward."
 
     jump work_complete
 

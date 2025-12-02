@@ -14,15 +14,15 @@ label act2_tessa_late_night_clinic:
 
     #scene bg_base_evening with fade
 
-    "{i}Training session. Sparring. Went well until it didn't. Caught an elbow to the ribs. Probably just bruised. But protocol says check with medical. Make sure nothing's broken. Make sure I'm operational. Besides, good excuse to see Tessa. Haven't talked to her properly in weeks. Been meaning to.{/i}"
+    "Training session. Sparring. Went well until it didn't. Caught an elbow to the ribs. Probably just bruised. But protocol says check with medical. Make sure nothing's broken. Make sure I'm operational. Besides, good excuse to see Tessa. Haven't talked to her properly in weeks. Been meaning to."
 
     # VISUAL: Walking toward medical station. Hand on ribs. Not severe but uncomfortable. Limping slightly.
-    "{i}Ribs hurt. Not bad. Just annoying. Sharp pain when breathing deep. Probably bruised, maybe cracked. Either way, Tessa will know. She always knows. Has that skill. That instinct for what's wrong and how to fix it. Medical and human. Both.{/i}"
+    "Ribs hurt. Not bad. Just annoying. Sharp pain when breathing deep. Probably bruised, maybe cracked. Either way, Tessa will know. She always knows. Has that skill. That instinct for what's wrong and how to fix it. Medical and human. Both."
 
     # VISUAL: Medical station ahead. Light on. Someone moving inside. Tessa. Always there. Always working.
     #scene bg_medical_station_night with fade
 
-    "{i}Medical station. Light on. Of course. Tessa's always here. Morning. Noon. Night. Always present. Always available. Always healing. She doesn't just work here. She lives here. Medical station is her home more than her quarters. That's dedication. Or addiction. Maybe both.{/i}"
+    "Medical station. Light on. Of course. Tessa's always here. Morning. Noon. Night. Always present. Always available. Always healing. She doesn't just work here. She lives here. Medical station is her home more than her quarters. That's dedication. Or addiction. Maybe both."
 
     # VISUAL: TESSA organizing supplies. Humming softly. Peaceful. In her element. Notices Aeron.
     t "(looking up, smiling) Aeron. Evening. What brings you to my humble medical establishment? Let me guess—training injury? You're favoring your left side and breathing shallow. Ribs?"
@@ -54,7 +54,7 @@ label act2_tessa_late_night_clinic:
     t "Good patient. Now hold still while I wrap this."
 
     # VISUAL: She wraps his ribs. Professional. Efficient. But also gentle. Caring. Not just fixing injury. Caring about person.
-    "{i}She wraps carefully. Firm but not constricting. Supportive but not limiting. She's done this hundreds of times. Thousands maybe. But she treats each patient like it matters. Like they matter. That's Tessa. That's why people trust her. She makes you feel cared for, not just treated.{/i}"
+    "She wraps carefully. Firm but not constricting. Supportive but not limiting. She's done this hundreds of times. Thousands maybe. But she treats each patient like it matters. Like they matter. That's Tessa. That's why people trust her. She makes you feel cared for, not just treated."
 
     # VISUAL: Wrapping complete. Tessa stepping back. Evaluating work. Satisfied.
     t "There. That should help. Remember—five days, light duty, medication twice daily. Come back if pain worsens or breathing becomes difficult. Unlikely but protocol requires I mention it."
@@ -112,7 +112,7 @@ label act2_tessa_late_night_clinic:
     t "I believe that trying matters. I believe that counting the living beats mourning the dead. I believe that you wouldn't be here, keeping that list, if you didn't believe it too. Somewhere. Buried. But there."
 
     # VISUAL: Silence. Comfortable. Shared understanding. Mutual burden. Mutual hope.
-    "{i}She gets it. Gets the guilt. Gets the counting. Gets the impossible need to save people who are already gone by saving people who aren't. She's been doing this longer. Has bigger list. More experience. But same wound. Same coping. Same hope masquerading as logic.{/i}"
+    "She gets it. Gets the guilt. Gets the counting. Gets the impossible need to save people who are already gone by saving people who aren't. She's been doing this longer. Has bigger list. More experience. But same wound. Same coping. Same hope masquerading as logic."
 
     # VISUAL: Tessa reaching out. Taking the paper with names. Standing. Walking to her board.
     t "Can I add these? To my board? Your twenty-two become part of my count? We'll share them. Our collective count. Our reminder that we're saving people together."
@@ -135,7 +135,7 @@ label act2_tessa_late_night_clinic:
     t "I know you will. You're good at keeping promises. That's one of your better qualities. Among many."
 
     # VISUAL: She's looking at him differently. Not just patient. Not just resistance member. Something more. Respect. Trust. Maybe beginning of something deeper. Foundation laid.
-    "{i}She trusts me. Actually trusts me. Shared her board. Her count. Her three hundred forty-seven reasons to keep living. That's intimate. That's vulnerability. That's trust I haven't earned yet but she's giving anyway. That matters. That's foundation. That's beginning.{/i}"
+    "She trusts me. Actually trusts me. Shared her board. Her count. Her three hundred forty-seven reasons to keep living. That's intimate. That's vulnerability. That's trust I haven't earned yet but she's giving anyway. That matters. That's foundation. That's beginning."
 
     # VISUAL: Moving toward door. Leaving. But moment lingers. Connection made. Trust established.
     a "Thanks again. For the ribs. For the talk. For the board. For understanding. For all of it."
@@ -143,15 +143,15 @@ label act2_tessa_late_night_clinic:
     a "The best. Definitely the best."
 
     # VISUAL: She smiles. Warm. Real. Beautiful. Then returns to work. Always working. Always healing. Always counting.
-    "{i}Leaving medical station. Ribs bandaged. List shared. Count joined. Burden lighter. Tessa gets it. Gets the guilt. Gets the need to save people already lost. Gets me. That's rare. That's valuable. That's trust. And trust is foundation for everything else. Everything good starts with trust.{/i}"
+    "Leaving medical station. Ribs bandaged. List shared. Count joined. Burden lighter. Tessa gets it. Gets the guilt. Gets the need to save people already lost. Gets me. That's rare. That's valuable. That's trust. And trust is foundation for everything else. Everything good starts with trust."
 
     # TRANSITION: Walking back to quarters. Night settling. Base quiet. But hope louder. Count continues. Living counted. Forward movement.
     #scene bg_base_night with fade
 
-    "{i}Twenty-two names. Now part of three hundred sixty-nine. Collective count. Shared mission. Proof we're doing something that matters. Something good. Something worth continuing. Tessa's right. Math isn't the point. Direction is. And we're moving right direction. Together. Counting. Saving. Living. That's enough. That's everything.{/i}"
+    "Twenty-two names. Now part of three hundred sixty-nine. Collective count. Shared mission. Proof we're doing something that matters. Something good. Something worth continuing. Tessa's right. Math isn't the point. Direction is. And we're moving right direction. Together. Counting. Saving. Living. That's enough. That's everything."
 
     # VISUAL: In quarters. Preparing for sleep. Looking at empty hand where paper was. Names now on Tessa's board. Shared burden. Shared hope.
-    "{i}Names are gone from my pocket. But not gone. On her board. Part of collective count. Part of us. Twenty-two became three sixty-nine. Tomorrow maybe three seventy. Or eighty. Or more. Keep counting. Keep saving. Keep building list. That's how we win. That's how we heal. That's how Glass becomes Aeron. One name at a time.{/i}"
+    "Names are gone from my pocket. But not gone. On her board. Part of collective count. Part of us. Twenty-two became three sixty-nine. Tomorrow maybe three seventy. Or eighty. Or more. Keep counting. Keep saving. Keep building list. That's how we win. That's how we heal. That's how Glass becomes Aeron. One name at a time."
 
     # Mark scene complete
     $ scenes["tessa_late_night_clinic"] = True

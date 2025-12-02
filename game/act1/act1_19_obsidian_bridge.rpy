@@ -14,33 +14,33 @@ label act1_obsidian_bridge:
     # SOUND: Wind whistling through truss; far machinery; water rush a long way down.
     # CAMERA: Lateral dolly to centerline; Aeron a silhouette against Aeries glow.
 
-    "{i}Midnight. The Obsidian Bridge stretches into fog and darkness.{/i}"
-    "{i}Below, the city's underbelly churns. Above, the Aeries glow with ignorant light.{/i}"
-    "{i}And here, between them, the forgotten meet.{/i}"
+    "Midnight. The Obsidian Bridge stretches into fog and darkness."
+    "Below, the city's underbelly churns. Above, the Aeries glow with ignorant light."
+    "And here, between them, the forgotten meet."
 
     # Aeron alone, gear cleaned but weight unchanged.
     $ band = get_empathy_band()
     $ em = mercy_total()                  # evidence_of_mercy snapshot
 
-    a "{i}She said midnight. If I fought for them, she'd be here.{/i}"
-    a "{i}If I just followed orders... don't bother coming.{/i}"
+    athought "She said midnight. If I fought for them, she'd be here."
+    athought "If I just followed orders... don't bother coming."
 
     if em >= 2:
-        a "{i}I tried. I saved who I could. Two hundred alive because Glass cracked.{/i}"
-        a "{i}But six hundred dead. Six hundred faces I can't unsee.{/i}"
-        a "{i}Is that enough? Does trying count when you still kill hundreds?{/i}"
+        athought "I tried. I saved who I could. Two hundred alive because Glass cracked."
+        athought "But six hundred dead. Six hundred faces I can't unsee."
+        athought "Is that enough? Does trying count when you still kill hundreds?"
     elif em >= 1:
-        a "{i}I tried. Not hard enough. Maybe fifty saved. Seven hundred fifty dead.{/i}"
-        a "{i}Glass won. Mostly. But I fought it—some.{/i}"
-        a "{i}Is that enough?{/i}"
+        athought "I tried. Not hard enough. Maybe fifty saved. Seven hundred fifty dead."
+        athought "Glass won. Mostly. But I fought it—some."
+        athought "Is that enough?"
     else:
-        a "{i}I followed orders. Perfect execution. Eight hundred dead. Zero mercy.{/i}"
-        a "{i}Glass didn't crack. Glass obeyed.{/i}"
-        a "{i}She won't come. Why would she?{/i}"
+        athought "I followed orders. Perfect execution. Eight hundred dead. Zero mercy."
+        athought "Glass didn't crack. Glass obeyed."
+        athought "She won't come. Why would she?"
 
     # Footsteps approach—measured, confident.
     # SFX: boot on grate; fog curls through the light cone.
-    "{i}Footsteps. She's here.{/i}"
+    "Footsteps. She's here."
     pause 0.4
 
     # Zira arrives out of fog; reads him like a ledger.
@@ -176,13 +176,13 @@ label act1_obsidian_bridge:
         z "(over shoulder as she leaves) If you ever decide to be human instead of Glass..."
         z "Don't look for me. I won't be waiting."
 
-        "{i}She's gone. Fog swallows the span.{/i}"
-        a "{i}She's right. I chose Glass. Again.{/i}"
-        a "{i}Eight hundred dead. And I learned nothing.{/i}"
+        "She's gone. Fog swallows the span."
+        athought "She's right. I chose Glass. Again."
+        athought "Eight hundred dead. And I learned nothing."
 
         $ set_scene_flag(_current_scene_id, "device_withheld")
         $ set_scene_flag(_current_scene_id, "completed")
-        jump act1_rooftop_reflection
+        jump act1_investigation
 
     # ===== CONTINUE (HIGH / MODERATE ONLY) =====
     # CAMERA: Both at the rail; city’s pulse below.
@@ -197,7 +197,7 @@ label act1_obsidian_bridge:
     z "Hundreds of thousands. Days, not weeks."
 
     # Aeron grips the rail; knuckles blanch.
-    a "{i}Hundreds of thousands. And I killed eight hundred as practice.{/i}"
+    athought "Hundreds of thousands. And I killed eight hundred as practice."
 
     z "That's why I'm giving you access."
     z "You can't stop it alone. But you can see it."
@@ -227,25 +227,25 @@ label act1_obsidian_bridge:
     z "Broken things can be rebuilt. Glass can't."
     z "Decide which one you want to be."
 
-    "{i}She fades into fog. The device is heavy in his hand.{/i}"
+    "She fades into fog. The device is heavy in his hand."
 
-    a "{i}I'm caught between Glass and human.{/i}"
+    athought "I'm caught between Glass and human."
     if em >= 2:
-        a "{i}Two hundred lived. That has to mean something.{/i}"
+        athought "Two hundred lived. That has to mean something."
     elif em >= 1:
-        a "{i}Some lived. Not enough. Next time has to be different.{/i}"
+        athought "Some lived. Not enough. Next time has to be different."
     else:
-        a "{i}She shouldn't have come. And yet she did.{/i}"
+        athought "She shouldn't have come. And yet she did."
 
-    a "{i}Information is power, she said. To see. To choose. To resist.{/i}"
-    a "{i}Or to get everyone killed.{/i}"
+    athought "Information is power, she said. To see. To choose. To resist."
+    athought "Or to get everyone killed."
 
     # EXIT: Pocket device; turn toward Aeries.
-    a "{i}Something bigger is coming. Hundreds of thousands.{/i}"
-    a "{i}Blood on my hands. A comm device in my pocket.{/i}"
-    a "{i}What the hell am I supposed to do with that?{/i}"
+    athought "Something bigger is coming. Hundreds of thousands."
+    athought "Blood on my hands. A comm device in my pocket."
+    athought "What the hell am I supposed to do with that?"
 
-    "{i}The city breathes—unaware. Glass, cracked and walking, heads home.{/i}"
+    "The city breathes—unaware. Glass, cracked and walking, heads home."
 
     $ set_scene_flag(_current_scene_id, "completed")
     return

@@ -21,10 +21,10 @@ label act1_08_hill_flashback:
     # VISUAL: Golden hour over a grassy hill beyond the perimeter fence.
     # COSTUME: Academy uniforms, slightly scuffed from sneaking out.
 
-    a "{i}Years ago... before the Branding. Before Glass. Before everything broke.{/i}"
-    a "{i}We were both ten. Two years before our Brandings would define us.{/i}"
-    a "{i}There was this hill. Far enough for trouble. Close enough to still matter...{/i}"
-    a "{i}...but rules never meant much to Lyra.{/i}"
+    athought "Years ago... before the Branding. Before Glass. Before everything broke."
+    athought "We were both ten. Two years before our Brandings would define us."
+    athought "There was this hill. Far enough for trouble. Close enough to still matter..."
+    athought "...but rules never meant much to Lyra."
 
     # CAMERA: Static two-shot seated, city in the far bokeh.
     yl "If you could fly anywhere—no tech, no Band—just wings... where?"
@@ -52,7 +52,7 @@ label act1_08_hill_flashback:
     yl "(smiles) Good. Someone should be."
 
     # VISUAL: Wind moves through the grass; both watch it ripple like water.
-    "{i}The grass bends and rises, a green ocean rolling under the sun.{/i}"
+    "The grass bends and rises, a green ocean rolling under the sun."
 
     ya "Do you ever think about what happens after?"
     yl "After what?"
@@ -84,16 +84,16 @@ label act1_08_hill_flashback:
     ya "Because nothing that matters is frivolous. And this matters."
 
     # VISUAL: Her mask slips; something raw underneath.
-    "{i}Her mask slips. Just for a moment. Something raw underneath.{/i}"
+    "Her mask slips. Just for a moment. Something raw underneath."
 
     yl "(barely audible) Does it? Matter?"
     ya "To me it does."
 
     # VISUAL: Silence; the sun drops lower, painting everything gold.
-    "{i}The light shifts. Everything glows. Like the world is holding its breath.{/i}"
+    "The light shifts. Everything glows. Like the world is holding its breath."
 
     # VISUAL: Their shoulders are close—almost touching. Neither pulls away.
-    "{i}They sit closer now. Not quite touching. Almost.{/i}"
+    "They sit closer now. Not quite touching. Almost."
 
     yl "What if we don't get Branded to the same division?"
     ya "Then we find each other anyway."
@@ -102,8 +102,8 @@ label act1_08_hill_flashback:
     yl "(softly) I hope so."
 
     # VISUAL: Young Aeron shifts slightly; their shoulders touch.
-    "{i}He moves. Just slightly. Their shoulders meet. Warm contact through fabric.{/i}"
-    "{i}Neither pulls away.{/i}"
+    "He moves. Just slightly. Their shoulders meet. Warm contact through fabric."
+    "Neither pulls away."
 
     yl "(quiet) What are you most afraid of?"
     ya "Failing. You?"
@@ -114,7 +114,7 @@ label act1_08_hill_flashback:
     yl "(looks at him) I don't know yet. But I think... it's something like this."
 
     # VISUAL: The moment stretches; neither moves.
-    "{i}The city hums in the distance. Up here, it feels like another world.{/i}"
+    "The city hums in the distance. Up here, it feels like another world."
 
     ya "We could come back here. After. No matter what happens."
     yl "Promise?"
@@ -123,11 +123,11 @@ label act1_08_hill_flashback:
 
     # NEW/REVISED: More visceral almost-touch with future Glass parallel
     # VISUAL: Lyra's hand rests in the grass between them; Aeron's hand inches closer.
-    "{i}Her hand rests in the grass. His moves toward it—slow, uncertain.{/i}"
+    "Her hand rests in the grass. His moves toward it—slow, uncertain."
     # VISUAL: Fingers almost touch—close enough to feel the warmth.
-    "{i}The space between them narrows. An inch. Less.{/i}"
-    a "{i}Even then, we were glass leaning toward glass.{/i}"
-    a "{i}Close enough to touch. Afraid of shattering.{/i}"
+    "The space between them narrows. An inch. Less."
+    athought "Even then, we were glass leaning toward glass."
+    athought "Close enough to touch. Afraid of shattering."
 
     # VISUAL: Then Lyra pulls away, standing suddenly.
     yl "(standing quickly) We should head back before they notice we're gone."
@@ -138,13 +138,13 @@ label act1_08_hill_flashback:
     ya "You serious?"
     yl "(nods) Dead serious."
 
-    a "{i}Back then it felt real. Like we could run and leave the city behind. No father. No duty. Just wind.{/i}"
+    athought "Back then it felt real. Like we could run and leave the city behind. No father. No duty. Just wind."
 
     yl "Promise me—if the world turns to ash, we still find a place like this. Ours."
     ya "(softly) I promise."
 
     # VISUAL: Lyra pulls him to his feet; they stand face to face, close.
-    "{i}She pulls him up. For a moment, they stand too close. Eyes meet.{/i}"
+    "She pulls him up. For a moment, they stand too close. Eyes meet."
 
     yl "(barely a whisper) When everything changes..."
     yl "...don't forget me."
@@ -155,27 +155,27 @@ label act1_08_hill_flashback:
 
     # NEW: Physical lingering with Glass parallel
     # VISUAL: Her hand lingers for a heartbeat—then lets go.
-    "{i}Her fingers slip away. The warmth remains.{/i}"
+    "Her fingers slip away. The warmth remains."
 
-    a "{i}I should have held on. Should have known this was the last time we'd be whole.{/i}"
+    athought "I should have held on. Should have known this was the last time we'd be whole."
 
     # VISUAL: She steps back; the moment breaks but doesn't shatter.
-    "{i}She steps back. The moment hangs in the air like the last note of a song.{/i}"
+    "She steps back. The moment hangs in the air like the last note of a song."
 
     # CAMERA: Close on hands; grass moving in wind.
-    a "{i}For a moment, the city didn't exist. Just us, and the wind.{/i}"
-    a "{i}I should have held tighter to that moment.{/i}"
+    athought "For a moment, the city didn't exist. Just us, and the wind."
+    athought "I should have held tighter to that moment."
 
     # NEW: Connection to broken promises and Glass
-    a "{i}We promised to find a place like that hill. Somewhere ours.{/i}"
-    a "{i}Instead, we found duty. Orders. Distance.{/i}"
-    a "{i}She became Echelon's proof. I became Glass.{/i}"
-    a "{i}Two polished surfaces. Both see-through. Both empty.{/i}"
-    a "{i}But tonight, on the balcony, we almost remembered.{/i}"
-    a "{i}Glass leaning toward glass. Just like this hill. Just like always.{/i}"
+    athought "We promised to find a place like that hill. Somewhere ours."
+    athought "Instead, we found duty. Orders. Distance."
+    athought "She became Echelon's proof. I became Glass."
+    athought "Two polished surfaces. Both see-through. Both empty."
+    athought "But tonight, on the balcony, we almost remembered."
+    athought "Glass leaning toward glass. Just like this hill. Just like always."
 
     # TRANSITION: Gentle white bloom → next memory (Branding at 12).
-    a "{i}Then the day came—two years later, we both turned twelve—and everything changed.{/i}"
+    athought "Then the day came—two years later, we both turned twelve—and everything changed."
 
     # canon_note: Both are 10 in this flashback; two years pre-Branding (at 12).
     # canon_note: Same cohort, same academy; promise to “find a place like this” echoes balcony scene.

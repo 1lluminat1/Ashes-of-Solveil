@@ -18,20 +18,20 @@ label act2_activity_04_medical_supplies:
 
     scene bg_sector7_alley with fade
 
-    "{i}Day 4. Activity: Medical Supplies.{/i}"
-    "{i}Zira said find a medic. Someone who can patch us up when things go wrong.{/i}"
-    "{i}Because things will go wrong. They always do.{/i}"
+    "Day 4. Activity: Medical Supplies."
+    "Zira said find a medic. Someone who can patch us up when things go wrong."
+    "Because things will go wrong. They always do."
 
     # VISUAL: Aeron following directions. Alley narrows. Graffiti on walls. Signs of life.
-    "{i}The address Zira gave me leads here. Sector 7. Deep in the Unders.{/i}"
-    "{i}A clinic. Hidden. For people who can't afford Echelon's sanitized medicine.{/i}"
+    "The address Zira gave me leads here. Sector 7. Deep in the Unders."
+    "A clinic. Hidden. For people who can't afford Echelon's sanitized medicine."
 
     # VISUAL: Entrance marked with faded green symbol. Hand-painted. Medical cross.
     # SOUND: Voices inside. Someone groaning in pain. Someone speaking softly, gently.
 
-    a "{i}Green mark. Medical cross. This is it.{/i}"
-    a "{i}Zira said her name is Tessa. Runs a scavenger-care commune.{/i}"
-    a "{i}Hybrid medicine. Organic and cybernetic. Whatever keeps people alive.{/i}"
+    athought "Green mark. Medical cross. This is it."
+    athought "Zira said her name is Tessa. Runs a scavenger-care commune."
+    athought "Hybrid medicine. Organic and cybernetic. Whatever keeps people alive."
 
     # VISUAL: He pushes through hanging cloth serving as door. Enters clinic.
     # LIGHTING: Warm amber-green glow. Bioluminescent plants growing in corners. Soft, alive.
@@ -39,9 +39,9 @@ label act2_activity_04_medical_supplies:
 
     scene bg_tessas_clinic with fade
 
-    "{i}The clinic smells like herbs and antiseptic mixed together. Life trying to survive.{/i}"
-    "{i}Makeshift beds line the walls. Injured people resting. Burns. Wounds. Sickness.{/i}"
-    "{i}And in the center, kneeling beside a man with severe burns—her.{/i}"
+    "The clinic smells like herbs and antiseptic mixed together. Life trying to survive."
+    "Makeshift beds line the walls. Injured people resting. Burns. Wounds. Sickness."
+    "And in the center, kneeling beside a man with severe burns—her."
 
     # VISUAL: Tessa. Mid-20s. Dark hair tied back. Gentle hands glowing faint green.
     # She's applying bioluminescent gel to burn victim. Speaking softly. Calming.
@@ -52,12 +52,12 @@ label act2_activity_04_medical_supplies:
     t "Good. You're doing so well. I know it hurts, but you're here. You're alive."
 
     # VISUAL: Burn victim (male, 40s) trembling. Tears streaming. But breathing.
-    "{i}His skin is charred black in places. Red and weeping in others. Purge victim.{/i}"
-    "{i}She works with steady hands. No hesitation. No revulsion. Just care.{/i}"
+    "His skin is charred black in places. Red and weeping in others. Purge victim."
+    "She works with steady hands. No hesitation. No revulsion. Just care."
 
     # VISUAL: Aeron stands at entrance. Watching. Something in his chest tightens.
-    a "{i}She's healing someone I helped create. My mercy triggered the Purge.{/i}"
-    a "{i}These burns exist because I saved 200 people. Cascade of consequences.{/i}"
+    athought "She's healing someone I helped create. My mercy triggered the Purge."
+    athought "These burns exist because I saved 200 people. Cascade of consequences."
 
     # VISUAL: Tessa looks up. Eyes meet his. Recognition immediate and complete.
     # Her hands don't stop working. Gel continues spreading. Patient comes first.
@@ -69,8 +69,8 @@ label act2_activity_04_medical_supplies:
     # VISUAL: Injured man's eyes snap open. Others in clinic turn. Tension spikes instantly.
     # SOUND: Breathing changes. Fear. Anger. Recognition spreading like wildfire.
 
-    "{i}The name echoes in the small space. Glass. Everyone knows Glass.{/i}"
-    "{i}Everyone lost someone to Glass. Sector 10. The Sweep. 600 dead.{/i}"
+    "The name echoes in the small space. Glass. Everyone knows Glass."
+    "Everyone lost someone to Glass. Sector 10. The Sweep. 600 dead."
 
     a "...Yes."
 
@@ -94,8 +94,8 @@ label act2_activity_04_medical_supplies:
     t "Your actions triggered it. That's causation enough, even if you didn't light the fires yourself."
 
     # VISUAL: She walks to sink. Washes hands. Methodical. Centered. Processing.
-    "{i}She's calm. Too calm. Like she's decided something already.{/i}"
-    "{i}Judgment rendered before I even explained.{/i}"
+    "She's calm. Too calm. Like she's decided something already."
+    "Judgment rendered before I even explained."
 
     a "I'm not asking for forgiveness—"
     t "(turns, looks at him fully) Then what are you asking for?"
@@ -105,7 +105,7 @@ label act2_activity_04_medical_supplies:
     t "Fighting who? Echelon? Or yourself?"
 
     # VISUAL: The question lands like a blade. Clean. Precise. True.
-    a "{i}Herself? Both? I don't even know anymore.{/i}"
+    athought "Herself? Both? I don't even know anymore."
 
     t "(softer now) Why are you here, Aeron? In the Unders. Away from everything you knew."
     t "You could have stayed in Aeries. Stayed Glass. Stayed safe."
@@ -132,8 +132,8 @@ label act2_activity_04_medical_supplies:
     t "(slight pause) Prove me right. Or prove me a fool. Either way, I'll have tried."
 
     # VISUAL: She pushes medkit toward him. Not freely given. Offered with expectation.
-    a "{i}She's not forgiving me. She's giving me a chance.{/i}"
-    a "{i}Burden of proof. Earn it through action.{/i}"
+    athought "She's not forgiving me. She's giving me a chance."
+    athought "Burden of proof. Earn it through action."
 
     a "I don't know if I deserve this chance."
     t "Probably not. But that's not for me to judge."
@@ -159,8 +159,8 @@ label act2_activity_04_medical_supplies:
     t "(quiet) Out of 100,000. That's the survival rate."
 
     # VISUAL: Numbers crushing him. 100,000 dead. 100 survived. Because of his mercy.
-    a "{i}My mercy killed 99,900 people.{/i}"
-    a "{i}The arithmetic of guilt. It never balances.{/i}"
+    athought "My mercy killed 99,900 people."
+    athought "The arithmetic of guilt. It never balances."
 
     t "You're calculating, aren't you? How many died because of you."
     a "How did you—"
@@ -194,25 +194,25 @@ label act2_activity_04_medical_supplies:
     # --- EMP/OB flavor: Post-Tessa resolve & medkit weight ---
     if get_empathy_band() != "obedience":
         # (EMP) keep original text verbatim
-        "{i}She didn't forgive me. Didn't absolve me. Didn't make it easier.{/i}"
-        "{i}She just gave me work to do. People to save. A way forward.{/i}"
-        "{i}Maybe that's better than forgiveness. Maybe that's what I need.{/i}"
+        "She didn't forgive me. Didn't absolve me. Didn't make it easier."
+        "She just gave me work to do. People to save. A way forward."
+        "Maybe that's better than forgiveness. Maybe that's what I need."
 
-        a "{i}Keep count, she said. Remember their names.{/i}"
-        a "{i}600 dead. How many living to balance that?{/i}"
-        a "{i}Infinite, probably. But I have to start somewhere.{/i}"
+        athought "Keep count, she said. Remember their names."
+        athought "600 dead. How many living to balance that?"
+        athought "Infinite, probably. But I have to start somewhere."
 
         $ adjust_empathy_once("act2_med_post_tessa_resolve_emp", +1)
 
     else:
         # (OB) clinical framing; same dramatic beat, different lens
-        "{i}She didn't forgive me. She assigned a queue.{/i}"
-        "{i}Not absolution—operations. Triage. Throughput. Deliverables.{/i}"
-        "{i}Forgiveness is nonfunctional. Output is not.{/i}"
+        "She didn't forgive me. She assigned a queue."
+        "Not absolution—operations. Triage. Throughput. Deliverables."
+        "Forgiveness is nonfunctional. Output is not."
 
-        a "{i}Two medkits: finite resources, measurable outcomes.{/i}"
-        a "{i}Stop optimizing for the dead ledger. Maximize marginal lives saved.{/i}"
-        a "{i}Start now. Iterate until failure rate trends down.{/i}"
+        athought "Two medkits: finite resources, measurable outcomes."
+        athought "Stop optimizing for the dead ledger. Maximize marginal lives saved."
+        athought "Start now. Iterate until failure rate trends down."
 
         $ adjust_empathy_once("act2_med_post_tessa_resolve_ob", -1)
 
@@ -220,16 +220,16 @@ label act2_activity_04_medical_supplies:
     # Tessa kneeling beside another patient. Green glow surrounding her hands. Healing.
     # --- EMP/OB flavor on Tessa reflection ---
     if get_empathy_band() != "obedience":
-        a "{i}Tessa Kael. Healer. Heart of the Unders.{/i}"
-        a "{i}She sees the worst humanity has to offer and chooses compassion anyway.{/i}"
-        a "{i}Glass killed. Tessa heals.{/i}"
-        a "{i}Maybe that's who I need to learn from.{/i}"
+        athought "Tessa Kael. Healer. Heart of the Unders."
+        athought "She sees the worst humanity has to offer and chooses compassion anyway."
+        athought "Glass killed. Tessa heals."
+        athought "Maybe that's who I need to learn from."
         $ adjust_empathy_once("act2_med_tessa_reverence", +1)
     else:
-        a "{i}Tessa Kael. Field asset. High-value node in the Unders’ care network.{/i}"
-        a "{i}She absorbs systemic damage and outputs survival. Throughput matters.{/i}"
-        a "{i}Glass executed directives. Tessa executes outcomes.{/i}"
-        a "{i}I don't need her compassion. I need her protocols.{/i}"
+        athought "Tessa Kael. Field asset. High-value node in the Unders’ care network."
+        athought "She absorbs systemic damage and outputs survival. Throughput matters."
+        athought "Glass executed directives. Tessa executes outcomes."
+        athought "I don't need her compassion. I need her protocols."
         $ adjust_empathy_once("act2_med_tessa_pragmatic", -1)
 
     # TRANSITION: Return to safe house. Report to Zira. Activity complete.
@@ -268,14 +268,14 @@ label act2_activity_04_medical_supplies:
     # VISUAL: Aeron stores medkits carefully. Precious cargo. Lives waiting.
     # --- EMP/OB flavor on the "count the living" vow ---
     if get_empathy_band() != "obedience":
-        a "{i}Keep count. Remember their names.{/i}"
-        a "{i}600 dead. Now I count the living.{/i}"
-        a "{i}Starting now. Starting with whoever I save next.{/i}"
+        athought "Keep count. Remember their names."
+        athought "600 dead. Now I count the living."
+        athought "Starting now. Starting with whoever I save next."
         $ adjust_empathy_once("act2_med_count_living_ack", +1)
     else:
-        a "{i}Inventory secured. Two kits, two chances.{/i}"
-        a "{i}Names don't stop bleeding. Procedures do.{/i}"
-        a "{i}Triage. Stabilize. Move. Save who can be saved.{/i}"
+        athought "Inventory secured. Two kits, two chances."
+        athought "Names don't stop bleeding. Procedures do."
+        athought "Triage. Stabilize. Move. Save who can be saved."
         $ adjust_empathy_once("act2_med_count_living_hardline", -1)
 
     # TRANSITION: End of activity. Rewards gained. Contact added.

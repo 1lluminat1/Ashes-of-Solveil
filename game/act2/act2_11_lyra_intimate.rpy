@@ -22,7 +22,7 @@ label act2_lyra_intimate:
     
     scene bg_safe_house_night with fade
     
-    "{i}Night falls. The small space feels smaller. Closer. Like the world narrowed to just this room. Just us.{/i}"
+    "Night falls. The small space feels smaller. Closer. Like the world narrowed to just this room. Just us."
     
     # VISUAL: They sit together. Shoulders touching. Warmth spreading.
     l "(quiet) Thank you for staying."
@@ -30,7 +30,7 @@ label act2_lyra_intimate:
     l "I don't know. Just... thank you."
     
     # VISUAL: Silence. Comfortable. Charged. Something building.
-    "{i}Silence between us but it's not empty. It's full of everything we haven't said. Everything we've been too scared to say.{/i}"
+    "Silence between us but it's not empty. It's full of everything we haven't said. Everything we've been too scared to say."
     
     l "I keep thinking about the rooftop. After the confession. How we held each other."
     a "Me too."
@@ -44,7 +44,7 @@ label act2_lyra_intimate:
     l "I know. But tonight I need... I need more than just proximity. I need..."
     
     # VISUAL: She trails off. Can't quite say it. Scared of rejection. Of vulnerability.
-    "{i}She can't finish. Too scared. Too vulnerable. But I understand. I feel it too.{/i}"
+    "She can't finish. Too scared. Too vulnerable. But I understand. I feel it too."
     
     a "I need it too. Whatever it is. I need it too."
     
@@ -53,7 +53,7 @@ label act2_lyra_intimate:
     a "You're not imagining anything. I feel it. All of it."
     
     # VISUAL: Slow movement. Her hand reaches for his. Fingers intertwine. Electric.
-    "{i}Her hand finds mine. Fingers slide between fingers. Warmth. Connection. Simple touch feeling like everything.{/i}"
+    "Her hand finds mine. Fingers slide between fingers. Warmth. Connection. Simple touch feeling like everything."
     
     l "Your hands are shaking."
     a "So are yours."
@@ -66,7 +66,7 @@ label act2_lyra_intimate:
     l "Together. Yeah."
     
     # VISUAL: She shifts closer. Head resting on his shoulder. Breathing syncing.
-    "{i}She leans into me. Head on my shoulder. Her breath warm against my neck. My arm moves around her. Automatic. Natural. Right.{/i}"
+    "She leans into me. Head on my shoulder. Her breath warm against my neck. My arm moves around her. Automatic. Natural. Right."
     
     l "(whispers) This isn't performance. Right? This isn't just... survival instinct. Proximity. Desperation."
     a "No. This is real. As real as anything I've felt."
@@ -78,10 +78,10 @@ label act2_lyra_intimate:
     a "And I see you. Not the perfect soldier. Not Echelon's proof. Just Lyra. Broken and beautiful and real."
     
     # VISUAL: Moment stretches. Everything slows. Choice approaching.
-    a "{i}The space between us shrinks. Inches. Then less. Her eyes asking permission. Mine giving it.{/i}"
+    athought "The space between us shrinks. Inches. Then less. Her eyes asking permission. Mine giving it."
     
     # VISUAL: Kiss. Gentle at first. Testing. Then deeper. Need pouring through.
-    a "{i}Lips meet. Soft. Tentative. Then certain. Her hand in my hair. Mine on her waist. Everything else falling away. Just this. Just us. Just now.{/i}"
+    athought "Lips meet. Soft. Tentative. Then certain. Her hand in my hair. Mine on her waist. Everything else falling away. Just this. Just us. Just now."
     
     # VISUAL: They break apart. Breathing hard. Foreheads touching. Grounding.
     l "(breathless) That was..."
@@ -97,7 +97,7 @@ label act2_lyra_intimate:
     a "Then let's feel human together."
     
     # VISUAL: Second kiss. Deeper. More urgent. Hands exploring. Not frantic. Purposeful.
-    a "{i}We kiss again. Deeper now. Hands moving. Hers sliding under my shirt. Mine tracing her spine. Not desperate. Not rushed. Savoring. Learning. Discovering.{/i}"
+    athought "We kiss again. Deeper now. Hands moving. Hers sliding under my shirt. Mine tracing her spine. Not desperate. Not rushed. Savoring. Learning. Discovering."
     
     l "(between kisses) Bed. Should we...?"
     a "Yeah. More comfortable."
@@ -105,7 +105,7 @@ label act2_lyra_intimate:
     # VISUAL: They move to makeshift bed. Concrete floor with blankets. Not much but theirs.
     # VISUAL: Lying down together. Side by side. Touching. Exploring. Slow build.
     
-    "{i}The makeshift bed. Blankets on concrete. Not comfortable but doesn't matter. She's pressed against me. That's all that matters.{/i}"
+    "The makeshift bed. Blankets on concrete. Not comfortable but doesn't matter. She's pressed against me. That's all that matters."
     
     # VISUAL: Hands roaming. Shirts loosening. Skin touching skin. Intimate but tender.
     l "(whispers) I haven't done this in... I don't even remember. Before Echelon maybe."
@@ -114,14 +114,14 @@ label act2_lyra_intimate:
     a "Together. Always together."
     
     # VISUAL: Kisses trailing. Neck. Collarbone. Gentle exploration. Building slowly.
-    "{i}Her lips on my neck. My hands tracing her sides. Learning curves. Finding what makes her gasp. What makes her sigh. Slow discovery.{/i}"
+    "Her lips on my neck. My hands tracing her sides. Learning curves. Finding what makes her gasp. What makes her sigh. Slow discovery."
     
     l "(gasps) There. Right there."
     a "(continues) Like this?"
     l "(nods, breathless) Exactly like that."
     
     # VISUAL: Clothes loosening more. Not removed completely yet. Building tension.
-    "{i}Shirts loosening. Her hands on my chest. Mine on her back. Skin warm. Breath hot. Hearts racing. Everything heightening.{/i}"
+    "Shirts loosening. Her hands on my chest. Mine on her back. Skin warm. Breath hot. Hearts racing. Everything heightening."
     
     l "Aeron."
     a "Yeah?"
@@ -129,7 +129,7 @@ label act2_lyra_intimate:
     a "I won't. I promise. I'm here. All of me. For all of you."
     
     # VISUAL: Intensity building. Breathing harder. Movements more urgent. Still tender.
-    "{i}Building. Hands more urgent. Kisses deeper. Her leg wrapping over mine. Bodies pressing closer. Heat rising. Everything narrowing to just sensation. Just us. Just this moment.{/i}"
+    "Building. Hands more urgent. Kisses deeper. Her leg wrapping over mine. Bodies pressing closer. Heat rising. Everything narrowing to just sensation. Just us. Just this moment."
     
     l "(breathless) I need... I need more."
     a "Tell me. Tell me what you need."
@@ -137,7 +137,7 @@ label act2_lyra_intimate:
     a "Then you have me. All of me. Everything I am."
     
     # VISUAL: Final barriers falling. Emotional and physical. Completely present. Completely vulnerable.
-    "{i}Shirts gone. Hands everywhere. Learning. Discovering. Giving. Taking. She gasps my name. I breathe hers. Everything else gone. Just this. Just us. Just now.{/i}"
+    "Shirts gone. Hands everywhere. Learning. Discovering. Giving. Taking. She gasps my name. I breathe hers. Everything else gone. Just this. Just us. Just now."
     
     # VISUAL: Moment peaks. Everything aligned. Trust complete. Vulnerability total.
     l "(whispers against my lips) I trust you. Completely. With everything."
@@ -149,8 +149,8 @@ label act2_lyra_intimate:
     
     scene black with fade
     
-    "{i}The world narrows. Sensation overwhelming. Her. Me. Us. Everything else falling away.{/i}"
-    "{i}[This is where the scene continues in your own words, if you choose.]{/i}"
+    "The world narrows. Sensation overwhelming. Her. Me. Us. Everything else falling away."
+    "[This is where the scene continues in your own words, if you choose.]"
     
     # =======================================================
     # TIME SKIP - Morning After
@@ -158,15 +158,15 @@ label act2_lyra_intimate:
     
     scene bg_safe_house_morning with fade
     
-    "{i}Morning. Gray light through the window. Warm despite concrete floor. Because of her.{/i}"
+    "Morning. Gray light through the window. Warm despite concrete floor. Because of her."
     
     # VISUAL: Aftermath. Bodies tangled. Blankets askew. Peaceful. Safe.
     # VISUAL: Aeron wakes first. Lyra still sleeping against him. Vulnerable. Beautiful.
     
-    "{i}She's still asleep. Pressed against me. Hair messy. Face peaceful. No nightmares last night. For either of us.{/i}"
+    "She's still asleep. Pressed against me. Hair messy. Face peaceful. No nightmares last night. For either of us."
     
     # VISUAL: Her hand over his heart. His arm around her. Natural. Right.
-    a "{i}Her hand over my heart. Like she's checking it still beats. Making sure I'm still here. Still real. Still hers.{/i}"
+    athought "Her hand over my heart. Like she's checking it still beats. Making sure I'm still here. Still real. Still hers."
     
     # VISUAL: She stirs. Wakes. Remembers. Small smile.
     l "(sleepy) Morning."
@@ -184,7 +184,7 @@ label act2_lyra_intimate:
     l "Not all of them. But some. That's progress."
     
     # VISUAL: They lie there. Comfortable silence. No rush to move.
-    "{i}We stay tangled together. No rush. No urgency. Just presence. Just being. Just human.{/i}"
+    "We stay tangled together. No rush. No urgency. Just presence. Just being. Just human."
     
     l "What does this mean? For us?"
     a "I don't know. But I know it's real. And I know I want more of it."
@@ -196,7 +196,7 @@ label act2_lyra_intimate:
     a "I'm yours. Completely."
     
     # VISUAL: Final moment of peace before reality intrudes.
-    "{i}Morning light. Her in my arms. This moment perfect and temporary and precious. Everything else can wait. Just for now. Just for this moment.{/i}"
+    "Morning light. Her in my arms. This moment perfect and temporary and precious. Everything else can wait. Just for now. Just for this moment."
     
     l "(finally sits up) We should probably get moving. Things to do. Survival and all that."
     a "Probably. But I'm not in a hurry."
@@ -204,7 +204,7 @@ label act2_lyra_intimate:
     a "Fair point."
     
     # VISUAL: Getting dressed. Casual intimacy. No shame. No awkwardness.
-    "{i}We dress. No rush. No shame. Casual touches. Small smiles. Everything different now. Better different.{/i}"
+    "We dress. No rush. No shame. Casual touches. Small smiles. Everything different now. Better different."
     
     # Update relationship status via helpers only
     $ mark_flag("Lyra", "lewd_scene_completed")
@@ -217,7 +217,7 @@ label act2_lyra_intimate:
     a "Always together. Yeah. I remember."
     
     # VISUAL: One more kiss. Then back to reality. Changed but stronger.
-    "{i}One more kiss. Then reality returns. But we're different now. Connected deeper. Stronger together. Ready for whatever comes next.{/i}"
+    "One more kiss. Then reality returns. But we're different now. Connected deeper. Stronger together. Ready for whatever comes next."
     
     # Check if all activities complete (helpers-only, via scene_flags)
     python:
@@ -225,10 +225,10 @@ label act2_lyra_intimate:
         activities_done = all(check_scene_flag("act2_activity", f"{t}_done") for t in tasks)
 
     if activities_done:
-        "{i}Seven days. Seven tasks. All complete. And now this. Time to see if Selene responds.{/i}"
+        "Seven days. Seven tasks. All complete. And now this. Time to see if Selene responds."
         jump act2_06_the_message
     else:
-        "{i}Still tasks to complete. But last night changed something. Made it all feel possible somehow.{/i}"
+        "Still tasks to complete. But last night changed something. Made it all feel possible somehow."
         jump act2_activity_hub
 
     # canon_note: Lyra intimate scene - deeply earned, emotionally vulnerable, physically close

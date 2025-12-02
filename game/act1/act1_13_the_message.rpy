@@ -21,21 +21,21 @@ label act1_the_message:
     # SFX: Building ventilation; high-tier wind pressure ticking facade fins; distant city drone.
     # CAMERA: Slow push from door to desk.
 
-    "{i}The door seals behind her. The room exhales.{/i}"
+    "The door seals behind her. The room exhales."
 
-    a "{i}She came back. Twice now.{/i}"
-    a "{i}Glass recognizes glass. Maybe that's all we need.{/i}"
-    a "{i}Maybe breaking together is better than shattering alone.{/i}"
+    athought "She came back. Twice now."
+    athought "Glass recognizes glass. Maybe that's all we need."
+    athought "Maybe breaking together is better than shattering alone."
 
-    "{i}He moves to the desk. The weight of the night settles.{/i}"
+    "He moves to the desk. The weight of the night settles."
 
     # --- Marcus's mission order arrives ---
     # UI: Terminal notification pulse; crest watermark bloom.
-    "{i}The terminal chimes. Urgent. Command priority.{/i}"
-    "{i}Marcus's seal. Another mission.{/i}"
+    "The terminal chimes. Urgent. Command priority."
+    "Marcus's seal. Another mission."
 
-    a "{i}Of course. Glass doesn’t get to rest.{/i}"
-    a "{i}Operation 391.{/i}"
+    athought "Of course. Glass doesn’t get to rest."
+    athought "Operation 391."
 
     # --- PLAYER CHOICE: open or hesitate (neutral vs EMP +1) ---
     menu:
@@ -48,67 +48,67 @@ label act1_the_message:
             )
             $ set_scene_flag(scene_id, "opened_order")
 
-            "{i}He taps the screen. Marcus’s orders unfold.{/i}"
+            "He taps the screen. Marcus’s orders unfold."
 
         "Hesitate.":
-            $ apply_choice_once(
+            $ choice_and_dev(
                 _current_scene_id, "message_hesitated_order", "EMP", factor=1,
                 next_scene_label="act1_13_the_message",
                 note="Aeron pauses before opening Marcus order."
             )
             $ set_scene_flag(scene_id, "hesitated_order")
 
-            "{i}His hand hovers. For a moment, he considers walking away.{/i}"
+            "His hand hovers. For a moment, he considers walking away."
 
-            a "{i}Glass hesitating. Again.{/i}"
+            athought "Glass hesitating. Again."
 
-            "{i}The chime repeats. Command priority. He opens it.{/i}"
+            "The chime repeats. Command priority. He opens it."
 
     # Alignment echo — one breath after opening Marcus's order
     # LIGHTING: Terminal white lifts a notch on his face.
     $ band = get_empathy_band()
     if band == "obedience":
-        a "{i}Orders feel like oxygen. Simple. Clean.{/i}"
+        athought "Orders feel like oxygen. Simple. Clean."
     elif band == "conflicted":
-        a "{i}Orders feel like weight. Easier to lift than to understand.{/i}"
+        athought "Orders feel like weight. Easier to lift than to understand."
     else:  # empathy
-        a "{i}Orders feel heavier than they used to. Names hide inside them.{/i}"
+        athought "Orders feel heavier than they used to. Names hide inside them."
 
     # --- Mission contents ---
     # UI: Directive text scroll, subtle vignette.
-    "{i}OPERATION DIRECTIVE - PRIORITY ALPHA{/i}"
-    "{i}CLASSIFICATION: SECTOR STABILIZATION{/i}"
-    "{i}AUTHORIZATION: HIGH MARSHAL MARCUS RYLAN{/i}"
+    "OPERATION DIRECTIVE - PRIORITY ALPHA"
+    "CLASSIFICATION: SECTOR STABILIZATION"
+    "AUTHORIZATION: HIGH MARSHAL MARCUS RYLAN"
 
-    a "{i}(reading) 'Sector 10 – Lower Spans. Comprehensive sweep operation.'{/i}"
-    a "{i}'Objective: Eliminate all hostile elements. Zero tolerance protocol.'{/i}"
+    athought "(reading) 'Sector 10 – Lower Spans. Comprehensive sweep operation.'"
+    athought "'Objective: Eliminate all hostile elements. Zero tolerance protocol.'"
 
-    "{i}Zero tolerance. No survivors. Total sweep.{/i}"
+    "Zero tolerance. No survivors. Total sweep."
 
-    a "{i}'Expected civilian collateral: Acceptable within mission parameters.'{/i}"
+    athought "'Expected civilian collateral: Acceptable within mission parameters.'"
 
-    a "{i}Acceptable collateral.{/i}"
-    a "{i}200 to 500 people. Reduced to numbers. To metrics.{/i}"
-    a "{i}Operation 391. The count continues.{/i}"
+    athought "Acceptable collateral."
+    athought "200 to 500 people. Reduced to numbers. To metrics."
+    athought "Operation 391. The count continues."
 
     # --- Empathy-tone reflection ---
     if is_ob_hard:
-        a "{i}Collateral is efficiency. Efficiency is mercy in scale.{/i}"
-        a "{i}Marcus taught me that. I believed him once. Still do, mostly.{/i}"
+        athought "Collateral is efficiency. Efficiency is mercy in scale."
+        athought "Marcus taught me that. I believed him once. Still do, mostly."
     elif is_mid:
-        a "{i}Collateral. The word tastes wrong now.{/i}"
-        a "{i}Maybe it always did. I just stopped tasting anything for a while.{/i}"
+        athought "Collateral. The word tastes wrong now."
+        athought "Maybe it always did. I just stopped tasting anything for a while."
     else:
-        a "{i}Collateral. A word to hide the bodies under metrics.{/i}"
-        a "{i}I see their faces already. And I haven’t even left yet.{/i}"
+        athought "Collateral. A word to hide the bodies under metrics."
+        athought "I see their faces already. And I haven’t even left yet."
 
     # --- Second message appears ---
     # UI: Off-pattern chime; envelope icon glitches; header masked.
-    "{i}A second chime cuts through his thoughts. Different tone.{/i}"
-    "{i}Unmarked sender. Encrypted.{/i}"
+    "A second chime cuts through his thoughts. Different tone."
+    "Unmarked sender. Encrypted."
 
-    a "{i}Unmarked means encrypted. Encrypted means trouble.{/i}"
-    a "{i}Or answers.{/i}"
+    athought "Unmarked means encrypted. Encrypted means trouble."
+    athought "Or answers."
 
     # --- PLAYER CHOICE: open or ignore (record-only variants) ---
     menu:
@@ -121,7 +121,7 @@ label act1_the_message:
             )
             $ set_scene_flag(scene_id, "opened_zira")
 
-            "{i}He swipes Marcus’s order aside. The encrypted message decrypts.{/i}"
+            "He swipes Marcus’s order aside. The encrypted message decrypts."
 
         "Ignore it and read Marcus’s order again.":
             $ record_choice_once(
@@ -130,15 +130,15 @@ label act1_the_message:
                 note="Ignored the anonymous ping at first, then opened after repeats."
             )
 
-            "{i}He tries to focus on the mission parameters.{/i}"
+            "He tries to focus on the mission parameters."
             
-            a "{i}Orders first. Distractions later.{/i}"
+            athought "Orders first. Distractions later."
 
-            "{i}But the chime repeats. Again. Again.{/i}"
+            "But the chime repeats. Again. Again."
 
-            a "{i}Persistent bastard.{/i}"
+            athought "Persistent bastard."
 
-            "{i}He opens it.{/i}"
+            "He opens it."
 
             $ set_scene_flag(scene_id, "opened_zira")
             $ set_scene_flag(scene_id, "hesitated_zira")
@@ -152,34 +152,34 @@ label act1_the_message:
     "{cps=30}I CAN SHOW YOU WHY.{/cps}"
     "{cps=30}THE TRUTH IS IN THE SHADOWS.{/cps}"
 
-    "{i}The text dissolves. Gone before he can capture it.{/i}"
+    "The text dissolves. Gone before he can capture it."
 
-    a "{i}Self-deleting. Professional. Or paranoid.{/i}"
+    athought "Self-deleting. Professional. Or paranoid."
 
-    "{i}His eyes move between the two messages.{/i}"
+    "His eyes move between the two messages."
 
-    a "{i}Sector 10. Same coordinates.{/i}"
-    a "{i}Father orders me to sweep it at dawn.{/i}"
-    a "{i}Someone else wants me there tonight.{/i}"
+    athought "Sector 10. Same coordinates."
+    athought "Father orders me to sweep it at dawn."
+    athought "Someone else wants me there tonight."
 
     # --- Empathy-tone internal response ---
     if is_ob_hard:
-        a "{i}Coincidence is noise. But protocol says confirm anomalies.{/i}"
-        a "{i}I’ll go. Verify. Report. Order in chaos.{/i}"
+        athought "Coincidence is noise. But protocol says confirm anomalies."
+        athought "I’ll go. Verify. Report. Order in chaos."
     elif is_mid:
-        a "{i}It feels deliberate. Like someone’s testing me.{/i}"
-        a "{i}But curiosity’s a kind of defiance now, isn’t it?{/i}"
+        athought "It feels deliberate. Like someone’s testing me."
+        athought "But curiosity’s a kind of defiance now, isn’t it?"
     else:
-        a "{i}It feels deliberate. Like someone’s giving me a chance to see what I’m part of.{/i}"
-        a "{i}Before I make it worse.{/i}"
+        athought "It feels deliberate. Like someone’s giving me a chance to see what I’m part of."
+        athought "Before I make it worse."
 
-    "{i}No trace. No proof it ever existed except memory.{/i}"
+    "No trace. No proof it ever existed except memory."
 
     a "Who the hell are you?"
-    a "{i}And why do you want me to see Sector 10 before I destroy it?{/i}"
+    athought "And why do you want me to see Sector 10 before I destroy it?"
 
     # WEATHER GRAMMAR: High-tier—no rain; facade pressure + condensation.
-    "{i}Wind ticks against the facade fins. Condensation halos the glass edge.{/i}"
+    "Wind ticks against the facade fins. Condensation halos the glass edge."
 
     # --- PLAYER CHOICE: act now or wait (record vs conditional EMP +1) ---
     menu:
@@ -187,7 +187,7 @@ label act1_the_message:
         "Go to the Lower Spans now.":
             $ set_scene_flag(scene_id, "goes_early")
             if band == "empathy":
-                $ apply_choice_once(
+                $ choice_and_dev(
                     _current_scene_id, "message_go_early_emp", "EMP", factor=1,
                     next_scene_label="act1_13_the_message",
                     note="Chooses to go early; empathy-lean nudge."
@@ -199,12 +199,12 @@ label act1_the_message:
                     note="Goes early without empathy nudge."
                 )
 
-            a "{i}If someone’s watching me, I’d rather meet them on my terms.{/i}"
-            a "{i}Before dawn. Before the sweep. Before Glass follows orders again.{/i}"
+            athought "If someone’s watching me, I’d rather meet them on my terms."
+            athought "Before dawn. Before the sweep. Before Glass follows orders again."
 
-            "{i}He grabs his coat. Marcus’s mission order stays on screen, unanswered.{/i}"
+            "He grabs his coat. Marcus’s mission order stays on screen, unanswered."
 
-            a "{i}Glass hesitates. Glass questions. Glass disobeys.{/i}"
+            athought "Glass hesitates. Glass questions. Glass disobeys."
 
         "Wait and think it through.":
             $ record_choice_once(
@@ -214,29 +214,29 @@ label act1_the_message:
             )
             $ set_scene_flag(scene_id, "waited")
 
-            a "{i}Rushing into traps is how people disappear.{/i}"
+            athought "Rushing into traps is how people disappear."
 
-            "{i}He sits. The wind fills the silence.{/i}"
+            "He sits. The wind fills the silence."
 
-            a "{i}What would you do, Kael? Walk into the dark or wait for dawn?{/i}"
-            a "{i}'Don’t let Father turn you into a weapon,' you said.{/i}"
-            a "{i}But staying here, following orders... that’s exactly what Glass does.{/i}"
+            athought "What would you do, Kael? Walk into the dark or wait for dawn?"
+            athought "'Don’t let Father turn you into a weapon,' you said."
+            athought "But staying here, following orders... that’s exactly what Glass does."
 
-            "{i}He grabs his coat.{/i}"
+            "He grabs his coat."
 
-            a "{i}Maybe it’s time to stop being Glass.{/i}"
+            athought "Maybe it’s time to stop being Glass."
 
     # EXIT: Corridor + elevator
     # VISUAL: Hallway empty; security lenses blink.
     # SFX: Elevator cable hum; distant service drone.
-    "{i}The hallway is empty. Cameras blink red in the corners.{/i}"
+    "The hallway is empty. Cameras blink red in the corners."
 
-    a "{i}They’re always watching. Question is—who else is?{/i}"
+    athought "They’re always watching. Question is—who else is?"
 
-    "{i}The elevator descends into the dark.{/i}"
+    "The elevator descends into the dark."
 
-    a "{i}Operation 391 starts at dawn. But tonight...{/i}"
-    a "{i}Tonight, Glass decides to see what it’s really cutting.{/i}"
+    athought "Operation 391 starts at dawn. But tonight..."
+    athought "Tonight, Glass decides to see what it’s really cutting."
 
     $ set_scene_flag(scene_id, "completed")
 

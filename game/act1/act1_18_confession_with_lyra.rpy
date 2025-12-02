@@ -18,8 +18,8 @@ label act1_confession_lyra:
     # SOUND: Door seal hiss; faint ventilation; distant city hum as a low bed.
     # CAMERA: Slow push from doorway to a mid on Aeron; keep Lyra soft in BG, then rack focus on her first line.
 
-    "{i}The door seals behind him. The room is too quiet.{/i}"
-    "{i}And Lyra is there. Sitting on his bed. Waiting.{/i}"
+    "The door seals behind him. The room is too quiet."
+    "And Lyra is there. Sitting on his bed. Waiting."
 
     l "Aeron."
 
@@ -27,9 +27,9 @@ label act1_confession_lyra:
     pause 0.4
 
     # VISUAL: Aeron stops just inside; dried blood flecks on the sleeve (not his).
-    "{i}He stands there. Can't move forward. Can't turn back.{/i}"
+    "He stands there. Can't move forward. Can't turn back."
 
-    a "{i}She's here. Why is she here?{/i}"
+    athought "She's here. Why is she here?"
 
     l "(steps closer) I heard about the mission. Sector Ten."
     a "(flat) It's done. Mission complete."
@@ -48,7 +48,7 @@ label act1_confession_lyra:
     a "Eight hundred targets. Sector secured. Marcus is satisfied."
     l "Stop reporting and talk to me."
 
-    "{i}Glass doesn’t break. Glass reports. Glass functions.{/i}"
+    "Glass doesn’t break. Glass reports. Glass functions."
 
     a "(strained) I’m fine. Just tired. I need to—"
 
@@ -56,7 +56,7 @@ label act1_confession_lyra:
     # VISUAL: Lyra lifts a hand—hesitates—sets it on his forearm.
     a "(sharp) Don’t—"
     l "(quiet) Aeron. Look at me."
-    a "{i}If I look at her, it’s over. The dam breaks.{/i}"
+    athought "If I look at her, it’s over. The dam breaks."
 
     l "(barely a whisper) How many?"
 
@@ -113,12 +113,12 @@ label act1_confession_lyra:
     a "He said, 'prove your worth.' So I did."
 
     # VISUAL: Aeron sways; grabs desk edge.
-    "{i}His knees buckle. He catches the desk. Barely standing.{/i}"
+    "His knees buckle. He catches the desk. Barely standing."
 
     a "(yelling) I’ve done this three hundred ninety times! How many families? How many lies?"
 
     # SFX: Fabric creak; knees hit floor.
-    "{i}He falls. Crashes to his knees. The impact doesn’t register.{/i}"
+    "He falls. Crashes to his knees. The impact doesn’t register."
 
     if is_obedient_path:
         a "(yells) I FAILED—"
@@ -126,7 +126,7 @@ label act1_confession_lyra:
     else:
         a "(screaming) I KILLED THEM—"
 
-    "{i}Ten years of silence shatters. Ten years of Glass cracks wide open.{/i}"
+    "Ten years of silence shatters. Ten years of Glass cracks wide open."
 
     a "(sobbing) I’m sorry—I tried—it’s never enough—"
     a "(gasping) I can’t breathe—there’s blood—everywhere—"
@@ -134,26 +134,26 @@ label act1_confession_lyra:
     l "(quiet) Breathe. Just breathe. I’m here."
 
     if is_obedient_path:
-        a "{i}She touches me. I should push her away. Discipline demands distance.{/i}"
-        a "{i}But I can’t move. The system says suppress. The body disobeys.{/i}"
+        athought "She touches me. I should push her away. Discipline demands distance."
+        athought "But I can’t move. The system says suppress. The body disobeys."
     else:
-        a "{i}Her touch anchors me. Pulls me back to something human.{/i}"
+        athought "Her touch anchors me. Pulls me back to something human."
 
     # VISUAL: He collapses into her; foreheads touch; shoulders shake.
-    "{i}He collapses into her. Full weight. Broken sound. Human sound.{/i}"
+    "He collapses into her. Full weight. Broken sound. Human sound."
 
     a "(barely coherent) How do you live with it? I see their faces—every time—"
     a "(screaming) I DON’T WANT TO BE THIS ANYMORE—"
 
     # ---- LYRA BREAKS ----
     # CAMERA: On Lyra; mask finally slips; tear track catches window light.
-    "{i}Lyra’s mask shatters. Tears streak down.{/i}"
+    "Lyra’s mask shatters. Tears streak down."
 
     l "(voice breaking) I know. I did it too. Sector Seven."
     l "Families. Children. I logged them. Three days later—they were gone."
     l "(crying) I told myself it was necessary. I can’t stop seeing them."
 
-    "{i}She holds him tighter. Two pieces of Glass shattering together.{/i}"
+    "She holds him tighter. Two pieces of Glass shattering together."
     l "We’re not Glass. We’re human. And it hurts."
     l "(through tears) But feeling it means we’re still alive."
 
@@ -169,11 +169,11 @@ label act1_confession_lyra:
     l "(fierce) Then we break free. Together."
 
     # SOUND: City hum dips under; let breathing lead.
-    "{i}They sit in the ruins of Glass. Time dissolves. Just breath. Just tears.{/i}"
+    "They sit in the ruins of Glass. Time dissolves. Just breath. Just tears."
 
     # ---- AFTER THE STORM ----
     # CAMERA: Wider two-shot; window beam softer now; colors cooler.
-    "{i}Silence settles. Not peace. Just emptiness after the flood.{/i}"
+    "Silence settles. Not peace. Just emptiness after the flood."
 
     l "(hoarse) How do you feel?"
     a "(barely audible) ...Empty."
@@ -184,7 +184,7 @@ label act1_confession_lyra:
     a "How do I live with that?"
     l "(quiet) We learn together."
 
-    "{i}Her hand finds his. Holds tight. Anchor in the void.{/i}"
+    "Her hand finds his. Holds tight. Anchor in the void."
 
     l "You tried to save them. That’s more than Glass would do."
     a "I didn’t save enough."
@@ -198,40 +198,40 @@ label act1_confession_lyra:
     l "Then we’re broken together."
     l "Glass recognizes glass. But we’re not Glass anymore."
 
-    "{i}They sit. The city hums beyond the glass. Broken but not alone.{/i}"
+    "They sit. The city hums beyond the glass. Broken but not alone."
 
     a "(whisper) Thank you."
     l "For what?"
     a "For seeing me."
     l "I’ve always seen you. Even when you couldn’t."
 
-    "{i}She leans against him. He doesn’t pull away.{/i}"
+    "She leans against him. He doesn’t pull away."
 
     l "We’ll get through this."
     a "How can you be sure?"
     l "I’m not. But we’ll try."
 
-    "{i}Evening falls. No one turns on the lights. Just surviving the moment.{/i}"
+    "Evening falls. No one turns on the lights. Just surviving the moment."
 
     # EMPATHY VARIANT TONE
     if band == "empathy":
-        a "{i}Glass shattered tonight. What’s left still feels human.{/i}"
+        athought "Glass shattered tonight. What’s left still feels human."
     elif band == "obedience":
-        a "{i}The cracks opened—but obedience still whispers. I don’t know which voice will win.{/i}"
+        athought "The cracks opened—but obedience still whispers. I don’t know which voice will win."
     else:
-        a "{i}Between broken and whole, there’s this—breathing. Barely.{/i}"
+        athought "Between broken and whole, there’s this—breathing. Barely."
 
     if is_obedient_path:
-        a "{i}Operation 391 complete. Error detected: deviation under emotional strain.{/i}"
-        a "{i}I’ll fix it. I’ll fix myself. Next time, no cracks.{/i}"
-        a "{i}Lyra’s still here. She shouldn’t be.{/i}"
+        athought "Operation 391 complete. Error detected: deviation under emotional strain."
+        athought "I’ll fix it. I’ll fix myself. Next time, no cracks."
+        athought "Lyra’s still here. She shouldn’t be."
     else:
-        a "{i}Operation 391 is complete.{/i}"
-        a "{i}Glass shattered on the floor of my apartment.{/i}"
-        a "{i}And for the first time in ten years... I felt it all.{/i}"
+        athought "Operation 391 is complete."
+        athought "Glass shattered on the floor of my apartment."
+        athought "And for the first time in ten years... I felt it all."
 
     # LIGHT SOCIAL STATE: vulnerability breeds trust
-    $ add_trust("Lyra", 1)
+    $ rel_bump("Lyra", trust=+1)
     $ set_scene_flag(_current_scene_id, "completed")
     return
 
