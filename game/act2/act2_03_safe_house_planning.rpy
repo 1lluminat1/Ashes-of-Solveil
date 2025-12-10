@@ -1,366 +1,200 @@
-# act2_03_safe_house_planning.rpy
 # =======================================================
-# ACT 2 - Scene 3: Safe House Planning (HUB)
-# OB/EMP integrated; Consolidated State Architecture hooks
-# Adds randomized pre/post activity flavor + event-specific quips
-# Uses helpers only + scene_flags for all scene/task tracking
+# ACT 2 - Scene 3: Safe House Morning / Zira's Plan
+# File: act2_03_safe_house_planning.rpy
 # =======================================================
+
+# ========= SCENE START TASKS =========
+$ _current_scene_id = "act2_03_safe_house_planning"
+$ scene_mark(_current_scene_id, "entered")
 
 label act2_safe_house_planning:
 
-    # --- SCENE INIT / SNAPSHOT ---
-    $ start_operation("op203_safehouse_hub", note="Safehouse planning + 7-task hub intro")
-    $ mark_scene("act2_03_safe_house_planning", "started")
-    $ log_line("ACT2_03 started: Safe House Planning (Hub)")
+    # ========= STAGE DIRECTIONS (cinema-first) =========
+    # CAMERA: 28–35mm; mostly static with slow 3–4% drift; closer on Zira for "you can't hide" beats.
+    # LIGHTING: Gray morning through the barred window; single bulb still on; flat, tired light.
+    # SFX: Loop — distant machinery, muffled voices from the Unders; one-shots — lock beeps, door, supply packets.
+    # FX/COMP: Slight fogged window; no exterior vista (keep claustrophobic).
+    # BLOCKING/PROPS: Bedrolls on floor, small supply pile from last night, Bands, fake IDs near the wall.
 
-    # VISUAL: Safe house. Morning light through barred window. Day 2.
-    # LIGHTING: Dim gray dawn filtering in. Single bulb still on. Cold.
-    # SOUND: City waking up below; distant machinery; footsteps in hallway.
-
+    # VISUAL: Safehouse interior, morning after Reality Check.
     "Day 2."
 
-    # VISUAL: Aeron wakes on concrete floor. Body stiff. Lyra already awake, staring at wall.
-    # Both look like hell. Dark circles. Exhaustion. Trauma settling into bones.
+    athought "Concrete under my back, stale air, the taste of metal and dust."
 
-    "Morning. If you can call it that. Concrete floor leaves you cold and aching, mind worse than the body."
-    "Lyra's already awake, staring at nothing. Her hand moves to her Band in that automatic way she can't seem to stop."
+    "Aeron blinks up at the ceiling, then rolls to his side."
 
-    athought "Day 2 in the Unders. Still alive. That has to count for something."
+    # VISUAL: Lyra already awake, sitting against the wall, knees pulled up.
+    "Lyra's already sitting against the wall, staring at nothing."
+    "Her hand drifts to her Band again, thumb tapping the edge on reflex."
 
-    # VISUAL: Lyra glances at him. Nods. No words. What is there to say?
-    l "(quiet) Did you sleep?"
+    athought "Second day in the Unders."
+    athought "Still alive, still hunted, still trapped in a concrete box with no good options."
+    athought "That has to count for something. Even if it doesn't feel like it."
+
+    l "(quiet) Did you sleep at all?"
     a "Some. You?"
-    l "Not really."
-    a "Nightmares?"
-    l "Memories. Same thing at this point."
+    l "Closed my eyes. My head didn't get the memo."
+    a "Purge?"
+    l "Purge. Sweep. The rooftop. Take your pick."
 
-    # SOUND: Door lock beeping. Both tense immediately. Hands move toward weapons they don't have.
-    "The lock beeps. They freeze, hands moving instinctively toward weapons that aren't there."
-    "Still defenseless. Still terrified every time that door opens."
+    athought "We sit in the same silence as last night—different weight, less shock, more gravity."
 
-    # VISUAL: Door opens. Zira enters. Arms full of supplies again. Looks tired but alert.
-    z "Morning, fugitives. Still breathing, so that's a good start."
+    # SFX: Lock beep + mechanical click.
+    "The door beeps."
 
-    # VISUAL: She drops supplies. Food packets, water, something wrapped in cloth.
-    # SOUND: Packages hitting floor. Rustling. Practical.
+    athought "Both of us tense like we've been wired that way since birth."
 
-    z "Breakfast—protein bars and water. Not fancy, but it'll keep you functional."
+    # VISUAL: Zira steps in with a small bag; kicks the door shut.
+    z "Morning, fugitives."
+    z "Good news, you're still breathing. Bad news, so is everyone who wants you dead."
+
+    # VISUAL: She drops the bag between them; protein bars, water pouches.
+    z "Breakfast. Try not to complain, it's better than half this building gets."
     a "You didn't have to—"
-    z "I did, actually. You two look like corpses and I can't have you dying before the fun starts."
+    z "I did. If you collapse in the street, it reflects badly on my reputation."
 
-    # VISUAL: She sits cross-legged. Same comfortable confidence. Owns this space.
-    z "Alright, reality check part two. You listening?"
-    l "We're listening."
-    z "Good. What I'm about to say determines whether you survive the week."
+    # VISUAL: Aeron and Lyra take the food; exhausted, wary.
+    athought "The bars are dry and tasteless, but they're calories. Water burns all the way down."
 
-    # VISUAL: She pulls out small datapad. Lists. Notes. Plans.
-    z "You can't just hide in here forever. Echelon's hunting and locals are getting suspicious. Word spreads fast down here—two Echelon operatives vanished right after the Purge."
-    z "People connect dots fast in the Unders. You need cover."
+    athought "First meal as Kade Voss. Doesn't taste different."
+    athought "Just cheaper."
 
-    a "The fake IDs—"
-    z "Are paper thin. IDs get you past casual inspection, sure. But actual survival? That requires integration. Reputation. Proof you belong here."
-    z "Right now you're obvious outsiders. That makes you targets."
+    z "Alright. Reality check, day two."
+    z "You got the speech last night. Bounty, fake names, everybody hates you. Any of that magically change while I was gone?"
+    l "Doesn't feel like it."
+    z "Right. So here's the part you didn't want to hear."
 
-    l "What do we do?"
-    z "You work. You blend in. You earn your place one interaction at a time."
-    z "The Unders run on barter, favors, and reputation. You have exactly none of those things."
-    z "So you build them. One day at a time."
+    # VISUAL: Zira leans against the wall near the door, eyes sharp.
+    z "You can't stay in this room."
+    z "Hide too long, people start asking questions. 'Who's paying for that door?' 'Who's Zira keeping in there?'"
+    z "Questions get you killed down here as fast as bullets."
 
-    # VISUAL: She swipes through datapad. Shows them list.
-    z "I've identified seven things you need to survive down here. Call them priorities. You've got about a week before Selene decides whether she'll even meet you."
-    z "Use that week to prove you're serious. Prove you're not just Echelon trash hiding in a hole."
+    a "We were letting things settle."
+    z "You were stalling."
+    z "Understandable. Still going to get you killed."
 
-    a "What are the seven things?"
+    # VISUAL: She nudges the pair of fake IDs with her boot.
+    z "You wanted out of Aeries. Congratulations, you got it."
+    z "Now you have to do the boring part—existing."
+    z "Work, neighbors, people who'll vouch that Kade and Mira aren't walking execution orders."
 
-    # VISUAL: Zira leans forward. Direct. Practical. No room for negotiation.
-    z "First: work. You need money—real money. Scrip that actually spends down here, not your useless Aeries credits."
-    z "Your Echelon funds might work if you find the right black market dealers. But finding them means exposure. Better to earn clean."
+    l "You think anyone down here is going to vouch for us?"
+    z "Not for Glass and Lyra Rylan. For Kade Voss and Mira Chen? Maybe."
+    z "If you don't screw it up."
 
-    z "Second: weapons. You're completely unarmed right now. That's suicide in the Unders. Knife minimum, gun if you can manage it. Something to defend yourselves with."
-    z "Everyone else down here is armed and they won't hesitate to use them."
+    # VISUAL: Zira pulls a small slate from her jacket, flicks through something.
+    z "There's a machine yard in Sector 6. Freight haulers, lift repairs, basic grunt work."
+    z "Owner owes me three favors and needs warm bodies who can lift without crying."
+    z "Today, that's you."
 
-    z "Third: intel. You need to know Echelon's movements and patrol patterns if you want to stay ahead of them."
-    z "I have a contact—info broker. Brilliant but weird. She might help if you don't piss her off."
+    a "You already set it up."
+    z "Of course I did. You think I brought breakfast just to chat?"
+    z "You go in as Kade and Mira. You keep your heads down, you don't talk about Aeries, and you do the work."
+    z "If it goes well, you walk out with scrip and a boss who'll tell anyone asking that you've been around a while."
 
-    z "Fourth: medical supplies. People get hurt down here constantly. You want reputation? Save someone's life. Heal someone's kid."
-    z "There's an underground clinic with a medic who might help. Or might spit in your face considering Glass's reputation."
+    athought "A job. In the Unders. Like none of the last seven years happened."
+    athought "Glass doesn't clock in for shift work."
+    athought "Kade Voss will have to."
 
-    z "Fifth: reputation itself. Do something good. Help someone. Change how people see you."
-    z "Locals hate you right now. Change that one person at a time. Escort an elder, protect a vendor—small things that add up."
+    l "What if someone recognizes us?"
+    z "Most people down here have better things to do than memorize Echelon rosters."
+    z "But if someone does look twice, you lean on the cover. Sector 5 transfer. Lost your papers in the chaos. Whatever."
+    z "The important part is you don't flinch."
 
-    z "Sixth: survival skills. You don't know the Unders. The culture, the signals, the territories. I'll teach you. Not because I'm nice, but because you're useless to anyone otherwise."
+    # --- PLAYER CHOICE: how does Aeron take this? ---
+    menu:
+        athought "Zira watches me, weighing whether I'm going to break or bend."
+        "Admit you're not ready for this.":
+            $ choice_and_dev(
+                _current_scene_id, "_a2_03_admit_not_ready", "EMP", factor=1,
+                next_scene_label="act2_04_first_day_out",
+                note="Names fear instead of hiding behind procedure; small vulnerability in front of Zira and Lyra."
+            )
 
-    z "Seventh: confront your past. Sector 10. The Sweep. You need to face it. There's a survivor out there—someone who remembers, someone who lost everything."
-    z "Talk to them. Apologize, listen, whatever it takes. Selene will ask, and if you haven't done it she'll know you're not serious."
+            a "...I don't know how to do this."
+            z "Do what? Hold a wrench? You've held worse."
+            a "Be nobody. Walk into a yard and pretend I've always been there."
+            a "I've spent seven years being exactly what they wanted. Now I have to pretend none of that happened."
 
-    # VISUAL: Both process. Seven tasks. One week. Overwhelming.
-    l "That's... a lot."
-    z "That's survival. You wanted to fight Echelon? This is step one. You can't fight an empire from a concrete box."
-    z "You need allies, resources, skills, trust. None of that comes free."
+            "Lyra looks at him."
 
-    a "What about Selene? You said she's considering."
-    z "She is. Barely. I told her about the Sweep and the 200 you saved. She didn't shoot the messenger, so that's progress."
-    z "But she lost most of her cell in the Purge. Sector 10 was her territory. You swept Sector 10, which means you killed her people."
-    z "So yeah, she's considering. Considering whether to meet you or just put a bullet in your head the moment she sees you."
+            athought "Something like relief flickering through the exhaustion."
 
-    l "Will she help us?"
-    z "Depends. Do these seven things. Prove you're not just hiding. Prove you're willing to work, to change, to actually earn it."
-    z "Then maybe she gives you a chance. Or maybe she kills you anyway. Honestly could go either way."
+            l "We'll figure it out. Together."
+            z "(softer, just a little) Good. Start by keeping your head up and your mouth shut."
+            athought "She heard me and didn't mock me for it. That shouldn't feel strange, but it does."
 
-    # VISUAL: Zira stands. Stretches. Ready to leave again.
-    z "You've got one week. Seven days, seven tasks. Do them in whatever order you want—I don't care. But get them done. All of them."
-    z "Because when Selene agrees to meet, you better have something to show for this week."
+        "Lock it down and treat it like an operation.":
+            $ choice_and_dev(
+                _current_scene_id, "_a2_03_treat_like_op", "OB", factor=1,
+                next_scene_label="act2_04_first_day_out",
+                note="Frames Unders job as mission; clings to familiar procedural mindset."
+            )
 
-    a "Where do we start?"
-    z "That's up to you. You're adults. Figure it out."
-    z "Just don't do anything stupid. Which, given your track record, is probably a lot to ask."
+            a "Give me parameters and a timeline. I'll execute."
+            z "(snorts) There it is. The field report voice."
+            a "You said this is about existing. Fine. I'll exist on schedule."
+            l "(quiet) It's not a mission, Aeron."
+            a "Everything's a mission now. Objective: survive the week."
 
-    # VISUAL: She moves to door. Pauses. Looks back.
-    z "I'll check in and leave messages when I can. Help where it makes sense. But I can't babysit. I have my own work, my own problems."
-    z "You're on your own most of the time. Get used to it."
+            athought "Zira studies me, deciding if that answer is going to keep me alive or get me shot."
 
-    l "Zira. Why are you doing this?"
-    z "(pauses) Because someone should. And nobody else will."
-    z "And because... I want to see if Glass can become something else. Call it curiosity, call it hope, call it stupidity."
-    z "Either way, don't waste it."
+            z "Just remember, missions down here talk back. And they don't read your reports."
 
-    # VISUAL: She leaves. Door closes. Lock engages. Alone again.
-    "Gone again. Leaving them with seven impossible tasks and one week to complete them."
-    "Everything rides on this. Every single thing."
+    # --- POST-CHOICE COMMON BEAT ---
+    # VISUAL: Zira pushes off the wall, crosses to the door again.
+    z "Shift starts in an hour."
+    z "Change into something that doesn't scream 'Aeries enforcer', then follow my lead."
+    z "You're Kade and Mira the second we hit the street. Say it."
 
-    # VISUAL: Both sit. Looking at each other. Overwhelmed but determined.
-    l "Seven tasks."
-    a "Seven days."
-    l "Where do we even start?"
-    a "...I don't know. But we have to start somewhere."
+    a "Kade Voss."
+    l "Mira Chen."
+    z "Good. Keep repeating it until it feels boring. Boring survives down here."
 
-    # VISUAL: Aeron stands. Looks at door. The city beyond. Terrifying and necessary.
-    athought "One week to prove we're worth keeping alive. One week to build something from nothing."
-    athought "Seven tasks. Every single one could kill us."
+    # VISUAL: She opens the door; corridor beyond, dim and narrow.
+    athought "The hallway outside is a tunnel of peeling paint and bad wiring. Voices echo from the stairwell two floors down."
 
-    l "(stands beside him) We do this together. Like everything else."
-    a "Together. Yeah."
-    l "What's first?"
+    athought "From Glass to Kade. From command decks to shift schedules."
+    athought "If this is what it takes to stay alive long enough to burn them, then this is where it starts."
 
-    # VISUAL: Aeron looks at her. Both broken. Both scared. Both committed.
-    a "We figure out who Kade Voss is. Who Mira Chen is. We go out there, we survive, we earn it."
-    l "One day at a time."
+    # VISUAL: Aeron and Lyra step up beside Zira, ready to leave.
+    l "(quiet, to him) One day at a time."
     a "One day at a time."
 
-    # --- HUB STATE INIT (helpers + scene_flags only) ---
-    python:
-        # Track remaining days (allowed outside characters/scenes)
-        if player_state.get("days_remaining", None) is None:
-            player_state["days_remaining"] = 7
-        if "last_activity" not in player_state:
-            player_state["last_activity"] = ""
+    "Zira doesn't look back as she leads them out."
+    "The door to the safehouse shuts behind them with a hollow metal thud."
 
-        # Seed a canonical set of task keys in a local list (not saved in dicts)
-        store._a2_tasks = ["work","weapons","intel","medical","reputation","survival","past"]
-        # Ensure a scene_flags bucket exists for hub flavor (no-op: mark_scene builds lazily)
-        # Nothing to mark here yet.
+    # TRANSITION: Cut to black / exterior establishing before machine yard
+    athought "Time to see if Kade Voss survives his first day."
 
-    jump act2_activity_hub
+    $ scene_mark(_current_scene_id, "completed")
 
+    # Hand off to the first Unders-work scene.
+    jump act2_04_first_day_out
 
-# ==========================
-# HUB LOOP
-# ==========================
-label act2_activity_hub:
-
-    # Determine progress from scene_flags only
-    python:
-        done_count = 0
-        for t in _a2_tasks:
-            if check_scene_flag("act2_activity", f"{t}_done"):
-                done_count += 1
-        activities_remaining = len(_a2_tasks) - done_count
-        current_day = 2 + done_count
-
-    if done_count > 0:
-        "Day [current_day]. Another day, another task to complete."
-        "Still alive. Still moving forward. That has to mean something."
-    else:
-        "Day 2. The first step into this new life. Choose carefully."
-
-    # --- POST-ACTIVITY EVENT-SPECIFIC FLAVOR (fires once per task) ---
-    python:
-        last_task = player_state.get("last_activity", "")
-        flavor_key = f"flavor_once_{last_task}" if last_task else ""
-        if last_task and not check_scene_flag("act2_activity", flavor_key):
-            flavor_once = {
-                "weapons": [
-                    ("z", "If Vex smiles at you, check your pockets and your pulse."),
-                    ("l", "I still can't believe we got that gun from Vex."),
-                    ("a", "{i}Weight on the hip. Not comfort. Responsibility.{/i}")
-                ],
-                "work": [
-                    ("z", "Scrip spends. Your faces don’t. Wear the faces that do."),
-                    ("l", "I forgot how much I hate grease under my nails."),
-                    ("a", "{i}Honest work. Feels strange after years of lies.{/i}")
-                ],
-                "intel": [
-                    ("z", "If Noelle says ‘curious’, you run. Or you sit. Depends on her tea."),
-                    ("a", "{i}Patterns emerge where cruelty grows lazy.{/i}")
-                ],
-                "medical": [
-                    ("z", "Tessa doesn’t do miracles. She does math with blood."),
-                    ("l", "That kid’s breathing sounded like glass."),
-                    ("a", "{i}Mercy is heavier than steel. It leaves a mark.{/i}")
-                ],
-                "reputation": [
-                    ("z", "One neighbor talks. Then two. Make them say the right things."),
-                    ("l", "They looked at us like we were human. For a moment.")
-                ],
-                "survival": [
-                    ("z", "Lesson one: eyes up, hands empty, path mapped."),
-                    ("a", "{i}Signals and chalk. The Unders write in ghosts.{/i}")
-                ],
-                "past": [
-                    ("l", "Sector 10 still smells like burned air."),
-                    ("a", "{i}Apology is a door. Doesn’t open itself.{/i}")
-                ]
-            }
-            pool = flavor_once.get(last_task, [])
-            # Deterministic pick: 2 lines for EMP band, 1 for OB band
-            max_lines = 2 if get_empathy_band() != "obedience" else 1
-            for i, (who, line) in enumerate(pool):
-                if i >= max_lines:
-                    break
-                renpy.say(eval(who), line)
-            # Mark once via scene_flags
-            mark_scene("act2_activity", flavor_key)
-
-    # --- OPTIONAL RANDOMIZED PRE-ACTIVITY FLAVOR ---
-    python:
-        import renpy
-        pre_emp = [
-            ("l", "We can’t fix everything today, but we can fix something."),
-            ("a", "{i}Pick the wound you can stitch.{/i}")
-        ]
-        pre_ob = [
-            ("a", "{i}Start with the task that bleeds least time.{/i}"),
-            ("z", "Don’t overthink it. Over-prep it.")
-        ]
-        pre_pool = pre_emp if get_empathy_band() != "obedience" else pre_ob
-        if renpy.random.random() < 0.5:
-            who, line = renpy.random.choice(pre_pool)
-            renpy.say(eval(who), line)
-
-    # LYRA SCENE CHECK
-    call act2_check_lyra_scene_hub from _hub_lyra_gate
-
-label act2_continue_hub:
-
-    # Recompute using flags
-    python:
-        done_count = 0
-        for t in _a2_tasks:
-            if check_scene_flag("act2_activity", f"{t}_done"):
-                done_count += 1
-        activities_remaining = len(_a2_tasks) - done_count
-        current_day = 2 + done_count
-
-    if activities_remaining > 0:
-        "[activities_remaining] tasks remaining before Selene decides our fate."
-
-        menu:
-            "What should we focus on today?"
-            "Find Work - Earn scrip, establish cover" if not check_scene_flag("act2_activity","work_done"):
-                $ mark_scene("act2_activity","work_done")
-                $ player_state["days_remaining"] = max(0, player_state["days_remaining"] - 1)
-                $ player_state["last_activity"] = "work"
-                jump act2_activity_01_find_work
-
-            "Acquire Weapons - Get armed, black market contact" if not check_scene_flag("act2_activity","weapons_done"):
-                $ mark_scene("act2_activity","weapons_done")
-                $ player_state["days_remaining"] = max(0, player_state["days_remaining"] - 1)
-                $ player_state["last_activity"] = "weapons"
-                jump act2_activity_02_acquire_weapons
-
-            "Gather Intel - Meet info broker, learn patrol patterns" if not check_scene_flag("act2_activity","intel_done"):
-                $ mark_scene("act2_activity","intel_done")
-                $ player_state["days_remaining"] = max(0, player_state["days_remaining"] - 1)
-                $ player_state["last_activity"] = "intel"
-                jump act2_activity_03_gather_intel
-
-            "Medical Supplies - Underground clinic, prove worth" if not check_scene_flag("act2_activity","medical_done"):
-                $ mark_scene("act2_activity","medical_done")
-                $ player_state["days_remaining"] = max(0, player_state["days_remaining"] - 1)
-                $ player_state["last_activity"] = "medical"
-                jump act2_activity_04_medical_supplies
-
-            "Earn Reputation - Help locals, change perceptions" if not check_scene_flag("act2_activity","reputation_done"):
-                $ mark_scene("act2_activity","reputation_done")
-                $ player_state["days_remaining"] = max(0, player_state["days_remaining"] - 1)
-                $ player_state["last_activity"] = "reputation"
-                jump act2_activity_05_earn_reputation
-
-            "Survival Skills - Learn the Unders with Zira" if not check_scene_flag("act2_activity","survival_done"):
-                $ mark_scene("act2_activity","survival_done")
-                $ player_state["days_remaining"] = max(0, player_state["days_remaining"] - 1)
-                $ player_state["last_activity"] = "survival"
-                jump act2_activity_06_survival_skills
-
-            "Confront the Past - Return to Sector 10, face survivor" if not check_scene_flag("act2_activity","past_done"):
-                $ mark_scene("act2_activity","past_done")
-                $ player_state["days_remaining"] = max(0, player_state["days_remaining"] - 1)
-                $ player_state["last_activity"] = "past"
-                jump act2_activity_07_confront_past
-
-    else:
-        "Seven days. Seven tasks. All completed, every single one of them."
-        "Time to see if it was enough to earn Selene's attention."
-        $ mark_scene("act2_03_safe_house_planning", "all_tasks_completed")
-        $ summary = end_operation("op203_safehouse_hub", tag="Safehouse Hub (All tasks done)")
-        $ log_line(summary)
-        return
-
-
-# ==========================
-# LYRA GATE (helpers-only)
-# ==========================
-label act2_check_lyra_scene_hub:
-
-    # Helper reads (add these getters in your state system if not present)
-    $ lyra_trust = get_trust("Lyra")
-    $ lyra_aff   = get_affection("Lyra")
-
-    if char_flag_has("Lyra", "lewd_scene_completed"):
-        jump act2_continue_hub
-
-    if lyra_trust >= 7 and lyra_aff >= 5:
-        $ mark_flag("Lyra", "lewd_scene_unlocked")
-
-        # VISUAL: Safe house. Evening. Both exhausted from the day. Quiet moment.
-        # LIGHTING: Dim. Single light. Intimate space.
-        # SOUND: City quiet below. Their breathing. Silence comfortable.
-
-        "Evening. Quiet. Just the two of us in this small space. Something's different tonight."
-
-        # VISUAL: Lyra looking at him. Different energy. Vulnerable. Open.
-        l "Aeron."
-        a "Yeah?"
-        l "Can we... can we just sit for a while? Not planning. Not surviving. Just... being."
-        a "...Yeah. We can do that."
-
-        # VISUAL: They sit. Close. Not touching yet. But proximity different.
-        "She sits close. Closer than usual. Not accidental. Intentional. Something unspoken between us."
-
-        menu:
-            "The space between them feels charged. Different. Significant."
-            "Spend the evening with Lyra":
-                # Inside act2_lyra_intimate_scene, remember to:
-                #   $ mark_flag("Lyra", "lewd_scene_completed")
-                #   $ rel("Lyra", trust=..., affection=...)  # if applicable
-                jump act2_lyra_intimate_scene
-
-            "Give her space - rest instead":
-                a "Actually... I should probably get some rest. Long day."
-                l "(slight disappointment) Oh. Yeah. Of course. Rest is important."
-                l "Goodnight, Aeron."
-                a "Goodnight, Lyra."
-                "The moment passes. Maybe it was nothing. Maybe it was everything. Too late to know now."
-                jump act2_continue_hub
-    else:
-        jump act2_continue_hub
+# ========= CANONICAL NOTES =========
+# cann.scene_id: act2_03_safe_house_planning
+# cann.when_in_timeline:
+#   - Morning after Act2_02 Reality Check; second day in the Unders.
+# cann.what_happened:
+#   - Zira brings basic breakfast; reinforces that hiding in the safehouse is not sustainable.
+#   - She arranges a first cover job for Aeron and Lyra at a Sector 6 machine yard.
+#   - Fake IDs (Kade Voss / Mira Chen) are framed as lived identities, not just cards.
+#   - Zira makes clear that "existing" in the Unders means work + neighbors + reputation.
+# cann.aeron_state:
+#   - Still OB-lean baseline, but shaken; choice:
+#       • EMP branch: openly admits he doesn't know how to "be nobody".
+#       • OB branch: frames everything as an "operation" to keep control.
+# cann.path_tracking:
+#   - One `choice_and_dev` decision:
+#       • `_a2_03_admit_not_ready` → EMP +1 weight.
+#       • `_a2_03_treat_like_op`   → OB +1 weight.
+#   - Running empathy range at scene end: -8 to -2 (prior range ±1 from this choice).
+# cann.thematic_flags:
+#   - Motifs: Nobody/cover identities, work as survival, "boring survives".
+#   - Bridges: from "we're fugitives in a box" to "we're part of the Unders whether we like it or not".
+# cann.block_status:
+#   - ANCHOR scene; single binary choice that nudges alignment but doesn't change external outcome.
+# cann.requires_followup:
+#   - Next scene: `act2_04_first_day_out` at the machine yard (work + reputation seed).
+#   - Persist flags: none required beyond `completed` and whatever `choice_and_dev` logs internally.

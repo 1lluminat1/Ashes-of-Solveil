@@ -12,137 +12,139 @@ define docent = Character("Docent")
 
 label act1_archive_merit:
 
-    # VISUAL: Marble-and-glass museum corridor; holo-plaques; curated history.
-    # LIGHTING: Prestigious, soft uplights. Polished reflections.
-    # SOUND: Hushed docent VO. Footsteps. Faraway civic anthem.
+    # ========= STAGE DIRECTIONS =========
+    # CAMERA: Slow tracking shot through corridor; occasional close-ups on plaques.
+    # LIGHTING: Prestigious soft uplights. Polished marble reflections.
+    # SFX LOOP: Hushed docent VO, footsteps on marble, faraway civic anthem.
+    # BLOCKING: Marble-and-glass museum corridor; holo-plaques line the walls; curated history.
+    # FX/COMP: Subtle holographic shimmer on plaques.
 
     #scene bg_archive_corridor with fade
 
-    "The Archive smells like money and disinfectant. History behind glass, polished until it stops bleeding."
+    # ========= OPENING — THE ARCHIVE =========
+
+    "The Archive smells like money and disinfectant—history behind display cases, polished until it stops bleeding."
 
     docent "We do not rewrite history. We restore it."
-    
-    "Words glide over the glass like oil over water."
 
-    # PLAQUE: OBSIDIAN BRIDGE PACIFICATION (foreshadow—no names)
+    athought "Words gliding over surfaces like oil over water."
+
+    # ========= PLAQUE 1: OBSIDIAN BRIDGE PACIFICATION =========
+    # VISUAL: Holo-plaque glows—title, sanitized dates, approved imagery.
     #scene bg_archive_plaque_bridge with dissolve
 
     docent "Here—Obsidian Bridge pacification. A victory of proportional force and humane precision."
 
-    # (Lyra may be present off-VO; silent entrance mid-walk.)
-
-    # === MENU 1: Aeron’s response to the plaque ===
     menu:
+        athought "The plaque shows numbers, not names. Coordinates, not graves."
+
         "Ask a pointed question about evac corridors and casualty verification.":
             $ choice_and_dev(
                 _current_scene_id, "archive_plaque_question", "EMP", factor=1,
-                next_scene_label="act1_10c_debrief_theater",
                 note="Challenges curated record; insists on verification over designation."
             )
-            $ set_scene_flag(_current_scene_id, "questioned_plaque")
-            $ add_trust("Lyra", 1)
+            $ scene_mark(_current_scene_id, "questioned_plaque")
 
             a "Where were evac corridors staged? Who verified casualty counts?"
+
             docent "(beat) Evacuation was deemed unnecessary within tolerance."
 
-            "'Within tolerance' is a museum way to say 'we didn't look.'"
+            athought "'Within tolerance' is a museum way to say 'we didn't look.'"
 
         "Compliment the efficiency of the pacification.":
             $ choice_and_dev(
                 _current_scene_id, "archive_plaque_praise_efficiency", "OB", factor=1,
-                next_scene_label="act1_10c_debrief_theater",
                 note="Performs doctrinal approval of force as metrics."
             )
-            $ set_scene_flag(_current_scene_id, "praised_efficiency")
-            $ add_trust("Lyra", -1)
+            $ scene_mark(_current_scene_id, "praised_efficiency")
 
             a "Effective containment at scale."
-            "The glass likes sentences that sound like metrics."
+
+            docent "(approving) A precise summary."
+
+            athought "The display likes sentences that sound like metrics."
 
         "Say nothing and keep walking.":
             $ record_choice_once(
                 _current_scene_id, "_plaque_silent",
-                next_scene_label="act1_10c_debrief_theater",
                 note="Non-commitment; curatorial silence."
             )
-            $ set_scene_flag(_current_scene_id, "_plaque_silent")
+            $ scene_mark(_current_scene_id, "_plaque_silent")
 
-            "Silence is easy to curate. No fingerprints."
+            athought "Silence is easy to curate. No fingerprints."
 
-    # SECOND PLAQUE: FOUNDERS' MAXIMS
+    # ========= PLAQUE 2: FOUNDERS' MAXIMS =========
+    # VISUAL: Second plaque—gilded text, the doctrine rendered as scripture.
     #scene bg_archive_plaque_maxims with dissolve
 
     docent "Maxims of Order: Stability is compassion. Precision is mercy. Latency kills."
+
     "The font is softer than the meaning."
 
-    # === MENU 2: Doctrine echo or subvert ===
     menu:
+        athought "Three sentences. A whole world compressed into slogans."
+
         "Add a quiet line under your breath: 'Order without understanding is brittle.'":
             $ choice_and_dev(
                 _current_scene_id, "archive_add_understanding", "EMP", factor=1,
-                next_scene_label="act1_10b_archive_merit",
                 note="Subverts doctrine with context principle; favors understanding."
             )
-            $ set_scene_flag(_current_scene_id, "added_understanding")
-            $ add_affection("Lyra", 1)
+            $ scene_mark(_current_scene_id, "added_understanding")
 
-            l "(low) Careful where you say that."
-            a "(low) I just did."
+            a "(low) Order without understanding is brittle."
+
+            docent "(stiffens) The Maxims are complete as written."
+
+            athought "I said it anyway."
 
         "Repeat the maxims exactly, for the room to hear.":
             $ choice_and_dev(
                 _current_scene_id, "archive_repeat_maxims", "OB", factor=1,
-                next_scene_label="act1_10b_archive_merit",
                 note="Signals conformity; reinforces civic catechism."
             )
-            $ set_scene_flag(_current_scene_id, "repeated_maxims")
+            $ scene_mark(_current_scene_id, "repeated_maxims")
 
-            l "(measured) Adequate."
+            a "Stability is compassion. Precision is mercy. Latency kills."
+
+            docent "(nods) Adequate recitation."
 
         "Deflect with a neutral 'We continue.'":
             $ record_choice_once(
                 _current_scene_id, "archive_we_continue",
-                next_scene_label="act1_10b_archive_merit",
                 note="Neutral deflection; avoids signaling."
             )
-            $ set_scene_flag(_current_scene_id, "we_continue")
+            $ scene_mark(_current_scene_id, "we_continue")
 
-            "Safe words for dangerous glass."
+            a "We continue."
 
-    # EXIT
+            athought "Safe words for dangerous places."
+
+    # ========= EXIT =========
+
     docent "Witnesses become records; records become order."
 
-    "Order smiles from behind its teeth and thanks us for visiting."
+    athought "Order smiles from behind its teeth and thanks us for visiting."
 
-    $ set_scene_flag(_current_scene_id, "completed")
+    $ scene_mark(_current_scene_id, "completed")
 
     return
 
 
-# ========= CANON NOTES =========
+# ========= CANONICAL NOTES =========
 # cann.scene_id: act1_10b_archive_merit
 # cann.when_in_timeline: Same day as Demonstration; museum walk-by before Debrief (19:00).
 # cann.what_happened:
 #   - Plaque 1 (Obsidian Bridge) reaction: question the record (EMP+1), praise efficiency (OB+1), or stay silent (NEU).
-#   - Plaque 2 (Founders’ Maxims) reaction: add “understanding” line (EMP+1), repeat maxims (OB+1), or neutral deflect.
-#   - Optional Lyra micro-reads: trust/affection shift on nuance vs obedience.
-# cann.aeron_state: Descriptive narration in braces; Aeron VO under `a`. Tone neutral with branch tint via choices.
+#   - Plaque 2 (Founders' Maxims) reaction: add "understanding" line (EMP+1), repeat maxims (OB+1), or neutral deflect.
+#   - Docent reacts to Aeron's spoken lines; no other characters present.
+# cann.aeron_state: Sensory narration; athought for interpretation. Tone neutral with branch tint via choices.
 # cann.path_tracking:
-#   - Weights: M1 ±1/0, M2 ±1/0 → scene delta range **−2 → +2**.
-#   - Running empathy window BEFORE:  **≈ [-26, +24]**  (after Demonstration Floor ±2).
-#   - Running empathy window AFTER:   **≈ [-28, +26]**  (apply ±2 expansion).
+#   - Weights: M1 ±1/0, M2 ±1/0 → scene delta range −2 → +2.
 #   - Flags: questioned_plaque / praised_efficiency / _plaque_silent; added_understanding / repeated_maxims / we_continue; completed.
-#   - Social: add_trust("Lyra", ±1), add_affection("Lyra", +1) gated by lines as scripted.
-# cann.thematic_flags: Curation-as-control; language as solvent; “within tolerance” euphemism; museum gloss vs lived harm.
-# cann.block_status: VARIANT (lightweight); influences Debrief tone and Lyra warmth in near-term scenes.
-# cann.true_path_integration: none (menu-free rule for TP stands).
+# cann.thematic_flags: Curation-as-control; language as solvent; "within tolerance" euphemism; museum polish vs lived harm.
+# cann.block_status: VARIANT (lightweight); influences Debrief tone in near-term scenes.
 # cann.visual_plate_economy:
-#   - REUSE one corridor master; swap two plaque plates (Bridge / Maxims); minimal UI flickers on plaques.
-#   - No hero shots required; consider one over-shoulder macro on “brittle” line for promo stills.
+#   - REUSE one corridor master; swap two plaque plates (Bridge / Maxims).
 # cann.requires_followup:
 #   - If questioned_plaque → log minor Command side-eye at Debrief.
-#   - If added_understanding → +1 warmth line from Lyra on next private exchange.
 #   - If repeated_maxims or praised_efficiency → OB-lean phrasing echoes in Debrief transcript.
-# cann.consistency_asserts:
-#   - Aeries altitude grammar (no precip); keep “domestic space” terminology (never “home”) in docent VO.
-#   - Ensure `l` is globally defined; this file does not redeclare Lyra.

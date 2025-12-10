@@ -7,200 +7,285 @@
 $ _current_scene_id = "act1_19_obsidian_bridge"
 $ scene_mark(_current_scene_id, "entered")
 
+
 label act1_obsidian_bridge:
 
-    # VISUAL: Obsidian Bridge—massive structure spanning Mid ↔ Lower tiers.
+    # ========= STAGE DIRECTIONS =========
+    # CAMERA: Lateral dolly to centerline; Aeron silhouette against Aeries glow; fog entrance/exit.
     # LIGHTING: Cold blue moonlight; neon reflections in the void below; fingers of fog across the span.
-    # SOUND: Wind whistling through truss; far machinery; water rush a long way down.
-    # CAMERA: Lateral dolly to centerline; Aeron a silhouette against Aeries glow.
+    # SFX LOOP: Wind whistling through truss; far machinery; water rush a long way down.
+    # BLOCKING: Obsidian Bridge—massive structure spanning Mid ↔ Lower tiers.
+    # PROP: Encrypted comm device (matte black, small).
+    # FX/COMP: Fog plates; city BG loop.
+
+    #scene bg_obsidian_bridge_night with fade
+
+    # ========= OPENING — THE WAIT =========
 
     "Midnight. The Obsidian Bridge stretches into fog and darkness."
+
     "Below, the city's underbelly churns. Above, the Aeries glow with ignorant light."
+
     "And here, between them, the forgotten meet."
 
-    # Aeron alone, gear cleaned but weight unchanged.
-    $ band = get_empathy_band()
-    $ em = mercy_total()                  # evidence_of_mercy snapshot
+    # Snapshot mercy total for branching
+    $ em = mercy_total()
 
     athought "She said midnight. If I fought for them, she'd be here."
+
     athought "If I just followed orders... don't bother coming."
 
     if em >= 2:
-        athought "I tried. I saved who I could. Two hundred alive because Glass cracked."
+        athought "I tried. I saved who I could. Two hundred alive because something in me cracked."
         athought "But six hundred dead. Six hundred faces I can't unsee."
         athought "Is that enough? Does trying count when you still kill hundreds?"
     elif em >= 1:
         athought "I tried. Not hard enough. Maybe fifty saved. Seven hundred fifty dead."
-        athought "Glass won. Mostly. But I fought it—some."
+        athought "Obedience won. Mostly. But I fought it—some."
         athought "Is that enough?"
     else:
         athought "I followed orders. Perfect execution. Eight hundred dead. Zero mercy."
-        athought "Glass didn't crack. Glass obeyed."
+        athought "I didn't crack. I obeyed."
         athought "She won't come. Why would she?"
 
-    # Footsteps approach—measured, confident.
-    # SFX: boot on grate; fog curls through the light cone.
+    # ========= ZIRA ARRIVES =========
+    # SFX: Boot on grate; fog curls through the light cone.
+
     "Footsteps. She's here."
+
     pause 0.4
 
-    # Zira arrives out of fog; reads him like a ledger.
     z "Glass."
+
     a "Zira."
+
     z "(quiet) You look like hell."
+
     a "I've been there. Just got back."
+
     z "Tell me what happened."
 
     if em >= 3:
-        # ===== HIGH MERCY PATH (150+ saved; strong resistance shown) =====
+        # ===== HIGH MERCY PATH (150+ saved) =====
         $ record_choice_once(_current_scene_id, "bridge_high_mercy_path")
 
         a "I completed the mission. Sector Ten swept."
+
         z "That's not what I asked."
+
         a "(meets her eyes) I saved who I could."
 
         z "How many?"
+
         a "Official report says eight hundred eliminated. Zero survivors."
+
         z "(steps closer) And the truth?"
+
         a "...Two hundred alive. Maybe more. I warned them. Faked reports. Let people escape."
+
         a "The vendor I met? I let him run."
+
         a "The child behind the door? I lied to my team. Left her alive."
+
         a "The shelter of two hundred? I scattered them. One-fifty escaped."
 
-        # Zira processes; respect replacing suspicion.
         z "You lied to Marcus Rylan. Your father."
+
         a "I did."
+
         z "Your team saw you show mercy."
+
         a "They did."
+
         z "You risked everything."
+
         a "(quiet) I risked nothing. They had everything to lose."
 
         z "(a beat, then a nod) You fought the orders from within."
-        z "That's not Glass. That's human."
 
-        $ add_trust("Zira", 3)
+        z "That's not a weapon. That's human."
+
+        $ rel_bump("Zira", 3)
         $ char_flag_on("Zira", "trusts_aeron")
         $ char_flag_on("Zira", "saw_high_mercy")
 
         a "Six hundred people still died."
-        z "Yes. They did."
-        a "Is that supposed to help? That I 'tried'?"
-        z "(closer) No. It's supposed to make you remember you're not a machine."
-        z "Glass obeys perfectly. You chose to try—and fail—to save them."
-        z "Failure to save isn’t the same as choosing not to."
 
-        # PROP: encrypted comm device
+        z "Yes. They did."
+
+        a "Is that supposed to help? That I 'tried'?"
+
+        z "(closer) No. It's supposed to make you remember you're not a machine."
+
+        z "A weapon obeys perfectly. You chose to try—and fail—to save them."
+
+        z "Failure to save isn't the same as choosing not to."
+
+        # PROP: Encrypted comm device
         # CAMERA: Her hand opens; small matte device in the moonlight.
+
         z "You wanted intel. Ways to see what's real."
+
         z "(places device in his hand) This connects you to my network."
+
         z "Encrypted. Untraceable. Use it when you're ready to do more than try."
 
         a "(looks at device) What do I do with this?"
+
         z "Whatever you want. Information is power."
+
         z "Right now, Marcus feeds you lies. With this, you see. Then you choose."
 
         $ grant_tool("encrypted_comm")
-        $ set_scene_flag(_current_scene_id, "device_given")
+        $ scene_mark(_current_scene_id, "device_given")
 
     elif em >= 1:
-        # ===== MODERATE MERCY PATH (50–149 saved; partial resistance) =====
+        # ===== MODERATE MERCY PATH (50–149 saved) =====
         $ record_choice_once(_current_scene_id, "bridge_moderate_mercy_path")
 
         a "I completed the mission."
+
         z "I know. My network watched the grid breathe."
+
         a "(tense) Then you know what I did."
+
         z "I know you tried. Not enough. But you tried."
 
-        $ add_trust("Zira", 1)
+        $ rel_bump("Zira", 1)
         $ char_flag_on("Zira", "saw_some_mercy")
 
         z "You saved what, fifty? Maybe a hundred?"
+
         a "I lost count."
+
         z "You let some escape. Faked some reports. Showed mercy where you could."
+
         z "You also followed orders and killed hundreds."
 
-        a "(defensive) I couldn’t save them all. The team watched. Marcus—"
+        a "(defensive) I couldn't save them all. The team watched. Marcus—"
+
         z "(cuts him) I'm not judging. I'm observing."
+
         z "You're split: one foot in obedience, one in resistance."
+
         z "That makes you dangerous—to you and everyone near you."
 
         a "What do you want me to say?"
+
         z "Choose."
-        z "Glass follows. Humans resist. You did both."
+
+        z "Weapons follow. Humans resist. You did both."
+
         z "Asset or liability—I haven't decided."
 
-        # DEVICE: withheld beat, then tossed
         z "I came to give you access to my network."
+
         z "I'm not sure you're ready."
+
         a "What proves it?"
+
         z "(studies him, then tosses the device—he catches) Use that when you've decided."
-        z "If you want to be Glass, delete it and forget me."
+
+        z "If you want to be a weapon, delete it and forget me."
+
         z "If you want to be human, turn it on and see what's true."
+
         z "No half-measures next time."
 
         $ grant_tool("encrypted_comm")
-        $ set_scene_flag(_current_scene_id, "device_given_conditional")
+        $ scene_mark(_current_scene_id, "device_given_conditional")
 
     else:
-        # ===== LOW MERCY PATH (<50 saved; obedience dominated) =====
+        # ===== LOW MERCY PATH (<50 saved) =====
         $ record_choice_once(_current_scene_id, "bridge_low_mercy_path")
 
         a "The mission is complete. Sector Ten is cleared."
+
         z "(cold) I know."
+
         a "Then why ask?"
+
         z "To hear you say it. To see if you'd lie."
 
         z "Eight hundred people. Gone. Perfect obedience."
-        z "Glass at its finest—efficient, empty."
 
-        $ add_trust("Zira", -2)
+        z "A weapon at its finest—efficient, empty."
+
+        $ rel_bump("Zira", -2)
         $ char_flag_on("Zira", "rejected_aeron")
 
         a "(quiet) I did what I had to—"
+
         z "No. You did what Marcus told you to."
+
         z "That's a choice. You chose not to see it."
 
-        a "I came here. Doesn’t that count?"
+        a "I came here. Doesn't that count?"
+
         z "For what—absolution?"
+
         z "I'm not a priest. You don't get to feel better because you showed up."
 
         a "(tight) Then why are you here?"
+
         z "(beat) Because I'm an optimist. And an idiot."
-        z "I thought Glass might crack. That you'd fight back."
+
+        z "I thought you might crack. That you'd fight back."
+
         z "(bitter) I was wrong."
 
         z "You know the difference between you and the vendor you killed?"
+
         a "..."
+
         z "He chose dignity. You chose to be a weapon."
+
         z "Weapons don't get redemption."
 
-        z "(over shoulder as she leaves) If you ever decide to be human instead of Glass..."
+        z "(over shoulder as she leaves) If you ever decide to be human instead..."
+
         z "Don't look for me. I won't be waiting."
 
-        "She's gone. Fog swallows the span."
-        athought "She's right. I chose Glass. Again."
+        "Fog swallows the span. She's gone."
+
+        athought "She's right. I chose obedience. Again."
+
         athought "Eight hundred dead. And I learned nothing."
 
-        $ set_scene_flag(_current_scene_id, "device_withheld")
-        $ set_scene_flag(_current_scene_id, "completed")
+        $ scene_mark(_current_scene_id, "device_withheld")
+        $ scene_mark(_current_scene_id, "completed")
+
         jump act1_investigation
 
     # ===== CONTINUE (HIGH / MODERATE ONLY) =====
-    # CAMERA: Both at the rail; city’s pulse below.
+    # CAMERA: Both at the rail; city's pulse below.
+
     z "Something's coming. Big. Soon."
+
     a "Define 'big'."
+
     z "Grid anomalies, troop staging, silent lockdown preps."
+
     z "Sectors Eight, Nine, Ten. All at once."
 
     a "Sector Ten was prelude."
+
     z "Exactly. Clear the 'troublemakers' before the main event."
+
     a "(quiet) How big?"
+
     z "Hundreds of thousands. Days, not weeks."
 
-    # Aeron grips the rail; knuckles blanch.
+    # VISUAL: Knuckles whitening on the rail.
+
+    "The rail bites into my palms. Knuckles blanching."
+
     athought "Hundreds of thousands. And I killed eight hundred as practice."
 
     z "That's why I'm giving you access."
+
     z "You can't stop it alone. But you can see it."
+
     z "Maybe save someone when it hits."
 
     if em >= 3:
@@ -211,25 +296,37 @@ label act1_obsidian_bridge:
         z "Half-measures get everyone killed."
 
     a "Why do you care? About me."
+
     z "(beat) Because you're Marcus Rylan's son. Access. Intel. Doors I can't open."
-    z "Because if Glass cracks wide enough, you could help."
+
+    z "Because if you crack wide enough, you could help."
+
     z "And because two hundred people are breathing who shouldn't be."
+
     z "That's not nothing."
 
     # Wind builds; fog thickens.
+
     z "Go home. Rest."
+
     z "When you're ready to do more than try, use the device."
+
     z "I'll be watching."
 
     z "(over shoulder) And Glass?"
+
     a "Yeah?"
+
     z "You broke today. I saw it. Good."
-    z "Broken things can be rebuilt. Glass can't."
+
+    z "Broken things can be rebuilt. Weapons can't."
+
     z "Decide which one you want to be."
 
-    "She fades into fog. The device is heavy in his hand."
+    "She fades into fog. The device is heavy in my hand."
 
-    athought "I'm caught between Glass and human."
+    athought "I'm caught between weapon and human."
+
     if em >= 2:
         athought "Two hundred lived. That has to mean something."
     elif em >= 1:
@@ -238,45 +335,43 @@ label act1_obsidian_bridge:
         athought "She shouldn't have come. And yet she did."
 
     athought "Information is power, she said. To see. To choose. To resist."
+
     athought "Or to get everyone killed."
 
-    # EXIT: Pocket device; turn toward Aeries.
     athought "Something bigger is coming. Hundreds of thousands."
+
     athought "Blood on my hands. A comm device in my pocket."
+
     athought "What the hell am I supposed to do with that?"
 
-    "The city breathes—unaware. Glass, cracked and walking, heads home."
+    "The city breathes—unaware. Cracked and walking, I head home."
 
-    $ set_scene_flag(_current_scene_id, "completed")
+    $ scene_mark(_current_scene_id, "completed")
+
     return
 
 
-# ========= CANON NOTES =========
+# ========= CANONICAL NOTES =========
 # cann.scene_id: act1_19_obsidian_bridge
-# cann.when_in_timeline: Midnight after Op 391 (Act 1). Post-confession morning → night meetup.
+# cann.when_in_timeline: Midnight after Op 391. Post-confession morning → night meetup.
 # cann.what_happened:
-#   - Aeron meets Zira at Obsidian Bridge; outcome branches on evidence_of_mercy (em).
-#   - HIGH (em≥3): Zira acknowledges meaningful resistance; gives encrypted comm (network access).
-#   - MID  (em≥1): Mixed judgment; device given conditionally; urges Aeron to choose a side.
-#   - LOW  (em=0): Zira rejects Aeron; no device; exits; route jumps to rooftop reflection.
-# cann.aeron_state: VO flavored by band; no empathy momentum added in this scene (judgment only).
+#   - Aeron meets Zira at Obsidian Bridge; outcome branches on mercy_total.
+#   - HIGH (em≥3): Zira acknowledges resistance; gives encrypted comm.
+#   - MID (em≥1): Mixed judgment; device given conditionally; urges choice.
+#   - LOW (em=0): Zira rejects Aeron; no device; exits; route jumps to investigation.
+# cann.aeron_state: VO flavored by mercy level; no empathy momentum added.
 # cann.path_tracking:
-#   - No player menu; record-only markers set:
-#       • bridge_high_mercy_path / bridge_moderate_mercy_path / bridge_low_mercy_path
+#   - No player menu; record-only markers.
 #   - Flags: device_given | device_given_conditional | device_withheld | completed.
-#   - Social: add_trust("Zira", +3 / +1 / −2) and char flags noted above.
-#   - Running window BEFORE:   **≈ [-55, +57]**   (from act1_18b)
-#   - Running window AFTER:    **≈ [-55, +57]**   (no EMP/OB change here).
-# cann.thematic_flags: Judgment after atrocity; trying vs obeying; “information as agency”; crack vs shatter.
+#   - Social: rel_bump("Zira", +3 / +1 / −2).
+# cann.thematic_flags: Judgment after atrocity; trying vs obeying; "information as agency."
 # cann.block_status: VARIANT (state-reactive, no player choice).
-# cann.true_path_integration: None (TP remains menu-free).
 # cann.visual_plate_economy:
-#   - REUSE: Bridge master (moonlight pass), rail closeups, fog plates; city BG loop.
-#   - HERO: Device handoff insert; two-shot at rail; Zira fog entrance/exit silhouettes.
+#   - REUSE: Bridge master (moonlight pass), rail closeups, fog plates.
+#   - HERO: Device handoff insert; two-shot at rail; Zira fog entrance/exit.
 # cann.requires_followup:
-#   - If device_given(_conditional): unlock comm pings in later scenes; optional intel prompts.
-#   - If device_withheld: Zira route cools; re-earn trust gated by later high-mercy acts.
-#   - Tease multi-sector purge (8–10) in news/ambient chatter within 1–2 scenes.
-# cann.consistency_asserts:
-#   - Keep casualty language aligned with Op 391 outcomes (em-based lines already mapped).
-#   - Aeries altitude/weather grammar elsewhere; here bridge microclimate allows fog/wind.
+#   - If device given: unlock comm pings in later scenes.
+#   - If device withheld: Zira route cools; re-earn trust gated by later mercy acts.
+# cann.note_on_glass_usage:
+#   - Zira uses "Glass" as Aeron's street name (intentional character dialogue).
+#   - Aeron's internal self-references replaced with first-person language.

@@ -1,529 +1,440 @@
-# act2_01_descent.rpy
 # =======================================================
-# ACT 2 - Scene 1: Descent  (Full OB/EMP-integrated pass)
-# Uses: solveil_state_system.rpy (Consolidated Architecture)
+# ACT 2 - Scene 1: Descent
+# File: act2_01_descent.rpy
 # =======================================================
 
-label act2_descent:
+# ========= SCENE START TASKS =========
+$ _current_scene_id = "act2_01_descent"
+$ scene_mark(_current_scene_id, "entered")
 
-    # --- OPERATION SNAPSHOT & CANON FLAGS ---
-    $ start_operation("op201_descent", note="Post-Purge descent from Aeries")
-    $ canon["defected"] = True
-    $ canon["purge_witnessed"] = True
-    $ mark_scene("act2_01_descent", "started")
-    $ log_line("ACT2_01 started: Post-Purge descent")
+define vendor = Character("Vendor")
+define man = Character("Local")
 
-    # VISUAL: Aeron's apartment. Hours after Purge. Dawn breaking. City burning in distance.
-    # LIGHTING: Orange glow from fires mixing with cold morning light. Smoke visible.
-    # SOUND: Distant sirens; fire alarms; city in chaos; his ragged breathing.
+label act2_01_descent:
 
-    "ACT 2: FROM ASH"
+    # ========= STAGE DIRECTIONS (cinema-first) =========
+    # CAMERA: 28–40mm; handheld sway on rooftop; steadier as they commit to moving; tighter CUs in crowd crush.
+    # LIGHTING: Dawn over burning sectors; orange fire wash vs cold upper-tier skylight; deep smoke plumes.
+    # SFX: Loop — distant sirens, low fire roar, city hum; one-shots — elevator chimes, crowd reactions, feedback shriek, sparking neon.
+    # FX/COMP: Heat shimmer over Purge zones, drifting ash; light smoke layer on rooftop; neon + steam in Lower Spans.
+    # BLOCKING/PROPS: Rooftop ledge, Aeron's apartment interior, Zira's device, maintenance stairwell, Sector 6 market, Ghostline relay boxes.
+    # FACE: Aeron's expression stays controlled but strained; Lyra visibly worn; Zira relaxed, eyes sharp, amused.
 
-    # VISUAL: Fade in from black. Aeron and Lyra still on rooftop where Purge happened.
-    # Hours have passed. Dawn approaching. Both hollow, empty, staring at burning sectors.
+    # ========== CHAPTER TITLE CARD ==========
+    scene black with fade
+    centered "{size=+20}ACT II{/size}"
+    pause 0.5
+    centered "{size=+10}Chapter I — From Glass to Nobody{/size}"
+    pause 2.0
+    scene black with fade
 
-    "Hours pass. Or days. Time loses meaning when the world ends."
-    if get_empathy_band() == "obedience":
-        "He counts sectors, not faces. Catalogs flames like a report."
-        $ adjust_empathy_once("act2_01_rooftop_ob_flavor", -1)
+    # VISUAL: Rooftop where they watched the Purge; fires still burn below.
+    athought "Hours pass. Or maybe it's minutes. Time doesn't mean much when the city's still burning."
+
+    "Sectors 8, 9, and 10 glow orange below, heat still rising in visible waves."
+
+    athought "Like an open wound."
+
+    if empathy_band() == "obedience":
+        athought "I catalog the fire lines by sector and grid, turning the slaughter into data because that's the only way it fits."
     else:
-        "Every plume feels like a name he never learned, a heartbeat he didn’t save."
-        $ adjust_empathy_once("act2_01_rooftop_emp_flavor", +1)
+        athought "I can't stop seeing people in the fire—not numbers, not targets, just lives I helped erase."
 
-    "They stand on the rooftop. Watching Sectors 8, 9, 10 burn."
-    "Smoke rises like monuments. The dead have no graves."
+    a "We can't stay here."
 
-    # VISUAL: Aeron finally moves. Turns from the burning city.
-    athought "We can't stay here."
-
-    # OB/EMP Lyra read
-    if get_empathy_band() == "obedience":
-        l "(hollow) Where would we go?"
-        a "Anywhere with cover and exits."
+    l "(quiet) Where would we even go?"
+    if empathy_band() == "obedience":
+        a "Anywhere with cover and three exits."
     else:
-        l "(hollow) Where would we go?"
-        a "Anywhere but here."
+        a "Anywhere that isn't watching this."
 
-    # VISUAL: Lyra looks at him. Both exhausted, broken, barely functioning.
+    # VISUAL: Lyra studies him; both shattered and exhausted.
     l "Echelon will be looking for us."
+    a "Yeah."
+    l "They'll check your command terminal. Your apartment. Your schedule."
     a "I know."
-    l "They'll want to know why you weren't on the command deck."
-    a "I know."
-    l "Marcus will realize—"
-    if get_empathy_band() == "obedience":
-        a "(sharp) I know."
-        "The word lands like a blade. Control over comfort."
-        $ adjust_empathy_once("act2_01_ob_sharp_cut", -1)
-    else:
-        a "(soft, pained) I know."
-        "He hates how true it is. How much of him Marcus still owns."
-        $ adjust_empathy_once("act2_01_emp_soft_ack", +1)
+    l "Marcus will realize you weren't on the deck when the order went through."
 
-    # VISUAL: Silence. Both processing. Dawn light growing.
-    "Silence. The city wakes. Oblivious or pretending."
-    "Above the Purge zones, life continues. Because it always does."
+    if empathy_band() == "obedience":
+        a "(cuts in) I know."
+
+        athought "The words come out clipped. Control over comfort."
+    else:
+        a "(soft) I know."
+
+        athought "The admission tastes like rust."
+
+    "Dawn light grows, staining the smoke in gold and red."
 
     l "How long do we have?"
-    if get_empathy_band() == "obedience":
-        a "Hours. Maybe less. They'll check my apartment first."
-        "He’s scheduling their deaths in his head and refusing the numbers."
+    a "Not long. He'll start at my quarters. We should already be gone."
+
+    l "Then let's move."
+    a "You don't have to come. This was my break, not yours."
+    l "Don't start that. We jumped together, so we burn together."
+
+    if empathy_band() == "obedience":
+        athought "Together or not, we're already off the map."
     else:
-        a "Hours. Maybe less. They'll check my apartment first."
-        "He feels the clock in his ribs. Every breath a second lost."
+        athought "Together. That's the only part that still feels solid."
 
-    l "Then we need to move."
-    a "(looks at her) You don't have to come. This is my—"
-    l "(cuts him off) Don't. We burn together. Remember?"
-
-    # VISUAL: He nods. Small. Grateful. Terrified.
-    if get_empathy_band() == "obedience":
-        athought "We burn together. Glass and glass."
-        athought "Keep formation. Don’t break."
-    else:
-        athought "We burn together. Glass and glass."
-        athought "Both shattered. Both falling."
-
-    # TRANSITION: Return to apartment. Moving fast. Urgency building.
-    # VISUAL: Apartment door opens. Everything the same but different.
-    # LIGHTING: Orange glow through windows. Smoke visible. Chaos distant.
+    # ========== APARTMENT ==========
 
     scene bg_aeron_apartment with fade
 
-    "The apartment. Unchanged. But everything's different now."
-    "This was home. Now it's a crime scene waiting to happen."
+    "The apartment looks the same as it did yesterday—neat and ordered, a life built around missions and reports."
 
-    # VISUAL: Aeron moves to closet. Grabs tactical gear, not uniform.
-    # SOUND: Rustling fabric; zippers; equipment being packed quickly.
+    athought "Now it just feels like a stage set after the show ends."
 
-    athought "What do we take? What matters?"
-    if get_empathy_band() == "obedience":
-        athought "Weapons. Credits. Clothes. Everything else is weight."
+    # VISUAL: Aeron moves efficiently, grabbing essentials.
+    athought "Weapons, credits, clothes—anything else is weight."
+
+    # VISUAL: Kael's photo on the desk.
+    "Kael's photo still sits on the desk."
+
+    athought "Smiling at a world that doesn't exist anymore."
+
+    if pass_emp():
+        athought "I left you once. I'm not doing it again."
+
+        "The photo is lighter than it should be—just paper and polymer, nothing that should weigh this much."
     else:
-        athought "Weapons. Credits. Clothes. The rest is ghosts pretending to be objects."
+        athought "If I leave it, someone will bag it and tag it."
 
-    # VISUAL: He pauses at Kael's photo. Hand hovers. Decides.
-    "Kael's photo. On the desk. Smiling."
-    if pass_emp_gate():
-        athought "I can't leave you behind. Not again."
-        "He takes it. Slips it inside his jacket. Against his chest."
-        $ mark_scene("act2_01_descent", "took_kael_photo")
-        $ adjust_empathy_once("act2_01_kael_photo", +1)
-        $ char_note("Lyra", "Saw Aeron keep Kael’s photo; read it as human, not tactical.")
-    else:
-        athought "I can't leave you behind. Not again."
-        "He takes it. Not for comfort— for cover, for story, for control."
-        $ mark_scene("act2_01_descent", "took_kael_photo")
-        $ adjust_empathy_once("act2_01_kael_photo_ob", -1)
+        "The photo feels clinical in his fingers—just another item to secure."
 
-    # VISUAL: Lyra gathering her things from bathroom, bedroom. Efficient. Military.
+        athought "Not sentiment—evidence of a life they'll try to erase."
+
+    # VISUAL: Lyra grabs a small pack; she moves with trained economy, but her hands shake.
     l "How much can we carry?"
-    a "Not much. We'll be moving fast."
+    a "Not much. We'll need to move fast and quiet."
     l "Where?"
-    a "Down. The Lower Spans. Unders if we have to."
-    l "(stops) The Unders? Aeron, they'll kill us there."
-    a "Echelon will kill us here. At least down there we have a chance."
+    a "Down. Lower Spans first. Maybe the Unders if we make it that far."
+    l "(grim) The Unders will tear us apart."
+    a "Echelon will shoot us on sight. I'll take uncertainty over certainty."
 
-    # VISUAL: She processes. Nods. Grim acceptance.
-    l "The people you saved. In the Sweep. Some are still there."
-    a "Maybe. If they survived the Purge."
-    l "They might help us."
-    if pass_emp_gate():
-        a "(bitter laugh) Help Glass? The man who killed 600 of them?"
-        l "The man who saved 200."
-        a "That's not how they'll remember it."
-        "He lets the blame sit where it belongs—on him."
-        $ adjust_empathy_once("act2_01_accept_blamed_weight", +1)
+    l "Some of the people you pulled out during the Sweep were from down there."
+    a "If they survived the Purge."
+    l "They might remember that you saved them."
+    a "They'll remember who gave the order too."
+
+    # VISUAL: Aeron at the terminal.
+    "The terminal hums, cold light washing over his hands as lines of text scroll up the screen."
+
+    athought "Mission logs, patrol routes, access patterns—everything I used to prove I was loyal."
+
+    if empathy_band() == "obedience":
+        athought "I strip the system clean with the same focus I used to plan operations."
+        athought "It feels like just another task, even if I know it isn't."
     else:
-        a "(flat) Help Glass? Unlikely."
-        l "The man who saved 200."
-        a "Narratives don’t change because we want them to."
-        "He files it under risk categories and moves on."
-        $ adjust_empathy_once("act2_01_distance_from_guilt", -1)
+        "His fingers tremble on the keys."
 
-    # VISUAL: Packing continues. Clock ticking. Sunrise approaching.
-    # SOUND: Distant comms chatter (Echelon channels). Patrol movements increasing.
+        athought "Every file I delete feels like a small, precise funeral."
 
-    "The city wakes. Patrols mobilize. The hunt hasn't started."
-    "But it will. Soon."
+    "The cursor reaches the last entry—nothing left to erase."
 
-    # VISUAL: Aeron at terminal. Deletes files. Wipes data. Covering tracks.
-    athought "Everything. Gone. No trail. No evidence."
-    athought "They'll find the apartment empty. But they'll know I left."
-    athought "Marcus will know. He always knows."
-    if get_empathy_band() == "obedience":
-        "He scrubs the last logs with ritual perfection. Control is oxygen."
-    else:
-        "His fingers shake. He keeps going. Guilt is a solvent; it erases and reveals."
+    # VISUAL: Zira's device on the desk.
+    "The encrypted relay Zira gave him sits in the corner of the desk."
 
-    # VISUAL: Zira's encrypted device on desk. Blinking softly.
-    "The device. Zira's gift. Still here. Still working."
-    athought "She said use it when I was ready. When I needed her."
-    athought "I need her. But can I risk it?"
+    athought "She said to use it when I needed her."
+    athought "If I ping her, I expose us. If I don't… we're alone."
 
-    # ACTION: Player choice—activate device or leave it.
+    # --- PLAYER CHOICE: contact Zira or not ---
     menu:
-        "The device blinks. A lifeline. Or a trap."
-        "Activate the device—contact Zira.":
-            $ char_flag_on("Zira", "contacted_in_scene1")
-            $ adjust_empathy_once("act2_01_contact_choice", +2)
-            $ log_line("Aeron activated Zira’s device (Act2_01)")
-            "He picks it up. Activates. Sends simple message."
-            "He types one word: 'Help.'"
-            "Sends. No response. Did she receive it?"
-            athought "If she got it, she'll know. If not... we're alone."
-            # Slight trust seed toward Zira for reaching out
-            $ rel("Zira", trust=1)
-        "Leave it—don't risk the signal.":
-            $ adjust_empathy_once("act2_01_contact_choice", -2)
-            $ log_line("Aeron ignored Zira’s device (Act2_01)")
-            "Too risky. Signal could be tracked. Echelon could intercept."
-            athought "We're on our own. Better that way."
-            "He pockets the device anyway. Just in case."
+        "The relay blinks once."
+        "Activate the device — reach out to Zira.":
+            $ choice_and_dev(
+                _current_scene_id, "_a2_01_contact_zira", "EMP", factor=2,
+                next_scene_label="act2_02_reality_check",
+                note="Chooses to trust Zira and ask for help instead of staying fully independent."
+            )
+            $ flag_on("Zira", "contacted_in_scene1")
 
-    # VISUAL: Lyra returns. Small pack. Essentials only. Ready.
-    l "I'm ready. You?"
-    a "(looks around apartment one last time) Yeah. I'm ready."
+            "The relay is warm in his palm, heavier than it looks. The interface blossoms with encrypted prompts he barely understands."
 
-    # VISUAL: Apartment. Empty. Hollow. Abandoned.
-    athought "Seven years here. 390 operations launched from this room."
-    if get_empathy_band() == "obedience":
-        athought "Glass lived here. Glass is a containment method."
-    else:
-        athought "Glass lived here. Glass died on that rooftop."
-        athought "What walks out this door... I don't know what that is."
+            athought "I don't bother with codes or explanations."
 
-    l "(hand on his shoulder) Aeron. We need to go."
-    a "(nods) Right. Let's move."
+            "One word on the screen: {i}Help.{/i}"
 
-    # VISUAL: Door opens. Hallway beyond. Empty. Dawn light filtering through windows.
-    # SOUND: Distant elevator chime. Footsteps. Patrol approaching.
+            "The relay pulses, then returns to a steady light."
 
-    "Footsteps. Close. Patrol coming this way."
+            athought "If she got it, she knows we've jumped."
+            athought "If she didn't… we walk alone."
 
-    l "(whisper) They're early."
-    a "Elevator or stairs?"
-    l "Stairs. Quieter."
-    a "Back exit. Through maintenance level."
-    l "Lead the way."
+        "Pocket it — too risky to send a signal.":
+            $ choice_and_dev(
+                _current_scene_id, "_a2_01_ignore_device", "OB", factor=2,
+                next_scene_label="act2_02_reality_check",
+                note="Keeps control by refusing to broadcast position, even to a potential ally."
+            )
 
-    # VISUAL: Moving quickly but quietly through Aeries corridors.
-    # LIGHTING: Morning light through tall windows. Marble gleaming. Perfect order.
-    # SOUND: Their footsteps muted; distant patrols; comms chatter growing.
+            "The relay's light is insistent, almost accusatory. He stares at it until the glow annoys him more than the risk."
 
-    "Aeries. Perfect. Sterile. Cold."
-    "Marble halls stretching endlessly. Everything clean. Everything controlled."
-    "They don't belong here anymore."
-    if pass_tier("OB2","OB3"):
-        "He still walks like he owns the floor. The floor remembers."
-        $ adjust_empathy_once("act2_01_aeries_walk_ob", -1)
-    elif pass_tier("EMP2","EMP3"):
-        "He walks like a man returning a stolen uniform."
-        $ adjust_empathy_once("act2_01_aeries_walk_emp", +1)
+            "The device goes dark with a soft click. Cold weight against his thigh."
 
-    # VISUAL: Past propaganda screens. Messages updating.
-    # TEXT ON SCREENS: "RECENT TERRORIST ATTACK CONTAINED"
-    # TEXT: "SECTORS 8-10 UNDER EMERGENCY PROTOCOLS"
+            athought "No signals, no trails, no favors owed."
+            athought "If we live, I can change my mind later."
+
+    # VISUAL: Lyra re-enters frame with her pack.
+    l "I'm set. Are you?"
+    a "(gives the room one last scan) Yeah. I'm done here."
+
+    athought "The apartment feels smaller on the way out. Like it knows I won't be coming back."
+
+    # ========== DESCENT THROUGH TIERS ==========
+
+    "The corridor outside is spotless—too bright, sterile. Propaganda screens pivot in real time."
+
+    # VISUAL: Screens updating.
+    # TEXT: "TERRORIST ATTACK CONTAINED"
     # TEXT: "ECHELON PROTECTS. ECHELON PROVIDES."
 
-    athought "Terrorist attack. That's what they're calling it."
-    athought "Not genocide. Not Purge. Just... contained threat."
-    athought "100,000 dead. And they call it protection."
-    if pass_emp_gate():
-        "He refuses the euphemism. Words are weapons too."
-    else:
-        "He files the lie. Predicts the next broadcast. Moves on."
+    athought "Terrorist attack, contained—a hundred thousand dead, rebranded as 'security'."
 
-    # VISUAL: They reach maintenance stairs. Heavy door. Rarely used.
-    # SOUND: Door opens with metallic groan. Stairs descending into darkness.
+    athought "Stopping to argue with a screen won't save anyone."
 
-    "Maintenance stairs. Down. Always down."
-    "Away from light. Away from order. Away from everything."
+    # VISUAL: Maintenance stairwell door.
+    "The maintenance stairwell door is heavy, the metal cold under his palm—rarely used, by the look of the dust."
+
+    "It opens with a groan."
+
+    athought "Too loud."
 
     l "How far down?"
-    a "As far as we can go."
-    l "The Unders are fifty levels from here."
-    a "Then we go fifty levels."
+    a "As far as we can. Lower Spans first. We'll see from there."
+    l "Fifty levels."
+    a "Then we take fifty."
 
-    # VISUAL: They descend. Step by step. Lighting getting dimmer.
-    # SOUND: Their breathing; footsteps echoing; city hum growing louder below.
+    # VISUAL: Descending; light quality shifts each landing.
+    "The stairwell echoes with their footsteps, each landing a little darker than the last."
 
-    "Down. Level by level. The city changes."
-    "Clean to grimy. Bright to dim. Order to chaos."
-    "And they descend into it."
-    if get_empathy_band() == "obedience":
-        "He counts landings. Checks corners. Breath on metronome."
+    athought "The air changes with every landing—from filtered to stale, from quiet to layered with distant machinery and voices."
+
+    if empathy_band() == "obedience":
+        athought "I count the floors and keep a mental map running, forcing the chaos into structure."
     else:
-        "He hears a child laugh three floors below. Or a memory pretending to live here."
+        "Voices bleed through thin doors—arguments, lullabies, someone trying not to cry."
 
-    # VISUAL: Passing through Mid Levels. Industrial. Functional. Working class.
-    # People starting their day. Factories humming. Life continuing.
+        athought "The city feels more alive the lower we go."
 
-    athought "Mid Levels. Workers. Families. Normal people."
-    athought "They don't know. Sectors 8-10 burned. And they don't know."
-    athought "Or they know and they're pretending. Because what else can they do?"
+    # VISUAL: Passing Mid Levels.
+    athought "Mid Levels—workers, families, people who don't know the ground just shifted under them."
+    athought "Or maybe they do and pretend they don't. I've done the same."
 
-    # VISUAL: Someone glances at them. Aeron in tactical gear. Lyra same.
-    # Worker looks away quickly. Doesn't want trouble.
+    "A few residents glance at their clothes and look away quickly."
+
+    athought "Nobody wants to be caught staring at uniforms when uniforms are hunting."
 
     l "We stand out."
-    a "I know. Keep moving."
-    l "We need different clothes. These scream Echelon."
-    a "We'll find something in the Lower Spans. Black market."
-    l "With what money?"
-    a "(shows credit chip) Aeries credits. Should buy us time."
-    l "If they take them. If they don't recognize us first."
-    # Inventory + small risk notes
-    $ add_item_counter("food", 0)  # no change, placeholder for consistency
-    $ grant_disguise("mid")        # seed: will matter soon
-    $ log_line("Prepared mid-tier disguise flag for later swap (Act2_01)")
+    a "We'll fix it when we can. For now, keep moving."
+    l "We need different clothes before the Unders. These scream Echelon."
+    a "One problem at a time."
 
-    # VISUAL: Continuing descent. Levels blurring together. Getting darker, dirtier.
-    # SOUND: Music from below; voices; machinery; city living.
+    # VISUAL: Lower Spans threshold — neon, rust, steam, crowded walkways.
+    "By the time they reach the Lower Spans, the stairwell walls sweat rust."
 
-    "Lower Spans. The city's underbelly. Where Aeries refuse looks."
-    "Neon. Rust. Steam. Humanity compressed and forgotten."
-    "This is where they swept. Where 800 died. Where 200 lived."
+    "Neon bleeds in through the door frame, mixed with steam and the smell of too many people packed into too little space."
 
-    # VISUAL: They emerge into Lower Spans proper. Market district. Pre-dawn crowd.
-    # LIGHTING: Neon signs. Flickering. Harsh shadows. Industrial glow.
-    # SOUND: Vendors calling. Deals being made. Life surviving.
+    athought "I know this grid."
+    athought "We swept near here. We called it a containment zone."
 
-    athought "Sector 6. Near where we swept. Near where they died."
-    athought "The vendor. The child. The families. All gone now."
-    athought "And we're here. Walking among the survivors."
-    if pass_emp_gate():
-        "He keeps his hands open. No weapon. He wants them to see that."
-    else:
-        "Hands low, centerline open. Weapon within reach. He wants to live."
+    # VISUAL: Step out into Sector 6 market street.
+    "The market hits like a wall—noise, heat, the press of bodies and the smell of frying oil and recycled air."
 
-    l "(quiet) Do you recognize it?"
-    a "Every corner. Every street. Every face I didn't save."
+    "Vendors shout over each other while kids dart between adults and hawkers push cheap tech and fake meds. Everyone is scanning everyone else."
 
-    # VISUAL: People notice them. Conversations stop. Eyes follow.
-    # Whispers spread. "Echelon." "Soldiers." "What are they doing here?"
+    "The noise drops half a step the moment they appear."
 
-    "Eyes. Everywhere. Watching. Judging."
-    "We're not hidden. We're targets."
+    athought "The crowd feels it."
 
-    # VISUAL: Vendor approaches. Old woman. Weathered. Angry.
+    l "(under her breath) Eyes on us."
+    a "Keep walking. Don't reach for anything you don't have."
+
+    # VISUAL: An older vendor steps out, blocking their path.
     vendor "You're Echelon."
-    a "...Yes."
-    vendor "You swept Sector 10. Three days ago."
-    a "(carefully) I did."
-    vendor "My nephew was there. He's dead now."
-    vendor "You kill him?"
-    if pass_emp_gate():
+
+    a "...We were."
+
+    vendor "You swept Sector 10 three days ago."
+
+    a "(carefully) I was part of the operation."
+
+    vendor "My nephew worked there. He's ash now."
+    vendor "Did you kill him?"
+
+    if pass_emp():
         a "...I don't know. Maybe."
-        "He holds her eyes and doesn’t look away."
-        $ adjust_empathy_once("act2_01_vendor_honesty", +1)
-        $ add_evidence_of_mercy(1)
+
+        athought "I hold her gaze. I don't look away."
     else:
-        a "...Possibly. I followed orders."
-        "He refuses the ritual of absolution. It would be a lie."
-        $ adjust_empathy_once("act2_01_vendor_rigor", -1)
-        $ add_team_suspicion(1)
+        a "...I followed orders. That's the only honest answer I have."
 
-    # VISUAL: She stares. Long. Hard. Then spits at his feet.
-    vendor "Get out of my sector. Before someone less kind finds you."
-    "She walks away. Others watching. Tension rising."
+        athought "No excuses—just the ugly truth I was built on."
 
-    l "(whisper) We need to move. Now."
-    a "Where? We're exposed everywhere."
-    l "Find shelter. Hide. Figure it out from there."
-    a "With everyone watching? We won't make it an hour."
+    "She studies him for a long, quiet second, then spits at his feet."
 
-    # VISUAL: More people noticing. Hostility growing. Crowd forming.
-    # SOUND: Murmurs. "Echelon." "Glass." "Murderers." Anger building.
+    vendor "Get out of my sight before someone decides you're worth more dead than angry."
 
-    "The crowd grows. Whispers harden. Space shrinks."
-    athought "They know me. They remember."
-    athought "Glass killed their families. And Glass is here."
+    "She turns away, but the rest of the market doesn't."
 
-    # VISUAL: Man steps forward. Young. Angry. Holding makeshift weapon.
-    man "You're Glass. I know your face."
-    a "..."
+    athought "The air tightens."
+
+    # VISUAL: Young man pushes forward, improvised weapon in hand.
+    man "You. Glass."
+
+    athought "The word hits me like a physical thing."
+
     man "Sector 10. You killed my sister."
-    if pass_emp_gate():
+
+    if pass_emp():
         a "I'm sorry."
     else:
-        a "(low) I know."
+        a "(low) I know what I did."
 
-    man "Sorry? SORRY? She was nine years old!"
-    man "And you're SORRY?"
+    man "She was nine. You don't get to be sorry."
 
-    # VISUAL: Crowd closing in. Multiple weapons visible. Nowhere to run.
-    l "(hand on weapon) Aeron, we need to—"
-    a "(stops her) Don't. We're outnumbered."
+    "More faces close in—someone else has a pipe, another a broken bottle. Fury builds faster than they can back away."
+
+    l "(barely audible) Aeron..."
+    a "(quiet) Don't reach for a weapon you don't have."
+
     l "Then what?"
-    a "...We run. Or we die. Pick one."
+    a "We move when there's a gap. If there's a gap."
 
-    # VISUAL: Man raises weapon. Others follow. About to attack.
-    # SOUND: Sudden CRACK. Gunshot. Not at them. Warning shot.
+    # ========== ZIRA INTERVENES (TECH, NOT GUNSHOT) ==========
 
-    "CRACK. Gunshot. Echo. Crowd freezes."
+    # SFX: A rising electronic whine from every battered speaker on the street.
+    "Every battered speaker bolted to the walls starts to hum at once."
 
-    # VISUAL: Figure appears from alley. Hood up. Female. Armed.
-    # Voice familiar. Confident. Amused.
+    "The hum spikes into a piercing feedback shriek that punches straight through bone."
+
+    "A neon sign over the nearest stall flares white-hot and blows out, showering the street in sparks and dead glass."
+
+    "The crowd flinches as one, hands flying to ears, weapons dipping."
 
     z "That's enough."
 
-    # VISUAL: Crowd parts. Confused. Wary. The figure approaches.
-    # SOUND: Footsteps. Deliberate. Unhurried. Commanding.
+    "Her voice comes through the speakers and the alley behind them at the same time—calm, amused."
 
-    z "These two are with me. Touch them, you answer to me."
+    # VISUAL: Zira steps out, glove faintly sparking.
+    "A woman steps out of a shadowed alley, hood back, eyes sharp. Contacts on her glove still flicker with residual charge."
+
+    z "These two are with me."
+    z "Anyone here want to find out what happens if I flip the rest of the block to overload?"
+
     man "Who the hell are you?"
-    z "Someone you don't want to fuck with. Now back off."
 
-    # VISUAL: Zira lowers hood. Face revealed. Eyes sharp. Grin dangerous.
-    z "Unless you want to find out what happens when you ignore me."
+    z "The reason your heart monitor isn't flatlining right now."
+    z "Back off. Go home. Tell your friends Glass already owes you."
 
-    # VISUAL: Man hesitates. Others uncertain. Zira's reputation precedes her.
+    "The man's eyes move from Zira to the ruined sign to the watching crowd."
+
+    athought "Anger doesn't vanish, but survival does the math for him."
+
     man "(to Aeron) This isn't over."
-    "Crowd disperses. Slowly. Reluctantly. But disperses."
+    "The street gives ground with him—tension thinning without disappearing."
 
-    # VISUAL: Zira walks to them. Looks them over. Shakes head.
-    z "You two are terrible at hiding."
+    # VISUAL: Zira closes the distance to Aeron and Lyra.
+    z "You two are terrible at subtlety."
+
     a "Zira—"
-    if char_flag_has("Zira", "contacted_in_scene1"):
-        z "Save it. You pinged me. Good instinct. Bad execution. Follow me."
-        $ rel("Zira", trust=1)  # tiny bonus for having reached out
+
+    if flag_has("Zira", "contacted_in_scene1"):
+        z "Save it. You pressed send. I pressed go."
+        z "Ghostline lit up the second your message hit. I've been riding your shadow for two hours."
     else:
-        z "Save it. Follow me. Before they change their minds."
+        z "Save it. I've been watching since you stepped off Aeries."
+        z "You hovered over that little relay on your desk, then wiped the drive like a good officer."
+        a "You were watching me?"
+        z "Whenever something interesting happens topside, the Ghostline pays attention."
+        z "Congratulations. You're officially interesting."
 
-    l "How did you know we'd be here?"
-    if char_flag_has("Zira", "contacted_in_scene1"):
-        z "(grins) You pressed send. I pressed go."
-    else:
-        z "(grins) I've been tracking you since you left Aeries."
+    z "Now move. Patrols love an audience."
 
-    z "Did you really think you could disappear? In those clothes?"
-    a "You got my message?"
-    if char_flag_has("Zira", "contacted_in_scene1"):
-        z "I got it. And I came. Because apparently you're idiots."
-    else:
-        z "You didn’t send one. Lucky for you, I’m generous with strays."
+    # ========== EVASION & GHOSTLINE ROUTE TO SAFEHOUSE ==========
 
-    z "Now move. We don't have time for gratitude."
+    # VISUAL: Zira cuts into a narrow side alley.
+    "She turns and slips into a gap between two stalls that barely qualifies as an alley."
 
-    # VISUAL: She leads them into alley. Narrow. Dark. Hidden from main street.
-    # SOUND: Their footsteps; distant crowd; her confident stride.
+    "The noise of the market drops away behind them, replaced by dripping pipes and the low thrum of buried power."
 
-    "She moves like she owns the place. Maybe she does."
-    "We follow. Because we have no choice. Because she's right."
-    "We're idiots. And we need her."
+    z "Stay close. If you lose sight of me, assume you're already dead or arrested."
 
-    # VISUAL: Deep in alley network. Twisting paths. Zira knows every turn.
-    z "Echelon's hunting you. Whole city knows by now."
-    a "Already?"
-    z "Marcus put out the word. Traitors. Kill on sight. Big reward."
-    z "You're famous. Congratulations."
-    l "How much time do we have?"
-    z "Before Echelon floods the Lower Spans? Hours. Maybe less."
-    z "Before locals kill you for revenge? Minutes. Maybe less."
-    z "You picked the worst possible place to hide."
+    # SFX: Patrol drone whine overhead.
+    "A patrol drone's whine cuts through the air above the alley. Its searchlight sweeps past the opening."
 
-    a "Where else could we go?"
-    z "Anywhere but here. But too late now. You're here."
-    z "So we adapt. Like always."
+    z "(low) Wall. Now."
 
-    # VISUAL: She stops at hidden door. Unmarked. Nondescript.
-    # SOUND: Electronic lock. Beeps. Door slides open. Darkness beyond.
+    "Damp concrete presses cold against his back as Zira taps her glove against a corroded junction box."
 
-    z "Welcome to my safe house. It's not much. But it's yours."
-    z "For now. Until we figure out what the hell you two are doing."
+    "Sparks jump from the contact and a streetlight at the alley mouth stutters into a strobe pattern that sends the drone's sensors chasing ghosts."
 
-    # VISUAL: They enter. Door seals behind them. Darkness. Then lights flicker on.
-    # LIGHTING: Dim. Industrial. Functional. Small space. Secure.
+    z "Ghostline says, 'Look over there, not here.'"
 
-    "Small. Cold. Secure. Hidden."
-    "Not home. But shelter."
-    "And right now, that's everything."
+    "The drone veers, beam drifting away. Zira is already moving before the light finishes turning."
 
-    # VISUAL: Zira tosses them water. Food packets. Basic supplies.
-    z "Eat. Rest. Don't leave. I'll be back tonight."
-    l "Where are you going?"
-    z "To make sure you idiots stay alive."
-    z "Echelon's mobilizing. Locals want blood. You're trapped."
-    z "So I'm fixing it. Like I fix everything."
+    # VISUAL: Secondary market used as cover.
+    "The second market is narrower, rougher—less polish, more desperation in the air."
 
-    a "Why are you helping us?"
-    z "(pauses at door) Because I told you I would."
-    z "And because 200 people are alive because Glass cracked."
-    z "I want to see what happens when Glass breaks completely."
-    if pass_emp_gate():
-        z "(grins softer) Should be interesting."
-    else:
-        z "(grins) Should be interesting."
+    z "Heads down. Don't stare. Don't bump. Don't talk unless I ask you a question."
 
-    # VISUAL: She leaves. Door seals. They're alone.
-    # SOUND: Silence. Just breathing. Exhaustion. Shock.
+    "Zira brushes a rusted panel with one hand as she passes."
 
-    "Alone. Safe. For now."
-    "The city hunts us. Both sides want us dead."
-    "And we're here. In the dark. Waiting."
+    athought "She moves like she's walked this route a hundred times."
 
-    l "(collapses against wall) We're fucked."
-    a "(sits beside her) Completely."
-    l "Echelon wants us dead. Locals want us dead."
-    l "We have nothing. No allies. No plan. No future."
-    a "We have Zira."
-    l "One person. Against a city."
-    a "One person who just saved our lives."
+    # VISUAL: Hidden access hatch.
+    "At the end of the row, she stops in front of what looks like a dead maintenance hatch."
 
-    # VISUAL: Long silence. Both processing. Reality settling.
-    "Silence. Heavy. Crushing."
-    "Hours ago, they witnessed 100,000 deaths."
-    "Now they're fugitives. Hunted. Hated. Alone."
+    "Her glove touches the surface and a muted chime sounds. A seam appears in the metal."
 
-    athought "From Glass to Ash."
-    athought "Burned down. Nothing left. Just fuel for fire."
-    athought "But fire needs more than fuel. It needs air. It needs spark."
-    if pass_emp_gate():
-        athought "Maybe Zira's right. Maybe this is where we find it."
-        $ adjust_empathy_once("act2_01_end_reflection_emp", +1)
-    else:
-        athought "Spark is secondary. Survive the hour. Survive the next."
-        $ adjust_empathy_once("act2_01_end_reflection_ob", -1)
+    z "Welcome to the part of Solveil the maps pretend doesn't exist."
 
-    l "What do we do now?"
-    a "We survive. One hour at a time."
-    l "And after that?"
-    if pass_emp_gate():
-        a "...We burn them. Like we said."
-        l "How? We're two people against an empire."
-        a "Two people who know that empire. Who were that empire."
-        a "If anyone can burn it... it's us."
-    else:
-        a "...We burn them. After we build the fire."
-        l "How? We're two people against an empire."
-        a "Two who know their corridors and codes. We start there."
+    "The hatch slides just wide enough to let them through one by one."
 
-    # VISUAL: They sit. Backs against wall. Exhausted. Terrified. Committed.
-    "Two people. One city. Impossible odds."
-    "But they're here. And they're alive."
-    "That's something. That has to be something."
+    # VISUAL: Interior corridor leading to safehouse.
+    "Inside, the noise of the markets cuts off. The corridor is narrow, lined with exposed conduit, the air thick with ozone and dust."
 
-    # TRANSITION: Fade to black. Time passes. Night falls. Zira returns.
-    # TEXT: "That Evening"
+    "Zira leads them down a short flight of metal stairs to an unmarked door."
 
-    # canon_note: Aeron & Lyra officially fugitives - hunted by both sides
-    # canon_note: Zira becomes crucial lifeline - saves them immediately
-    # canon_note: Lower Spans hostile - locals remember Glass, want revenge
-    # canon_note: Aeron faces consequences - nephew dead, sister dead, they remember
-    # canon_note: Sets up Act 2 theme: earning trust from those they harmed
-    # canon_note: Aeries credits may not work in Unders - economy difference
-    # canon_note: "Two people against empire" - David vs Goliath setup
-    # canon_note: Zira tracking them since they left - she's been watching/helping
+    z "Home, for now."
 
-    # --- SAFEHOUSE/INVENTORY/RELATIONSHIP TOUCHES ---
-    $ mark_flag("Zira", "met")
-    $ rel("Zira", loyalty=1)
-    $ add_item("supplies", "water", 1)
-    $ add_item("supplies", "food", 1)
+    # VISUAL: Door opens onto Zira's safehouse.
+    "She unlocks it with a code and a touch, and the door swings inward."
 
-    # --- WRAP OPERATION & LOG ---
-    $ mark_scene("act2_01_descent", "completed")
-    $ summary = end_operation("op201_descent", tag="Descent (Act2_01)")
-    $ log_line(summary)
+    "The room is bare—concrete walls, a barred window, one overhead bulb. A space designed to be overlooked."
 
+    athought "Not home. Not yet. But shelter—and shelter is the only luxury we can afford."
+
+    # --- SCENE WRAP ---
+    $ scene_mark(_current_scene_id, "completed")
     return
+
+
+# ========= CANONICAL NOTES =========
+# cann.scene_id: act2_01_descent
+# cann.when_in_timeline:
+#   - Immediately after rooftop Purge witness; opening beat of Act II, before first full night in the Unders.
+# cann.what_happened:
+#   - Aeron and Lyra leave the rooftop, collect essentials, and wipe Aeron's Echelon records.
+#   - Player chooses whether Aeron activates Zira's relay (reach out) or pockets it (stay dark), nudging OB/EMP via `choice_and_dev`.
+#   - They descend from Aeries through Mid Levels to the Lower Spans, seeing propaganda reframing the Purge as a "contained terrorist attack."
+#   - Sector 6 locals confront Aeron over the Sweep; he responds with either honest uncertainty or stripped-down "I followed orders."
+#   - A mob begins to form; Zira intervenes using Ghostline tech (PA feedback + neon overload), not a gunshot.
+#   - Zira demonstrates her command of the Unders via a Ghostline-guided evasion route (drone misdirection, hidden access hatch).
+#   - Scene ends at the threshold of her safehouse, setting up Act2_02 as the first full "in the box" recovery/briefing scene.
+# cann.aeron_state:
+#   - OB-lean baseline but visibly fractured; still defaults to procedure under pressure but can admit uncertainty/sorrow in EMP-gated variants.
+#   - "Glass" used sparingly as a label from others, not as constant internal self-naming.
+# cann.path_tracking:
+#   - Single binary choice with `choice_and_dev`:
+#       • `_a2_01_contact_zira` → EMP drift (seeking help), factor=2.
+#       • `_a2_01_ignore_device` → OB drift (self-reliance, signal paranoia), factor=2.
+#   - No extra empathy adjustments outside choices; gates only affect flavor, not metrics.
+#   - Running empathy range at scene end: -7 to -3 (depending on Act I + this choice).
+# cann.thematic_flags:
+#   - Motifs: Descent, narrative control, nobody/cover, Ghostline as invisible infrastructure.
+#   - Zira is positioned firmly as "Ghostline Architect" — she uses systems and circuits, not raw firepower.
+# cann.block_status:
+#   - ANCHOR scene; single alignment choice, no branching outcomes yet.
+# cann.requires_followup:
+#   - Next: `act2_02_reality_check` picks up inside the safehouse with exhaustion, rules of the Unders, and first real decompression.

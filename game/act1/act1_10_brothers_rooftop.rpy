@@ -1,9 +1,7 @@
-# act1_10_brothers_rooftop.rpy
-
-
-# ======================================================
+# =======================================================
 # ACT 1 - Scene 10: Flashback: Brothers on the Rooftop
-# ======================================================
+# File: act1_10_brothers_rooftop.rpy
+# =======================================================
 
 # ========= SCENE START TASKS =========
 $ _current_scene_id = "act1_10_brothers"
@@ -15,132 +13,223 @@ define ya = Character("Young Aeron")
 
 label act1_10_brothers:
 
-    # VISUAL: Same rooftop as act1_09_breaking_point, but years earlier.
+    # ========= STAGE DIRECTIONS =========
     # CAMERA: Slow shoulder-height dolly to the rail; keep faces 3/4 for first half.
     # LIGHTING: Late afternoon → dusk; warm rim from sun, cool lift from city bounce.
-    # SOUND: Distant city hum; soft wind; no sirens; occasional turbine flutter.
+    # SFX LOOP: Distant city hum; soft wind; no sirens.
+    # SFX ONE-SHOTS: Occasional turbine flutter.
+    # BLOCKING: Same rooftop as act1_09_breaking_point, but years earlier. Two silhouettes at rail.
+    # FX/COMP: Warm color grade for flashback; match cut to present (cool palette) at end.
 
-    athought "Before the ritual. Before the rejection. Before everything broke."
-    athought "Before Glass."
-    athought "There was a time when this rooftop felt like freedom."
+    #scene bg_rooftop_brothers_flashback with fade
+
+    # ========= OPENING — THE MEMORY =========
+
+    athought "Before the ritual, before the rejection, before everything broke—there was a time when this rooftop felt like freedom."
+
     athought "I was ten. Kael was fifteen. His Band had been working for three years."
 
-    # Two silhouettes at the rail; Kael’s silver Band visible.
+    # ========= BROTHERS AT THE RAIL =========
+    # VISUAL: Two silhouettes at the rail; Kael's silver Band catches the fading sun.
+
     k "You ever think about what's past the edge?"
+
     ya "(looks out) Past Solveil?"
+
     k "Past everything. The ruins. The dead cities. Whatever's left out there."
+
     ya "Father says there's nothing. Just ash and ghosts."
+
     k "(smirks) Father says a lot of things."
 
-    # Kael’s Band catches the fading sun; he rubs it like a hidden bruise.
-    "His Band gleams. Three years old. Still working. Barely."
-    "He touches it more than he used to. Like checking a wound."
+    # VISUAL: Kael rubs his Band like a hidden bruise—an unconscious tell.
+
+    "His Band gleams—three years old, still working. Barely. He touches it more than he used to, like checking a wound."
 
     ya "Does it still hurt?"
+
     k "(glances at his wrist) The Band? ...Sometimes. Lately."
+
     ya "Lately?"
+
     k "Started a few weeks ago. Like... pressure. From the inside."
+
     ya "(worried) Did you tell Father?"
+
     k "(bitter laugh) Tell Father his perfect son is glitching? No thanks."
 
-    # Young Aeron looks at his bare wrist.
+    # VISUAL: Young Aeron looks at his bare wrist.
+
     ya "{i}Two years. Two years until my turn.{/i}"
+
     ya "What if mine doesn't work?"
+
     k "It will. You're a Rylan."
+
     ya "So are you."
+
     k "(pause) ...Yeah. I am."
 
-    # Kael drifts closer to the edge; wind tugs sleeves.
+    # ========= KAEL AT THE EDGE =========
+    # VISUAL: Kael drifts closer to the edge; wind tugs at his sleeves.
+
     ya "(alarmed) Kael—"
+
     k "(laughs) Relax. I'm not gonna jump."
+
     k "Just seeing how close I can get before instinct kicks in."
+
     k "You know what's weird? Up here, I feel like I could actually fly."
+
     k "Like if I just... let go, the city would catch me."
+
     ya "(uneasy) That's not how physics works."
+
     k "(grins back) Physics. Listen to you, little professor."
 
-    "He steps back. Relief loosens my chest."
+    "He steps back."
+
+    athought "Relief loosens my chest."
 
     k "(serious) You ever feel like you're not really... you?"
+
     ya "What do you mean?"
+
     k "Like you're playing a part. Reading lines someone else wrote."
+
     ya "All the time."
+
     k "(nods) Yeah. Me too."
+
     k "(quieter) The Band was supposed to make me whole. Give me purpose."
+
     k "But lately... I don't know. Feels like it's taking something instead."
+
     ya "Taking what?"
+
     k "Me. The parts that used to be mine."
+
     k "(eyes the wrist) Sometimes I wonder what happens when you forget the lines."
+
     ya "You improvise?"
+
     k "(hollow laugh) Or you fall off the stage."
+
+    # ========= THE PROMISE =========
+    # VISUAL: The city wakes below—a thousand lights igniting like distant stars.
 
     "The city wakes below—a thousand lights igniting like distant stars."
 
     k "Promise me something."
+
     ya "What?"
+
     k "If I ever lose myself—if the Band fails, or if I become something I'm not—you'll remember who I was."
+
     ya "(confused) Why would the Band fail? It's been working for three years."
+
     k "Nothing works forever. Not even faith."
+
     k "(grips his shoulder) Just promise, Aeron."
 
-    "His grip is tight. Too tight. Then it eases."
-    
+    "His grip is tight—too tight—then it eases."
+
     ya "(hesitant) ...I promise."
+
     k "(softer) And if Father ever tries to make you into something you're not..."
+
     k "...don't let him. Fight it. Stay you."
+
     ya "I don't understand."
+
     k "You will. Someday. Just... remember this conversation."
 
-    # Brother warmth; a ruffle of hair; dusk deepens.
+    # ========= WARMTH BEFORE THE END =========
+    # VISUAL: Kael ruffles Aeron's hair; dusk deepens behind them.
+
     k "Good. 'Cause I'm gonna need someone to tell the truth when Father starts rewriting history."
+
     ya "(half-smile) You think he'd do that?"
+
     k "(dry) I think he already has."
 
     k "Two years, huh? Then you'll get your Band."
+
     ya "Yeah."
+
     k "You scared?"
+
     ya "(honest) Terrified."
+
     k "Good. Means you're paying attention."
+
     k "But listen... if it doesn't work. If the Band rejects you."
+
     k "Don't let Father turn you into a weapon just because you can't be a believer."
+
     ya "What?"
+
     k "Just... remember you're a person first. Not a tool."
 
     k "Come on. Dinner's in twenty. Father hates it when we're late."
+
     ya "(takes his hand, stands) Kael?"
+
     k "Yeah?"
+
     ya "Thanks. For... this."
+
     k "(grins) Anytime, little brother. Anytime."
 
-    # They exit; hold on empty rail.
+    # ========= EXIT — HOLD ON EMPTY RAIL =========
+    # VISUAL: They exit frame; hold on the empty rail against the darkening sky.
+
     "The wind stirs. The city hums. The edge remains."
 
-    # Match cut: present-day angle; colder palette.
+    # ========= MATCH CUT — PRESENT DAY =========
+    # VISUAL: Same angle, colder palette. Present-day rooftop.
+
     athought "Six months later, his Band rejected him completely. Age fifteen."
-    athought "Father pulled strings. Kept him in the Aeries. Called it mercy."
+
+    athought "Father pulled strings—kept him in the Aeries. Called it mercy."
+
     athought "Kael called it a cage."
+
     athought "The whispers followed him everywhere. 'Protected failure.' 'General's broken son.'"
-    athought "Two years after that, he stood here alone. Age seventeen."
-    athought "And he jumped."
+
+    athought "Two years after that, he stood here alone. Age seventeen. And he jumped."
 
     athought "I kept my promise. I remembered who you were."
-    athought "But I didn't understand what you meant. Not then."
+
+    athought "But I didn't understand what you meant—not then."
+
     athought "'Don't let Father turn you into a weapon,' you said."
+
     athought "Two years after your jump, my Band failed. Age twelve."
+
     athought "And Father did exactly what you warned me about."
-    athought "He made me Glass. Transparent. Empty. Useful."
-    athought "A weapon without faith. A tool without purpose."
+
+    athought "He made me transparent, empty, useful—a weapon without faith, a tool without purpose."
+
     athought "390 operations. Ten years of becoming what you told me to fight."
-    athought "The cage. The whispers. Father's 'mercy.' The weight of being saved when you wanted to fall."
+
+    athought "The cage, the whispers, Father's 'mercy'—the weight of being saved when you wanted to fall."
+
     athought "You knew. You tried to warn me. I didn't hear it until too late."
-    athought "But now... now Glass is cracking."
+
+    athought "But now... now something is cracking."
+
     athought "Maybe I can still fight it. Maybe it's not too late."
+
     athought "Maybe breaking is how I finally keep my promise to you."
 
-    "The memory fades. But the weight remains."
+    # ========= RETURN TO PRESENT =========
+
+    "The memory fades, but the weight remains."
+
     "Present day. His apartment."
 
-    $ set_scene_flag(scene_id, "completed")
+    $ scene_mark(_current_scene_id, "completed")
 
     return
 
@@ -149,29 +238,20 @@ label act1_10_brothers:
 # cann.scene_id: act1_10_brothers
 # cann.when_in_timeline: Flashback (Aeron 10, Kael 15) intercut before present rooftop/breaking-point thread.
 # cann.what_happened:
-#   - Kael confesses early Band “pressure” and identity drift; seeds failure at 15.
-#   - Brothers make two promises: (1) Remember who I was; (2) Don’t let Father make you a weapon.
+#   - Kael confesses early Band "pressure" and identity drift; seeds failure at 15.
+#   - Brothers make two promises: (1) Remember who I was; (2) Don't let Father make you a weapon.
 #   - Kael warns about Marcus rewriting history; Aeron agrees to be the memory.
-#   - Epilogue stinger: Kael’s failure at 15; jump at 17; Marcus’s “mercy” as cage.
-# cann.aeron_state: VO reflective; descriptive narration kept in third-person braces; no alignment gating in this flashback.
+#   - Epilogue stinger: Kael's failure at 15; jump at 17; Marcus's "mercy" as cage.
+# cann.aeron_state: VO reflective; descriptive narration kept sensory; no alignment gating in this flashback.
 # cann.path_tracking:
 #   - Scoring: NEU (no empathy/obedience adjustments; no menus).
-#   - Incoming running range: (carry from prior operational scene) unchanged.
-#   - Outgoing running range: unchanged (flashback does not alter math).
-# cann.flags: completed (flashback audit only).
+#   - Running range: unchanged (flashback does not alter math).
 # cann.thematic_flags:
-#   - Motifs: Edge/Flight, Performance/Lines, Glass origins, Mercy-as-Cage.
-#   - Echo lines: “Don’t let Father turn you into a weapon.” “Nothing works forever. Not even faith.”
-# cann.block_status: ANCHOR-LORE (no branch); supports emotional load for act1_11_breaking_point and later Marcus confrontations.
-# cann.true_path_integration: none (non-menu memory; if you later tag VO acceptances for TP, this scene is a reference, not an increment).
+#   - Motifs: Edge/Flight, Performance/Lines, origins of Aeron's transformation, Mercy-as-Cage.
+#   - Echo lines: "Don't let Father turn you into a weapon." "Nothing works forever. Not even faith."
+# cann.block_status: ANCHOR-LORE (no branch); supports emotional load for act1_11_breaking_point and Marcus confrontations.
 # cann.visual_plate_economy:
-#   - REUSE: Rooftop master plate from present; warm pass for flashback, cool pass for present stinger.
-#   - HERO: Macro of Kael’s fingers on the Band (hairline rainbow glint); empty-rail hold after exit.
+#   - REUSE: Rooftop master plate; warm pass for flashback, cool pass for present stinger.
+#   - HERO: Macro of Kael's fingers on the Band; empty-rail hold after exit.
 # cann.requires_followup:
-#   - Later scenes should echo Kael’s “person first, not a tool” line; unlock a recognition beat if player resists an “easy shot” in Sector 10.
-# cann.consistency_asserts:
-#   - Aeries altitude: no precip; use wind/pressure/condensation language only.
-#   - Ages/timing: Kael 12→Band, 15→failure, 17→jump; Aeron 12→failed Branding → “Glass.”
-# cann.qa_hooks:
-#   - Ensure label/scene_id/_current_scene_id are 1:1 (“act1_10_brothers”).
-#   - Log flashback completion with `set_scene_flag(scene_id, "completed")` for recap screens.
+#   - Later scenes echo "person first, not a tool" line; recognition beat if player resists "easy shot" in Sector 10.

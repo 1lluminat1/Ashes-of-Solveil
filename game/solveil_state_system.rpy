@@ -440,6 +440,398 @@ init python:
         return applied
 
     # =========================
+    # NPC MEMORY SYSTEM
+    # =========================
+    # NPCs remember specific events they witnessed or experienced.
+    # Memories have: event key, emotional tone, source scene, optional details.
+
+    def npc_remember(name, event, tone="neutral", detail=None):
+        """
+        Mark that an NPC experienced/witnessed something.
+        
+        Args:
+            name: Character name (will be normalized)
+            event: String key for the event (e.g., "saw_aeron_help_worker")
+            tone: Emotional context - "grateful", "suspicious", "angry", "grudging_respect", etc.
+            detail: Optional string with extra context
+        """
+        c = STATE["chars"].get(_c(name))
+        if not c:
+            return False
+        
+        if "memory" not in c:
+            c["memory"] = []
+        
+        # Don't duplicate the same event
+        if any(m["event"] == event for m in c["memory"]):
+            return False
+        
+        c["memory"].append({
+            "event": event,
+            "tone": tone,
+            "detail": detail,
+            "scene": globals().get("_current_scene_id", "unknown")
+        })
+        return True
+
+    def npc_recalls(name, event):
+        """Check if NPC remembers a specific event."""
+        c = STATE["chars"].get(_c(name))
+        if c and "memory" in c:
+            return any(m["event"] == event for m in c["memory"])
+        return False
+
+    def npc_recall_tone(name, event):
+        """Get the emotional tone of a specific memory. Returns None if not found."""
+        c = STATE["chars"].get(_c(name))
+        if c and "memory" in c:
+            for m in c["memory"]:
+                if m["event"] == event:
+                    return m.get("tone", "neutral")
+        return None
+
+    def npc_memories(name):
+        """Get all memories for an NPC. Returns empty list if none."""
+        c = STATE["chars"].get(_c(name))
+        if c and "memory" in c:
+            return list(c["memory"])
+        return []
+
+    def npc_has_any_memory(name, *events):
+        """Check if NPC remembers ANY of the listed events."""
+        for event in events:
+            if npc_recalls(name, event):
+                return True
+        return False
+
+    def npc_has_all_memories(name, *events):
+        """Check if NPC remembers ALL of the listed events."""
+        for event in events:
+            if not npc_recalls(name, event):
+                return False
+        return True
+
+    def npc_memory_count(name):
+        """How many memories does this NPC have of the player?"""
+        c = STATE["chars"].get(_c(name))
+        if c and "memory" in c:
+            return len(c["memory"])
+        return 0
+
+    def npc_last_tone(name):
+        """Get the tone of the NPC's most recent memory. Useful for 'how did we leave things?'"""
+        c = STATE["chars"].get(_c(name))
+        if c and "memory" in c and len(c["memory"]) > 0:
+            return c["memory"][-1].get("tone", "neutral")
+        return "neutral"
+
+
+    # =========================
+    # WORLD STATE SYSTEM
+    # =========================
+    # Environmental conditions based on aggregate state.
+    # Returns tags that scenes can check for descriptive and mechanical changes.
+
+    def world_state():
+        """
+        Returns a set of environmental condition tags based on current state.
+        Scenes can check these for flavor text and content gating.
+        """
+        tags = set()
+        
+        # --- Reputation-based ---
+        ur = STATE["rep"].get("unders", 0)
+        if ur >= 15:
+            tags.add("unders_trusted")      # People vouch for you, doors open
+        elif ur >= 5:
+            tags.add("unders_known")        # Recognized positively, small courtesies
+        elif ur >= -5:
+            tags.add("unders_neutral")      # Nobody cares, which is fine
+        elif ur >= -15:
+            tags.add("unders_disliked")     # Cold shoulders, worse prices
+        else:
+            tags.add("unders_hated")        # Active hostility, some refuse service
+        
+        rr = STATE["rep"].get("resistance", 0)
+        if rr >= 20:
+            tags.add("resistance_hero")
+        elif rr >= 10:
+            tags.add("resistance_trusted")
+        elif rr >= 0:
+            tags.add("resistance_probation")
+        else:
+            tags.add("resistance_suspect")
+        
+        # --- Heat / Danger ---
+        alert = STATE["player"].get("echelon_alert", 0)
+        if alert >= 10:
+            tags.add("heat_critical")       # Lockdowns, constant patrols
+        elif alert >= 7:
+            tags.add("heat_high")           # Extra drones, checkpoints
+        elif alert >= 4:
+            tags.add("heat_elevated")       # Noticeable increase in patrols
+        else:
+            tags.add("heat_normal")
+        
+        # --- Resource scarcity ---
+        food = STATE["inv"]["counters"].get("food", 0)
+        water = STATE["inv"]["counters"].get("water", 0)
+        
+        if food <= 0:
+            tags.add("starving")
+        elif food <= 1:
+            tags.add("hungry")
+        
+        if water <= 0:
+            tags.add("dehydrated")
+        elif water <= 1:
+            tags.add("thirsty")
+        
+        if food <= 0 and water <= 0:
+            tags.add("desperate")
+        
+        # --- Alignment visibility ---
+        # How others perceive Aeron based on recent behavior
+        mom = alignment_momentum()
+        if mom > 0.6:
+            tags.add("visibly_softening")   # People notice he's different
+        elif mom < -0.6:
+            tags.add("visibly_hardening")   # People notice the cold
+        
+        tier = alignment_tier()
+        if tier in ("EMP2", "EMP3"):
+            tags.add("reputation_compassionate")
+        elif tier in ("OB2", "OB3"):
+            tags.add("reputation_ruthless")
+        
+        # --- Time pressure ---
+        days = STATE["player"].get("days_remaining", 7)
+        if days <= 1:
+            tags.add("time_critical")
+        elif days <= 3:
+            tags.add("time_pressure")
+        
+        # --- Bounty awareness ---
+        bounty = STATE["player"]["bounty"].get("aeron", 0)
+        if bounty >= 100000:
+            tags.add("bounty_massive")
+        elif bounty >= 50000:
+            tags.add("bounty_high")
+        elif bounty >= 25000:
+            tags.add("bounty_moderate")
+        
+        return tags
+
+    def world_has(*conditions):
+        """Check if ANY of the listed world conditions are active."""
+        ws = world_state()
+        for c in conditions:
+            if c in ws:
+                return True
+        return False
+
+    def world_has_all(*conditions):
+        """Check if ALL of the listed world conditions are active."""
+        ws = world_state()
+        for c in conditions:
+            if c not in ws:
+                return False
+        return True
+
+
+    # =========================
+    # CONTENT GATING SYSTEM
+    # =========================
+    # Unified checks for whether content is available/locked.
+    # Combines reputation, flags, relationships, and world state.
+
+    def can_access(gate_type, target=None, threshold=None):
+        """
+        Unified content gate check.
+        
+        Args:
+            gate_type: What kind of gate - "vendor", "info", "location", "mission", "dialogue"
+            target: Specific target (vendor name, location name, etc.)
+            threshold: Optional override for default thresholds
+        
+        Returns:
+            tuple: (allowed: bool, reason: str or None)
+        """
+        ws = world_state()
+        
+        if gate_type == "vendor":
+            # Vendors may refuse service based on reputation
+            if "unders_hated" in ws:
+                return (False, "hated")
+            if target and npc_recalls(target, "cheated_by_player"):
+                return (False, "personal_grudge")
+            if target and npc_recalls(target, "threatened_by_player"):
+                return (False, "threatened")
+            return (True, None)
+        
+        elif gate_type == "info":
+            # Information availability based on trust/reputation
+            if "unders_hated" in ws:
+                return (False, "no_one_talks")
+            if "unders_disliked" in ws:
+                # Can get info but it costs more or is unreliable
+                return (True, "costs_extra")
+            return (True, None)
+        
+        elif gate_type == "safehouse":
+            # Can you use resistance safehouses?
+            if "resistance_suspect" in ws:
+                return (False, "not_trusted")
+            return (True, None)
+        
+        elif gate_type == "mission":
+            # Mission availability often depends on multiple factors
+            if target:
+                # Check if specific mission is locked by flags
+                if scene_has("missions", f"{target}_locked"):
+                    return (False, "locked")
+                if scene_has("missions", f"{target}_completed"):
+                    return (False, "completed")
+            return (True, None)
+        
+        # Default: allowed
+        return (True, None)
+
+    def gate_check(gate_type, target=None):
+        """Simple boolean version of can_access."""
+        allowed, _ = can_access(gate_type, target)
+        return allowed
+
+    def gate_reason(gate_type, target=None):
+        """Get just the reason string (or None if allowed)."""
+        _, reason = can_access(gate_type, target)
+        return reason
+
+
+    # =========================
+    # ENCOUNTER TRACKING
+    # =========================
+    # Track how many times player has interacted with an NPC.
+
+    def encounter_inc(name):
+        """Increment encounter count with an NPC."""
+        c = STATE["chars"].get(_c(name))
+        if c:
+            if "encounters" not in c:
+                c["encounters"] = 0
+            c["encounters"] += 1
+            return c["encounters"]
+        return 0
+
+    def encounter_count(name):
+        """Get number of encounters with an NPC."""
+        c = STATE["chars"].get(_c(name))
+        if c:
+            return c.get("encounters", 0)
+        return 0
+
+    def first_encounter(name):
+        """Is this the first time meeting this NPC?"""
+        return encounter_count(name) == 0
+
+    def met_before(name):
+        """Have we met this NPC before?"""
+        return encounter_count(name) > 0
+
+
+    # =========================
+    # REACTIVE FLAVOR HELPERS
+    # =========================
+    # Shorthand for common reactive patterns.
+
+    def react_if(condition, text_true, text_false=""):
+        """
+        Simple conditional text helper.
+        Returns text_true if condition is truthy, else text_false.
+        """
+        return text_true if condition else text_false
+
+    def react_rep(faction, high_text, mid_text, low_text):
+        """
+        Return text based on faction reputation tier.
+        High: >= 10, Mid: -5 to 9, Low: < -5
+        """
+        r = STATE["rep"].get(faction, 0)
+        if r >= 10:
+            return high_text
+        elif r >= -5:
+            return mid_text
+        else:
+            return low_text
+
+    def react_trust(name, high_text, mid_text, low_text):
+        """
+        Return text based on NPC trust level.
+        High: >= 7, Mid: 3-6, Low: < 3
+        """
+        t = trust(name)
+        if t >= 7:
+            return high_text
+        elif t >= 3:
+            return mid_text
+        else:
+            return low_text
+
+
+    # =========================
+    # EXAMPLE USAGE PATTERNS
+    # =========================
+    #
+    # --- NPC Memory ---
+    # When something happens:
+    #   $ npc_remember("foreman_rusk", "stopped_line_for_worker", tone="grudging_respect")
+    #   $ npc_remember("vendor_marta", "bought_at_fair_price", tone="neutral")
+    #   $ npc_remember("vendor_marta", "haggled_aggressively", tone="annoyed")
+    #
+    # Later, checking:
+    #   if npc_recalls("foreman_rusk", "stopped_line_for_worker"):
+    #       foreman "Still playing hero, Voss?"
+    #
+    #   if npc_last_tone("vendor_marta") == "annoyed":
+    #       "She doesn't smile when she sees you."
+    #
+    # --- World State ---
+    # At scene moments where environment matters:
+    #   if world_has("unders_hated"):
+    #       "The vendor's hand moves under the counter. Not a greeting."
+    #
+    #   if world_has("heat_high"):
+    #       "Drone shadows pass overhead twice as often as yesterday."
+    #
+    #   if world_has("hungry", "thirsty"):
+    #       "His stomach cramps. They've been rationing for two days."
+    #
+    # --- Content Gating ---
+    # Before offering content:
+    #   if gate_check("vendor", "marta"):
+    #       menu:
+    #           "Buy supplies":
+    #               ...
+    #   else:
+    #       vendor "I don't sell to your kind."
+    #
+    #   $ allowed, reason = can_access("info")
+    #   if not allowed:
+    #       "Nobody here will talk to you."
+    #   elif reason == "costs_extra":
+    #       "Information costs double when nobody trusts you."
+    #
+    # --- Encounter Tracking ---
+    # Scene start:
+    #   $ encounter_inc("doc_mara")
+    #   if first_encounter("doc_mara"):
+    #       "A woman in a stained coat looks up from her work."
+    #   else:
+    #       "Doc Mara nods when she sees you. She remembers."
+    #
+
+
+    # =========================
     # OPERATIONS SNAPSHOT (start/end)
     # =========================
     def op_start(op_id, note=None):
