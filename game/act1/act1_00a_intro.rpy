@@ -1,6 +1,6 @@
 # ===================================================
 # ACT 1 - Scene 1: Intro
-# File: act1_01_intro.rpy
+# File: act1_00a_intro.rpy
 # ===================================================
 
 
@@ -15,17 +15,17 @@ label act1_intro:
     # VISUAL: Transition downward through the tiers—Aeries → Middle Levels.
     # AERIES should feel suffocating perfection: symmetry, glass, no wind.
 
-    "At the peak: the Aeries. Glass without dust. Light without warmth."
+    "At the peak: the Aeries. Glass without dust. Silence without peace."
 
     # VISUAL: Middle Levels—dense, industrial, humming with surveillance and motion.
 
-    "Below that: the Middle Levels grind—commerce, paperwork, cameras."
+    "Below that: the Middle Levels churn—industry, schedule, and the hum of being watched."
     "A restless machine, paying for the view above."
 
     # VISUAL: Unders—neon haze, dripping water, faint human sounds; light returns from within.
     # Should contrast sharply with the silence of the upper tiers.
 
-    "And beneath it all: The **Unders**. The forgotten heart. The rotten core."
+    "And beneath it all: The **Unders**. The forgotten heart."
     "Here, light survives by learning to breathe."
 
     # VISUAL: Composite wide shot of the entire city—Aeries to Unders, unified vertical frame.
@@ -37,8 +37,7 @@ label act1_intro:
     # VISUAL: Fade to black; single ember glows. 
     # Color shift from cold white to faint orange—symbol of hidden humanity.
 
-    "Not everything stayed buried."
-    "Some truths wait in the glass for someone willing to look."
+    "Not everything stayed buried..."
 
     # canon_note: Keep narration under ~140 words. 
     # Aeries = top-down white light (control); Unders = internal warm light (humanity).
