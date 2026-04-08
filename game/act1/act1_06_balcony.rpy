@@ -98,6 +98,7 @@ label act1_06_balcony:
         "Hold her gaze.":
             $ record_choice_once(_current_scene_id, "_held_gaze")
             $ scene_mark(_current_scene_id, "held_gaze")
+            $ tp_seed("a1.balcony.hold_gaze")
 
             if pass_tier("OB2", "OB3"):
                 athought "Observation, not connection. I catalog her expression—nothing more."

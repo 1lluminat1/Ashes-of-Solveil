@@ -257,10 +257,11 @@ init python:
     }
 
     def ui_current():
-        """Act palette with subtle path deltas."""
+        """Act palette with subtle path deltas. Reads path_state from STATE for live sync."""
         pal = UI_PALETTE.get(current_act, UI_PALETTE[1]).copy()
-        if path_state == "OB":
+        ps = STATE.get("canon", {}).get("path_state", path_state)
+        if ps == "OB":
             pal["radius"] = max(0, pal["radius"] - 2)
-        elif path_state == "EMP":
+        elif ps == "EMP":
             pal["radius"] = min(12, pal["radius"] + 2)
         return pal

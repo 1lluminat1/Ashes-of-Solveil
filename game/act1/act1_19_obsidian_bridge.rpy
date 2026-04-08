@@ -138,6 +138,8 @@ label act1_obsidian_bridge:
 
         $ grant_tool("encrypted_comm")
         $ scene_mark(_current_scene_id, "device_given")
+        $ flag_on("Zira", "ghostline_access_granted")
+        $ tp_seed("a1.bridge.ghostline_accept")
 
     elif em >= 1:
         # ===== MODERATE MERCY PATH (50–149 saved) =====
@@ -194,6 +196,8 @@ label act1_obsidian_bridge:
 
         $ grant_tool("encrypted_comm")
         $ scene_mark(_current_scene_id, "device_given_conditional")
+        $ flag_on("Zira", "ghostline_access_granted")
+        $ tp_seed("a1.bridge.ghostline_accept")
 
     else:
         # ===== LOW MERCY PATH (<50 saved) =====

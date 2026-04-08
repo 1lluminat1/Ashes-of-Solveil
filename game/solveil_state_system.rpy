@@ -21,14 +21,14 @@ init python:
     # =========================
     STATE = {
         "chars": {
-            # Example seeds (adjust to your actual starts)
-            "Lyra":    {"rel":{"trust":1,"affection":0,"loyalty":0}, "flags":set(), "ms":set(), "notes":[]},
-            "Zira":    {"rel":{"trust":0,"affection":0,"loyalty":0}, "flags":set(), "ms":set(), "notes":[]},
-            "Tessa":   {"rel":{"trust":0,"affection":0,"loyalty":0}, "flags":set(), "ms":set(), "notes":[]},
-            "Noelle":  {"rel":{"trust":0,"affection":0,"loyalty":0}, "flags":set(), "ms":set(), "notes":[]},
-            "Selene":  {"rel":{"trust":0,"affection":0,"loyalty":0}, "flags":set(), "ms":set(), "notes":[]},
-            "Nero":    {"rel":{"trust":0,"affection":0,"loyalty":0}, "flags":set(), "ms":set(), "notes":[]},
-            "doc_mara":{"rel":{"trust":0,"affection":0,"loyalty":0}, "flags":set(), "ms":set(), "notes":[]},
+            # Character template: rel, flags, ms, notes, memory, encounters
+            "Lyra":    {"rel":{"trust":1,"affection":0,"loyalty":0}, "flags":set(), "ms":set(), "notes":[], "memory":[], "encounters":0},
+            "Zira":    {"rel":{"trust":0,"affection":0,"loyalty":0}, "flags":set(), "ms":set(), "notes":[], "memory":[], "encounters":0},
+            "Tessa":   {"rel":{"trust":0,"affection":0,"loyalty":0}, "flags":set(), "ms":set(), "notes":[], "memory":[], "encounters":0},
+            "Noelle":  {"rel":{"trust":0,"affection":0,"loyalty":0}, "flags":set(), "ms":set(), "notes":[], "memory":[], "encounters":0},
+            "Selene":  {"rel":{"trust":0,"affection":0,"loyalty":0}, "flags":set(), "ms":set(), "notes":[], "memory":[], "encounters":0},
+            "Nero":    {"rel":{"trust":0,"affection":0,"loyalty":0}, "flags":set(), "ms":set(), "notes":[], "memory":[], "encounters":0},
+            "doc_mara":{"rel":{"trust":0,"affection":0,"loyalty":0}, "flags":set(), "ms":set(), "notes":[], "memory":[], "encounters":0},
         },
 
         "scenes": {
@@ -89,7 +89,7 @@ init python:
             "debug_mode": False,
             "logs": [],
             "telemetry_on": True,     # gate file writes in release builds
-            "edges_seen": set(),      # Mermaid edge dedup
+            "edges_seen": [],         # Mermaid edge dedup (list for save compatibility)
         },
     }
 
@@ -100,10 +100,18 @@ init python:
             if k not in p: p[k] = 0
         sys = STATE.get("sys", {})
         if "edges_seen" not in sys:
-            sys["edges_seen"] = set()
+            sys["edges_seen"] = []
+        elif isinstance(sys["edges_seen"], set):
+            sys["edges_seen"] = list(sys["edges_seen"])
         if "telemetry_on" not in sys:
             sys["telemetry_on"] = True
         STATE["sys"] = sys
+        # Migrate old char dicts to include memory and encounters
+        for cdata in STATE.get("chars", {}).values():
+            if "memory" not in cdata:
+                cdata["memory"] = []
+            if "encounters" not in cdata:
+                cdata["encounters"] = 0
 
     if not hasattr(config, "after_load_callbacks"):
         config.after_load_callbacks = []
@@ -113,7 +121,22 @@ init python:
     # =========================
     # SMALL INTERNALS
     # =========================
-    def _c(name): return name if name in STATE["chars"] else name.title()
+    def _c(name):
+        if name in STATE["chars"]:
+            return name
+        titled = name.title()
+        if titled in STATE["chars"]:
+            return titled
+        raise KeyError("Unknown character '{}'. Known: {}".format(name, ", ".join(STATE["chars"].keys())))
+
+    def _c_safe(name):
+        """Like _c() but returns None instead of raising on unknown characters."""
+        if name in STATE["chars"]:
+            return name
+        titled = name.title()
+        if titled in STATE["chars"]:
+            return titled
+        return None
     def _ensure_scene(scene_id):
         flags = STATE["scenes"]["flags"]
         if scene_id not in flags: flags[scene_id] = set()
@@ -165,6 +188,7 @@ init python:
     # =========================
     def add_item_counter(key, qty=1):
         c = STATE["inv"]["counters"]; c[key] = c.get(key,0) + qty
+        _invalidate_world_state()
     def grant_tool(k):      STATE["inv"]["tools"].add(k)
     def has_tool(k):        return k in STATE["inv"]["tools"]
     def grant_disguise(k):  STATE["inv"]["disguises"].add(k)
@@ -177,7 +201,9 @@ init python:
     # =========================
     # REPUTATION / STATS / SKILLS
     # =========================
-    def rep_inc(faction, amt): STATE["rep"][faction] = STATE["rep"].get(faction,0)+amt
+    def rep_inc(faction, amt):
+        STATE["rep"][faction] = STATE["rep"].get(faction,0)+amt
+        _invalidate_world_state()
     def stat_inc(key, amt=1):  STATE["stats"][key] = STATE["stats"].get(key,0)+amt
     def learn(skill):          STATE["skills"].add(skill)
     def knows(skill):          return skill in STATE["skills"]
@@ -210,13 +236,19 @@ init python:
     ACT2_OB_RATIO  = 0.85   # hard OB lock
     ACT2_EMP_RATIO = 0.65   # hard EMP lock
 
+    def _calc_ratios():
+        """Compute OB and EMP ratios from player counters. Returns (ob_ratio, emp_ratio)."""
+        p = STATE["player"]
+        ob_ratio  = float(p["took_ob"])  / float(max(1, p["opp_ob"]))
+        emp_ratio = float(p["took_emp"]) / float(max(1, p["opp_emp"]))
+        return ob_ratio, emp_ratio
+
     def evaluate_path_candidate_act1():
         # Chip acceptance overrides to EMP candidate
         if STATE["canon"].get("chip_accepted", False):
             STATE["canon"]["path_candidate"] = "EMP"
             return "EMP"
-        ob_opp = max(1, STATE["player"]["opp_ob"])   # avoid div by zero
-        ob_ratio = float(STATE["player"]["took_ob"]) / float(ob_opp)
+        ob_ratio, _ = _calc_ratios()
         STATE["canon"]["path_candidate"] = "OB" if ob_ratio >= ACT1_OB_RATIO else "EMP"
         return STATE["canon"]["path_candidate"]
 
@@ -230,12 +262,9 @@ init python:
             STATE["canon"]["path_state"] = "EMP"
             return "EMP"
 
-        ob_opp  = max(1, STATE["player"]["opp_ob"])
-        emp_opp = max(1, STATE["player"]["opp_emp"])
-        ob_ratio  = float(STATE["player"]["took_ob"])  / float(ob_opp)
-        emp_ratio = float(STATE["player"]["took_emp"]) / float(emp_opp)
+        ob_ratio, emp_ratio = _calc_ratios()
 
-        if ob_ratio  >= ACT2_OB_RATIO:
+        if ob_ratio >= ACT2_OB_RATIO:
             STATE["canon"]["path_state"] = "OB"
         elif emp_ratio >= ACT2_EMP_RATIO:
             STATE["canon"]["path_state"] = "EMP"
@@ -255,7 +284,6 @@ init python:
     # =========================
     # ALIGNMENT / EMP–OB
     # =========================
-    USE_EMPATHY_CLAMP = False     # Toggle: set True to enforce rails
     EMPATHY_MIN = -12
     EMPATHY_MAX =  12
     EMP_EDGE = 3
@@ -317,11 +345,10 @@ init python:
         arr = STATE["player"]["recent_empathy"]
         arr.append(int(delta))
         if len(arr) > RECENT_N:
-            del arr[0:len(arr)-RECENT_N]
+            arr[:] = arr[-RECENT_N:]
 
     def clamp_empathy():
-        if not USE_EMPATHY_CLAMP:
-            return
+        """Clamp empathy_score to [EMPATHY_MIN, EMPATHY_MAX] range."""
         s = STATE["player"]["empathy_score"]
         STATE["player"]["empathy_score"] = max(EMPATHY_MIN, min(EMPATHY_MAX, s))
 
@@ -348,6 +375,7 @@ init python:
         _push_recent(amount)
         STATE["player"]["empathy_score"] += int(amount)
         clamp_empathy()
+        _invalidate_world_state()
 
     def _mark_once(scene_id: str, prefix: str, token: str) -> bool:
         """
@@ -448,14 +476,15 @@ init python:
     def npc_remember(name, event, tone="neutral", detail=None):
         """
         Mark that an NPC experienced/witnessed something.
-        
+
         Args:
             name: Character name (will be normalized)
             event: String key for the event (e.g., "saw_aeron_help_worker")
             tone: Emotional context - "grateful", "suspicious", "angry", "grudging_respect", etc.
             detail: Optional string with extra context
         """
-        c = STATE["chars"].get(_c(name))
+        key = _c_safe(name)
+        c = STATE["chars"].get(key) if key else None
         if not c:
             return False
         
@@ -476,14 +505,16 @@ init python:
 
     def npc_recalls(name, event):
         """Check if NPC remembers a specific event."""
-        c = STATE["chars"].get(_c(name))
+        key = _c_safe(name)
+        c = STATE["chars"].get(key) if key else None
         if c and "memory" in c:
             return any(m["event"] == event for m in c["memory"])
         return False
 
     def npc_recall_tone(name, event):
         """Get the emotional tone of a specific memory. Returns None if not found."""
-        c = STATE["chars"].get(_c(name))
+        key = _c_safe(name)
+        c = STATE["chars"].get(key) if key else None
         if c and "memory" in c:
             for m in c["memory"]:
                 if m["event"] == event:
@@ -492,7 +523,8 @@ init python:
 
     def npc_memories(name):
         """Get all memories for an NPC. Returns empty list if none."""
-        c = STATE["chars"].get(_c(name))
+        key = _c_safe(name)
+        c = STATE["chars"].get(key) if key else None
         if c and "memory" in c:
             return list(c["memory"])
         return []
@@ -513,14 +545,16 @@ init python:
 
     def npc_memory_count(name):
         """How many memories does this NPC have of the player?"""
-        c = STATE["chars"].get(_c(name))
+        key = _c_safe(name)
+        c = STATE["chars"].get(key) if key else None
         if c and "memory" in c:
             return len(c["memory"])
         return 0
 
     def npc_last_tone(name):
         """Get the tone of the NPC's most recent memory. Useful for 'how did we leave things?'"""
-        c = STATE["chars"].get(_c(name))
+        key = _c_safe(name)
+        c = STATE["chars"].get(key) if key else None
         if c and "memory" in c and len(c["memory"]) > 0:
             return c["memory"][-1].get("tone", "neutral")
         return "neutral"
@@ -532,11 +566,23 @@ init python:
     # Environmental conditions based on aggregate state.
     # Returns tags that scenes can check for descriptive and mechanical changes.
 
+    _world_state_cache = None
+    _world_state_dirty = True
+
+    def _invalidate_world_state():
+        global _world_state_dirty
+        _world_state_dirty = True
+
     def world_state():
         """
         Returns a set of environmental condition tags based on current state.
         Scenes can check these for flavor text and content gating.
+        Cached — call _invalidate_world_state() when rep/inv/alert changes.
         """
+        global _world_state_cache, _world_state_dirty
+        if not _world_state_dirty and _world_state_cache is not None:
+            return _world_state_cache
+
         tags = set()
         
         # --- Reputation-based ---
@@ -619,7 +665,9 @@ init python:
             tags.add("bounty_high")
         elif bounty >= 25000:
             tags.add("bounty_moderate")
-        
+
+        _world_state_cache = tags
+        _world_state_dirty = False
         return tags
 
     def world_has(*conditions):
@@ -715,7 +763,8 @@ init python:
 
     def encounter_inc(name):
         """Increment encounter count with an NPC."""
-        c = STATE["chars"].get(_c(name))
+        key = _c_safe(name)
+        c = STATE["chars"].get(key) if key else None
         if c:
             if "encounters" not in c:
                 c["encounters"] = 0
@@ -725,7 +774,8 @@ init python:
 
     def encounter_count(name):
         """Get number of encounters with an NPC."""
-        c = STATE["chars"].get(_c(name))
+        key = _c_safe(name)
+        c = STATE["chars"].get(key) if key else None
         if c:
             return c.get("encounters", 0)
         return 0
@@ -902,7 +952,7 @@ init python:
     def log_line(text):
         q = STATE["sys"]["logs"]
         q.append(str(text))
-        if len(q) > 12: del q[:len(q)-12]
+        if len(q) > 12: q[:] = q[-12:]
     
     # ---------- Foundations / schema ----------
     STATE_SCHEMA_VERSION = 2  # bump if you change structure
@@ -932,7 +982,8 @@ init python:
         STATE.setdefault("flags", {})
         STATE.setdefault("metrics", {})
         sys = STATE.setdefault("sys", {})
-        sys.setdefault("edges_seen", set())
+        if not isinstance(sys.get("edges_seen"), list):
+            sys["edges_seen"] = list(sys.get("edges_seen", []))
         sys.setdefault("telemetry_on", True)
 
     if ensure_schema_migrations not in config.after_load_callbacks:

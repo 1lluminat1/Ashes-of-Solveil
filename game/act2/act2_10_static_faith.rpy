@@ -279,6 +279,11 @@ label act2_10_static_faith:
     # --- SCENE WRAP ---
     $ flag_on("Zira", "lyra_confrontation_resolved")
     $ flag_on("Lyra", "zira_confrontation_resolved")
+
+    # Truth Shard: Faith and cynicism acknowledged the same wound from different angles
+    if trust("Lyra") >= 1 and trust("Zira") >= 1:
+        $ tp_seed("a2.static_faith.mutual_respect")
+
     $ scene_mark(_current_scene_id, "chapter_2_complete")
     $ scene_mark(_current_scene_id, "completed")
     return

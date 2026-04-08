@@ -146,7 +146,7 @@ label act1_04_hallway:
                 note="Accepts stigma without concealment; micro-assertion of self vs performance."
             )
 
-            #$ adjust_true_path_resonance_once("a1.hallway.wrist_show", 1)
+            $ tp_seed("a1.hallway.wrist_show")
 
             athought "No Band. No need to lie about it."
 

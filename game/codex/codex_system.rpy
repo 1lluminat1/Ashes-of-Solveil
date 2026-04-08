@@ -211,22 +211,45 @@ init 2 python:
         codex_unlock(entry_id, source=source)
 
     # Search/filter (index only rendered text so we don’t leak spoilers)
+    # Search index: maps entry_id -> lowercase searchable text (title + tags)
+    # Avoids re-rendering full entry text on every search call
+    _codex_search_index = {}
+
+    def _codex_index_entry(entry_id, meta):
+        """Build search index for a single entry (title + tags only)."""
+        title = meta.get("title", u"")
+        tags  = " ".join(meta.get("tags", []))
+        _codex_search_index[entry_id] = u" ".join([title, tags]).lower()
+
+    def _codex_rebuild_index():
+        """Rebuild the full search index from current entries."""
+        c = _codex_root()
+        _codex_search_index.clear()
+        for k, meta in c["entries"].items():
+            _codex_index_entry(k, meta)
+
     def codex_list(category=None, unlocked_only=True, query=u""):
         c = _codex_root()
         items = []
         q = (query or u"").strip().lower()
+
+        # Rebuild index if it's empty (first call or after load)
+        if not _codex_search_index and c["entries"]:
+            _codex_rebuild_index()
+
         for k, meta in c["entries"].items():
             is_unlocked = (k in c["unlocked"])
             if unlocked_only and not is_unlocked:
                 continue
             if category and meta.get("category") != category:
                 continue
-            rendered = " ".join(codex_render(k)).lower()
-            title = meta.get("title", u"")
-            tags  = " ".join(meta.get("tags", []))
-            hay = " ".join([title, tags, rendered]).lower()
-            if q and q not in hay:
-                continue
+            if q:
+                hay = _codex_search_index.get(k, u"")
+                if q not in hay:
+                    # Fall back to rendered text only if index didn't match
+                    rendered = u" ".join(codex_render(k)).lower()
+                    if q not in rendered:
+                        continue
             items.append((k, meta, is_unlocked))
         items.sort(key=lambda t: renpy.translation.translate_string(t[1].get("title", u""), None).lower())
         return items

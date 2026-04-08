@@ -303,6 +303,7 @@ label act2_05_clinic:
             )
             $ npc_remember("Tessa", "aeron_admitted_guilt", tone="cautious_respect")
             $ scene_mark(_current_scene_id, "first_impression_soft")
+            $ tp_seed("a2.clinic.honest_guilt")
 
             a "I've spent years being the reason places like this stay full."
 

@@ -152,84 +152,139 @@ label act2_12_proof_of_intent:
 
     mira "(through vent) Aeron? Call it."
 
-    # --- PLAYER CHOICE: How does Aeron handle the guard? ---
-    menu:
-        "The guard is in the way. How does Aeron proceed?"
+    # --- PLAYER CHOICE: How does Aeron handle the guard? (EMERGENCE MENU) ---
+    call screen emergence_menu(
+        option_a="Find another way — no unnecessary casualties.",
+        option_b="Authorize the takedown — mission priority.",
+        option_c="Call out to him.",
+        wait_seconds=12.0,
+        prompt="The guard is in the way. How does Aeron proceed?"
+    )
+    $ _guard_choice = _return
 
-        "Find another way—no unnecessary casualties.":
-            $ choice_and_dev(
-                _current_scene_id, "_avoid_guard", "EMP", factor=2,
-                note="Aeron chooses to find an alternative route rather than eliminate a young guard."
-            )
-            $ npc_remember("Cade", "aeron_spared_young_guard", tone="surprised")
-            $ npc_remember("Mira", "aeron_spared_young_guard", tone="relieved")
-            $ scene_mark(_current_scene_id, "guard_spared")
+    if _guard_choice == "a":
+        # === "Find another way" EMP branch ===
+        $ choice_and_dev(
+            _current_scene_id, "_avoid_guard", "EMP", factor=2,
+            note="Aeron chooses to find an alternative route rather than eliminate a young guard."
+        )
+        $ npc_remember("Cade", "aeron_spared_young_guard", tone="surprised")
+        $ npc_remember("Mira", "aeron_spared_young_guard", tone="relieved")
+        $ scene_mark(_current_scene_id, "guard_spared")
 
-            a "Hold. I'll find another route."
+        a "Hold. I'll find another route."
 
-            cade "(through vent) There is no other route. You said so yourself."
+        cade "(through vent) There is no other route. You said so yourself."
 
-            a "Then I was wrong."
+        a "Then I was wrong."
 
-            "He studies the layout. His own design. There has to be something—"
+        "He studies the layout. His own design. There has to be something—"
 
-            athought "Emergency drainage. Sub-level access for flooding protocols. I forgot about it because it was never meant to be used."
+        athought "Emergency drainage. Sub-level access for flooding protocols. I forgot about it because it was never meant to be used."
 
-            a "Southeast corner. There's a drainage grate. It connects to the sub-level maintenance corridor."
-            a "Tight fit, but it bypasses the booth entirely."
+        a "Southeast corner. There's a drainage grate. It connects to the sub-level maintenance corridor."
+        a "Tight fit, but it bypasses the booth entirely."
 
-            mira "(through vent) How do you know it's not sealed?"
+        mira "(through vent) How do you know it's not sealed?"
 
-            a "Because I marked it as 'non-essential redundancy' in the final inspection. Budget cuts meant it never got secured."
-            a "Another argument I lost."
+        a "Because I marked it as 'non-essential redundancy' in the final inspection. Budget cuts meant it never got secured."
+        a "Another argument I lost."
 
-            z "(through comms) That route adds four minutes to your timeline."
+        z "(through comms) That route adds four minutes to your timeline."
 
-            a "Then we move faster."
+        a "Then we move faster."
 
-            cade "(through vent) You're burning time to spare one guard?"
+        cade "(through vent) You're burning time to spare one guard?"
 
-            a "I'm burning time because that guard is nineteen and doesn't know he's standing between us and survival."
-            a "Move to the drainage grate. That's an order."
+        a "I'm burning time because that guard is nineteen and doesn't know he's standing between us and survival."
+        a "Move to the drainage grate. That's an order."
 
-            "A pause. Then:"
+        "A pause. Then:"
 
-            cade "(through vent) ...Copy."
+        cade "(through vent) ...Copy."
 
-            "They move. The young guard never knows how close he came."
+        "They move. The young guard never knows how close he came."
 
-            n "(through comms, quiet) Anomaly confirmed."
+        n "(through comms, quiet) Anomaly confirmed."
 
-        "Authorize the takedown—mission priority.":
-            $ choice_and_dev(
-                _current_scene_id, "_authorize_takedown", "OB", factor=2,
-                note="Aeron authorizes eliminating the guard for mission efficiency."
-            )
-            $ npc_remember("Cade", "aeron_authorized_kill", tone="respected")
-            $ npc_remember("Mira", "aeron_authorized_kill", tone="conflicted")
-            $ scene_mark(_current_scene_id, "guard_eliminated")
+    elif _guard_choice == "b":
+        # === "Authorize takedown" OB branch ===
+        $ choice_and_dev(
+            _current_scene_id, "_authorize_takedown", "OB", factor=2,
+            note="Aeron authorizes eliminating the guard for mission efficiency."
+        )
+        $ npc_remember("Cade", "aeron_authorized_kill", tone="respected")
+        $ npc_remember("Mira", "aeron_authorized_kill", tone="conflicted")
+        $ scene_mark(_current_scene_id, "guard_eliminated")
 
-            a "Do it. Quiet."
+        a "Do it. Quiet."
 
-            "Cade moves. Fast. Professional."
+        "Cade moves. Fast. Professional."
 
-            "The young guard never sees him coming. One moment he's adjusting his collar; the next, he's on the ground, neck at the wrong angle."
+        "The young guard never sees him coming. One moment he's adjusting his collar; the next, he's on the ground, neck at the wrong angle."
 
-            mira "(through vent, shaky) He's down."
+        mira "(through vent, shaky) He's down."
 
-            a "Move. Clock's running."
+        a "Move. Clock's running."
 
-            if pass_tier("EMP1", "EMP2", "EMP3"):
-                athought "He was nineteen. Maybe younger. New uniform, nervous hands."
-                athought "Necessary. That's what I'm supposed to think. Necessary."
-                athought "The word tastes like ash."
-            else:
-                athought "Clean. Efficient. One obstacle removed."
-                athought "He was in the wrong place at the wrong time. That's all war is."
+        if pass_tier("EMP1", "EMP2", "EMP3"):
+            athought "He was nineteen. Maybe younger. New uniform, nervous hands."
+            athought "Necessary. That's what I'm supposed to think. Necessary."
+            athought "The word tastes like ash."
+        else:
+            athought "Clean. Efficient. One obstacle removed."
+            athought "He was in the wrong place at the wrong time. That's all war is."
 
-            z "(through comms, quiet) Target neutralized. Continue to objective."
+        z "(through comms, quiet) Target neutralized. Continue to objective."
 
-            n "(through comms) Efficient."
+        n "(through comms) Efficient."
+
+    elif _guard_choice == "c":
+        # === NEW: Emergence — "Call out to him" ===
+        $ tp_emergence_found(_current_scene_id)
+        $ scene_mark(_current_scene_id, "guard_spoken_to")
+        $ npc_remember("Cade", "aeron_spoke_to_guard", tone="stunned")
+        $ npc_remember("Mira", "aeron_spoke_to_guard", tone="awed")
+        $ record_choice_once(_current_scene_id, "_spoke_to_guard",
+            note="Player found Emergence option. Spoke to guard as a person.")
+
+        athought "Neither option is right. Killing him is wrong. Hiding from him is still treating him as an obstacle."
+        athought "He's not an obstacle. He's a nineteen-year-old adjusting his collar."
+
+        a "(low, from the shadows) Hey. Kid."
+
+        "The guard freezes. Hand goes to his sidearm. Eyes searching the dark."
+
+        a "Don't reach for that. I'm not here to hurt you."
+
+        "Guard" "(shaking) Identify yourself—"
+
+        a "You're new. This posting. First week, maybe second."
+        a "You don't want to be here tonight. Trust me on that."
+        a "Turn around. Walk back to the barracks. Tell them you heard a noise in Sector 3 and went to investigate."
+        a "Nobody has to know you were here. Nobody has to die."
+
+        "The guard's breathing is audible. Fast. Scared."
+
+        "Guard" "...Who are you?"
+
+        a "Someone who used to give orders like the ones that put you on this post."
+        a "Go home."
+
+        "Ten seconds. The longest ten seconds of the operation."
+
+        "The guard lowers his hand. Steps back. Turns."
+
+        "He walks away. Not running — walking. Because running would draw attention."
+
+        athought "He'll file a report about Sector 3. No one will follow up."
+        athought "And he'll go home tonight wondering who spoke to him from the dark."
+
+        cade "(through vent, very quiet) ...What the hell was that?"
+
+        a "That was the option nobody trained us for."
+
+        n "(through comms, after a long pause) ...Anomaly confirmed. Significant anomaly."
 
     # ========== SUPPLY CACHE — SUCCESS ==========
 
@@ -290,7 +345,26 @@ label act2_12_proof_of_intent:
     # VISUAL: Team catching their breath in the tunnel. The supplies stacked behind them. Victory, and its cost.
     "They rest in the tunnel. The adrenaline fading. The reality settling."
 
-    if scene_has(_current_scene_id, "guard_spared"):
+    if scene_has(_current_scene_id, "guard_spoken_to"):
+        mira "(to Aeron, quiet) You talked to him. You just... talked."
+
+        a "He was a person. Not an obstacle."
+
+        mira "Cade wanted to kill him. I was ready to crawl through a drain. You just spoke."
+
+        a "Sometimes the simplest option is the one nobody considers."
+        a "Because it requires treating the problem as a person."
+
+        cade "(overhearing) ...I've seen a lot of ops. Never seen anything like that."
+        cade "Either you're the bravest man I've met, or the craziest."
+
+        a "Maybe both."
+
+        athought "The guard is alive because I talked to him. Not because I outmaneuvered the system or overpowered it."
+        athought "Because I spoke to another human being and asked him to walk away."
+        athought "That's not Glass. That's not even Kade. That's something new."
+
+    elif scene_has(_current_scene_id, "guard_spared"):
         mira "(to Aeron, quiet) You didn't have to do that. Find the other route."
 
         a "Yes, I did."

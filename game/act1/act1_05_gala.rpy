@@ -149,6 +149,7 @@ label act1_05_gala:
                 note="Permits vulnerability without breaking form; micro-connection."
             )
             $ scene_mark(_current_scene_id, "acknowledge_daren")
+            $ tp_seed("a1.gala.daren_ack")
 
             if pass_tier("EMP1", "EMP2", "EMP3"):
                 a "You don't have to do this."

@@ -123,6 +123,7 @@ label act2_11_selenes_judgment:
             )
             $ npc_remember("Selene", "aeron_acknowledged_debt", tone="assessing")
             $ scene_mark(_current_scene_id, "acknowledged_debt")
+            $ tp_seed("a2.selene.acknowledge_debt")
 
             a "You shouldn't."
 

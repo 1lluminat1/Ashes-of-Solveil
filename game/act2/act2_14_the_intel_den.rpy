@@ -226,6 +226,7 @@ label act2_14_the_intel_den:
 
         $ npc_remember("Noelle", "tea_moment_steam_curl", tone="flustered")
         $ scene_mark(_current_scene_id, "steam_curl_moment")
+        $ tp_seed("a2.intel_den.tea_accepted")
 
     else:
         a "I'm fine. But thank you."

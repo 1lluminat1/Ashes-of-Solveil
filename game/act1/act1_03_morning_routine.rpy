@@ -63,6 +63,7 @@ label act1_morning_routine:
             $ choice_and_dev(_current_scene_id, "_remember_it", "EMP", factor=1,
                     next_scene_label="act1_04_hallway",
                     note="Remembers the memory")
+            $ tp_seed("a1.morning.kael_memory")
 
             athought "His smile, his silence, the way he still stood tall after they marked him broken."
 

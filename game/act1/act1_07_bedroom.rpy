@@ -139,6 +139,7 @@ label act1_07_bedroom:
                 note="Withholds ritual confirmation; first visible noncompliance."
             )
             $ scene_mark(_current_scene_id, "ignored_marcus")
+            $ tp_seed("a1.bedroom.silent_noncompliance")
 
             "The cursor keeps blinking until the screen sleeps."
 

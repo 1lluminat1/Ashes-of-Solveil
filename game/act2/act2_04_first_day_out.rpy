@@ -213,6 +213,7 @@ label act2_04_first_day_out:
                 note="Aeron prioritizes a stranger's pain over cover-perfect performance."
             )
             $ scene_mark(_current_scene_id, "helped_injured_worker")
+            $ tp_seed("a2.yard.helped_worker")
 
             # VISUAL: Aeron steps out of his spot, grabs the crate, muscles straining.
             athought "I step out of my slot without thinking, hands already on the crate pinning the man."

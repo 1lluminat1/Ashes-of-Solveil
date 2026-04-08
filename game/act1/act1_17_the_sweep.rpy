@@ -290,6 +290,16 @@ label act1_sweep:
             "Silence. They obey. But questions linger."
 
     # ==========================================
+    # CALLBACK: Barracks mentoring echo
+    if scene_has("act1_07b_barracks_morning", "mentored_clinical"):
+        "Unit-4" "Neutralize; collateral within tolerance."
+        athought "My words. My phrasing. Coming out of someone else's mouth."
+        athought "I taught him that."
+    elif scene_has("act1_07b_barracks_morning", "mentored_humane"):
+        "The recruit hesitates at the breach point. Just for a moment."
+        athought "He's thinking about what I told him. About the faces behind the doors."
+        athought "That hesitation might save someone. Or it might get him killed."
+
     # CHOICE 4: THE FAMILY SHELTER (PRIMARY)
     # ==========================================
     # VISUAL: Blast door at sublevel bend; chalk tallies; low prayer strips tied to conduit.

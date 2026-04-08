@@ -200,40 +200,75 @@ label act1_breaking_point:
     else:
         athought "Maybe breaking doesn't mean ending. Maybe it means finally beginning."
 
-    # ========= PLAYER CHOICE — RECORD ONLY =========
+    # ========= PLAYER CHOICE — EMERGENCE MENU =========
+    # The third option ("Sit down at the rail") fades in after 12 seconds
+    # of the player not clicking either standard option.
+    call screen emergence_menu(
+        option_a="Step forward.",
+        option_b="Step back.",
+        option_c="Sit down at the rail.",
+        wait_seconds=12.0,
+        prompt="The rail is cold under his hands. The city hums below."
+    )
+    $ _bp_choice = _return
 
-    menu:
-        athought "The edge waits. So does the room behind me."
+    if _bp_choice == "a":
+        # === "Step forward" branch ===
+        $ record_choice_once(
+            _current_scene_id, "breaking_point_step_forward",
+            note="Aeron approaches self-destruction; interrupted by knock."
+        )
+        $ scene_mark(_current_scene_id, "step_forward")
 
-        "Step forward":
-            $ record_choice_once(
-                _current_scene_id, "breaking_point_step_forward",
-                note="Aeron approaches self-destruction; interrupted by knock."
-            )
-            $ scene_mark(_current_scene_id, "step_forward")
+        # BLOCKING: Weight shifts forward; center of mass crosses toes.
+        # CAMERA: Micro dolly-in; vertigo lens breath (subtle).
 
-            # BLOCKING: Weight shifts forward; center of mass crosses toes.
-            # CAMERA: Micro dolly-in; vertigo lens breath (subtle).
+        athought "Just one more step..."
 
-            athought "Just one more step..."
+    elif _bp_choice == "b":
+        # === "Step back" branch ===
+        $ record_choice_once(
+            _current_scene_id, "breaking_point_step_back",
+            note="Aeron pulls back from the rail; not a recovery, a pause."
+        )
+        $ scene_mark(_current_scene_id, "step_back")
 
-            #athought "Fall. Break. Stop—"
+        # BLOCKING: Heel plants; knee unlocks; grip loosens on rail.
+        # CAMERA: Gentle pull-back to chest; breath steadies.
 
-        "Step back":
-            $ record_choice_once(
-                _current_scene_id, "breaking_point_step_back",
-                note="Aeron pulls back from the rail; not a recovery, a pause."
-            )
-            $ scene_mark(_current_scene_id, "step_back")
+        athought "I can't keep living like this..."
 
-            # BLOCKING: Heel plants; knee unlocks; grip loosens on rail.
-            # CAMERA: Gentle pull-back to chest; breath steadies.
+        athought "But maybe... maybe breaking doesn't mean falling."
 
-            athought "I can't keep living like this..."
+        athought "Maybe it means shattering what they made and finding what's underneath."
 
-            athought "But maybe... maybe breaking doesn't mean falling."
+    elif _bp_choice == "c":
+        # === NEW: Emergence — "Sit down at the rail" ===
+        $ tp_emergence_found(_current_scene_id)
+        $ scene_mark(_current_scene_id, "sat_at_rail")
+        $ record_choice_once(_current_scene_id, "_sat_at_rail",
+            note="Player found the Emergence option. Neither forward nor back. Present.")
 
-            athought "Maybe it means shattering what they made and finding what's underneath."
+        athought "I don't step forward. I don't step back."
+        athought "I sit."
+
+        "The concrete is cold through his coat. The rail presses against his shoulder blade."
+        "Wind finds him here too — but lower, less demanding."
+
+        athought "I don't know what I want."
+        athought "I don't know if I want to fall or stay or fight or give up."
+        athought "I just know I can't decide right now."
+        athought "And maybe that's okay. Maybe not knowing is its own kind of answer."
+
+        "The city breathes below. He breathes with it."
+        "Not performing survival. Not performing despair."
+        "Just breathing."
+
+        pause 1.2
+
+        athought "Kael stood here. Kael chose."
+        athought "Father chose for me. The system chose for me."
+        athought "But right now, nobody is choosing. And I'm still here."
 
     # ========= THE KNOCK =========
     # SFX: Three distinct knocks (wood on metal), 180ms apart; slight room slapback.
@@ -241,8 +276,7 @@ label act1_breaking_point:
 
     "A knock at the door—sharp, sudden, like fate rapping on the walls."
 
-    "He drops back to stone. The city noise thins; his heartbeat doesn't."
-#TODO need to fix this sequence: How can he drop back to the balcony? What is his hand gripping? The balcony has a rail so he would have to jump over the rail, then face away from the rail with his hands gripping the rail behind his body.
+    "His weight shifts back. Heels find the concrete. The rail releases him — or he releases the rail. The distinction feels important."
     # FX: Heartbeat underlay (40 Hz thump), -16 dB, 2 beats then fade.
 
     athought "Who...?"

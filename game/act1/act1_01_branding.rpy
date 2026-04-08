@@ -113,7 +113,7 @@ label act1_branding:
     marcus "...Rejected."
 
     # ========= THE WOUND =========
-    # CAMERA: Close on Aeron's face — ten years old, raw confusion turning to terror.
+    # CAMERA: Close on Aeron's face — twelve years old, raw confusion turning to terror.
     # LIGHTING: Harsh white from above. No warmth anywhere in the frame.
     # SOUND: Blood drip — slow, steady, wrong.
     # NOTE: A child realizing he just became nothing.
@@ -376,10 +376,10 @@ label act1_branding:
 # cann.scene_id:
 #   act1_01_branding  (Act I — Scene 1)
 # cann.when_in_timeline:
-#   The opening event. Aeron at age ten, during the Branding ceremony in the Echelon tower.
+#   The opening event. Aeron at age twelve, during the Branding ceremony in the Echelon tower.
 #   Establishes the foundational wound before the fifteen-year time skip to the present.
 # cann.what_happened (objective canon summary):
-#   - Aeron Rylan, age ten, undergoes the Branding ritual. The Band rejects him — total failure.
+#   - Aeron Rylan, age twelve, undergoes the Branding ritual. The Band rejects him — total failure.
 #   - Marcus Rylan seals the wound and immediately pivots to damage control.
 #   - Marcus instructs Aeron to perform wholeness in public. Coins the "Glass" identity.
 #   - Aeron complies with "Yes, sir" — the first of many performed answers that keep him alive.
@@ -393,7 +393,7 @@ label act1_branding:
 #     Correction instinct — frames failure as a problem to be fixed, not a loss to be felt.
 #     Glass identity received as a role to execute, clean and without sentiment.
 #   Neutral (pre-lock) summary:
-#     A ten-year-old absorbing catastrophic identity collapse. Compliance as survival.
+#     A twelve-year-old absorbing catastrophic identity collapse. Compliance as survival.
 #     The Glass framing is accepted not from belief but from the absence of any alternative.
 # cann.marcus_state:
 #   Shocked — briefly. Then cold and functional. Physical contact (hand on shoulder) is
@@ -421,7 +421,7 @@ label act1_branding:
 #     - "Be useful. Or be nothing." (internalized doctrine; resurfaces at path lock)
 #     - "Glass doesn't need a pulse." (Aeron's self-definition, Act I–II)
 #   continuity_asserts:
-#     - Aeron is ten years old at Branding. Present-day Aeron is twenty-five.
+#     - Aeron is twelve years old at Branding. Present-day Aeron is twenty-seven.
 #     - Marcus coins "Glass" — this is canon. Aeron did not choose the name.
 #     - Kael is established as context for Marcus's reaction: he has seen failure before.
 #     - The scar is gray, lifeless, no trace. No Band. No interface. Permanent.
@@ -429,4 +429,4 @@ label act1_branding:
 #   anchor_or_variant:
 #     ANCHOR   # Origin scene. Non-optional. All paths run through it.
 #   requires_followup:
-#     - act1_02_bedroom  (fifteen-year jump; Aeron at twenty-five, pre-mission)
+#     - act1_02_bedroom  (fifteen-year jump; Aeron at twenty-seven, pre-mission)
