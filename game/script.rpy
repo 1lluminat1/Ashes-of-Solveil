@@ -1,58 +1,63 @@
 ﻿
 label start:
-    call tutorial
+    call a1_s00_tutorial
 
-    # START ACT 1
-    call act1_intro
-    call act1_bedroom
-    call act1_sector7_mission
-    call act1_morning_routine
-    call act1_hallway
-    call act1_gala
-    call act1_balcony
-    call act1_bedroom_after_gala
-    call act1_inspection_day
-    call act1_barracks_morning
-    call act1_hill
-    call act1_ritual
-    call act1_demo_floor
-    call act1_brothers
-    call act1_archive_merit
-    call act1_debrief_theater
-    call act1_breaking_point
-    call act1_lyra_visit
-    call act1_the_message
-    call act1_lower_spans
-    call act1_zira
-    call act1_return_aeries
-    call act1_sweep
-    call act1_confession_lyra
-    call act1_morning_after_confession
-    call act1_obsidian_bridge
-    call act1_investigation
-    call act1_purge
-    # END ACT 1
+    # ========= ACT 1 =========
+    call a1_s00a_intro
+    call a1_s01_branding
+    call a1_s02_bedroom
+    call a1_s03_sector7_mission
+    call a1_s04_morning_routine
+    call a1_s05_hallway
+    call a1_s06_gala
+    # a1_s06a_daren_flashback is called conditionally from within a1_s06_gala
+    call a1_s07_balcony
+    call a1_s08_bedroom
+    call a1_s09_inspection_day
+    call a1_s10_barracks_morning
+    call a1_s11_hill_flashback
+    call a1_s12_ritual_flashback
+    call a1_s13_demonstration_floor
+    call a1_s14_brothers_rooftop
+    call a1_s15_archive_of_merit
+    call a1_s16_debrief_theater
+    call a1_s17_breaking_point
+    call a1_s18_lyra_visit
+    call a1_s19_the_message
+    call a1_s20_lower_spans
+    call a1_s21_zira_first_contact
+    call a1_s22_return_to_aeries
+    call a1_s23_the_sweep
+    call a1_s24_confession_with_lyra
+    call a1_s25_morning_after
+    call a1_s26_obsidian_bridge
+    call a1_s27_investigation
+    call a1_s28_purge
+    # ========= END ACT 1 =========
 
-    # START ACT 2
-    call act2_descent
-    call act2_reality_check
-    call act2_safe_house_planning
-    call act2_the_message
-    call act2_meeting_selene
-    call act2_temp_base
-    call act2_base_scouting
-    call act2_establishing_base
-    call act2_noelle_working_late
-    call act2_recruitment_wave
-    call act2_zira_night_patrol
-    call act2_tessa_late_night_clinic
-    call act2_lyra_identity_crisis
-    call act2_noelle_no_unit
-    call act2_massive_recruitment
-    call act2_tessa_mercy_death
-    call act2_echelon_raid_defense
-    call act2_zira_commitment
-    call act2_finale
-    
-    # END ACT 2
+    # ========= ACT 2 =========
+    call a2_s01_descent
+    call a2_s02_reality_check
+    call a2_s03_safe_house_planning
+    call a2_s04_first_day_out
+    call a2_s05_clinic
+    call a2_s06_hand_off_the_wire
+    call a2_s07_quiet_night
+    call a2_s08_the_analyst
+    call a2_s09_armor_down
+    call a2_s10_static_faith
+    call a2_s11_selenes_judgment
+    call a2_s12_proof_of_intent
+    call a2_s13_echelon_interlude_1
+    call a2_s14_the_intel_den
+    call a2_s15_algorithm_of_chaos
+    call a2_s16_finding_home
+    call a2_s17_building_something
+    call a2_s18_the_patient
+    # Scenes 19-25 not yet written
+    call a2_s26_carry_scene
+    # a2_s27_zira_commitment_emp / _ob called conditionally based on path
+    # Selene finale not yet written
+    # ========= END ACT 2 =========
+
     return
