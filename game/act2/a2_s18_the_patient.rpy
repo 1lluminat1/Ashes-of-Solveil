@@ -1,11 +1,11 @@
 # =======================================================
 # ACT 2 - Scene 18: The Patient
-# File: act2_18_the_patient.rpy
+# File: a2_s18_the_patient.rpy
 # Pair Anchor: A2_P14 (Tessa x Noelle)
 # =======================================================
 
 # ========= SCENE START TASKS =========
-$ _current_scene_id = "act2_18_the_patient"
+$ _current_scene_id = "a2_s18_the_patient"
 $ scene_mark(_current_scene_id, "entered")
 
 define runner = Character("Runner")
@@ -267,7 +267,7 @@ label a2_s18_the_patient:
     return
 
 # ========= CANONICAL NOTES =========
-# cann.scene_id: act2_18_the_patient
+# cann.scene_id: a2_s18_the_patient
 # cann.chapter: Act II, Chapter III — Proving Ground
 # cann.chapter_start: False
 # cann.when_in_timeline:

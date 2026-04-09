@@ -1,10 +1,10 @@
 # =======================================================
 # ACT 2 - Scene 2: The Unders - Reality Check
-# File: act2_02_reality_check.rpy
+# File: a2_s02_reality_check.rpy
 # =======================================================
 
 # ========= SCENE START TASKS =========
-$ _current_scene_id = "act2_02_reality_check"
+$ _current_scene_id = "a2_s02_reality_check"
 $ scene_mark(_current_scene_id, "entered")
 
 label a2_s02_reality_check:
@@ -333,7 +333,7 @@ label a2_s02_reality_check:
 
 
 # ========= CANONICAL NOTES =========
-# cann.scene_id: act2_02_reality_check
+# cann.scene_id: a2_s02_reality_check
 # cann.when_in_timeline:
 #   - Direct follow-up to Descent safehouse arrival (Act2_01); first full night in the Unders.
 # cann.what_happened:

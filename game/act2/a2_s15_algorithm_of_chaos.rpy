@@ -1,10 +1,10 @@
 # =======================================================
 # ACT 2 - Scene 15: Algorithm of Chaos
-# File: act2_15_algorithm_of_chaos.rpy
+# File: a2_s15_algorithm_of_chaos.rpy
 # =======================================================
 
 # ========= SCENE START TASKS =========
-$ _current_scene_id = "act2_15_algorithm_of_chaos"
+$ _current_scene_id = "a2_s15_algorithm_of_chaos"
 $ scene_mark(_current_scene_id, "entered")
 
 label a2_s15_algorithm_of_chaos:
@@ -266,7 +266,7 @@ label a2_s15_algorithm_of_chaos:
 
 
 # ========= CANONICAL NOTES =========
-# cann.scene_id: act2_15_algorithm_of_chaos
+# cann.scene_id: a2_s15_algorithm_of_chaos
 # cann.chapter: Act II, Chapter III — Proving Ground
 # cann.chapter_start: False
 # cann.when_in_timeline:

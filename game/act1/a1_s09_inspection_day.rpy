@@ -4,7 +4,7 @@
 # =======================================================
 
 # ========= SCENE START TASKS =========
-$ _current_scene_id = "act1_inspection_day"
+$ _current_scene_id = "a1_s09_inspection_day"
 $ scene_mark(_current_scene_id, "entered")
 
 define aud = Character("Auditor")
@@ -250,7 +250,7 @@ label a1_s09_inspection_day:
 
 
 # ========= CANON NOTES =========
-# cann.scene_id: act1_inspection_day
+# cann.scene_id: a1_s09_inspection_day
 # cann.when_in_timeline: Morning after bedroom scene; pre-Demonstration 14:00; pre-Debrief 19:00.
 # cann.what_happened:
 #   - Annual/periodic compliance & psyche screen under observation.

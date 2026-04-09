@@ -1,10 +1,10 @@
 # =======================================================
 # ACT 1 - Scene 10: Flashback: Brothers on the Rooftop
-# File: act1_10_brothers_rooftop.rpy
+# File: a1_s14_brothers_rooftop_rooftop.rpy
 # =======================================================
 
 # ========= SCENE START TASKS =========
-$ _current_scene_id = "act1_10_brothers"
+$ _current_scene_id = "a1_s14_brothers_rooftop"
 $ scene_mark(_current_scene_id, "entered")
 
 define k  = Character("Kael")
@@ -235,7 +235,7 @@ label a1_s14_brothers_rooftop:
 
 
 # ========= CANONICAL NOTES =========
-# cann.scene_id: act1_10_brothers
+# cann.scene_id: a1_s14_brothers_rooftop
 # cann.when_in_timeline: Flashback (Aeron 10, Kael 15) intercut before present rooftop/breaking-point thread.
 # cann.what_happened:
 #   - Kael confesses early Band "pressure" and identity drift; seeds failure at 15.
@@ -249,7 +249,7 @@ label a1_s14_brothers_rooftop:
 # cann.thematic_flags:
 #   - Motifs: Edge/Flight, Performance/Lines, origins of Aeron's transformation, Mercy-as-Cage.
 #   - Echo lines: "Don't let Father turn you into a weapon." "Nothing works forever. Not even faith."
-# cann.block_status: ANCHOR-LORE (no branch); supports emotional load for act1_11_breaking_point and Marcus confrontations.
+# cann.block_status: ANCHOR-LORE (no branch); supports emotional load for a1_s17_breaking_point and Marcus confrontations.
 # cann.visual_plate_economy:
 #   - REUSE: Rooftop master plate; warm pass for flashback, cool pass for present stinger.
 #   - HERO: Macro of Kael's fingers on the Band; empty-rail hold after exit.

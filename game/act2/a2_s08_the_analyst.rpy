@@ -1,10 +1,10 @@
 # =======================================================
 # ACT 2 - Scene 8: The Analyst
-# File: act2_08_the_analyst.rpy
+# File: a2_s08_the_analyst.rpy
 # =======================================================
 
 # ========= SCENE START TASKS =========
-$ _current_scene_id = "act2_08_the_analyst"
+$ _current_scene_id = "a2_s08_the_analyst"
 $ scene_mark(_current_scene_id, "entered")
 
 label a2_s08_the_analyst:
@@ -23,7 +23,7 @@ label a2_s08_the_analyst:
 
     athought "The safehouse has become routine—wake, check the door, check the window, check each other."
 
-    if scene_has("act2_07_quiet_night", "held_space"):
+    if scene_has("a2_s07_quiet_night", "held_space"):
         athought "Lyra slept better last night. Or at least she stopped pretending to sleep before dawn."
         athought "Something shifted between us in the dark. I'm not sure what to call it yet."
     else:
@@ -362,7 +362,7 @@ label a2_s08_the_analyst:
 
 
 # ========= CANONICAL NOTES =========
-# cann.scene_id: act2_08_the_analyst
+# cann.scene_id: a2_s08_the_analyst
 # cann.chapter: Act II, Chapter II — Constellation
 # cann.chapter_start: False
 # cann.when_in_timeline:

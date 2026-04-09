@@ -1,6 +1,6 @@
 # =======================================================
 # ACT 2 - Scene 4: First Day Out
-# File: act2_04_first_day_out.rpy
+# File: a2_s04_first_day_out.rpy
 # =======================================================
 
 define foreman = Character("Foreman")
@@ -8,7 +8,7 @@ define w1 = Character("Worker")
 define w2 = Character("Worker 2")
 
 # ========= SCENE START TASKS =========
-$ _current_scene_id = "act2_04_first_day_out"
+$ _current_scene_id = "a2_s04_first_day_out"
 $ scene_mark(_current_scene_id, "entered")
 
 label a2_s04_first_day_out:
@@ -424,9 +424,9 @@ label a2_s04_first_day_out:
 
 
 # ========= CANONICAL NOTES =========
-# cann.scene_id: act2_04_first_day_out
+# cann.scene_id: a2_s04_first_day_out
 # cann.when_in_timeline:
-#   - Morning/afternoon after act2_03_safe_house_planning; second full calendar day in the Unders.
+#   - Morning/afternoon after a2_s03_safe_house_planning; second full calendar day in the Unders.
 # cann.what_happened:
 #   - Zira escorts Aeron and Lyra from the safehouse through Unders back-routes (maintenance corridors, panels) to a Sector 6 machine yard, dodging a patrol drone and showing "how she moves" in the city.
 #   - Aeron and Lyra use their cover identities (Kade Voss / Mira Chen) for the first time with an Unders employer (Foreman Rusk).
@@ -458,4 +458,4 @@ label a2_s04_first_day_out:
 #   - Next scenes can:
 #       • Call back `helped_injured_worker`/`stayed_on_line` through Unders NPC gossip, clinic presence of the injured worker, or changed yard atmosphere.
 #       • Build toward clinic/intel/reputation scenes where this day is referenced as "the day Kade pulled a guy out" or "the day Kade kept his head down."
-#   - Persist flags: `helped_injured_worker` / `stayed_on_line`, `_foreman_cover_honest` / `_foreman_command_slip`, `act2_04_first_day_out.completed`.
+#   - Persist flags: `helped_injured_worker` / `stayed_on_line`, `_foreman_cover_honest` / `_foreman_command_slip`, `a2_s04_first_day_out.completed`.

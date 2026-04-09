@@ -1,10 +1,10 @@
 # =======================================================
 # ACT 1 - Scene 10c: Debrief Theater (Marcus + The Machine)
-# File: act1_10c_debrief_theater.rpy
+# File: a1_s16_debrief_theater.rpy
 # =======================================================
 
 # ========= SCENE START TASKS =========
-$ _current_scene_id = "act1_10c_debrief_theater"
+$ _current_scene_id = "a1_s16_debrief_theater"
 $ scene_mark(_current_scene_id, "entered")
 
 
@@ -33,10 +33,10 @@ label a1_s16_debrief_theater:
 
     # ========= KPI OVERLAY — CALLBACK SLIDES =========
 
-    if scene_has("act1_barracks_morning", "mentored_clinical"):
+    if scene_has("a1_s10_barracks_morning", "mentored_clinical"):
         athought "My phrasing shows up on a slide. The room nods. Someone wrote it down like it was born here."
 
-    if scene_has("act1_10b_archive_merit", "questioned_plaque"):
+    if scene_has("a1_s15_archive_of_merit", "questioned_plaque"):
         athought "Another slide skips casualty verification entirely. Omission with good posture."
 
     # ========= MARCUS PROMPTS DISCUSSION =========
@@ -93,7 +93,7 @@ label a1_s16_debrief_theater:
 
     # ========= INQUIRY DEVIANCE CALLBACK =========
 
-    if scene_has("act1_inspection_day", "procedural_inquiry") or scene_has("act1_demo_floor", "inquiry_deviance"):
+    if scene_has("a1_s09_inspection_day", "procedural_inquiry") or scene_has("a1_s13_demonstration_floor", "inquiry_deviance"):
         "A small line at the bottom of the slide: INQUIRY DEVIANCE: 1."
 
     # ========= WRAP =========
@@ -108,7 +108,7 @@ label a1_s16_debrief_theater:
 
 
 # ========= CANONICAL NOTES =========
-# cann.scene_id: act1_10c_debrief_theater
+# cann.scene_id: a1_s16_debrief_theater
 # cann.when_in_timeline: After Demonstration Floor; evening plenary at 19:00; pre–Sector 10 departure block.
 # cann.what_happened:
 #   - Marcus frames doctrine (latency/collateral bands).

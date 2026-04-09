@@ -1,10 +1,10 @@
 # =======================================================
 # ACT 1 - Scene 14: Aeron's Late Night Walk in the Lower Spans
-# File: act1_14_lower_spans.rpy
+# File: a1_s20_lower_spans.rpy
 # =======================================================
 
 # ========= SCENE START TASKS =========
-$ _current_scene_id = "act1_14_lower_spans"
+$ _current_scene_id = "a1_s20_lower_spans"
 $ scene_mark(_current_scene_id, "entered")
 
 define vendor = Character("Vendor")
@@ -280,7 +280,7 @@ label a1_s20_lower_spans:
 
 
 # ========= CANONICAL NOTES =========
-# cann.scene_id: act1_14_lower_spans
+# cann.scene_id: a1_s20_lower_spans
 # cann.when_in_timeline: Same night as The Message; pre-dawn; hours before Sector 10 sweep directive executes.
 # cann.what_happened:
 #   - Aeron walks the Lower Spans to "see what he's about to destroy."

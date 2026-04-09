@@ -1,10 +1,10 @@
 # ===================================================
 # ACT 1 - Scene 1: The Branding
-# File: act1_01_branding.rpy
+# File: a1_s01_branding.rpy
 # ===================================================
 
 # ========= SCENE START TASKS =========
-$ _current_scene_id = "act1_01_branding"
+$ _current_scene_id = "a1_s01_branding"
 $ scene_mark(_current_scene_id, "entered")
 
 
@@ -374,7 +374,7 @@ label a1_s01_branding:
 
 # ========= CANONICAL NOTES =========
 # cann.scene_id:
-#   act1_01_branding  (Act I — Scene 1)
+#   a1_s01_branding  (Act I — Scene 1)
 # cann.when_in_timeline:
 #   The opening event. Aeron at age twelve, during the Branding ceremony in the Echelon tower.
 #   Establishes the foundational wound before the fifteen-year time skip to the present.
@@ -429,4 +429,4 @@ label a1_s01_branding:
 #   anchor_or_variant:
 #     ANCHOR   # Origin scene. Non-optional. All paths run through it.
 #   requires_followup:
-#     - act1_02_bedroom  (fifteen-year jump; Aeron at twenty-seven, pre-mission)
+#     - a1_s02_bedroom  (fifteen-year jump; Aeron at twenty-seven, pre-mission)

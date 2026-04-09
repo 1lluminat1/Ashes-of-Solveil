@@ -4,7 +4,7 @@
 # =======================================================
 
 # ========= SCENE START TASKS =========
-$ _current_scene_id = "act1_10b_archive_merit"
+$ _current_scene_id = "a1_s15_archive_of_merit"
 $ scene_mark(_current_scene_id, "entered")
 
 define docent = Character("Docent")
@@ -131,7 +131,7 @@ label a1_s15_archive_of_merit:
 
 
 # ========= CANONICAL NOTES =========
-# cann.scene_id: act1_10b_archive_merit
+# cann.scene_id: a1_s15_archive_of_merit
 # cann.when_in_timeline: Same day as Demonstration; museum walk-by before Debrief (19:00).
 # cann.what_happened:
 #   - Plaque 1 (Obsidian Bridge) reaction: question the record (EMP+1), praise efficiency (OB+1), or stay silent (NEU).

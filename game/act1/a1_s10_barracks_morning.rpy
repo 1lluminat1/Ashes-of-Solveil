@@ -1,10 +1,10 @@
 # =======================================================
 # ACT 1 — Scene 07b: Barracks Morning (Ritual, Rations, Rank)
-# File: act1_07b_barracks_morning.rpy
+# File: a1_s10_barracks_morning.rpy
 # =======================================================
 
 # ========= SCENE START TASKS =========
-$ _current_scene_id = "act1_07b_barracks_morning"
+$ _current_scene_id = "a1_s10_barracks_morning"
 $ scene_mark(_current_scene_id, "entered")
 
 
@@ -166,7 +166,7 @@ label a1_s10_barracks_morning:
 
 
 # ========= CANON NOTES =========
-# cann.scene_id: act1_07b_barracks_morning
+# cann.scene_id: a1_s10_barracks_morning
 # cann.when_in_timeline: Morning barracks cycle; same day as Inspection scene; pre-Demonstration 14:00.
 # cann.what_happened:
 #   - Ration-line micro-incident (help / ignore / endorse priority).

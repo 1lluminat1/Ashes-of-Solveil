@@ -1,10 +1,10 @@
 # ======================================================
 # ACT 1 - Scene 11: Aeron's Breaking Point
-# File: act1_11_breaking_point.rpy
+# File: a1_s17_breaking_point.rpy
 # ======================================================
 
 # ========= SCENE START TASKS =========
-$ _current_scene_id = "act1_11_breaking_point"
+$ _current_scene_id = "a1_s17_breaking_point"
 $ scene_mark(_current_scene_id, "entered")
 
 
@@ -314,7 +314,7 @@ label a1_s17_breaking_point:
 
 
 # ========= CANONICAL NOTES =========
-# cann.scene_id: act1_11_breaking_point
+# cann.scene_id: a1_s17_breaking_point
 # cann.when_in_timeline: Night of orders; after Balcony + Bedroom; pre–Sector 10 departure.
 # cann.what_happened:
 #   - Aeron reaches the rail on the rooftop; contemplates self-destruction.

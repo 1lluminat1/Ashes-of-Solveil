@@ -1,10 +1,10 @@
 # ===================================================
 # ACT 1 - Scene 4: Hallway to the Gala
-# File: act1_04_hallway.rpy
+# File: a1_s05_hallway.rpy
 # ===================================================
 
 # ========= SCENE START TASKS =========
-$ _current_scene_id = "act1_04_hallway"
+$ _current_scene_id = "a1_s05_hallway"
 $ scene_mark(_current_scene_id, "entered")
 
 define servant = Character("Attendant")
@@ -131,7 +131,7 @@ label a1_s05_hallway:
         "Cover it.":
             $ choice_and_dev(
                 _current_scene_id, "_cover_wrist", "OB", factor=1,
-                next_scene_label="act1_05_gala",
+                next_scene_label="a1_s06_gala",
                 note="Performs conformity to reduce scrutiny; self-erasure coping."
             )
 
@@ -142,7 +142,7 @@ label a1_s05_hallway:
         "Let it show.":
             $ choice_and_dev(
                 _current_scene_id, "_bare_wrist", "EMP", factor=1,
-                next_scene_label="act1_05_gala",
+                next_scene_label="a1_s06_gala",
                 note="Accepts stigma without concealment; micro-assertion of self vs performance."
             )
 
@@ -238,7 +238,7 @@ label a1_s05_hallway:
 
 
 # ========= CANONICAL NOTES =========
-# cann.scene_id: act1_04_hallway
+# cann.scene_id: a1_s05_hallway
 # cann.when_in_timeline: Act I, immediately pre-Gala entry; before Balcony scene.
 # cann.what_happened:
 #   - Aeron traverses Aeries ceremonial corridor toward the Gala under elite scrutiny.
@@ -262,5 +262,5 @@ label a1_s05_hallway:
 #   - REUSE: Door end-plate with two lighting passes (cold hall vs warm spill) + overlayed motes.
 #   - HERO: Marcus portrait half-eclipsed by Aeron silhouette (unique render; marketing shot).
 # cann.requires_followup:
-#   - Next scene: act1_05_gala (Balcony/Gala entry).
+#   - Next scene: a1_s06_gala (Balcony/Gala entry).
 #   - Log servant cameo for potential Act II mirror encounter (Unders relief line about Kael).

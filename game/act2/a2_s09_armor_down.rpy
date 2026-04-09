@@ -1,10 +1,10 @@
 # =======================================================
 # ACT 2 - Scene 9: Armor Down
-# File: act2_09_armor_down.rpy
+# File: a2_s09_armor_down.rpy
 # =======================================================
 
 # ========= SCENE START TASKS =========
-$ _current_scene_id = "act2_09_armor_down"
+$ _current_scene_id = "a2_s09_armor_down"
 $ scene_mark(_current_scene_id, "entered")
 
 label a2_s09_armor_down:
@@ -22,7 +22,7 @@ label a2_s09_armor_down:
     # 1. INTIMATE PATH: If intimacy_seed_planted (EMP choice in A2_07) - full intimate scene
     # 2. GUARDED PATH: If not - emotional closeness but physical boundary respected
 
-    if not scene_has("act2_07_quiet_night", "intimacy_seed_planted"):
+    if not scene_has("a2_s07_quiet_night", "intimacy_seed_planted"):
         jump a2_s09_guarded_path
 
     # ========== INTIMATE PATH — SAFEHOUSE, NIGHT ==========
@@ -438,7 +438,7 @@ label a2_s09_scene_close:
 
 
 # ========= CANONICAL NOTES =========
-# cann.scene_id: act2_09_armor_down
+# cann.scene_id: a2_s09_armor_down
 # cann.chapter: Act II, Chapter II — Constellation
 # cann.chapter_start: False
 # cann.when_in_timeline:
@@ -462,7 +462,7 @@ label a2_s09_scene_close:
 #   - INTIMATE PATH: Learning to be vulnerable, to let go of Glass.
 #   - GUARDED PATH: Recognizing his failure to be present, trying to repair.
 # cann.path_tracking:
-#   - Gate: scene_has("act2_07_quiet_night", "intimacy_seed_planted")
+#   - Gate: scene_has("a2_s07_quiet_night", "intimacy_seed_planted")
 #   - INTIMATE PATH flags:
 #       • `first_intimacy_complete` (Lyra flag)
 #       • `intimacy_chosen` or `intimacy_delayed` (scene flags)

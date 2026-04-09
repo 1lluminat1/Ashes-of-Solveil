@@ -1,10 +1,10 @@
 # ===================================================
 # ACT 1 - Scene 5: The Gala
-# File: act1_05_gala.rpy
+# File: a1_s06_gala.rpy
 # ===================================================
 
 # ========= SCENE START TASKS =========
-$ _current_scene_id = "act1_05_gala"
+$ _current_scene_id = "a1_s06_gala"
 $ scene_mark(_current_scene_id, "entered")
 
 define e1 = Character("Elite 1")
@@ -126,7 +126,7 @@ label a1_s06_gala:
         "Respond with cold courtesy.":
             $ choice_and_dev(
                 _current_scene_id, "_daren_cold_courtesy", "OB", factor=1,
-                next_scene_label="act1_06_balcony",
+                next_scene_label="a1_s07_balcony",
                 note="Reasserts performance persona; reinforces fear/respect myth."
             )
 
@@ -145,7 +145,7 @@ label a1_s06_gala:
         "Acknowledge the awkwardness.":
             $ choice_and_dev(
                 _current_scene_id, "_daren_acknowledge", "EMP", factor=1,
-                next_scene_label="act1_06_balcony",
+                next_scene_label="a1_s07_balcony",
                 note="Permits vulnerability without breaking form; micro-connection."
             )
             $ scene_mark(_current_scene_id, "acknowledge_daren")
@@ -271,7 +271,7 @@ label a1_s06_gala:
         "Acknowledge her.":
             $ choice_and_dev(
                 _current_scene_id, "_ack_lyra", "EMP", factor=1,
-                next_scene_label="act1_06_balcony",
+                next_scene_label="a1_s07_balcony",
                 note="Micro-acknowledgment; tests willingness for connection under surveillance."
             )
             if pass_emp():
@@ -285,7 +285,7 @@ label a1_s06_gala:
         "Look away.":
             $ choice_and_dev(
                 _current_scene_id, "_ignore_lyra", "OB", factor=1,
-                next_scene_label="act1_06_balcony",
+                next_scene_label="a1_s07_balcony",
                 note="Maintains performance seal; avoids signaling under optics."
             )
             $ scene_mark(_current_scene_id, "ignored_lyra")
@@ -338,7 +338,7 @@ label a1_s06_gala:
         "Cross the floor toward her.":
             $ choice_and_dev(
                 _current_scene_id, "_approach_lyra", "EMP", factor=1,
-                next_scene_label="act1_06_balcony",
+                next_scene_label="a1_s07_balcony",
                 note="Chooses connection under optics; seeds balcony rendezvous."
             )
             $ scene_mark(_current_scene_id, "approach_lyra")
@@ -395,7 +395,7 @@ label a1_s06_gala:
         "Keep your distance.":
             $ choice_and_dev(
                 _current_scene_id, "_keep_distance", "OB", factor=1,
-                next_scene_label="act1_06_balcony",
+                next_scene_label="a1_s07_balcony",
                 note="Avoids connection; preserves performance shell."
             )
 
@@ -426,7 +426,7 @@ label a1_s06_gala:
 
 
 # ========= CANONICAL NOTES =========
-# cann.scene_id: act1_05_gala
+# cann.scene_id: a1_s06_gala
 # cann.when_in_timeline: Act I, immediately after Hallway; before Balcony rendezvous.
 # cann.what_happened:
 #   - Aeron enters the Gala; luxury as performative warmth over institutional cold.
@@ -454,7 +454,7 @@ label a1_s06_gala:
 #   - REUSE: Marcus entrance plate with different crowd masks.
 #   - HERO: Lyra micro-CU with chandelier bokeh; Aeron silhouette against holo-feed reflection.
 # cann.requires_followup:
-#   - If `balcony_meet_set` → load act1_06_balcony after short breath beat.
+#   - If `balcony_meet_set` → load a1_s07_balcony after short breath beat.
 #   - Persist flags: acknowledge_daren, marcus_{approval|uncertain|disapproval}, acknowledge_lyra/ignored_lyra, approach_lyra/kept_distance, balcony_meet_set.
 # cann.consistency_asserts:
 #   - Lyra Act I diction: formal, minimal contractions.

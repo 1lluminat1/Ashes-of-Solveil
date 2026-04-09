@@ -1,10 +1,10 @@
 # =======================================================
 # ACT 2 - Scene 1: Descent
-# File: act2_01_descent.rpy
+# File: a2_s01_descent.rpy
 # =======================================================
 
 # ========= SCENE START TASKS =========
-$ _current_scene_id = "act2_01_descent"
+$ _current_scene_id = "a2_s01_descent"
 $ scene_mark(_current_scene_id, "entered")
 
 define vendor = Character("Vendor")
@@ -411,7 +411,7 @@ label a2_s01_descent:
 
 
 # ========= CANONICAL NOTES =========
-# cann.scene_id: act2_01_descent
+# cann.scene_id: a2_s01_descent
 # cann.when_in_timeline:
 #   - Immediately after rooftop Purge witness; opening beat of Act II, before first full night in the Unders.
 # cann.what_happened:

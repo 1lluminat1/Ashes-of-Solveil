@@ -1,10 +1,10 @@
 # =======================================================
 # ACT 1 - Scene 07: Aeron's Bedroom (After the Gala)
-# File: act1_07_bedroom.rpy
+# File: a1_s08_bedroom.rpy
 # =======================================================
 
 # ========= SCENE START TASKS =========
-$ _current_scene_id = "act1_07_bedroom"
+$ _current_scene_id = "a1_s08_bedroom"
 $ scene_mark(_current_scene_id, "entered")
 
 
@@ -27,11 +27,11 @@ label a1_s08_bedroom:
     # ========= BALCONY CALLBACK =========
     # NOTE: Conditional warmth based on prior intimacy choices.
 
-    if scene_has("act1_05_gala", "approach_lyra"):
-        if scene_has("act1_06_balcony", "shared_light") and scene_has("act1_06_balcony", "held_gaze"):
+    if scene_has("a1_s06_gala", "approach_lyra"):
+        if scene_has("a1_s07_balcony", "shared_light") and scene_has("a1_s07_balcony", "held_gaze"):
             athought "But I can still feel the space between us—close enough to matter."
             athought "Two people leaning toward each other, almost touching, almost shattering."
-        elif scene_has("act1_06_balcony", "shared_light"):
+        elif scene_has("a1_s07_balcony", "shared_light"):
             athought "The flame, her eyes—for a moment, we were just us."
             athought "Not performance, not protocol. Just two people remembering what that felt like."
 
@@ -185,7 +185,7 @@ label a1_s08_bedroom:
 
 
 # ========= CANONICAL NOTES =========
-# cann.scene_id: act1_07_bedroom
+# cann.scene_id: a1_s08_bedroom
 # cann.when_in_timeline: Night after Gala/Balcony; pre–Sector 10 deployment.
 # cann.what_happened:
 #   - Aeron processes Balcony micro-intimacy; acknowledges mask slippage.

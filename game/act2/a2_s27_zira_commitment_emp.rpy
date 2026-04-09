@@ -1,11 +1,11 @@
 # ===================================================
 # ACT 2 - Scene 27: Zira Commitment (EMP)
-# File: act2_26b_zira_commitment_emp.rpy
+# File: a2_s27_zira_commitment_emp.rpy
 # Path: EMP
 # ===================================================
 
 # ========= SCENE START TASKS =========
-$ _current_scene_id = "act2_26b_zira_commitment_emp"
+$ _current_scene_id = "a2_s27_zira_commitment_emp"
 $ scene_mark(_current_scene_id, "entered")
 
 label a2_s27_zira_commitment_emp:
@@ -499,7 +499,7 @@ label .scene_end:
 
 ​
 # ========= CANONICAL NOTES =========
-# cann.scene_id: act2_26b_zira_commitment_emp
+# cann.scene_id: a2_s27_zira_commitment_emp
 # cann.chapter: Act II, Chapter IV — The Cost
 # cann.chapter_start: False
 # cann.when_in_timeline:

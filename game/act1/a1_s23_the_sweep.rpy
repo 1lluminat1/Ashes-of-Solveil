@@ -4,7 +4,7 @@
 # =======================================================
 
 # ========= SCENE START TASKS =========
-$ _current_scene_id = "act1_17_sweep"
+$ _current_scene_id = "a1_s23_the_sweep"
 $ scene_mark(_current_scene_id, "entered")
 $ op_start("op_391_sector10", note="Operation 391 — Sector 10 sweep")
 
@@ -291,11 +291,11 @@ label a1_s23_the_sweep:
 
     # ==========================================
     # CALLBACK: Barracks mentoring echo
-    if scene_has("act1_07b_barracks_morning", "mentored_clinical"):
+    if scene_has("a1_s10_barracks_morning", "mentored_clinical"):
         "Unit-4" "Neutralize; collateral within tolerance."
         athought "My words. My phrasing. Coming out of someone else's mouth."
         athought "I taught him that."
-    elif scene_has("act1_07b_barracks_morning", "mentored_humane"):
+    elif scene_has("a1_s10_barracks_morning", "mentored_humane"):
         "The recruit hesitates at the breach point. Just for a moment."
         athought "He's thinking about what I told him. About the faces behind the doors."
         athought "That hesitation might save someone. Or it might get him killed."
@@ -477,7 +477,7 @@ label a1_s23_the_sweep:
 
 
 # ========= CANONICAL NOTES =========
-# cann.scene_id: act1_17_sweep
+# cann.scene_id: a1_s23_the_sweep
 # cann.when_in_timeline: Dawn after Act 1 return; Operation 391 execution window.
 # cann.what_happened:
 #   - Aeron leads Sector Ten sweep under Marcus's zero-tolerance order.

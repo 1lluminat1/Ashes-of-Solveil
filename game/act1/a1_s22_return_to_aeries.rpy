@@ -1,10 +1,10 @@
 # =======================================================
 # ACT 1 - Scene 16: Aeron Returns to the Aeries
-# File: act1_16_return_to_aeries.rpy
+# File: a1_s22_return_to_aeries.rpy
 # =======================================================
 
 # ========= SCENE START TASKS =========
-$ _current_scene_id = "act1_16_return_to_aeries"
+$ _current_scene_id = "a1_s22_return_to_aeries"
 $ scene_mark(_current_scene_id, "entered")
 
 define o1 = Character("Officer 1")
@@ -297,7 +297,7 @@ label a1_s22_return_to_aeries:
 
 
 # ========= CANONICAL NOTES =========
-# cann.scene_id: act1_16_return_to_aeries
+# cann.scene_id: a1_s22_return_to_aeries
 # cann.when_in_timeline: Pre-dawn, hours before Sector 10 purge; immediately after Zira first contact.
 # cann.what_happened:
 #   - Aeron returns to the Aeries; re-reads orders; weighs Zira's intel vs Command.

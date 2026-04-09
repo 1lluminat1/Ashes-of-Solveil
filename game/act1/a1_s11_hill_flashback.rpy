@@ -1,10 +1,10 @@
 # ======================================================
 # ACT 1 — Scene 08: Flashback — Aeron & Lyra on the Hill
-# File: act1_08_hill_flashback.rpy
+# File: a1_s11_hill_flashback.rpy
 # ======================================================
 
 # ========= SCENE START TASKS =========
-$ _current_scene_id = "act1_08_hill_flashback"
+$ _current_scene_id = "a1_s11_hill_flashback"
 $ scene_mark(_current_scene_id, "entered")
 
 
@@ -282,7 +282,7 @@ label a1_s11_hill_flashback:
 
 
 # ========= CANON NOTES =========
-# cann.scene_id: act1_08_hill_flashback
+# cann.scene_id: a1_s11_hill_flashback
 # cann.when_in_timeline: Childhood (age 10), two years pre-Branding; intercut after Balcony for resonance.
 # cann.what_happened:
 #   - Aeron & Lyra sneak beyond perimeter to a hill; trade hopes/fears; make two promises.

@@ -1,10 +1,10 @@
 # =======================================================
 # ACT 2 - Scene 10: Static Faith
-# File: act2_10_static_faith.rpy
+# File: a2_s10_static_faith.rpy
 # =======================================================
 
 # ========= SCENE START TASKS =========
-$ _current_scene_id = "act2_10_static_faith"
+$ _current_scene_id = "a2_s10_static_faith"
 $ scene_mark(_current_scene_id, "entered")
 
 label a2_s10_static_faith:
@@ -27,7 +27,7 @@ label a2_s10_static_faith:
 
     athought "The kind of conversation that's been building pressure for days."
 
-    if scene_has("act2_09_armor_down", "intimacy_chosen"):
+    if scene_has("a2_s09_armor_down", "intimacy_chosen"):
         "The space beside him is empty. Lyra's already up."
         "He can still feel the ghost of her warmth against his skin."
     else:
@@ -204,7 +204,7 @@ label a2_s10_static_faith:
 
     "He gets up. Moves to join them in the common area of the safehouse."
 
-    if scene_has("act2_09_armor_down", "intimacy_chosen"):
+    if scene_has("a2_s09_armor_down", "intimacy_chosen"):
         "Lyra's eyes find his. Something soft passes between them. Zira notices, rolls her eyes."
         z "(muttering) Great. As if being a third wheel wasn't awkward enough."
     else:
@@ -290,7 +290,7 @@ label a2_s10_static_faith:
 
 
 # ========= CANONICAL NOTES =========
-# cann.scene_id: act2_10_static_faith
+# cann.scene_id: a2_s10_static_faith
 # cann.chapter: Act II, Chapter II — Constellation
 # cann.chapter_start: False
 # cann.chapter_end: True — This closes Chapter II

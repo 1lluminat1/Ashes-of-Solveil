@@ -1,10 +1,10 @@
 # =======================================================
 # ACT 1 - Scene 21: Rooftop Reflection → The Purge
-# File: act1_21_purge.rpy
+# File: a1_s28_purge.rpy
 # =======================================================
 
 # ========= SCENE START TASKS =========
-$ _current_scene_id = "act1_21_purge"
+$ _current_scene_id = "a1_s28_purge"
 $ scene_mark(_current_scene_id, "entered")
 
 
@@ -26,9 +26,9 @@ label a1_s28_purge:
     $ kv = int(player_state.get("civilians_killed", 0))
     $ em = int(player_state.get("evidence_of_mercy", 0))
 
-    $ saved_vendor = scene_has("act1_17_sweep", "vendor_spared")
-    $ saved_child = scene_has("act1_17_sweep", "child_spared")
-    $ saved_shelter = scene_has("act1_17_sweep", "shelter_scattered")
+    $ saved_vendor = scene_has("a1_s23_the_sweep", "vendor_spared")
+    $ saved_child = scene_has("a1_s23_the_sweep", "child_spared")
+    $ saved_shelter = scene_has("a1_s23_the_sweep", "shelter_scattered")
 
     # ========= OPENING — THE ROOFTOP =========
     # VISUAL: Rooftop. Evening light—golden hour fading to dusk. Sectors 8–10 visible on horizon.
@@ -597,7 +597,7 @@ label a1_s28_purge:
 
 
 # ========= CANONICAL NOTES =========
-# cann.scene_id: act1_21_purge
+# cann.scene_id: a1_s28_purge
 # cann.when_in_timeline: Evening into 20:00; rooftop reflection immediately before and during orbital strikes.
 # cann.what_happened:
 #   - Aeron + Lyra share a quiet rooftop reconnection; hope beat just before catastrophe.

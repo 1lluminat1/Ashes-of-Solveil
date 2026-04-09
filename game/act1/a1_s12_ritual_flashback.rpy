@@ -1,10 +1,10 @@
 # ======================================================
 # ACT 1 — Scene 09: Flashback — Aeron's Branding Ritual
-# File: act1_09_ritual_flashback.rpy
+# File: a1_s12_ritual_flashback.rpy
 # ======================================================
 
 # ========= SCENE START TASKS =========
-$ _current_scene_id = "act1_09_ritual_flashback"
+$ _current_scene_id = "a1_s12_ritual_flashback"
 $ scene_mark(_current_scene_id, "entered")
 
 define c1 = Character("Cleric 1")
@@ -244,7 +244,7 @@ label a1_s12_ritual_flashback:
 
 
 # ========= CANON NOTES =========
-# cann.scene_id: act1_09_ritual_flashback
+# cann.scene_id: a1_s12_ritual_flashback
 # cann.when_in_timeline: Age 12, Tier Hall Branding; immediately precedes Marcus's "useful without faith" program.
 # cann.what_happened:
 #   - Branding attempt; relic recoils; Band fractures and falls away.

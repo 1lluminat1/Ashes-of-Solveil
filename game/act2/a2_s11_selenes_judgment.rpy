@@ -1,10 +1,10 @@
 # =======================================================
 # ACT 2 - Scene 11: Selene's Judgment
-# File: act2_11_selenes_judgment.rpy
+# File: a2_s11_selenes_judgment.rpy
 # =======================================================
 
 # ========= SCENE START TASKS =========
-$ _current_scene_id = "act2_11_selenes_judgment"
+$ _current_scene_id = "a2_s11_selenes_judgment"
 $ scene_mark(_current_scene_id, "entered")
 
 label a2_s11_selenes_judgment:
@@ -328,7 +328,7 @@ label a2_s11_selenes_judgment:
 
 
 # ========= CANONICAL NOTES =========
-# cann.scene_id: act2_11_selenes_judgment
+# cann.scene_id: a2_s11_selenes_judgment
 # cann.chapter: Act II, Chapter III — Proving Ground
 # cann.chapter_start: True
 # cann.when_in_timeline:

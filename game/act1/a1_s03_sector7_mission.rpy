@@ -1,10 +1,10 @@
 # ===================================================
 # ACT 1 - Scene 2B: Sector 7 Mission
-# File: act1_02b_sector7_mission.rpy
+# File: a1_s03_sector7_mission.rpy
 # ===================================================
 
 # ========= SCENE START TASKS =========
-$ _current_scene_id = "act1_02b_sector7_mission"
+$ _current_scene_id = "a1_s03_sector7_mission"
 $ scene_mark(_current_scene_id, "entered")
 
 define unit2 = Character("Unit-2", color="#4A90E2")
@@ -249,7 +249,7 @@ label a1_s03_sector7_mission:
 
 # ========= CANONICAL NOTES =========
 # cann.scene_id:
-#   act1_02b_sector7_mission  (Act I — Scene 2B)
+#   a1_s03_sector7_mission  (Act I — Scene 2B)
 # cann.when_in_timeline:
 #   Pre-gala anchor mission; immediately precedes Marcus private holo (Act I early).
 # cann.what_happened (objective canon summary):
@@ -281,4 +281,4 @@ label a1_s03_sector7_mission:
 #   anchor_or_variant:
 #     ANCHOR  # mandatory mission; only flavor differs based on menu choice
 #   requires_followup:
-#     - act1_03_morning_routing / act1_05_gala later in Act I
+#     - act1_03_morning_routing / a1_s06_gala later in Act I

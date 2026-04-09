@@ -1,10 +1,10 @@
 # ======================================================
 # ACT 1 - Scene 15: Aeron's First Encounter with Zira
-# File: act1_15_zira_first_contact.rpy
+# File: a1_s21_zira_first_contact.rpy
 # ======================================================
 
 # ========= SCENE START TASKS =========
-$ _current_scene_id = "act1_15_zira_first_contact"
+$ _current_scene_id = "a1_s21_zira_first_contact"
 $ scene_mark(_current_scene_id, "entered")
 
 
@@ -142,7 +142,7 @@ label a1_s21_zira_first_contact:
 
             z "Why are you really here? Night before your sweep?"
 
-            if scene_has("act1_14_lower_spans", "reassured_child") or scene_has("act1_14_lower_spans", "acknowledged_unders"):
+            if scene_has("a1_s20_lower_spans", "reassured_child") or scene_has("a1_s20_lower_spans", "acknowledged_unders"):
                 a "Because I wanted to see their faces first."
             else:
                 a "Because something felt wrong about the intel."
@@ -243,7 +243,7 @@ label a1_s21_zira_first_contact:
 
     athought "Eight hundred. The vendor. The child. The fires below. All of them."
 
-    if scene_has("act1_14_lower_spans", "bought_brew") or scene_has("act1_14_lower_spans", "acknowledged_unders"):
+    if scene_has("a1_s20_lower_spans", "bought_brew") or scene_has("a1_s20_lower_spans", "acknowledged_unders"):
         athought "I saw their faces tonight. Laughter, trade, ordinary life."
     else:
         athought "I kept my distance. Pretended they were numbers. I can't now."
@@ -288,7 +288,7 @@ label a1_s21_zira_first_contact:
 
 
 # ========= CANONICAL NOTES =========
-# cann.scene_id: act1_15_zira_first_contact
+# cann.scene_id: a1_s21_zira_first_contact
 # cann.when_in_timeline: Late night, immediately after "The Message" and Lower Spans walk; pre–Sector 10 purge dawn.
 # cann.what_happened:
 #   - Aeron meets Zira at Grid 6–2; she IDs him as "Glass" (his street name) and reframes Sector 10 as a purge.

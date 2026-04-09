@@ -1,10 +1,10 @@
 # =======================================================
 # ACT 2 - Scene 16: Finding Home
-# File: act2_16_finding_home.rpy
+# File: a2_s16_finding_home.rpy
 # =======================================================
 
 # ========= SCENE START TASKS =========
-$ _current_scene_id = "act2_16_finding_home"
+$ _current_scene_id = "a2_s16_finding_home"
 $ scene_mark(_current_scene_id, "entered")
 
 label a2_s16_finding_home:
@@ -344,7 +344,7 @@ label a2_s16_finding_home:
 
 
 # ========= CANONICAL NOTES =========
-# cann.scene_id: act2_16_finding_home
+# cann.scene_id: a2_s16_finding_home
 # cann.chapter: Act II, Chapter III — Proving Ground
 # cann.chapter_start: False
 # cann.when_in_timeline:

@@ -1,10 +1,10 @@
 # =======================================================
 # ACT 2 - Scene 6: Hand Off the Wire
-# File: act2_06_hand_off_the_wire.rpy
+# File: a2_s06_hand_off_the_wire.rpy
 # =======================================================
 
 # ========= SCENE START TASKS =========
-$ _current_scene_id = "act2_06_hand_off_the_wire"
+$ _current_scene_id = "a2_s06_hand_off_the_wire"
 $ scene_mark(_current_scene_id, "entered")
 
 label a2_s06_hand_off_the_wire:
@@ -481,7 +481,7 @@ label a2_s06_hand_off_the_wire:
 
 
 # ========= CANONICAL NOTES =========
-# cann.scene_id: act2_06_hand_off_the_wire
+# cann.scene_id: a2_s06_hand_off_the_wire
 # cann.chapter: Act II, Chapter II — Constellation
 # cann.chapter_start: False
 # cann.when_in_timeline:

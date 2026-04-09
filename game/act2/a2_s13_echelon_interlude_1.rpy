@@ -1,10 +1,10 @@
 # =======================================================
 # ACT 2 - Scene 13: Echelon Interlude — Damage Control
-# File: act2_13_echelon_interlude_1.rpy
+# File: a2_s13_echelon_interlude_1.rpy
 # =======================================================
 
 # ========= SCENE START TASKS =========
-$ _current_scene_id = "act2_13_echelon_interlude_1"
+$ _current_scene_id = "a2_s13_echelon_interlude_1"
 $ scene_mark(_current_scene_id, "entered")
 
 label a2_s13_echelon_interlude_1:
@@ -105,7 +105,7 @@ label a2_s13_echelon_interlude_1:
 
 
 # ========= CANONICAL NOTES =========
-# cann.scene_id: act2_13_echelon_interlude_1
+# cann.scene_id: a2_s13_echelon_interlude_1
 # cann.chapter: Act II, Chapter III — Proving Ground
 # cann.chapter_start: False
 # cann.when_in_timeline:

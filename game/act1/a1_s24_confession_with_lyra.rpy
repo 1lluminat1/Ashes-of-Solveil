@@ -4,7 +4,7 @@
 # =======================================================
 
 # ========= SCENE START TASKS =========
-$ _current_scene_id = "act1_18_confession_lyra"
+$ _current_scene_id = "a1_s24_confession_with_lyra"
 $ scene_mark(_current_scene_id, "entered")
 
 
@@ -106,7 +106,7 @@ label a1_s24_confession_with_lyra:
 
     a "He recognized me. He knew I'd come. He didn't run."
 
-    if scene_has("act1_17_sweep", "vendor_spared"):
+    if scene_has("a1_s23_the_sweep", "vendor_spared"):
         a "I let him go. Broke protocol. The team saw. But I couldn't kill him."
     else:
         a "I killed him. Three rounds. Center mass. Professional."
@@ -118,7 +118,7 @@ label a1_s24_confession_with_lyra:
 
     a "And there was a child. Just a child. Hiding behind a door."
 
-    if scene_has("act1_17_sweep", "child_spared"):
+    if scene_has("a1_s23_the_sweep", "child_spared"):
         a "I lied to the team. Said thermal was a glitch. Left her alive."
         a "But how many others didn't get that mercy?"
     else:
@@ -127,7 +127,7 @@ label a1_s24_confession_with_lyra:
 
     a "There were two hundred people in a shelter. Families. Elders. Children."
 
-    if scene_has("act1_17_sweep", "shelter_scattered"):
+    if scene_has("a1_s23_the_sweep", "shelter_scattered"):
         a "I warned them. Flashbang. Gave them time to scatter. One-fifty escaped. Fifty didn't."
     else:
         a "We breached. Charges. Smoke. Two hundred people. Gone in minutes."
@@ -314,7 +314,7 @@ label a1_s24_confession_with_lyra:
 
 
 # ========= CANONICAL NOTES =========
-# cann.scene_id: act1_18_confession_lyra
+# cann.scene_id: a1_s24_confession_with_lyra
 # cann.when_in_timeline: Late afternoon/evening, post–Sector 10 sweep (Op 391); pre–Obsidian Bridge contact.
 # cann.what_happened:
 #   - Aeron returns shattered; Lyra confronts report-vs-truth; he breaks and confesses details.
@@ -322,7 +322,7 @@ label a1_s24_confession_with_lyra:
 # cann.aeron_state: VO tinted by empathy band only (no momentum changes).
 # cann.path_tracking:
 #   - No menus. No OB/EMP delta (NEU scene).
-#   - Pulls detail variants via flags from act1_17_sweep.
+#   - Pulls detail variants via flags from a1_s23_the_sweep.
 #   - Social: rel_bump("Lyra", +1) baseline for vulnerability.
 # cann.thematic_flags: Report vs confession; moral injury; weapon vs human; shared culpability as connection.
 # cann.block_status: ANCHOR (fixed outcome, variant details).

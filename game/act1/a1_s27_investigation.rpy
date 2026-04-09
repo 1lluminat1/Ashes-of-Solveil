@@ -1,10 +1,10 @@
 # =======================================================
 # ACT 1 - Scene 20: Investigation - Morning After
-# File: act1_20_investigation.rpy
+# File: a1_s27_investigation.rpy
 # =======================================================
 
 # ========= SCENE START TASKS =========
-$ _current_scene_id = "act1_20_investigation"
+$ _current_scene_id = "a1_s27_investigation"
 $ scene_mark(_current_scene_id, "entered")
 
 
@@ -27,13 +27,13 @@ label a1_s27_investigation:
 
     # Setup (BC-safe reads)
     $ em = mercy_total()
-    $ has_device = has_tool("encrypted_comm") or scene_has("act1_19_obsidian_bridge", "device_given") or scene_has("act1_19_obsidian_bridge", "device_given_conditional")
+    $ has_device = has_tool("encrypted_comm") or scene_has("a1_s26_obsidian_bridge", "device_given") or scene_has("a1_s26_obsidian_bridge", "device_given_conditional")
     $ zira_trusts = char_flag_has("Zira", "trusts_aeron") or (characters["Zira"].get("trust", 0) >= 2)
 
     # Soft aliases for sweep callbacks
-    $ saved_child = scene_has("act1_17_sweep", "child_spared")
-    $ saved_vendor = scene_has("act1_17_sweep", "vendor_spared")
-    $ saved_shelter = scene_has("act1_17_sweep", "shelter_scattered")
+    $ saved_child = scene_has("a1_s23_the_sweep", "child_spared")
+    $ saved_vendor = scene_has("a1_s23_the_sweep", "vendor_spared")
+    $ saved_shelter = scene_has("a1_s23_the_sweep", "shelter_scattered")
 
     # VISUAL: Edge of bed. Still in clothes from yesterday. Exhausted. Hollow.
 
@@ -399,7 +399,7 @@ label a1_s27_investigation:
 
 
 # ========= CANONICAL NOTES =========
-# cann.scene_id: act1_20_investigation
+# cann.scene_id: a1_s27_investigation
 # cann.when_in_timeline: Morning/afternoon after Sector 10 sweep; before 20:00 "Project Renewal."
 # cann.what_happened:
 #   - Processes aftermath; device vs official-feed fork; confirms survivor chatter and grid anomaly.

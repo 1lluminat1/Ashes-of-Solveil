@@ -1,10 +1,10 @@
 # ======================================================
 # ACT 1 - Scene 13: The Message
-# File: act1_13_the_message.rpy
+# File: a1_s19_the_message.rpy
 # ======================================================
 
 # ========= SCENE START TASKS =========
-$ _current_scene_id = "act1_13_the_message"
+$ _current_scene_id = "a1_s19_the_message"
 $ scene_mark(_current_scene_id, "entered")
 
 
@@ -277,7 +277,7 @@ label a1_s19_the_message:
 
 
 # ========= CANONICAL NOTES =========
-# cann.scene_id: act1_13_the_message
+# cann.scene_id: a1_s19_the_message
 # cann.when_in_timeline: Same night as Lyra visit; pre–Sector 10 departure; Op391 at dawn.
 # cann.what_happened:
 #   - Marcus issues Priority Alpha sweep (zero-tolerance; "acceptable collateral").

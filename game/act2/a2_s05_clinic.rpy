@@ -1,10 +1,10 @@
 # =======================================================
 # ACT 2 - Scene 5: The Clinic
-# File: act2_05_clinic.rpy
+# File: a2_s05_clinic.rpy
 # =======================================================
 
 # ========= SCENE START TASKS =========
-$ _current_scene_id = "act2_05_clinic"
+$ _current_scene_id = "a2_s05_clinic"
 $ scene_mark(_current_scene_id, "entered")
 
 define jace = Character("Jace")
@@ -57,7 +57,7 @@ label a2_s05_clinic:
 
     athought "But someone keeps touching it up."
 
-    if scene_has("act2_04_first_day_out", "helped_injured_worker"):
+    if scene_has("a2_s04_first_day_out", "helped_injured_worker"):
         athought "The crate, the scream, the weight in my hands as we lifted."
         if empathy_band() == "obedience":
             athought "I moved on instinct. Still not sure if that was tactical or something else."
@@ -135,7 +135,7 @@ label a2_s05_clinic:
 
     # ========== YARD CHOICE PAYOFF ==========
 
-    if scene_has("act2_04_first_day_out", "helped_injured_worker"):
+    if scene_has("a2_s04_first_day_out", "helped_injured_worker"):
         # --- BRANCH A: Aeron helped the worker ---
 
         # VISUAL: Jace squints through pain, recognizes Aeron.
@@ -253,7 +253,7 @@ label a2_s05_clinic:
     t "Mostly. I've got a couple runners. A guy who can handle an IV if he's sober."
     t "Which is about half the time, so I don't plan around it."
 
-    if scene_has("act2_04_first_day_out", "helped_injured_worker"):
+    if scene_has("a2_s04_first_day_out", "helped_injured_worker"):
         t "(glances at Jace) He says you didn't hesitate. That's not nothing."
 
         if empathy_band() == "obedience":
@@ -309,7 +309,7 @@ label a2_s05_clinic:
 
             athought "The words come out before I can stop them. Heavier than I expected."
 
-            if scene_has("act2_04_first_day_out", "helped_injured_worker"):
+            if scene_has("a2_s04_first_day_out", "helped_injured_worker"):
                 a "Today I watched a man almost get crushed, and I moved. It still didn't feel like enough."
             else:
                 a "Today I watched a man get crushed and kept my hands on the belt."
@@ -454,7 +454,7 @@ label a2_s05_clinic:
         athought "I was clean once, probably. Before the training, before Glass."
         athought "It feels like another person's memory."
 
-    if scene_has("act2_04_first_day_out", "helped_injured_worker"):
+    if scene_has("a2_s04_first_day_out", "helped_injured_worker"):
         t "(glances toward Jace's cot) He'll walk again, if infection doesn't take him."
         t "He wanted to say thank you. Fell asleep before you came in."
         t "I don't pass along gratitude lightly. Don't make me regret it."
@@ -601,9 +601,9 @@ label a2_s05_clinic:
 
 
 # ========= CANONICAL NOTES =========
-# cann.scene_id: act2_05_clinic
+# cann.scene_id: a2_s05_clinic
 # cann.when_in_timeline:
-#   - Same day as act2_04_first_day_out (machine yard); evening after the shift ends.
+#   - Same day as a2_s04_first_day_out (machine yard); evening after the shift ends.
 # cann.what_happened:
 #   - Zira brings Aeron and Lyra to Tessa's underground clinic, hidden in the Unders.
 #   - Tessa is introduced in her element: treating Jace, the worker injured in the yard accident.

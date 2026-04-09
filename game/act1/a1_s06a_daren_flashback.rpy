@@ -4,7 +4,7 @@
 # =======================================================
 
 # ========= SCENE START TASKS =========
-$ _current_scene_id = "act1_daren_flashback"
+$ _current_scene_id = "a1_s06a_daren_flashback"
 $ scene_mark(_current_scene_id, "entered")
 
 

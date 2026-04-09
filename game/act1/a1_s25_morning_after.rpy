@@ -1,10 +1,10 @@
 # =======================================================
 # ACT 1 - Scene 18b: Morning After Confession
-# File: act1_18b_morning_after_confession.rpy
+# File: a1_s25_morning_after.rpy
 # =======================================================
 
 # ========= SCENE START TASKS =========
-$ _current_scene_id = "act1_18b_morning_after_confession"
+$ _current_scene_id = "a1_s25_morning_after"
 $ scene_mark(_current_scene_id, "entered")
 
 
@@ -500,7 +500,7 @@ label a1_s25_morning_after:
 
 
 # ========= CANONICAL NOTES =========
-# cann.scene_id: act1_18b_morning_after_confession
+# cann.scene_id: a1_s25_morning_after
 # cann.when_in_timeline: Morning after Act 1 Scene 18 (post–Op 391 confession); before Obsidian Bridge setup.
 # cann.what_happened:
 #   - Aeron & Lyra wake on the floor after the breakdown; mutual vulnerability continues.

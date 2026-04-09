@@ -1,10 +1,10 @@
 # =======================================================
 # ACT 2 - Scene 7: Quiet Night
-# File: act2_07_quiet_night.rpy
+# File: a2_s07_quiet_night.rpy
 # =======================================================
 
 # ========= SCENE START TASKS =========
-$ _current_scene_id = "act2_07_quiet_night"
+$ _current_scene_id = "a2_s07_quiet_night"
 $ scene_mark(_current_scene_id, "entered")
 
 label a2_s07_quiet_night:
@@ -409,7 +409,7 @@ label a2_s07_quiet_night:
 
 
 # ========= CANONICAL NOTES =========
-# cann.scene_id: act2_07_quiet_night
+# cann.scene_id: a2_s07_quiet_night
 # cann.chapter: Act II, Chapter II — Constellation
 # cann.chapter_start: False
 # cann.when_in_timeline:

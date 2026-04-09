@@ -1,10 +1,10 @@
 # ======================================================
 # ACT 1 - Scene 12: Lyra's Visit (Empathy-Integrated)
-# File: act1_12_lyra_visit.rpy
+# File: a1_s18_lyra_visit.rpy
 # ======================================================
 
 # ========= SCENE START TASKS =========
-$ _current_scene_id = "act1_12_lyra_visit"
+$ _current_scene_id = "a1_s18_lyra_visit"
 $ scene_mark(_current_scene_id, "entered")
 
 
@@ -355,7 +355,7 @@ label a1_s18_lyra_visit:
 
 
 # ========= CANONICAL NOTES =========
-# cann.scene_id: act1_12_lyra_visit
+# cann.scene_id: a1_s18_lyra_visit
 # cann.when_in_timeline: Immediately after Breaking Point; same night; pre–Sector 10 departure.
 # cann.what_happened:
 #   - Lyra checks on Aeron after rooftop brink; names the crack; offers presence.

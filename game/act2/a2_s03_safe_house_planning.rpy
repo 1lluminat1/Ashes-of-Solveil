@@ -1,10 +1,10 @@
 # =======================================================
 # ACT 2 - Scene 3: Safe House Morning / Zira's Plan
-# File: act2_03_safe_house_planning.rpy
+# File: a2_s03_safe_house_planning.rpy
 # =======================================================
 
 # ========= SCENE START TASKS =========
-$ _current_scene_id = "act2_03_safe_house_planning"
+$ _current_scene_id = "a2_s03_safe_house_planning"
 $ scene_mark(_current_scene_id, "entered")
 
 label a2_s03_safe_house_planning:
@@ -173,7 +173,7 @@ label a2_s03_safe_house_planning:
     jump a2_s04_first_day_out
 
 # ========= CANONICAL NOTES =========
-# cann.scene_id: act2_03_safe_house_planning
+# cann.scene_id: a2_s03_safe_house_planning
 # cann.when_in_timeline:
 #   - Morning after Act2_02 Reality Check; second day in the Unders.
 # cann.what_happened:

@@ -1,10 +1,10 @@
 # =======================================================
 # ACT 1 – Scene 6: Balcony
-# File: act1_06_balcony.rpy
+# File: a1_s07_balcony.rpy
 # =======================================================
 
 # ========= SCENE START TASKS =========
-$ _current_scene_id = "act1_06_balcony"
+$ _current_scene_id = "a1_s07_balcony"
 $ scene_mark(_current_scene_id, "entered")
 
 
@@ -115,7 +115,7 @@ label a1_s07_balcony:
 
     # ========= SMALL TALK — CONDITIONAL ON GALA CHOICE =========
 
-    if scene_has("act1_05_gala", "approach_lyra"):
+    if scene_has("a1_s06_gala", "approach_lyra"):
         l "You didn't keep me waiting."
         a "You said five."
 
@@ -149,7 +149,7 @@ label a1_s07_balcony:
 
     pause 0.8
 
-    if not scene_has("act1_05_gala", "approach_lyra"):
+    if not scene_has("a1_s06_gala", "approach_lyra"):
         l "I didn't expect to find you out here."
         a "I didn't expect you to leave a spotlight unattended. Shouldn't you be inside, charming anyone with a title?"
     else:
@@ -377,7 +377,7 @@ label a1_s07_balcony:
 
 
 # ========= CANONICAL NOTES =========
-# cann.scene_id: act1_06_balcony
+# cann.scene_id: a1_s07_balcony
 # cann.when_in_timeline: Act I immediately after Gala; pre-Bridge path-lock era.
 # cann.what_happened:
 #   - Aeron and Lyra meet in honest air (cool palette vs warm gala).

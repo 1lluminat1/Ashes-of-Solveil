@@ -1,10 +1,10 @@
 # ===================================================
 # ACT 1 - Scene 2: Aeron's Bedroom
-# File: act1_02_bedroom.rpy
+# File: a1_s02_bedroom.rpy
 # ===================================================
 
 # ========= SCENE START TASKS =========
-$ _current_scene_id = "act1_02_bedroom"
+$ _current_scene_id = "a1_s02_bedroom"
 $ scene_mark(_current_scene_id, "entered")
 
 
@@ -126,7 +126,7 @@ label a1_s02_bedroom:
 
         "Say it anyway":
             $ choice_and_dev(_current_scene_id, "say_it_anyway", "OB", factor=1,
-                                next_scene_label="act1_02b_sector7_mission",
+                                next_scene_label="a1_s03_sector7_mission",
                                 note="Recites doctrine aloud")
 
             a "Order above all. Unity before self."
@@ -137,7 +137,7 @@ label a1_s02_bedroom:
 
         "Stay silent":
             $ choice_and_dev(_current_scene_id, "stay_silent", "EMP", factor=1,
-                                next_scene_label="act1_02b_sector7_mission",
+                                next_scene_label="a1_s03_sector7_mission",
                                 note="Swallows the words")
 
             athought "I wait for the words to come. They don't."
@@ -176,7 +176,7 @@ label a1_s02_bedroom:
 
 # ========= CANONICAL NOTES =========
 # cann.scene_id:
-#   act1_02_bedroom  (Act I — Scene 2)
+#   a1_s02_bedroom  (Act I — Scene 2)
 # cann.when_in_timeline:
 #   Immediately before the Sector 7 mission; Aeron receives Operation 390 orders.
 #   Anchors the transition from introspection to field execution.
@@ -213,4 +213,4 @@ label a1_s02_bedroom:
 #   anchor_or_variant:
 #     ANCHOR   # establishes Aeron's identity foundation; flavor diverges later
 #   requires_followup:
-#     - act1_02b_sector7_mission  (execution of Operation 390)
+#     - a1_s03_sector7_mission  (execution of Operation 390)

@@ -1,10 +1,10 @@
 # =======================================================
 # ACT 2 - Scene 14: The Intel Den
-# File: act2_14_the_intel_den.rpy
+# File: a2_s14_the_intel_den.rpy
 # =======================================================
 
 # ========= SCENE START TASKS =========
-$ _current_scene_id = "act2_14_the_intel_den"
+$ _current_scene_id = "a2_s14_the_intel_den"
 $ scene_mark(_current_scene_id, "entered")
 
 label a2_s14_the_intel_den:
@@ -82,7 +82,7 @@ label a2_s14_the_intel_den:
 
     "She highlights a section of the timeline."
 
-    if scene_has("act2_12_proof_of_intent", "guard_spared"):
+    if scene_has("a2_s12_proof_of_intent", "guard_spared"):
         n "Here. The checkpoint complication. A replacement guard in your exit path."
         n "Standard tactical doctrine says eliminate the obstacle. Cade was ready to execute."
         n "You took a four-minute detour through a drainage system instead."
@@ -103,7 +103,7 @@ label a2_s14_the_intel_den:
         n "But you made it work. The mission succeeded and the guard survived."
         n "That's the anomaly I keep finding in your data, Captain. You shouldn't work, but you do."
 
-        if scene_has("act2_08_the_analyst", "admitted_break"):
+        if scene_has("a2_s08_the_analyst", "admitted_break"):
             n "You told me something broke on that rooftop. I'm beginning to understand what replaced it."
         else:
             n "You deflected when I asked what happened on that rooftop. But I'm starting to see the answer anyway."
@@ -127,7 +127,7 @@ label a2_s14_the_intel_den:
         n "I'm reading what the data shows, Captain. You made the efficient choice, but it cost you something."
         n "That cost is interesting. Glass wouldn't have felt it."
 
-        if scene_has("act2_08_the_analyst", "admitted_break"):
+        if scene_has("a2_s08_the_analyst", "admitted_break"):
             n "You told me something broke. I'm seeing evidence of what's trying to grow in its place."
             n "Even when you make the cold choices, they're not cold to you anymore."
         else:
@@ -290,7 +290,7 @@ label a2_s14_the_intel_den:
 
 
 # ========= CANONICAL NOTES =========
-# cann.scene_id: act2_14_the_intel_den
+# cann.scene_id: a2_s14_the_intel_den
 # cann.chapter: Act II, Chapter III — Proving Ground
 # cann.chapter_start: False
 # cann.when_in_timeline:

@@ -1,10 +1,10 @@
 # =======================================================
 # ACT 2 - Scene 17: Building Something
-# File: act2_17_building_something.rpy
+# File: a2_s17_building_something.rpy
 # =======================================================
 
 # ========= SCENE START TASKS =========
-$ _current_scene_id = "act2_17_building_something"
+$ _current_scene_id = "a2_s17_building_something"
 $ scene_mark(_current_scene_id, "entered")
 
 label a2_s17_building_something:
@@ -161,7 +161,7 @@ label a2_s17_building_something:
     # --- ZIRA KISS GATE ---
     # Check: Ghostline access given (A2_06), accepted with weight, trust threshold met
 
-    if scene_has("act2_06_hand_off_the_wire", "accepted_with_weight") and flag_has("Zira", "ghostline_access_granted"):
+    if scene_has("a2_s06_hand_off_the_wire", "accepted_with_weight") and flag_has("Zira", "ghostline_access_granted"):
 
         # VISUAL: The moment shifts. Something changes in the space between them.
         "The silence changes shape. The space between them becomes something else."
@@ -320,7 +320,7 @@ label a2_s17_building_something:
 
 
 # ========= CANONICAL NOTES =========
-# cann.scene_id: act2_17_building_something
+# cann.scene_id: a2_s17_building_something
 # cann.chapter: Act II, Chapter III — Proving Ground
 # cann.chapter_start: False
 # cann.when_in_timeline:

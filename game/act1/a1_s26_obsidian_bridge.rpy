@@ -1,10 +1,10 @@
 # =======================================================
 # ACT 1 - Scene 19: Obsidian Bridge — Zira's Judgment
-# File: act1_19_obsidian_bridge.rpy
+# File: a1_s26_obsidian_bridge.rpy
 # =======================================================
 
 # ========= SCENE START TASKS =========
-$ _current_scene_id = "act1_19_obsidian_bridge"
+$ _current_scene_id = "a1_s26_obsidian_bridge"
 $ scene_mark(_current_scene_id, "entered")
 
 
@@ -356,7 +356,7 @@ label a1_s26_obsidian_bridge:
 
 
 # ========= CANONICAL NOTES =========
-# cann.scene_id: act1_19_obsidian_bridge
+# cann.scene_id: a1_s26_obsidian_bridge
 # cann.when_in_timeline: Midnight after Op 391. Post-confession morning → night meetup.
 # cann.what_happened:
 #   - Aeron meets Zira at Obsidian Bridge; outcome branches on mercy_total.

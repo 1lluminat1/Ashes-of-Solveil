@@ -1,10 +1,10 @@
 # =======================================================
 # ACT 2 - Scene 12: Proof of Intent
-# File: act2_12_proof_of_intent.rpy
+# File: a2_s12_proof_of_intent.rpy
 # =======================================================
 
 # ========= SCENE START TASKS =========
-$ _current_scene_id = "act2_12_proof_of_intent"
+$ _current_scene_id = "a2_s12_proof_of_intent"
 $ scene_mark(_current_scene_id, "entered")
 
 label a2_s12_proof_of_intent:
@@ -427,7 +427,7 @@ label a2_s12_proof_of_intent:
 
 
 # ========= CANONICAL NOTES =========
-# cann.scene_id: act2_12_proof_of_intent
+# cann.scene_id: a2_s12_proof_of_intent
 # cann.chapter: Act II, Chapter III — Proving Ground
 # cann.chapter_start: False
 # cann.when_in_timeline:

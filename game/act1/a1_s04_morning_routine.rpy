@@ -4,7 +4,7 @@
 # ===================================================
 
 # ========= SCENE START TASKS =========
-$ _current_scene_id = "act1_03_morning_routine"
+$ _current_scene_id = "a1_s04_morning_routine"
 $ scene_mark(_current_scene_id, "entered")
 
 
@@ -61,7 +61,7 @@ label a1_s04_morning_routine:
 
         "Let yourself remember":
             $ choice_and_dev(_current_scene_id, "_remember_it", "EMP", factor=1,
-                    next_scene_label="act1_04_hallway",
+                    next_scene_label="a1_s05_hallway",
                     note="Remembers the memory")
             $ tp_seed("a1.morning.kael_memory")
 
@@ -73,7 +73,7 @@ label a1_s04_morning_routine:
 
         "Bury it":
             $ choice_and_dev(_current_scene_id, "_buries_it", "OB", factor=1,
-                    next_scene_label="act1_04_hallway",
+                    next_scene_label="a1_s05_hallway",
                     note="Buries the memory")
 
             athought "This isn't the time for ghosts. I'm not a boy grieving anymore."
@@ -135,7 +135,7 @@ label a1_s04_morning_routine:
 
 # ========= CANONICAL NOTES =========
 # cann.scene_id:
-#   act1_03_morning_routine  (Act I — Scene 3)
+#   a1_s04_morning_routine  (Act I — Scene 3)
 # cann.when_in_timeline:
 #   Morning following Operation 390; pre-gala preparation; Aeron resumes civilian-facing persona.
 # cann.what_happened (objective canon summary):
@@ -171,7 +171,7 @@ label a1_s04_morning_routine:
 #   anchor_or_variant:
 #     ANCHOR   # core narrative bridge from mission identity to gala performance
 #   requires_followup:
-#     - act1_04_hallway → act1_05_gala
+#     - a1_s05_hallway → a1_s06_gala
 # cann.true_path_integration:
 #   - "Let yourself remember" increments early True Path resonance trigger by +1.
 #   - True Path tracks accumulation of *unrepressed empathy moments* across both branches.

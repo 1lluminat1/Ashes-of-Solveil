@@ -4,7 +4,7 @@
 # =======================================================
 
 # ======= SCENE START TASKS =======
-$ _current_scene_id = "act1_demo_floor"
+$ _current_scene_id = "a1_s13_demonstration_floor"
 $ scene_mark(_current_scene_id, "entered")
 
 define ins = Character("Instructor")
@@ -165,7 +165,7 @@ label a1_s13_demonstration_floor:
 
 
 # ========= CANON NOTES =========
-# cann.scene_id: act1_demo_floor
+# cann.scene_id: a1_s13_demonstration_floor
 # cann.when_in_timeline: Afternoon of Inspection Day; before Debrief (19:00).
 # cann.what_happened:
 #   - Instructor runs domestic-contraband holowall scenario.
