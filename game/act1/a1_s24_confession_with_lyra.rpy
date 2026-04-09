@@ -102,9 +102,12 @@ label a1_s24_confession_with_lyra:
     # ========= THE FLOOD =========
     # CAMERA: Slow dolly in; shallow depth—world narrows to two faces.
 
-    a "There was a vendor. I bought coffee from him. Three nights ago."
-
-    a "He recognized me. He knew I'd come. He didn't run."
+    if scene_has("a1_s20_lower_spans", "bought_brew"):
+        a "There was a vendor. I bought coffee from him. The night before the sweep."
+        a "He recognized me. He knew I'd come. He didn't run."
+    else:
+        a "There was a vendor. I walked past his stall the night before."
+        a "He saw my face. Remembered it. Didn't run."
 
     if scene_has("a1_s23_the_sweep", "vendor_spared"):
         a "I let him go. Broke protocol. The team saw. But I couldn't kill him."

@@ -73,6 +73,10 @@ label a1_s15_archive_of_merit:
 
             athought "Silence is easy to curate. No fingerprints."
 
+    # [MODULAR FRICTION] Added environmental interruption to break the plaque→reaction→plaque rhythm.
+
+    "Between the displays, a cleaning drone scrubs a dark smear from the marble. The stain doesn't look old."
+
     # ========= PLAQUE 2: FOUNDERS' MAXIMS =========
     # VISUAL: Second plaque—gilded text, the doctrine rendered as scripture.
     #scene bg_archive_plaque_maxims with dissolve

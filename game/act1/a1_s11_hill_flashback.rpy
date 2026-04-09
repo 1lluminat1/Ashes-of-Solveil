@@ -247,7 +247,7 @@ label a1_s11_hill_flashback:
 
     "Her fingers slip away. The warmth remains."
 
-    athought "I should have held on. Should have known this was the last time we'd be whole."
+    athought "I should have held on."
 
     # VISUAL: She steps back; the moment breaks but doesn't shatter.
 
@@ -256,21 +256,20 @@ label a1_s11_hill_flashback:
     # ========= CLOSING REFLECTION =========
     # CAMERA: Close on hands; grass moving in wind.
 
-    athought "For a moment, the city didn't exist—just us and the wind."
+    # [REFLECTIVE TRIM] was: athought "For a moment, the city didn't exist—just us and the wind."
+    # [REFLECTIVE TRIM] was: athought "I should have held tighter to that moment."
+    # [REFLECTIVE TRIM] was: athought "We promised to find a place like that hill, somewhere ours."
+    # [REFLECTIVE TRIM] was: athought "Instead, we found duty, orders, distance."
+    # [REFLECTIVE TRIM] was: athought "She became Echelon's proof. I became something sharp and empty."
+    # [REFLECTIVE TRIM] was: athought "Two polished surfaces, both see-through, both hollow."
+    # [REFLECTIVE TRIM] was: athought "But tonight, on the balcony, we almost remembered."
+    # [REFLECTIVE TRIM] was: athought "Leaning toward each other—just like on this hill, just like always."
+    # Eight lines interpreting a memory the player just lived. The memory is strong enough.
+    # Keep one line — the one that bridges past to present without explaining:
 
-    athought "I should have held tighter to that moment."
+    athought "We promised to find a place like that hill."
 
-    athought "We promised to find a place like that hill, somewhere ours."
-
-    athought "Instead, we found duty, orders, distance."
-
-    athought "She became Echelon's proof. I became something sharp and empty."
-
-    athought "Two polished surfaces, both see-through, both hollow."
-
-    athought "But tonight, on the balcony, we almost remembered."
-
-    athought "Leaning toward each other—just like on this hill, just like always."
+    athought "Tonight, on the balcony, we almost did."
 
     # ========= TRANSITION =========
 

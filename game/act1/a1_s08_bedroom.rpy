@@ -35,9 +35,10 @@ label a1_s08_bedroom:
             athought "The flame, her eyes—for a moment, we were just us."
             athought "Not performance, not protocol. Just two people remembering what that felt like."
 
-    athought "Still, something was different in her eyes tonight. Not duty, not protocol—something real."
-
-    athought "She sees what I am. And she sees what's underneath."
+    # [OVER-CLOSURE TRIM] was: athought "Still, something was different in her eyes tonight. Not duty, not protocol—something real."
+    # [OVER-CLOSURE TRIM] was: athought "She sees what I am. And she sees what's underneath."
+    # Three lines naming the same recognition. The conditional above already established the intimacy.
+    # Keep one — the one that's about Aeron, not about Lyra's perception:
 
     athought "Maybe I'm not the only one tired of pretending."
 
@@ -108,11 +109,10 @@ label a1_s08_bedroom:
     # ========= MASK SLIPPAGE =========
     # CAMERA: 2% push. This is the emotional beat.
 
-    athought "Still wearing the mask, even alone."
+    # [OVER-CLOSURE TRIM] was: athought "Still wearing the mask, even alone."
+    # Cut — the mask motif has been established across multiple scenes. One line is enough here:
 
-    athought "But tonight, the mask slipped. Lyra saw through it—and I let her."
-
-    athought "That's not what I do. I don't let anyone see."
+    athought "Tonight, the mask slipped. And I let it."
 
     # ========= PLAYER CHOICE — ACKNOWLEDGE MARCUS =========
     # VISUAL: Terminal glow. Blank message cursor blinks.

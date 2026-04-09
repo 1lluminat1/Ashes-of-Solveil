@@ -197,11 +197,11 @@ label a1_s06_gala:
 
     pause 0.7
 
+    # [MODULAR TRIM] Compressed first whisper block — second (younger elites) is the one with teeth.
+    # was: e1 "...Marcus Rylan's son." / e2 "390 operations..." / e3 "doesn't even flinch" / e1 "strength or vacancy?" / e2 "Ask his father."
     e1 "...Marcus Rylan's son."
-    e2 "390 operations. Zero failures. No margin for error."
-    e3 "They say he doesn't even flinch anymore—doesn't feel the kills."
+    e2 "390 operations. Zero failures."
     e1 "Is that strength... or vacancy?"
-    e2 "Ask his father. That's the point."
 
     # ========= BRANCHING — INTERNAL RESPONSE =========
 
@@ -317,17 +317,15 @@ label a1_s06_gala:
 
     athought "They're not wrong."
 
-    athought "Cracks are forming. Last night, I felt one spread—'Mercy. The definition is slipping.'"
+    # [OVER-CLOSURE TRIM] was: athought "Cracks are forming. Last night, I felt one spread—'Mercy. The definition is slipping.'"
+    # [OVER-CLOSURE TRIM] was: athought "Weapons don't ask questions. But I did."
+    # [OVER-CLOSURE TRIM] was: athought "They laugh like the world belongs to them, and I'm expected to smile like I believe it."
+    # [OVER-CLOSURE TRIM] was: athought "Six hours ago, I executed four people without hesitation. Now I'm holding wine, making small talk."
+    # [OVER-CLOSURE TRIM] was: athought "This is what I'm built for—seamless transitions. So why does it feel different tonight?"
+    # Five lines after "They're not wrong" — each naming a different aspect of the same fracture.
+    # The younger elites already said everything. "They're not wrong" is the concession. One follow-up:
 
-    athought "Weapons don't ask questions. But I did."
-
-    athought "They laugh like the world belongs to them, and I'm expected to smile like I believe it."
-
-    # ========= TRANSITION DISSONANCE =========
-
-    athought "Six hours ago, I executed four people without hesitation. Now I'm holding wine, making small talk."
-
-    athought "This is what I'm built for—seamless transitions. So why does it feel different tonight?"
+    athought "Six hours ago, I executed four people. Now I'm holding wine."
 
     # ========= PLAYER CHOICE — APPROACH LYRA =========
     # VISUAL: Lyra momentarily alone as the Councilwoman steps away.

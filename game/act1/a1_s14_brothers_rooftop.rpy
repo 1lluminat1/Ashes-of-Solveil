@@ -199,29 +199,24 @@ label a1_s14_brothers_rooftop:
 
     athought "Two years after that, he stood here alone. Age seventeen. And he jumped."
 
-    athought "I kept my promise. I remembered who you were."
-
-    athought "But I didn't understand what you meant—not then."
-
     athought "'Don't let Father turn you into a weapon,' you said."
 
     athought "Two years after your jump, my Band failed. Age twelve."
 
-    athought "And Father did exactly what you warned me about."
+    # [REFLECTIVE TRIM] was: athought "I kept my promise. I remembered who you were."
+    # [REFLECTIVE TRIM] was: athought "But I didn't understand what you meant—not then."
+    # [REFLECTIVE TRIM] was: athought "And Father did exactly what you warned me about."
+    # [REFLECTIVE TRIM] was: athought "He made me transparent, empty, useful—a weapon without faith, a tool without purpose."
+    # [REFLECTIVE TRIM] was: athought "390 operations. Ten years of becoming what you told me to fight."
+    # [REFLECTIVE TRIM] was: athought "The cage, the whispers, Father's 'mercy'—the weight of being saved when you wanted to fall."
+    # [REFLECTIVE TRIM] was: athought "You knew. You tried to warn me. I didn't hear it until too late."
+    # [REFLECTIVE TRIM] was: athought "But now... now something is cracking."
+    # [REFLECTIVE TRIM] was: athought "Maybe I can still fight it. Maybe it's not too late."
+    # [REFLECTIVE TRIM] was: athought "Maybe breaking is how I finally keep my promise to you."
+    # Ten lines interpreting the memory. The rooftop scene already carried the weight.
+    # Keep the Kael quote + timeline, then one line that doesn't conclude — just holds:
 
-    athought "He made me transparent, empty, useful—a weapon without faith, a tool without purpose."
-
-    athought "390 operations. Ten years of becoming what you told me to fight."
-
-    athought "The cage, the whispers, Father's 'mercy'—the weight of being saved when you wanted to fall."
-
-    athought "You knew. You tried to warn me. I didn't hear it until too late."
-
-    athought "But now... now something is cracking."
-
-    athought "Maybe I can still fight it. Maybe it's not too late."
-
-    athought "Maybe breaking is how I finally keep my promise to you."
+    athought "390 operations later, I still hear you."
 
     # ========= RETURN TO PRESENT =========
 

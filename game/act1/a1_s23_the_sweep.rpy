@@ -234,7 +234,10 @@ label a1_s23_the_sweep:
 
     vendor "I'm not a rebel. I sell coffee."
 
-    vendor "(meets Aeron) You know that. You bought a cup three nights ago."
+    if scene_has("a1_s20_lower_spans", "bought_brew"):
+        vendor "(meets Aeron's eyes) You know that. You bought a cup last night."
+    else:
+        vendor "(meets Aeron's eyes) You know that. You walked past my stall last night. I saw your face."
 
     menu:
         athought "The brew pot hisses. Safeties click in the hush."

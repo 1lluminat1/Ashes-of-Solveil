@@ -33,7 +33,8 @@ label a1_s05_hallway:
 
     athought "Their eyes trace edges, not faces—judging the outline, never the person."
 
-    athought "They see something they don't understand, and that makes them nervous."
+    # [OVER-CLOSURE TRIM] was: athought "They see something they don't understand, and that makes them nervous."
+    # The first line already shows the avoidance. The second explains why.
 
     # ========= FLOOR SIGIL =========
     # VISUAL: Floor tiles form concentric circles radiating outward—Echelon sigil stamped into marble.
@@ -171,9 +172,9 @@ label a1_s05_hallway:
 
     pause 0.7
 
-    athought "He trained me well. Too well, maybe."
-
-    athought "I can kill without hesitation, lead without doubt, obey without question—everything he wanted. Everything but faith."
+    # [OVER-CLOSURE TRIM] was: athought "He trained me well. Too well, maybe."
+    # [OVER-CLOSURE TRIM] was: athought "I can kill without hesitation, lead without doubt, obey without question—everything he wanted. Everything but faith."
+    # Three lines orbiting the same idea. The last is the strongest — Aeries diction, earned weight:
 
     athought "All function, no soul. Just enough to pass for human. And that makes me his greatest failure."
 
@@ -192,7 +193,8 @@ label a1_s05_hallway:
 
     pause 0.8
 
-    athought "They're not wrong. I don't feel, I don't question—I just cut."
+    # [OVER-CLOSURE TRIM] was: athought "They're not wrong. I don't feel, I don't question—I just cut."
+    # The whispers ("nothing behind them") already delivered this verdict. Aeron agreeing reduces the sting.
 
     "The whispers fade as he passes. Relief in their silence."
 
@@ -209,17 +211,16 @@ label a1_s05_hallway:
     # VISUAL: Aeron pauses. Hand hovers near the doorframe but doesn't touch.
     # SYMBOL: Threshold hesitation. The choice to enter is also a choice to perform.
 
-    athought "I could turn around, slip into the dark. Would anyone stop me? Would anyone care?"
+    athought "I could turn around."
 
     pause 0.5
 
-    athought "There is no retreat. Only forward."
+    # [OVER-CLOSURE TRIM] was: athought "There is no retreat. Only forward."
+    # [OVER-CLOSURE TRIM] was: "The hesitation passes. The choice was already made before he reached the door."
+    # [OVER-CLOSURE TRIM] was: athought "I show up when I'm told. That's what I'm built for."
+    # Three lines explaining why he doesn't turn around. The physical action of stepping forward says it:
 
-    "The hesitation passes. The choice was already made before he reached the door."
-
-    pause 0.7
-
-    athought "I show up when I'm told. That's what I'm built for."
+    "His hand finds the doorframe. The metal is warm from the light on the other side."
 
     # ========= DOORS OPEN =========
     # VISUAL: Doors swing inward; gold light floods the frame. Sound swells—strings, voices, clinking crystal.

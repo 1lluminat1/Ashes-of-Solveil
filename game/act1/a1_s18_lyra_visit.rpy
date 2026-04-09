@@ -89,23 +89,20 @@ label a1_s18_lyra_visit:
 
     a "Doing what?"
 
-    l "Carrying everything alone. Pretending you're made of stone."
+    l "Carrying everything alone. Pretending you're a window people can just look through."
 
-    l "Pretending you're a window people can just look through."
+    # [SEMANTIC LOOP TRIM] was: l "Pretending you're made of stone."
+    # [SEMANTIC LOOP TRIM] was: a "(looks away) Stones don't crack. People do."
+    # [SEMANTIC LOOP TRIM] was: l "(softly) Windows crack too. And you're not a window, Aeron."
+    # [SEMANTIC LOOP TRIM] was: a "Everyone says I am. Father made me one."
+    # [SEMANTIC LOOP TRIM] was: l "Your father tried. There's a difference."
+    # [SEMANTIC LOOP TRIM] was: l "Windows don't stand on edges wondering if they should fall."
+    # [SEMANTIC LOOP TRIM] was: l "Windows don't shake. Windows don't question. Windows don't feel."
+    # Eight lines orbiting the window metaphor. Keep the setup + the landing:
 
-    "Her words land heavier than she knows."
-
-    a "(looks away) Stones don't crack. People do."
-
-    l "(softly) Windows crack too. And you're not a window, Aeron."
-
-    a "Everyone says I am. Father made me one."
+    a "Father made me one."
 
     l "Your father tried. There's a difference."
-
-    l "Windows don't stand on edges wondering if they should fall."
-
-    l "Windows don't shake. Windows don't question. Windows don't feel."
 
     l "(steps closer) And you... you feel everything."
 
@@ -139,13 +136,12 @@ label a1_s18_lyra_visit:
 
             l "Windows recognize windows, Aeron. We see each other."
 
-            l "And I see you breaking. That is not weakness. That is waking up."
-
             "The door clicks. Quiet returns."
 
-            athought "She sees it. The cracks. The breaking."
-
-            athought "Maybe that's why she came."
+            # [OVER-CLOSURE TRIM] was: l "And I see you breaking. That is not weakness. That is waking up."
+            # [OVER-CLOSURE TRIM] was: athought "She sees it. The cracks. The breaking."
+            # [OVER-CLOSURE TRIM] was: athought "Maybe that's why she came."
+            # "Windows recognize windows" is the exit line. It's perfect. The rest explains it.
 
             # VISUAL: Corridor warm spill disappears; room cools another notch.
 

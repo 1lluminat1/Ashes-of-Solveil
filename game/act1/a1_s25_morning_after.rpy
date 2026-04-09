@@ -35,9 +35,11 @@ label a1_s25_morning_after:
 
     athought "Too broken to care. But this closeness... it's something real in the ruin."
 
-    athought "I've never seen her like this. Unguarded. Undone."
+    # [OVER-CLOSURE TRIM] was: athought "I've never seen her like this. Unguarded. Undone."
+    # [OVER-CLOSURE TRIM] was: athought "No performance. No polish. Just... her. Beautiful in the breaking."
+    # "Beautiful in the breaking" aestheticizes fresh trauma. Replace with physical observation:
 
-    athought "No performance. No polish. Just... her. Beautiful in the breaking."
+    athought "Her hair is loose. I've never seen it loose before."
 
     # CAMERA: Micro-shift; her fingers tighten by reflex.
 
@@ -448,11 +450,10 @@ label a1_s25_morning_after:
 
     "The door closes. Silence floods back."
 
-    athought "She's been barely holding on. Just like me."
-
-    athought "All this time I thought she was saving me."
-
-    athought "But we've been saving each other."
+    # [OVER-CLOSURE TRIM] was: athought "She's been barely holding on. Just like me."
+    # [OVER-CLOSURE TRIM] was: athought "All this time I thought she was saving me."
+    # [OVER-CLOSURE TRIM] was: athought "But we've been saving each other."
+    # Cut — the scene already showed the mutual saving. Stating it closes the interpretive space.
 
     # VISUAL: Small brown ring on floor; a red dot beside it.
 
@@ -465,31 +466,27 @@ label a1_s25_morning_after:
     if empathy_band() == "obedience":
         athought "Note the injury. Note the numbness. Proceed."
     else:
-        athought "Pain doesn't register when you're already drowning."
+        athought "She didn't even notice."
 
-    athought "38 people. 7 children. And something before that. Something worse."
+    # [OVER-CLOSURE TRIM] was: athought "38 people. 7 children. And something before that. Something worse."
+    # [OVER-CLOSURE TRIM] was: athought "Her Band compulsion. Her terror. Her mask."
+    # [OVER-CLOSURE TRIM] was: athought "She's not just broken. She's terrified of breaking more."
+    # [OVER-CLOSURE TRIM] was: athought "No Band. No worth. That's what the system teaches."
+    # [OVER-CLOSURE TRIM] was: athought "I learned that at twelve. Failed and forgotten."
+    # [OVER-CLOSURE TRIM] was: athought "But she has hers. And she's still terrified."
+    # [OVER-CLOSURE TRIM] was: athought "What happened to make her fear it so much?"
+    # Seven lines of interpretation. The blood drop is the image. Let it carry.
 
-    athought "Her Band compulsion. Her terror. Her mask."
-
-    athought "She's not just broken. She's terrified of breaking more."
-
-    athought "No Band. No worth. That's what the system teaches."
-
-    athought "I learned that at twelve. Failed and forgotten."
-
-    athought "But she has hers. And she's still terrified."
-
-    athought "What happened to make her fear it so much?"
+    athought "What happened to her before all this?"
 
     # VISUAL: City comes alive; cold daylight swallows the room's warmth.
 
-    "The city wakes beyond the pane. Another day. Another performance."
+    "The city wakes beyond the pane. Another day."
 
-    athought "Broken recognizes broken."
-
-    athought "We're both drowning. But at least we're drowning together."
-
-    athought "Maybe that's enough. For now."
+    # [OVER-CLOSURE TRIM] was: athought "Broken recognizes broken."
+    # [OVER-CLOSURE TRIM] was: athought "We're both drowning. But at least we're drowning together."
+    # [OVER-CLOSURE TRIM] was: athought "Maybe that's enough. For now."
+    # The blood drop and the question carry more weight than the thesis summary.
 
     # ========= BOOKKEEPING =========
 

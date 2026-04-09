@@ -171,18 +171,35 @@ label a1_s21_zira_first_contact:
             $ rel_bump("Zira", -1)
             $ scene_mark(_current_scene_id, "let_zira_go")
 
-            a "Fine. Walk away."
+            "She turns. Doesn't hesitate."
 
-            # CAMERA: Over-shoulder as she moves; silhouette threads through piping.
+            # CAMERA: Over-shoulder tracking shot as she moves through piping. She talks without stopping.
 
-            z "Suit yourself. But if you're down here for truth, you're already bleeding."
+            z "(walking) Your funeral. But since you came all the way down here—"
 
-            z "(over shoulder) Glass doesn't bleed. People do. Figure out which one you are before dawn."
+            z "Sector Ten isn't rebels. It's eight hundred civilians. Families. Kids. Your report is a purge order."
 
-    # ========= SHARED FOLLOW-UP =========
+            athought "She's still talking. Getting further away."
+
+            z "(over shoulder) You can't refuse Marcus. But you can choose how you obey."
+
+            z "Warn people. Fake a timestamp. Find the cracks."
+
+            z "(almost gone) Obsidian Bridge. Midnight tomorrow. If you fought for them—even one—I'll be there."
+
+            z "If you just followed orders... don't bother."
+
+            # BLOCKING: She's gone. The alley swallows her.
+
+            "Gone. Just pipe hum and the afterimage of someone who knew more about my mission than I did."
+
+            athought "Eight hundred people. Not five hundred. Not rebels."
+            athought "She told me that for free. While walking away."
+
+            jump .scene_close
+
+    # ========= EXTENDED CONVERSATION (STOP HER PATH ONLY) =========
     # BLOCKING: Both tuck into the shadow of a service pylon; light sweeps past, then fades.
-
-#TODO: This sequence doesnt make sense, we have a choice to "Let her go" but then aeron says "Fine. Walk away."? That makes no sense.
 
     "Another drone drifts overhead. We flatten to steel. The cone moves on."
 
@@ -273,6 +290,8 @@ label a1_s21_zira_first_contact:
     # BLOCKING: She slips behind a vent baffle and is gone; only the filament afterglow remains.
 
     "She's gone before I can answer. The alley hum stays—steady, low, a heartbeat that refuses to die."
+
+    label .scene_close:
 
     a "(quiet) What the hell am I getting into..."
 
