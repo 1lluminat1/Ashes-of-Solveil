@@ -31,9 +31,11 @@ label a1_s04_morning_routine:
 
     "Condensation clings to the mirror, blurring the edges of everything."
 
-    athought "Morning feels mechanical—wake, wash, dress, repeat."
+    # [OVER-CLOSURE TRIM] was: athought "Morning feels mechanical—wake, wash, dress, repeat."
+    # [OVER-CLOSURE TRIM] was: athought "Last night: soldier. Tonight: son. Same uniform, different lies."
+    # Both lines diagnose the scene's thesis before it earns it. Let the routine show the mechanical.
 
-    athought "Last night: soldier. Tonight: son. Same uniform, different lies."
+    "The tap drips. He counts three drops before turning it off."
 
     # ========= UNIFORM ON BED =========
     # CAMERA: Cut to uniform folded on bed; soft ambient light streaks across medals.
@@ -42,7 +44,8 @@ label a1_s04_morning_routine:
 
     "The dress uniform hangs like a costume—every crease pressed, every medal aligned to the millimeter."
 
-    athought "The mirror shows what I'm supposed to be. The uniform makes it official."
+    # [OVER-CLOSURE TRIM] was: athought "The mirror shows what I'm supposed to be. The uniform makes it official."
+    # Mirror + uniform + identity already established in s02. This line re-states. Cut.
 
     # ========= MEMORY — KAEL CALLBACK =========
     # VISUAL: Quick white flash; insert frame—Kael in same uniform, younger, confident.
@@ -51,13 +54,17 @@ label a1_s04_morning_routine:
 
     athought "Kael wore his like armor—stood taller, smiled wider."
 
-    athought "I wear mine like a screen, reflecting what they want to see, hiding the rest. His didn't save him either."
+    # [OVER-CLOSURE TRIM] was: athought "I wear mine like a screen, reflecting what they want to see, hiding the rest. His didn't save him either."
+    # "Kael wore his like armor" is the strong image. The contrast line over-explains. Replace with the gut punch:
+
+    athought "His didn't save him either."
 
     # ========= PLAYER CHOICE — KAEL MEMORY =========
     # NOTE: Early empathy micro-weight. Affects True Path resonance tracking.
 
+    # [OVER-CLOSURE TRIM] was: athought "In the mirror, I'm alone. But not empty. Something lingers beneath the surface."
+    # Too interpretive as a choice prompt. The Kael flash is the prompt.
     menu:
-        athought "In the mirror, I'm alone. But not empty. Something lingers beneath the surface."
 
         "Let yourself remember":
             $ choice_and_dev(_current_scene_id, "_remember_it", "EMP", factor=1,
@@ -67,7 +74,8 @@ label a1_s04_morning_routine:
 
             athought "His smile, his silence, the way he still stood tall after they marked him broken."
 
-            athought "He wore this same collar but never let it define him. He was human to the end."
+            # [OVER-CLOSURE TRIM] was: athought "He wore this same collar but never let it define him. He was human to the end."
+            # "collar" and "define" re-state what the smile/silence image already carried. Keep only the question:
 
             athought "Can I still be?"
 
@@ -78,7 +86,10 @@ label a1_s04_morning_routine:
 
             athought "This isn't the time for ghosts. I'm not a boy grieving anymore."
 
-            athought "I'm what they built—efficient, trained, necessary. Let the memory stay buried. There's a job to do."
+            # [OVER-CLOSURE TRIM] was: athought "I'm what they built—efficient, trained, necessary. Let the memory stay buried. There's a job to do."
+            # "This isn't the time for ghosts" already carries the suppression. The second line is thesis delivery.
+
+            "He straightens. The condensation on the mirror is already clearing."
 
     # ========= WARDROBE ASSISTANT =========
     # VISUAL: Automated wardrobe unit powers on; blue scan grid passes over uniform.
@@ -90,9 +101,11 @@ label a1_s04_morning_routine:
     "Wardrobe Assistant" "Good morning, Aeron. Dress uniform prepared for Gala attendance. Estimated departure: 18:47."
     "Wardrobe Assistant" "Would you like the full ceremonial configuration?"
 
-    athought "Full ceremonial. Medals and all. The whole performance."
+    athought "Full ceremonial. Medals and all."
 
-    athought "I don't need decorations, but the audience expects the illusion."
+    # [OVER-CLOSURE TRIM] was: athought "The whole performance."
+    # [OVER-CLOSURE TRIM] was: athought "I don't need decorations, but the audience expects the illusion."
+    # "Performance" and "illusion" restate what s02 already established. One beat is enough.
 
     # ========= COLLAR MOMENT =========
     # CAMERA: Macro 85mm equivalent; close-up on collar fastening. Focus rack from fabric to throat.
@@ -115,7 +128,11 @@ label a1_s04_morning_routine:
 
     athought "There. General Rylan's son, ready for inspection."
 
-    athought "Exactly what they expect—polished, presentable, perfect, empty."
+    # [OVER-CLOSURE TRIM] was: athought "Exactly what they expect—polished, presentable, perfect, empty."
+    # "Ready for inspection" is the image. "Polished, presentable, perfect, empty" is the author securing it.
+    # Replace with a physical detail that carries the emptiness without naming it:
+
+    "The distortion lines in the mirror make his jawline waver. He doesn't adjust them."
 
     # ========= DEPARTURE =========
     # VISUAL: Door slides open; cold daylight floods the hallway beyond.
@@ -124,9 +141,13 @@ label a1_s04_morning_routine:
 
     "The door hisses open. Daylight spills in—harsh and white, already too warm."
 
-    athought "The mirror shows the uniform, not the blood from last night—not the family, not the metrics, not the 99.7."
+    # [OVER-CLOSURE TRIM] was: athought "The mirror shows the uniform, not the blood from last night—not the family, not the metrics, not the 99.7."
+    # [OVER-CLOSURE TRIM] was: athought "Just another uniform, ready to perform. Time to face the world."
+    # The scene already carried all of this. The exit should be physical, not summary.
 
-    athought "Just another uniform, ready to perform. Time to face the world."
+    athought "99.7."
+
+    "The door hisses shut behind him."
 
     $ scene_mark(_current_scene_id, "completed")
 

@@ -27,10 +27,11 @@ label a1_s02_bedroom:
 
     pause 0.6
 
-    athought "Cold keeps you sharp. Warmth makes you forget."
+    # [OVER-CLOSURE TRIM] was: athought "Cold keeps you sharp. Warmth makes you forget."
+    # [OVER-CLOSURE TRIM] was: athought "The city's still out there. I'm just another piece of it now—a tool, a function."
+    # Replaced with environmental friction — the room acting on him instead of him interpreting himself:
 
-    # VISUAL: The room in wide shot. Impersonal. Could belong to anyone.
-    athought "The city's still out there. I'm just another piece of it now—a tool, a function."
+    "Something ticks in the wall. Pipes expanding. The building adjusting to temperature it chose for him."
 
     # ========= GLASS MOTIF — REFLECTION =========
     # CAMERA: Push in on the window itself. Distorted reflection in the pane—Aeron's silhouette warped by pressure shimmer.
@@ -48,7 +49,8 @@ label a1_s02_bedroom:
 
     athought "Father calls me Glass. Transparent, sharp, useful."
 
-    athought "Perfect metrics, perfect form, perfectly empty."
+    # [OVER-CLOSURE TRIM] was: athought "Perfect metrics, perfect form, perfectly empty."
+    # The "Glass" line already carries the emptiness. Adding "perfectly empty" closes what the image opened.
 
     # ========= TRANSITION — SILENCE FALLS =========
     # SOUND: Tower hum fades down. Wind softens to near silence.
@@ -94,7 +96,9 @@ label a1_s02_bedroom:
 
     athought "Kael couldn't live with being broken."
 
-    athought "I became perfect at it—perfect enough that nothing shows."
+    # [OVER-CLOSURE TRIM] was: athought "I became perfect at it—perfect enough that nothing shows."
+    # The next line ("does that mean nothing's there?") is stronger alone — the gap between Kael's failure
+    # and Aeron's question is more devastating without the middle line explaining the mechanism.
 
     athought "...But does that mean nothing's there?"
 
@@ -108,21 +112,24 @@ label a1_s02_bedroom:
 
     # CAMERA: Hold on the uniform. Light from the window catches the insignia—cold gleam.
 
-    athought "Right clothes, right words, right performance."
+    athought "Tomorrow's the gala. Father's exhibition."
 
-    athought "Tomorrow's the gala. Father's exhibition. 'Look at what I made from failure,' he'll say."
+    # [OVER-CLOSURE TRIM] was: athought "Right clothes, right words, right performance."
+    # [OVER-CLOSURE TRIM] was: athought "A tool that follows orders—exactly what he wants them to see."
+    # [OVER-CLOSURE TRIM] was: athought "He wants perfection on display."
+    # Four adjacent lines all naming performance/display/tool. One image does the work of four:
 
-    athought "A tool that follows orders—exactly what he wants them to see."
+    "The uniform hangs in the wardrobe like a second skin waiting to be worn."
 
-    athought "He wants perfection on display." 
-    athought "...but even perfection hesitates."
+    athought "...Even perfection hesitates."
 
     # ========= CHOICE — DOCTRINE TEST =========
     # VISUAL: Aeron's silhouette against the window. City hums far below.
     # NOTE: First empathy/obedience seed. Small weight, but establishes player's instinct.
 
+    # [OVER-CLOSURE TRIM] was: athought "A whisper away from obedience. A breath away from defiance."
+    # Too cleanly diagnostic as a choice prompt. Let the silence do the work.
     menu:
-        athought "A whisper away from obedience. A breath away from defiance."
 
         "Say it anyway":
             $ choice_and_dev(_current_scene_id, "say_it_anyway", "OB", factor=1,
@@ -131,9 +138,11 @@ label a1_s02_bedroom:
 
             a "Order above all. Unity before self."
 
-            athought "The words surface without thought—residue from years of drills."
+            # [OVER-CLOSURE TRIM] was: athought "The words surface without thought—residue from years of drills."
+            # [OVER-CLOSURE TRIM] was: athought "They don't mean anything. They never did. But silence would mean something else entirely, and Father would notice."
+            # The recitation already shows conditioned behavior. Explaining it reduces the chill.
 
-            athought "They don't mean anything. They never did. But silence would mean something else entirely, and Father would notice."
+            "The words hang in the cold air. Nobody heard them. Nobody needed to."
 
         "Stay silent":
             $ choice_and_dev(_current_scene_id, "stay_silent", "EMP", factor=1,
@@ -142,7 +151,10 @@ label a1_s02_bedroom:
 
             athought "I wait for the words to come. They don't."
 
-            athought "Sometimes silence feels safer—less to correct later. Doctrine's just noise anyway. It's the pauses they listen to, and Father always listens."
+            # [OVER-CLOSURE TRIM] was: athought "Sometimes silence feels safer—less to correct later. Doctrine's just noise anyway. It's the pauses they listen to, and Father always listens."
+            # "They don't" is the strongest line. The explanation weakens it. Replace with physical:
+
+            "The vent cycles. The silence holds."
 
     # ========= MISSION ORDER =========
     # VISUAL: Terminal on desk blinks; red notification light pulses.
@@ -153,11 +165,15 @@ label a1_s02_bedroom:
 
     pause 0.6
 
-    athought "Sector Seven. Containment sweep. Pre-dawn deployment. Tonight, before the gala—before I smile for the cameras."
+    athought "Sector Seven. Containment sweep. Pre-dawn deployment."
 
-    athought "Operation three-nine-zero. Just another number, just another night."
+    athought "Operation three-nine-zero."
 
-    athought "Feel nothing. Ask nothing. Do what you're told."
+    # [OVER-CLOSURE TRIM] was: athought "Just another number, just another night."
+    # [OVER-CLOSURE TRIM] was: athought "Feel nothing. Ask nothing. Do what you're told."
+    # The operation number speaks for itself. "Feel nothing" is the scene explaining its own thesis.
+
+    pause 0.4
 
     # ========= TRANSITION OUT =========
     # VISUAL: Aeron's silhouette rises. Full figure against the window for the first time—but still backlit, features obscured.

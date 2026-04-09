@@ -123,15 +123,20 @@ label a1_s22_return_to_aeries:
 
     athought "Zira's intel: 800 civilians. Families. Children. Unregistered."
 
-    athought "One of them is lying. And I know which one."
+    # [OVER-CLOSURE TRIM] was: athought "One of them is lying. And I know which one."
+    # The juxtaposition already shows the lie. Naming it reduces the sting.
 
     "Official report: 'High-density rebel infrastructure.'"
 
-    "Reality: a vendor with real coffee; a child missing her father; families keeping warm."
+    "Reality: a vendor with real coffee. A child missing her father."
 
-    athought "I've done this 390 times. How many were lies like this?"
+    athought "I've done this 390 times."
 
-    athought "How many times did I kill families and call it 'neutralizing threats'?"
+    # [OVER-CLOSURE TRIM] was: athought "How many were lies like this?"
+    # [OVER-CLOSURE TRIM] was: athought "How many times did I kill families and call it 'neutralizing threats'?"
+    # "390 times" carries the horror. The follow-up questions explain it. Let the number sit.
+
+    pause 0.5
 
     # ========= KAEL'S PHOTO =========
     # PROP: Kael's photo at the desk edge; mission envelope ajar; reflection of Aeron in the frame.
@@ -232,39 +237,43 @@ label a1_s22_return_to_aeries:
 
     "Countdown: four hours, twelve minutes."
 
-    athought "Lyra said something in me is breaking—that it might save me."
-
-    athought "Zira said show her I'm human, not a weapon."
-
-    athought "Kael said don't let Father turn me into a weapon."
-
-    athought "But I am a weapon. Can I be both? A weapon and whole?"
+    # [OVER-CLOSURE TRIM] was: athought "Lyra said something in me is breaking—that it might save me."
+    # [OVER-CLOSURE TRIM] was: athought "Zira said show her I'm human, not a weapon."
+    # [OVER-CLOSURE TRIM] was: athought "Kael said don't let Father turn me into a weapon."
+    # [OVER-CLOSURE TRIM] was: athought "But I am a weapon. Can I be both? A weapon and whole?"
+    # Four serial recap lines summarizing what three characters already said in their own scenes.
+    # The player was THERE. Replace with the physical reality of the countdown:
 
     # VISUAL: Sit edge of bed; elbows on knees; micro hand tremor; breath measured.
 
     "The mattress dips. My hands tremble—just slightly."
 
-    athought "Tomorrow I kill eight hundred people. Or try to save them."
+    athought "Eight hundred people. Six hours."
 
-    athought "Maybe I kill six hundred and save two hundred. Less horror, not victory."
+    # [OVER-CLOSURE TRIM] was: athought "Maybe I kill six hundred and save two hundred. Less horror, not victory."
+    # [OVER-CLOSURE TRIM] was: athought "Maybe that's all I can do—find cracks and save fragments."
+    # [OVER-CLOSURE TRIM] was: athought "Zira said trying matters, even if it's not enough."
+    # [OVER-CLOSURE TRIM] was: athought "Trying makes me human. Perfect obedience keeps me... this."
+    # The arithmetic is the issue log's "too numerically concrete" flag. The Zira recap re-summarizes.
+    # Keep one line that holds the tension without solving it:
 
-    athought "Maybe that's all I can do—find cracks and save fragments."
-
-    athought "Zira said trying matters, even if it's not enough."
-
-    athought "Trying makes me human. Perfect obedience keeps me... this."
+    athought "I can't save all of them. I don't know how many I can save."
 
     # LIGHTING: Far-below storm glow blooms within the cloud deck; silent lightning; no rain at altitude.
 
     "Lightning blooms inside the cloud layer below; the frame ticks again under wind pressure."
 
-    athought "I can't refuse the mission. Marcus owns me. The system owns me."
+    athought "I can't refuse the mission."
+
+    # [OVER-CLOSURE TRIM] was: athought "Marcus owns me. The system owns me."
+    # Already established multiple times (lines 61-62, corridor officers, the door itself).
 
     athought "But I can choose how I obey."
 
-    athought "Warn people. Fake reports. Look away. Find the cracks."
-
-    athought "Tomorrow... I'll try to be both."
+    # [OVER-CLOSURE TRIM] was: athought "Warn people. Fake reports. Look away. Find the cracks."
+    # [OVER-CLOSURE TRIM] was: athought "Tomorrow... I'll try to be both."
+    # "Choose how I obey" is the scene's thesis and it's strong. The tactical list after it
+    # makes the resistance feel pre-planned rather than desperate. Let the choice stand alone.
 
     # VISUAL: Window silhouette; condensation halo at the edge; city smeared by haze.
 
@@ -283,11 +292,15 @@ label a1_s22_return_to_aeries:
 
     "The horizon lightens. Dawn approaches. Sector Ten doesn't know what's coming."
 
-    athought "Time to go."
+    # [OVER-CLOSURE TRIM] was: athought "Time to go."
+    # [OVER-CLOSURE TRIM] was: athought "Time to be a weapon one more time."
+    # [OVER-CLOSURE TRIM] was: athought "But this time... I bleed."
+    # Three lines that thesis-deliver the transition. "I bleed" is the strongest — but it tells the player
+    # how to understand the dawn. Replace with the body moving, not the mind concluding:
 
-    athought "Time to be a weapon one more time."
+    "He stands. The gear settles against his frame."
 
-    athought "But this time... I bleed."
+    "Dawn is three hours and fifty-nine minutes away."
 
     # TRANSITION: Fade to black; hold on HUD countdown dip → 03:59.
 

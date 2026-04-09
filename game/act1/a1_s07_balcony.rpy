@@ -164,19 +164,22 @@ label a1_s07_balcony:
 
     l "Take away the performance and there's not much left."
 
-    athought "Her voice drops—not the formal Lyra, something underneath."
+    # [SEMANTIC LOOP TRIM] was: athought "Her voice drops—not the formal Lyra, something underneath."
+    # The dialogue already shows the shift. Narrating it reduces the discovery.
 
     a "You've done it your whole life."
 
     l "Since I could walk. That doesn't mean I'm blind."
 
-    l "They call me the system's proof—polished, perfect, pristine."
+    # [SEMANTIC LOOP TRIM] was: l "They call me the system's proof—polished, perfect, pristine."
+    # [SEMANTIC LOOP TRIM] was: l "I call it being a window. People look right through you to see the power behind."
+    # [SEMANTIC LOOP TRIM] was: a "So you know."
+    # [SEMANTIC LOOP TRIM] was: l "Of course I know. Windows recognize windows."
+    # Five lines orbiting the same idea (performance/window/being seen through). Compressed:
 
-    l "I call it being a window. People look right through you to see the power behind."
+    l "They call me a window. People look through me to see the power behind."
 
-    a "So you know."
-
-    l "Of course I know. Windows recognize windows."
+    l "Windows recognize windows."
 
     a "Then tell me—what do you see now?"
 
@@ -281,11 +284,9 @@ label a1_s07_balcony:
 
     l "They parade me, they parade you—two perfect soldiers, except neither of us believes a word of it anymore."
 
-    a "They think everything belongs to them."
+    # [SEMANTIC LOOP TRIM] Three lines compressed to the strongest:
 
-    a "The dark tells the truth."
-
-    a "And you—you don't belong to anyone."
+    a "You don't belong to anyone."
 
     "Neither of them steps away."
 
@@ -355,7 +356,10 @@ label a1_s07_balcony:
     # VISUAL: The city below, two figures on the rail, smoke dissipating.
     # CAMERA: Hold wide. Let the moment land.
 
-    "For a moment, the world feels smaller—just two people, smoke and silence."
+    # [SEMANTIC LOOP TRIM] was: "For a moment, the world feels smaller—just two people, smoke and silence."
+    # The dialogue just landed. The narration explaining "two people, smoke and silence" re-describes the staging.
+
+    pause 1.0
 
     pause 0.9
 
@@ -369,7 +373,9 @@ label a1_s07_balcony:
         athought "Six hours ago, I killed four people. The thought keeps returning like a pulse I can't ignore."
         athought "Standing here, I finally feel its weight."
 
-    athought "Maybe that's what she means. Maybe feeling it is how you break."
+    # [SEMANTIC LOOP TRIM] was: athought "Maybe that's what she means. Maybe feeling it is how you break."
+    # Lyra's "shattering" line already said this. Aeron explaining it reduces the resonance.
+    # Let the scene end on the physical — what he feels, not what he concludes:
 
     $ scene_mark(_current_scene_id, "completed")
 
