@@ -158,7 +158,7 @@ label a2_s19_recruitment_wave:
 
     "Aeron takes it."
 
-    elara "My daughter's name was Mila."
+    elara "My daughter's name was Naia."
 
     "She holds his hand for exactly one second. Then lets go."
 
@@ -166,7 +166,7 @@ label a2_s19_recruitment_wave:
 
     "She's gone before he can answer."
 
-    athought "Mila."
+    athought "Naia."
     athought "I won't."
 
     $ npc_remember("Aeron", "elara_confrontation", tone="heavy")
@@ -412,7 +412,7 @@ label a2_s19_recruitment_wave:
         athought "Recruiter. Screener. That's a command function."
         athought "Maren's face. I'll see it in the ops room every morning."
     elif empathy_band() == "empathy":
-        athought "Elara gave me her daughter's name. Mila."
+        athought "Elara gave me her daughter's name. Naia."
         athought "Maren shook my hand."
         athought "The weight of what I did becoming the foundation of what we're building."
     else:
@@ -446,7 +446,7 @@ label a2_s19_recruitment_wave:
 #   - Four key recruits interviewed:
 #       - Daven: Sector 9 Purge survivor, burns, market vendor. Carries a pear from a stall that survived.
 #       - Elara: Sweep victim's family. Designation 247 and 248. Knows Aeron is Glass. Chooses to fight beside him.
-#         Gives Aeron her daughter's name: Mila. "Don't forget it."
+#         Gives Aeron her daughter's name: Naia. "Don't forget it."
 #       - Senna: 18, orphaned by Echelon, rage-driven. Player choice: train during evaluation or evaluate first.
 #       - Maren: Sector 7, Op 390. Designation 312. Aeron RECOGNIZES her — he breached her apartment.
 #         Player choice (factor=2): tell her the truth or carry it silently.
@@ -455,7 +455,7 @@ label a2_s19_recruitment_wave:
 #   - Decentralization strategy: four secondary bases planned.
 # cann.aeron_state:
 #   - Role shifting from soldier to leader/recruiter/screener.
-#   - Elara gives him a name to carry: Mila. His victims are becoming people retroactively.
+#   - Elara gives him a name to carry: Naia. His victims are becoming people retroactively.
 #   - Maren is the transformation moment: the subject of his mission sitting across from him.
 #     EMP tells her. OB carries it. Both cost something.
 # cann.path_tracking:
@@ -467,7 +467,7 @@ label a2_s19_recruitment_wave:
 #   - stat_inc("resistance_strength", 35) — resistance grows to 55.
 #   - canon_set("recruitment_working") for future gating.
 # cann.thematic_flags:
-#   - Elara: "My daughter's name was Mila." — giving him a name makes the numbers human. Retroactive personhood.
+#   - Elara: "My daughter's name was Naia." — giving him a name makes the numbers human. Retroactive personhood.
 #   - Maren: The reversal — Aeron's subject becomes his recruit. He recognizes her; she doesn't recognize him.
 #     Telling/not telling is about whether honesty serves the person or the self.
 #   - Daven's pear: a piece of fruit from a market that burned. Proof that something survived.
@@ -475,7 +475,7 @@ label a2_s19_recruitment_wave:
 #   - Senna as mirror for early Aeron: a weapon looking for a target, burning instead of fighting.
 #   - "It sounds like growing." — closing line as thesis.
 # cann.character_moments:
-#   - Elara: The scene's emotional anchor. Confronts Aeron, chooses forward, gives him Mila's name.
+#   - Elara: The scene's emotional anchor. Confronts Aeron, chooses forward, gives him Naia's name.
 #     Hand extended — not a handshake, just open. One second of contact. "Don't forget it."
 #   - Maren: The scene's transformation. Calm, competent, rebuilt from rubble. The scar on her jaw.
 #     If told: "You're telling me because you think it matters. That means it matters to you."
@@ -489,7 +489,7 @@ label a2_s19_recruitment_wave:
 # cann.block_status:
 #   - ANCHOR (both paths). Growth milestone scene. Two significant choices (Senna factor=1, Maren factor=2).
 # cann.requires_followup:
-#   - Elara should appear again. Her presence = reminder of what Aeron did and what Mila's name means.
+#   - Elara should appear again. Her presence = reminder of what Aeron did and what Naia's name means.
 #   - Maren's arc diverges:
 #       If told: she works alongside Aeron with full knowledge. Complex trust. Possible future ally/confidante.
 #       If silent: Aeron sees her in the ops room daily. The weight compounds. Possible later revelation.

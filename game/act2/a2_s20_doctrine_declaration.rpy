@@ -154,9 +154,9 @@ label a2_s20_doctrine_declaration:
 
             sel "What changed?"
 
-            a "Elara. Today. She sat across from me and told me her daughter's name. Mila."
-            a "Designation 248 was never a designation. She was a girl named Mila who lived in an apartment in Sector 6."
-            a "Order didn't save Mila. Precision didn't save her. The scale that was supposed to make it mercy was the thing that killed her."
+            a "Elara. Today. She sat across from me and told me her daughter's name. Naia."
+            a "Designation 248 was never a designation. She was a girl named Naia who lived in an apartment in Sector 6."
+            a "Order didn't save Naia. Precision didn't save her. The scale that was supposed to make it mercy was the thing that killed her."
 
             "He looks at the maps on the table. Names. Sectors. Numbers."
 
@@ -232,15 +232,15 @@ label a2_s20_doctrine_declaration:
 #   - Player chooses:
 #       OB: Affirms the doctrine. Believes order prevents more suffering than compassion alone.
 #           Acknowledges he sounds like Marcus. "It should terrify you." Selene works with it, warily.
-#       EMP: Rejects the doctrine. Names Mila (Elara's daughter from recruitment scene).
-#           "Designation 248 was never a designation. She was a girl named Mila."
+#       EMP: Rejects the doctrine. Names Naia (Elara's daughter from recruitment scene).
+#           "Designation 248 was never a designation. She was a girl named Naia."
 #           Selene shares her own name — Kael, a lieutenant she lost to an efficient call.
 #   - Both paths end with Selene's warning: don't let doctrine eat the man / don't let mercy slow the blade.
 #   - Closes with Aeron alone in the strategy alcove, sitting with who he just declared himself to be.
 # cann.aeron_state:
 #   - The first time Aeron articulates his philosophy out loud, to someone who needs to hear it.
 #   - OB: speaks Marcus's language but claims it as his own. Knows the cost. Selene sees the danger.
-#   - EMP: uses Mila's name as the fulcrum. Designation→person. The math becomes honest, not easier.
+#   - EMP: uses Naia's name as the fulcrum. Designation→person. The math becomes honest, not easier.
 # cann.path_tracking:
 #   - One choice_and_dev decision (factor=2, significant):
 #       - _affirm_doctrine → OB +2, flag("ob_doctrine"), empathy_decay=1 for 3 choices
@@ -251,7 +251,7 @@ label a2_s20_doctrine_declaration:
 # cann.thematic_flags:
 #   - "Order is mercy at scale" — Marcus's doctrine as inherited architecture. Said or rejected, it shapes.
 #   - OB path: "You sound like him." "I know." "That terrifies me." "It should."
-#   - EMP path: Mila callback from recruitment wave. Designation→name as moral fulcrum.
+#   - EMP path: Naia callback from recruitment wave. Designation→name as moral fulcrum.
 #     Selene's Kael — she too carries a name she lost to efficiency. Parallel weight.
 #   - Both paths: Selene's warning as parting shot. She sees what he is and tells him the danger of it.
 #   - "Whatever you believe — you'll need to act on it." — doctrine isn't abstract after tonight.
@@ -272,5 +272,5 @@ label a2_s20_doctrine_declaration:
 #   - ob_doctrine / emp_doctrine flags gate flavor text in subsequent scenes.
 #   - empathy_decay_steps / emp_boost_window affect next 2-3 choices via apply_empathy_with_mod().
 #   - Selene's warning should echo in Act 3 — "Don't let the doctrine eat the man" or "Don't let mercy slow the blade."
-#   - EMP: Mila callback chain continues (Elara → doctrine → future confrontation with cost of mercy).
+#   - EMP: Naia callback chain continues (Elara → doctrine → future confrontation with cost of mercy).
 #   - OB: Marcus comparison chain escalates (sounds like him → becomes like him → exceeds him?).

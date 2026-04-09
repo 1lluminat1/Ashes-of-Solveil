@@ -587,9 +587,43 @@ label a1_s28_purge:
 
     athought "Everything after is something new."
 
-    athought "Not weapon. Not soldier. Not son."
+    # ========= KAEL'S PHOTO — THE LAST CHOICE IN THE AERIES =========
+    # VISUAL: They're leaving. The apartment is one corridor away. Two seconds. One thing.
 
-    athought "Just ash. Waiting to burn the world that made it."
+    "On the way down, they pass his door. It's still open. The terminal still glowing."
+
+    "Kael's photo on the desk. The tactical kit on the bed."
+
+    menu:
+        athought "One thing. I can take one thing."
+
+        "Take the photo.":
+            $ record_choice_once(_current_scene_id, "_took_photo",
+                note="Carried Kael with him. EMP-coded.")
+            $ flag("kael_photo_taken", True)
+            $ scene_mark(_current_scene_id, "took_photo")
+
+            "His fingers close around the frame before he thinks about it."
+
+            athought "Kael's face under cracked glass."
+
+        "Take the tactical kit.":
+            $ record_choice_once(_current_scene_id, "_took_kit",
+                note="Survival gear. OB-coded.")
+            $ flag("tactical_kit_taken", True)
+            $ scene_mark(_current_scene_id, "took_kit")
+
+            "The kit is heavy and practical and might keep them alive."
+
+        "Take nothing.":
+            $ record_choice_once(_current_scene_id, "_took_nothing",
+                note="Left everything behind. TP seed.")
+            $ tp_seed("a1.purge.leave_everything")
+            $ scene_mark(_current_scene_id, "took_nothing")
+
+            athought "Kael isn't in the photo. He's in what I do next."
+
+    "The door closes behind them. The Aeries swallows the room like it was never his."
 
     $ scene_mark(_current_scene_id, "completed")
 
