@@ -60,6 +60,9 @@ style selenethought_text is say_dialogue:
 style nthought_text is say_dialogue:
     font "fonts/Exo2-Italic.ttf"
 
+style nythought_text is say_dialogue:
+    font "fonts/Exo2-Italic.ttf"
+
 style mthought_text is say_dialogue:
     font "fonts/Exo2-Italic.ttf"
 
@@ -112,6 +115,7 @@ define color_marcus = "#7A3B3F"
 define color_young_aeron = "#A2C5da"
 define color_young_lyra = "#D5C8CD"
 define color_kael = "#A48E8A"
+define color_nyra = "#7A9EC0"  # Iron blue — sterilized steel palette per Nyra profile
 
 ## MAIN CHARACTERS - Late Game Colors (Acts IV-V)
 define color_aeron_late = "#D4C8A8"
@@ -128,7 +132,9 @@ define l = Character("Lyra", color=color_lyra_early)
 define z = Character("Zira", color=color_zira)
 define t = Character("Tessa", color=color_tessa_early)
 define selene = Character("Selene", color=color_selene)
+define sel = Character("Selene", color=color_selene)  # Short alias used throughout Act 2/3 scenes
 define n = Character("Noelle", color=color_noelle)
+define ny = Character("Nyra", color=color_nyra)
 
 ## Supporting Characters
 define m = Character("General Marcus Rylan", color=color_marcus)
@@ -159,9 +165,18 @@ define selenethought = Character("Selene",
     color=color_selene,
     what_style="selenethought_text")
 
+# Short alias for interlude files — matches the other LI thought tags (l/z/t/n pattern)
+define sthought = Character("Selene",
+    color=color_selene,
+    what_style="selenethought_text")
+
 define nthought = Character("Noelle",
     color=color_noelle,
     what_style="nthought_text")
+
+define nythought = Character("Nyra",
+    color=color_nyra,
+    what_style="nythought_text")
 
 define mthought = Character("General Marcus Rylan",
     color=color_marcus,

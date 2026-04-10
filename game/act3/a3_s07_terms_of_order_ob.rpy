@@ -10,7 +10,7 @@
 $ _current_scene_id = "a3_s07_terms_of_order_ob"
 $ scene_mark(_current_scene_id, "entered")
 
-define ny = Character("Nyra")
+# ny (Nyra) is defined centrally in ui_solveil.rpy
 
 label a3_s07_terms_of_order_ob:
 
