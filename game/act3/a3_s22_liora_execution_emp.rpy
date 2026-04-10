@@ -142,69 +142,25 @@ label a3_s22_liora_execution_emp:
 
     "Noelle's hands are on the keyboard. Already working. She started the moment Zira said 'Aeries.'"
 
-    n "Aeries security assessment. I'm pulling current patrol data, structural schematics, and the broadcast infrastructure layout."
+    "The holo-table activates. The Aeries in blue light — three concentric security rings around the execution platform."
 
-    "The holo-table activates. The Aeries in blue light — the upper city, the platform above the Unders, the security perimeter."
+    n "We can get in. The outer perimeter has gaps. Ghostline routes are mapped."
 
-    n "The platform is the highest public structure in the Aeries. Visible from seventeen sectors. Echelon uses it for state announcements and public disciplinary actions."
+    n "Getting out with a prisoner is the problem."
 
-    n "Current security: three concentric perimeters. Outer ring — standard patrol, twelve-minute rotation. Middle ring — augmented response team, six-minute cycle. Inner ring — personal detail, continuous presence."
+    "She runs the projection. Routes light up and extinguish."
 
-    sel "Infiltration options?"
+    n "Best-case extraction: ninety seconds from first contact to full containment. Four to five of a six-person team lost."
 
-    n "The outer perimeter has gaps. The 47-second window — similar architecture to the corridor op. We know how to exploit it."
+    n "And there's a secondary consideration."
 
-    n "The middle perimeter is the problem. Six-minute augmented cycle with overlapping fields of fire. No blind spots in the current configuration."
+    "Noelle doesn't pause. She pauses now."
 
-    z "I can get a team through the outer ring. Ghostline routes into the Aeries are mapped."
+    n "If we attempt it and fail — which the math strongly suggests — Echelon gains operational intelligence on Phoenix. The counter-strike is immediate."
 
-    n "Getting in isn't the problem. Getting out with a prisoner is."
+    n "We lose the base. We lose the Ghostline. We lose the two hundred six from the corridor."
 
-    "She runs the projection. Routes light up and extinguish. Options appear and collapse."
-
-    n "Extraction Route Alpha: through the maintenance corridors. Estimated team survival probability: twenty-three percent."
-
-    sel "Unacceptable."
-
-    n "Route Beta: service elevator to the lower platform, then across the access bridge. Eighteen percent."
-
-    n "Route Gamma: the Ghostline tunnel network beneath the platform. The tunnels aren't mapped past Junction 7. Probability cannot be calculated."
-
-    athought "Can't be calculated. Noelle's way of saying the unknown is worse than the known."
-
-    n "The platform itself is the constraint. Any rescue attempt requires presence at the execution site. Echelon will have every feed, every sensor, every weapon pointed at that platform."
-
-    n "A rescue team at the site triggers an immediate response. Estimated time to full containment: ninety seconds."
-
-    n "Ninety seconds to breach the inner perimeter, extract one prisoner, and clear a platform surrounded by three concentric security rings in the most surveilled structure in the city."
-
-    athought "Ninety seconds."
-
-    athought "The corridor op had 47-second windows and we barely made it."
-
-    sel "Casualties?"
-
-    n "Projected friendly casualties on any viable extraction route: sixty to seventy percent of the insertion team."
-
-    n "That's four to five of a six-person team."
-
-    "Silence."
-
-    n "There's a secondary consideration."
-
-    "She pauses. Noelle doesn't pause."
-
-    n "If we attempt a rescue and fail — which the probability strongly suggests — Echelon gains operational intelligence on Phoenix's capabilities, insertion methods, and personnel. The counter-strike would be immediate."
-
-    n "Projected impact: loss of the base. Loss of the Ghostline. Loss of the civilian population we're currently sheltering."
-
-    n "The 206 from the corridor. The families. The children."
-
-    athought "The math."
-
-    athought "The same math that saved two hundred people through a 47-second window is the math that kills one person now."
-
-    athought "Two hundred and six lives weighed against one."
+    athought "The same math that saved two hundred through a forty-seven second window is the math that kills one now."
 
     athought "And the one is my mother."
 
@@ -217,10 +173,6 @@ label a3_s22_liora_execution_emp:
     a "I know."
 
     athought "I know."
-
-    athought "I've known since Noelle said 'ninety seconds.' I've known since she said 'three concentric perimeters.' I've known since Zira walked through the door."
-
-    athought "I just needed the numbers to say it so I didn't have to."
 
     "The room holds the weight of it."
 
@@ -250,27 +202,13 @@ label a3_s22_liora_execution_emp:
 
     "Clear sky. Bright daylight. The light hides nothing."
 
-    "The platform is near-empty. No crowd. No audience. Only four figures visible against the sky."
+    "The platform is near-empty. Three figures against the sky — the executioner at the control panel, two Echelon officials at the far rail, and Marcus at the monitors."
 
-    "Liora at the center. The executioner at the control panel. Two Echelon officials in formal robes, standing at the far rail like punctuation marks. And Marcus."
+    athought "There's no audience here. The audience is every screen in Solveil."
 
-    "The rest of the platform stretches empty on every side. Polished concrete and guide-rails. Space enough for a hundred witnesses, deliberately unused."
+    athought "Mandated viewing."
 
-    athought "There's no audience here. That's the point."
-
-    athought "The audience is every screen in Solveil."
-
-    athought "Mandated viewing. The broadcast lights on every feed in the city are burning red right now. Compliance monitoring. Everyone watches, or the sensors flag them."
-
-    athought "The city is the crowd. The crowd is the city. And the platform is empty because emptiness makes it ceremonial."
-
-    athought "Marcus built this platform. I remember the schematics. He designed it during the infrastructure review in my second year at the Academy."
-
-    athought "He designed the sight lines. The camera mounts. The wind corridors that keep the broadcast feed clean."
-
-    athought "He designed it so the entire city could watch."
-
-    athought "He designed the drop."
+    athought "Marcus designed the drop."
 
     "A figure is brought to the platform. Hands bound. Flanked by Echelon escort."
 
@@ -469,31 +407,11 @@ label a3_s22_liora_execution_emp:
 
     "No one moves to turn it off."
 
-    athought "She's gone."
+    athought "She was alive because we kept the courier network open. She's dead for the same reason."
 
-    athought "She was alive eleven days ago. She was alive when Zira found the letter. She was alive when Noelle traced the registry."
+    athought "My father killed my mother. Not the system. Him."
 
-    athought "She was alive because of the courier network. And she's dead because of it."
-
-    athought "The same channels. The same mercy. The same decision I made — to protect the couriers, to keep the Ghostline open, to choose compassion over security."
-
-    athought "My compassion led them to her."
-
-    athought "My father killed my mother because I chose mercy."
-
-    "The sentence forms in his mind with the precision of something that has always been true and was simply waiting to be articulated."
-
-    athought "Echelon isn't a system anymore."
-
-    athought "It's a man. And the man is my father. And he killed her."
-
-    athought "Not through the chain of command. Not through delegation. Not through the bureaucratic distance that makes atrocity feel like administration."
-
-    athought "He was on the platform. He watched. He chose to be there."
-
-    athought "He watched the monitors instead of her. He watched a screen of himself not looking at her."
-
-    athought "That's worse. That's the worst thing. That he was there and chose the feed."
+    athought "And he watched a screen instead of her face."
 
     "The room is still."
 
@@ -505,13 +423,9 @@ label a3_s22_liora_execution_emp:
 
     "Her lips move. The words are inaudible."
 
-    "But the tone — even silent, even shapeless — the tone is different."
+    "But the tone — even silent, even shapeless — is different."
 
-    athought "She's praying."
-
-    athought "But for the first time, the prayer sounds angry."
-
-    athought "Not rage. Not blasphemy. The clean, focused anger of someone addressing a god they still believe in and demanding an accounting."
+    athought "She's praying angry."
 
     # --- TESSA ---
 
@@ -522,10 +436,6 @@ label a3_s22_liora_execution_emp:
     "LIORA RYLAN."
 
     "The name joins the column. The living — and now the dead."
-
-    athought "Tessa's board doesn't distinguish. The living and the dead are on the same list."
-
-    athought "Because the point was never survival. The point was that they counted."
 
     # --- ZIRA ---
 
@@ -545,13 +455,9 @@ label a3_s22_liora_execution_emp:
 
     "She says it to the room. To no one. To the record."
 
-    n "Direct chain of causation. The courier intercept traces back to Phoenix-adjacent relay traffic. The arrest timeline correlates with our outreach through the Outlands network."
+    n "Direct chain of causation. The arrest timeline correlates with our outreach through the Outlands network."
 
     n "She was captured because of us. The data is clear."
-
-    athought "Noelle doesn't soften things. She doesn't know how."
-
-    athought "Right now, that's the kindest thing anyone could do. Give me the truth without padding. Let it be what it is."
 
     # --- SELENE ---
 
@@ -575,10 +481,6 @@ label a3_s22_liora_execution_emp:
 
     sel "Marcus Rylan. Enemy. Personal."
 
-    athought "She's asking permission. Because this changes things."
-
-    athought "It's not a rebellion against a system anymore."
-
     athought "It's a son against his father."
 
     athought "It was always that. Now it's official."
@@ -597,31 +499,17 @@ label a3_s22_liora_execution_emp:
 
     athought "My mother."
 
-    athought "She kept the names. She kept the stories. She kept the pause alive in a dead drop in Sector 4 and in courier runs through the Outlands and in the handwriting that shaped mine."
+    athought "She kept the names. She kept the stories. She kept the pause alive in the handwriting that shaped mine."
 
     athought "And I never knew her."
 
-    athought "I had her letter for days. I could have read it a hundred times. I could have memorized every line."
-
-    athought "I did memorize every line."
-
     athought "'The city doesn't need a harder man. It needs a man brave enough to be soft when softness is the most dangerous thing you can be.'"
-
-    athought "She was right."
-
-    athought "She was right about all of it."
 
     "He reaches inside his jacket. The letter is there. The paper warm from his body heat."
 
     "He doesn't take it out. He just touches the edge. Confirms it's still there."
 
-    athought "I'm going to carry this."
-
-    athought "Not as grief. Not as guilt. Not as the weight Selene described — the weight that turns you into the thing you're fighting."
-
-    athought "I'm going to carry it as a name on the list."
-
-    athought "The way she carried them."
+    athought "I'm going to carry this as a name on the list."
 
     athought "The way she taught me to."
 
