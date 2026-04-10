@@ -202,7 +202,7 @@ label a3_s22_liora_execution_emp:
 
     "Clear sky. Bright daylight. The light hides nothing."
 
-    "The platform is near-empty. Three figures against the sky — the executioner at the control panel, two Echelon officials at the far rail, and Marcus at the monitors."
+    "The platform is near-empty. Four figures against the sky — the executioner at the control panel, two Echelon officials at the far rail, and Marcus at the monitors."
 
     athought "There's no audience here. The audience is every screen in Solveil."
 
@@ -232,8 +232,6 @@ label a3_s22_liora_execution_emp:
 
     athought "Ghostline. They named it. They have a designation for it."
 
-    athought "Zira built it in silence and they logged it as a reference number."
-
     executioner "Cognitive Division Protocol Seven-A. Trafficking in classified personnel records. Two thousand four hundred and eleven entries recovered from courier cache, Sectors Six through Eleven. All recovered records had been designated for deletion under Compliance Protocol Twelve."
 
     athought "She kept the names."
@@ -244,9 +242,7 @@ label a3_s22_liora_execution_emp:
 
     athought "Forty-seven."
 
-    athought "Forty-seven couriers. Forty-seven times we let her through the network because the couriers were civilians and the network belonged to the Unders."
-
-    athought "Forty-seven times she moved something past our checkpoints, and we counted it as mercy, and Echelon counted every single one."
+    athought "Forty-seven times she moved something past our checkpoints, and we counted it as mercy. Echelon counted every single one."
 
     executioner "Military Division Article Eleven. Coordination with hostile operatives in the commission of insurgent activities. Including but not limited to: the Sector Four corridor interdiction. The Sector Six relay restoration. The Sector Nine civilian evacuation."
 
@@ -292,13 +288,7 @@ label a3_s22_liora_execution_emp:
 
     athought "He's watching the feed of himself watching."
 
-    athought "The city is the audience. The city is watching him watch her. He is watching the city watch."
-
     athought "His wife. The mother of his son. The woman who loved the pause in his hand."
-
-    athought "And he is watching a screen."
-
-    athought "This is what happens when you remember."
 
     "Liora stands on the platform. The wind moves through her hair. She doesn't correct it."
 
