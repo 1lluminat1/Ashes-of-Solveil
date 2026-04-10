@@ -33,32 +33,25 @@ label a1_s28_purge:
     # ========= OPENING — THE ROOFTOP =========
     # VISUAL: Rooftop. Evening light—golden hour fading to dusk. Sectors 8–10 visible on horizon.
 
-    "The rooftop. Same place. Same rail. Same wind."
+    "The rooftop. Same rail. Same wind."
 
-    "Where Kael stood. Where Kael chose."
-
-    "Where I almost shattered completely two nights ago."
+    "Kael's place."
 
     # BLOCKING: Aeron at rail, not at edge; hands braced. Shoulders tight.
 
-    athought "Two nights ago I stood here ready to jump."
-
-    athought "Then Lyra knocked. And everything changed."
+    athought "Two nights ago I came here to disappear."
 
     athought "Yesterday I killed [kv] people. Saved [sv]."
 
-    athought "Broke down completely. Shattered. Lyra held the pieces."
-
-    athought "Last night Zira gave me a choice. Information. Access. Power."
+    athought "Last night Zira put a choice in my hand."
 
     if sv >= 1:
-        athought "This morning I learned those [sv] are spreading word. Saving others."
-        athought "My mercy rippling outward. Creating more mercy."
+        athought "This morning I learned the ones I saved were moving others out."
         $ choice_and_dev(_current_scene_id, "purge_recalls_mercy_ripples", "EMP", factor=1,
                         note="Recalls survivors spreading warnings; empathy affirmed.")
     else:
         athought "This morning I stared at reports that said 'zero survivors.'"
-        athought "I don't believe them. I can't. Someone must have lived."
+        athought "I still don't believe them."
 
     # CAMERA: Slow dolly-in toward Aeron's back; city field-of-lights deepens.
 
@@ -66,13 +59,11 @@ label a1_s28_purge:
 
     "Sectors 8, 9, 10 stretch in the distance—dark patches among the glow."
 
-    athought "Something's happening there tonight. 'Project Renewal.' Whatever that means."
+    athought "Something's happening there tonight."
 
-    athought "Marcus wants me to watch from command deck. 'Witness history.'"
+    athought "Marcus wants me to watch."
 
-    athought "But I came here first. To think. To understand."
-
-    athought "To stand where Kael stood and ask—what would you do?"
+    athought "I came here first."
 
     # INSERT: Hands close-up; knuckles blanch; tiny tremor.
 
@@ -80,19 +71,7 @@ label a1_s28_purge:
 
     athought "These hands killed [kv] people. Saved [sv]."
 
-    athought "Is that redemption? Or just less horror?"
-
-    athought "Lyra said trying matters. Even when you fail."
-
-    athought "Zira said broken things can be rebuilt. Weapons can't."
-
-    athought "So maybe... maybe I'm not a weapon anymore."
-
-    athought "Maybe breaking was how I became human again."
-
-    athought "Maybe mercy—even imperfect mercy—is how I stop being what Father made."
-
-    athought "Maybe Kael would be proud. That I'm trying."
+    athought "I still don't know what that makes me."
 
     # SFX: Far laughter; a scooter horn; life on some other level.
 
@@ -100,14 +79,12 @@ label a1_s28_purge:
 
     "For a moment, the world feels almost... okay."
 
-    athought "I don't know what happens next. I don't know if I can be fixed."
+    athought "I don't know what happens next."
 
     if sv >= 1:
-        athought "But I'm not alone. Lyra sees me. Zira respects me. The [sv] survived."
+        athought "But I'm not alone. Lyra sees me. The [sv] survived."
     else:
-        athought "But I'm not alone. Lyra sees me. Zira challenged me. Someone must have survived."
-
-    athought "That's something. That has to be something."
+        athought "But I'm not alone. Lyra sees me. Someone may have survived."
 
     # ========= LYRA ARRIVES =========
     # SFX: Roof door latch clicks; soft footfalls.
@@ -138,11 +115,9 @@ label a1_s28_purge:
 
     l "How are you feeling? After yesterday?"
 
-    a "(honest) Empty. But not the weapon kind of empty."
+    a "(honest) Empty. But not the weapon kind."
 
-    a "More like... drained. Purged. Room for something new."
-
-    l "That's good. That's healing."
+    l "Good."
 
     # VISUAL: She looks at him. Studies his profile. Concern and something warmer.
 
@@ -158,20 +133,22 @@ label a1_s28_purge:
 
     # VISUAL: Their eyes meet. Hold. Connection visible.
 
-    "Something passes between us. Understanding. Recognition. Hope."
+    "Something passes between us."
 
     a "I checked the networks this morning. The resistance chatter."
 
     if sv >= 1:
         a "The people I saved—they're spreading word. Warning others. Evacuating families."
-        a "My mercy... it's rippling. Creating more mercy."
     else:
         a "Official channels say 'zero survivors.'"
-        a "But I don't believe it. Someone is warning others. I can feel it."
+        a "I don't believe it."
 
-    l "See? Trying matters. Even when it's not enough."
+    l "It mattered."
 
-    a "[sv] people alive because something in me cracked."
+    if sv >= 1:
+        a "[sv] people alive because something in me cracked."
+    else:
+        a "And still I can't make the number come out clean."
 
     l "[kv] dead because I obeyed."
 
@@ -179,7 +156,7 @@ label a1_s28_purge:
 
     l "There is no math that works. There's just choices."
 
-    l "You chose mercy. That's what matters."
+    l "You chose something he didn't order."
 
     # VISUAL: She moves closer. Shoulder almost touching his. Warmth between them.
 
@@ -199,9 +176,7 @@ label a1_s28_purge:
 
     # VISUAL: Comfortable silence. Both watching the city. Peaceful moment.
 
-    "We stand together. The city hums. The wind carries warmth."
-
-    "For a moment, everything feels... possible."
+    "We stand together. The city hums."
 
     a "Lyra?"
 
@@ -215,17 +190,13 @@ label a1_s28_purge:
 
     l "(turns to face him) I told you. Windows recognize windows."
 
-    l "But we're not windows anymore. We're just us."
-
-    l "(softer) Broken. Human. Together."
+    l "But we're not windows anymore."
 
     # BLOCKING: She takes his hand; frame pushes to medium two-shot.
 
     "Her hand finds mine. Fingers intertwine. Warm. Real. Alive."
 
-    athought "This. This is what I was missing. Connection. Touch. Being seen."
-
-    athought "Not as a weapon. Not as an asset. Just as Aeron."
+    athought "Not a weapon. Not an asset. Just this."
 
     l "What time is Marcus expecting you?"
 
@@ -261,9 +232,7 @@ label a1_s28_purge:
 
     # VISUAL: They turn back to the city. Hands still joined. Watching together.
 
-    "The city glows. Peaceful. Beautiful. Unaware."
-
-    "Two people on a rooftop. Holding hands. Finding hope."
+    "The city glows below us. Unaware."
 
     a "Do you think we can fix this? Any of it?"
 
@@ -281,23 +250,11 @@ label a1_s28_purge:
 
     # VISUAL: Small smile on both faces. Tentative. Fragile. Real.
 
-    "Hope. Fragile and small. But real."
-
-    "For the first time in days—maybe years—hope."
-
-    athought "Maybe this is what breaking means. Maybe this is freedom."
-
-    athought "Not perfection. Not obedience. Just... being human."
-
-    athought "Feeling things. Connecting. Choosing mercy."
-
-    athought "Maybe Kael would be proud."
+    "Hope, fragile enough to bruise."
 
     # VISUAL: The sky. Still peaceful. City lights twinkling. Stars beginning to show.
 
     "The stars appear—faint against city glow, but there."
-
-    "Everything feels... possible."
 
     l "(quiet) It's beautiful up here."
 
@@ -411,10 +368,9 @@ label a1_s28_purge:
 
     if em >= 1:
         athought "[sv] people. I saved [sv]."
-        athought "They warned others. Families evacuated. Resistance mobilized."
-        athought "Marcus heard. Marcus accelerated."
-        athought "The Purge was scheduled for next week."
-        athought "But I showed mercy. And he moved it to TONIGHT."
+        athought "They warned others."
+        athought "Marcus heard."
+        athought "It should have been later. Not tonight."
         $ canon["aeron_believes_he_accelerated_purge"] = True
 
         a "(barely audible) I did this."
@@ -433,9 +389,9 @@ label a1_s28_purge:
     "Knees crack against stone. Hands clawing at my face. Body convulsing."
 
     if em >= 1:
-        a "(screaming) I KILLED THEM. I KILLED THEM ALL."
-        a "TRYING TO BE HUMAN. TRYING TO SAVE THEM."
-        a "AND I KILLED HUNDREDS OF THOUSANDS."
+        a "(screaming) I DID THIS."
+        a "TRYING TO SAVE THEM."
+        a "AND I DID THIS."
     else:
         a "(screaming) I FAILED THEM. I FAILED THEM ALL."
         a "OBEYING. WATCHING. DOING NOTHING."
@@ -457,12 +413,10 @@ label a1_s28_purge:
 
     if saved_vendor or saved_child or saved_shelter:
         athought "The vendor. The child. The shelter families."
-        athought "I saved them yesterday. They're dying tonight."
+        athought "I dragged them one day further."
     else:
         athought "Faces from yesterday. The market. The doors. The shelter."
         athought "They're dying tonight."
-
-    athought "Because I tried to be human."
 
     l "(sobbing) WE HAVE TO DO SOMETHING—"
 
@@ -497,31 +451,17 @@ label a1_s28_purge:
 
     a "(hollow laugh) The system? I AM the system."
 
-    a "Father's weapon. Perfect obedience."
+    a "Father's weapon."
 
-    a "Except I cracked. Showed mercy. Became human."
-
-    a "(voice breaking) And humanity murdered hundreds of thousands."
+    a "(voice breaking) I cracked. And this is what followed."
 
     "Silence stretches. The city burns. The world has ended."
 
     "And we sit in the ruins. Together. Shattered. Human."
 
-    athought "Ten minutes ago I had hope. I thought breaking meant freedom."
+    athought "Father wanted me to witness this."
 
-    athought "I thought mercy mattered. That trying counted. That being human was good."
-
-    athought "But obedience was right all along."
-
-    athought "Mercy is weakness. Humanity is failure. Trying gets everyone killed."
-
-    athought "Father wanted me to witness this. To learn this lesson."
-
-    athought "'This is what happens when you crack,' he'll say."
-
-    athought "'This is why obedience matters.'"
-
-    athought "And he's right. He's always been right."
+    athought "To learn what cracking costs."
 
     # ========= THE PIVOT =========
 
@@ -563,11 +503,11 @@ label a1_s28_purge:
 
     a "(cold) Then I'll learn. But not what he wanted."
 
-    "Standing. Different. Colder. Harder. Not a weapon. Something new."
+    "He rises anyway."
 
     a "I followed orders. I showed mercy. I failed."
 
-    a "So no more obedience. No more mercy. No more of what I was."
+    a "So no more kneeling to any of it."
 
     a "(looks at burning sectors) Just ash. And those who made it."
 
@@ -581,7 +521,7 @@ label a1_s28_purge:
 
     a "And we shatter it from within."
 
-    "Two silhouettes against burning sky. Shattered. Humanity murdered. Rage born."
+    "Two silhouettes against the burning sky."
 
     athought "Operation 391. My last mission as what I was."
 
