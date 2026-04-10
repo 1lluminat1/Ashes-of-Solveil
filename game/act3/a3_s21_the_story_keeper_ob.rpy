@@ -59,7 +59,7 @@ label a3_s21_the_story_keeper_ob:
 
     a "What kind of stories?"
 
-    z "Names. Ledgers. Personal histories. Records of people who disappeared during and after the Purge. The kind of information Echelon scrubbed from every official database."
+    z "Names. Ledgers. Personal histories. The kind of information Echelon scrubbed from every official database."
 
     z "Someone's been keeping it. Moving it through courier channels like cargo. Drop to drop, relay to relay, for years."
 
@@ -126,8 +126,6 @@ label a3_s21_the_story_keeper_ob:
     "That's the tell. Zira sees it. The absolute stillness of a man whose internal architecture just shifted and whose external architecture won't permit it to show."
 
     athought "Alive."
-
-    athought "She's alive."
 
     athought "My mother is alive."
 

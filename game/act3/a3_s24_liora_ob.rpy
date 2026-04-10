@@ -396,11 +396,7 @@ label a3_s24_liora_ob:
 
     athought "Lyra is praying."
 
-    athought "Not the angry prayer from the EMP -- no. That's not."
-
     athought "Lyra is praying the way people pray when they've seen something they can't unsee."
-
-    athought "She wasn't there. She didn't hear what Liora said."
 
     athought "She doesn't need to. She can see it in my face."
 

@@ -131,15 +131,9 @@ label a3_s18_field_sync_ob:
 
     athought "She's breathing the same count. But we're not aligned. Half a beat of phase difference."
 
-    athought "Close enough to notice. Not close enough to call it harmony."
-
     athought "The word that applies is 'synchronization.' Not 'resonance.'"
 
     athought "Calibration. Two instruments tuned to the same frequency but operating independently."
-
-    athought "Efficient. Optimized."
-
-    athought "The word 'harmony' doesn't apply."
 
     "The corridor feels tighter. Not thicker -- compressed. The same information in less space. Each sound clipped. Each movement economical."
 
