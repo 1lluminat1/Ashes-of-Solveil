@@ -53,8 +53,6 @@ label a3_s15_signal_under_fire_emp:
 
     "The tunnel smells like machine oil and stale air. Condensation beads on the ceiling pipes and drops at irregular intervals — a rhythm that isn't one."
 
-    athought "Relay Node 6-Kappa. Third junction point in Zira's restoration chain. The Ghostline network has been degrading since the counter-strike, and this node is the bottleneck."
-
     athought "Fix this one, and the eastern corridor comes back online. Lose it, and we lose secure comms to three sectors."
 
     z "Hands."
@@ -405,8 +403,6 @@ label a3_s15_signal_under_fire_emp:
     z "Present tense."
 
     athought "Present tense."
-
-    athought "She means it."
 
     #stop ambient fadeout 3.0
     #scene black with fade

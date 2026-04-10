@@ -78,9 +78,7 @@ label a3_s24_liora_ob:
 
     "Zira arranged it through three intermediary contacts. The Outlander channels move slowly. Aeron waited nine days."
 
-    athought "Nine days since the courier message confirmed she'd meet."
-
-    athought "Nine days of operations, briefings, patrol rotations. Normal. The machine ran."
+    athought "Operations. Briefings. Patrol rotations. Normal. The machine ran."
 
     athought "And underneath the machine, the sentence I can't stop turning over."
 

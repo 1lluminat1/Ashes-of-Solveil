@@ -76,8 +76,6 @@ label a3_s14_cipher_and_skin_emp:
 
     athought "The cipher sits between us on the table. Palm-sized metal disk, command authentication paired to both our biosignatures."
 
-    athought "She had Noelle encode it after the shared command structure was formalized. One cipher, two holders."
-
     athought "I've started thinking of it as ours. That's dangerous."
 
     # --- THE DISCUSSION TURNS ---
