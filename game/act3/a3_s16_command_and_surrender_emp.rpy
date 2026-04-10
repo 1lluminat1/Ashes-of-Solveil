@@ -234,7 +234,7 @@ label a3_s16_command_and_surrender_emp:
 
     sel "I need you to know that. Before."
 
-    a "I know."
+    "His hand moves across the table. Past the cipher. Onto hers."
 
     # --- CONSENT GATE C: Explicit ---
 

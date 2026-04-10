@@ -58,11 +58,9 @@ label a3_s17_faith_in_flaws_emp:
 
     "Lyra stands with her hands resting on the metal rail, watching the city breathe below. The wind moves through her hair. She doesn't correct it."
 
-    athought "She used to. In the early days — the gala, the balcony — her hair was always arranged. Part of the architecture of who she was presenting."
+    athought "She used to arrange her hair. Part of the architecture of who she was presenting."
 
     athought "Now she lets the wind have it."
-
-    athought "That's the whole story of her, compressed into a single detail."
 
     "He doesn't announce himself. She knows he's there."
 
@@ -158,9 +156,7 @@ label a3_s17_faith_in_flaws_emp:
 
     l "We're—"
 
-    a "I know."
-
-    "She closes her mouth. Opens it again."
+    "He meets her eyes. She closes her mouth. Opens it again."
 
     l "That used to take twenty minutes of guided practice."
 

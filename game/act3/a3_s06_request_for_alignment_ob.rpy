@@ -391,8 +391,6 @@ label a3_s06_request_for_alignment_ob:
 
         athought "What we could be."
 
-        athought "What does she think we could be?"
-
         athought "What does she think I could be?"
 
         # --- AFTERMATH ---

@@ -27,11 +27,10 @@ label a3_s01_back_from_edge_emp:
 
     "Tactical displays cycle through supply routes, patrol schedules, civilian evacuation corridors. The maps are marked with green pins now. Saves, not losses."
 
-    athought "A week ago, I carried her out of medbay wondering if she'd make it through the night."
-    athought "Now she's standing at the command table like nothing happened. Except everything happened."
-    athought "And somehow, we're still here."
+    "Selene stands at the head of the table, datapad in hand. Her left hand rests on the edge — taking weight she won't admit she needs to offload."
 
-    "Selene stands at the head of the table, datapad in hand. But there's a second chair now. Pulled up beside hers."
+    "There's a second chair now. Pulled up beside hers."
+
     "Mine."
 
     athought "She offered to share command. I thought she was delirious from blood loss."

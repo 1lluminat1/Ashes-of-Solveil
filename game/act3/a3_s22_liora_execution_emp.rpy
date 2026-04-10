@@ -9,6 +9,8 @@
 $ _current_scene_id = "a3_s22_liora_execution_emp"
 $ scene_mark(_current_scene_id, "entered")
 
+define executioner = Character("Executioner")
+
 label a3_s22_liora_execution_emp:
 
     # ========= STAGE DIRECTIONS (cinema-first) =========
@@ -17,10 +19,10 @@ label a3_s22_liora_execution_emp:
     #             arrives. It can't hold steady. Neither can the room.
     #         (2) THE NUMBERS: 50mm, locked. Clinical. Noelle's probability assessment.
     #             Steady because the math is steady. The horror is in the steadiness.
-    #         (3) THE EXECUTION: 28mm, wide. The platform. The crowd. The distance.
+    #         (3) THE EXECUTION: 28mm, wide. The platform. Four figures. The empty space.
     #             Then 85mm telephoto: Liora's face from far away. The compression of distance.
-    #             Marcus in the background: unfocused, present, not watching her.
-    #             The last moment: back to 28mm. Wide. The smallness of one person on a platform.
+    #             Marcus in the background: unfocused, present, watching the monitors not her.
+    #             The last moment: back to 28mm. Wide. The smallness of one person on an empty platform.
     #         (4) AFTERMATH: 40mm, handheld, almost still. Each LI in their own frame.
     #             The camera visits them. Doesn't linger. The brevity is the respect.
     # LIGHTING: The news: war room operational. Overhead strips. Harsh.
@@ -32,15 +34,20 @@ label a3_s22_liora_execution_emp:
     #           Aftermath: base interior. Amber practicals only. Overheads off. The room is dim.
     # SFX: The news: war room ambient. Then quiet. The quiet of a room that just received a blow.
     #      The numbers: Noelle's keyboard. Then nothing. The silence of math that ends badly.
-    #      The execution: crowd ambient (distant, muffled — we're watching from a feed or distance).
-    #      The platform: wind. Echelon broadcast tone. A voice (official, bureaucratic) reading charges.
-    #      The moment: silence. Absolute. The feed cuts to silence before the act.
+    #      The execution: no ambient crowd. Wind. Echelon broadcast tone. The team watches from their feed.
+    #      The platform: wind. The executioner's flat voice reading Directorate articles.
+    #      After the nod: footsteps of officials leaving. Pneumatic door seal. Then only wind.
+    #      The drop: no warning tone, no human command. The mechanism runs on a timer.
+    #      Empty frame: one beat of wind on vacant concrete. Then black.
     #      Aftermath: base ambient. Breathing. Someone's hand on a table. The small sounds of people
     #      holding themselves together.
-    # FX/COMP: The Aeries platform: high, visible from the Unders below. Designed as spectacle.
-    #          Echelon broadcast feeds: the execution transmitted. City-wide.
-    #          Marcus: present. Stone-faced. Watching the crowd. Not her.
+    # FX/COMP: The Aeries platform: high, near-empty. Four figures. Designed as spectacle.
+    #          Echelon broadcast feeds: mandated city-wide. The only audience.
+    #          Marcus: present. Stone-faced. Watching the broadcast monitors. Not her.
     #          Liora: hands bound. Standing. The posture of someone who has already decided how to be.
+    #          After the nod: the platform empties. Officials leave. Door seals.
+    #          Liora stands alone. Wind. The drop mechanism activates on its timer.
+    #          The execution is entirely bureaucratic — no one stays to watch. The machine runs itself.
     # BLOCKING: The news: war room. Team present. The arrangement shatters — people move, freeze, grip.
     #           The numbers: Noelle at her terminal. The rest around her. Waiting for math to save them.
     #           The execution: the team watching. Together. However they're receiving the feed.
@@ -135,69 +142,25 @@ label a3_s22_liora_execution_emp:
 
     "Noelle's hands are on the keyboard. Already working. She started the moment Zira said 'Aeries.'"
 
-    n "Aeries security assessment. I'm pulling current patrol data, structural schematics, and the broadcast infrastructure layout."
+    "The holo-table activates. The Aeries in blue light — three concentric security rings around the execution platform."
 
-    "The holo-table activates. The Aeries in blue light — the upper city, the platform above the Unders, the security perimeter."
+    n "We can get in. The outer perimeter has gaps. Ghostline routes are mapped."
 
-    n "The platform is the highest public structure in the Aeries. Visible from seventeen sectors. Echelon uses it for state announcements and public disciplinary actions."
+    n "Getting out with a prisoner is the problem."
 
-    n "Current security: three concentric perimeters. Outer ring — standard patrol, twelve-minute rotation. Middle ring — augmented response team, six-minute cycle. Inner ring — personal detail, continuous presence."
+    "She runs the projection. Routes light up and extinguish."
 
-    sel "Infiltration options?"
+    n "Best-case extraction: ninety seconds from first contact to full containment. Four to five of a six-person team lost."
 
-    n "The outer perimeter has gaps. The 47-second window — similar architecture to the corridor op. We know how to exploit it."
+    n "And there's a secondary consideration."
 
-    n "The middle perimeter is the problem. Six-minute augmented cycle with overlapping fields of fire. No blind spots in the current configuration."
+    "Noelle doesn't pause. She pauses now."
 
-    z "I can get a team through the outer ring. Ghostline routes into the Aeries are mapped."
+    n "If we attempt it and fail — which the math strongly suggests — Echelon gains operational intelligence on Phoenix. The counter-strike is immediate."
 
-    n "Getting in isn't the problem. Getting out with a prisoner is."
+    n "We lose the base. We lose the Ghostline. We lose the two hundred six from the corridor."
 
-    "She runs the projection. Routes light up and extinguish. Options appear and collapse."
-
-    n "Extraction Route Alpha: through the maintenance corridors. Estimated team survival probability: twenty-three percent."
-
-    sel "Unacceptable."
-
-    n "Route Beta: service elevator to the lower platform, then through the crowd. Eighteen percent."
-
-    n "Route Gamma: the Ghostline tunnel network beneath the platform. The tunnels aren't mapped past Junction 7. Probability cannot be calculated."
-
-    athought "Can't be calculated. Noelle's way of saying the unknown is worse than the known."
-
-    n "The platform itself is the constraint. Any rescue attempt requires presence at the execution site. Echelon will have every feed, every sensor, every weapon pointed at that platform."
-
-    n "A rescue team at the site triggers an immediate response. Estimated time to full containment: ninety seconds."
-
-    n "Ninety seconds to breach the inner perimeter, extract one prisoner, and clear a platform surrounded by three concentric security rings in the most surveilled structure in the city."
-
-    athought "Ninety seconds."
-
-    athought "The corridor op had 47-second windows and we barely made it."
-
-    sel "Casualties?"
-
-    n "Projected friendly casualties on any viable extraction route: sixty to seventy percent of the insertion team."
-
-    n "That's four to five of a six-person team."
-
-    "Silence."
-
-    n "There's a secondary consideration."
-
-    "She pauses. Noelle doesn't pause."
-
-    n "If we attempt a rescue and fail — which the probability strongly suggests — Echelon gains operational intelligence on Phoenix's capabilities, insertion methods, and personnel. The counter-strike would be immediate."
-
-    n "Projected impact: loss of the base. Loss of the Ghostline. Loss of the civilian population we're currently sheltering."
-
-    n "The 206 from the corridor. The families. The children."
-
-    athought "The math."
-
-    athought "The same math that saved two hundred people through a 47-second window is the math that kills one person now."
-
-    athought "Two hundred and six lives weighed against one."
+    athought "The same math that saved two hundred through a forty-seven second window is the math that kills one now."
 
     athought "And the one is my mother."
 
@@ -210,10 +173,6 @@ label a3_s22_liora_execution_emp:
     a "I know."
 
     athought "I know."
-
-    athought "I've known since Noelle said 'ninety seconds.' I've known since she said 'three concentric perimeters.' I've known since Zira walked through the door."
-
-    athought "I just needed the numbers to say it so I didn't have to."
 
     "The room holds the weight of it."
 
@@ -243,13 +202,13 @@ label a3_s22_liora_execution_emp:
 
     "Clear sky. Bright daylight. The light hides nothing."
 
-    "The crowd below is arranged — not gathered, arranged. Echelon personnel in formation. Civilians corralled into viewing sections. The performance of justice."
+    "The platform is near-empty. Four figures against the sky — the executioner at the control panel, two Echelon officials at the far rail, and Marcus at the monitors."
 
-    athought "Marcus built this platform. I remember the schematics. He designed it during the infrastructure review in my second year at the Academy."
+    athought "There's no audience here. The audience is every screen in Solveil."
 
-    athought "He designed the sight lines. The acoustics. The way the wind carries the broadcast voice across the open space."
+    athought "Mandated viewing."
 
-    athought "He designed it so the entire city could watch."
+    athought "Marcus designed the drop."
 
     "A figure is brought to the platform. Hands bound. Flanked by Echelon escort."
 
@@ -261,25 +220,77 @@ label a3_s22_liora_execution_emp:
 
     athought "The way I knew the handwriting."
 
-    "The broadcast voice reads the charges. Sedition. Unauthorized information distribution. Trafficking in classified personnel data. Aiding enemies of the state."
+    "The executioner steps forward to the rail. He holds a compliance tablet. He does not look at Liora."
 
-    "The words are bureaucratic. They describe a woman who spent nineteen years making sure the city remembered the people it was told to forget."
+    "His voice, when it comes, is flat. The cadence of a man reading a manifest."
 
-    "They make it sound like a crime."
+    executioner "The condemned stands in violation of the following Directorate articles."
+
+    executioner "Order Directive Fourteen-B, Section Three. Sedition against the lawful government of Solveil."
+
+    executioner "Infrastructure Division Statute Twenty-Two-C. Unauthorized maintenance and operation of parallel communication infrastructure. Specifically: direct material support to the illicit relay network designated Ghostline by Cognitive Division Intercept Summary Twenty-Eight-Forty-Seven-B."
+
+    athought "Ghostline. They named it. They have a designation for it."
+
+    executioner "Cognitive Division Protocol Seven-A. Trafficking in classified personnel records. Two thousand four hundred and eleven entries recovered from courier cache, Sectors Six through Eleven. All recovered records had been designated for deletion under Compliance Protocol Twelve."
+
+    athought "She kept the names."
+
+    athought "Two thousand four hundred and eleven people the city was told to forget. She carried them through the Outlands in a paper bag."
+
+    executioner "Order Directive Nine-F. Unauthorized contact and provision of material aid to designated hostile cell personnel. Forty-seven individual transactions documented through intercepted relay traffic."
+
+    athought "Forty-seven."
+
+    athought "Forty-seven times we let her through because the couriers were civilians."
+
+    athought "Forty-seven times we counted it as mercy. Echelon counted every one."
+
+    executioner "Military Division Article Eleven. Coordination with hostile operatives in the commission of insurgent activities. Including but not limited to: the Sector Four corridor interdiction. The Sector Six relay restoration. The Sector Nine civilian evacuation."
+
+    athought "Our operations."
+
+    athought "They're reading our operations as her crimes."
+
+    athought "She wasn't at the corridor. She wasn't at the relay. She didn't coordinate the evacuation. We did."
+
+    athought "They're executing her for what we did."
+
+    executioner "Harmony Bureau Edict Three-B. Unauthorized preservation of records designated for erasure under the Clarity Mandate. Deliberate maintenance of memory in direct violation of sanctioned civic continuity."
+
+    athought "They named it. Even remembering has a statute number."
+
+    executioner "And Order Directive One-A. The root charge."
+
+    "A pause. The executioner reads the final article the way he read the others — no stress, no weight, no change in cadence."
+
+    executioner "Aiding and abetting known traitor Aeron Rylan in the commission of acts of rebellion against the lawful government of Solveil."
+
+    "The world stops."
+
+    athought "They said my name."
+
+    athought "She never knew me. She left before I was old enough to remember her face. She wrote one letter and kept it in a drop box in the Outlands for nineteen years."
+
+    athought "And they're killing her for helping me."
+
+    "The executioner lowers the tablet. Each article was delivered in the same flat cadence. The charges were not accusations. They were paperwork."
 
     "Marcus is on the platform."
 
-    "He stands at the observation rail. Not at the front — at the side. The position of authority that doesn't need to be central. He's watching the crowd."
+    "He stands at the observation rail. Not at the front — at the side. The position of authority that doesn't need to be central."
+
+    "He is watching the broadcast monitors."
+
+    "Three of them. Mounted on the inside face of the rail. Each showing a different angle of the feed going out. His own face in one. The executioner in another. Liora in the third — smaller on the screen than she is in person."
+
+    "He watches the monitors."
 
     "Not her."
 
-    "He's watching the crowd."
+    athought "His wife. The mother of his son."
 
-    athought "He's not looking at her."
-
-    athought "His wife. The mother of his son. The woman who loved the pause in his hand."
-
-    athought "He's watching the crowd because the crowd is the point. She's the instrument. The lesson."
+    athought "And he is watching a screen."
 
     athought "This is what happens when you remember."
 
@@ -291,13 +302,11 @@ label a3_s22_liora_execution_emp:
 
     athought "My mother never started."
 
-    "The broadcast voice finishes the charges. Asks if the condemned has a final statement."
+    executioner "Does the condemned wish to make a final statement?"
 
-    "Liora looks at the crowd. Not at Marcus. Not at the cameras. At the people."
+    "Liora looks into the lens. Not at Marcus. Not at the executioner. Into the broadcast — at the people on the other side of every screen in the city."
 
     "She says a name."
-
-    athought "A name."
 
     athought "Not her own. Not a plea. Not a defiance."
 
@@ -321,21 +330,63 @@ label a3_s22_liora_execution_emp:
 
     athought "Unless someone else remembers."
 
-    "The broadcast voice interrupts. The names stop."
+    "The executioner interrupts. The compliance tablet reactivates in his hand. The names stop."
 
     "Liora lifts her chin. The wind takes her hair across her face. She doesn't correct it."
 
-    "The platform. The bright light. The crowd."
+    "The platform. The bright light. The two officials at the far rail. The executioner at the control panel."
 
-    "Marcus watches the crowd."
+    "Marcus at the monitors."
 
     #play sound "sfx/one_shot/execution_silence.ogg"
 
-    "Silence."
+    "Marcus lifts his hand from the rail."
 
-    "The feed holds on the empty platform for three seconds."
+    "It's a small motion. A gesture so minor the broadcast almost misses it. His fingers lift. His head tilts forward — once. Down. Up."
 
-    "Then it cuts to the Echelon seal."
+    "A single nod."
+
+    "That's all."
+
+    "He does not look at Liora. His eyes do not leave the monitors."
+
+    "Then he turns from the rail and walks toward the platform door."
+
+    "The two Echelon officials in their formal robes fall in behind him. Unhurried. Procedural."
+
+    "The executioner sets the compliance tablet on the control panel and follows. He does not look back."
+
+    "None of them look at Liora."
+
+    "The platform door seals behind them with a soft pneumatic hiss."
+
+    athought "They're leaving."
+
+    athought "They're just leaving."
+
+    "Liora stands alone."
+
+    "Wind."
+
+    "The platform is silent. Her hair moves across her face. She doesn't correct it. She doesn't turn toward the sealed door. She looks at nothing in particular, and breathes."
+
+    "A few seconds pass. Not dramatic seconds. Clock seconds. The kind that tick past in an empty corridor."
+
+    "The drop mechanism activates on its programmed schedule. No warning tone. No command entered. The drop was never waiting for a witness."
+
+    "It was waiting for the timer."
+
+    "The section of the platform beneath her falls away."
+
+    "She is gone."
+
+    "Wind moves across the empty space. The guide-rails catch the daylight."
+
+    "The feed holds on the absence."
+
+    "One beat."
+
+    #scene black with fade
 
     # ========== PHASE 4 — THE AFTERMATH ==========
 
@@ -348,31 +399,11 @@ label a3_s22_liora_execution_emp:
 
     "No one moves to turn it off."
 
-    athought "She's gone."
+    athought "She was alive because we kept the courier network open. She's dead for the same reason."
 
-    athought "She was alive eleven days ago. She was alive when Zira found the letter. She was alive when Noelle traced the registry."
+    athought "My father killed my mother. Not the system. Him."
 
-    athought "She was alive because of the courier network. And she's dead because of it."
-
-    athought "The same channels. The same mercy. The same decision I made — to protect the couriers, to keep the Ghostline open, to choose compassion over security."
-
-    athought "My compassion led them to her."
-
-    athought "My father killed my mother because I chose mercy."
-
-    "The sentence forms in his mind with the precision of something that has always been true and was simply waiting to be articulated."
-
-    athought "Echelon isn't a system anymore."
-
-    athought "It's a man. And the man is my father. And he killed her."
-
-    athought "Not through the chain of command. Not through delegation. Not through the bureaucratic distance that makes atrocity feel like administration."
-
-    athought "He was on the platform. He watched. He chose to be there."
-
-    athought "He watched the crowd instead of her."
-
-    athought "That's worse. That's the worst thing. That he was there and didn't look at her."
+    athought "And he watched a screen instead of her face."
 
     "The room is still."
 
@@ -384,13 +415,9 @@ label a3_s22_liora_execution_emp:
 
     "Her lips move. The words are inaudible."
 
-    "But the tone — even silent, even shapeless — the tone is different."
+    "But the tone — even silent, even shapeless — is different."
 
-    athought "She's praying."
-
-    athought "But for the first time, the prayer sounds angry."
-
-    athought "Not rage. Not blasphemy. The clean, focused anger of someone addressing a god they still believe in and demanding an accounting."
+    athought "She's praying angry."
 
     # --- TESSA ---
 
@@ -401,10 +428,6 @@ label a3_s22_liora_execution_emp:
     "LIORA RYLAN."
 
     "The name joins the column. The living — and now the dead."
-
-    athought "Tessa's board doesn't distinguish. The living and the dead are on the same list."
-
-    athought "Because the point was never survival. The point was that they counted."
 
     # --- ZIRA ---
 
@@ -424,13 +447,9 @@ label a3_s22_liora_execution_emp:
 
     "She says it to the room. To no one. To the record."
 
-    n "Direct chain of causation. The courier intercept traces back to Phoenix-adjacent relay traffic. The arrest timeline correlates with our outreach through the Outlands network."
+    n "Direct chain of causation. The arrest timeline correlates with our outreach through the Outlands network."
 
     n "She was captured because of us. The data is clear."
-
-    athought "Noelle doesn't soften things. She doesn't know how."
-
-    athought "Right now, that's the kindest thing anyone could do. Give me the truth without padding. Let it be what it is."
 
     # --- SELENE ---
 
@@ -454,10 +473,6 @@ label a3_s22_liora_execution_emp:
 
     sel "Marcus Rylan. Enemy. Personal."
 
-    athought "She's asking permission. Because this changes things."
-
-    athought "It's not a rebellion against a system anymore."
-
     athought "It's a son against his father."
 
     athought "It was always that. Now it's official."
@@ -476,33 +491,19 @@ label a3_s22_liora_execution_emp:
 
     athought "My mother."
 
-    athought "She kept the names. She kept the stories. She kept the pause alive in a dead drop in Sector 4 and in courier runs through the Outlands and in the handwriting that shaped mine."
+    athought "She kept the names. She kept the pause alive in the handwriting that shaped mine."
 
     athought "And I never knew her."
 
-    athought "I had her letter for days. I could have read it a hundred times. I could have memorized every line."
-
-    athought "I did memorize every line."
-
     athought "'The city doesn't need a harder man. It needs a man brave enough to be soft when softness is the most dangerous thing you can be.'"
-
-    athought "She was right."
-
-    athought "She was right about all of it."
 
     "He reaches inside his jacket. The letter is there. The paper warm from his body heat."
 
     "He doesn't take it out. He just touches the edge. Confirms it's still there."
 
-    athought "I'm going to carry this."
+    athought "I'm going to carry this as a name on the list."
 
-    athought "Not as grief. Not as guilt. Not as the weight Selene described — the weight that turns you into the thing you're fighting."
-
-    athought "I'm going to carry it as a name on the list."
-
-    athought "The way she carried them."
-
-    athought "The way she taught me to."
+    athought "The way she taught me."
 
     "The Echelon seal glows in the war room."
 
@@ -541,9 +542,16 @@ label a3_s22_liora_execution_emp:
 #     Best route: 23% team survival. Rescue attempt risks the base, the Ghostline, the 206.
 #     The math that saved 200 kills one. No rescue possible.
 #   - Phase 3 (The Execution): Watched via broadcast feed. Liora on the Aeries platform.
-#     She walks at her own pace. Marcus present — watching the crowd, not her.
-#     Liora's last act: saying names. The forgotten. The story-keeper's final keeping.
-#     The feed cuts to the Echelon seal.
+#     The platform is near-empty — only Marcus, Liora, the executioner, and two Echelon officials.
+#     The audience is all of Solveil via mandated broadcast.
+#     The executioner reads Directorate-law charges — each citing specific resistance operations,
+#     culminating in naming Aeron directly as the traitor she aided.
+#     Marcus watches the broadcast monitors, not her. Liora says names as her final statement.
+#     Marcus gives a single silent nod — then turns and walks away. The officials follow.
+#     The executioner follows. The platform door seals. Liora is left alone.
+#     A few seconds of wind. The drop mechanism activates on its timer — no human command.
+#     The platform opens beneath her. She is gone. One beat of empty frame. Fade to black.
+#     The execution is pure bureaucracy: nobody stays to watch, the machine runs itself.
 #   - Phase 4 (Aftermath): Each LI responds.
 #     Lyra: prays angry. Noelle: proves retaliation. Tessa: adds name to board.
 #     Zira: Ghostline will remember. Selene: designates Marcus as personal enemy.
@@ -563,8 +571,17 @@ label a3_s22_liora_execution_emp:
 #     Mercy has a price. The same channels that saved people exposed the person who built them.
 #   - THE MATH: 206 lives vs 1. The corridor op's triumph becomes the execution's prison.
 #     The math that makes Aeron a hero in s12 makes him helpless in s22.
-#   - MARCUS NOT LOOKING: He watches the crowd, not her. The performance of power.
-#     Worse than cruelty — indifference. She was the instrument, not the subject.
+#   - MARCUS NOT LOOKING: He watches the broadcast monitors, not her. The performance of power.
+#     Worse than cruelty — indifference mediated through a screen. She was the instrument, not the subject.
+#   - THE NOD: Marcus gives a single nod to the executioner. No dialogue. No look at Liora.
+#     The brevity of the gesture is the horror. A bureaucrat confirming a form.
+#   - THE CHARGES: The executioner reads Directorate articles citing the resistance's own operations
+#     as Liora's crimes. The charges build until they name Aeron explicitly. Murder-by-paperwork.
+#   - THE DROP: Aeries platform mechanism. After the nod, everyone leaves. Liora stands alone.
+#     The drop is not a public spectacle — it is pure process. The mechanism runs on a timer.
+#     No warning. No command. No one stays to watch. The machine kills her without witnesses.
+#     The empty frame at the end is the thesis: Solveil's violence is bureaucratic to the point
+#     that humans are not even required to be present for it.
 #   - LIORA'S LAST ACT: saying names. The story-keeper's function continued to the last second.
 #     She didn't beg. She didn't address Marcus. She addressed the forgotten.
 #   - THE LETTER: still in his jacket. Warm from body heat. He doesn't take it out.
@@ -577,7 +594,8 @@ label a3_s22_liora_execution_emp:
 #   - Noelle: "Direct chain of causation." Unflinching. The kindest cruelty — truth without padding.
 #   - Selene: "Personal." Marcus designated. The rebellion becomes a war with a name.
 #   - Liora: Walks at her own pace. Hair uncorrected. Says the names. Dies as the story-keeper.
-#   - Marcus: Watches the crowd. Doesn't look at her. The architecture of indifference.
+#   - Marcus: Watches the broadcast monitors. Gives a single nod. Doesn't look at her. The architecture of indifference.
+#   - Executioner: Reads Directorate charges in flat cadence. The cadence of a man reading a manifest.
 # cann.callbacks:
 #   - a3_s18a: The letter. "I fell in love with the pause." The pause couldn't save her.
 #   - a3_s20: The Story Keeper. She was alive. 11 days. Now she isn't.

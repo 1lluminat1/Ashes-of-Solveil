@@ -39,7 +39,7 @@ label a3_s04a_the_silence_emp:
 
     "The Sector 4 corridor glows red on the tactical display. Echelon's response to the convoy interdiction — patrol compression, drone sweeps, checkpoints at every junction."
 
-    "Three days ago, that corridor was their window. Now it's a wall."
+    "It was their window. Now it's a wall."
 
     sel "Noelle's pattern analysis confirms it. Echelon has locked down the entire Sector 4 approach. Tighter intervals, lower altitude sweeps, rotating checkpoint positions."
 

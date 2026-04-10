@@ -318,8 +318,6 @@ label a3_s08_perfect_execution_ob:
 
         athought "She means it as praise."
 
-        athought "It is praise."
-
         athought "I accept it."
 
         "The transport rolls out. The depot stands empty. In nine hours, Echelon will discover what happened here."

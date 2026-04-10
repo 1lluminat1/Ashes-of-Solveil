@@ -256,10 +256,6 @@ label a3_s18_field_sync_ob:
 
     athought "Because that's what it was."
 
-    athought "Efficient."
-
-    athought "Optimized."
-
     athought "Steady."
 
     #stop ambient fadeout 2.0

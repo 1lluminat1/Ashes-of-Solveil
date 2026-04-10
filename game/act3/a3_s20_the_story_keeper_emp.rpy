@@ -61,7 +61,7 @@ label a3_s20_the_story_keeper_emp:
 
     a "Stories."
 
-    z "Names. Ledgers. Personal histories. Records of people who disappeared during and after the Purge. The kind of information Echelon scrubbed from every official database."
+    z "Names. Ledgers. Personal histories. The kind of information Echelon scrubbed from every official database."
 
     z "Someone's been keeping it. Moving it through courier channels like cargo. Drop to drop, relay to relay, for years."
 
