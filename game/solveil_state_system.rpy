@@ -935,6 +935,14 @@ init python:
     def canon_get(k, d=False):  return STATE["canon"].get(k, d)
 
     # =========================
+    # POLY FORESHADOWING
+    # =========================
+    def nudge_poly(delta=1):
+        """Increment poly_pressure metric. Tracks group comfort/consent foreshadowing."""
+        metric("poly_pressure", delta=delta)
+        return metric("poly_pressure")
+
+    # =========================
     # COMMON STORY PREDICATES
     # =========================
     def zira_ready_for_kiss():
