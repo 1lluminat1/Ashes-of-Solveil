@@ -348,10 +348,6 @@ label a3_s01_ashes_in_formation_ob:
 
         athought "Selene would have called that a warning sign. I call it necessary."
 
-        athought "The rebellion has no plan for what comes next. We didn't discuss succession. We didn't name a replacement. We buried her and went back to work because that's all we know how to do."
-
-        athought "There's a hole where Selene used to be, and no one is coming to fill it."
-
         # VISUAL: Aeron turns to look at Selene's chair. Slowly, deliberately, he pulls it back. He sits.
         # CAMERA: Low angle looking up at him in the chair. Coronation by crime.
 
@@ -362,8 +358,6 @@ label a3_s01_ashes_in_formation_ob:
         athought "The chair is cold. The war room is silent. The displays cycle through casualty projections and supply routes."
 
         athought "Four witnesses. One chair. One story we tell together."
-
-        athought "And nothing else. Just us, and the weight of what we've done, and the war that doesn't care who sits at the head of the table."
 
         # --- FADE OUT ---
 

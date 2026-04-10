@@ -403,10 +403,6 @@ label a3_s05a_woman_from_sector_7_emp:
 
         athought "Click. Glow. Dark. Click. Glow. Dark."
 
-        athought "I've seen her check it before. After missions. After bad days."
-
-        athought "This is different. This is the sound of someone considering whether the Band is a record of who she is or a chain she can't take off."
-
         athought "I want to knock. I don't."
 
         athought "Some spirals need to hit bottom before they teach you anything."

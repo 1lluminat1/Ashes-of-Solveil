@@ -71,7 +71,7 @@ label a3_s19_the_weight_ob:
 
     "The chair at the head of the table is empty."
 
-    "It's been empty since the funeral. No one sits in it. Not even Aeron, who sat in it once and never went back. He conducts briefings standing now. He says it's more efficient."
+    "It's been empty since the funeral. Not even Aeron, who sat in it once and never went back. He conducts briefings standing now. He says it's more efficient."
 
     "Tessa's lamp sits at the table's edge. Amber. The same one she carries. The reach of light falls just short of the head chair."
 

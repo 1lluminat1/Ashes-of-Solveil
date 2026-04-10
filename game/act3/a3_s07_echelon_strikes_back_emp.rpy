@@ -372,8 +372,6 @@ label a3_s07_echelon_strikes_back_emp:
 
     athought "I hear a father who broke my people's hands and stole their healer and terrorized a twelve-year-old — carefully, precisely, without killing anyone — because he still thinks I'll come back."
 
-    athought "Because he still thinks this is something he can fix with the right application of force."
-
     athought "He's wrong."
 
     athought "But he's patient. And patient men are more dangerous than angry ones."
