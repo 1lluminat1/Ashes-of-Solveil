@@ -194,11 +194,7 @@ label a3_s20_you_dont_get_to_break_ob:
 
     athought "She's right."
 
-    athought "I know she's right."
-
     athought "I knew before she said it. I've seen the trajectory. I've watched Nyra's language settle into my syntax like sediment. I've felt the distance growing between me and the people who were here first."
-
-    athought "I know."
 
     athought "And I'm going to do nothing about it."
 

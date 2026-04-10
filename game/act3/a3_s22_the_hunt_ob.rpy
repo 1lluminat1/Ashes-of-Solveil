@@ -276,21 +276,11 @@ label a3_s22_the_hunt_ob:
 
     athought "Five to eleven."
 
-    athought "The number is small. Against what we gained, it's barely a rounding error."
-
-    athought "That's what Father would say. 'Barely a rounding error.'"
-
-    athought "He said it about the Purge. I remember. Dinner table. I was twelve. He said the displacement casualties were within acceptable parameters."
-
-    athought "'Acceptable parameters.'"
+    athought "Barely a rounding error. Father's phrase. Dinner table, I was twelve, the Purge displacement was 'within acceptable parameters.'"
 
     athought "Nyra said the same thing thirty minutes ago. Different words. Same math."
 
-    athought "The operation was flawless."
-
     athought "The operation was flawless and five to eleven people are dead because of a detonation charge I ordered placed next to a wall I didn't check."
-
-    athought "I should have checked."
 
     athought "I didn't check because the math didn't require it."
 

@@ -283,17 +283,9 @@ label a3_s08_perfect_execution_ob:
 
         athought "Neither of them is standing here. I am."
 
-        athought "The system offers me two lenses. The weight or the efficiency. The guilt or the satisfaction."
-
-        athought "Neither is wrong. Neither is enough."
-
         athought "What is missing is the thing the system cannot count: the moment before the last guard raised his sidearm. The half-second where he might have surrendered."
 
         athought "We did not give him that half-second."
-
-        athought "The plan did not account for it."
-
-        athought "I did not account for it."
 
         athought "And I am the plan."
 
