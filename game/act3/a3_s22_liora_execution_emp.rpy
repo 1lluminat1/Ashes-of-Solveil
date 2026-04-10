@@ -36,15 +36,18 @@ label a3_s22_liora_execution_emp:
     #      The numbers: Noelle's keyboard. Then nothing. The silence of math that ends badly.
     #      The execution: no ambient crowd. Wind. Echelon broadcast tone. The team watches from their feed.
     #      The platform: wind. The executioner's flat voice reading Directorate articles.
-    #      The nod: silent. The warning tone is clinical, brief, for the record. Then the drop mechanism.
-    #      The drop: wind rushing past cameras. No scream. She falls at her own pace.
+    #      After the nod: footsteps of officials leaving. Pneumatic door seal. Then only wind.
+    #      The drop: no warning tone, no human command. The mechanism runs on a timer.
+    #      Empty frame: one beat of wind on vacant concrete. Then black.
     #      Aftermath: base ambient. Breathing. Someone's hand on a table. The small sounds of people
     #      holding themselves together.
     # FX/COMP: The Aeries platform: high, near-empty. Four figures. Designed as spectacle.
     #          Echelon broadcast feeds: mandated city-wide. The only audience.
     #          Marcus: present. Stone-faced. Watching the broadcast monitors. Not her.
     #          Liora: hands bound. Standing. The posture of someone who has already decided how to be.
-    #          The drop mechanism: built into the platform. Marcus designed it. Section opens, she falls.
+    #          After the nod: the platform empties. Officials leave. Door seals.
+    #          Liora stands alone. Wind. The drop mechanism activates on its timer.
+    #          The execution is entirely bureaucratic — no one stays to watch. The machine runs itself.
     # BLOCKING: The news: war room. Team present. The arrangement shatters — people move, freeze, grip.
     #           The numbers: Noelle at her terminal. The rest around her. Waiting for math to save them.
     #           The execution: the team watching. Together. However they're receiving the feed.
@@ -417,35 +420,43 @@ label a3_s22_liora_execution_emp:
 
     "He does not look at Liora. His eyes do not leave the monitors."
 
-    "The executioner sees the nod. He does not look at Liora either."
+    "Then he turns from the rail and walks toward the platform door."
 
-    "He enters a command into the control panel. The mechanism built into the platform activates. A warning tone sounds once — brief, clinical, for the official record."
+    "The two Echelon officials in their formal robes fall in behind him. Unhurried. Procedural."
 
-    "The section of the platform beneath Liora falls away."
+    "The executioner sets the compliance tablet on the control panel and follows. He does not look back."
 
-    "She drops."
+    "None of them look at Liora."
 
-    "The drop is long. The Aeries platform was designed to be visible from every sector of Solveil. The drop was designed to be watched."
+    "The platform door seals behind them with a soft pneumatic hiss."
 
-    "The cameras follow her down. Echelon's feed tracks the descent across every channel, in every home, on every screen in the city. Mandated viewing. Compliance monitoring active."
+    athought "They're leaving."
 
-    "She doesn't make a sound."
+    athought "They're just leaving."
 
-    "She doesn't struggle against the air."
+    "Liora stands alone."
 
-    "She falls at her own pace. The same pace she walked onto the platform. Refusing spectacle even as she becomes it."
+    "Wind."
 
-    "Somewhere in the Unders, the feed plays on a cracked terminal in a ration hall, and a woman Liora once carried through a checkpoint drops to her knees."
+    "The platform is silent. Her hair moves across her face. She doesn't correct it. She doesn't turn toward the sealed door. She looks at nothing in particular, and breathes."
 
-    "Somewhere in the Spans, a child who never knew her name stops eating."
+    "A few seconds pass. Not dramatic seconds. Clock seconds. The kind that tick past in an empty corridor."
 
-    "And on every screen in every room in every sector, the drop continues."
+    "The drop mechanism activates on its programmed schedule. No warning tone. No command entered. The drop was never waiting for a witness."
 
-    "The feed cuts to the Echelon seal before she lands. Not out of mercy. Out of timing."
+    "It was waiting for the timer."
 
-    "The impact is not part of the lesson."
+    "The section of the platform beneath her falls away."
 
-    "The fall is."
+    "She is gone."
+
+    "Wind moves across the empty space. The guide-rails catch the daylight."
+
+    "The feed holds on the absence."
+
+    "One beat."
+
+    #scene black with fade
 
     # ========== PHASE 4 — THE AFTERMATH ==========
 
@@ -655,9 +666,12 @@ label a3_s22_liora_execution_emp:
 #     The audience is all of Solveil via mandated broadcast.
 #     The executioner reads Directorate-law charges — each citing specific resistance operations,
 #     culminating in naming Aeron directly as the traitor she aided.
-#     Marcus watches the broadcast monitors, not her. Single nod triggers the drop mechanism.
-#     Liora's last act before the nod: saying names. The forgotten. The story-keeper's final keeping.
-#     The platform drops her. The cameras follow her down. Feed cuts to the Echelon seal before landing.
+#     Marcus watches the broadcast monitors, not her. Liora says names as her final statement.
+#     Marcus gives a single silent nod — then turns and walks away. The officials follow.
+#     The executioner follows. The platform door seals. Liora is left alone.
+#     A few seconds of wind. The drop mechanism activates on its timer — no human command.
+#     The platform opens beneath her. She is gone. One beat of empty frame. Fade to black.
+#     The execution is pure bureaucracy: nobody stays to watch, the machine runs itself.
 #   - Phase 4 (Aftermath): Each LI responds.
 #     Lyra: prays angry. Noelle: proves retaliation. Tessa: adds name to board.
 #     Zira: Ghostline will remember. Selene: designates Marcus as personal enemy.
@@ -683,8 +697,11 @@ label a3_s22_liora_execution_emp:
 #     The brevity of the gesture is the horror. A bureaucrat confirming a form.
 #   - THE CHARGES: The executioner reads Directorate articles citing the resistance's own operations
 #     as Liora's crimes. The charges build until they name Aeron explicitly. Murder-by-paperwork.
-#   - THE DROP: Aeries platform mechanism. She falls. The cameras follow. The city watches because
-#     viewing is compliance-monitored. The impact is withheld — the fall is the lesson.
+#   - THE DROP: Aeries platform mechanism. After the nod, everyone leaves. Liora stands alone.
+#     The drop is not a public spectacle — it is pure process. The mechanism runs on a timer.
+#     No warning. No command. No one stays to watch. The machine kills her without witnesses.
+#     The empty frame at the end is the thesis: Solveil's violence is bureaucratic to the point
+#     that humans are not even required to be present for it.
 #   - LIORA'S LAST ACT: saying names. The story-keeper's function continued to the last second.
 #     She didn't beg. She didn't address Marcus. She addressed the forgotten.
 #   - THE LETTER: still in his jacket. Warm from body heat. He doesn't take it out.
