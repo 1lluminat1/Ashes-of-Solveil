@@ -242,7 +242,9 @@ label a3_s22_liora_execution_emp:
 
     athought "Forty-seven."
 
-    athought "Forty-seven times she moved something past our checkpoints, and we counted it as mercy. Echelon counted every single one."
+    athought "Forty-seven times we let her through because the couriers were civilians."
+
+    athought "Forty-seven times we counted it as mercy. Echelon counted every one."
 
     executioner "Military Division Article Eleven. Coordination with hostile operatives in the commission of insurgent activities. Including but not limited to: the Sector Four corridor interdiction. The Sector Six relay restoration. The Sector Nine civilian evacuation."
 
@@ -286,9 +288,11 @@ label a3_s22_liora_execution_emp:
 
     "Not her."
 
-    athought "He's watching the feed of himself watching."
+    athought "His wife. The mother of his son."
 
-    athought "His wife. The mother of his son. The woman who loved the pause in his hand."
+    athought "And he is watching a screen."
+
+    athought "This is what happens when you remember."
 
     "Liora stands on the platform. The wind moves through her hair. She doesn't correct it."
 
@@ -303,8 +307,6 @@ label a3_s22_liora_execution_emp:
     "Liora looks into the lens. Not at Marcus. Not at the executioner. Into the broadcast — at the people on the other side of every screen in the city."
 
     "She says a name."
-
-    athought "A name."
 
     athought "Not her own. Not a plea. Not a defiance."
 
@@ -489,7 +491,7 @@ label a3_s22_liora_execution_emp:
 
     athought "My mother."
 
-    athought "She kept the names. She kept the stories. She kept the pause alive in the handwriting that shaped mine."
+    athought "She kept the names. She kept the pause alive in the handwriting that shaped mine."
 
     athought "And I never knew her."
 
@@ -501,7 +503,7 @@ label a3_s22_liora_execution_emp:
 
     athought "I'm going to carry this as a name on the list."
 
-    athought "The way she taught me to."
+    athought "The way she taught me."
 
     "The Echelon seal glows in the war room."
 
