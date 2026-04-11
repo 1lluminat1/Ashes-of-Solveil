@@ -272,8 +272,13 @@ label a1_s11_hill_flashback:
     athought "Tonight, on the balcony, we almost did."
 
     # ========= TRANSITION =========
+    # The hill recedes. The body remembers what the Aeries did with it.
+    # Smash-cut forward — no narration of the intervening years, no
+    # re-dramatizing the branding. The next frame is work.
 
-    athought "Then the day came—two years later, we both turned twelve—and everything changed."
+    athought "The grass is still bending, somewhere."
+
+    athought "The rest of me is here."
 
     $ scene_mark(_current_scene_id, "completed")
 
@@ -291,4 +296,4 @@ label a1_s11_hill_flashback:
 # cann.thematic_flags: Crystal/Sharp / Promise / Wind (breath) / Silence vs Noise.
 # cann.block_status: ANCHOR plate; feeds Branding flashback and Balcony callbacks.
 # cann.visual_plate_economy: One exterior plate; B-roll inserts (hands/grass) reusable for future flashbacks.
-# cann.requires_followup: Next memory: Branding at 12 (Tier Hall); echo the "don't forget me" line's inversion.
+# cann.requires_followup: Feeds Balcony callbacks (Act 1 s07) and later Lyra/Aeron resonance beats. Branding itself is established by a1_s01 (opening) and dialogue in a1_s09 (Inspection Day); this scene does not need to re-dramatize it.

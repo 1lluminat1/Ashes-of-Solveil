@@ -16,7 +16,6 @@ label start:
     call a1_s09_inspection_day
     call a1_s10_barracks_morning
     call a1_s11_hill_flashback
-    call a1_s12_ritual_flashback
     call a1_s13_demonstration_floor
     call a1_s14_brothers_rooftop
     call a1_s15_archive_of_merit
