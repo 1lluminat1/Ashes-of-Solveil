@@ -238,7 +238,15 @@ label a4_s08_zira_exit_plan_emp:
 
     z "Carry the letter. Do not read it."
 
-    a "Okay."
+    menu:
+        "I've never carried something unread. The not-reading is how I trust you.":
+            $ rel_bump("Zira", trust=1, affection=1)
+            z "(quiet) ...Good answer."
+        "How do I carry something without knowing what it says?":
+            $ rel_bump("Zira", trust=1)
+            z "The same way you carried my chip for six months before you activated it. You just hold it."
+        "Okay.":
+            pass
 
     # ========== PHASE 4 — THE EDGE ==========
 

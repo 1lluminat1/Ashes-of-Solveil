@@ -201,11 +201,16 @@ label a4_s04_lyra_unbuckled_emp:
 
     l "Help me put it back on."
 
-    a "You can do it yourself."
-
-    l "I know."
-
-    a "Okay."
+    menu:
+        "You don't need me for this. But I want to.":
+            $ rel_bump("Lyra", affection=1)
+            l "(breath catches) ...Then be slow about it."
+        "You can do it yourself.":
+            l "I know."
+            a "Okay."
+        "The first time should mean something.":
+            $ rel_bump("Lyra", trust=1)
+            l "It already does."
 
     "He kneels at the side of the desk. Not so much to her as to the height of her wrist. The kneeling is not deference — it is the simplest way to see what his hands are doing."
 

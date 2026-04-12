@@ -322,9 +322,15 @@ label a3_s04_shared_ground_emp:
 
     sel "(quietly) Fourteen seconds. You were right."
 
-    a "I'm good at counting."
-
-    sel "You're good at more than counting."
+    menu:
+        "You taught me how to see the window.":
+            $ rel_bump("Selene", trust=1)
+            sel "(small nod) I taught you the window. You chose to step through it."
+        "We got it right together.":
+            $ rel_bump("Selene", affection=1)
+            sel "We did."
+        "I'm good at counting.":
+            sel "You're good at more than counting."
 
     athought "The fog is burning off. The city is waking up."
     athought "Somewhere in the Aeries, an Echelon logistics officer is about to have a very bad morning."

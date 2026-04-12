@@ -399,7 +399,15 @@ label a4_s10_what_selene_meant_emp:
 
     sel "That is everything I had."
 
-    a "Okay."
+    menu:
+        "I hear Kael in the silence. I'm going to honor that.":
+            $ rel_bump("Selene", trust=1, affection=1)
+            sel "(her eyes shine briefly) He would have liked hearing you say that."
+        "How do I share the question without losing myself inside it?":
+            $ rel_bump("Selene", trust=1)
+            sel "You don't. You lose yourself inside it. Then someone who loves you helps you find the pieces."
+        "Okay.":
+            pass
 
     sel "We can leave the room now."
 

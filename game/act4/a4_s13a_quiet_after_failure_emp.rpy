@@ -287,15 +287,26 @@ label a4_s13a_quiet_after_failure_emp:
 
     "He heard the instruction. He is going to honor it."
 
-    athought "She said do not respond."
+    # --- PLAYER CHOICE: how to honor (or not) her "do not respond" ---
+    menu:
+        athought "She said do not respond. That is an instruction."
 
-    athought "She said it specifically. She did not say 'you do not have to respond.' She did not say 'take your time.' She said do not. That is an instruction. She is asking me to hold the data on the floor without picking it up, because picking it up would change its shape, and she needs the data to stay in the shape she put it in."
+        "Honor it. Be exactly as still as she is.":
+            $ rel_bump("Noelle", trust=2)
+            athought "The honest move is to be exactly as still as she is. I am going to hold the data on the floor by not picking it up."
 
-    athought "I am going to hold it on the floor."
+        "Say nothing — but sit down on the floor opposite her.":
+            $ rel_bump("Noelle", trust=1, affection=1)
+            "He does not say a word. He sits down on the floor on his side of the door. The wall between them stays."
+            athought "I did not respond. I arrived. Those are not the same thing and she will know the difference."
 
-    athought "I am going to hold it on the floor by not saying the sentence she did not ask me to say, and also by not saying any of the sentences that are adjacent to the one she did not ask me to say, and also by not performing the refusal of the sentences by being visibly heroic about not saying them."
-
-    athought "The honest move is to be exactly as still as she is."
+        "Break the instruction. Say it back.":
+            $ rel_bump("Noelle", affection=2)
+            a "I love you."
+            n "(sharp breath) I said do not."
+            a "I know."
+            n "(very quietly) ...Thank you for not listening."
+            athought "She needed the instruction to be real. She also needed it to be breakable. I chose the breakable."
 
     athought "I can be still. I have been sitting in this room for three hours and forty minutes. Stillness is the one thing I have in reserve right now."
 

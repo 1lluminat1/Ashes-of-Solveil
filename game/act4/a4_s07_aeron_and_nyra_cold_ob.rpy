@@ -298,15 +298,24 @@ label a4_s07_aeron_and_nyra_cold_ob:
 
     athought "She is not offering to replace my mother. She is offering the opposite. She is offering to be the thing my mother was not, and to be it at the price of never being anything warmer."
 
-    athought "I could refuse this. I could step back and her hand would fall and we would both pretend the last thirty seconds did not happen. She would let me pretend."
+    # --- PLAYER CHOICE: Nyra's witness offer ---
+    menu:
+        athought "I could refuse this. Step back. Her hand would fall. We would pretend."
 
-    athought "I am not going to step back."
-
-    "He does not step back."
-
-    "He looks down at her hand on his chest. He does not lift his own hand to cover it. He does not return the touch. He accepts it without reciprocating it."
-
-    a "I know."
+        "Accept the witness. Stay.":
+            $ rel_bump("Nyra", trust=1)
+            "He does not step back. He does not lift his own hand to cover hers. He accepts it without reciprocating."
+            a "I know."
+        "Accept — and cover her hand with his.":
+            $ rel_bump("Nyra", trust=1, affection=1)
+            "He does not step back. He lifts his right hand and sets it flat on top of hers. Not gripping. Laying."
+            a "I know."
+            nythought "He is reciprocating. That is not what I offered. It is more than I offered. I am going to let it stay."
+        "Step back.":
+            $ rel_bump("Nyra", trust=-1)
+            "He takes one step back. Her hand falls. The air between them cools by exactly the amount the hand was warming."
+            a "Not tonight."
+            ny "(voice flat) The offer does not repeat."
 
     "Two syllables. Low. Flat. He means all three things the sentence can mean: I know she is here. I know what she is offering. I know what I am becoming by accepting it."
 

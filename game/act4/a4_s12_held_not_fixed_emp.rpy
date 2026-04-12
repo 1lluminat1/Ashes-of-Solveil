@@ -229,7 +229,18 @@ label a4_s12_held_not_fixed_emp:
 
     athought "Her palm is warm and it is on the bone, not on the heart, which is what a medic does, and it is also not doing what a medic does, because the stillness of it is a stillness I have not felt from her hand in three weeks of the way she has been checking in on me."
 
-    athought "I know this touch. I do not have a file for it yet."
+    menu:
+        athought "Her hand on my sternum. Not diagnostic. Not clinical. Something I don't have a file for."
+
+        "Being held by someone who knows how I'm broken — that's everything.":
+            $ rel_bump("Tessa", affection=1, trust=1)
+            athought "I did not say it out loud. But the way my breathing changed under her palm said it for me."
+        "I'm not asking you to fix this. Just stay.":
+            $ rel_bump("Tessa", trust=1)
+            athought "The asking and the staying are the same sentence tonight."
+        "This is the only kind of healing that works.":
+            $ rel_bump("Tessa", affection=1)
+            athought "The kind that doesn't pretend the breaking goes away."
 
     tthought "His sternum is warm under my hand. His heart is going faster than I would expect given the way his shoulders read. That is not a diagnostic — I am not charting this. That is a fact I am noticing because the fact is close to the surface of my attention. He is wired tight and he is not going to come down by morning and I am not going to fix the wired-tight."
 

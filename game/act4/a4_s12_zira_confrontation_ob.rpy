@@ -271,9 +271,18 @@ label a4_s12_zira_confrontation_ob:
 
     "The corridor ventilation cycles. Two techs pass at the far end. Neither looks at them."
 
-    a "You are not nothing."
+    menu:
+        z "I am asking you not to make me feel like I am nothing."
 
-    z "Make me feel it, then."
+        "You are not nothing.":
+            $ rel_bump("Zira", trust=1)
+            z "Make me feel it, then."
+        "I don't know how to make you feel anything right now.":
+            $ rel_bump("Zira", conflict=1)
+            z "Then learn. You owe me that."
+        "What would 'not nothing' look like for you?":
+            $ rel_bump("Zira", trust=1, affection=1)
+            z "(pauses) ...It would look like you showing up tonight without me having to ask."
 
     "She walks past him."
 
