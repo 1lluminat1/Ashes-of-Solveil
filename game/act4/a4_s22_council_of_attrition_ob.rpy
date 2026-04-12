@@ -383,13 +383,20 @@ label a4_s22_council_of_attrition_ob:
 
     athought "She knows. Not about the letter. Nyra does not know about the letter. She knows about the mother. She knows the council that authorized an assassination is the kind of council a man calls on a morning when his mother's ghost is already loud. She is pointing at the loudness."
 
-    a "Liora is not on the target list."
+    menu:
+        ny "You did not say Liora's name in the council."
 
-    ny "I know."
-
-    a "Then there was no reason to say her name."
-
-    ny "I know. I am saying it now because you did not. Someone in this room had to say it once this morning. Now it has been said."
+        "She is not on the target list.":
+            ny "I know."
+            a "Then there was no reason."
+            ny "I am saying it now because you did not. Someone in this room had to say it once this morning."
+        "I couldn't.":
+            $ rel_bump("Nyra", trust=1)
+            ny "(a beat) That is the most honest sentence you have given me in a week."
+            ny "Now it has been said. You do not have to carry the saying."
+        "Say it for me. I need someone to.":
+            $ rel_bump("Nyra", affection=1)
+            ny "Liora. Your mother's name is Liora. It is in the air now. The council has it even though you could not give it."
 
     "She does not wait for an answer. She turns and walks to the door. The pressure seal cycles. She is gone."
 

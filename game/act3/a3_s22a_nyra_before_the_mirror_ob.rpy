@@ -77,11 +77,17 @@ label a3_s22a_nyra_before_the_mirror_ob:
 
     "The room shifts. Not physically. The air between them tightens."
 
-    a "I know."
-
-    athought "I know. I chose it because it works. The fact that it works because my father designed it does not make it less effective."
-
-    athought "Nyra is looking at me the way she looks at a soldier who has passed a test she was not sure she wanted him to pass."
+    menu:
+        "I know. I chose it because it works.":
+            $ rel_bump("Nyra", trust=1)
+            athought "The fact that it works because my father designed it does not make it less effective."
+        "I didn't realize until I saw it mapped.":
+            $ rel_bump("Nyra", affection=1)
+            athought "That is a lie. I knew. Saying I didn't gives her something to teach me about."
+            ny "(slight tilt) Then you learned it without being taught. That is more interesting."
+        "Does it matter whose pattern it was?":
+            athought "The question is genuine. I do not know if it matters."
+            ny "It matters to the people who survived it. It does not matter to the people who did not."
 
     ny "You knew."
 

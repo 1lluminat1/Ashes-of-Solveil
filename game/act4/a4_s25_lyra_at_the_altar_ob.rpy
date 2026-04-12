@@ -329,6 +329,21 @@ label a4_s25_lyra_at_the_altar_ob:
 
     l "My devotion means that if I cannot stop you, I can take the counting."
 
+    # --- PLAYER CHOICE: How Aeron receives the counting ---
+    menu:
+        "The alcove holds the sentence."
+
+        "(Kneel in front of her.)":
+            $ rel_bump("Lyra", trust=1, affection=1)
+            "He kneels. Not deference. The only way to put his forehead against her knees. She does not flinch."
+        "(Stay standing. Accept it silently.)":
+            $ rel_bump("Lyra", trust=1)
+            "He does not move. The acceptance is in the not-moving."
+        "(Turn and walk out.)":
+            $ rel_bump("Lyra", conflict=1)
+            "He turns. He walks. The alcove light falls off his back. Lyra does not call after him."
+            athought "I cannot watch her carry what I made. Not tonight."
+
     # ========== PHASE 8 -- THE STATEMENT LANDS ==========
 
     "The alcove holds the sentence."

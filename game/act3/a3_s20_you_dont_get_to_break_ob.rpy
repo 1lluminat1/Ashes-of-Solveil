@@ -162,23 +162,35 @@ label a3_s20_you_dont_get_to_break_ob:
 
     athought "She's right."
 
-    athought "I don't say that."
+    # --- PLAYER CHOICE: This is the "do you let the human reflex win" moment ---
+    menu:
+        athought "I should say she's right. The sentence is in my throat."
 
-    athought "I should say that."
+        "You're right.":
+            $ choice_and_dev(_current_scene_id, "zira_youre_right", "EMP", factor=2,
+                note="OB Aeron admits Zira is right — rare human moment on the dark path.")
+            $ rel_bump("Zira", trust=2)
+            $ canon_set("ob.aeron.admitted_to_zira", True)
+            "The silence holds. Zira's eyes widen a fraction."
+            z "...Say that again."
+            a "You're right. I'm drifting."
+            z "(quiet) That's the first honest sentence you've given me in three weeks."
 
-    athought "I don't."
+        "Your concerns are noted.":
+            $ choice_and_dev(_current_scene_id, "zira_concerns_noted", "OB", factor=1,
+                note="Command reflex wins. The human sentence dies in his throat.")
+            "The silence holds. Zira watches him. Waiting for the response that would cost him nothing and mean everything."
+            "He doesn't give it."
+            "It's the wrong sentence. He knows it as he's saying it."
+            z "Yeah. Noted."
+            "Zira's jaw sets. Not surprise. Not even disappointment. Recognition."
 
-    "The silence holds. Zira watches him. Waiting for the response that would cost him nothing and mean everything."
-
-    "He doesn't give it."
-
-    a "Your concerns are noted."
-
-    "It's the wrong sentence. He knows it as he's saying it. The command reflex fires before the human one can catch up."
-
-    "Zira's jaw sets. Not surprise. Not even disappointment. Recognition."
-
-    z "Yeah. Noted."
+        "I hear you. I don't know what to do with it yet.":
+            $ choice_and_dev(_current_scene_id, "zira_hear_you", "EMP", factor=1,
+                note="Honest middle — not denial, not full admission.")
+            $ rel_bump("Zira", trust=1)
+            z "That's better than 'noted.'"
+            z "It's not enough. But it's better."
 
     # ========== THE EXIT ==========
 

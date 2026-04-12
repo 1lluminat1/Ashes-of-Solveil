@@ -195,11 +195,25 @@ label a3_s20_the_story_keeper_emp:
 
     "He takes his hands off the terminal. Straightens."
 
-    a "Can we reach her?"
+    menu:
+        athought "She's alive. She's out there. The courier network can reach her."
 
-    z "Through the courier network. It would take time — the Outlands relays are slow. But yes."
-
-    a "Do it."
+        "Find her. Whatever it takes.":
+            $ choice_and_dev(_current_scene_id, "liora_find_immediately", "EMP", factor=1,
+                note="Urgency — the personal need overrides operational caution.")
+            a "Find her. Whatever it takes."
+            z "Through the courier network. The Outlands relays are slow. But yes."
+            $ rel_bump("Zira", trust=1)
+        "Secure the network first. Then reach out.":
+            $ record_choice_once(_current_scene_id, "liora_secure_first")
+            a "Can we reach her without compromising the network?"
+            z "Through the courier network. Carefully. It would take longer."
+            a "Take longer."
+        "Does she want to be found?":
+            $ rel_bump("Zira", affection=1)
+            z "(quiet) ...That's the question I was afraid you wouldn't ask."
+            z "I don't know. The courier mark says she's still active. It doesn't say she wants to come in."
+            a "Reach out. But let her choose."
 
     "Zira nods. No argument. No clarification needed."
 

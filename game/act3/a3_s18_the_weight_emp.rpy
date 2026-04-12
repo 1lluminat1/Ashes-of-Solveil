@@ -173,9 +173,17 @@ label a3_s18_the_weight_emp:
 
     sel "And the day I forget what it costs is the day I become Marcus Rylan."
 
-    athought "There it is."
+    menu:
+        athought "There it is. The fear underneath the command weight."
 
-    athought "The weight she's been carrying underneath the command weight. Not the burden of leadership — the fear that leadership is turning her into the thing she's fighting against."
+        "(Stay silent. This is their moment, not yours.)":
+            athought "The weight she's carrying is the fear that leadership is turning her into Marcus. Tessa sees it. I do not need to be in this."
+        "(Step into the doorway so they know you heard.)":
+            $ rel_bump("Selene", trust=1)
+            $ rel_bump("Tessa", trust=1)
+            athought "I am not going to hide the fact that I heard. They deserve to know I was listening."
+        "(Leave before they see you.)":
+            athought "This conversation is not for me. The fact that I heard it is a weight I will carry alone."
 
     # ========== PHASE 4 — THE PIVOT ==========
 

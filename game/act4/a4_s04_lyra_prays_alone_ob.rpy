@@ -334,9 +334,19 @@ label a4_s04_lyra_prays_alone_ob:
 
     "Three words. Quiet. Without emphasis. The statement of a position, not a feeling."
 
-    "Aeron does not turn to her either. His hand does not tighten on hers. He speaks once. Also quiet. Also without emphasis."
+    menu:
+        "Aeron does not turn to her. His hand stays in hers."
 
-    a "I know."
+        "I know.":
+            "Two words. The matching quiet."
+        "Stay.":
+            $ rel_bump("Lyra", affection=1)
+            "One word. It is not a command. It is a request from the man's tense."
+            lthought "He used the tense again. The one that costs him."
+        "(Tighten his hand on hers, say nothing.)":
+            $ rel_bump("Lyra", trust=1)
+            "His fingers close a fraction. Not gripping. Acknowledging."
+            lthought "He answered without speaking. The pressure is the sentence."
 
     "That is all. The two sentences sit in the alcove together. They do not arrange themselves into a dialogue. They are two pieces of acknowledgment from two people who are kneeling next to each other and do not fully know whether they are kneeling for the same thing."
 

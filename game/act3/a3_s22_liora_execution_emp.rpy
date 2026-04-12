@@ -481,9 +481,20 @@ label a3_s22_liora_execution_emp:
 
     athought "It's a son against his father."
 
-    athought "It was always that. Now it's official."
+    menu:
+        athought "It was always that. Now she's asking me to make it official."
 
-    a "Log it."
+        "Log it.":
+            $ canon_set("marcus_personal_enemy", True)
+            athought "Now it's official."
+        "Marcus Rylan is not the enemy. Echelon is the enemy. He is the man who made Echelon personal.":
+            $ canon_set("marcus_personal_enemy", True)
+            $ rel_bump("Selene", trust=1)
+            sel "(quiet) ...That distinction matters. Logged with that framing."
+        "Not yet. When we can say it to his face.":
+            $ record_choice_once(_current_scene_id, "marcus_deferred")
+            sel "I'll hold the entry open."
+            athought "The designation will happen. Not in a room she is not in."
 
     sel "Logged."
 

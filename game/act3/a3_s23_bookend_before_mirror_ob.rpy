@@ -97,13 +97,19 @@ label a3_s23_bookend_before_mirror_ob:
 
     z "Ghostline traffic is stable. No anomalies."
 
-    a "Anything from the Outlands relays?"
+    menu:
+        "Anything from the Outlands relays?":
+            z "Nothing new."
+        "How are you?":
+            $ rel_bump("Zira", affection=1)
+            z "(pause) ...That's not an operational question."
+            a "I know."
+            z "I'm here. That's the answer I have."
+        "You're quieter than usual.":
+            $ rel_bump("Zira", trust=1)
+            z "Three words is all the room needs from me tonight."
 
-    z "Nothing new."
-
-    "Three words. She used to give him paragraphs. Context. Analysis. The nervous energy of someone who thinks in networks and can't stop mapping."
-
-    "Three words."
+    "She used to give him paragraphs. Context. Analysis. The nervous energy of someone who thinks in networks and can't stop mapping."
 
     # --- NOELLE ---
 
