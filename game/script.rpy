@@ -81,6 +81,7 @@ label start:
     # EMP is the default; OB requires a committed obedience score.
     if pass_ob():
         # ----- ACT 3 OBSIDIAN PATH -----
+        # Phase I: Consolidation (s01–s11)
         call a3_s01_ashes_in_formation_ob
         call a3_s02_stay_with_me_ob
         call a3_s02a_silent_table_ob
@@ -92,23 +93,30 @@ label start:
         call a3_s09_echelon_interlude_3_ob
         call a3_s10_tessa_friction_ob
         call a3_s11_counter_strike_ob
+        # Phase II: Relationships Under Strain (s12–s17, locked order)
         call a3_s12_the_oath_ob
         call a3_s13_proof_of_life_ob
         call a3_s14_noelle_calculus_ob
         call a3_s15_chain_of_two_ob
         call a3_s16_data_and_doubt_ob
         call a3_s17_count_the_cost_ob
+        # Phase III: Mirror & Rejection — interstitial LI beats woven in
         call a3_s18_field_sync_ob
         call a3_s19_the_weight_ob
+        call a3_s19b_zira_before_the_weight_ob      # NEW interstitial
         call a3_s19a_the_letter_ob
         call a3_s20_you_dont_get_to_break_ob
+        call a3_s20a_lyra_prays_for_the_hunt_ob     # NEW interstitial
         call a3_s21_the_story_keeper_ob
         call a3_s22_the_hunt_ob
+        call a3_s22a_nyra_before_the_mirror_ob      # NEW interstitial
         call a3_s23_bookend_before_mirror_ob
+        call a3_s23a_noelle_before_liora_ob         # NEW interstitial
         call a3_s24_liora_ob
         call a3_s25_aftermath_ob
     else:
         # ----- ACT 3 EMPATHY PATH -----
+        # Phase I: Proving Ground (s01–s10)
         call a3_s01_back_from_edge_emp
         call a3_s03_breath_of_faith_emp
         call a3_s04_shared_ground_emp
@@ -120,19 +128,27 @@ label start:
         call a3_s08_the_unmeasurable_emp
         call a3_s09_echelon_interlude_3_emp
         call a3_s10_field_sync_emp
+        # Phase II: Deepening (s11–s17, Noelle + Zira + Lyra stay;
+        # Tessa + Selene moved to Phase III)
         call a3_s11_empirical_tenderness_emp
         call a3_s12_corridor_op_emp
-        call a3_s13_scar_and_steady_emp
+        # s13 (Tessa) MOVED to after s20
         call a3_s14_cipher_and_skin_emp
         call a3_s15_signal_under_fire_emp
-        call a3_s16_command_and_surrender_emp
+        # s16 (Selene) MOVED to after s19
         call a3_s17_faith_in_flaws_emp
+        # Phase III: Revelation & Cost — intimate beats interleaved
         call a3_s18_the_weight_emp
         call a3_s18a_the_letter_emp
+        call a3_s18b_zira_the_relay_emp             # NEW interstitial
         call a3_s19_noelle_revelation_emp
+        call a3_s16_command_and_surrender_emp        # MOVED Selene erotic
         call a3_s20_the_story_keeper_emp
+        call a3_s13_scar_and_steady_emp             # MOVED Tessa erotic
+        call a3_s20a_lyra_archive_emp               # NEW interstitial
         call a3_s21_bookend_before_storm_emp
         call a3_s22_liora_execution_emp
+        call a3_s22a_tessa_after_liora_emp          # NEW interstitial
         call a3_s23_aftermath_emp
     # Act 3 interludes (a3_int_*) are called conditionally from
     # within their parent scenes, not from the main flow.
@@ -142,6 +158,7 @@ label start:
     # Hard EMP/OB split continues. Path is locked by end of Act 3.
     if pass_ob():
         # ----- ACT 4 OBSIDIAN PATH — Violence Normalized -----
+        # Phase I: regime consolidation
         call a4_s01_the_cold_room_ob
         call a4_s02_the_new_shape_ob
         call a4_s03_marcus_adapts_ob
@@ -149,6 +166,7 @@ label start:
         call a4_s05_zira_cannot_leave_ob
         call a4_s06_tessa_at_the_board_ob
         call a4_s07_aeron_and_nyra_cold_ob
+        # Phase II: normalization + dark intimacy
         call a4_s08_echelon_interlude_4_ob
         call a4_s09_sector_12_sweep_ob
         call a4_s10_noelle_doctrine_ob
@@ -156,12 +174,15 @@ label start:
         call a4_s12_zira_confrontation_ob
         call a4_s13_zira_deepening_erotic_ob
         call a4_s14_lyra_sanctifying_violence_ob
+        call a4_s14a_oath_and_flower_ob             # NEW poly: Nyra + Zira + Aeron
         call a4_s15_lyra_deepening_erotic_ob
         call a4_s16_tessa_fracture_point_ob
         call a4_s17_tessa_conditional_beat_ob
+        # Phase III: Rhea + the letter + the turn
         call a4_s18_rhea_arrives_ob
         call a4_s19_tessa_the_trainee_ob
         call a4_s20_noelle_deepening_erotic_ob
+        call a4_s20a_doctrine_and_weapon_ob         # NEW poly: Nyra + Noelle + Aeron
         call a4_s21_the_letter_ob
         call a4_s22_council_of_attrition_ob
         call a4_s23_aeron_alone_ob
@@ -170,6 +191,7 @@ label start:
         call a4_s26_act_four_close_ob
     else:
         # ----- ACT 4 EMPATHY PATH — Shared Authority -----
+        # Phase I: learning to lead
         call a4_s01_morning_after_broadcast_emp
         call a4_s02_first_cracks_emp
         call a4_s03_marcus_adapts_emp
@@ -177,6 +199,7 @@ label start:
         call a4_s05_delegation_test_emp
         call a4_s05a_you_are_not_a_machine_emp
         call a4_s06_tessa_counts_different_emp
+        # Phase II: the weight of shared command
         call a4_s07_echelon_interlude_4_emp
         call a4_s08_zira_exit_plan_emp
         call a4_s09_noelle_implicated_emp
@@ -189,13 +212,17 @@ label start:
         call a4_s12a_she_is_not_just_tactical_emp
         call a4_s13_protecting_exhaustion_emp
         call a4_s13a_quiet_after_failure_emp
+        # Phase III: climax — individual deepenings + poly beats
         call a4_s14_return_to_the_table_emp
+        call a4_s14a_familiar_ground_emp            # NEW poly: Lyra + Zira + Aeron
         call a4_s15_zira_deepening_erotic_emp
         call a4_s16_rhea_strikes_emp
+        call a4_s16a_door_and_data_emp              # NEW poly: Zira + Noelle + Aeron
         call a4_s17_selene_deepening_erotic_emp
         call a4_s18_noelle_deepening_erotic_emp
         call a4_s19_lyra_deepening_erotic_emp
         call a4_s20_tessa_deepening_erotic_emp
+        call a4_s20a_command_and_the_door_emp       # NEW poly: Selene + Zira + Aeron
         call a4_s21_marcus_second_cut_emp
         call a4_s22_act_four_close_emp
     # ========= END ACT 4 =========

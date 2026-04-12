@@ -260,6 +260,12 @@ label a2_s23_mercy_and_counting:
 
     "Nobody needs to."
 
+    # Callback seed: this line returns in a4_s11_mercy_call_costs_emp (Lyra)
+    # and a4_s22_act_four_close_emp (Aeron internalizes it as a mantra).
+    athought "Mercy is a decision made today. The cost is paid tomorrow."
+
+    athought "I paid it tonight."
+
     # ========== STATE UPDATES ==========
 
     $ npc_remember("Tessa", "mercy_death_torin", tone="broken_but_standing")

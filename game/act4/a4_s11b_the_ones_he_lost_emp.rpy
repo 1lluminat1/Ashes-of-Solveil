@@ -95,6 +95,9 @@ label a4_s11b_the_ones_he_lost_emp:
 
     athought "I am starting at the top because the top is where I have to start. If I start in the middle I am choosing. I am not going to choose. The list is the list."
 
+    # Callback: a1_s23_the_sweep / a1_s08_bedroom — "Operation 391"
+    athought "The Academy's counter stopped at 391. This list is six times that. The Academy's counter does not have enough digits for this ledger."
+
     "He scrolls to the first name."
 
     "He drinks his coffee. He sets the cup down. He looks at the screen."

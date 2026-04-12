@@ -122,6 +122,14 @@ label a4_s14_return_to_the_table_emp:
 
     athought "That is a thing I am going to have to hold in my sternum for the next several minutes without letting it become either a relief or a wound."
 
+    # Callback: Joran Tev (a4_s05a medbay patient) — alive, recovering
+    "Someone is walking the corridor in the opposite direction. Joran Tev. He is walking slowly — medwing-slow, the cadence Tessa's patients learn when she clears them for corridor privileges. He sees Aeron. He nods once. That is all."
+
+    athought "He's upright. She kept him upright."
+
+    # Callback: a1_s14_brothers_rooftop — Kael's voice: "person first, not a tool"
+    athought "Kael said that once. On the rooftop. Person first, not a tool. I hear it differently now."
+
     "He is almost at the ops wing door."
 
     "He stops for a beat. Not a stop — a hesitation, the half-second length. The length of a man making a decision he has already made and confirming to himself that he has made it."

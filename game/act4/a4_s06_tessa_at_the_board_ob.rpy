@@ -51,10 +51,11 @@ label a4_s06_tessa_at_the_board_ob:
     #          decided the board should come with it. Two columns. Tessa's
     #          careful handwriting throughout.
     #          The header of the left column: originally THE LIVING.
-    #          Over it, in a different marker -- black, thicker, a hand
-    #          that is not Tessa's -- the word OPERATIONAL has been written.
-    #          The original header is still visible underneath. The overwrite
-    #          does not erase. It layers.
+    #          Over it, on a strip of adhesive plastic -- black lettering,
+    #          a hand that is not Tessa's -- the word OPERATIONAL.
+    #          The strip peels at the edges. The original header is still
+    #          visible underneath at the margins. The overwrite does not
+    #          erase. It layers.
     # BLOCKING: Tessa enters the wing at the top of her shift. Stops six feet
     #           from the board. Does not approach closer. Stays there for the
     #           bulk of the scene. Does not sit. Does not set down her bag.

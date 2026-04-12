@@ -51,17 +51,18 @@ label a3_s13_scar_and_steady_emp:
 
     # --- VISUAL SETUP ---
     # [INT. PHOENIX BASE - MEDBAY - NIGHT]
-    # After the corridor operation. The medbay is empty except for them.
-    # Everyone else has been treated and released.
+    # After the story-keeper revelation (s20) — Aeron has learned his
+    # mother is alive. He's been carrying accumulated wounds from ops
+    # for days. Tessa catches him.
 
     #scene bg_medbay_emp_night with dissolve
     #play ambient "sfx/ambient/medbay_quiet_night.ogg" fadein 2.0
 
     # ========== PHASE 1 — THE TREATMENT ==========
 
-    "The medbay is empty. Everyone else has been treated — fourteen minor injuries from the corridor operation, all resolved, all released."
+    "The medbay is empty. It has been empty for hours. The base is still processing the story-keeper revelation — everyone is either at the mapping station or trying to sleep."
 
-    "Aeron is the last."
+    "Aeron is neither. Aeron is in the medbay because Tessa saw the blood on his sleeve during the briefing and said nothing until the room cleared."
 
     t "Sit."
 

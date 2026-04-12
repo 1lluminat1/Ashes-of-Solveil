@@ -84,6 +84,9 @@ label a3_s24_liora_ob:
 
     athought "Operations. Briefings. Patrol rotations. Normal. The machine ran."
 
+    # Callback: a3_s19a_the_letter_ob — Aeron has been carrying the letter
+    athought "The letter is still in my jacket. I have not re-read it since the drop box. I don't need to. The sentence in the middle has been playing in my skull for nine days."
+
     athought "And underneath the machine, the sentence I can't stop turning over."
 
     athought "'She kept the names of strangers. She didn't keep mine.'"

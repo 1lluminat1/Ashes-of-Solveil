@@ -48,19 +48,20 @@ label a3_s16_command_and_surrender_emp:
 
     # --- VISUAL SETUP ---
     # [INT. PHOENIX BASE - CORRIDOR / SELENE'S QUARTERS - NIGHT]
-    # Post-operation. The corridor is quiet. Most of the base is asleep.
-    # Selene is walking back from the debrief. Aeron intercepts.
+    # After Noelle's revelation (s19) — the Purge data is confirmed.
+    # Marcus's signature is on the kill order. The corridor is quiet.
+    # Selene is walking back from processing the data. Aeron intercepts.
 
     #scene bg_corridor_night_emp with dissolve
     #play ambient "sfx/ambient/base_night_corridor.ogg" fadein 2.0
 
-    # ========== PHASE 1 — POST-OP ==========
+    # ========== PHASE 1 — POST-REVELATION ==========
 
-    "The debrief ended ten minutes ago. Clean operation — the Sector 11 supply node is disabled, the team extracted without casualties."
+    "Noelle's data finished processing an hour ago. The Purge authorization chain is confirmed — every signature, every relay, every order that moved the machine."
 
-    "The report should feel like a win."
+    "The briefing room is empty now. Everyone has left to absorb what they learned."
 
-    athought "It doesn't."
+    athought "Selene is the last to leave. She always is."
 
     "Selene is walking the corridor toward her quarters. Her stride is measured. Controlled. The same precision she applies to everything."
 

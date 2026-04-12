@@ -288,6 +288,14 @@ label a1_s24_confession_with_lyra:
         athought "Something shattered on the floor of my apartment."
         athought "And for the first time in ten years... I felt it all."
 
+    # --- CLOSING BEAT: the seed of the promise ---
+    # (Callback target: a4_s19_lyra_deepening_erotic_emp will ring this line
+    # when Aeron says "I will meet you anywhere.")
+
+    l "(barely audible) Wherever you end up... I'll find you."
+
+    athought "She said it like it cost her something. Like she meant it."
+
     # LIGHT SOCIAL STATE: vulnerability breeds trust
     $ rel_bump("Lyra", 1)
     $ scene_mark(_current_scene_id, "completed")

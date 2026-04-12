@@ -240,6 +240,13 @@ label a3_s21_bookend_before_storm_emp:
 
     athought "This is home."
 
+    # Callback: a1_s17_breaking_point (the balcony rail) + a1_s14 (Kael's rooftop)
+    athought "I remember the rail. How far down it felt. How close my hand came to letting go."
+
+    athought "Kael's rail. My rail. The same rail, fifteen years apart."
+
+    athought "I was twelve in the Tier Hall when the Band rejected me. I am standing in a room full of people who did not."
+
     "The common area settles into quiet. The lamp light holds."
 
     #stop music fadeout 5.0

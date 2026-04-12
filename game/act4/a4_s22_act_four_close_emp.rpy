@@ -338,6 +338,9 @@ label a4_s22_act_four_close_emp:
 
     athought "Every day this act I chose mercy and the choosing cost me things I do not know the full shape of yet and the cost is going to keep arriving for the rest of Act V and for the rest of my life."
 
+    # Callback: Zira's backward clock (a4_s15); Tier Hall age 12 (a1_s01/a1_s09)
+    athought "Zira has a clock on her bench that gives back one second per minute. She has been building it for eleven months and she does not know why. I know why. The clock is the shape of the thing we are all doing. We are giving back the time the Aeries took from us, one second at a time, and the giving back is slower than the taking was."
+
     athought "I am going to keep choosing it."
 
     athought "Not because it works. Because the shape of the person I am choosing to be is the shape of a person who chooses it."

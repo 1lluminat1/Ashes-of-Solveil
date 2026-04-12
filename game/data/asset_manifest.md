@@ -73,11 +73,12 @@ Stub placeholders exist for bg tags that lint would otherwise flag in `game/ui/s
 | `bg_aeron_quarters_day_empty` | 1 | 1 commented |
 | `bg_aeron_quarters_late_day` | 1 | 1 commented |
 | `bg_aeron_quarters_ob_latenight` | 1 | 1 commented |
-| `bg_aeron_quarters_ob_night` | 5 | 5 commented |
+| `bg_aeron_quarters_ob_night` | 7 | 7 commented |
 | `bg_aeron_quarters_ob_night_after` | 1 | 1 commented |
 | `bg_aeron_room_night` | 1 | 1 active |
 | `bg_altar_alcove_ob_predawn` | 1 | 1 commented |
 | `bg_analysis_alcove_emp` | 1 | 1 commented |
+| `bg_analysis_station_night_ob` | 1 | 1 commented |
 | `bg_apartment_afternoon` | 1 | 1 commented |
 | `bg_apartment_morning` | 1 | 1 commented |
 | `bg_apartment_morning_investigation` | 1 | 1 commented |
@@ -97,6 +98,7 @@ Stub placeholders exist for bg tags that lint would otherwise flag in `game/ui/s
 | `bg_bedroom_panright` | 1 | 1 commented |
 | `bg_branding_chamber_closeup` | 1 | 1 commented |
 | `bg_cipher_alcove_emp` | 1 | 1 commented |
+| `bg_cipher_alcove_night_late_emp` | 1 | 1 commented |
 | `bg_command_center_emp` | 1 | 1 commented |
 | `bg_command_post_noelle_board_emp` | 1 | 1 commented |
 | `bg_common_area_emp` | 1 | 1 commented |
@@ -121,6 +123,9 @@ Stub placeholders exist for bg tags that lint would otherwise flag in `game/ui/s
 | `bg_lyra_private_altar_emp` | 2 | 2 commented |
 | `bg_lyra_private_altar_emp_night` | 1 | 1 commented |
 | `bg_lyra_quarters_late_emp` | 1 | 1 commented |
+| `bg_lyra_quarters_predawn_ob` | 1 | 1 commented |
+| `bg_mapping_station_night_emp` | 1 | 1 commented |
+| `bg_mapping_station_night_late_emp` | 1 | 1 commented |
 | `bg_marcus_grey_room_morning` | 1 | 1 commented |
 | `bg_medbay_corridor_night` | 1 | 1 active |
 | `bg_medbay_emp` | 1 | 1 commented |
@@ -128,6 +133,7 @@ Stub placeholders exist for bg tags that lint would otherwise flag in `game/ui/s
 | `bg_medbay_main_aftercare_low` | 1 | 1 commented |
 | `bg_medbay_main_hold_wide` | 1 | 1 commented |
 | `bg_medbay_main_nightlow_emp` | 1 | 1 commented |
+| `bg_medbay_night_emp` | 1 | 1 commented |
 | `bg_medbay_night_low_light` | 1 | 1 commented |
 | `bg_medbay_ob` | 1 | 1 commented |
 | `bg_medbay_overnight_lamp_emp` | 1 | 1 commented |
@@ -143,6 +149,7 @@ Stub placeholders exist for bg tags that lint would otherwise flag in `game/ui/s
 | `bg_new_medwing_ob` | 1 | 1 commented |
 | `bg_noelle_workspace_data_crystal` | 1 | 1 commented |
 | `bg_noelle_workspace_night` | 1 | 1 commented |
+| `bg_noelle_workspace_overhead_full_emp` | 1 | 1 commented |
 | `bg_nyra_quarters_interior_ob` | 1 | 1 commented |
 | `bg_nyra_quarters_night_ob` | 1 | 1 commented |
 | `bg_nyra_quarters_ob_night` | 1 | 1 commented |
@@ -167,6 +174,7 @@ Stub placeholders exist for bg tags that lint would otherwise flag in `game/ui/s
 | `bg_phoenix_war_room_ob_morning` | 1 | 1 commented |
 | `bg_quarters_corridor_ob_night` | 1 | 1 commented |
 | `bg_rally_point_morning` | 1 | 1 commented |
+| `bg_relay_station_night_emp` | 1 | 1 commented |
 | `bg_rooftop_brothers_flashback` | 1 | 1 commented |
 | `bg_rooftop_evening` | 1 | 1 commented |
 | `bg_ruined_sector_rain` | 1 | 1 commented |
@@ -197,13 +205,14 @@ Stub placeholders exist for bg tags that lint would otherwise flag in `game/ui/s
 | `bg_tunnel_sector6_night` | 1 | 1 commented |
 | `bg_war_room_emp` | 8 | 8 commented |
 | `bg_war_room_night_emp` | 2 | 2 commented |
-| `bg_war_room_night_ob` | 1 | 1 commented |
+| `bg_war_room_night_ob` | 2 | 2 commented |
 | `bg_war_room_ob` | 6 | 6 commented |
 | `bg_war_room_ob_0900` | 1 | 1 commented |
 | `bg_war_room_ob_tactical` | 1 | 1 commented |
 | `bg_war_room_operational_morning` | 1 | 1 commented |
 | `bg_warroom_ob` | 1 | 1 commented |
 | `bg_workshop_alone_ob` | 1 | 1 commented |
+| `bg_workshop_night_ob` | 1 | 1 commented |
 | `bg_zira_alcove_after` | 2 | 2 active |
 | `bg_zira_alcove_night` | 4 | 4 active |
 | `bg_zira_station_evening_emp` | 1 | 1 commented |
@@ -240,6 +249,7 @@ Every `play music/sound/ambient` reference across the script, commented or activ
 | ⬜ `sfx/ambient/aeries_spire_hum.ogg` | ambient | 1 | 1 commented |
 | ⬜ `sfx/ambient/alcove_quiet_hum.ogg` | ambient | 1 | 1 commented |
 | ⬜ `sfx/ambient/alcove_three_candles.ogg` | ambient | 1 | 1 commented |
+| ⬜ `sfx/ambient/analysis_station_hum.ogg` | ambient | 1 | 1 commented |
 | ⬜ `sfx/ambient/balcony_wind_warm.ogg` | ambient | 1 | 1 commented |
 | ⬜ `sfx/ambient/base_activity_warm.ogg` | ambient | 2 | 2 commented |
 | ⬜ `sfx/ambient/base_aftermath_quiet.ogg` | ambient | 1 | 1 commented |
@@ -254,11 +264,13 @@ Every `play music/sound/ambient` reference across the script, commented or activ
 | ⬜ `sfx/ambient/base_loadout_distant.ogg` | ambient | 1 | 1 commented |
 | ⬜ `sfx/ambient/base_night_corridor.ogg` | ambient | 1 | 1 commented |
 | ⬜ `sfx/ambient/base_night_deep.ogg` | ambient | 1 | 1 commented |
+| ⬜ `sfx/ambient/base_night_late_mapping.ogg` | ambient | 1 | 1 commented |
 | ⬜ `sfx/ambient/base_night_quiet.ogg` | ambient | 3 | 3 commented |
 | ⬜ `sfx/ambient/base_pre_shift.ogg` | ambient | 1 | 1 commented |
 | ⬜ `sfx/ambient/base_predawn_generator.ogg` | ambient | 1 | 1 commented |
 | ⬜ `sfx/ambient/base_quiet_post_op.ogg` | ambient | 1 | 1 commented |
 | ⬜ `sfx/ambient/city_predawn_fog.ogg` | ambient | 1 | 1 commented |
+| ⬜ `sfx/ambient/command_wing_night_late.ogg` | ambient | 1 | 1 commented |
 | ⬜ `sfx/ambient/convoy_road_morning.ogg` | ambient | 1 | 1 commented |
 | ⬜ `sfx/ambient/corridor_dawn_cold.ogg` | ambient | 1 | 1 commented |
 | ⬜ `sfx/ambient/corridor_deep_night_distant_wind.ogg` | ambient | 1 | 1 commented |
@@ -278,10 +290,10 @@ Every `play music/sound/ambient` reference across the script, commented or activ
 | ⬜ `sfx/ambient/ghostline_static.ogg` | ambient | 2 | 2 commented |
 | ⬜ `sfx/ambient/grey_room_silence.ogg` | ambient | 1 | 1 commented |
 | ⬜ `sfx/ambient/industrial_corridor_combat.ogg` | ambient | 2 | 2 commented |
-| ⬜ `sfx/ambient/mapping_station_hum.ogg` | ambient | 6 | 6 commented |
+| ⬜ `sfx/ambient/mapping_station_hum.ogg` | ambient | 7 | 7 commented |
 | ⬜ `sfx/ambient/medbay_hold_low.ogg` | ambient | 1 | 1 commented |
 | ⬜ `sfx/ambient/medbay_hum.ogg` | ambient | 1 | 1 commented |
-| ⬜ `sfx/ambient/medbay_night_low.ogg` | ambient | 1 | 1 commented |
+| ⬜ `sfx/ambient/medbay_night_low.ogg` | ambient | 2 | 2 commented |
 | ⬜ `sfx/ambient/medbay_night_quiet.ogg` | ambient | 1 | 1 commented |
 | ⬜ `sfx/ambient/medbay_nightlow_vigil.ogg` | ambient | 1 | 1 commented |
 | ⬜ `sfx/ambient/medbay_quiet_night.ogg` | ambient | 2 | 2 commented |
@@ -307,12 +319,16 @@ Every `play music/sound/ambient` reference across the script, commented or activ
 | ⬜ `sfx/ambient/predawn_ravine_cold.ogg` | ambient | 1 | 1 commented |
 | ⬜ `sfx/ambient/quarters_cold_hum.ogg` | ambient | 5 | 5 commented |
 | ⬜ `sfx/ambient/quarters_deep_night.ogg` | ambient | 1 | 1 commented |
+| ⬜ `sfx/ambient/quarters_hum.ogg` | ambient | 1 | 1 commented |
 | ⬜ `sfx/ambient/quarters_latenight.ogg` | ambient | 1 | 1 commented |
 | ⬜ `sfx/ambient/quarters_minimal.ogg` | ambient | 1 | 1 commented |
+| ⬜ `sfx/ambient/quarters_night_cycle.ogg` | ambient | 1 | 1 commented |
+| ⬜ `sfx/ambient/quarters_night_datapad.ogg` | ambient | 1 | 1 commented |
 | ⬜ `sfx/ambient/quarters_old_building.ogg` | ambient | 2 | 2 commented |
 | ⬜ `sfx/ambient/quarters_quiet_low.ogg` | ambient | 1 | 1 commented |
 | ⬜ `sfx/ambient/quarters_quiet_warm.ogg` | ambient | 1 | 1 commented |
 | ⬜ `sfx/ambient/rain_heavy_urban.ogg` | ambient | 1 | 1 commented |
+| ⬜ `sfx/ambient/relay_station_hum.ogg` | ambient | 1 | 1 commented |
 | ⬜ `sfx/ambient/room_quiet_cold.ogg` | ambient | 1 | 1 active |
 | ⬜ `sfx/ambient/room_quiet_warm.ogg` | ambient | 2 | 2 active |
 | ⬜ `sfx/ambient/safe_house_neutral.ogg` | ambient | 1 | 1 commented |
@@ -333,14 +349,17 @@ Every `play music/sound/ambient` reference across the script, commented or activ
 | ⬜ `sfx/ambient/war_room_operational.ogg` | ambient | 2 | 2 commented |
 | ⬜ `sfx/ambient/war_room_ops.ogg` | ambient | 1 | 1 commented |
 | ⬜ `sfx/ambient/war_room_planning.ogg` | ambient | 3 | 3 commented |
+| ⬜ `sfx/ambient/war_room_post_op.ogg` | ambient | 1 | 1 commented |
 | ⬜ `sfx/ambient/war_room_quiet.ogg` | ambient | 2 | 2 commented |
 | ⬜ `sfx/ambient/warroom_hum.ogg` | ambient | 1 | 1 commented |
 | ⬜ `sfx/ambient/wind_tunnel_empty.ogg` | ambient | 1 | 1 commented |
 | ⬜ `sfx/ambient/wind_urban_quiet.ogg` | ambient | 2 | 2 commented |
 | ⬜ `sfx/ambient/workshop_forge_banked.ogg` | ambient | 2 | 2 commented |
 | ⬜ `sfx/ambient/workshop_generator_hum.ogg` | ambient | 1 | 1 commented |
+| ⬜ `sfx/ambient/workshop_hum.ogg` | ambient | 1 | 1 commented |
 | ⬜ `sfx/ambient/workshop_standby_hum.ogg` | ambient | 1 | 1 commented |
 | ⬜ `sfx/ambient/workspace_hum.ogg` | ambient | 2 | 2 commented |
+| ⬜ `sfx/ambient/workspace_overhead_hum.ogg` | ambient | 1 | 1 commented |
 | ⬜ `amb/tower_hum.ogg` | music | 1 | 1 commented |
 | ⬜ `music/home_theme_quiet.ogg` | music | 1 | 1 commented |
 | ⬜ `music/intimacy_lyra_tender.ogg` | music | 1 | 1 commented |
@@ -367,12 +386,15 @@ Every `play music/sound/ambient` reference across the script, commented or activ
 | ⬜ `sfx/comms_intercept_end.ogg` | sound | 1 | 1 commented |
 | ⬜ `sfx/comms_playback_start.ogg` | sound | 1 | 1 commented |
 | ⬜ `sfx/crossfire_burst.ogg` | sound | 1 | 1 commented |
+| ⬜ `sfx/desk_lamp_click_on.ogg` | sound | 1 | 1 commented |
 | ⬜ `sfx/door_bolt_interior_slow.ogg` | sound | 1 | 1 commented |
 | ⬜ `sfx/door_breach_clean.ogg` | sound | 1 | 1 commented |
 | ⬜ `sfx/door_hiss.ogg` | sound | 1 | 1 commented |
 | ⬜ `sfx/door_hiss_soft.ogg` | sound | 3 | 3 commented |
 | ⬜ `sfx/door_knock_precise.ogg` | sound | 1 | 1 commented |
 | ⬜ `sfx/door_knock_single.ogg` | sound | 2 | 2 commented |
+| ⬜ `sfx/door_reseal_soft.ogg` | sound | 2 | 2 commented |
+| ⬜ `sfx/door_unseal_quarters.ogg` | sound | 7 | 7 commented |
 | ⬜ `sfx/ghostline_voice_crackle.ogg` | sound | 1 | 1 commented |
 | ⬜ `sfx/gunfire_burst_distant.ogg` | sound | 1 | 1 commented |
 | ⬜ `sfx/heartbeat_low.ogg` | sound | 2 | 2 commented |
@@ -466,7 +488,7 @@ That inserts commented `# scene <scene_id>_NNN with dissolve` stubs at each clus
 | `a1_s21_zira_first_contact` | 101 | 0 | 0 | 0% | ⬜ not started |
 | `a1_s22_return_to_aeries` | 80 | 0 | 0 | 0% | ⬜ not started |
 | `a1_s23_the_sweep` | 155 | 0 | 0 | 0% | ⬜ not started |
-| `a1_s24_confession_with_lyra` | 116 | 0 | 0 | 0% | ⬜ not started |
+| `a1_s24_confession_with_lyra` | 118 | 0 | 0 | 0% | ⬜ not started |
 | `a1_s25_morning_after` | 184 | 0 | 0 | 0% | ⬜ not started |
 | `a1_s26_obsidian_bridge` | 136 | 0 | 0 | 0% | ⬜ not started |
 | `a1_s27_investigation` | 143 | 0 | 0 | 0% | ⬜ not started |
@@ -493,7 +515,7 @@ That inserts commented `# scene <scene_id>_NNN with dissolve` stubs at each clus
 | `a2_s20_doctrine_declaration` | 87 | 0 | 0 | 0% | ⬜ not started |
 | `a2_s21_command_temperature` | 109 | 0 | 0 | 0% | ⬜ not started |
 | `a2_s22_massive_recruitment` | 64 | 0 | 0 | 0% | ⬜ not started |
-| `a2_s23_mercy_and_counting` | 110 | 0 | 0 | 0% | ⬜ not started |
+| `a2_s23_mercy_and_counting` | 112 | 0 | 0 | 0% | ⬜ not started |
 | `a2_s24_echelon_interlude_2` | 21 | 0 | 0 | 0% | ⬜ not started |
 | `a2_s25_echelon_raid_defense` | 95 | 0 | 0 | 0% | ⬜ not started |
 | `a2_s26_carry_scene` | 128 | 0 | 0 | 0% | ⬜ not started |
@@ -539,18 +561,25 @@ That inserts commented `# scene <scene_id>_NNN with dissolve` stubs at each clus
 | `a3_s18_field_sync_ob` | 85 | 0 | 0 | 0% | ⬜ not started |
 | `a3_s18_the_weight_emp` | 93 | 0 | 0 | 0% | ⬜ not started |
 | `a3_s18a_the_letter_emp` | 72 | 0 | 0 | 0% | ⬜ not started |
+| `a3_s18b_zira_the_relay_emp` | 39 | 0 | 0 | 0% | ⬜ not started |
 | `a3_s19_noelle_revelation_emp` | 103 | 0 | 0 | 0% | ⬜ not started |
 | `a3_s19_the_weight_ob` | 94 | 0 | 0 | 0% | ⬜ not started |
 | `a3_s19a_the_letter_ob` | 86 | 0 | 0 | 0% | ⬜ not started |
+| `a3_s19b_zira_before_the_weight_ob` | 30 | 0 | 0 | 0% | ⬜ not started |
 | `a3_s20_the_story_keeper_emp` | 81 | 0 | 0 | 0% | ⬜ not started |
 | `a3_s20_you_dont_get_to_break_ob` | 77 | 0 | 0 | 0% | ⬜ not started |
-| `a3_s21_bookend_before_storm_emp` | 81 | 0 | 0 | 0% | ⬜ not started |
+| `a3_s20a_lyra_archive_emp` | 62 | 0 | 0 | 0% | ⬜ not started |
+| `a3_s20a_lyra_prays_for_the_hunt_ob` | 35 | 0 | 0 | 0% | ⬜ not started |
+| `a3_s21_bookend_before_storm_emp` | 84 | 0 | 0 | 0% | ⬜ not started |
 | `a3_s21_the_story_keeper_ob` | 81 | 0 | 0 | 0% | ⬜ not started |
 | `a3_s22_liora_execution_emp` | 204 | 0 | 0 | 0% | ⬜ not started |
 | `a3_s22_the_hunt_ob` | 108 | 0 | 0 | 0% | ⬜ not started |
+| `a3_s22a_nyra_before_the_mirror_ob` | 54 | 0 | 0 | 0% | ⬜ not started |
+| `a3_s22a_tessa_after_liora_emp` | 55 | 0 | 0 | 0% | ⬜ not started |
 | `a3_s23_aftermath_emp` | 44 | 0 | 0 | 0% | ⬜ not started |
 | `a3_s23_bookend_before_mirror_ob` | 94 | 0 | 0 | 0% | ⬜ not started |
-| `a3_s24_liora_ob` | 184 | 0 | 0 | 0% | ⬜ not started |
+| `a3_s23a_noelle_before_liora_ob` | 64 | 0 | 0 | 0% | ⬜ not started |
+| `a3_s24_liora_ob` | 185 | 0 | 0 | 0% | ⬜ not started |
 | `a3_s25_aftermath_ob` | 61 | 0 | 0 | 0% | ⬜ not started |
 | `a4_s01_morning_after_broadcast_emp` | 113 | 0 | 0 | 0% | ⬜ not started |
 | `a4_s01_the_cold_room_ob` | 171 | 0 | 0 | 0% | ⬜ not started |
@@ -577,7 +606,7 @@ That inserts commented `# scene <scene_id>_NNN with dissolve` stubs at each clus
 | `a4_s11_mercy_call_costs_emp` | 197 | 0 | 0 | 0% | ⬜ not started |
 | `a4_s11_nyra_second_oath_ob` | 267 | 0 | 0 | 0% | ⬜ not started |
 | `a4_s11a_prayer_after_mercy_emp` | 159 | 0 | 0 | 0% | ⬜ not started |
-| `a4_s11b_the_ones_he_lost_emp` | 174 | 0 | 0 | 0% | ⬜ not started |
+| `a4_s11b_the_ones_he_lost_emp` | 175 | 0 | 0 | 0% | ⬜ not started |
 | `a4_s12_held_not_fixed_emp` | 168 | 0 | 0 | 0% | ⬜ not started |
 | `a4_s12_zira_confrontation_ob` | 123 | 0 | 0 | 0% | ⬜ not started |
 | `a4_s12a_she_is_not_just_tactical_emp` | 229 | 0 | 0 | 0% | ⬜ not started |
@@ -585,11 +614,14 @@ That inserts commented `# scene <scene_id>_NNN with dissolve` stubs at each clus
 | `a4_s13_zira_deepening_erotic_ob` | 191 | 0 | 0 | 0% | ⬜ not started |
 | `a4_s13a_quiet_after_failure_emp` | 209 | 0 | 0 | 0% | ⬜ not started |
 | `a4_s14_lyra_sanctifying_violence_ob` | 168 | 0 | 0 | 0% | ⬜ not started |
-| `a4_s14_return_to_the_table_emp` | 154 | 0 | 0 | 0% | ⬜ not started |
+| `a4_s14_return_to_the_table_emp` | 157 | 0 | 0 | 0% | ⬜ not started |
+| `a4_s14a_familiar_ground_emp` | 286 | 0 | 0 | 0% | ⬜ not started |
+| `a4_s14a_oath_and_flower_ob` | 234 | 0 | 0 | 0% | ⬜ not started |
 | `a4_s15_lyra_deepening_erotic_ob` | 210 | 0 | 0 | 0% | ⬜ not started |
 | `a4_s15_zira_deepening_erotic_emp` | 262 | 0 | 0 | 0% | ⬜ not started |
 | `a4_s16_rhea_strikes_emp` | 198 | 0 | 0 | 0% | ⬜ not started |
 | `a4_s16_tessa_fracture_point_ob` | 186 | 0 | 0 | 0% | ⬜ not started |
+| `a4_s16a_door_and_data_emp` | 292 | 0 | 0 | 0% | ⬜ not started |
 | `a4_s17_selene_deepening_erotic_emp` | 329 | 0 | 0 | 0% | ⬜ not started |
 | `a4_s17_tessa_conditional_beat_ob` | 156 | 0 | 0 | 0% | ⬜ not started |
 | `a4_s18_noelle_deepening_erotic_emp` | 278 | 0 | 0 | 0% | ⬜ not started |
@@ -598,11 +630,13 @@ That inserts commented `# scene <scene_id>_NNN with dissolve` stubs at each clus
 | `a4_s19_tessa_the_trainee_ob` | 357 | 0 | 0 | 0% | ⬜ not started |
 | `a4_s20_noelle_deepening_erotic_ob` | 313 | 0 | 0 | 0% | ⬜ not started |
 | `a4_s20_tessa_deepening_erotic_emp` | 237 | 0 | 0 | 0% | ⬜ not started |
+| `a4_s20a_command_and_the_door_emp` | 301 | 0 | 0 | 0% | ⬜ not started |
+| `a4_s20a_doctrine_and_weapon_ob` | 265 | 0 | 0 | 0% | ⬜ not started |
 | `a4_s21_marcus_second_cut_emp` | 225 | 0 | 0 | 0% | ⬜ not started |
-| `a4_s21_the_letter_ob` | 162 | 0 | 0 | 0% | ⬜ not started |
-| `a4_s22_act_four_close_emp` | 145 | 0 | 0 | 0% | ⬜ not started |
+| `a4_s21_the_letter_ob` | 164 | 0 | 0 | 0% | ⬜ not started |
+| `a4_s22_act_four_close_emp` | 146 | 0 | 0 | 0% | ⬜ not started |
 | `a4_s22_council_of_attrition_ob` | 153 | 0 | 0 | 0% | ⬜ not started |
-| `a4_s23_aeron_alone_ob` | 143 | 0 | 0 | 0% | ⬜ not started |
+| `a4_s23_aeron_alone_ob` | 144 | 0 | 0 | 0% | ⬜ not started |
 | `a4_s24_nyra_the_mirror_ob` | 164 | 0 | 0 | 0% | ⬜ not started |
 | `a4_s25_lyra_at_the_altar_ob` | 172 | 0 | 0 | 0% | ⬜ not started |
 | `a4_s26_act_four_close_ob` | 108 | 0 | 0 | 0% | ⬜ not started |
@@ -611,10 +645,10 @@ That inserts commented `# scene <scene_id>_NNN with dissolve` stubs at each clus
 
 | Act | Scenes | Beats | Stubs | Renders | Est. Target |
 |---|---|---|---|---|---|
-| act1 | 30 | 2463 | 0 | 0 | ~821 |
-| act2 | 30 | 4232 | 0 | 0 | ~1410 |
-| act3 | 51 | 6337 | 0 | 0 | ~2112 |
-| act4 | 54 | 10291 | 0 | 0 | ~3430 |
+| act1 | 30 | 2465 | 0 | 0 | ~821 |
+| act2 | 30 | 4234 | 0 | 0 | ~1411 |
+| act3 | 58 | 6680 | 0 | 0 | ~2226 |
+| act4 | 59 | 11677 | 0 | 0 | ~3892 |
 
 ## Summary
 
@@ -622,8 +656,8 @@ That inserts commented `# scene <scene_id>_NNN with dissolve` stubs at each clus
 |---|---|---|---|
 | Character portraits | 10 | 0 | 10 |
 | Gallery thumbnails | 21 | 0 | 21 |
-| Scene backgrounds | 147 | — | — |
-| Audio files | 198 | 0 | 198 |
+| Scene backgrounds | 156 | — | — |
+| Audio files | 211 | 0 | 211 |
 
 ---
 

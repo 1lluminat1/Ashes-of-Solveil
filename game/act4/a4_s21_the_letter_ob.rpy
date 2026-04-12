@@ -457,6 +457,11 @@ label a4_s21_the_letter_ob:
 
     "He sits down. Head of the table. The coffee goes on the left. The packet stack goes in front of him. The letter is inside the jacket under the packet stack, under everything."
 
+    # Callback: Liora's courier network / 6000 names (a3_s20_the_story_keeper)
+    athought "Six thousand names. The network she built to keep them. I am running an operation on the infrastructure she seeded and I did not know it until Zira matched the relay signatures."
+
+    athought "The Ghostline is her ghost."
+
     "He opens the Ghostline relay log and starts reading."
 
     "The camera holds on the room for three full beats. The pre-shift silence. The standby terminal. The head of the table with one man at it. The jacket closed over an envelope over a sentence that used to be alive fourteen years ago."

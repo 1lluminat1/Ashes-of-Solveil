@@ -307,6 +307,10 @@ label a4_s23_aeron_alone_ob:
 
     athought "I have already dissolved. The seam is gone for me and I do not remember when it was there. I am what Marcus became, at the age Marcus became it. I am arriving at Marcus on schedule."
 
+    # Callback: a1_s26_obsidian_bridge (Zira called him "Glass");
+    # a2_s08_the_analyst (Noelle's "textbook Glass")
+    athought "Zira called me Glass. Noelle called the Sweep textbook Glass. I am not Glass tonight. Glass implies something brittle underneath. There is nothing brittle underneath. There is only more of the surface."
+
     "He is still looking at the face. The face does not react to the observation. The observation is not news to the face. The face has known."
 
     # ========== PHASE 17 -- THE ONE SPOKEN LINE ==========
