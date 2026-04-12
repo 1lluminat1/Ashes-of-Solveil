@@ -12,6 +12,10 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a3_s12_the_oath_ob:
 
+
+    # Codex — stage bumps for characters the player learns more about here.
+    $ codex_reveal("nyra", to_stage=1, source="a3_s12_the_oath_ob")
+
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 50mm lens (OB formal distance), locked tripod. Opens wide on the quarters --
     #         sparse command space, steel-blue wash. Nyra at the center, kneeling.

@@ -12,6 +12,10 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a4_s21_the_letter_ob:
 
+
+    # Codex — stage bumps for characters the player learns more about here.
+    $ codex_reveal("liora_rylan", to_stage=3, source="a4_s21_the_letter_ob")
+
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 50mm, locked. OB grammar. No handheld, no drift. The letter scene
     #         needs the absence of motion because the motion is interior.

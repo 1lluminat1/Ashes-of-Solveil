@@ -9,6 +9,10 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a2_s14_the_intel_den:
 
+
+    # Codex — stage bumps for characters the player learns more about here.
+    $ codex_reveal("noelle_korr", to_stage=1, source="a2_s14_the_intel_den")
+
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: Wide establishing shot of the den, then medium shots. Noelle often framed through data screens. Push-in when she says something unexpectedly human.
     # LIGHTING: Silver-blue from multiple screens. Cold, clinical, but with warm spots from tea steam or small personal items. Her data crystal catches light.

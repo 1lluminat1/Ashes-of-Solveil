@@ -10,6 +10,10 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a1_s26_obsidian_bridge:
 
+
+    # Codex — stage bumps for characters the player learns more about here.
+    $ codex_reveal("zira", to_stage=1, source="a1_s26_obsidian_bridge")
+
     # ========= STAGE DIRECTIONS =========
     # CAMERA: Lateral dolly to centerline; Aeron silhouette against Aeries glow; fog entrance/exit.
     # LIGHTING: Cold blue moonlight; neon reflections in the void below; fingers of fog across the span.

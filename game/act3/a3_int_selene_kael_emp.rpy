@@ -10,6 +10,11 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a3_int_selene_kael_emp:
 
+
+    # Codex — stage bumps for characters the player learns more about here.
+    $ codex_reveal("selene_valen", to_stage=2, source="a3_int_selene_kael_emp")
+    $ codex_reveal("kael_rylan", to_stage=2, source="a3_int_selene_kael_emp")
+
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 50mm from the foot of the bed. Her profile against pre-dawn grey. The
     #         plant on the windowsill in soft focus behind her. Aeron only as a shape

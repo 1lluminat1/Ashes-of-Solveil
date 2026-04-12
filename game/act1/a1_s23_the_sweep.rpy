@@ -14,6 +14,9 @@ define unit4 = Character("[Unit-4]", color="#4A90E2")
 
 label a1_s23_the_sweep:
 
+    # Codex — Operation 391 is canonical now. Unlock the sweep entry.
+    $ codex_mention("sector_10_sweep", source="a1_s23_the_sweep")
+
     # ========= STAGE DIRECTIONS =========
     # CAMERA: Over-shoulder on Aeron as city rotates beneath; tight file through corridors; HUD overlays.
     # LIGHTING: Cold blue predawn rim light + hard tactical beams raking catwalks.

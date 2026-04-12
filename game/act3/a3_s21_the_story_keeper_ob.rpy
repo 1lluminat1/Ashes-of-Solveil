@@ -10,6 +10,9 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a3_s21_the_story_keeper_ob:
 
+    # Codex — first Liora unlock on the OB path.
+    $ codex_mention("liora_rylan", source="a3_s21_the_story_keeper_ob")
+
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 40mm, locked. Clinical precision (OB grammar). Opens on Zira's terminal --
     #         network maps, courier patterns. The same visual language as EMP s20 but colder.

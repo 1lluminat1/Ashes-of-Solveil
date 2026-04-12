@@ -9,6 +9,11 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a2_s20_doctrine_declaration:
 
+    # Codex — the Doctrine Declaration is the scene whose name matches.
+    # Also unlocks the Phoenix entry (Selene names the rebellion here).
+    $ codex_mention("doctrine_declaration", source="a2_s20_doctrine_declaration")
+    $ codex_mention("phoenix_rebellion",    source="a2_s20_doctrine_declaration")
+
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 40mm, locked. Two-shots of Aeron and Selene at the strategy table. The room is empty — just them.
     #         Push-in when the doctrine line arrives. Hold on Aeron's face for the choice. No cuts during the silence.

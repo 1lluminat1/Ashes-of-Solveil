@@ -10,6 +10,10 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a4_s05_delegation_test_emp:
 
+
+    # Codex — stage bumps for characters the player learns more about here.
+    $ codex_reveal("kael_rylan", to_stage=3, source="a4_s05_delegation_test_emp")
+
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: Three distinct visual registers across the scene.
     #         (1) Briefing/assignment: 35mm, council framing, the war table between

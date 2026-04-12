@@ -9,6 +9,10 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a3_s03_breath_of_faith_emp:
 
+
+    # Codex — stage bumps for characters the player learns more about here.
+    $ codex_reveal("lyra_vashar", to_stage=2, source="a3_s03_breath_of_faith_emp")
+
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 32mm lens (EMP warmth), handheld intimacy. Wide establishing shot of balcony,
     #         then tightening to two-shots as they connect. Slow drift on emotional beats.

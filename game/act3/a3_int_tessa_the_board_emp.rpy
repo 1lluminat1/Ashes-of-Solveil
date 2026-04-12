@@ -10,6 +10,10 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a3_int_tessa_the_board_emp:
 
+
+    # Codex — stage bumps for characters the player learns more about here.
+    $ codex_reveal("tessa", to_stage=2, source="a3_int_tessa_the_board_emp")
+
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: The board in full for the first beat. Then in close on the marker tip,
     #         the letters forming. Then wider — both columns in frame, the name in both.

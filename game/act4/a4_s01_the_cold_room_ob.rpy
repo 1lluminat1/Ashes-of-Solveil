@@ -14,6 +14,10 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a4_s01_the_cold_room_ob:
 
+
+    # Codex — stage bumps for characters the player learns more about here.
+    $ codex_reveal("aeron_dossier", to_stage=3, source="a4_s01_the_cold_room_ob")
+
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 50mm, locked tripod. Institutional distance. Opens on the strategic room door
     #         from the corridor side -- wide, patient. We do not enter with Nyra; we wait

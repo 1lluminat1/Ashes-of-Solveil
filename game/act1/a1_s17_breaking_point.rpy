@@ -10,6 +10,11 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a1_s17_breaking_point:
 
+    # Codex — this is the Breaking Point itself. The entry unlocks
+    # here, and Aeron's dossier bumps to Stage 1 (the first real crack).
+    $ codex_mention("breaking_point", source="a1_s17_breaking_point")
+    $ codex_reveal("aeron_dossier", to_stage=1, source="a1_s17_breaking_point")
+
     # ========= STAGE DIRECTIONS =========
     # CAMERA: Start on CU of framed photo (Kael); rack focus to fingerprints; later follow to balcony.
     # LIGHTING: One moving city reflection strip; everything else near-black. Cooler palette on balcony.

@@ -11,6 +11,7 @@ label a1_s00a_intro:
     # full entry; hovering highlights the term with a soft glow.
     $ codex_mention("solveil_tiers", source="a1_s00a_intro")
     $ codex_mention("bands",         source="a1_s00a_intro")
+    $ codex_mention("echelon",       source="a1_s00a_intro")
 
     # VISUAL: Cold white top-light over a pristine skyline above the clouds (Aeries).
     # The view should feel sterile, geometric, and silent—false perfection.
@@ -37,7 +38,7 @@ label a1_s00a_intro:
     # VISUAL: Composite wide shot of the entire city—Aeries to Unders, unified vertical frame.
     # The palette should shift from white → steel → blue → amber.
 
-    "Echelon keeps the peace with pageantry and power—relics tamed into {a=codex:bands}Aether Bands{/a}."
+    "{a=codex:echelon}Echelon{/a} keeps the peace with pageantry and power—relics tamed into {a=codex:bands}Aether Bands{/a}."
     "Some call them gifts. Others, shackles. Obedience makes the difference."
 
     # VISUAL: Fade to black; single ember glows. 

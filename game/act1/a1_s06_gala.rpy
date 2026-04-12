@@ -345,6 +345,11 @@ label a1_s06_gala:
 
             a "Lyra."
 
+            # Codex — first in-scene Lyra beat. Unlocks her entry at
+            # Stage 0 (the gala's "knocks softly instead of announcing"
+            # framing matches the Stage 0 body).
+            $ codex_mention("lyra_vashar", source="a1_s06_gala")
+
             "She pivots, posture precise, eyes reading him in a single beat."
 
             pause 0.7

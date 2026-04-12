@@ -11,6 +11,10 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a4_s08_zira_exit_plan_emp:
 
+
+    # Codex — stage bumps for characters the player learns more about here.
+    $ codex_reveal("zira", to_stage=3, source="a4_s08_zira_exit_plan_emp")
+
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 35mm, closer than the war room scenes. The workshop is a room of
     #         hands, and hands are the scene. Open on the bench — wide enough

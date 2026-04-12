@@ -12,6 +12,10 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a4_s24_nyra_the_mirror_ob:
 
+
+    # Codex — stage bumps for characters the player learns more about here.
+    $ codex_reveal("nyra", to_stage=3, source="a4_s24_nyra_the_mirror_ob")
+
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 50mm locked. Two-shot across the ops table. Same room as a4_s01 -- the
     #         strategic room where the act opened. The camera is on the short axis of

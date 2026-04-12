@@ -9,6 +9,9 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a2_s08_the_analyst:
 
+    # Codex — Noelle's first appearance (over a Ghostline terminal).
+    $ codex_mention("noelle_korr", source="a2_s08_the_analyst")
+
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 35–50mm; alternating between group shots and singles. When Noelle speaks, camera holds on the terminal/holo—we don't see her face clearly. Push-in on Aeron when she dissects him.
     # LIGHTING: Safehouse amber + cold blue glow from the terminal. Noelle's voice comes from shadow. Her holo-presence is deliberately low-res, obscured.

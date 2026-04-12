@@ -13,6 +13,10 @@ define executioner = Character("Executioner")
 
 label a3_s22_liora_execution_emp:
 
+
+    # Codex — stage bumps for characters the player learns more about here.
+    $ codex_reveal("liora_rylan", to_stage=2, source="a3_s22_liora_execution_emp")
+
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: This scene uses three visual grammars:
     #         (1) THE NEWS: 40mm, handheld, unsteady. The camera drifts 5-8% as the information

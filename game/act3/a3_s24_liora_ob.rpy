@@ -12,6 +12,10 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a3_s24_liora_ob:
 
+
+    # Codex — stage bumps for characters the player learns more about here.
+    $ codex_reveal("liora_rylan", to_stage=2, source="a3_s24_liora_ob")
+
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: This scene uses three visual grammars:
     #         (1) THE APPROACH: 50mm, locked. OB precision. Aeron walking toward the meeting.

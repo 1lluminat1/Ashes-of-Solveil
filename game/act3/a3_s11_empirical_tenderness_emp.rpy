@@ -10,6 +10,10 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a3_s11_empirical_tenderness_emp:
 
+
+    # Codex — stage bumps for characters the player learns more about here.
+    $ codex_reveal("noelle_korr", to_stage=2, source="a3_s11_empirical_tenderness_emp")
+
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 40mm, tripod, micro-adjustments only. Opens wide on the data alcove —
     #         Noelle's domain, her screens and crystal arrays — then slowly tightens

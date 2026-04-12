@@ -10,6 +10,10 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a3_s20_the_story_keeper_emp:
 
+    # Codex — first Liora unlock. This scene is where the player
+    # starts learning who "the story-keeper" is.
+    $ codex_mention("liora_rylan", source="a3_s20_the_story_keeper_emp")
+
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 40mm, handheld with slow drift (3%). The drift mirrors the searching quality
     #         of the scene — Zira following a thread, the camera following her.

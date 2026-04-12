@@ -12,6 +12,10 @@ define runner = Character("Runner")
 
 label a2_s18_the_patient:
 
+
+    # Codex — stage bumps for characters the player learns more about here.
+    $ codex_reveal("tessa", to_stage=1, source="a2_s18_the_patient")
+
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 35mm, handheld with intent. Opens wide on the medbay, narrows to two-shots of Tessa and Noelle.
     #         Push-ins on Noelle when she says something she doesn't understand. Push-ins on Tessa's hands.

@@ -12,6 +12,10 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a4_s02_first_cracks_emp:
 
+
+    # Codex — stage bumps for characters the player learns more about here.
+    $ codex_reveal("aeron_dossier", to_stage=3, source="a4_s02_first_cracks_emp")
+
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 40mm, locked on the command table for the opening wide. Then 32mm handheld,
     #         two-shot bias — Aeron and Selene in the same frame whenever possible.

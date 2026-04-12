@@ -10,6 +10,9 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a1_s21_zira_first_contact:
 
+    # Codex — Zira's first in-scene appearance. Stage 0 unlocks.
+    $ codex_mention("zira", source="a1_s21_zira_first_contact")
+
     # ========= STAGE DIRECTIONS =========
     # CAMERA: Slow lateral dolly along catwalk; cut-ins on boots/hand/holster; over-shoulder reveals.
     # LIGHTING: Sodium spill + cold service LEDs; intermittent signage flicker; occasional drone cone sweep.

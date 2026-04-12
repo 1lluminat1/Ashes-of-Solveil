@@ -10,6 +10,10 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a4_s12a_she_is_not_just_tactical_emp:
 
+
+    # Codex — stage bumps for characters the player learns more about here.
+    $ codex_reveal("selene_valen", to_stage=3, source="a4_s12a_she_is_not_just_tactical_emp")
+
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: Three movements.
     #         (1) Corridor approach: 35mm, Aeron's POV bias. The door to Selene's

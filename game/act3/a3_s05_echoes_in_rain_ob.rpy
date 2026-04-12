@@ -11,6 +11,9 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a3_s05_echoes_in_rain_ob:
 
+    # Codex — Nyra's first appearance on the OB path.
+    $ codex_mention("nyra", source="a3_s05_echoes_in_rain_ob")
+
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 40mm, handheld with controlled drift. Rain on lens. Low angles through rubble.
     #         Wide establishing shots of ruined sector. Close-ups during ambush -- chaos then stillness.

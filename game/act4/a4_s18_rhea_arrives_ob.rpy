@@ -14,6 +14,10 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a4_s18_rhea_arrives_ob:
 
+
+    # Codex — stage bumps for characters the player learns more about here.
+    $ codex_reveal("rhea_vestin", to_stage=2, source="a4_s18_rhea_arrives_ob")
+
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 35mm, locked tripod for the ops-room coverage. The scene runs in
     #         a cold institutional register: symmetrical two-shots across the

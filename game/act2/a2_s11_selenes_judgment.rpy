@@ -9,6 +9,16 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a2_s11_selenes_judgment:
 
+
+    # Codex — stage bumps for characters the player learns more about here.
+    $ codex_reveal("selene_valen", to_stage=1, source="a2_s11_selenes_judgment")
+
+    # Codex — Selene's first scene. Unlock her entry.
+    # Also bumps Aeron's dossier to Stage 2 (competing allegiances
+    # land as soon as Selene enters the picture).
+    $ codex_mention("selene_valen", source="a2_s11_selenes_judgment")
+    $ codex_reveal("aeron_dossier", to_stage=2, source="a2_s11_selenes_judgment")
+
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: Wide establishing shot, then medium shots that emphasize Selene's control of the space. Push-ins on her during confrontational beats. Aeron often shot slightly lower—she has the high ground here.
     # LIGHTING: Ember glow from tactical displays, bronze-red undertones. Cold spots where Selene stands. Her gloves catch the light.

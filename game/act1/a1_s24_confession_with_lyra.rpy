@@ -10,6 +10,10 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a1_s24_confession_with_lyra:
 
+
+    # Codex — stage bumps for characters the player learns more about here.
+    $ codex_reveal("lyra_vashar", to_stage=1, source="a1_s24_confession_with_lyra")
+
     # ========= STAGE DIRECTIONS =========
     # CAMERA: Slow push from doorway to mid on Aeron; rack focus to Lyra; dolly in during breakdown.
     # LIGHTING: Window amber vs interior cold; dust motes visible in the beam.

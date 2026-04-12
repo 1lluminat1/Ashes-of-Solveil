@@ -10,6 +10,10 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a4_s04_lyra_unbuckled_emp:
 
+
+    # Codex — stage bumps for characters the player learns more about here.
+    $ codex_reveal("lyra_vashar", to_stage=3, source="a4_s04_lyra_unbuckled_emp")
+
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 85mm. Opens on the Band on the desk — not on her wrist. Held long enough
     #         that the absence becomes the subject. Rack focus to Lyra's hands in her

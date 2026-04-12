@@ -9,6 +9,10 @@ $ _current_scene_id = "a2_s27_zira_commitment_emp"
 $ scene_mark(_current_scene_id, "entered")
 
 label a2_s27_zira_commitment_emp:
+
+    # Codex — stage bumps for characters the player learns more about here.
+    $ codex_reveal("zira", to_stage=2, source="a2_s27_zira_commitment_emp")
+
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 32mm lens (EMP warmth), handheld intimacy. Over-shoulder bias early,
     #         transitioning to close two-shots as tension builds. 3–5% drift on emotional beats.

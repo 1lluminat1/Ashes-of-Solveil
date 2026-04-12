@@ -11,6 +11,10 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a4_s09_noelle_implicated_emp:
 
+
+    # Codex — stage bumps for characters the player learns more about here.
+    $ codex_reveal("noelle_korr", to_stage=3, source="a4_s09_noelle_implicated_emp")
+
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 50mm, locked, the same discipline as the a4_s03 Noelle workspace
     #         scene. Noelle's rooms are always shot steady. The frame is her

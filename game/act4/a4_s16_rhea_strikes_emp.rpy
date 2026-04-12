@@ -10,6 +10,10 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a4_s16_rhea_strikes_emp:
 
+
+    # Codex — stage bumps for characters the player learns more about here.
+    $ codex_reveal("rhea_vestin", to_stage=2, source="a4_s16_rhea_strikes_emp")
+
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: Six movements. The scene has three rooms and three cameras.
     #         ROOM A — the ops wing at oh-six-twelve.

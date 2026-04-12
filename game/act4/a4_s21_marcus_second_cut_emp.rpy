@@ -10,6 +10,10 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a4_s21_marcus_second_cut_emp:
 
+
+    # Codex — stage bumps for characters the player learns more about here.
+    $ codex_reveal("rhea_vestin", to_stage=3, source="a4_s21_marcus_second_cut_emp")
+
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: Four movements.
     #         (1) Open on the Rhea Vestin operation. Cold, procedural. The package

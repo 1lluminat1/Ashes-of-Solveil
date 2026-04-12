@@ -15,6 +15,12 @@ label a1_s01_branding:
     # SOUND: Absolute silence. Hold for three full seconds — do not skip.
     # NOTE: Silence is the opening statement. The absence is the point.
 
+    # Codex — game opens here. Seed the core protagonist / family /
+    # place entries the moment the ritual begins.
+    $ codex_mention("aeron_dossier",     source="a1_s01_branding")
+    $ codex_mention("tier_hall_branding",source="a1_s01_branding")
+    $ codex_mention("marcus_rylan",      source="a1_s01_branding")
+
     scene black
     pause 3.0
 

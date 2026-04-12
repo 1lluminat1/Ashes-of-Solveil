@@ -11,6 +11,9 @@ define jace = Character("Jace")
 
 label a2_s05_clinic:
 
+    # Codex — Tessa's first scene. Unlock her entry.
+    $ codex_mention("tessa", source="a2_s05_clinic")
+
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 28–35mm, handheld but steadier than yard; push-ins on Tessa during philosophy beats and when she's reading Aeron.
     # LIGHTING: Sickly overhead strips mixed with warm amber/green practicals around Tessa's workspace. Shadows in corners. Cots lit unevenly.

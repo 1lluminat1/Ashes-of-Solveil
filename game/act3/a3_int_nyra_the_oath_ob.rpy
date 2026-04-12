@@ -10,6 +10,10 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a3_int_nyra_the_oath_ob:
 
+
+    # Codex — stage bumps for characters the player learns more about here.
+    $ codex_reveal("nyra", to_stage=2, source="a3_int_nyra_the_oath_ob")
+
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 100mm macro. The blade. The palm. The bead. No face above the shoulder.
     #         The face is not the subject — the motion is.

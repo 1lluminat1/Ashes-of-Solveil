@@ -10,6 +10,10 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a4_s12_held_not_fixed_emp:
 
+
+    # Codex — stage bumps for characters the player learns more about here.
+    $ codex_reveal("tessa", to_stage=3, source="a4_s12_held_not_fixed_emp")
+
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 50mm in the corridor — handheld at chest height, following Aeron as he
     #         walks away from the ops room. Tessa enters frame from a side door. The

@@ -20,6 +20,11 @@ label a1_s14_brothers_rooftop:
     # BLOCKING: Same rooftop as act1_09_breaking_point, but years earlier. Two silhouettes at rail.
     # FX/COMP: Warm color grade for flashback; match cut to present (cool palette) at end.
 
+    # Codex — first in-frame Kael beat (flashback). Unlocks the entry
+    # and bumps Aeron's dossier into Stage 1 (the brother context).
+    $ codex_mention("kael_rylan",     source="a1_s14_brothers_rooftop")
+    $ codex_reveal("aeron_dossier", to_stage=1, source="a1_s14_brothers_rooftop")
+
     #scene bg_rooftop_brothers_flashback with fade
 
     # ========= OPENING — THE MEMORY =========

@@ -11,6 +11,13 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a4_s07_echelon_interlude_4_emp:
 
+
+    # Codex — stage bumps for characters the player learns more about here.
+    $ codex_reveal("marcus_rylan", to_stage=3, source="a4_s07_echelon_interlude_4_emp")
+
+    # Codex — Rhea's first named mention (Marcus brings her in here).
+    $ codex_mention("rhea_vestin", source="a4_s07_echelon_interlude_4_emp")
+
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 40mm, locked. The spire is always locked. Handheld is a vice of the
     #         lower city; the Aeries command spire does not drift.

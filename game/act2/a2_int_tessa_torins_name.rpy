@@ -10,6 +10,10 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a2_int_tessa_torins_name:
 
+    # Codex — first scene where the rule of three is actually NAMED
+    # as a rule. Unlock the motif entry.
+    $ codex_mention("rule_of_three", source="a2_int_tessa_torins_name")
+
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: Waist-level. Locked on the hands and the water. The face stays out of
     #         frame until the third repetition of the name. One quiet push in. Then out.

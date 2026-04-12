@@ -16,6 +16,9 @@ define rhe = Character("Commander Rhea Vestin", color="#8a95a4")
 
 label a4_s08_echelon_interlude_4_ob:
 
+    # Codex — Rhea's first named mention on the OB path.
+    $ codex_mention("rhea_vestin", source="a4_s08_echelon_interlude_4_ob")
+
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 50mm, locked tripod. The Aeries spire at the high floor. Opens on the
     #         glass wall of the strategic overlook -- the city below at grey-dusk.
