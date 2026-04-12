@@ -20,9 +20,14 @@ label a1_s26_obsidian_bridge:
 
     #scene bg_obsidian_bridge_night with fade
 
+    # Seed Codex entries that first surface on the Bridge.
+    $ codex_mention("obsidian_bridge", source="a1_s26_obsidian_bridge")
+    $ codex_mention("carrier_hiss",    source="a1_s26_obsidian_bridge")
+    $ codex_mention("glass",           source="a1_s26_obsidian_bridge")
+
     # ========= OPENING — THE WAIT =========
 
-    "Midnight. The Obsidian Bridge stretches into fog and darkness."
+    "Midnight. The {a=codex:obsidian_bridge}Obsidian Bridge{/a} stretches into fog and darkness."
 
     "Below, the city's underbelly churns. Above, the Aeries glow with ignorant light."
 
@@ -52,7 +57,7 @@ label a1_s26_obsidian_bridge:
 
     pause 0.4
 
-    z "Glass."
+    z "{a=codex:glass}Glass{/a}."
 
     a "Zira."
 
@@ -123,7 +128,7 @@ label a1_s26_obsidian_bridge:
 
         z "You wanted intel. Ways to see what's real."
 
-        z "(places device in his hand) This connects you to my network."
+        z "(places device in his hand) This connects you to my {a=codex:ghostline}network{/a}."
 
         z "Encrypted. Untraceable. Use it when you're ready to do more than try."
 
@@ -132,6 +137,10 @@ label a1_s26_obsidian_bridge:
         z "Whatever you want. Information is power."
 
         z "Right now, Marcus feeds you lies. With this, you see. Then you choose."
+
+        # Codex — ghostline + beacon chip first surface with the handoff.
+        $ codex_mention("ghostline",   source="a1_s26_obsidian_bridge")
+        $ codex_mention("beacon_chip", source="a1_s26_obsidian_bridge")
 
         $ grant_tool("encrypted_comm")
         $ give_ghostline_chip(accepted=True)          # Act I symbolic acceptance → EMP candidate
@@ -178,7 +187,7 @@ label a1_s26_obsidian_bridge:
 
         z "Asset or liability—I haven't decided."
 
-        z "I came to give you access to my network."
+        z "I came to give you access to my {a=codex:ghostline}network{/a}."
 
         z "I'm not sure you're ready."
 
@@ -191,6 +200,10 @@ label a1_s26_obsidian_bridge:
         z "If you want to be human, turn it on and see what's true."
 
         z "No half-measures next time."
+
+        # Codex — even on the conditional branch, she names the network.
+        $ codex_mention("ghostline",   source="a1_s26_obsidian_bridge")
+        $ codex_mention("beacon_chip", source="a1_s26_obsidian_bridge")
 
         $ grant_tool("encrypted_comm")
         $ give_ghostline_chip(accepted=False)         # held but not accepted; no EMP override

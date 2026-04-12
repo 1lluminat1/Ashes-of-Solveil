@@ -120,8 +120,11 @@ label a2_s07_quiet_night:
 
     a "Your relic. From the Cathedral."
 
-    l "It's a piece of a Harmony Core. Cracked during the collapse of Wing Seven."
+    l "It's a piece of a {a=codex:harmony_cores}Harmony Core{/a}. Cracked during the collapse of Wing Seven."
     l "When my mentor died."
+
+    # Codex — Lyra's pendant is the first tangible reveal of a Core.
+    $ codex_mention("harmony_cores", source="a2_s07_quiet_night")
 
     $ npc_remember("Lyra", "told_aeron_about_pendant", tone="vulnerable")
 

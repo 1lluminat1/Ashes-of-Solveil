@@ -34,6 +34,36 @@ define 1 gui.notify_text_size = 20
 define 1 gui.title_text_size = 72
 
 # -------------------------------
+# CODEX HYPERLINK STYLING
+# -------------------------------
+# Inline codex terms are wrapped in {a=codex:id}TERM{/a} and handled
+# by config.hyperlink_handlers['codex']. They render through the
+# hyperlink_text style, which reads these gui.hyperlink_* vars.
+#
+# Idle:   soft accent color (slightly tinted ice blue), no underline
+# Hover:  brighter accent + underline + faint glow outline
+#
+# The hover outline is what the Notion spec refers to when it says
+# "highlights" — a soft ring around the text that marks interactive
+# terms without being aggressive. First mentions are auto-unlocked
+# by the scene that wraps them, so by the time the player hovers,
+# the entry is already seeded in the codex browser.
+define 1 gui.hyperlink_color          = "#7FB8E6"   # cool ice accent, slightly dim
+define 1 gui.hyperlink_hover_color    = "#C4E4FF"   # bright hover pop
+define 1 gui.hyperlink_insensitive_color = "#5A7389"
+
+# Late init: override the hyperlink_text style itself so codex terms
+# get a hover glow outline in addition to the accent color swap.
+# Runs at init 1 (after default screens.rpy) so we don't collide.
+init 1:
+    style hyperlink_text is default:
+        color "#7FB8E6"
+        hover_color "#C4E4FF"
+        hover_underline True
+        outlines [(1, "#00000055", 0, 0)]
+        hover_outlines [(2, "#5CC8FF40", 0, 0), (1, "#00000099", 0, 0)]
+
+# -------------------------------
 # TEXT STYLES
 # -------------------------------
 

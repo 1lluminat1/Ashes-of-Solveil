@@ -94,6 +94,27 @@ init 1 python:
                 _("Returns as a faint metallic ping when shame flares."),
             ],
         },
+        "ghost_hop": {
+            "title": _("Ghost Hop"),
+            "category": _("Systems"),
+            "tags": ["burst","transmission","ambient"],
+            "body": [
+                _("A single-burst transmission that skips across Ghostline nodes like a stone over water."),
+                _("Each hop rides an ambient noise band—rail hum, coolant fans, the wind along the Bridge."),
+                _("The message is short by design: 'Here.' 'Safe?' 'Now.' Long enough to save a life, too brief to trace."),
+            ],
+        },
+        "carrier_hiss": {
+            "title": _("Carrier Hiss"),
+            "category": _("Systems"),
+            "tags": ["ambient","masking","Obsidian Bridge"],
+            "body": [
+                _("Engineers call it a nuisance band. Runners call it cover."),
+                _("On the Obsidian Bridge, certain crosswinds create a stable hiss that eats most sensor sweeps."),
+                _("Zira learned to 'retune' the air with a snap of her fingers, training ears to hear signal inside noise."),
+                _("Once you know the hiss, you can't unhear it—it's the sound of a city pretending to sleep."),
+            ],
+        },
     }
 
     # Register with the system (also gets picked up via global in bootstrap)

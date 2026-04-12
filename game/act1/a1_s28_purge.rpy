@@ -431,7 +431,12 @@ label a1_s28_purge:
 
     "Fire remains. Smoke rises. The city burns."
 
-    "Sectors 8, 9, 10. Gone. Erased. Cleansed."
+    # Codex — the Purge entry unlocks here, post-cinematic (Notion
+    # spec doc 45: "After the cinematic, the entry unlocks; a
+    # content warning is displayed.")
+    $ codex_mention("purge_8_10", source="a1_s28_purge")
+
+    "{a=codex:purge_8_10}Sectors 8, 9, 10{/a}. Gone. Erased. Cleansed."
 
     "Silence. Not peace. Just absence."
 
