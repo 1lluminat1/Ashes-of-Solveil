@@ -201,17 +201,42 @@ label a4_s11_mercy_call_costs_emp:
 
     athought "The sentence in this ravine is: what do we owe the six."
 
-    athought "Not: what does the doctrine owe the six. Not: what does tactical efficiency owe the six. Not: what does Marcus's adaptation window owe the six. What do we — the we that is Phoenix, the we that includes Selene in overwatch and Noelle at comms and Lyra on the ridge and Zira at my shoulder and the fighters back at base who have not slept properly in a month and the Phoenix KIA we added to the board three days ago — owe these six kneeling people whose faces I can see in the mist at pre-dawn."
+    athought "Not: what does the doctrine owe the six. Not: what does tactical efficiency owe the six. What do we — the we that is Phoenix — owe these six kneeling people whose faces I can see in the mist at pre-dawn."
 
-    athought "Mercy is a decision made today against a future we do not get to pick. Lyra said something like that once. Or will say it. Or is about to say it in the next ten minutes because she is on the comms and she is the Phoenix cleric and she will not let the decision pass without a sentence around it."
+    # Callback: a2_s23_mercy_and_counting — the mercy death mantra
+    athought "Mercy is a decision made today against a future we do not get to pick."
 
-    athought "I am going to hold all six. I am going to refuse the execution. I am going to refuse the turning of the conscripts — they can be turned with consent at a safer time, not in a pre-dawn ravine while they are still coming off tranq. I am going to hold all six in containment until we have time to do this more carefully."
+    # --- PLAYER CHOICE: What to do with the six captives ---
+    menu:
+        athought "Six people kneeling in the mist. One is a true believer. Five are conscripts. The doctrine says execute the lifer, turn the rest. I am not the doctrine."
 
-    athought "I am going to do it knowing Kallan will map the base. I am going to do it knowing Noelle's probability number is going to be a number I am going to have to sit with. I am going to do it because the sentence in my chest from the annex last night said the being is the part that kills you and the being that would kill me this morning is the being of a commander who executes a man at a ravine edge in a pre-dawn mist because the doctrine said so and I did not have any other sentence in my mouth."
+        "Hold all six. Refuse the execution.":
+            $ choice_and_dev(_current_scene_id, "mercy_hold_all_six", "EMP", factor=3,
+                note="Full mercy — holds all six knowing the strategic cost.")
+            $ canon_set("captive.vess_kallan", "held")
+            $ canon_set("mercy_call_full", True)
+            $ metric("aeron_mercy_cost", set_to=1)
 
-    athought "I have another sentence."
+            athought "I would like Phoenix to be the rebellion that holds six."
 
-    athought "The sentence is: I would like Phoenix to be the rebellion that holds six."
+        "Execute Kallan. Spare the conscripts.":
+            $ choice_and_dev(_current_scene_id, "mercy_execute_kallan", "OB", factor=2,
+                note="Doctrine compromise — eliminates the threat, spares the rest.")
+            $ canon_set("captive.vess_kallan", "executed")
+            $ canon_set("mercy_call_partial", True)
+
+            athought "The conscripts did not choose to be here. Kallan did. That is the line."
+
+        "Defer to Selene — this is too big for one person.":
+            $ choice_and_dev(_current_scene_id, "mercy_defer_to_selene", "EMP", factor=1,
+                note="Shared authority in practice — delegates the hardest call.")
+            $ canon_set("captive.vess_kallan", "held")
+            $ canon_set("mercy_call_deferred", True)
+
+            athought "Delegate the question. Not just the tasks. The question."
+
+            sel "Hold them. All six. We'll sort it at the base."
+            athought "She made the call I could not make alone. That is what shared command means."
 
     "He turns back to Kallan."
 

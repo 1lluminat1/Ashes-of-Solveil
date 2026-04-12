@@ -113,11 +113,35 @@ label a4_s05_delegation_test_emp:
 
     athought "She is being careful. Noelle is always careful. She is being more careful than usual because she knows this is a moment I could use her numbers to break."
 
-    athought "I am not going to use her numbers to break."
+    # --- PLAYER CHOICE: How Aeron handles being told to stand down ---
+    menu:
+        athought "Selene is right. Noelle's model confirms it. The question is whether I can let it land."
+
+        "Accept without further argument.":
+            $ choice_and_dev(_current_scene_id, "delegate_accept_clean", "EMP", factor=2,
+                note="Accepts shared command without resistance. Trust in the system.")
+            athought "She is right. I know she is right. The knowing and the accepting are, for once, the same thing."
+            $ rel_bump("Selene", trust=1)
+            $ canon_set("aeron.delegation_clean", True)
+
+        "Voice one concern, then defer.":
+            $ choice_and_dev(_current_scene_id, "delegate_one_concern", "EMP", factor=1,
+                note="Honest delegation — raises a real concern but defers to Selene.")
+            a "The east checkpoint has a blind angle Lyra hasn't seen. I'll brief her on it. That's my one concern."
+            sel "That's a useful concern. Thank you."
+            athought "One concern. Not an objection. Not an override. A contribution."
+
+        "Demand justification before accepting.":
+            $ choice_and_dev(_current_scene_id, "delegate_demand_justify", "OB", factor=1,
+                note="OB impulse — requires control even while conceding it.")
+            a "I need to understand the reasoning. Not because I doubt you. Because I need to be able to stand in this room and not lead without understanding why."
+            sel "Fair. But the answer is the same answer I gave you thirty seconds ago."
+            athought "She is right. She was right the first time. Asking twice was the reflex. The reflex is the problem."
+            $ rel_bump("Selene", trust=-1)
 
     # ========== PHASE 2 — THE BRIEF ==========
 
-    "Lyra is in the room by the time he makes the decision. She has been standing near the door. She does not speak until he turns toward her."
+    "Lyra is in the room by the time the conversation settles. She has been standing near the door. She does not speak until he turns toward her."
 
     a "Lyra."
 

@@ -132,11 +132,31 @@ label a4_s14_return_to_the_table_emp:
 
     "He is almost at the ops wing door."
 
-    "He stops for a beat. Not a stop — a hesitation, the half-second length. The length of a man making a decision he has already made and confirming to himself that he has made it."
+    "He stops for a beat. Not a stop — a hesitation, the half-second length."
 
-    athought "Selene said, in s02: you have to decide whether you are a commander or a chair. I decided in the medbay cot at oh-three-hundred this morning. I am not walking into that room to resume the chair. I am walking into that room to join it."
+    # --- PLAYER CHOICE: Where Aeron sits when he returns ---
+    # This is the visual thesis of the act. The head chair = singular.
+    # The side chair = distributed. Standing = observer.
+    menu:
+        athought "The ops wing door is ten steps away. On the other side of it is a table with chairs. One of them is at the head."
 
-    athought "That is a sentence and I am going to find out in about ninety seconds whether it is a sentence I can spend."
+        "Walk in and take the side chair.":
+            $ choice_and_dev(_current_scene_id, "side_chair", "EMP", factor=2,
+                note="Takes the side chair — joins, doesn't lead. Visual thesis of shared authority.")
+            $ canon_set("aeron.command_geometry", "distributed")
+            $ tp_seed("a4.aeron.takes_side_chair")
+            athought "I am not walking into that room to resume the chair. I am walking into that room to join it."
+
+        "Walk in and take the head chair.":
+            $ choice_and_dev(_current_scene_id, "head_chair", "OB", factor=2,
+                note="Returns to the head — the stand-down was rest, not restructuring.")
+            $ canon_set("aeron.command_geometry", "singular")
+            athought "I rested. The rest does not change where I sit. The rest changes how long I can sit there."
+
+        "Walk in and stand at the perimeter.":
+            $ record_choice_once(_current_scene_id, "perimeter_stand")
+            $ canon_set("aeron.command_geometry", "observing")
+            athought "I am not ready to sit. I am ready to see what they built while I was gone."
 
     "He pushes the ops wing door open."
 
