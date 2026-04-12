@@ -407,7 +407,7 @@ label a4_s23_aeron_alone_ob:
 
     "He walks to the head of the table. He does not go around to the side chair. He does not hesitate at the head chair. He pulls it back. The leather creaks once, low. He sits."
 
-    "The camera cuts to a wide from the back of the room. The war room is held in the 40% overheads. Aeron is alone at the head chair. The letter is inside the jacket. The morning's pre-shift work is at his hand."
+    "The camera cuts to a wide from the back of the room. The war room is held in the 40%% overheads. Aeron is alone at the head chair. The letter is inside the jacket. The morning's pre-shift work is at his hand."
 
     athought "The head chair. The honest posture. The mirror of the EMP-Aeron at the side chair. Both acts of weight are decisions about where a man with a specific kind of interior is going to put his body for the next hour."
 

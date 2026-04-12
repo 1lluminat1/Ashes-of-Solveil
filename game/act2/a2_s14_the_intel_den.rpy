@@ -194,7 +194,7 @@ label a2_s14_the_intel_den:
 
     "Zira raises an eyebrow at Aeron. This isn't typical Noelle behavior."
 
-    z "(mouthing) She likes you.
+    z "(mouthing) She likes you."
 
     "Noelle's ears turn slightly pink. She heard that."
 

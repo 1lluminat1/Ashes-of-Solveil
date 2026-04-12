@@ -62,7 +62,7 @@ label a2_s22_massive_recruitment:
 
     # ========== THE PROBLEM ==========
 
-    n "Echelon patrol density has increased 47% in two weeks. Correlated directly with our recruitment surge."
+    n "Echelon patrol density has increased 47%% in two weeks. Correlated directly with our recruitment surge."
 
     "She projects the data. Heat map on the wall — patrol patterns tightening like a fist closing."
 
@@ -71,7 +71,7 @@ label a2_s22_massive_recruitment:
     z "My contacts confirm. This isn't normal patrol increase. Task force level. Specialized units."
     z "They're calling us 'The Phoenix.' That's powerful branding. It's also a target designation."
 
-    n "Probability models. 73% chance of base discovery within fourteen days. 89% within three weeks."
+    n "Probability models. 73%% chance of base discovery within fourteen days. 89%% within three weeks."
 
     "The number settles over the room."
 
@@ -128,7 +128,7 @@ label a2_s22_massive_recruitment:
         athought "Elara is out there somewhere. Mila's mother. Learning to hold a weapon because I killed her family and she chose to fight beside me anyway."
         athought "If Echelon comes and she dies — that's mine. That name is mine."
     elif _locked_path == "OB":
-        athought "587 fighters at 35% readiness. 200 effective. 387 liabilities."
+        athought "587 fighters at 35%% readiness. 200 effective. 387 liabilities."
         athought "The math isn't good. But the math was never going to be good. You build an army in the cracks of an empire, you fight with what you have."
         athought "The question isn't whether we lose people. It's whether the operation survives the loss."
     else:

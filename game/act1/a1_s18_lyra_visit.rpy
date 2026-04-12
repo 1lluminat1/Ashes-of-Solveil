@@ -324,23 +324,15 @@ label a1_s18_lyra_visit:
 
             l "But people do. And we are still people, Aeron."
 
-            l "Even if we've forgotten how to be."
-
-            l "(soft) Maybe fate is who shows up when it's darkest."
+            l "(soft) Maybe fate is just who still knocks."
 
             a "You think you're fate, then?"
 
-            l "(tiny smile) Maybe. Or maybe I just knock loudly."
-
-            l "Or maybe... two people break better together than alone."
+            l "(tiny smile) Maybe I just knock loudly."
 
             "She's gone. The room feels different now—lighter, or maybe just less empty."
 
             athought "Windows recognize windows."
-
-            athought "And maybe... maybe we can break together."
-
-            athought "Find out what's underneath. What we used to be. What we could still become."
 
             scene black with fade
 

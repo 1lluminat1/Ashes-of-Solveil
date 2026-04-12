@@ -9,26 +9,29 @@
 # -------------------------------
 # FONT FILE DEFINITIONS
 # -------------------------------
-define gui.text_font = "fonts/Exo2-Regular.ttf"            # 400
-define gui.name_font = "fonts/Exo2-Medium.ttf"             # 500
-define gui.interface_font = "fonts/Exo2-Regular.ttf"       # 400
-define gui.choice_button_text_font = "fonts/Exo2-SemiBold.ttf"  # 600
-define gui.thin_font = "fonts/Exo2-Light.ttf"              # 200
+# These override the defaults in game/gui.rpy. Priority 1 ensures
+# we run after gui.rpy's init-0 defines so our values win without
+# the "already defined" lint warning.
+define 1 gui.text_font = "fonts/Exo2-Regular.ttf"            # 400
+define 1 gui.name_font = "fonts/Exo2-Medium.ttf"             # 500
+define 1 gui.interface_font = "fonts/Exo2-Regular.ttf"       # 400
+define 1 gui.choice_button_text_font = "fonts/Exo2-SemiBold.ttf"  # 600
+define 1 gui.thin_font = "fonts/Exo2-Light.ttf"              # 200
 
-define gui.narration_font = "fonts/SourceSerif4-Light.ttf"
-define gui.narration_italic_font = "fonts/SourceSerif4-LightItalic.ttf"
+define 1 gui.narration_font = "fonts/SourceSerif4-Light.ttf"
+define 1 gui.narration_italic_font = "fonts/SourceSerif4-LightItalic.ttf"
 
-define gui.system_font = "fonts/ShareTechMono-Regular.ttf"
+define 1 gui.system_font = "fonts/ShareTechMono-Regular.ttf"
 
 # -------------------------------
-# FONT SIZE DEFINITIONS
+# FONT SIZE DEFINITIONS (priority 1, same rationale)
 # -------------------------------
-define gui.text_size = 24
-define gui.name_text_size = 28
-define gui.interface_text_size = 22
-define gui.label_text_size = 32
-define gui.notify_text_size = 20
-define gui.title_text_size = 72
+define 1 gui.text_size = 24
+define 1 gui.name_text_size = 28
+define 1 gui.interface_text_size = 22
+define 1 gui.label_text_size = 32
+define 1 gui.notify_text_size = 20
+define 1 gui.title_text_size = 72
 
 # -------------------------------
 # TEXT STYLES

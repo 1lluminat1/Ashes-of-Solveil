@@ -36,9 +36,9 @@ label a3_int_noelle_aeron:
     nthought "FIELD: DESIGNATION"
 
     nthought "PREVIOUS DESIGNATION: anomaly"
-    nthought "PREVIOUS MODEL: Glass. Echelon-trained. High-efficiency operator. Profile consistent at 97% confidence. Deviations flagged as noise."
+    nthought "PREVIOUS MODEL: Glass. Echelon-trained. High-efficiency operator. Profile consistent at 97%% confidence. Deviations flagged as noise."
 
-    nthought "The 97% was always the number I was proud of. It meant I was right almost all of the time. It also meant I was dismissing three percent of the data as noise."
+    nthought "The 97%% was always the number I was proud of. It meant I was right almost all of the time. It also meant I was dismissing three percent of the data as noise."
     nthought "Three percent of a person."
 
     nthought "NEW DESIGNATION: Aeron."

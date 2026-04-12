@@ -1,10 +1,10 @@
-===================================================
-ACT 2 - Scene 26: The Weight of Her
-File: a2_s26_carry_scene.rpy
-Path: EMP ONLY
-===================================================
+# ===================================================
+# ACT 2 - Scene 26: The Weight of Her
+# File: a2_s26_carry_scene.rpy
+# Path: EMP ONLY
+# ===================================================
 
-========= SCENE START TASKS =========
+# ========= SCENE START TASKS =========
 $ _current_scene_id = "a2_s26_carry_scene"
 $ scene_mark(_current_scene_id, "entered")
 
@@ -426,7 +426,7 @@ label a2_s26_carry_scene:
 
         return
 
-    ​
+    
 # ========= CANONICAL NOTES =========
 # cann.scene_id: a2_s26_carry_scene
 # cann.chapter: Act II, Chapter IV — The Cost

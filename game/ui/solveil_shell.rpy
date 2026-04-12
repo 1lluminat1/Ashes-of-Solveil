@@ -203,6 +203,11 @@ screen solveil_character_card(_name, pal):
 
 
 screen solveil_stat_row(_label, _val, _max, pal):
+    $ _clamped  = max(0, min(_max, _val))
+    $ _frac     = float(_clamped) / float(_max) if _max else 0.0
+    $ _bar_full = 640                                # fixed track width
+    $ _px       = int(_bar_full * _frac)
+
     hbox:
         spacing 12
         xfill True
@@ -211,20 +216,14 @@ screen solveil_stat_row(_label, _val, _max, pal):
             font gui.interface_font
             size 18
             color pal["text"]
-        # Bar
+        # Bar track (fixed width so the Solids can use xsize instead
+        # of xfill — bare `add` doesn't accept xfill in screen code).
         fixed:
-            xfill True
+            xsize _bar_full
             yminimum 20
-            add Solid(pal["box_bg"]):
-                xfill True
-                ysize 16
-            $ _clamped = max(0, min(_max, _val))
-            $ _frac    = float(_clamped) / float(_max) if _max else 0.0
-            $ _px      = int(900 * _frac)  # nominal pixel width for readability
+            add Solid(pal["box_bg"]) xsize _bar_full ysize 16
             if _px > 0:
-                add Solid(path_accent()):
-                    xsize _px
-                    ysize 16
+                add Solid(path_accent()) xsize _px ysize 16
         text "[_val]/[_max]":
             xsize 80
             font gui.interface_font

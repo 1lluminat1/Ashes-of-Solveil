@@ -208,11 +208,11 @@ label a4_s13_protecting_exhaustion_emp:
 
     "Noelle speaks. Her voice is analytic register — the one she uses for briefings, not for the personal mode she had in Batch A."
 
-    n "The framework takes six inputs. Resting heart rate, sleep debt, decision latency in operational settings, affective flatness score, the 'cuff adjustment' tell" —
+    n "The framework takes six inputs. Resting heart rate, sleep debt, decision latency in operational settings, affective flatness score, the 'cuff adjustment' tell —"
 
     "(Aeron's jaw tightens a fraction.)"
 
-    n — "and what I have been calling the 'rule-of-three fracture' metric. That last one is the count of times per twenty-four hours that your internal protective rituals are breaking under pressure. I have been getting that metric from Tessa. She does not know I am using it in the framework. I am telling you now because you are entitled to know."
+    n "— and what I have been calling the 'rule-of-three fracture' metric. That last one is the count of times per twenty-four hours that your internal protective rituals are breaking under pressure. I have been getting that metric from Tessa. She does not know I am using it in the framework. I am telling you now because you are entitled to know."
 
     athought "She has been triangulating my breakdown from three LIs without telling me. On the framework I approved. Which is the correct use of the framework. I am not going to argue with that."
 

@@ -1,7 +1,12 @@
 init python:
-    # dedicate an ambience channel so it can sit under 'music'
-    if "ambient" not in renpy.audio.audio.get_all_channel_names():
-        renpy.music.register_channel("ambient", mixer="sfx", loop=True, stop_on_mute=True)
+    # dedicate ambience channels so they can sit under 'music'.
+    # The channels dict check is the public Ren'Py 8.x way to detect
+    # whether a channel is already registered — older get_all_channel_names()
+    # helper was removed somewhere between 7.x and 8.4.
+    _registered_channels = getattr(renpy.audio.audio, "channels", {})
+    if "ambient" not in _registered_channels:
+        renpy.music.register_channel("ambient",  mixer="sfx", loop=True, stop_on_mute=True)
+    if "ambient2" not in _registered_channels:
         renpy.music.register_channel("ambient2", mixer="sfx", loop=True, stop_on_mute=True)
 
     # sensible default levels
@@ -30,5 +35,10 @@ init python:
         renpy.music.stop(channel="ambient2", fadeout=0.8)
         # let music crossfade into in-game if you start; otherwise stop as needed later
 
-    config.enter_main_menu_callbacks.append(enter_main_menu_audio)
-    config.exit_main_menu_callbacks.append(exit_main_menu_audio)
+    # `config.enter_main_menu_callbacks` was removed somewhere before
+    # Ren'Py 8.4. We stash the helpers on the store and call them
+    # manually from the main_menu screen and from a screen-hide hook
+    # if/when audio assets are actually present. No error-throwing
+    # registration at init time.
+    renpy.store.enter_main_menu_audio = enter_main_menu_audio
+    renpy.store.exit_main_menu_audio  = exit_main_menu_audio

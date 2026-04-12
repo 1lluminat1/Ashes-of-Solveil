@@ -160,7 +160,7 @@ label a2_s08_the_analyst:
 
             n "(long pause) ...Interesting."
 
-            z "(quiet) Told you he wasn't a plant.
+            z "(quiet) Told you he wasn't a plant."
 
             n "I didn't say he wasn't a plant. I said his response was interesting."
             n "But I'll note: that's the first time your vocal patterns have shown genuine distress markers since we connected."

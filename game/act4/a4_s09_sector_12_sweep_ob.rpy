@@ -264,7 +264,7 @@ label a4_s09_sector_12_sweep_ob:
 
     nthought "I am not going to interrogate the relief this morning. The operation opens in nineteen minutes."
 
-    tp_seed("a4.ob.op.civilian_list_signed")
+    $ tp_seed("a4.ob.op.civilian_list_signed")
 
     # ========== PHASE 5 -- THE FINAL CHECK ==========
 
@@ -467,7 +467,7 @@ label a4_s09_sector_12_sweep_ob:
 
     nthought "I notice I am not afraid of the thought. I notice the absence of fear is new."
 
-    tp_seed("a4.ob.noelle.seven_names")
+    $ tp_seed("a4.ob.noelle.seven_names")
 
     # ========== PHASE 8 -- THE FRAMING LINE ==========
 

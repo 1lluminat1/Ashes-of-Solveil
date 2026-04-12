@@ -10,9 +10,7 @@
 $ _current_scene_id = "a4_s18_rhea_arrives_ob"
 $ scene_mark(_current_scene_id, "entered")
 
-# Local speaker for Rhea's comms intercept. Filter-coded -- clean, cold,
-# unaffected. Same color as a4_s08 (8a95a4) for continuity.
-define rhe = Character("Commander Rhea Vestin", color="#8a95a4")
+# Rhe is defined in a4_s08_echelon_interlude_4_ob.rpy
 
 label a4_s18_rhea_arrives_ob:
 
@@ -470,7 +468,7 @@ label a4_s18_rhea_arrives_ob:
 
     # --- TP SEED ---
 
-    tp_seed("a4.ob.rhea.someone_better")
+    $ tp_seed("a4.ob.rhea.someone_better")
 
     # ========== PHASE 6 -- NYRA LEAVES ==========
 

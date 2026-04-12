@@ -497,7 +497,7 @@ label .scene_end:
 
     return
 
-​
+
 # ========= CANONICAL NOTES =========
 # cann.scene_id: a2_s27_zira_commitment_emp
 # cann.chapter: Act II, Chapter IV — The Cost

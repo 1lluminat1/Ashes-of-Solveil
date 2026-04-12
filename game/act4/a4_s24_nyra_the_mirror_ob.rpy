@@ -401,7 +401,7 @@ label a4_s24_nyra_the_mirror_ob:
 
     "Aeron does not move."
 
-    "The head chair. The ops table. The cold overhead at 35%. The single warm lamp at the head of the table, throw catching the breast of his jacket where the inside pocket is. The letter is in the pocket. He has not moved his hand to the pocket since she entered. He does not move it now."
+    "The head chair. The ops table. The cold overhead at 35%%. The single warm lamp at the head of the table, throw catching the breast of his jacket where the inside pocket is. The letter is in the pocket. He has not moved his hand to the pocket since she entered. He does not move it now."
 
     athought "The letter is still there."
 

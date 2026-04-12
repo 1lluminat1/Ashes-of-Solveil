@@ -206,7 +206,8 @@ label a2_s04_first_day_out:
 
     # --- PLAYER CHOICE: HELP THE INJURED WORKER OR PROTECT THE LINE ---
     menu:
-        "A worker is pinned under the crate as the belt pushes more weight toward him.":
+        "A worker is pinned under the crate as the belt pushes more weight toward him."
+
         "Break position and help him.":
             $ choice_and_dev(
                 _current_scene_id, "_help_injured_worker", "EMP", factor=1,

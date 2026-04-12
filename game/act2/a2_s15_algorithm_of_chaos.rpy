@@ -146,7 +146,7 @@ label a2_s15_algorithm_of_chaos:
 
     n "Or both, depending on tactical need."
 
-    z "(quietly impressed) You really are good at this.
+    z "(quietly impressed) You really are good at this."
 
     n "(quietly pleased) ...Thank you. You're surprisingly adequate as well."
 

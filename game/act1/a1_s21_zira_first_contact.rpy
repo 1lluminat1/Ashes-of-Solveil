@@ -31,10 +31,6 @@ label a1_s21_zira_first_contact:
 
     athought "No eyes, no witnesses, no backup."
 
-    athought "Perfect place to bury the truth."
-
-    athought "Or perfect place to finally see what I've been cutting."
-
     # ========= ZIRA APPEARS =========
     # VISUAL: Movement at knee height—fiber bundle pulled; sparks spit; a hooded figure stays low, precise.
 
@@ -179,8 +175,6 @@ label a1_s21_zira_first_contact:
 
             z "Sector Ten isn't rebels. It's eight hundred civilians. Families. Kids. Your report is a purge order."
 
-            athought "She's still talking. Getting further away."
-
             z "(over shoulder) You can't refuse Marcus. But you can choose how you obey."
 
             z "Warn people. Fake a timestamp. Find the cracks."
@@ -193,8 +187,7 @@ label a1_s21_zira_first_contact:
 
             "Gone. Just pipe hum and the afterimage of someone who knew more about my mission than I did."
 
-            athought "Eight hundred people. Not five hundred. Not rebels."
-            athought "She told me that for free. While walking away."
+            athought "Eight hundred people. Not rebels."
 
             jump .scene_close
 
@@ -227,9 +220,7 @@ label a1_s21_zira_first_contact:
 
     z "Too many unregistered. Too much independence. Too much humanity."
 
-    athought "Not a military target. A civilian purge."
-
-    athought "I've been cutting civilians for years. But this one... deliberate."
+    athought "Not a military target."
 
     a "How do you know?"
 
@@ -250,20 +241,18 @@ label a1_s21_zira_first_contact:
     if pass_tier("OB3", "OB2"):
         athought "Humanity. A liability. But she reads me too easily—and I don't correct her."
     elif pass_tier("OB1", "NEU"):
-        athought "Humanity. A word I stopped using. It doesn't sound wrong tonight."
+        athought "Humanity. A word I stopped using."
     else:
-        athought "She's right. I don't scout. I'm here because I needed to see."
+        athought "She's right. I needed to see."
 
     z "Tomorrow's sweep hits eight hundred people, not five. I tracked them—families, elders, kids."
 
     z "Your report calls them 'targets.' You still think this is about rebels?"
 
-    athought "Eight hundred. The vendor. The child. The fires below. All of them."
-
     if scene_has("a1_s20_lower_spans", "bought_brew") or scene_has("a1_s20_lower_spans", "acknowledged_unders"):
         athought "I saw their faces tonight. Laughter, trade, ordinary life."
     else:
-        athought "I kept my distance. Pretended they were numbers. I can't now."
+        athought "I kept my distance. I can't now."
 
     # CAMERA: Push-in on Zira; wind strands of hair across her cheek; she doesn't flinch.
 
@@ -293,11 +282,7 @@ label a1_s21_zira_first_contact:
 
     label .scene_close:
 
-    a "(quiet) What the hell am I getting into..."
-
     athought "Eight hundred people. Dawn deployment. My orders."
-
-    athought "I'm supposed to obey. I always obey."
 
     athought "If I obey tomorrow... what's left of me afterward?"
 

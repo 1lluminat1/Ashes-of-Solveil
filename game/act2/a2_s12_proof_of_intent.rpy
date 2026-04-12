@@ -334,7 +334,7 @@ label a2_s12_proof_of_intent:
 
     n "(through comms) Echelon won't notice the loss until morning inventory. By then, the trail will be cold."
 
-    mira "(breathing hard) That was... that was actually good.
+    mira "(breathing hard) That was... that was actually good."
 
     cade "(looking at Aeron differently) You know your shit. I'll give you that."
 
@@ -374,7 +374,7 @@ label a2_s12_proof_of_intent:
         a "The mission isn't just supplies. It's who we become getting them."
         a "I've killed enough people who didn't deserve it. I'm not adding to the count when there's another way."
 
-        cade "(overhearing) ...You're not what I expected.
+        cade "(overhearing) ...You're not what I expected."
 
         a "What did you expect?"
 

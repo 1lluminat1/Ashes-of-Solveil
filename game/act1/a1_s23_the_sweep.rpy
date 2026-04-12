@@ -8,8 +8,7 @@ $ _current_scene_id = "a1_s23_the_sweep"
 $ scene_mark(_current_scene_id, "entered")
 $ op_start("op_391_sector10", note="Operation 391 — Sector 10 sweep")
 
-define unit2 = Character("[Unit-2]", color="#4A90E2")
-define unit3 = Character("[Unit-3]", color="#4A90E2")
+# unit2 and unit3 are defined in a1_s03_sector7_mission.rpy; unit4 only used here.
 define unit4 = Character("[Unit-4]", color="#4A90E2")
 
 
@@ -64,13 +63,9 @@ label a1_s23_the_sweep:
 
     unit4 "Orders, Glass?"
 
-    athought "Eight hundred people. The vendor. The child. The families."
+    athought "Eight hundred people below."
 
-    athought "All waiting below. All trusting the dawn will come like it always does."
-
-    athought "Weapons execute orders. Humans find cracks."
-
-    athought "Let's see if I can be both."
+    athought "Let's see if there's a crack in this."
 
     a "Standard sweep pattern. Alpha through Delta grids. Report all contacts."
 
@@ -108,9 +103,7 @@ label a1_s23_the_sweep:
 
             # CAMERA: Tight file through a narrow service spine; beams skim closed doors.
 
-            athought "Efficiency. No mercy. Just execution."
-
-            athought "I'm sorry. I tried to prepare. But I can't save you all."
+            athought "Efficiency. Just execution."
 
         "Detour through the market—let the sound carry ahead.":
             $ choice_and_dev(
@@ -179,9 +172,7 @@ label a1_s23_the_sweep:
 
             unit4 "...No weapon found. Cleared."
 
-            athought "No hesitation. Threat eliminated."
-
-            athought "She wasn't a threat. She was terrified."
+            athought "No weapon found."
 
             athought "And I killed her anyway."
 
@@ -260,9 +251,7 @@ label a1_s23_the_sweep:
 
             vendor "(dying) ...told you... it was better... than the Aeries..."
 
-            athought "No hesitation. No feeling."
-
-            athought "But I remember the taste. Real coffee. Real warmth."
+            athought "But I remember the taste."
 
         "Order him to run—give him a chance.":
             $ choice_and_dev(
@@ -403,7 +392,7 @@ label a1_s23_the_sweep:
 
             "Silence. Then slow confirmations."
 
-            athought "One hundred fifty alive. Fifty dead. Better than perfect obedience."
+            athought "One hundred fifty alive. Fifty dead."
 
     # ==========================================
     # MISSION COMPLETION
@@ -416,18 +405,17 @@ label a1_s23_the_sweep:
 
     unit4 "Evidence of resistance activity: minimal."
 
-    athought "It's done. 391 operations. The count continues."
+    athought "It's done."
 
     if mercy_heavy():
-        athought "But this time I fought it. Saved who I could."
-        athought "[get_saved()] people alive because something in me cracked."
-        athought "Never enough. But more than obedience would've allowed."
+        athought "[get_saved()] people alive."
+        athought "Never enough."
     elif mercy_any():
-        athought "I tried. Saved a few. Not enough."
-        athought "But I tried. That's more than 390 operations of obedience."
+        athought "I tried."
+        athought "Not enough."
     else:
         athought "I followed orders. Perfect execution. Zero hesitation."
-        athought "Weapons don't crack. Weapons just cut."
+        athought "Weapons just cut."
 
     # ========= MARCUS DEBRIEF =========
 
@@ -450,24 +438,19 @@ label a1_s23_the_sweep:
     # ========= FINAL REFLECTION — ALIGNMENT-BASED =========
 
     if empathy_band() == "empathy":
-        athought "Zira said trying matters. Even if it's not enough."
-        athought "I tried. I tried to be human."
-        athought "Maybe that's the first crack that won't seal."
+        athought "I tried to be human."
+        athought "It didn't seal."
     elif empathy_band() == "obedience":
         athought "Another mission. Another purge."
-        athought "No hesitation. No noise. Only efficiency."
         athought "I don't cry. I don't bleed. I endure."
     else:
         athought "I don't know what I am anymore."
-        athought "Half weapon. Half man. Neither whole."
         athought "But I felt it this time. Every breath. Every shot."
 
     # ========= EXIT =========
     # VISUAL: Dropship winch whine; Sector Ten recedes—smoke, ash, then a blanking fog.
 
     "The dropship climbs. Sector Ten shrinks below—smoke, ash, silence."
-
-    athought "Operation 391 complete."
 
     athought "I bled today. And the blood won't wash off."
 

@@ -67,7 +67,7 @@ label a4_s02_the_new_shape_ob:
 
     "0900."
 
-    "The war room is cold. The overhead strips are at 100%. The tactical displays behind the briefing position cycle through the sector consolidation plan Aeron approved three hours ago with a single stylus mark."
+    "The war room is cold. The overhead strips are at 100%%. The tactical displays behind the briefing position cycle through the sector consolidation plan Aeron approved three hours ago with a single stylus mark."
 
     "The plan is now running. Sector 4 day-one movement orders have already been relayed to the strike teams. The day-two feint is being staged in the equipment bay. The day-five Sector 9 entry is queued, waiting."
 
@@ -498,7 +498,7 @@ label a4_s02_the_new_shape_ob:
 
     athought "Nyra said that. I am repeating it to myself because it is the correct sentence."
 
-    tp_seed("a4.ob.room_named")
+    $ tp_seed("a4.ob.room_named")
 
     # --- SIGN OFF ---
 

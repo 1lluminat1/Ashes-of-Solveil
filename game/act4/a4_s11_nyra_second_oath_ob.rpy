@@ -303,7 +303,11 @@ label a4_s11_nyra_second_oath_ob:
 
     ny "The second way is slower. You say: let me understand what I am sealing first. We do not break the rite. We pause inside it. I will tell you what I can. What I cannot tell you, you must still accept, or the rite fails and you leave."
 
-    ny "The third way." A breath. "You say: I want this, but not as a ritual. As a woman and a man."
+    ny "The third way."
+
+    "A breath."
+
+    ny "You say: I want this, but not as a ritual. As a woman and a man."
 
     ny "I will answer the third way. Then you will have to choose again. So choose."
 
@@ -407,7 +411,7 @@ label a4_s11_nyra_second_oath_ob:
 
         #scene bg_officers_corridor_ob_night with dissolve
 
-        "The corridor is empty. The overhead strips hum at 30%. He stands in the middle of the corridor with a line of ash on his forehead and no rite to attach it to."
+        "The corridor is empty. The overhead strips hum at 30%%. He stands in the middle of the corridor with a line of ash on his forehead and no rite to attach it to."
 
         athought "My left hand is tremoring."
 

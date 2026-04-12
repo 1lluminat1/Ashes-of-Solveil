@@ -7,8 +7,7 @@
 $ _current_scene_id = "a1_s14_brothers_rooftop"
 $ scene_mark(_current_scene_id, "entered")
 
-define k  = Character("Kael")
-define ya = Character("Young Aeron")
+# k (Kael) and ya (Young Aeron) are defined centrally in game/ui/ui_solveil.rpy
 
 
 label a1_s14_brothers_rooftop:

@@ -136,7 +136,7 @@ label a4_s26_act_four_close_ob:
 
     athought "That is the taxonomy she chose."
 
-    "He scrolls one page. The framework accounts for Rhea's acceleration, for the Sector 12 losses, for the seven dead of yesterday. The math is clean. The predicted success rate is 74%."
+    "He scrolls one page. The framework accounts for Rhea's acceleration, for the Sector 12 losses, for the seven dead of yesterday. The math is clean. The predicted success rate is 74%%."
 
     athought "She is being honest about the number. Seventy-four is not a flattering number. She is not flattering me."
 

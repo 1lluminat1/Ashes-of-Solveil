@@ -31,9 +31,9 @@ label a1_s25_morning_after:
 
     "Dark circles under her eyes. Even in sleep, tension in her jaw. But her breath... warm against my skin."
 
-    athought "We fell asleep here. On the floor. Too exhausted to move."
+    athought "We fell asleep here. On the floor."
 
-    athought "Too broken to care. But this closeness... it's something real in the ruin."
+    athought "Too exhausted to move."
 
     # [OVER-CLOSURE TRIM] was: athought "I've never seen her like this. Unguarded. Undone."
     # [OVER-CLOSURE TRIM] was: athought "No performance. No polish. Just... her. Beautiful in the breaking."
@@ -57,7 +57,7 @@ label a1_s25_morning_after:
 
     # CAMERA: Hold the quiet; let breathing lead.
 
-    "Silence settles. Morning after. Everything exposed. Her breath quickens, close enough to feel."
+    "Silence settles. Morning after. Everything exposed."
 
     l "(attempting composure) I should go. I have—"
 
@@ -77,7 +77,7 @@ label a1_s25_morning_after:
 
     # CAMERA: Close on eyes—no mask, raw need.
 
-    "She meets my eyes. No mask. No polish. Just exhaustion. And something else—need, raw and unspoken."
+    "She meets my eyes. No mask. No polish. Just exhaustion."
 
     l "How do you do this? Exist like this? Without the performance?"
 
@@ -110,7 +110,7 @@ label a1_s25_morning_after:
 
     "Her hand moves. Wrist. Fingers brush the Band. Checking."
 
-    athought "I've seen her do this before. But now... now I'm watching."
+    athought "I've seen her do this before."
 
     a "Your Band. You keep touching it."
 
@@ -169,7 +169,7 @@ label a1_s25_morning_after:
 
     "Her hand touches her stomach. Brief. Unconscious."
 
-    athought "Stress. Trauma. Body rejecting everything."
+    athought "Stress. Trauma."
 
     a "At least drink something. Water. Coffee."
 
@@ -184,11 +184,7 @@ label a1_s25_morning_after:
 
     "Her hand moves. Wrist. Band. Checking. Compulsive."
 
-    athought "How many times a day? Dozens? Hundreds?"
-
-    athought "She's terrified of something. Something about that Band."
-
-    athought "But what?"
+    athought "She's terrified of something about that Band."
 
     # CAMERA: Pass the cup; fingertips linger a breath.
 
@@ -260,8 +256,6 @@ label a1_s25_morning_after:
 
     "No words. Just sitting. Taking her hand—gentle, not demanding. Her fingers curl into mine, holding on like a lifeline. Breaths syncing, slow and shared."
 
-    athought "Like she did for me yesterday."
-
     l "(through tears) You killed six hundred. I killed thirty-eight."
 
     l "Your horror is bigger. But mine is..."
@@ -323,7 +317,7 @@ label a1_s25_morning_after:
 
     l "That it'll stop working. That I'll become... nothing."
 
-    athought "Real fear. Not performance. Not deflection. Terror."
+    athought "Real fear."
 
     a "The Band doesn't make you something. You already are."
 
@@ -423,8 +417,6 @@ label a1_s25_morning_after:
 
             "No rush. Just presence. Heartbeats syncing, a quiet promise in the touch."
 
-            athought "She's warm. Real. Broken but here. And for a moment, the world fades."
-
             l "(whisper) I needed this."
 
             a "(quiet) Me too."
@@ -444,7 +436,7 @@ label a1_s25_morning_after:
 
             "The door clicks shut. Silence returns, heavier now."
 
-            athought "Maybe next time. When we're both ready."
+            athought "Maybe next time."
 
     # ========= OUTRO =========
 

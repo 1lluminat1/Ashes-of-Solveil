@@ -145,15 +145,13 @@ label a1_s24_confession_with_lyra:
 
     a "(whisper) Three hundred ninety times..."
 
-    a "How many families? How many lies?"
-
     # SFX: Fabric creak; knees hit floor.
 
     "The floor rushes up. Knees crack against tile but the impact barely registers."
 
     if empathy_band() == "obedience":
         a "(hollow) I failed."
-        a "I was supposed to be perfect. Three-nine-one... flawless."
+        a "I was supposed to be perfect."
         athought "The numbers don't add up anymore."
     else:
         a "(hollow) I killed them."
@@ -224,7 +222,7 @@ label a1_s24_confession_with_lyra:
 
     a "He owns me. The system owns me."
 
-    l "(fierce) Then we break free. Together."
+    l "(fierce) Then don't hand him the last word."
 
     # SFX: City hum dips under; let breathing lead.
 
@@ -239,39 +237,17 @@ label a1_s24_confession_with_lyra:
 
     a "(barely audible) ...Empty."
 
-    l "Good. You needed to be."
-
-    a "I killed six hundred people today."
-
-    l "I know."
-
-    a "How do I live with that?"
-
-    l "(quiet) We learn together."
-
     "Her hand finds his—an anchor in the void."
 
-    l "You tried to save them. That's more than obedience would allow."
-
-    a "I didn't save enough."
-
-    l "No one could have."
-
-    a "Then what was the point?"
-
-    l "You fought the orders from within. That's human."
-
-    a "I'm so tired."
-
-    l "Then rest. Just breathe. Tomorrow we figure it out."
+    l "Then stay here. Just for tonight."
 
     a "What if I can't be fixed?"
 
-    l "Then we're broken together."
+    l "Then I learn the shape of the break."
 
-    l "Windows recognize windows. But we're not windows anymore."
+    l "We're not windows anymore."
 
-    "They sit. The city hums beyond the pane. Broken but not alone."
+    "They sit. The city hums beyond the pane."
 
     a "(whisper) Thank you."
 
@@ -279,8 +255,7 @@ label a1_s24_confession_with_lyra:
 
     a "For seeing me."
 
-    l "I've always seen you. Even when you couldn't."
-    #TODO WRONG
+    l "I see you now."
     "She leans against me. I don't pull away."
 
     l "We'll get through this."

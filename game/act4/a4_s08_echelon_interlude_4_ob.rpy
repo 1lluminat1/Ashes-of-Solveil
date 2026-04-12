@@ -136,7 +136,7 @@ label a4_s08_echelon_interlude_4_ob:
 
     "The glass holds the sentence and does not give it back."
 
-    tp_seed("a4.ob.marcus.disappointed")
+    $ tp_seed("a4.ob.marcus.disappointed")
 
     # ========== PHASE 2 -- THE FOLIO ==========
 

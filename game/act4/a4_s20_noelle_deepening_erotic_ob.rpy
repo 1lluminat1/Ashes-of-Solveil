@@ -869,7 +869,7 @@ label a4_s20_noelle_deepening_erotic_ob:
 
         # --- TP SEED ---
 
-        tp_seed("a4.ob.noelle.hand_i_cannot_predict")
+        $ tp_seed("a4.ob.noelle.hand_i_cannot_predict")
 
         # ========== PHASE 9 -- CODA ==========
 

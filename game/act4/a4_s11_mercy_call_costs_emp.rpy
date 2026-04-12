@@ -405,7 +405,7 @@ label a4_s11_mercy_call_costs_emp:
 
     "Her board is the one physical artifact in the command post that is not projected. A tall standing whiteboard, magnet-strapped to the support column. Noelle uses the projection for models. She uses the board for numbers that need to be a physical thing in the room for the command culture to sit with."
 
-    "The 38% is on the board."
+    "The 38%% is on the board."
 
     "She has drawn it large. Red marker. Her own handwriting. Centered."
 
@@ -457,7 +457,7 @@ label a4_s11_mercy_call_costs_emp:
 
     "He does not sit. He does not leave."
 
-    "He puts his hand flat on the cool face of the board next to the 38%. Not on the number — beside it."
+    "He puts his hand flat on the cool face of the board next to the 38%%. Not on the number — beside it."
 
     athought "My hand is on the board next to the number. The number is in my handwriting now in the sense that a hand next to a number is a form of handwriting."
 
@@ -473,7 +473,7 @@ label a4_s11_mercy_call_costs_emp:
 
     "He walks out of the command post."
 
-    "The work lamp stays on behind him. The board stays up. The 38% stays red. The command post waits for Noelle's return at 2100 and the adapted-protocol estimate she will put in blue below the red."
+    "The work lamp stays on behind him. The board stays up. The 38%% stays red. The command post waits for Noelle's return at 2100 and the adapted-protocol estimate she will put in blue below the red."
 
     "Scene ends on the board."
 

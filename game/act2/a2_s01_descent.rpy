@@ -7,7 +7,7 @@
 $ _current_scene_id = "a2_s01_descent"
 $ scene_mark(_current_scene_id, "entered")
 
-define vendor = Character("Vendor")
+# vendor already defined in a1_s20_lower_spans.rpy
 define man = Character("Local")
 
 label a2_s01_descent:

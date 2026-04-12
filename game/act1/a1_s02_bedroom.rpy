@@ -42,10 +42,10 @@ label a1_s02_bedroom:
 
     pause 0.6
 
-    athought "Fractured. Like something held together past its limit."
+    athought "Fractured. Still holding, somehow."
 
     # ========= IDENTITY / PURPOSE =========
-    athought "The Band was supposed to give me purpose. Instead, I carry out orders—three hundred eighty-nine of them."
+    athought "The Band was supposed to give me purpose. Instead it gave me orders. Three hundred eighty-nine so far."
 
     athought "Father calls me Glass. Transparent, sharp, useful."
 
@@ -88,7 +88,7 @@ label a1_s02_bedroom:
 
     pause 0.8
 
-    athought "Looking doesn't change anything. Neither does not looking. But I can't put it away."
+    athought "Looking changes nothing. Neither does looking away. I still can't put it aside."
 
     # ========= KAEL'S ABSENCE =========
     # CAMERA: Hold on the photo. Slow rack focus—background sharpens to reveal the closed wardrobe.
@@ -121,7 +121,7 @@ label a1_s02_bedroom:
 
     "The uniform hangs in the wardrobe like a second skin waiting to be worn."
 
-    athought "...Even perfection hesitates."
+    athought "...Even perfection can stall."
 
     # ========= CHOICE — DOCTRINE TEST =========
     # VISUAL: Aeron's silhouette against the window. City hums far below.
@@ -165,7 +165,7 @@ label a1_s02_bedroom:
 
     pause 0.6
 
-    athought "Sector Seven. Containment sweep. Pre-dawn deployment."
+    athought "Sector Seven, before dawn. Another containment sweep."
 
     athought "Operation three-nine-zero."
 
@@ -180,11 +180,11 @@ label a1_s02_bedroom:
     # CAMERA: Wide shot. City visible beyond. Tower hum continues.
     # SYMBOL: He's part of the machine. The mission waits.
 
-    "The city pulses far below—a grid of light and shadow. The mission waits."
+    "The city pulses far below, all light and shadow. The mission is already waiting."
 
     pause 1.0
 
-    athought "First the blade. Then the smile. Same as always."
+    athought "First the blade, then the smile. Same as always."
 
     $ scene_mark(_current_scene_id, "completed")
     return

@@ -128,7 +128,7 @@ label a2_s16_finding_home:
     n "If they ever discover the falsification, they'll know exactly where to look."
     n "Also, I have... personal associations with the location. I'm uncertain how that will affect my operational clarity."
 
-    z "(quietly) Translation: it's where she started questioning everything.
+    z "(quietly) Translation: it's where she started questioning everything."
 
     n "...That's not inaccurate."
 
@@ -261,7 +261,7 @@ label a2_s16_finding_home:
             sel "Security has value. If Echelon can't find us, they can't kill us."
             sel "Noelle, you'll lead the reactivation. Zira, I want backup communication routes."
 
-            n "(to Aeron, very quietly) I won't let you down.
+            n "(to Aeron, very quietly) I won't let you down."
 
             $ rel_bump("Noelle", trust=1, affection=1)
             $ npc_remember("Noelle", "aeron_chose_her_base", tone="touched")
@@ -289,7 +289,7 @@ label a2_s16_finding_home:
 
             sel "Do it. Zira, security assessment. Noelle, community outreach mapping—who knows about this place and how they'll react."
 
-            t "(to Aeron, as others start planning) You didn't have to do that.
+            t "(to Aeron, as others start planning) You didn't have to do that."
 
             a "Yes, I did. You're the one who's been keeping people alive down here."
             a "It's about time someone built you a proper place to do it."

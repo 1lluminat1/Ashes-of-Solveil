@@ -37,19 +37,15 @@ label a1_s27_investigation:
 
     # VISUAL: Edge of bed. Still in clothes from yesterday. Exhausted. Hollow.
 
-    athought "Yesterday I killed 600 people."
+    athought "Lyra kept me from coming apart."
 
-    athought "Then I broke down completely. Shattered. Lyra held me together."
+    athought "Zira left me with a choice."
 
-    athought "Last night I met Zira. She gave me... something. Information. Access."
-
-    athought "I should feel different. Changed."
-
-    athought "...I just feel empty."
+    athought "...I still wake up empty."
 
     # ========= DEVICE CHECK =========
 
-    if has_device or em >= 1:
+    if has_device:
         "The device blinks—soft red pulse, waiting."
 
         athought "Zira said use it when I'm ready. Ready for what?"
@@ -74,7 +70,7 @@ label a1_s27_investigation:
     # DISCOVERY 1: RESISTANCE CHATTER
     # ==========================================
 
-    if has_device or em >= 1:
+    if has_device:
         "Messages flood the screen. Resistance networks. Active. Urgent."
 
         "[ENCRYPTED] - Sector 10 survivors confirm: Echelon sweep yesterday."
@@ -87,31 +83,19 @@ label a1_s27_investigation:
 
         athought "They're alive. The ones I saved. They're warning others."
 
-        athought "200 people spreading word. Families evacuating."
-
-        athought "My mercy... it's helping. It's actually helping."
-
-        athought "Maybe breaking was right. Maybe humanity isn't weakness."
+        athought "Mercy moved. It didn't die with the sector."
 
         if saved_shelter:
             "[ENCRYPTED] - Shelter survivors organizing evacuation routes."
 
-            athought "The shelter. 150 people. They're organizing. Leading others out."
-
-            athought "I saved them. And now they're saving more."
+            athought "The shelter survivors are moving people out."
 
         if saved_vendor:
             "[ENCRYPTED] - Contact 'Brew' establishing safe house in Sector 6."
 
-            athought "'Brew.' The vendor. He's alive. Setting up safe houses."
+            athought "'Brew.' He's alive. Still moving people."
 
-            athought "I let him run. And he's helping others run too."
-
-        athought "This is what Zira meant. This is why trying matters."
-
-        athought "I can't save everyone. But the ones I save... they save others."
-
-        athought "Ripples. Small mercies creating bigger ones."
+        athought "This is what she meant."
 
     else:
         "No chatter. No intercepts. Just official Echelon reports."
@@ -120,13 +104,12 @@ label a1_s27_investigation:
 
         "[OFFICIAL] - Sector secured. Mission success. No complications."
 
-        athought "That's what the report says. 800 eliminated. Zero survivors."
+        athought "That's what the report says. Zero survivors."
 
-        athought "But I know better. 200 are alive. Somewhere."
-
-        athought "The system doesn't know. Or doesn't care to know."
-
-        athought "Maybe that's good. Maybe their survival depends on invisibility."
+        if em >= 1:
+            athought "The report is lying."
+        else:
+            athought "If it isn't lying, then the sector is gone."
 
     # ==========================================
     # DISCOVERY 2: ENERGY GRID ANOMALIES
@@ -239,7 +222,7 @@ label a1_s27_investigation:
 
     m "Solveil takes another step toward perfection."
 
-    if has_device or em >= 1:
+    if has_device:
         "Searching Zira's network: 'Project Renewal.'"
 
         "No results. No mentions. Completely dark."
@@ -292,33 +275,15 @@ label a1_s27_investigation:
 
     "The room feels smaller. Walls pressing in."
 
-    athought "Resistance networks active. Survivors evacuating. That's good."
+    athought "The pieces don't fit."
 
-    athought "Energy maintenance scheduled. Shields offline. That's... concerning."
+    athought "Zira said days. Marcus said tonight."
 
-    athought "Project Renewal. Marcus wants me to witness. That's... what?"
+    athought "Troops out. Civilians locked in. Shields down."
 
-    athought "Troop evacuations. Civilians locked down. That's..."
+    athought "It should mean something obvious."
 
-    athought "The pieces don't fit. Or they do and I'm not seeing it."
-
-    athought "Something's happening tonight. Something big."
-
-    athought "Zira warned me. 'Days not weeks.' She meant tonight."
-
-    athought "I can't think. I'm too exhausted. Too broken."
-
-    athought "Yesterday I killed 600 people. Shattered completely. Lyra held me together."
-
-    athought "I can't handle more horror. Not today. Not yet."
-
-    athought "It's a drill. Or a lockdown. Or infrastructure work."
-
-    athought "It's not—it can't be—"
-
-    athought "Father wouldn't order mass extermination. The system has limits."
-
-    athought "...Doesn't it?"
+    athought "I keep refusing to see it."
 
     menu:
         athought "The data sits there. Pieces scattered. Picture incomplete. Dread building."
@@ -373,17 +338,17 @@ label a1_s27_investigation:
 
     athought "Understand if any of this matters."
 
-    "Jacket on. Device in pocket."
+    if has_device:
+        "Jacket on. Device in pocket."
+    else:
+        "Jacket on. Hands empty."
 
     "One last look at the room. The terminal still glowing. Data still waiting."
 
-    athought "200 people alive because I broke."
+    if em >= 1:
+        athought "Somebody is still breathing because I broke formation."
 
-    athought "Something big happening tonight because they warned others."
-
-    athought "My mercy rippling outward. But into what?"
-
-    athought "Victory? Or catastrophe?"
+        athought "I don't know what that buys them tonight."
 
     "The corridor is empty. No officers. No servants. No witnesses."
 

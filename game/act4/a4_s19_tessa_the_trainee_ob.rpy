@@ -553,7 +553,7 @@ label a4_s19_tessa_the_trainee_ob_stay_and_resist:
 
     # --- TP SEED ---
 
-    tp_seed("a4.ob.tessa.she_was_nineteen")
+    $ tp_seed("a4.ob.tessa.she_was_nineteen")
 
     # ========= STATE UPDATES (BRANCH A) =========
     $ canon_set("ob.siri_ondel.on_living_column", True)
@@ -1017,7 +1017,7 @@ label a4_s19_tessa_the_trainee_ob_stay_but_withdraw:
 
     # --- TP SEED ---
 
-    tp_seed("a4.ob.tessa.empty_not_angry")
+    $ tp_seed("a4.ob.tessa.empty_not_angry")
 
     # ========= STATE UPDATES (BRANCH B) =========
     $ canon_set("ob.tessa.will_not_teach_the_next_one", True)

@@ -32,10 +32,10 @@ label a1_s07_balcony:
         athought "I don't care about altitude—I just reflect orders."
     elif pass_tier("OB1", "NEU"):
         athought "They look down at the Unders like another species. Still human, all of us."
-        athought "I mirror whoever's watching. That's all."
+        athought "I mirror whoever's watching."
     else:
         athought "They look down at the Unders like another species. Still human, all of us—even the ones pretending not to be."
-        athought "I catch their reflection and give it back, cracked but still human."
+        athought "I give their reflection back."
 
     # ========= LYRA ARRIVES =========
     # VISUAL: Lyra steps through the door, silhouette against warm interior light.
@@ -106,7 +106,6 @@ label a1_s07_balcony:
                 athought "The world falls away. Just her eyes and the reflection inside them."
             else:
                 athought "Color on smoke. For once, no audience."
-                athought "She's not looking at the uniform. She's looking for what's left underneath."
 
         "Look past her to the city.":
             $ record_choice_once(_current_scene_id, "_look_past")
@@ -133,7 +132,6 @@ label a1_s07_balcony:
             l "Crossing the floor like that—bold, considering the room."
             a "Bold or stupid?"
             l "Maybe both."
-            athought "Her tone almost sounds human again."
     else:
         l "You skipped the introductions."
         a "Crowd wasn't my scene."
@@ -220,8 +218,6 @@ label a1_s07_balcony:
 
     a "They just respect my father. I'm just a rumor—an heir to a name that doesn't fit."
 
-    athought "Rylan. Heavy word, hollow sound."
-
     # ========= MICRO-CHOICE: ASH GESTURE =========
     # VISUAL: The ember brightens at the tip of his cigarette.
     # SYMBOL: What you do with the residue—discard or contain.
@@ -291,8 +287,6 @@ label a1_s07_balcony:
     "Neither of them steps away."
 
     pause 0.7
-
-    athought "The city hums below. Up here, the silence is louder."
 
     athought "Two people leaning close enough to touch, wondering if contact will shatter both."
 
@@ -371,7 +365,6 @@ label a1_s07_balcony:
         athought "And for the first time, I let it hurt."
     else:
         athought "Six hours ago, I killed four people. The thought keeps returning like a pulse I can't ignore."
-        athought "Standing here, I finally feel its weight."
 
     # [SEMANTIC LOOP TRIM] was: athought "Maybe that's what she means. Maybe feeling it is how you break."
     # Lyra's "shattering" line already said this. Aeron explaining it reduces the resonance.

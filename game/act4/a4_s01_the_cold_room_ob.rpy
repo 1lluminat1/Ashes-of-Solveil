@@ -162,7 +162,7 @@ label a4_s01_the_cold_room_ob:
 
     "The strategic room is dim."
 
-    "Someone -- Aeron -- has taken the overhead strips down to 30%. The tactical display against the back wall is dark. The only full-brightness light source is the pendant over the central table. A cold pendant, cold light. The pool it throws is the size of the table and no larger."
+    "Someone -- Aeron -- has taken the overhead strips down to 30%%. The tactical display against the back wall is dark. The only full-brightness light source is the pendant over the central table. A cold pendant, cold light. The pool it throws is the size of the table and no larger."
 
     "Outside the pool, the room is blue-grey. Institutional. A concrete box with a table in it."
 
@@ -206,7 +206,7 @@ label a4_s01_the_cold_room_ob:
 
     athought "She walked. I am still here. That is all the accounting this costs."
 
-    tp_seed("a4.ob.cold_open")
+    $ tp_seed("a4.ob.cold_open")
 
     # --- THE TURN ---
 

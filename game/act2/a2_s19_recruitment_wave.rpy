@@ -48,7 +48,7 @@ label a2_s19_recruitment_wave:
     sel "Fifty-five total now. Up from twenty last week."
 
     # VISUAL: Noelle at her station, data crystal projecting growth curves.
-    n "5.2 per day, to be precise. Retention rate after screening: 89%. Projected strength by end of week: 85. End of month: 140."
+    n "5.2 per day, to be precise. Retention rate after screening: 89%%. Projected strength by end of week: 85. End of month: 140."
 
     z "(from the doorway) Feeding eighty-five people is a different problem than feeding twenty. Just so we're clear."
 
@@ -60,7 +60,7 @@ label a2_s19_recruitment_wave:
 
     l "What's the process?"
 
-    sel "Triple verification. Noelle's algorithm cross-references Echelon databases — 87% accuracy. Zira's contacts verify stories on the ground. Tessa evaluates psychological conditioning patterns."
+    sel "Triple verification. Noelle's algorithm cross-references Echelon databases — 87%% accuracy. Zira's contacts verify stories on the ground. Tessa evaluates psychological conditioning patterns."
 
     t "(arriving with a tray of something warm) Echelon training leaves marks. Movement patterns, response times, eye behavior under stress. I can spot it."
 

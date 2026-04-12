@@ -34,11 +34,9 @@ label a1_s06_gala:
 
     pause 0.7
 
-    athought "All this gold to smooth over the cracks, plaster over decay with opulence."
+    athought "All this gold to smooth over the cracks."
 
-    athought "Six hours ago, I killed four people in Sector 7. Now I'm here—smiling, composed, as if blood rinses off that easily."
-
-    athought "But that's what they want. No conflict, no conscience, just seamless transition."
+    athought "Six hours ago, I killed four people in Sector 7. Now I'm here."
 
     # ========= SENSORY OVERLOAD =========
     # VISUAL: The ballroom swells—music crescendos, voices layer, chandeliers pulse with reflected motion.
@@ -47,7 +45,7 @@ label a1_s06_gala:
 
     pause 0.7
 
-    athought "Every surface reflects, every sound echoes—no silence, no stillness, just performance layered on performance."
+    athought "Every surface reflects. Every sound echoes."
 
     # ========= INTERNAL CRACK =========
     # NOTE: First subtle sign that the routine is slipping.
@@ -168,9 +166,7 @@ label a1_s06_gala:
 
             a "I'll try."
 
-            athought "He walks away. Not relieved—just sad. He sees what I've become."
-
-            athought "Maybe that's why he looked at me like that, like he remembered something I forgot. Something from before I became this."
+            athought "He walks away. Not relieved—just sad."
 
             jump a1_s06a_daren_flashback
 
@@ -183,7 +179,7 @@ label a1_s06_gala:
 
         pause 0.7
 
-        athought "The past is always closer than I think. Even now, I see him—not Daren today, Daren then, when we still thought this meant something."
+        athought "The past is always closer than I think."
 
     # ========= SURVEILLANCE =========
     # VISUAL: Overhead drone—live feeds rotate; Aeron's face flickers on a screen.
@@ -386,7 +382,7 @@ label a1_s06_gala:
 
             pause 0.7
 
-            athought "She sees it—what I am, what she is. Maybe that's why she wants to talk."
+            athought "She sees it."
 
             $ scene_mark(_current_scene_id, "balcony_meet_set")
 
@@ -416,7 +412,7 @@ label a1_s06_gala:
 
     pause 0.8
 
-    athought "Time to stop performing. Time to breathe."
+    athought "Time to breathe."
 
     $ scene_mark(_current_scene_id, "completed")
 

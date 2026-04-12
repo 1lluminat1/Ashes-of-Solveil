@@ -276,7 +276,7 @@ label a4_s03_marcus_adapts_ob:
 
     athought "The fastest way to do that is to not give him six days."
 
-    tp_seed("a4.ob.train_him_back")
+    $ tp_seed("a4.ob.train_him_back")
 
     # ========== PHASE 9 -- THE AUTHORIZATION ==========
 

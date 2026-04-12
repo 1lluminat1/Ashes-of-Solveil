@@ -493,7 +493,7 @@ label a4_s10_noelle_doctrine_ob:
 
     nthought "I do not stop writing because I am the register and the register is writing."
 
-    tp_seed("a4.ob.noelle.this_is_how_it_happens")
+    $ tp_seed("a4.ob.noelle.this_is_how_it_happens")
 
     # ========== PHASE 8 -- AERON'S EXIT ==========
 

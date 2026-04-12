@@ -9,8 +9,7 @@
 $ _current_scene_id = "a3_s09_echelon_interlude_3_ob"
 $ scene_mark(_current_scene_id, "entered")
 
-define analyst = Character("Analyst")
-define supervisor = Character("Supervisor")
+# analyst / supervisor are defined in a2_s24_echelon_interlude_2.rpy
 
 label a3_s09_echelon_interlude_3_ob:
 

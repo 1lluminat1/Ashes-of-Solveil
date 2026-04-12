@@ -37,27 +37,19 @@ label a1_s17_breaking_point:
 
     athought "Now I think I understand why."
 
-    athought "You couldn't live as what they made you. You couldn't be Father's weapon."
-
-    athought "You jumped because the cage was worse than falling."
-
-    athought "Not sadness, not anger—just the weight of breathing when there's no reason left to."
-
     # ========= EMPATHY VARIATION — INTERNAL MONOLOGUE =========
     # LIGHTING: OB-hard keeps him darker; mid adds faint fill; EMP adds soft rim from balcony.
 
     if pass_tier("OB3", "OB2"):
         athought "I don't know if I'm angry anymore. Just tired."
-        athought "Tired of pretending any of this means something—tired of wasting efficiency on meaning."
-        athought "Weapons don't dream. Weapons conclude."
+        athought "Tired of pretending any of this means something."
+        athought "Weapons don't dream."
     elif pass_tier("OB1", "NEU"):
         athought "I don't know if I'm angry anymore. Just tired."
         athought "Tired of pretending any of this means something."
-        athought "Tired of following orders just to keep breathing."
     else:
         athought "I don't know if I'm angry anymore. Just tired."
         athought "Tired of pretending any of this means something."
-        athought "Maybe it could, if I still remembered how to feel."
 
     # ========= THE BALCONY =========
 
@@ -77,8 +69,7 @@ label a1_s17_breaking_point:
     "Below, the city is a grid of light that refuses to blink. Aeries, The Spans, Unders—locked in a perfect, suffocating stack."
 
     athought "All that structure. All that order."
-    athought "And none of it leaves room for people like me."
-    athought "People like Kael."
+    athought "No room."
 
     # VISUAL: He leans into wind a degree; coat hem snaps; one foot inches closer to the rail.
 
@@ -132,10 +123,6 @@ label a1_s17_breaking_point:
 
     athought "I became exactly what you warned me not to."
 
-    athought "And now I understand why you jumped."
-
-    athought "I wish you'd left a note. Something. Anything but silence."
-
     # ========= THE PULL =========
     # VISUAL: Drift toward toes at edge; reveal micro scuff marks on stone.
 
@@ -163,9 +150,7 @@ label a1_s17_breaking_point:
 
     l "Something in you is breaking. That might be what saves you."
 
-    athought "She sees it. The cracks spreading."
-
-    athought "Maybe she's right. Maybe breaking is the only way out."
+    athought "She sees it."
 
     # ========= THE MISSION =========
     # VISUAL: Over-shoulder back toward room: red seal on envelope glows faint in darkness.
@@ -238,9 +223,7 @@ label a1_s17_breaking_point:
 
         athought "I can't keep living like this..."
 
-        athought "But maybe... maybe breaking doesn't mean falling."
-
-        athought "Maybe it means shattering what they made and finding what's underneath."
+        athought "But not like that."
 
     elif _bp_choice == "c":
         # === NEW: Emergence — "Sit down at the rail" ===
@@ -256,9 +239,7 @@ label a1_s17_breaking_point:
         "Wind finds him here too — but lower, less demanding."
 
         athought "I don't know what I want."
-        athought "I don't know if I want to fall or stay or fight or give up."
         athought "I just know I can't decide right now."
-        athought "And maybe that's okay. Maybe not knowing is its own kind of answer."
 
         "The city breathes below. He breathes with it."
         "Not performing survival. Not performing despair."
@@ -267,8 +248,7 @@ label a1_s17_breaking_point:
         pause 1.2
 
         athought "Kael stood here. Kael chose."
-        athought "Father chose for me. The system chose for me."
-        athought "But right now, nobody is choosing. And I'm still here."
+        athought "Right now, nobody is choosing."
 
     # ========= THE KNOCK =========
     # SFX: Three distinct knocks (wood on metal), 180ms apart; slight room slapback.
@@ -302,9 +282,7 @@ label a1_s17_breaking_point:
 
     # ========= CLOSING =========
 
-    athought "I don't cry. I don't break."
-
-    athought "Not in front of anyone."
+    athought "Not now."
 
     # CAMERA: End on profile silhouette; ember dims; wind carries smoke away; hold 1 beat, then cut.
 

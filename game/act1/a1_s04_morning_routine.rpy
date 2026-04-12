@@ -19,7 +19,7 @@ label a1_s04_morning_routine:
 
     "Morning arrives on schedule—punctual, indifferent, already too bright."
 
-    athought "Four hours of sleep. Not enough to wash the 99.7% out of my head."
+    athought "Four hours of sleep. Not enough to wash the 99.7%% out of my head."
 
     athought "The mission is logged, filed, supposedly forgotten. Today, a different performance awaits."
 

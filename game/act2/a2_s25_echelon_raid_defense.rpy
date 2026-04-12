@@ -100,7 +100,7 @@ label a2_s25_echelon_raid_defense:
 
     "Twenty simultaneous conversations. Every fighter an instrument. Noelle conducting."
 
-    n "Enemy adapting. Three-vector assault. North perimeter breach probability: 78%. Recommend staged fallback in ninety seconds."
+    n "Enemy adapting. Three-vector assault. North perimeter breach probability: 78%%. Recommend staged fallback in ninety seconds."
 
     sel "(over comms) Confirmed. Lyra — fallback on my mark."
 
@@ -152,7 +152,7 @@ label a2_s25_echelon_raid_defense:
 
     sel "Enemy casualties: twenty-two of fifty-two. Forty-two percent."
 
-    n "Casualty rate 13% in defensive action against a superior force. Within acceptable parameters."
+    n "Casualty rate 13%% in defensive action against a superior force. Within acceptable parameters."
 
     "Noelle says 'acceptable parameters' and her voice doesn't crack, but she looks at the wall instead of at anyone."
 
@@ -169,7 +169,7 @@ label a2_s25_echelon_raid_defense:
         athought "I'll carry them."
 
     elif canon_get("path_state") == "OB":
-        athought "Forty dead. 547 operational. 13% casualty rate. We inflicted 42% on their force."
+        athought "Forty dead. 547 operational. 13%% casualty rate. We inflicted 42%% on their force."
         athought "The math works. The distributed structure held. The operation survived."
         athought "Forty names on Tessa's board that weren't there yesterday."
         athought "The math works. It just costs."

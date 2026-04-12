@@ -27,9 +27,7 @@ label a1_s20_lower_spans:
 
     "Each level bleeds more color—red, green, electric blue. The edges run brightest."
 
-    athought "I couldn't sleep. Not after Marcus's order."
-
-    athought "Not after Lyra. Not after standing on that edge."
+    athought "I couldn't sleep."
 
     athought "Air tastes different down here—metal and rainwater. Not clean, but honest."
 
@@ -42,10 +40,6 @@ label a1_s20_lower_spans:
     athought "They call this 'forgotten.' It feels more awake than the Aeries."
 
     athought "Tomorrow at dawn, I'm ordered to sweep this sector."
-
-    athought "200 to 500 targets. 'Acceptable collateral.'"
-
-    athought "Weapons execute orders. But tonight... tonight I wanted to see what I'm ordered to destroy."
 
     # ========= ENCOUNTER 1 — THE VENDOR =========
 
@@ -91,11 +85,7 @@ label a1_s20_lower_spans:
 
             vendor "(nods) You're alright in my book. Stay warm."
 
-            athought "Down here, respect isn't inherited. It's earned."
-
-            athought "Tomorrow, I'm ordered to clear this sector. Will he survive the sweep?"
-
-            athought "I'm not supposed to ask these questions. But I'm asking now."
+            athought "Tomorrow, I'm ordered to clear this sector."
 
         "Walk past without stopping.":
             $ choice_and_dev(
@@ -108,9 +98,7 @@ label a1_s20_lower_spans:
 
             "The vendor watches him pass. Doesn't call out again."
 
-            athought "Tomorrow, I might kill him. Better not to know his face."
-
-            athought "That's what I'm supposed to think. ...Why does it feel wrong tonight?"
+            athought "Tomorrow, I might kill him."
 
     # ========= TRANSITION =========
 
@@ -131,8 +119,6 @@ label a1_s20_lower_spans:
     "Small hands. Dirty knuckles. Eyes too old for the face."
 
     athought "Tomorrow, this child might be on the casualty list."
-
-    athought "'Acceptable collateral.'"
 
     menu:
         athought "The child's breath fogs the air between us."
@@ -160,10 +146,6 @@ label a1_s20_lower_spans:
 
             child "(shrugs) Dunno. He didn't come back."
 
-            athought "How many stories like this are there? How many I'll never hear?"
-
-            athought "How many more after tomorrow's sweep?"
-
             child "You gonna take people too?"
 
             a "(honest) I hope not."
@@ -172,7 +154,7 @@ label a1_s20_lower_spans:
 
             "The child backs away, then disappears into the pipes."
 
-            athought "Tomorrow, that child is a target. I'm supposed to obey. But something's breaking."
+            athought "Tomorrow, that child is a target."
 
         "Say nothing and keep walking.":
             $ choice_and_dev(
@@ -187,9 +169,7 @@ label a1_s20_lower_spans:
 
             "The child vanishes into shadow. Contempt lingers."
 
-            athought "Can't blame them. I'd spit too."
-
-            athought "Tomorrow, that child might die in the sweep. And they'll die hating me."
+            athought "Tomorrow, that child might die in the sweep."
 
     # ========= ENCOUNTER 3 — THE COURTYARD =========
 
@@ -204,10 +184,6 @@ label a1_s20_lower_spans:
     "A couple shares food from a dented tin. An old man tells stories to children."
 
     athought "They have nothing. And somehow, they have everything I don't."
-
-    athought "Tomorrow at dawn, this courtyard is a target zone."
-
-    athought "Those fires will be extinguished. Those voices silenced."
 
     "A child points up. The music stops. Eyes find him in the dark."
 
@@ -225,11 +201,7 @@ label a1_s20_lower_spans:
 
             "After a beat, the old man nods back. The guitar resumes."
 
-            athought "Not forgiveness, not trust—but not hatred either. It's more than I deserve."
-
-            athought "Tomorrow, I'm ordered to kill them. And tonight, they acknowledged me."
-
-            athought "Something in me is cracking. I can feel it."
+            athought "Tomorrow, I'm ordered to kill them."
 
         "Step back into shadow.":
             $ choice_and_dev(
@@ -242,9 +214,7 @@ label a1_s20_lower_spans:
 
             "The guitar picks up again. Life continues without him."
 
-            athought "I don't belong down here. I don't belong anywhere."
-
-            athought "Tomorrow, I'll belong to the mission. I always do."
+            athought "Tomorrow, I'll belong to the mission."
 
     # ========= CLOSING REFLECTION =========
 
@@ -253,26 +223,17 @@ label a1_s20_lower_spans:
         athought "Tomorrow it will be corrected. Efficiently."
     elif pass_tier("OB1", "NEU"):
         athought "This edge is a mirror. Everyone's running from something. Me too."
-        athought "Maybe the mission isn't the cure. Maybe it's the infection."
+        athought "Maybe the mission is the infection."
     else:
         athought "Every face tonight was a reason not to follow that order."
-        athought "Maybe the cracks aren't breaking me. Maybe they're letting the light in."
 
     "Wind carries rain and iron. The lights dip, then steady."
 
     "He keeps walking. Deeper into the shadows."
 
-    athought "Tomorrow, I'm ordered to sweep this sector. The vendor, the child, the families around the fires."
+    athought "Tomorrow, I'm ordered to sweep this sector."
 
-    athought "All of them. Gone."
-
-    athought "I'm supposed to obey orders. I'm not supposed to question."
-
-    athought "But I came here tonight to see their faces. To know what I'm about to destroy."
-
-    athought "Maybe that's the crack spreading. Maybe that's something breaking."
-
-    athought "Or maybe... maybe it's what's underneath that's finally waking up."
+    athought "Tonight, I saw their faces."
 
     $ scene_mark(_current_scene_id, "completed")
 

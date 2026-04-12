@@ -22,8 +22,6 @@ label a1_s08_bedroom:
 
     "Later that night..."
 
-    athought "She didn't say goodbye—just gone, like she was never there."
-
     # ========= BALCONY CALLBACK =========
     # NOTE: Conditional warmth based on prior intimacy choices.
 
@@ -159,23 +157,15 @@ label a1_s08_bedroom:
 
     if pass_tier("OB2", "OB3"):
         athought "Tonight changed nothing. Connection is noise, and I can't afford noise."
-        athought "She recognized something in me—and I still chose to hold form."
-        athought "Wholeness is a myth for those who hesitate."
+        athought "And yet the room won't settle."
     elif pass_tier("OB1", "NEU"):
         athought "She said we recognize each other. Maybe she was right, maybe she was wrong."
-        athought "But the thought won't leave me."
     else:
-        athought "But tonight felt different. Lyra made it different."
         athought "Two polished surfaces, both cracking, both wondering if breaking means freedom or falling."
-        athought "Maybe breaking is the only way back to being whole."
 
     "The mission waits. It always does."
 
-    "But tonight, the past won't stay buried."
-
-    athought "She asked if I remembered what wholeness felt like."
-
-    athought "I don't. But for a moment on that balcony, I almost did."
+    athought "For a moment on that balcony, I almost remembered something."
 
     scene black with fade
 
