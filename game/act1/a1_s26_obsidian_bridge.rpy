@@ -36,16 +36,13 @@ label a1_s26_obsidian_bridge:
     athought "If I just followed orders... don't bother coming."
 
     if em >= 2:
-        athought "I tried. I saved who I could. Two hundred alive because something in me cracked."
-        athought "But six hundred dead. Six hundred faces I can't unsee."
-        athought "Is that enough? Does trying count when you still kill hundreds?"
+        athought "I tried. People are alive because something in me cracked."
+        athought "People are dead for the same reason."
     elif em >= 1:
-        athought "I tried. Not hard enough. Maybe fifty saved. Seven hundred fifty dead."
-        athought "Obedience won. Mostly. But I fought it—some."
-        athought "Is that enough?"
+        athought "I tried. Not enough."
+        athought "Obedience still got most of what it wanted."
     else:
         athought "I followed orders. Perfect execution. Eight hundred dead. Zero mercy."
-        athought "I didn't crack. I obeyed."
         athought "She won't come. Why would she?"
 
     # ========= ZIRA ARRIVES =========
@@ -137,6 +134,7 @@ label a1_s26_obsidian_bridge:
         z "Right now, Marcus feeds you lies. With this, you see. Then you choose."
 
         $ grant_tool("encrypted_comm")
+        $ give_ghostline_chip(accepted=True)          # Act I symbolic acceptance → EMP candidate
         $ scene_mark(_current_scene_id, "device_given")
         $ flag_on("Zira", "ghostline_access_granted")
         $ tp_seed("a1.bridge.ghostline_accept")
@@ -195,6 +193,7 @@ label a1_s26_obsidian_bridge:
         z "No half-measures next time."
 
         $ grant_tool("encrypted_comm")
+        $ give_ghostline_chip(accepted=False)         # held but not accepted; no EMP override
         $ scene_mark(_current_scene_id, "device_given_conditional")
         $ flag_on("Zira", "ghostline_access_granted")
         $ tp_seed("a1.bridge.ghostline_accept")
@@ -257,6 +256,8 @@ label a1_s26_obsidian_bridge:
         athought "Eight hundred dead. And I learned nothing."
 
         $ scene_mark(_current_scene_id, "device_withheld")
+        # No chip, no acceptance — path candidate decided purely by OB ratio.
+        $ evaluate_path_candidate_act1()
         $ scene_mark(_current_scene_id, "completed")
 
         jump a1_s27_investigation
@@ -349,6 +350,10 @@ label a1_s26_obsidian_bridge:
     athought "What the hell am I supposed to do with that?"
 
     "The city breathes—unaware. Cracked and walking, I head home."
+
+    # Act I path candidate snapshot — feeds Act II lock via ratios.
+    # Chip acceptance forces EMP; otherwise the OB ratio decides.
+    $ evaluate_path_candidate_act1()
 
     $ scene_mark(_current_scene_id, "completed")
 

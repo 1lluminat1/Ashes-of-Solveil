@@ -281,48 +281,73 @@ screen codex_entry_modal(entry_id):
     on "show" action Function(codex_open_cue)
     key "mouseup_3" action Return()
     key "K_KP_ENTER" action Return()
+    key "K_ESCAPE"   action Return()
+
+    # Darken the scene underneath.
+    add Solid("#000000AA")
+
     frame:
         style_prefix "codex"
-        vbox:
-            hbox:
-                xfill True
-                spacing 12
+        xalign 0.5
+        yalign 0.5
+        xsize 1280
+        ysize 800
+        padding (36, 32)
 
-                $ _meta = STATE["codex"]["entries"][entry_id]
-                $ _prog = STATE["codex"]["progress"].get(entry_id, 0)
-                $ _maxs = max(0, len(_meta.get("stages", [])) - 1)
+        has vbox
+        spacing 12
 
-                text _meta["title"] size 36
-
-                if _maxs >= 1 and _prog < _maxs:
-                    null width 8
-                    text _("(partial)") size 16 color "#9aa"
-
-                # flex spacer (replaces 'spacer')
-                null xfill True
-
-                if entry_id in STATE["codex"]["recent"]:
-                    text _("recent") size 14 color "#888"
-                    null width 12
-
-                textbutton _("Full Codex") action ShowMenu("codex_browser")
-                textbutton _("Back") action Return()
-
-    null height 8
-    vpgrid:
-        cols 1
-        mousewheel True
-        draggable True
-        for para in codex_render(entry_id):
-            text para size 26
-            null height 8
-    null height 12
-    $ recent = [i for i in STATE["codex"]["recent"] if i != entry_id]
-    if recent:
+        # ---------- Header ----------
         hbox:
-            text _("Recent:") size 18
-            for rid in recent:
-                textbutton STATE["codex"]["entries"][rid]["title"] action [Function(codex_push_recent, rid), Hide("codex_entry_modal"), Function(codex_open, rid)]
+            xfill True
+            spacing 12
+
+            $ _meta = STATE["codex"]["entries"][entry_id]
+            $ _prog = STATE["codex"]["progress"].get(entry_id, 0)
+            $ _maxs = max(0, len(_meta.get("stages", [])) - 1)
+
+            text _meta["title"] size 36
+
+            if _maxs >= 1 and _prog < _maxs:
+                null width 8
+                text _("(partial)") size 16 color "#9aa"
+
+            # Flex spacer
+            null xfill True
+
+            if entry_id in STATE["codex"]["recent"]:
+                text _("recent") size 14 color "#888"
+                null width 12
+
+            textbutton _("Full Codex") action ShowMenu("codex_browser")
+            textbutton _("Back") action Return()
+
+        null height 8
+
+        # ---------- Body ----------
+        viewport:
+            xfill True
+            ysize 600
+            mousewheel True
+            draggable True
+            scrollbars "vertical"
+
+            vbox:
+                spacing 10
+                for para in codex_render(entry_id):
+                    text para size 24
+
+        null height 8
+
+        # ---------- Recent strip ----------
+        $ _recent = [i for i in STATE["codex"]["recent"] if i != entry_id]
+        if _recent:
+            hbox:
+                spacing 10
+                text _("Recent:") size 18
+                for rid in _recent:
+                    textbutton STATE["codex"]["entries"][rid]["title"]:
+                        action [Function(codex_push_recent, rid), Hide("codex_entry_modal"), Function(codex_open, rid)]
 
 screen codex_browser():
     style_prefix "codex"

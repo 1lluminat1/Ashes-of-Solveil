@@ -280,3 +280,50 @@ init python:
         elif ps == "EMP":
             pal["radius"] = min(12, pal["radius"] + 2)
         return pal
+
+    # -------------------------------
+    # PATH-AWARE HUE DRIVER
+    # -------------------------------
+    # Brand accents. These are the values referenced by the UI Bible
+    # (doc 50) and drive the hue overlay + accent swap on path lock.
+    UI_ACCENT_EMP = "#5CC8FF"   # ice blue — empathy
+    UI_ACCENT_OB  = "#FF4365"   # red-magenta — obedience
+    UI_FOCUS_RING = "#7AA5FF"
+    UI_NEUTRAL    = "#8FA6B8"
+
+    def path_accent():
+        """
+        Return the active accent hex for the current path.
+        Post-lock: reads STATE['canon']['path_state']. Pre-lock: reads
+        empathy_band() so the UI glides toward the player's momentum.
+        Falls back to neutral if neither is set.
+        """
+        ps = STATE.get("canon", {}).get("path_state", None)
+        if ps == "EMP": return UI_ACCENT_EMP
+        if ps == "OB":  return UI_ACCENT_OB
+        try:
+            band = empathy_band()
+        except Exception:
+            band = "conflicted"
+        if band == "empathy":   return UI_ACCENT_EMP
+        if band == "obedience": return UI_ACCENT_OB
+        return UI_NEUTRAL
+
+    def ui_overlay_color():
+        """
+        Return an (r, g, b, a) tuple for a subtle state-aware veil
+        overlay. Alpha is driven by |alignment_momentum()| × 0.06 so
+        indecisive runs stay neutral and committed runs tint harder.
+        Used by `add Solid(ui_overlay_color())` layered above panels.
+        """
+        try:
+            band = empathy_band()
+            m    = max(0.0, min(1.0, abs(alignment_momentum())))
+        except Exception:
+            return (0, 0, 0, 0)
+        alpha = int(255 * 0.06 * m)
+        if band == "empathy":
+            return (0x5C, 0xC8, 0xFF, alpha)
+        if band == "obedience":
+            return (0xFF, 0x43, 0x65, alpha)
+        return (0, 0, 0, 0)

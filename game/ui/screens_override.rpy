@@ -171,6 +171,10 @@ screen main_menu():
                 textbutton _("Continue") action Continue() sensitive _has_any_saves()
                 textbutton _("Load Game") action ShowMenu("load")
                 textbutton _("Settings")  action ShowMenu("preferences")
+                # Codex appears on the main menu only after the player has unlocked
+                # at least one entry in a previous run — preserves the cold open.
+                if _codex_has_any():
+                    textbutton _("Codex") action ShowMenu("codex_browser")
                 if renpy.has_screen("extras"):
                     textbutton _("Extras") action ShowMenu("extras")
                 textbutton _("Quit") action Quit(confirm=True)
