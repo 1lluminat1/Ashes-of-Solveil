@@ -270,6 +270,8 @@ label a3_s22_liora_execution_emp:
 
     executioner "Aiding and abetting known traitor Aeron Rylan in the commission of acts of rebellion against the lawful government of Solveil."
 
+    # thinking about adding a beat here where we focus on Macus's face when he reads Aeron's name. Marcus's lack of a reaction should instill horror to the reader, showing how cold Marcus is.
+    
     "The world stops."
 
     athought "They said my name."

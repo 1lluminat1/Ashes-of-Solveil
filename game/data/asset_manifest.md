@@ -420,6 +420,202 @@ Every `play music/sound/ambient` reference across the script, commented or activ
 | ⬜ `sfx_wardrobe_creak.ogg` | sound | 1 | 1 commented |
 | ⬜ `sfx_wind_low.ogg` | sound | 1 | 1 commented |
 
+## 5. Per-Scene Render Budget
+
+Workflow: each scene lives in its own folder under `images/bg/<scene_id>/` and is rendered as a numbered sequence `001.png`, `002.png`, etc. One render typically covers 2-3 dialogue beats — a character talks for a few lines on one pose, then the next render handles the next 2-3 beats.
+
+**To scaffold a scene before you render it:**
+
+```
+python3 tools/inject_render_stubs.py <scene_id>
+```
+
+That inserts commented `# scene <scene_id>_NNN with dissolve` stubs at each cluster boundary. Uncomment each as the matching render lands in `images/bg/<scene_id>/NNN.png`. Auto-registration lives in `game/systems/bg_autoregister.rpy` — just drop files in the folder and Ren'Py picks them up without manual `image` definitions.
+
+**Columns:**
+
+- **Beats** — dialogue/narration lines inside the scene's label
+- **Stubs** — commented `# scene ... @render_stub` lines (0 = not scaffolded yet)
+- **Renders** — PNG/JPG/WEBP files present in the scene's folder
+- **%** — renders / stubs, or renders / (beats/3) as an estimate if unscaffolded
+
+| Scene | Beats | Stubs | Renders | % | Status |
+|---|---|---|---|---|---|
+| `a1_s00_tutorial` | 0 | 0 | 0 | 0% | ⬜ not started |
+| `a1_s00a_intro` | 10 | 0 | 0 | 0% | ⬜ not started |
+| `a1_s01_branding` | 71 | 0 | 0 | 0% | ⬜ not started |
+| `a1_s02_bedroom` | 28 | 0 | 0 | 0% | ⬜ not started |
+| `a1_s03_sector7_mission` | 57 | 0 | 0 | 0% | ⬜ not started |
+| `a1_s04_morning_routine` | 27 | 0 | 0 | 0% | ⬜ not started |
+| `a1_s05_hallway` | 48 | 0 | 0 | 0% | ⬜ not started |
+| `a1_s06_gala` | 126 | 0 | 0 | 0% | ⬜ not started |
+| `a1_s06a_daren_flashback` | 13 | 0 | 0 | 0% | ⬜ not started |
+| `a1_s07_balcony` | 129 | 0 | 0 | 0% | ⬜ not started |
+| `a1_s08_bedroom` | 45 | 0 | 0 | 0% | ⬜ not started |
+| `a1_s09_inspection_day` | 59 | 0 | 0 | 0% | ⬜ not started |
+| `a1_s10_barracks_morning` | 42 | 0 | 0 | 0% | ⬜ not started |
+| `a1_s11_hill_flashback` | 94 | 0 | 0 | 0% | ⬜ not started |
+| `a1_s13_demonstration_floor` | 49 | 0 | 0 | 0% | ⬜ not started |
+| `a1_s14_brothers_rooftop` | 81 | 0 | 0 | 0% | ⬜ not started |
+| `a1_s15_archive_of_merit` | 31 | 0 | 0 | 0% | ⬜ not started |
+| `a1_s16_debrief_theater` | 24 | 0 | 0 | 0% | ⬜ not started |
+| `a1_s17_breaking_point` | 78 | 0 | 0 | 0% | ⬜ not started |
+| `a1_s18_lyra_visit` | 130 | 0 | 0 | 0% | ⬜ not started |
+| `a1_s19_the_message` | 90 | 0 | 0 | 0% | ⬜ not started |
+| `a1_s20_lower_spans` | 84 | 0 | 0 | 0% | ⬜ not started |
+| `a1_s21_zira_first_contact` | 101 | 0 | 0 | 0% | ⬜ not started |
+| `a1_s22_return_to_aeries` | 80 | 0 | 0 | 0% | ⬜ not started |
+| `a1_s23_the_sweep` | 155 | 0 | 0 | 0% | ⬜ not started |
+| `a1_s24_confession_with_lyra` | 116 | 0 | 0 | 0% | ⬜ not started |
+| `a1_s25_morning_after` | 184 | 0 | 0 | 0% | ⬜ not started |
+| `a1_s26_obsidian_bridge` | 136 | 0 | 0 | 0% | ⬜ not started |
+| `a1_s27_investigation` | 143 | 0 | 0 | 0% | ⬜ not started |
+| `a1_s28_purge` | 232 | 0 | 0 | 0% | ⬜ not started |
+| `a2_s01_descent` | 181 | 0 | 0 | 0% | ⬜ not started |
+| `a2_s02_reality_check` | 192 | 0 | 0 | 0% | ⬜ not started |
+| `a2_s03_safe_house_planning` | 87 | 0 | 0 | 0% | ⬜ not started |
+| `a2_s04_first_day_out` | 202 | 0 | 0 | 0% | ⬜ not started |
+| `a2_s05_clinic` | 270 | 0 | 0 | 0% | ⬜ not started |
+| `a2_s06_hand_off_the_wire` | 235 | 0 | 0 | 0% | ⬜ not started |
+| `a2_s07_quiet_night` | 199 | 0 | 0 | 0% | ⬜ not started |
+| `a2_s08_the_analyst` | 179 | 0 | 0 | 0% | ⬜ not started |
+| `a2_s09_armor_down` | 189 | 0 | 0 | 0% | ⬜ not started |
+| `a2_s10_static_faith` | 132 | 0 | 0 | 0% | ⬜ not started |
+| `a2_s11_selenes_judgment` | 150 | 0 | 0 | 0% | ⬜ not started |
+| `a2_s12_proof_of_intent` | 180 | 0 | 0 | 0% | ⬜ not started |
+| `a2_s13_echelon_interlude_1` | 39 | 0 | 0 | 0% | ⬜ not started |
+| `a2_s14_the_intel_den` | 138 | 0 | 0 | 0% | ⬜ not started |
+| `a2_s15_algorithm_of_chaos` | 122 | 0 | 0 | 0% | ⬜ not started |
+| `a2_s16_finding_home` | 151 | 0 | 0 | 0% | ⬜ not started |
+| `a2_s17_building_something` | 144 | 0 | 0 | 0% | ⬜ not started |
+| `a2_s18_the_patient` | 103 | 0 | 0 | 0% | ⬜ not started |
+| `a2_s19_recruitment_wave` | 181 | 0 | 0 | 0% | ⬜ not started |
+| `a2_s20_doctrine_declaration` | 87 | 0 | 0 | 0% | ⬜ not started |
+| `a2_s21_command_temperature` | 109 | 0 | 0 | 0% | ⬜ not started |
+| `a2_s22_massive_recruitment` | 64 | 0 | 0 | 0% | ⬜ not started |
+| `a2_s23_mercy_and_counting` | 110 | 0 | 0 | 0% | ⬜ not started |
+| `a2_s24_echelon_interlude_2` | 21 | 0 | 0 | 0% | ⬜ not started |
+| `a2_s25_echelon_raid_defense` | 95 | 0 | 0 | 0% | ⬜ not started |
+| `a2_s26_carry_scene` | 128 | 0 | 0 | 0% | ⬜ not started |
+| `a2_s27_zira_commitment_emp` | 166 | 0 | 0 | 0% | ⬜ not started |
+| `a2_s27_zira_commitment_ob` | 206 | 0 | 0 | 0% | ⬜ not started |
+| `a2_s28_selene_finale_emp` | 57 | 0 | 0 | 0% | ⬜ not started |
+| `a2_s28_selene_finale_ob` | 115 | 0 | 0 | 0% | ⬜ not started |
+| `a3_s01_ashes_in_formation_ob` | 104 | 0 | 0 | 0% | ⬜ not started |
+| `a3_s01_back_from_edge_emp` | 101 | 0 | 0 | 0% | ⬜ not started |
+| `a3_s02_stay_with_me_ob` | 179 | 0 | 0 | 0% | ⬜ not started |
+| `a3_s02a_silent_table_ob` | 146 | 0 | 0 | 0% | ⬜ not started |
+| `a3_s03_breath_of_faith_emp` | 126 | 0 | 0 | 0% | ⬜ not started |
+| `a3_s04_shared_ground_emp` | 132 | 0 | 0 | 0% | ⬜ not started |
+| `a3_s04_who_commands_now_ob` | 132 | 0 | 0 | 0% | ⬜ not started |
+| `a3_s04a_the_silence_emp` | 113 | 0 | 0 | 0% | ⬜ not started |
+| `a3_s05_echoes_in_rain_ob` | 168 | 0 | 0 | 0% | ⬜ not started |
+| `a3_s05_two_healers_emp` | 110 | 0 | 0 | 0% | ⬜ not started |
+| `a3_s05a_woman_from_sector_7_emp` | 162 | 0 | 0 | 0% | ⬜ not started |
+| `a3_s06_orders_and_prayers_emp` | 114 | 0 | 0 | 0% | ⬜ not started |
+| `a3_s06_request_for_alignment_ob` | 198 | 0 | 0 | 0% | ⬜ not started |
+| `a3_s07_echelon_strikes_back_emp` | 282 | 0 | 0 | 0% | ⬜ not started |
+| `a3_s07_terms_of_order_ob` | 157 | 0 | 0 | 0% | ⬜ not started |
+| `a3_s08_perfect_execution_ob` | 111 | 0 | 0 | 0% | ⬜ not started |
+| `a3_s08_the_unmeasurable_emp` | 130 | 0 | 0 | 0% | ⬜ not started |
+| `a3_s09_echelon_interlude_3_emp` | 45 | 0 | 0 | 0% | ⬜ not started |
+| `a3_s09_echelon_interlude_3_ob` | 59 | 0 | 0 | 0% | ⬜ not started |
+| `a3_s10_field_sync_emp` | 79 | 0 | 0 | 0% | ⬜ not started |
+| `a3_s10_tessa_friction_ob` | 115 | 0 | 0 | 0% | ⬜ not started |
+| `a3_s11_counter_strike_ob` | 139 | 0 | 0 | 0% | ⬜ not started |
+| `a3_s11_empirical_tenderness_emp` | 172 | 0 | 0 | 0% | ⬜ not started |
+| `a3_s12_corridor_op_emp` | 157 | 0 | 0 | 0% | ⬜ not started |
+| `a3_s12_the_oath_ob` | 159 | 0 | 0 | 0% | ⬜ not started |
+| `a3_s13_proof_of_life_ob` | 148 | 0 | 0 | 0% | ⬜ not started |
+| `a3_s13_scar_and_steady_emp` | 187 | 0 | 0 | 0% | ⬜ not started |
+| `a3_s14_cipher_and_skin_emp` | 144 | 0 | 0 | 0% | ⬜ not started |
+| `a3_s14_noelle_calculus_ob` | 102 | 0 | 0 | 0% | ⬜ not started |
+| `a3_s15_chain_of_two_ob` | 128 | 0 | 0 | 0% | ⬜ not started |
+| `a3_s15_signal_under_fire_emp` | 162 | 0 | 0 | 0% | ⬜ not started |
+| `a3_s16_command_and_surrender_emp` | 133 | 0 | 0 | 0% | ⬜ not started |
+| `a3_s16_data_and_doubt_ob` | 152 | 0 | 0 | 0% | ⬜ not started |
+| `a3_s17_count_the_cost_ob` | 123 | 0 | 0 | 0% | ⬜ not started |
+| `a3_s17_faith_in_flaws_emp` | 120 | 0 | 0 | 0% | ⬜ not started |
+| `a3_s18_field_sync_ob` | 85 | 0 | 0 | 0% | ⬜ not started |
+| `a3_s18_the_weight_emp` | 93 | 0 | 0 | 0% | ⬜ not started |
+| `a3_s18a_the_letter_emp` | 72 | 0 | 0 | 0% | ⬜ not started |
+| `a3_s19_noelle_revelation_emp` | 103 | 0 | 0 | 0% | ⬜ not started |
+| `a3_s19_the_weight_ob` | 94 | 0 | 0 | 0% | ⬜ not started |
+| `a3_s19a_the_letter_ob` | 86 | 0 | 0 | 0% | ⬜ not started |
+| `a3_s20_the_story_keeper_emp` | 81 | 0 | 0 | 0% | ⬜ not started |
+| `a3_s20_you_dont_get_to_break_ob` | 77 | 0 | 0 | 0% | ⬜ not started |
+| `a3_s21_bookend_before_storm_emp` | 81 | 0 | 0 | 0% | ⬜ not started |
+| `a3_s21_the_story_keeper_ob` | 81 | 0 | 0 | 0% | ⬜ not started |
+| `a3_s22_liora_execution_emp` | 204 | 0 | 0 | 0% | ⬜ not started |
+| `a3_s22_the_hunt_ob` | 108 | 0 | 0 | 0% | ⬜ not started |
+| `a3_s23_aftermath_emp` | 44 | 0 | 0 | 0% | ⬜ not started |
+| `a3_s23_bookend_before_mirror_ob` | 94 | 0 | 0 | 0% | ⬜ not started |
+| `a3_s24_liora_ob` | 184 | 0 | 0 | 0% | ⬜ not started |
+| `a3_s25_aftermath_ob` | 61 | 0 | 0 | 0% | ⬜ not started |
+| `a4_s01_morning_after_broadcast_emp` | 113 | 0 | 0 | 0% | ⬜ not started |
+| `a4_s01_the_cold_room_ob` | 171 | 0 | 0 | 0% | ⬜ not started |
+| `a4_s02_first_cracks_emp` | 149 | 0 | 0 | 0% | ⬜ not started |
+| `a4_s02_the_new_shape_ob` | 197 | 0 | 0 | 0% | ⬜ not started |
+| `a4_s03_marcus_adapts_emp` | 125 | 0 | 0 | 0% | ⬜ not started |
+| `a4_s03_marcus_adapts_ob` | 176 | 0 | 0 | 0% | ⬜ not started |
+| `a4_s04_lyra_prays_alone_ob` | 153 | 0 | 0 | 0% | ⬜ not started |
+| `a4_s04_lyra_unbuckled_emp` | 149 | 0 | 0 | 0% | ⬜ not started |
+| `a4_s05_delegation_test_emp` | 203 | 0 | 0 | 0% | ⬜ not started |
+| `a4_s05_zira_cannot_leave_ob` | 163 | 0 | 0 | 0% | ⬜ not started |
+| `a4_s05a_you_are_not_a_machine_emp` | 167 | 0 | 0 | 0% | ⬜ not started |
+| `a4_s06_tessa_at_the_board_ob` | 143 | 0 | 0 | 0% | ⬜ not started |
+| `a4_s06_tessa_counts_different_emp` | 134 | 0 | 0 | 0% | ⬜ not started |
+| `a4_s07_aeron_and_nyra_cold_ob` | 136 | 0 | 0 | 0% | ⬜ not started |
+| `a4_s07_echelon_interlude_4_emp` | 117 | 0 | 0 | 0% | ⬜ not started |
+| `a4_s08_echelon_interlude_4_ob` | 175 | 0 | 0 | 0% | ⬜ not started |
+| `a4_s08_zira_exit_plan_emp` | 198 | 0 | 0 | 0% | ⬜ not started |
+| `a4_s09_noelle_implicated_emp` | 184 | 0 | 0 | 0% | ⬜ not started |
+| `a4_s09_sector_12_sweep_ob` | 232 | 0 | 0 | 0% | ⬜ not started |
+| `a4_s09a_she_calls_him_out_emp` | 174 | 0 | 0 | 0% | ⬜ not started |
+| `a4_s10_noelle_doctrine_ob` | 240 | 0 | 0 | 0% | ⬜ not started |
+| `a4_s10_what_selene_meant_emp` | 192 | 0 | 0 | 0% | ⬜ not started |
+| `a4_s11_mercy_call_costs_emp` | 197 | 0 | 0 | 0% | ⬜ not started |
+| `a4_s11_nyra_second_oath_ob` | 267 | 0 | 0 | 0% | ⬜ not started |
+| `a4_s11a_prayer_after_mercy_emp` | 159 | 0 | 0 | 0% | ⬜ not started |
+| `a4_s11b_the_ones_he_lost_emp` | 174 | 0 | 0 | 0% | ⬜ not started |
+| `a4_s12_held_not_fixed_emp` | 168 | 0 | 0 | 0% | ⬜ not started |
+| `a4_s12_zira_confrontation_ob` | 123 | 0 | 0 | 0% | ⬜ not started |
+| `a4_s12a_she_is_not_just_tactical_emp` | 229 | 0 | 0 | 0% | ⬜ not started |
+| `a4_s13_protecting_exhaustion_emp` | 246 | 0 | 0 | 0% | ⬜ not started |
+| `a4_s13_zira_deepening_erotic_ob` | 191 | 0 | 0 | 0% | ⬜ not started |
+| `a4_s13a_quiet_after_failure_emp` | 209 | 0 | 0 | 0% | ⬜ not started |
+| `a4_s14_lyra_sanctifying_violence_ob` | 168 | 0 | 0 | 0% | ⬜ not started |
+| `a4_s14_return_to_the_table_emp` | 154 | 0 | 0 | 0% | ⬜ not started |
+| `a4_s15_lyra_deepening_erotic_ob` | 210 | 0 | 0 | 0% | ⬜ not started |
+| `a4_s15_zira_deepening_erotic_emp` | 262 | 0 | 0 | 0% | ⬜ not started |
+| `a4_s16_rhea_strikes_emp` | 198 | 0 | 0 | 0% | ⬜ not started |
+| `a4_s16_tessa_fracture_point_ob` | 186 | 0 | 0 | 0% | ⬜ not started |
+| `a4_s17_selene_deepening_erotic_emp` | 329 | 0 | 0 | 0% | ⬜ not started |
+| `a4_s17_tessa_conditional_beat_ob` | 156 | 0 | 0 | 0% | ⬜ not started |
+| `a4_s18_noelle_deepening_erotic_emp` | 278 | 0 | 0 | 0% | ⬜ not started |
+| `a4_s18_rhea_arrives_ob` | 240 | 0 | 0 | 0% | ⬜ not started |
+| `a4_s19_lyra_deepening_erotic_emp` | 277 | 0 | 0 | 0% | ⬜ not started |
+| `a4_s19_tessa_the_trainee_ob` | 357 | 0 | 0 | 0% | ⬜ not started |
+| `a4_s20_noelle_deepening_erotic_ob` | 313 | 0 | 0 | 0% | ⬜ not started |
+| `a4_s20_tessa_deepening_erotic_emp` | 237 | 0 | 0 | 0% | ⬜ not started |
+| `a4_s21_marcus_second_cut_emp` | 225 | 0 | 0 | 0% | ⬜ not started |
+| `a4_s21_the_letter_ob` | 162 | 0 | 0 | 0% | ⬜ not started |
+| `a4_s22_act_four_close_emp` | 145 | 0 | 0 | 0% | ⬜ not started |
+| `a4_s22_council_of_attrition_ob` | 153 | 0 | 0 | 0% | ⬜ not started |
+| `a4_s23_aeron_alone_ob` | 143 | 0 | 0 | 0% | ⬜ not started |
+| `a4_s24_nyra_the_mirror_ob` | 164 | 0 | 0 | 0% | ⬜ not started |
+| `a4_s25_lyra_at_the_altar_ob` | 172 | 0 | 0 | 0% | ⬜ not started |
+| `a4_s26_act_four_close_ob` | 108 | 0 | 0 | 0% | ⬜ not started |
+
+### Per-Act Render Totals
+
+| Act | Scenes | Beats | Stubs | Renders | Est. Target |
+|---|---|---|---|---|---|
+| act1 | 30 | 2463 | 0 | 0 | ~821 |
+| act2 | 30 | 4232 | 0 | 0 | ~1410 |
+| act3 | 51 | 6337 | 0 | 0 | ~2112 |
+| act4 | 54 | 10291 | 0 | 0 | ~3430 |
+
 ## Summary
 
 | Category | Total | Present | Missing |

@@ -88,6 +88,68 @@ def scan_audio():
     return refs
 
 
+def scan_scene_render_budget():
+    """For each scene file, return a row describing its render budget.
+
+    Returns list of dicts with:
+        scene_id      filename stem
+        act           directory-based act key (act1, act2, ...)
+        path          absolute path
+        beats         count of dialogue/narration lines inside the label
+        stubs         count of `# scene <id>_NNN ... @render_stub` lines
+        renders       count of .png/.jpg/.webp files in images/bg/<scene_id>/
+    """
+    say_pat = re.compile(r'^\s*([a-z_][a-z_0-9]*\s+)?"[^"]')
+    stub_pat = re.compile(r'^\s*#\s*scene\s+\S+\s+with\s+\w+\s+#\s*@render_stub')
+    rows = []
+    for f in sorted(glob.glob("game/act*/*.rpy")):
+        if "OLD" in f:
+            continue
+        scene_id = os.path.splitext(os.path.basename(f))[0]
+        # Skip diagnostic / scratch files
+        if scene_id.startswith("DIAGNOSTIC") or scene_id.startswith("_"):
+            continue
+        # Skip interludes — short by design, rendered as single-shot stills
+        # more often than per-beat sequences.
+        if "_int_" in scene_id:
+            continue
+
+        # Derive act from the parent directory
+        parts = f.replace("\\", "/").split("/")
+        act = parts[1] if len(parts) >= 3 else "?"  # game/actN/file.rpy
+
+        beats = 0
+        stubs = 0
+        in_label = False
+        with open(f, encoding="utf-8", errors="ignore") as fh:
+            for line in fh:
+                if line.lstrip().startswith("label "):
+                    in_label = True
+                if in_label:
+                    if stub_pat.match(line):
+                        stubs += 1
+                    elif say_pat.match(line):
+                        beats += 1
+
+        # Count rendered files in the matching folder
+        folder = os.path.join("images", "bg", scene_id)
+        renders = 0
+        if os.path.isdir(folder):
+            for name in os.listdir(folder):
+                if name.lower().endswith((".png", ".jpg", ".jpeg", ".webp")):
+                    renders += 1
+
+        rows.append({
+            "scene_id": scene_id,
+            "act":      act,
+            "path":     f,
+            "beats":    beats,
+            "stubs":    stubs,
+            "renders":  renders,
+        })
+    return rows
+
+
 def ref_status(refs_for_one):
     total = len(refs_for_one)
     commented_n = sum(1 for r in refs_for_one if (r[-1] if len(r) == 4 else r[2]))
@@ -103,6 +165,7 @@ def write_manifest():
     portraits, scenes = parse_character_profiles()
     bg_refs = scan_backgrounds()
     audio_refs = scan_audio()
+    render_rows = scan_scene_render_budget()
 
     out = []
     out.append("# Ashes of Solveil — Asset Manifest")
@@ -215,6 +278,90 @@ def write_manifest():
             out.append(
                 "| " + mark + " `" + path + "` | " + chan + " | " + str(total) + " | " + status + " |"
             )
+    out.append("")
+
+    # Per-Scene Render Budget
+    out.append("## 5. Per-Scene Render Budget")
+    out.append("")
+    out.append(
+        "Workflow: each scene lives in its own folder under "
+        "`images/bg/<scene_id>/` and is rendered as a numbered sequence "
+        "`001.png`, `002.png`, etc. One render typically covers 2-3 "
+        "dialogue beats — a character talks for a few lines on one pose, "
+        "then the next render handles the next 2-3 beats."
+    )
+    out.append("")
+    out.append("**To scaffold a scene before you render it:**")
+    out.append("")
+    out.append("```")
+    out.append("python3 tools/inject_render_stubs.py <scene_id>")
+    out.append("```")
+    out.append("")
+    out.append(
+        "That inserts commented `# scene <scene_id>_NNN with dissolve` stubs "
+        "at each cluster boundary. Uncomment each as the matching render lands "
+        "in `images/bg/<scene_id>/NNN.png`. Auto-registration lives in "
+        "`game/systems/bg_autoregister.rpy` — just drop files in the folder "
+        "and Ren'Py picks them up without manual `image` definitions."
+    )
+    out.append("")
+    out.append("**Columns:**")
+    out.append("")
+    out.append("- **Beats** — dialogue/narration lines inside the scene's label")
+    out.append("- **Stubs** — commented `# scene ... @render_stub` lines (0 = not scaffolded yet)")
+    out.append("- **Renders** — PNG/JPG/WEBP files present in the scene's folder")
+    out.append("- **%** — renders / stubs, or renders / (beats/3) as an estimate if unscaffolded")
+    out.append("")
+    out.append("| Scene | Beats | Stubs | Renders | % | Status |")
+    out.append("|---|---|---|---|---|---|")
+
+    def _pct(rendered, target):
+        if target <= 0:
+            return 0
+        return int(100 * rendered / target)
+
+    act_totals = defaultdict(lambda: {"beats": 0, "stubs": 0, "renders": 0, "scenes": 0})
+    for row in render_rows:
+        sid = row["scene_id"]
+        act_key = row.get("act", "?")
+        act_totals[act_key]["beats"] += row["beats"]
+        act_totals[act_key]["stubs"] += row["stubs"]
+        act_totals[act_key]["renders"] += row["renders"]
+        act_totals[act_key]["scenes"] += 1
+
+        # Target = stubs if scaffolded, else estimate (beats / 3)
+        target = row["stubs"] if row["stubs"] > 0 else max(1, row["beats"] // 3)
+        pct = _pct(row["renders"], target)
+
+        if row["renders"] == 0 and row["stubs"] == 0:
+            status = "⬜ not started"
+        elif row["renders"] == 0 and row["stubs"] > 0:
+            status = "📋 scaffolded"
+        elif row["renders"] < target:
+            status = "🔄 in progress"
+        else:
+            status = "✅ complete"
+
+        out.append(
+            "| `" + sid + "` | " + str(row["beats"]) + " | "
+            + str(row["stubs"]) + " | " + str(row["renders"]) + " | "
+            + str(pct) + "% | " + status + " |"
+        )
+    out.append("")
+
+    # Per-act totals
+    out.append("### Per-Act Render Totals")
+    out.append("")
+    out.append("| Act | Scenes | Beats | Stubs | Renders | Est. Target |")
+    out.append("|---|---|---|---|---|---|")
+    for act_key in sorted(act_totals.keys()):
+        t = act_totals[act_key]
+        est_target = t["stubs"] if t["stubs"] > 0 else t["beats"] // 3
+        out.append(
+            "| " + act_key + " | " + str(t["scenes"]) + " | "
+            + str(t["beats"]) + " | " + str(t["stubs"]) + " | "
+            + str(t["renders"]) + " | ~" + str(est_target) + " |"
+        )
     out.append("")
 
     # Summary
