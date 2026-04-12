@@ -12,6 +12,9 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a4_s13_zira_deepening_erotic_ob:
 
+
+    # Gallery — unlock this scene in the character replay grid.
+    $ gallery_unlock("a4_s13_zira_deepening_erotic_ob")
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 35mm, handheld with restrained drift (4-6%). Less drift than a3_s15.
     #         Zira is not throwing things tonight. She has graduated past throwing.

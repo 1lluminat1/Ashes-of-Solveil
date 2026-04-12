@@ -12,6 +12,9 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a3_s16_data_and_doubt_ob:
 
+
+    # Gallery — unlock this scene in the character replay grid.
+    $ gallery_unlock("a3_s16_data_and_doubt_ob")
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 40mm, tripod, micro-adjustments. Opens on the data alcove -- same framing
     #         as EMP s11. But the lamp is off. Screens at full luminance. No concessions.

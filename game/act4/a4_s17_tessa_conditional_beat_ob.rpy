@@ -22,6 +22,9 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a4_s17_tessa_conditional_beat_ob:
 
+
+    # Gallery — unlock this scene in the character replay grid.
+    $ gallery_unlock("a4_s17_tessa_conditional_beat_ob")
     # ========== BRANCH SELECT ==========
     if canon_get("ob.tessa.choice") == "stay_and_resist":
         jump a4_s17_tessa_conditional_beat_ob_stay_and_resist

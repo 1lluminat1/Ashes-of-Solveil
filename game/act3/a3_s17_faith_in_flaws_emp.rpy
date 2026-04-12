@@ -10,6 +10,9 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a3_s17_faith_in_flaws_emp:
 
+
+    # Gallery — unlock this scene in the character replay grid.
+    $ gallery_unlock("a3_s17_faith_in_flaws_emp")
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 32mm lens (EMP warmth), handheld with barely perceptible sway — breathing camera.
     #         Opens wide on the observation deck: Lyra at the railing, city below.

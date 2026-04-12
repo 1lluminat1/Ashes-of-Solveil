@@ -12,6 +12,9 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a4_s11_nyra_second_oath_ob:
 
+
+    # Gallery — unlock this scene in the character replay grid.
+    $ gallery_unlock("a4_s11_nyra_second_oath_ob")
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 50mm, locked tripod. Same lens grammar as a3_s12 -- formal distance,
     #         composed framing, no drift. But the room is different. This is HER

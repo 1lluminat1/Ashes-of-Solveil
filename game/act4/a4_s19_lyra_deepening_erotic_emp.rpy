@@ -19,6 +19,9 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a4_s19_lyra_deepening_erotic_emp:
 
+
+    # Gallery — unlock this scene in the character replay grid.
+    $ gallery_unlock("a4_s19_lyra_deepening_erotic_emp")
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: Four movements.
     #         (1) The small hall after the vigil: 85mm long lens. The

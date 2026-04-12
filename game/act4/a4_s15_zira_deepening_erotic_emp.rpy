@@ -10,6 +10,9 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a4_s15_zira_deepening_erotic_emp:
 
+
+    # Gallery — unlock this scene in the character replay grid.
+    $ gallery_unlock("a4_s15_zira_deepening_erotic_emp")
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: Five movements.
     #         (1) The doorway. 35mm, locked, from inside the workshop looking

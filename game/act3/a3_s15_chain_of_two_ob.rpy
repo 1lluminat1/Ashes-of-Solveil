@@ -12,6 +12,9 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a3_s15_chain_of_two_ob:
 
+
+    # Gallery — unlock this scene in the character replay grid.
+    $ gallery_unlock("a3_s15_chain_of_two_ob")
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 35mm, handheld with controlled drift (6-8%). The instability is Zira's --
     #         the camera moves the way she feels. Opens mid-action: Zira in the signal bay,

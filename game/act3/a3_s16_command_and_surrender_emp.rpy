@@ -10,6 +10,9 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a3_s16_command_and_surrender_emp:
 
+
+    # Gallery — unlock this scene in the character replay grid.
+    $ gallery_unlock("a3_s16_command_and_surrender_emp")
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 32mm, handheld with minimal drift. The steadiness matches Selene's composure —
     #         and the handheld catches when that composure cracks.

@@ -10,6 +10,9 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a3_s15_signal_under_fire_emp:
 
+
+    # Gallery — unlock this scene in the character replay grid.
+    $ gallery_unlock("a3_s15_signal_under_fire_emp")
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 28mm, handheld with 8-10% drift during the op. Frenetic energy, close-quarters framing.
     #         During the firefight: fast cuts, low angles, muzzle flash as lighting source.

@@ -12,6 +12,9 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a3_s17_count_the_cost_ob:
 
+
+    # Gallery — unlock this scene in the character replay grid.
+    $ gallery_unlock("a3_s17_count_the_cost_ob")
     # ========= GATE CHECK =========
     # This scene ONLY fires if player apologized to Tessa in s10.
     # If dismissed, skip entirely.

@@ -10,6 +10,9 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a3_s13_scar_and_steady_emp:
 
+
+    # Gallery — unlock this scene in the character replay grid.
+    $ gallery_unlock("a3_s13_scar_and_steady_emp")
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 50mm, handheld with minimal drift (2-3%). Opens on Tessa's hands —
     #         filling the frame, clinical, precise. Slowly widens to include Aeron.

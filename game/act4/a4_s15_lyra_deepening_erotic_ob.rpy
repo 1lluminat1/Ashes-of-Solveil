@@ -12,6 +12,9 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a4_s15_lyra_deepening_erotic_ob:
 
+
+    # Gallery — unlock this scene in the character replay grid.
+    $ gallery_unlock("a4_s15_lyra_deepening_erotic_ob")
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 50mm locked. OB register. Opens on the corridor outside Aeron's quarters.
     #         Lyra approaching from frame-left, measured pace. She has not come here

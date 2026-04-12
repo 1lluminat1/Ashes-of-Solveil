@@ -11,6 +11,9 @@ $ scene_mark(_current_scene_id, "entered")
 label a3_s11_empirical_tenderness_emp:
 
 
+
+    # Gallery — unlock this scene in the character replay grid.
+    $ gallery_unlock("a3_s11_empirical_tenderness_emp")
     # Codex — stage bumps for characters the player learns more about here.
     $ codex_reveal("noelle_korr", to_stage=2, source="a3_s11_empirical_tenderness_emp")
 
