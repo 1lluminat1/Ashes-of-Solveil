@@ -65,6 +65,17 @@ label a4_s12_held_not_fixed_emp:
 
     # ========== PHASE 1 — THE CORRIDOR ==========
 
+    # CAMERA: 50mm handheld at chest height. Following Aeron
+    #         from behind as he walks away from the ops room.
+    #         The camera is at his chest-level, not his face-
+    #         level — the shot is at his weight, not his
+    #         expression. Hold the over-shoulder through the
+    #         first corridor section.
+    # LIGHTING: corridor at oh-two-forty, low and cold. The
+    #           work lights in their overnight setting. The
+    #           corridor ambient is the base at its quietest
+    #           hour.
+
     "Aeron leaves the ops room at oh-two-forty-three."
 
     "Selene is still at the cipher table. She did not stand when he stood. She did not say anything when he stood. She watched him — or did not watch him, because the angle she had chosen for her chair was the one that did not face him — and she let him go. The coffee cup is on her side of the table now because she drank the last of it, and the drinking was a thing she did instead of a thing she said."
@@ -80,6 +91,21 @@ label a4_s12_held_not_fixed_emp:
     "He does not reach his quarters."
 
     # ========== PHASE 2 — TESSA ENTERS FRAME ==========
+
+    # CAMERA: Tessa enters the frame from a side door —
+    #         frame-left, edge-of-shot. The camera does NOT
+    #         turn to her. It catches her in the edge of the
+    #         frame as Aeron's walk brings him into her
+    #         line. Then settles to a two-shot when she
+    #         falls into step beside him. The falling-into-
+    #         step is the scene's first contact event and
+    #         the camera treats it as weather, not as
+    #         choreography.
+    # FACE: Tessa — clinical mask half-off. Not absent, but
+    #        no longer doing the work of being the room's
+    #        medic. Something has been forming across the
+    #        interludes and is deciding tonight to be
+    #        visible to exactly one person in the building.
 
     "The medbay wing side door — the one Tessa uses when she is on night rotation and moving between the clinic and the supply cache — opens as he passes it."
 
@@ -131,6 +157,15 @@ label a4_s12_held_not_fixed_emp:
 
     # ========== PHASE 3 — THE WALK TO MEDBAY ==========
 
+    # CAMERA: LENS CHANGE. Cut to 35mm. Lower, wider. The
+    #         two of them in silhouette against the
+    #         corridor wash. This is the only time the
+    #         camera gets wider than the chest-height
+    #         handheld — it widens to recognize that what
+    #         is happening between them is a shape, not a
+    #         transaction. The walk is shared and the
+    #         framing acknowledges it.
+
     "The walk is four doors. Four sealed corridor sections and then the medbay threshold."
 
     "She does not speak on the walk. He does not speak either. She is one half-step ahead of him — not commanding the pace, indicating it. Her pace is a doctor's pace: the pace of a person who has learned that patients who are about to resist treatment walk slightly slower than people who are choosing it, and her pace is adjusted to keep him inside the envelope of choosing without letting him notice the envelope exists."
@@ -152,6 +187,20 @@ label a4_s12_held_not_fixed_emp:
     # scene bg_medbay_overnight_lamp_emp with dissolve
 
     # ========== PHASE 4 — THE MEDBAY ==========
+
+    # CAMERA: LENS CHANGE AGAIN. 85mm inside the medbay.
+    #         Tight. Shoulder-to-shoulder blocking. She does
+    #         not put him on the exam table — she sits him
+    #         on the close-conversation stool and stands in
+    #         front of him. His eye level to her collarbone.
+    #         Hold the frame at this height — the height is
+    #         the scene's physical fact.
+    # LIGHTING: her one clinic lamp, the same she uses for
+    #           close work. Warm. Soft. Equipment off.
+    #           Instrument tray empty. The room's function
+    #           suspended for the scene. The lamp is the
+    #           only light in the frame. Everything else
+    #           goes into warm black.
 
     "The medbay at oh-two-forty-eight is the quietest room in the base."
 
@@ -213,6 +262,21 @@ label a4_s12_held_not_fixed_emp:
 
     # ========== PHASE 5 — THE HAND ==========
 
+    # CAMERA: macro insert on her hand landing on his
+    #         sternum. Not his heart — his sternum. The
+    #         bone. The center line. Flat of her hand,
+    #         fingers spread, like a medic checking rise-
+    #         and-fall AND like a woman checking a center.
+    #         The camera holds on the hand LONGER than on
+    #         either face. Do not cut during the landing.
+    #         The landing is the scene's center.
+    # SFX: no music. No underscore. Silence as the load-
+    #      bearing element per the opening block. The
+    #      small sound of a clean glove coming out of a
+    #      dispenser — she will NOT wear it. The click
+    #      of the lamp. Her breath. His breath. When her
+    #      palm settles on his sternum: nothing.
+
     "She lifts her right hand."
 
     "It does not go to his face. It does not go to his hands. It does not go to his shoulder the way Lyra's hand went to his shoulder an hour and twenty minutes ago, and the difference in trajectory is an intentional difference — Tessa has thought about where her hand goes, and the place her hand goes is a place Lyra's hand did not go tonight, because Tessa is not Lyra and Tessa does not want her hand to be mistaken for Lyra's hand."
@@ -257,6 +321,15 @@ label a4_s12_held_not_fixed_emp:
     tthought "I am going to let that be the scene."
 
     # ========== PHASE 6 — THE LINE ==========
+
+    # CAMERA: the faces arrive after the hand. Quiet over-
+    #         shoulder exchange — her over his, his over
+    #         hers. One line each. Short. The camera does
+    #         not push during the lines. The hand is still
+    #         in the frame at the bottom of each over-
+    #         shoulder, still flat on his sternum. The
+    #         exchange is held on the faces but the frame
+    #         continues to contain the hand.
 
     "His hand — not the one on the stool edge, the other one, the one that has been resting on his thigh — comes up. Slowly."
 
@@ -331,6 +404,14 @@ label a4_s12_held_not_fixed_emp:
     "He leaves his hand on hers for longer than he has left his hand on anything tonight that was not a datapad or a relay console or his own knee. The leaving is the reply."
 
     # ========== PHASE 8 — THE CLOSE ==========
+
+    # CAMERA: return to the macro insert on the hand. Her
+    #         hand still on his sternum. The final image of
+    #         the scene is the hand unchanged from Phase 5.
+    #         The faces may be at the edges of the frame
+    #         but they are not the subject. Hold the hand.
+    #         Fade on the hand. The silence holds through
+    #         the fade.
 
     "Eventually — minutes, he does not know how many, she does not either — she moves her hand. Slowly. Not withdrawing. Lifting. She puts her hand on his shoulder next, briefly, the way a medic confirms a patient is still with her at the end of a procedure. Then she takes her hand away."
 

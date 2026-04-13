@@ -87,6 +87,14 @@ label a4_s13_protecting_exhaustion_emp:
 
     # ========== PHASE 1 — THE APPROACH ==========
 
+    # CAMERA: 32mm handheld, behind Aeron walking into the
+    #         ops wing. The camera keeps up with him the
+    #         way the room used to keep up with him. This
+    #         is the LAST phase of the scene in which Aeron
+    #         sets the tempo. Treat the handheld as natural
+    #         — this is the shot we have had behind him for
+    #         fourteen scenes now. It is about to change.
+
     "Ten-forty-five. Twelve hours after the letter scene. Eight hours into the oh-six-hundred brief's operational window."
 
     "Aeron is walking the ops wing corridor with the clean-fast pace of a man who has been running on the fuel of having three specific decisions ready to deliver to the ops table."
@@ -114,6 +122,26 @@ label a4_s13_protecting_exhaustion_emp:
     "He pushes the ops wing door open."
 
     # ========== PHASE 2 — THE THRESHOLD ==========
+
+    # CAMERA: HARD CUT from the handheld behind Aeron to
+    #         40mm locked from INSIDE the ops wing looking
+    #         outward. Aeron appears in the doorway. He
+    #         stops. The camera does NOT move. He moves in
+    #         the frame; the frame holds him. The stillness
+    #         is the scene's first beat of reversal. This is
+    #         the formal event that signals the scene is
+    #         about to take command away from him: the
+    #         handheld has been replaced by the locked
+    #         frame.
+    # BLOCKING: the four women are already arranged around
+    #           the ops table. Selene at the head-adjacent
+    #           position, standing. Noelle at her left with
+    #           the framework sheet. Lyra at Aeron's right
+    #           with her handwritten note. Zira at the
+    #           foot, arms folded, her geometry says door.
+    #           Aeron's chair at the head is empty and
+    #           conspicuously empty. None of them moves to
+    #           greet him. The positions are the statement.
 
     # scene bg_ops_wing_table_day with dissolve
 
@@ -188,6 +216,22 @@ label a4_s13_protecting_exhaustion_emp:
     sel "Noelle."
 
     # ========== PHASE 4 — THE FRAMEWORK ==========
+
+    # CAMERA: transition to wide two-shot bias. Selene and
+    #         Aeron are positioned opposite each other with
+    #         the ops table between them. The camera tracks
+    #         SLOW across the ops table to the printed sheet
+    #         Noelle has placed at the center — her signed
+    #         framework, Batch A vintage, first real use.
+    #         The tracking shot is the camera reading the
+    #         document on behalf of the audience. Hold on
+    #         the sheet for a beat, then return to the
+    #         two-shot.
+    # SFX: the soft click when Noelle turns the printed
+    #      sheet to face Aeron across the table. One
+    #      one-shot, clean. Mark it. The sheet is the
+    #      scene's load-bearing document and its placement
+    #      gets its own audio moment.
 
     "Noelle picks up the printed sheet and turns it so the text is facing Aeron across the table. The paper makes a soft click as it catches on the holo-table's edge."
 
@@ -337,6 +381,19 @@ label a4_s13_protecting_exhaustion_emp:
 
     # ========== PHASE 8 — ZIRA'S LINE ==========
 
+    # CAMERA: the scene's ONE locked close. Tight single on
+    #         Zira at the foot of the table. The camera does
+    #         not cut during her line. It does not push in
+    #         mid-line. It is locked. Her arms are still
+    #         folded. Her jaw is unchanged. The line
+    #         finishes and the camera stays on her for a
+    #         beat after. Then cut back to the two-shot.
+    # FACE: Zira — the OB-sibling voice from s12's corridor
+    #        confrontation redeployed in the EMP register.
+    #        The same voice. Different content. The camera
+    #        treats her the same way — reserved, precise,
+    #        the face as instrument.
+
     "Zira has not moved from the foot of the table."
 
     "Her arms are still folded. Her face has been neutral through the entire scene."
@@ -477,6 +534,23 @@ label a4_s13_protecting_exhaustion_emp:
 
     # ========== PHASE 11 — THE WALK ==========
 
+    # CAMERA: behind Aeron again. The handheld returns for
+    #         the walk out. The ops table continues to run
+    #         without him in the deep background — visible
+    #         over his shoulder, receding as he walks.
+    #         Hold the receding shot. The frame is reading
+    #         the fact that the room does not need him
+    #         right now. The ops wing doorway is in front
+    #         of him. He crosses the threshold. The door
+    #         does not close for him. He closes it himself.
+    # SFX: the latch of the ops wing door when he closes
+    #      it behind himself. One one-shot. Mark it. This
+    #      is the bookend to the Phase 4 sheet-click, the
+    #      two audio events that frame the scene's pivot.
+    #      After the latch, one held low string enters
+    #      under his walk back to quarters. Holds. Drops
+    #      under the last line.
+
     "He turns."
 
     "He walks to the ops wing door."
@@ -548,6 +622,22 @@ label a4_s13_protecting_exhaustion_emp:
     "He puts his hand on the handle."
 
     # ========== PHASE 13 — THE ROOM ==========
+
+    # CAMERA: his quarters. 50mm locked. Aeron in the frame
+    #         not at the bed, at a chair. Sitting. Not
+    #         lying down. The bed is in frame in the
+    #         background — neatly made, unused. Hold the
+    #         single on him in the chair. The room is
+    #         quiet. The held string fades. Fade on the
+    #         shot — the bed in the background staying
+    #         unused even after the fade.
+    # FACE: Aeron — the operational mask has come off not
+    #        because he released it but because the room
+    #        has no one in it to perform it for. The face
+    #        underneath is the face of a man whose council
+    #        has just taken a decision from him and whose
+    #        first reaction is that he does not yet know
+    #        whether that is mercy or mutiny.
 
     # scene bg_aeron_quarters_day_empty with dissolve
 

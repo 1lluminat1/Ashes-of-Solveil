@@ -94,6 +94,27 @@ label a4_s12_zira_confrontation_ob:
 
     # ========== PHASE 1 -- THE INTERCEPT ==========
 
+    # CAMERA: 40mm locked. Open on the corridor between the
+    #         ops table and the mess — wider than the usual
+    #         corridor plate. Aeron walks into the frame from
+    #         frame-right. Zira steps out of a side alcove
+    #         into his path. The camera catches her step as
+    #         a new shape entering the composition, not as a
+    #         reveal. Neither of them has leaned or tilted.
+    #         They face each other in the middle of the
+    #         corridor at standing height.
+    # LIGHTING: corridor overheads at 60% — brighter than
+    #           a3_s20's "unflattering" corridor. The light
+    #           is functional. Neither of them is trying to
+    #           look good. Both of them have not slept well
+    #           and the light shows it. No warm practicals,
+    #           no accent. Morning operational institutional.
+    # SFX: the corridor ambient holds. HVAC, distant ops
+    #      chatter, boot traffic at the far end. A comm
+    #      click every 40 seconds. Zira's boots stopping
+    #      (two paces, planted). Aeron's boots stopping
+    #      (one pace, clean).
+
     athought "0712. The ops table cleared at 0705. Noelle's doctrine draft is queued for revision at 1100. The Sector 12 metrics from yesterday are logged in the morning report. Three civilians. I signed the box."
 
     athought "I signed the box at 0638 yesterday morning. I have not thought about it since in any way I would call thinking. The box is closed. The metric is logged."
@@ -172,6 +193,21 @@ label a4_s12_zira_confrontation_ob:
 
     # ========== PHASE 3 -- THE TERMS ==========
 
+    # CAMERA: handheld picks up with restrained drift — 4-5%,
+    #         less than a3_s15. The drift is Zira's. She is
+    #         HOLDING IT IN. The restraint is the scene.
+    #         Tighten to a two-shot. Hold her jaw in one cut.
+    #         Hold her hands in another (unnaturally steady —
+    #         she is MAKING them stay). The close-ups are
+    #         reserved, not lavished. Three close-ups total
+    #         in the terms speech: jaw, hands, jaw again.
+    # FX/COMP: she is carrying a datapad she does not use.
+    #          It is in the frame with her hands. The
+    #          datapad is the reason she brought to be in
+    #          this part of the corridor. He is carrying
+    #          nothing. The asymmetry is load-bearing —
+    #          she brought a reason, he did not.
+
     athought "She said silence like it was a weapon she had been shot with."
 
     athought "The tremor is trying to come up in my left hand. I have been in this corridor for forty seconds and the tremor is trying to come up. Last night in Nyra's quarters it did not come up for two hours."
@@ -231,6 +267,17 @@ label a4_s12_zira_confrontation_ob:
     a "That is the half I can give you. It is not the whole half. If you take it I will not pretend it is more than it is."
 
     # ========== PHASE 5 -- THE LANDING ==========
+
+    # CAMERA: cut to Aeron's eyes when the word "terms"
+    #         lands. Tight single. No push. Hold. The word
+    #         is not an operational word and his face reads
+    #         it as not an operational word. The eye
+    #         movement is the beat. Then cut back to the
+    #         two-shot.
+    # FACE: Aeron — the OB face allows one micro-reaction.
+    #        The jaw does nothing. The eyes move once. The
+    #        frame catches the eye movement as the scene's
+    #        only admission of contact.
 
     "Zira does not move for three seconds."
 
@@ -293,6 +340,21 @@ label a4_s12_zira_confrontation_ob:
 
     # ========== PHASE 6 -- THE CORRIDOR AFTER ==========
 
+    # CAMERA: Zira walks past him in the direction he was
+    #         headed. The camera STAYS ON HIM. We do not
+    #         follow her. The corridor opens up behind him
+    #         as she leaves the frame. Hold the shot on
+    #         Aeron's back and the corridor around him.
+    #         This is the scene's refusal to let him off the
+    #         hook — he is required to stand in what she
+    #         deposited and the camera is required to watch
+    #         him stand in it.
+    # SFX: her boots recede at her walking pace. The
+    #      corridor ambient returns after she leaves the
+    #      immediate audio field. The absence of a thrown
+    #      object holds — that absence is the loudest
+    #      sound in the mix.
+
     # VISUAL: Camera holds on Aeron's back. He does not turn to watch her go. He
     # stays facing the direction he was walking. The corridor around him is ordinary.
     # The techs at the far end have passed through. The HVAC cycles. The comm click
@@ -331,6 +393,20 @@ label a4_s12_zira_confrontation_ob:
     athought "I gave it to her. I will be giving it to her again tonight in a different form."
 
     # ========== PHASE 7 -- ZIRA IN THE MESS (BRIEF) ==========
+
+    # CAMERA: brief cut to the mess. She is there. The
+    #         datapad is still in her hands. She has not
+    #         used it. She sits at a back table. The camera
+    #         holds on her at a medium distance — not tight.
+    #         She is not crying. She is not shaking. The
+    #         hands are no longer unnaturally still because
+    #         she is no longer in his sightline. Hold the
+    #         medium. Fade.
+    # FACE: Zira — whatever the terms speech cost her is
+    #        visible now, in the mess, in the absence of
+    #        him. The cost is not narrated and the camera
+    #        does not italicize it. The medium hold is the
+    #        scene's closing respect.
 
     # VISUAL: Cut to the mess. Brief. 12-15 seconds of screen time. Zira at a corner
     # table, one mug, the datapad flat beside the mug (still unused). She is not
