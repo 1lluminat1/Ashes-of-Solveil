@@ -80,6 +80,24 @@ label a4_s21_marcus_second_cut_emp:
 
     # ========== PHASE 1 — THE SAFEHOUSE ==========
 
+    # CAMERA: 35mm static. Cold, procedural register.
+    #         Open on the Rhea Vestin operation package
+    #         on the safehouse threshold. Hold on the
+    #         package. The civilians find it. No score,
+    #         no push, no coverage variation. The whole
+    #         sequence is ambient and diegetic until the
+    #         moment the first civilian OPENS the
+    #         envelope. Mark that beat — the opening is
+    #         the scene's first load-bearing sound.
+    # LIGHTING: grey daylight through dirty windows. No
+    #           practicals. The safehouse interior is
+    #           lit only by the weather outside. The
+    #           weather is the entire mood.
+    # SFX: children's voices in the next room. A pot
+    #      on a stove. The sound of a piece of paper
+    #      being unfolded. The envelope opening is the
+    #      mix's central event.
+
     "The safehouse is in Sector 11."
 
     "It is a second-floor flat above a shuttered tailor shop, set up by Phoenix's civilian network six weeks before Act I opened. It houses fourteen civilians tonight — nine adults and five children, none of them Phoenix operatives, all of them people whose names are in Echelon's watch-list because of a family member or a neighbor or a cousin's political affiliation."
@@ -156,6 +174,18 @@ label a4_s21_marcus_second_cut_emp:
 
     # ========== PHASE 3 — ZIRA'S INTERDICTION ==========
 
+    # CAMERA: handheld, running. Camera at Zira's
+    #         shoulder. Short sequence. She catches the
+    #         one civilian who tries to turn the list
+    #         over at a checkpoint two blocks out. NOT
+    #         a fight — a redirect. The camera does not
+    #         cut to wide. Stays at her shoulder through
+    #         the return of both the man and the list.
+    # SFX: the handheld brings its own audio — her
+    #      breathing, her boots on street, the civilian's
+    #      protests. The redirect is quiet on Zira's
+    #      end; loud on his. Mark the asymmetry.
+
     # scene bg_sector11_checkpoint_morning with dissolve
     # play ambient "sfx/ambient/sector11_street_morning.ogg" fadein 1.5
 
@@ -213,6 +243,24 @@ label a4_s21_marcus_second_cut_emp:
 
     # ========== PHASE 4 — THE INTERCEPT ==========
 
+    # CAMERA: 85mm ON MARCUS. Single shot. No coverage.
+    #         He is in a grey room with a grey desk and
+    #         no visible Echelon insignia. A pale
+    #         grey-blue wash. He is looking at a tablet
+    #         with a feed of the safehouse. He has ONE
+    #         line. The line is for the AUDIENCE, not
+    #         for anyone in the room with him. Hold the
+    #         85mm single through the line. Do not cut
+    #         away. No reverse.
+    # LIGHTING: pale grey-blue wash. No practicals. The
+    #           room is lit by institutional ambient
+    #           only — cooler than the Phoenix base by a
+    #           full temperature step. Marcus's face
+    #           catches the tablet's light, cold.
+    # SFX: silence. The room is quiet except for the
+    #      tablet's low hum and Marcus's breathing. No
+    #      score during his line.
+
     # scene bg_marcus_grey_room_morning with dissolve
     # play ambient "sfx/ambient/grey_room_silence.ogg" fadein 2.0
 
@@ -259,6 +307,23 @@ label a4_s21_marcus_second_cut_emp:
     "He turns off the feed. The grey room goes quiet."
 
     # ========== PHASE 5 — THE COUNCIL CONVENES ==========
+
+    # CAMERA: 40mm wide. The council room at the
+    #         secondary base. Five principals around the
+    #         table — Aeron, Selene, Noelle, Lyra,
+    #         Tessa. The SIXTH CHAIR at the head of the
+    #         table is empty. Nobody is in it. Nobody
+    #         moves it. The sixth chair is the scene's
+    #         LOAD-BEARING blocking element. Catch it
+    #         in the establishing shot and keep it in
+    #         frame for the whole council sequence.
+    # LIGHTING: morning light through the eastern
+    #           window. COLD AND HONEST. The council
+    #           room is brighter than any other room in
+    #           Act IV so far. The scene is not playing
+    #           hide-the-ball — it wants the decisions
+    #           to be visible. Mark the brightness step-
+    #           up as a formal event.
 
     # scene bg_council_room_secondary_base_morning with dissolve
     # play ambient "sfx/ambient/council_room_morning_low.ogg" fadein 2.5
@@ -411,6 +476,16 @@ label a4_s21_marcus_second_cut_emp:
 
     # ========== PHASE 9 — ZIRA JOINS BY COMM ==========
 
+    # CAMERA: hold the council wide. Zira's icon lights
+    #         up at the center of the table's comms
+    #         plate — a small glowing marker in the
+    #         middle of the composition. Her voice
+    #         enters the room without her face. The
+    #         camera does NOT cut to a field station.
+    #         She is present by voice only. The icon
+    #         on the plate is as much of her as the
+    #         scene is giving us.
+
     "Noelle taps the comms plate. The icon at the center of the table activates."
 
     "Zira's voice comes into the room."
@@ -434,6 +509,19 @@ label a4_s21_marcus_second_cut_emp:
     "Aeron nods once."
 
     # ========== PHASE 10 — THE DECISION ==========
+
+    # CAMERA: slow push from the wide to a medium on
+    #         Aeron. Not tight. The decision is not a
+    #         tight-single beat — it is a shared beat
+    #         and the medium holds the two people on
+    #         either side of him (Selene and Tessa) in
+    #         the edges of the frame. The held string
+    #         enters at the "move the network" line.
+    #         Low. Under everything. Do NOT cut to
+    #         singles during the decision.
+    # SFX: the held string per the opening block. Low.
+    #      Enters exactly at the "move the network"
+    #      beat and holds under the remaining lines.
 
     a "The decision is: we move."
 
@@ -500,6 +588,16 @@ label a4_s21_marcus_second_cut_emp:
     "The room moves."
 
     # ========== PHASE 11 — THE CLOSE ==========
+
+    # CAMERA: return to the wide. The council is still
+    #         at the table. The empty sixth chair is
+    #         still in the frame. The morning light is
+    #         still through the eastern window. The
+    #         decision has been made. The room has not
+    #         softened. Hold the wide. Fade on the
+    #         composition — do not close in on any
+    #         single face. The council is the subject
+    #         and the council is what is fading.
 
     # scene bg_council_room_emptying_late_morning with fade
     # play ambient "sfx/ambient/council_room_after_low.ogg" fadein 3.0

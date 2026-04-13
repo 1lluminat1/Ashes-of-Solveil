@@ -110,6 +110,27 @@ label a4_s21_the_letter_ob:
 
     # ========== PHASE 1 -- THE DOOR CYCLES ==========
 
+    # CAMERA: 50mm locked. OB grammar — no handheld, no
+    #         drift. Open wide on the ops room empty,
+    #         pre-shift, tables cleared. Single terminal
+    #         humming on standby at the far wall. Aeron
+    #         at the head of the long table, STANDING,
+    #         not seated yet. A mug of black coffee he
+    #         has not touched in ten minutes cools
+    #         beside his left hand. Hold the wide.
+    #         Nothing moves. Zira enters from the
+    #         corridor door frame-right without
+    #         hesitating. The camera does not pan to
+    #         her — it watches her enter the held frame.
+    # LIGHTING: overheads at 40%%. Cold white on the
+    #           tables. A warmer amber from the standby
+    #           terminal ten feet behind Aeron. Two
+    #           lights in the room, two temperatures,
+    #           neither meeting at the head of the table.
+    # SFX: corridor door cycling as Zira enters —
+    #      pressure seal, single soft hiss. That is the
+    #      scene's first non-ambient sound.
+
     "The ops room door cycles at 0500 on the dot. Aeron does not look up. He knows who it is because Zira is the only other person on the base who runs on a zero-minute clock."
 
     a "Zira."
@@ -156,6 +177,23 @@ label a4_s21_the_letter_ob:
 
     # ========== PHASE 3 -- THE PAGE ==========
 
+    # CAMERA: clean INSERT top-down on the folded page
+    #         as it leaves Zira's jacket. Macro. Paper.
+    #         A single handwritten page. Hold the
+    #         insert as it unfolds under the cold white
+    #         of the ops overheads. The letter is on
+    #         top of Aeron's day-stack — the day packet
+    #         (Nyra's summary, Noelle's exports, the
+    #         Ghostline log) is visible at the edge of
+    #         the insert beneath it. The letter is on
+    #         top because the letter is the only
+    #         document that matters this morning.
+    # SFX: the rustle of the envelope leaving the
+    #      jacket. The dry whisper of the page
+    #      unfolding. Each sound gets its own beat in
+    #      the mix. The scene is working through
+    #      paper, not dialogue.
+
     "He picks up the envelope. The waxed paper is old. The fold lines are set deep. No seal. No address. Whoever folded this folded it to keep it private, not to send it."
 
     athought "Zira's hands know the difference between a letter for transit and a letter for storage. This one is storage. This one was written and then kept."
@@ -169,6 +207,17 @@ label a4_s21_the_letter_ob:
     athought "This is a letter my mother wrote."
 
     # ========== PHASE 4 -- THE READING (FIRST PASS) ==========
+
+    # CAMERA: medium on Aeron's face as he reads.
+    #         LOCKED. Do not move. His eyes move across
+    #         the page, his hand turns once, and the
+    #         camera holds. This is the OB reading face
+    #         — the same single-shot grammar as a4_s01
+    #         OB when he read Nyra's seven-day plan.
+    #         The rhyme is intentional.
+    # SFX: his breath once, slow, midway through the
+    #      read. Mark that breath. It is the scene's
+    #      one biometric tell.
 
     "He reads. He does not read aloud. The camera does not show the full page. The camera shows his eyes moving across it and the slight adjustment of his jaw at a line roughly two thirds of the way down."
 
@@ -314,6 +363,26 @@ label a4_s21_the_letter_ob:
 
     # ========== PHASE 11 -- THE FOLD ==========
 
+    # CAMERA: insert on his hands as he refolds the
+    #         page. Macro. Same top-down angle as the
+    #         unfold in Phase 3 — the scene's formal
+    #         symmetry. The letter folds back along its
+    #         original crease. Then medium on his chest
+    #         as the letter goes INSIDE the jacket.
+    #         Hold the medium as the letter disappears
+    #         into the jacket pocket. That transition
+    #         is the scene's ONLY visual argument per
+    #         the opening block — the letter moving from
+    #         cold white to the place the camera cannot
+    #         see.
+    # LIGHTING: as the letter leaves the cold white of
+    #           the table and travels into the jacket,
+    #           it leaves the ops room's institutional
+    #           wash behind. It is now somewhere the
+    #           camera cannot light. The disappearance
+    #           is the argument. Mark the light loss
+    #           on the letter itself.
+
     "He picks the letter up. He folds it along its existing fold lines. He does not make a new fold. He respects the ones his mother made fourteen years ago."
 
     "He slides the page back into the waxed paper envelope. He presses the envelope flat. He looks at it for one beat."
@@ -420,6 +489,18 @@ label a4_s21_the_letter_ob:
 
     # ========== PHASE 15 -- THE HOLD ==========
 
+    # CAMERA: return to the wide from Phase 1. The ops
+    #         room is still pre-shift. The table is
+    #         still empty. The mug of black coffee is
+    #         still untouched beside Aeron's left hand.
+    #         The letter is no longer on the table —
+    #         the day packet is visible where the
+    #         letter was. Zira is either still in the
+    #         frame or has exited, depending on the
+    #         scene's prior blocking. Hold the wide.
+    #         Nothing moves. The scene's score is the
+    #         absence of one per the opening block.
+
     "She turns. She walks to the door. She does not look back. The corridor door cycles once, a soft hiss, and she is gone."
 
     "Aeron is alone in the ops room. The coffee at his left hand has gone cold. The packet stack at his place is waiting. The day shift will arrive in forty-five minutes."
@@ -453,6 +534,18 @@ label a4_s21_the_letter_ob:
     athought "She will never hear that sentence and she does not need to."
 
     # ========== PHASE 16 -- THE COFFEE ==========
+
+    # CAMERA: tight insert on the mug of coffee. Black.
+    #         Untouched. Cold now. Aeron's hand enters
+    #         the frame. His fingers close around the
+    #         mug. He does NOT drink it. He does
+    #         something else with it — picks it up,
+    #         sets it down, moves it, whichever the
+    #         narrative places. Hold the insert on the
+    #         mug and the hand through the final beat.
+    #         Fade on the mug. The coffee is the scene's
+    #         closing image: a thing that was going to
+    #         be consumed and was not.
 
     "He moves at last. He picks up the cold coffee. He drinks it anyway, because the operator does not waste coffee he poured himself, because routine is the skeleton he is still holding up on the days the meat is all decision."
 

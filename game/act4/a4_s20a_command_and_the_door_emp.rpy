@@ -170,6 +170,24 @@ label a4_s20a_command_and_the_door_emp:
 
     # ========== PHASE 1 — TWO VOICES ==========
 
+    # CAMERA: 50mm locked in the command wing corridor.
+    #         The cipher alcove door is FULLY open — not
+    #         the six-inch gap of s14a, but wide. Selene
+    #         leaves doors open when she is working at
+    #         command pace and the door is not a variable
+    #         she has time to manage. Two voices inside.
+    #         The camera finds the voices from the
+    #         corridor, same grammar as s14a, but the
+    #         corridor is the command wing and the
+    #         voices are different — Selene's and Zira's,
+    #         and the overlap of those two voices in a
+    #         shared room is a first.
+    # SFX: Selene's and Zira's voices in parallel work
+    #      cadence. Mark the different rhythms — Selene
+    #      measured, Zira clipped. They are overlapping
+    #      without interrupting each other. The
+    #      overlap IS the sentence.
+
     "Oh-one-forty. The base is in its deepest register. The overnight crew has been at their stations for two hours and forty minutes. The war room is running on the skeleton watch Selene set before she left it."
 
     "She left the war room at twenty-three hundred."
@@ -241,6 +259,24 @@ label a4_s20a_command_and_the_door_emp:
     athought "I am going to walk in now."
 
     # ========== PHASE 2 — THE DOORWAY ==========
+
+    # CAMERA: 35mm slow pan inside. Selene at the narrow
+    #         cipher desk, the brass cylindrical cipher
+    #         on the surface between two stacks of
+    #         operational documents. Zira standing at
+    #         the wall map — the civilian network routes
+    #         Selene moved from the war room three days
+    #         ago. ZIRA'S charcoal marks and SELENE'S
+    #         red-pencil annotations on the same surface.
+    #         The pan finds the map BEFORE either face.
+    #         Two handwritings on the same surface — the
+    #         third iteration of this motif after s14a
+    #         (relay map) and s16a (datapads).
+    # FX/COMP: the two-handwriting motif is the scene's
+    #          formal continuity signal. Every poly beat
+    #          in Act 4 has been built around a shared
+    #          working surface with two hands on it.
+    #          This scene inherits the grammar.
 
     "He steps into the open doorway."
 
@@ -343,6 +379,19 @@ label a4_s20a_command_and_the_door_emp:
     sel "Because you are always here when I am in a room at oh-one-forty and you know it."
 
     # ========== PHASE 3 — THE RECOGNITION ==========
+
+    # CAMERA: 35mm locked framing the open doorway from
+    #         inside the alcove. Aeron appears. TWO women
+    #         look up — the two-look thesis image from
+    #         s14a redeployed for this pairing. Selene
+    #         first, Zira half a beat after. The
+    #         half-beat difference is the composition's
+    #         fingerprint: these two women do not react
+    #         at the same tempo, and the frame does not
+    #         synchronize them.
+    # FACE: Selene — command-face into recognition-face.
+    #        Zira — workshop-face into recognition-face.
+    #        Different two faces, same two-look.
 
     "They work."
 
@@ -473,6 +522,26 @@ label a4_s20a_command_and_the_door_emp:
     $ nudge_poly("selene_zira_weight_shared", delta=1)
 
     # ========== PHASE 4 — POLY GATE ==========
+
+    # CAMERA: wide three-shot. Same rule as s14a and
+    #         s16a — all three bodies in the frame for
+    #         the full sequence. The narrow cipher desk
+    #         is in the foreground with the cipher
+    #         mechanism on it. The wall map is in the
+    #         background. Selene, Zira, Aeron. Hold the
+    #         three-shot through the consent gate. Do
+    #         NOT cut to singles during the gate. The
+    #         three-shot is the entire consent
+    #         structure. If the coverage reduces to a
+    #         two-shot, the scene has lost its argument.
+    # BLOCKING: during the intimate sequence, three
+    #           bodies in the same frame throughout.
+    #           The cipher mechanism is visible in the
+    #           lower third of the frame at all times.
+    #           The brass object on the desk is the
+    #           scene's formal anchor — it marks the
+    #           frame as Selene's space and makes the
+    #           poly event a visitation in her register.
 
     if metric("poly_pressure") >= 3:
 
@@ -780,6 +849,17 @@ label a4_s20a_command_and_the_door_emp_below_threshold:
     jump a4_s20a_command_door_state_updates
 
     # ========== PHASE 5 — AFTERCARE ==========
+
+    # CAMERA: hold the three-shot. Widen fractionally.
+    #         The cipher is still on the desk. The wall
+    #         map is still behind them with the two
+    #         handwritings on it. The civilian network
+    #         move is STILL unfinished. The aftercare
+    #         is post-weight-sharing, not post-intimacy
+    #         in the narrative sense. The work is still
+    #         on the wall. Fade on the three-shot with
+    #         the cipher in the lower third and the map
+    #         in the background.
 
 label a4_s20a_command_door_aftercare:
 
