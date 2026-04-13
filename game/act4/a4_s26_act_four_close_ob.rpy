@@ -82,6 +82,30 @@ label a4_s26_act_four_close_ob:
 
     # ========== PHASE 1 — THE EDGE ==========
 
+    # CAMERA: wide establishing. Aeron at the edge of
+    #         the base, overlooking the staging ground
+    #         below. The operators are already in
+    #         motion — NOT a civilian convoy (that is
+    #         EMP). An ASSASSINATION DETAIL preparing
+    #         a loadout. The camera is at Aeron's
+    #         height, one step back and to his LEFT
+    #         (EMP s22 was right; OB mirrors). It does
+    #         NOT move for the length of the relay.
+    # LIGHTING: OB default — sun SETTING over the west
+    #           ridge. Cold and directional. Long
+    #           shadows across the access road. The
+    #           light on Aeron's face is the light
+    #           from the WEST — honest, directional,
+    #           going. This is the inverse of EMP s22's
+    #           rising sun. The going light is the
+    #           scene's argument.
+    # SFX: NO civilian sounds. No child. No father
+    #      answering. The loadout sounds — magazines
+    #      on metal, a pack being cinched, a radio
+    #      check that does NOT complete. The ABSENCE
+    #      of the civilian soundscape is the scene's
+    #      acoustic signature.
+
     "Aeron stands at the edge of the base. Below him the staging ground. Operators in loadout. A sapper checking charges. A runner cinching a pack. A comms tech running a radio check that does not complete on the first try."
 
     "He does not move."
@@ -97,6 +121,20 @@ label a4_s26_act_four_close_ob:
     "The sun is setting over the west ridge. The light is directional and cold."
 
     # ========== PHASE 2 — ZIRA ==========
+
+    # CAMERA: do NOT cut. Same rule as EMP s22 — each
+    #         LI enters and exits the frame from
+    #         Aeron's RIGHT (the base side, OB mirror
+    #         of EMP's left). Zira first. She is
+    #         moving past. She gives him the soldier's
+    #         acknowledgment ONLY — not the lingering
+    #         glance of EMP s22. One long take begins
+    #         here. The camera does not cut between
+    #         LIs; the edit is coming and going.
+    # FACE: Zira — the soldier face. The cold
+    #        version of the workshop face. No
+    #        warmth is permitted in this composition,
+    #        and she is not giving any.
 
     "Footsteps behind him and to his right. He does not turn."
 
@@ -157,6 +195,22 @@ label a4_s26_act_four_close_ob:
     athought "I am going to use it."
 
     # ========== PHASE 4 — TESSA ==========
+
+    # CAMERA: the CONDITIONAL phase. Branch A: Tessa
+    #         enters the held frame with the clip lamp
+    #         from s06 OB — the lamp that has been her
+    #         object through the act. Branch B: she
+    #         does NOT come. The frame HOLDS FOR A
+    #         BEAT in the space where she would have
+    #         been. The camera does not cut to fill
+    #         the absence. The absence is the shot.
+    #         EMPTY FRAME HELD is the scene's most
+    #         important composition in branch B.
+    # FX/COMP: in branch A the clip lamp is the
+    #          object Tessa brings. In branch B she
+    #          brings nothing because she is not
+    #          bringing herself. Either branch reads
+    #          as cost paid.
 
     # ---- Branch on Tessa state ----
 
@@ -225,6 +279,21 @@ label a4_s26_act_four_close_ob:
 
     # ========== PHASE 5 — LYRA ==========
 
+    # CAMERA: Lyra enters from the right. She does
+    #         NOT speak. The Band is the gesture.
+    #         Insert briefly on her wrist at the
+    #         moment she passes — the Band is still
+    #         cinched past comfort, same notch as
+    #         s04, s14, s25. The insert is the only
+    #         moment the camera leaves the held wide
+    #         during the relay. Return to the wide
+    #         after the insert. Lyra continues
+    #         through the frame and exits.
+    # FX/COMP: the Band insert is the scene's
+    #          callback thread — every OB Lyra scene
+    #          in Act 4 has closed on that notch. The
+    #          notch is now a motif.
+
     "Footsteps again. Lighter. A priest's walk — not soundless, but measured, the way a body moves when a body has been taught to move in a sanctuary."
 
     "Lyra."
@@ -256,6 +325,23 @@ label a4_s26_act_four_close_ob:
     athought "That is the mercy she is offering. It is a small mercy. I will take it."
 
     # ========== PHASE 6 — NYRA ==========
+
+    # CAMERA: Nyra enters LAST. She does not walk
+    #         past. She STOPS beside him — the OB
+    #         mirror of Selene stopping beside him in
+    #         EMP s22. A long silent beat before her
+    #         line closes the act. The held wide now
+    #         contains two standing figures at the
+    #         edge of the base watching the loadout.
+    #         The camera continues not to cut.
+    # FACE: Nyra — the doctrinal face from s24,
+    #        redeployed for the closing beat. She
+    #        is not offering; she is confirming.
+    # SFX: her arrival step. Then silence for one
+    #      full breath before her line. Mark the
+    #      breath. The silence is her line that is
+    #      not yet a line — same audio grammar as
+    #      Selene's arrival in EMP s22.
 
     "A long space after Lyra leaves the frame. Longer than the spaces between the others."
 
@@ -295,6 +381,18 @@ label a4_s26_act_four_close_ob:
 
     # ========== PHASE 7 — AERON ALONE ==========
 
+    # CAMERA: the ONLY camera move — pull back ONE
+    #         small step (same as EMP s22). The
+    #         staging ground in mid-ground, smaller
+    #         now. Aeron in the foreground alone.
+    #         The sun per the opening block. Hold
+    #         the wider wide. The held low string
+    #         enters here — held FLAT per the
+    #         opening block. No rise. No fall. Flat.
+    #         This is the scene's closing sound and
+    #         it is the scene's closing argument:
+    #         OB does not resolve.
+
     "He is alone at the edge again."
 
     "Below him the staging ground continues its work. The sapper finishes the charges. The runner cinches a second pack. The comms tech moves on to the next unit."
@@ -322,6 +420,15 @@ label a4_s26_act_four_close_ob:
     "The string holds."
 
     # ========== PHASE 8 — TITLE CARD ==========
+
+    # CAMERA: fade the wider wide on the staging
+    #         ground and Aeron at the edge of it. The
+    #         flat string does not resolve — it cuts
+    #         on a continuing pitch when the fade
+    #         completes. Title card enters on black.
+    #         This is the final frame of Act 4 OB
+    #         and the final act-close of the 47-scene
+    #         stage-direction pass.
 
     # show blackout with dissolve
     # show text "END OF CHAPTER IV" at truecenter with dissolve

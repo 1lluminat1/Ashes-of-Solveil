@@ -126,6 +126,32 @@ label a4_s25_lyra_at_the_altar_ob:
 
     # ========== PHASE 1 -- THE RITE IN PROGRESS ==========
 
+    # CAMERA: 50mm locked. The camera is at the BACK of
+    #         the altar alcove, framed past Lyra's right
+    #         shoulder. It does NOT move for the first
+    #         three-quarters of the scene. The alcove is
+    #         narrow. Three REAL beeswax candles in a
+    #         triangle formation on a folded grey wool
+    #         cloth on the floor. Lyra is kneeling at
+    #         the triangle's point. Her back is to the
+    #         camera. The Band at her wrist is in the
+    #         frame — still cinched past comfort, same
+    #         notch as a4_s04 and a4_s14.
+    # LIGHTING: three candles. REAL candles — beeswax,
+    #           not base-issue analogs — because the
+    #           Old Tongue rite requires REAL SMOKE.
+    #           Corridor cold-diffuse bleed from the
+    #           open doorway behind her. The alcove is
+    #           the WARMEST OB Act 4 scene has had. The
+    #           warmth is NOT comforting. It is the
+    #           rite's permission to do what the rite
+    #           is doing. Warmth as tool, not warmth as
+    #           grace.
+    # SFX: three real candle flames — distinct sound
+    #      from analog flames. Three together make a
+    #      "triangle of small breathing." Her own
+    #      breath controlled over them. No score.
+
     "Three candles on the folded grey wool. The triangle is oriented toward the eastern wall of the alcove -- the wall is not the east of the base, it is the east the rite specifies, which is a different east, a directional convention Lyra was taught in the novitiate and has not had occasion to use professionally until this morning."
 
     lthought "The three candles are the Six halved."
@@ -189,6 +215,21 @@ label a4_s25_lyra_at_the_altar_ob:
     lthought "The protection is already too late for some of it. It is not too late for all of it. I am still going to perform the rite even though it is partial protection, because partial is the unit I have."
 
     # ========== PHASE 3 -- THE TURN ==========
+
+    # CAMERA: Aeron has been present in the frame
+    #         behind her as a half-lit figure at the
+    #         threshold during Phase 2 — no cut to him,
+    #         he arrived in the held composition.
+    #         Now she turns to face him. The camera
+    #         FINALLY shifts: one SLOW DOLLY forward,
+    #         half a meter, no more, and then a lock.
+    #         The exchange happens in a medium two-
+    #         shot. This is the first camera movement
+    #         in the scene.
+    # FACE: Lyra — the post-rite face. Not emptied. Not
+    #        filled. The face of a priest who has just
+    #        completed a rite whose completion does not
+    #        resolve the thing the rite was for.
 
     "She does not stand yet. The rite specifies that the priest may pause for up to one minute after the closing before standing. The pause is for the Six to withdraw. She uses the pause."
 
@@ -365,6 +406,18 @@ label a4_s25_lyra_at_the_altar_ob:
 
     # ========== PHASE 9 -- THE KNEELING ==========
 
+    # CAMERA: tighten from the medium two-shot to a
+    #         CLOSE-MEDIUM framing his head, her lap,
+    #         and her hands held DELIBERATELY AWAY
+    #         from him at her sides. The HANDS-NOT-
+    #         TOUCHING is in the frame. The
+    #         not-touching IS the shot. Do NOT push
+    #         further. Do NOT cut. The close-medium
+    #         holds for the full kneeling sequence.
+    # BLOCKING: his forehead on her knees. Her hands
+    #           at her sides. The rite has a rule about
+    #           the hands and she is obeying it.
+
     "Aeron takes two more steps. He is now at the edge of the wool cloth. The candles are at his feet."
 
     "He lowers himself to his knees."
@@ -398,6 +451,20 @@ label a4_s25_lyra_at_the_altar_ob:
     lthought "I am not going to perform the cost as pain. I am going to perform it as stillness."
 
     # ========== PHASE 10 -- THE HOLDING ==========
+
+    # CAMERA: hold the close-medium. Do not move. Her
+    #         hands are still at her sides. The
+    #         not-touching is still in the frame.
+    #         This is the scene's longest held shot.
+    #         The three candles are in the lower
+    #         frame, still burning, their light still
+    #         warm on the tableau.
+    # SFX: the candle flames are the primary audio.
+    #      Her breath and his breath are secondary.
+    #      The base stirring in the corridor outside
+    #      is a distant third layer — reminder that
+    #      the rite is happening in a room the world
+    #      has not stopped for.
 
     "Lyra does not move her hands from her thighs. Her palms are still down -- she closed the offering at the end of the rite and her palms have remained down since then. Her hands are beside Aeron's head, not on it. The distance between her hands and his head is approximately two centimeters. The two centimeters are the whole of what the rite is asking her to refuse."
 
@@ -500,6 +567,23 @@ label a4_s25_lyra_at_the_altar_ob:
     lthought "The Band stays cinched."
 
     # ========== PHASE 14 -- THE HOLD ==========
+
+    # CAMERA: return to the establishing 50mm locked
+    #         from the back of the alcove, framed past
+    #         her right shoulder. Aeron is gone. Lyra
+    #         is alone at the triangle of candles
+    #         again. The camera holds. The candles
+    #         continue to burn. The three flames make
+    #         their triangle of small breathing. Fade
+    #         on the establishing composition with
+    #         Lyra still kneeling at the triangle
+    #         point and the candles still lit.
+    # FX/COMP: the composition is the same as Phase 1.
+    #          The difference is everything that
+    #          happened between the two framings, and
+    #          the scene does not visualize the
+    #          difference. The frame matches and the
+    #          audience holds the difference.
 
     "The camera holds on Lyra alone in the alcove."
 
