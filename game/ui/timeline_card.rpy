@@ -147,21 +147,34 @@ init python:
     # Six months of 60 days each (360-day year):
     #   Ember → Rain → Kiln → Cipher → Silence → Forge
     #
-    # The game begins on the 3rd of Forge, 390 AC and runs through
-    # late Forge. Act 5's finale crosses into Year 391 AC — the
-    # first of Ember. The number 391 echoes Operation 391, the
-    # Sector 10 sweep that started Aeron's fracture.
+    # The game spans 383-391 AC (8 years). Each act takes place in
+    # a different year with time skips between them:
     #
-    # "DAY X" in scene calls maps to (X + 2)th of Forge, 390 AC.
-    # DAY 58 = 60th of Forge (last day of 390 AC).
-    # DAY 59+ = 1st of Ember, 391 AC (the new year).
+    #   Act 1: Late Forge, 383 AC  (Aeron age 23 — Echelon service)
+    #   Act 2: Early Ember, 385 AC (age 25 — post-defection)
+    #   Act 3: Mid Cipher, 388 AC  (age 28 — rebellion deepens)
+    #   Act 4: Mid Forge, 390 AC   (age 30 — shared authority / violence)
+    #   Act 5: Late Forge → Ember, 390-391 AC (age 31 — the fall)
+    #
+    # Within each act, "DAY X" is relative to that act's start.
+    # The helper auto-detects the current act from _current_scene_id.
+    #
+    # 391 AC = Year of Echelon's fall = Aeron's 391st mission number.
+    # Zira reveals the parallel in Act 5's prep scene.
     # ---------------------------------------------------------------
 
     SOLVEIL_MONTHS = ["Ember", "Rain", "Kiln", "Cipher", "Silence", "Forge"]
     SOLVEIL_DAYS_PER_MONTH = 60
-    SOLVEIL_GAME_START_MONTH = 5  # Forge (0-indexed)
-    SOLVEIL_GAME_START_DAY = 3    # 3rd of Forge
-    SOLVEIL_GAME_START_YEAR = 390
+
+    # Per-act calendar origin: (start_month_index, start_day, year)
+    # "DAY 1" in each act maps to start_day of the specified month/year.
+    ACT_CALENDAR = {
+        1: (5, 42, 383),   # Act 1: 42nd of Forge, 383 AC
+        2: (0, 8, 385),    # Act 2: 8th of Ember, 385 AC
+        3: (3, 15, 388),   # Act 3: 15th of Cipher, 388 AC
+        4: (5, 25, 390),   # Act 4: 25th of Forge, 390 AC
+        5: (5, 52, 390),   # Act 5: 52nd of Forge, 390 AC → overflows to 391 Ember
+    }
 
     def _ordinal(n):
         """Return ordinal suffix for a number: 1st, 2nd, 3rd, 4th..."""
@@ -169,18 +182,32 @@ init python:
             return str(n) + "th"
         return str(n) + {1: "st", 2: "nd", 3: "rd"}.get(n % 10, "th")
 
+    def _get_current_act():
+        """Detect the current act number from _current_scene_id."""
+        sid = str(getattr(renpy.store, '_current_scene_id', ''))
+        if sid.startswith('a1_'): return 1
+        if sid.startswith('a2_'): return 2
+        if sid.startswith('a3_'): return 3
+        if sid.startswith('a4_'): return 4
+        if sid.startswith('a5_'): return 5
+        return 1  # fallback
+
     def _solveil_date(game_day):
-        """Convert a relative game day (DAY 1 = first day of Act 1) to
+        """Convert a relative game day (DAY X within the current act) to
         a Solveil calendar date string.
 
-        Returns: '5th of Forge, 390 AC' or '1st of Ember, 391 AC'
+        Uses _current_scene_id to determine which act we're in,
+        then offsets from that act's calendar origin.
+
+        Returns: '44th of Forge, 383 AC' etc.
         """
         if not game_day or game_day < 1:
             return ""
-        # Calendar day within the starting month
-        cal_day = SOLVEIL_GAME_START_DAY + game_day - 1
-        month_idx = SOLVEIL_GAME_START_MONTH
-        year = SOLVEIL_GAME_START_YEAR
+
+        act = _get_current_act()
+        month_idx, start_day, year = ACT_CALENDAR.get(act, ACT_CALENDAR[1])
+
+        cal_day = start_day + game_day - 1
 
         # Overflow into subsequent months/years
         while cal_day > SOLVEIL_DAYS_PER_MONTH:

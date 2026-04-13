@@ -9,7 +9,8 @@ $ scene_mark(_current_scene_id, "entered")
 
 
 label a1_s01_branding:
-    $ show_timeline("DAY 1", "06:00", "Aeries — Tier Hall")
+    # Flashback — 15 years before story (368 AC, Aeron age 8)
+    $ show_timeline("368 AC", "06:00", "Aeries — Tier Hall")
 
     # ========= STAGE DIRECTIONS =========
     # CAMERA: Nothing. No image. No character. No light.

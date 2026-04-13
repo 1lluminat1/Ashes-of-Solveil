@@ -13,8 +13,8 @@ label start:
     # a1_s06a_daren_flashback is called conditionally from within a1_s06_gala
     call a1_s07_balcony
     call a1_s08_bedroom
-    call a1_s09_inspection_day
-    call a1_s10_barracks_morning
+    call a1_s10_barracks_morning    # 06:00 — wake up
+    call a1_s09_inspection_day     # 09:00 — inspection (day after gala)
     call a1_s11_hill_flashback
     call a1_s13_demonstration_floor
     call a1_s14_brothers_rooftop
