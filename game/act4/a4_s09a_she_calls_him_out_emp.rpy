@@ -59,6 +59,20 @@ label a4_s09a_she_calls_him_out_emp:
 
     # ========== PHASE 1 — THE MUG ==========
 
+    # CAMERA: 50mm, handheld-but-held-still — the paradox the
+    #         opening block names. The mess at back-end of
+    #         third shift. Four tables, one lit, three dark.
+    #         The camera finds Aeron over his left shoulder,
+    #         so we see the cold mug and his hands before we
+    #         see his face. Hold the over-shoulder for the
+    #         establishing — the room reads through his
+    #         coffee, not through his expression.
+    # LIGHTING: one overhead strip, kitchen pass-through at
+    #           half, corridor spill that does NOT reach his
+    #           table. Aeron is sitting inside the coldest
+    #           part of the room on purpose. That choice is
+    #           the scene's first sentence about him.
+
     "The mess at the back-end of third shift."
 
     "Aeron has found the table in the corner — the one that does not face the door, the one that is a quarter-turn from the pass-through so the kitchen noise stays kitchen noise and does not become part of the room he is sitting in."
@@ -86,6 +100,25 @@ label a4_s09a_she_calls_him_out_emp:
     "He hears the chair."
 
     # ========== PHASE 2 — THE CHAIR ==========
+
+    # CAMERA: Zira enters the doorway. The camera does NOT
+    #         cut to her entry. She is simply in the frame
+    #         when Aeron looks up — the reverse angle over
+    #         his shoulder catches her already approaching.
+    #         She stands for the first three lines. The
+    #         camera does not frame her as a stander; it
+    #         frames her as a woman about to sit who has
+    #         chosen not to yet. When she does sit, the
+    #         shot holds — do not cut on the sit. Let the
+    #         half-and-half lighting (corridor spill on one
+    #         side, cold on the other) land naturally as
+    #         she enters her chair.
+    # LIGHTING: when Zira sits, half her face is in the
+    #           corridor spill and half in the cold. The
+    #           bisection is not a metaphor she is
+    #           performing — it is where the chair is. The
+    #           frame catches the fact without italicizing
+    #           it.
 
     "Zira is standing across the table from him. She must have crossed the mess at a walking pace that did not register because Aeron is not tracking doorways tonight and Zira moves through rooms the way she moves through terrain — in the part of the frame you are not watching."
 
@@ -213,6 +246,22 @@ label a4_s09a_she_calls_him_out_emp:
 
     # ========== PHASE 5 — THE TURN ==========
 
+    # CAMERA: Zira leans forward at the turn. The focus
+    #         rolls with her — a slow pull that leaves
+    #         Aeron soft in the background for a single
+    #         beat. This is the scene's only focus pull.
+    #         Hold the rack for the duration of her lean.
+    #         When she finishes her sentence, the focus
+    #         does NOT roll back — Aeron stays soft for
+    #         the next beat. The prioritization is the
+    #         scene's thesis.
+    # FACE: Zira — clear-eyed, under-read. The turn is
+    #        her calling him out. The face that does it
+    #        is not angry. It is the face of a woman
+    #        making an operational observation about a
+    #        civilian matter, and the friction between
+    #        those two registers is the scene's friction.
+
     "She leans forward. Not far — a few inches. Her forearms stay on the table. The lean is the whole gesture."
 
     z "I am not asking you to let me run operations with you. I already run operations with you. I have run them since the Lower Spans. You trust me with ops. You trust me with the field. You trust me with the thing that happens when the plan dies — you have told me that in three different ways in the last six weeks and I have been counting, which you should know, because I count everything, including the number of times the commander of this rebellion uses the word 'trust' at me in a room where there is no audience."
@@ -246,6 +295,24 @@ label a4_s09a_she_calls_him_out_emp:
     "The mess hum is the loudest thing in the room for four seconds."
 
     # ========== PHASE 6 — THE ANSWER HE CANNOT GIVE ==========
+
+    # CAMERA: focus rolls back to Aeron for his attempts to
+    #         answer. Tight single on him. Hold through the
+    #         two operational reroutes — both times he tries
+    #         to make the scene a field conversation. The
+    #         camera does not cut to Zira during his tries.
+    #         He is doing the work alone and the frame is
+    #         making him do it alone. When he finally gives
+    #         her a real sentence, the camera catches the
+    #         eye movement FIRST — the look UP at her —
+    #         and THEN the mouth opening. The looking is
+    #         the scene's win condition per the voice
+    #         baseline.
+    # FACE: Aeron — the under-rested face, the grief filing.
+    #        The face of a man whose body has been told by
+    #        Tessa and Selene both that he needs to stop,
+    #        and whose eyes Zira is now making him use for
+    #        something other than reading tactical overlays.
 
     athought "I am going to fail this."
 
@@ -303,6 +370,21 @@ label a4_s09a_she_calls_him_out_emp:
 
     # ========== PHASE 7 — SHE DOES NOT LEAVE ANGRY ==========
 
+    # CAMERA: she pushes back, stands, and crosses to the
+    #         door. The scene does NOT cut. We watch her
+    #         walk the full length of the mess on a wide
+    #         that has reformatted itself from the
+    #         over-shoulder of the opening — Aeron is now
+    #         foreground-right, and Zira is walking away
+    #         in the middle distance. Do not cut before
+    #         she clears the doorway. The full walk is
+    #         load-bearing.
+    # SFX: the one held low note from the opening block
+    #      enters here. Under her walk. It continues
+    #      through the doorway crossing and fades on her
+    #      exit. The held note is the scene's emotional
+    #      argument finishing its sentence.
+
     "She does not stand up right away."
 
     "She looks at him. Not through him — at him. The look is long enough that Aeron feels it in his sternum, which is a sensation he has not felt from Zira before and does not know what to do with."
@@ -348,6 +430,16 @@ label a4_s09a_she_calls_him_out_emp:
     "Then she is gone."
 
     # ========== PHASE 8 — THE MUG AFTER ==========
+
+    # CAMERA: close insert on the mug. Still half-full.
+    #         Still cold. Aeron's hand in the frame beside
+    #         it, not holding it. The camera does not show
+    #         his face in the final shot. The mug and the
+    #         hand are the composition. The scene opened
+    #         with the mug and the hands, and the closing
+    #         is the same composition with Zira's absence
+    #         having happened in between. Hold the close.
+    #         Fade.
 
     "Aeron does not move for a long moment."
 

@@ -62,6 +62,26 @@ label a4_s10_what_selene_meant_emp:
 
     # ========== PHASE 1 — THE ROOM NEITHER OF THEM COMMANDS ==========
 
+    # CAMERA: 50mm locked. The archive annex — two walls of
+    #         old map rolls, a high narrow window in the far
+    #         wall, two chairs angled toward each other with
+    #         a small table between them. The furniture was
+    #         already in this configuration when they
+    #         arrived. The camera frames the two chairs as
+    #         the subject of the opening. Neither of them is
+    #         in frame yet. Hold on the empty chairs.
+    # LIGHTING: one portable work lamp Selene has brought.
+    #           Low warm amber pooling on the two chairs and
+    #           the table. The high narrow window at the far
+    #           wall is cold blue — the only other light in
+    #           the room. The two temperatures do not meet.
+    #           The chairs sit in the amber. Nobody sits in
+    #           the cold.
+    # SFX: deep base hum, far. The old heating pipe in the
+    #      corner ticks twice at long intervals — the room's
+    #      only sound other than the voices. No ambient
+    #      score. Mark each pipe tick in the mix.
+
     "She found him in the corridor outside the war room at 0630, before the morning brief, and said only: 'Come with me.'"
 
     "He came."
@@ -113,6 +133,19 @@ label a4_s10_what_selene_meant_emp:
     sel "That is the only context I am giving you before I start. I am not going to preface it further. The story does its own work if I let it."
 
     # ========== PHASE 2 — THE MORNING HE DIED ==========
+
+    # CAMERA: the scene's FIRST movement of two. Pan down
+    #         from the held two-shot to find Selene's hands
+    #         on the table. Her hands pouring the water from
+    #         the pitcher into the two tin cups. One pour
+    #         for each cup. She does not top up. The pan is
+    #         slow; the find is gentle. Hold on her hands
+    #         through the pour. Then pan back up to the
+    #         two-shot. This is the only time the camera
+    #         moves until the window beat at Phase 7.
+    # SFX: the pour is the scene's one domestic sound.
+    #      Water into tin. Mark it. Let it sit in the mix
+    #      against the base hum for a full beat.
 
     sthought "Start where I stopped."
 
@@ -226,6 +259,19 @@ label a4_s10_what_selene_meant_emp:
 
     # ========== PHASE 5 — THE THESIS ==========
 
+    # CAMERA: when Selene delivers the thesis line — "You are
+    #         still trying to delegate tasks. I am asking you
+    #         to delegate the question." — the camera is on
+    #         AERON's face, not hers. The line is a line
+    #         about him. Hold his single for the line and
+    #         for the silence that follows. The absence of
+    #         her face during her most important sentence
+    #         is the scene's most important formal choice.
+    # FACE: Aeron — the listening face. Open. The bracing
+    #        from the opening has gone out of his shoulders.
+    #        The thesis lands on a face that is allowing it
+    #        to land.
+
     sel "You are still trying to delegate tasks."
 
     "She says it to the window."
@@ -294,6 +340,26 @@ label a4_s10_what_selene_meant_emp:
 
     # ========== PHASE 7 — HE CANNOT ABSORB IT ==========
 
+    # CAMERA: the scene's SECOND movement. Selene stands
+    #         and crosses to the window. The camera tracks
+    #         her — a slow pan, same cadence as the pour
+    #         pan in Phase 2. She stops at the window with
+    #         her back three-quarters to the room. Hold her
+    #         in the cold blue window-light. Aeron is still
+    #         in the amber chair-pool in the background,
+    #         soft focus. The two light temperatures are
+    #         now separating the two figures for the first
+    #         time. She finishes the Kael story from the
+    #         window. Do not cut back to Aeron during the
+    #         telling. The story is hers to finish in the
+    #         cold.
+    # LIGHTING: Selene stepping into the cold blue is the
+    #           scene's one lighting event. The amber does
+    #           not follow her. The cold accepts her. Mark
+    #           the transition — she is still the warmest
+    #           person in the frame, but the frame is now
+    #           putting her where the warmth is not.
+
     "Aeron does not answer."
 
     "His hands are on the cup. The water is still in the cup. He has not drunk any of it."
@@ -343,6 +409,22 @@ label a4_s10_what_selene_meant_emp:
     sel "You are hearing it. That is sufficient for the night."
 
     # ========== PHASE 8 — THE RETURN TO THE CHAIR ==========
+
+    # CAMERA: Selene returns from the window to the chair.
+    #         The camera tracks her back — same cadence. She
+    #         sits. The two-shot reforms. She is lighter
+    #         than she was when she stood, by a specific
+    #         small amount per the opening block. The
+    #         camera reads the lightening in the way she
+    #         sits — the weight distribution of a woman
+    #         who has just put something down.
+    # FACE: Selene — for the first time in the scene she is
+    #        sitting as the Selene who will leave the room
+    #        lighter than she entered it. The Kael story
+    #        has been offered. Nothing has been solved. She
+    #        has given Aeron a piece of her that she has
+    #        never given to anyone in this base, and the
+    #        relief is visible in the shoulders first.
 
     "She crosses back to the chair. She sits again. She is lighter — not visibly, the way a person who has set down a weight they were not aware they were carrying is lighter. The lightness is inside the posture, not on the surface."
 
@@ -421,6 +503,16 @@ label a4_s10_what_selene_meant_emp:
     "Selene nods. Small. The nod is a yes and a permission at the same time."
 
     # ========== PHASE 9 — THE MINUTE ==========
+
+    # CAMERA: hold the two-shot. Do not move. This is the
+    #         scene's final minute — the long silence the
+    #         voice baseline calls load-bearing. The
+    #         silences are the same length as the lines.
+    #         Fade slowly on the two-shot as the held low
+    #         note enters and holds. The window stays in
+    #         the frame, cold, at the far edge. The chairs
+    #         stay in the amber. The pipe ticks once more.
+    #         Fade to black. The note resolves on the fade.
 
     "They sit in the annex for another minute."
 

@@ -96,6 +96,21 @@ label a4_s09_noelle_implicated_emp:
 
     # ========== PHASE 1 — THE SUMMONS ==========
 
+    # CAMERA: 50mm locked. Same workspace discipline as
+    #         a4_s03 — Noelle's rooms are always shot steady.
+    #         The frame is her authority. Open on the console
+    #         with Noelle seated at it, the crystal stand
+    #         central, three task lamps at full. The keyboard
+    #         is active under her hands. Aeron enters from
+    #         frame-left, alone. No Selene. The absence of
+    #         the third figure is the scene's first
+    #         composition choice — the frame has room for
+    #         two and no more.
+    # SFX: the keyboard is active under her hands when Aeron
+    #      enters. Mark the moment it stops — that is the
+    #      scene's first silence. It does not resume at any
+    #      point. Her hands have a different job tonight.
+
     "Noelle's message reaches Aeron at twenty-two-fifty on a small console in the war room where he has been reviewing Lyra's after-action for the Sector 7 interdiction for the fourth time. The message is two lines. Noelle's messages are always two lines or fewer."
 
     "'I have the counter-framework drafted. I would like you to come to the workspace. Alone, if possible.'"
@@ -145,6 +160,24 @@ label a4_s09_noelle_implicated_emp:
     a "Show me."
 
     # ========== PHASE 3 — THE FRAMEWORK ==========
+
+    # CAMERA: crystal activation. The pale blue wash fills the
+    #         room. The counter-framework resolves above the
+    #         stand. Hold the WIDE — both figures in frame,
+    #         the projection between them. Do not push in on
+    #         the projection. Push in instead on Noelle's
+    #         face as she begins to explain, slowly, over
+    #         the length of her explanation, until by the
+    #         end of the explanation the camera is tight on
+    #         her and the projection is blurred at the edges
+    #         of the frame.
+    # FACE: Noelle — the Phase 3 face is new. This is not
+    #        the data-steady of s03. This is the face of a
+    #        woman about to ask someone to give her moral
+    #        permission to do a thing she has already
+    #        designed. The camera earns the tight by pushing
+    #        slowly enough that the audience does not
+    #        notice the push until it has already landed.
 
     "She stands. She walks to the crystal stand. She activates it."
 
@@ -238,6 +271,20 @@ label a4_s09_noelle_implicated_emp:
 
     # ========== PHASE 5 — THE ASK ==========
 
+    # CAMERA: hold the tight from Phase 3. Do not cut. This
+    #         is the scene's moral center. Noelle is asking
+    #         him to be the one who answers. The camera
+    #         refuses to offer her the comfort of looking at
+    #         him while she asks. She has to stay in her own
+    #         frame. Hold the tight. Hold it longer than the
+    #         audience expects. The length is the cost.
+    # FACE: Noelle — the ask face. She does not waver. She
+    #        does not soften. She does not soften for the
+    #        camera and she does not soften for him. This
+    #        is her first time asking another person for
+    #        permission in the whole series and her voice
+    #        is doing the work her voice has always done.
+
     "Aeron does not speak."
 
     "He does not speak because she is not at the sentence yet. The sentence is still two beats out. He knows the geometry of Noelle's sentences by now and he is going to wait for the geometry to finish."
@@ -267,6 +314,18 @@ label a4_s09_noelle_implicated_emp:
     n "May I be the one who does this."
 
     # ========== PHASE 6 — THE WITNESS ==========
+
+    # CAMERA: STILL hold the tight on Noelle. His voice
+    #         enters the frame without his face. The
+    #         refusal to cut is the scene's second most
+    #         important formal choice after the keyboard
+    #         silence. He is answering her and she is
+    #         receiving the answer alone, the way she
+    #         asked the question alone. His face comes in
+    #         only after his answer has finished — cut to
+    #         him for one beat, then back to her. The
+    #         single beat on him is the scene's only
+    #         reprieve from the tight.
 
     "Aeron takes a breath he has been holding for two sentences."
 
@@ -321,6 +380,31 @@ label a4_s09_noelle_implicated_emp:
     n "I am going to sign now."
 
     # ========== PHASE 7 — THE SIGNING ==========
+
+    # CAMERA: three macro inserts in sequence. (1) The
+    #         stylus tip approaching the document pad. (2)
+    #         The stylus touching the surface — the small
+    #         white light under her stylus brighter than
+    #         any other small light in the frame. (3) The
+    #         signature resolving in ink, followed by the
+    #         small haptic confirmation pulse at the
+    #         corner of the pad. Each macro held for the
+    #         length of the corresponding narration beat.
+    #         Then cut WIDE: Noelle seated, signed document
+    #         floating as holographic echo, Aeron standing
+    #         a meter behind her, not touching her. Hold
+    #         the wide for the final beat.
+    # SFX: the sustained low chord enters at the stylus-
+    #      touch. Continues through the signing. Does not
+    #      resolve at the close — it fades under the cut
+    #      to black, unresolved. The unresolved chord is
+    #      the scene's final argument about what Noelle
+    #      has just chosen.
+    # LIGHTING: at the moment of the signature, the pad
+    #           light under her stylus is the hottest
+    #           small light in the frame. The crystal
+    #           dims. The task lamps hold. The pad is the
+    #           event.
 
     "She turns to the console. She opens the document pad — the small haptic-input pad she has been using for draft acknowledgements since the beginning of her Phoenix tenure. The pad has never before carried a document Aeron has seen her sign."
 
@@ -403,6 +487,18 @@ label a4_s09_noelle_implicated_emp:
     "Neither of them moves for a count of ten."
 
     # ========== PHASE 8 — THE CLOSE ==========
+
+    # CAMERA: hold the wide from the end of Phase 7.
+    #         Noelle at the console, Aeron a meter behind
+    #         her. Neither moves. The holographic echo of
+    #         the signed document floats above the pad
+    #         between them. The unresolved chord holds.
+    #         Fade on the composition — not on either
+    #         face. The composition is the scene's closing
+    #         sentence: one person signed, one person
+    #         witnessed, the thing that was signed hangs
+    #         in the frame between them still legible and
+    #         already changing the world.
 
     "Eventually Noelle speaks. Her voice is the technical voice again — she has picked the instrument back up because the scene is over and the instrument is how she walks out of scenes."
 
