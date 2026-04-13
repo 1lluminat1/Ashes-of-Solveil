@@ -76,6 +76,22 @@ label a4_s08_echelon_interlude_4_ob:
 
     # ========== PHASE 1 -- MARCUS AT THE GLASS ==========
 
+    # CAMERA: 50mm locked tripod wide establishing. The spire's
+    #         strategic overlook. Marcus standing at the glass
+    #         wall, the city below in grey-dusk. The glass
+    #         takes up the left two-thirds of the frame; Marcus
+    #         fills the right third. He is backlit by the
+    #         bleaching sky. We see his silhouette before his
+    #         face. Hold the wide.
+    # LIGHTING: Aeries dusk. The sky outside is bleaching out
+    #           through the glass. Cold institutional overheads
+    #           at 60%. The spire's reading alcove in the
+    #           background has a single low lamp on the table
+    #           beside the empty chair — warmer than anything
+    #           else in the frame. The lamp lights the chair,
+    #           not Marcus. That asymmetry is the scene's
+    #           thesis.
+
     "The Aeries spire. The high floor. The hour when the capital's light thins through the outer glass and does not yet surrender to the inner lights."
 
     "Marcus Rylan stands at the window wall. Hands clasped behind him at the small of his back. The folio tucked under his left arm. His weight is on both feet. The weight has been on both feet for the last eleven minutes."
@@ -161,6 +177,21 @@ label a4_s08_echelon_interlude_4_ob:
     "Rhea Vestin enters."
 
     # ========== PHASE 3 -- RHEA VESTIN ==========
+
+    # CAMERA: Rhea enters from frame-right. Cut to a
+    #         symmetrical two-shot — Marcus on frame-left at
+    #         the glass, Rhea three paces into the room at
+    #         frame-right. Flat composition. Both at equal
+    #         height in the frame. Neither higher than the
+    #         other. This is deliberate: the two-shot treats
+    #         them as peers even though one outranks the
+    #         other by five tiers.
+    # FACE: Rhea — expressionless by discipline, not by
+    #        vacancy. The face of a woman who has been at
+    #        this work for decades and has not stopped
+    #        taking it seriously. Her first appearance in
+    #        the series. The camera does not give her a
+    #        reveal shot; she simply enters the composition.
 
     # CAMERA: two-shot. Symmetrical. Equal height. The Aeries frames them as peers.
 
@@ -273,6 +304,19 @@ label a4_s08_echelon_interlude_4_ob:
 
     # ========== PHASE 5 -- THE FOLIO EXCHANGE ==========
 
+    # CAMERA: tight insert on Marcus's hands with the folio.
+    #         The folio is paper, not a datapad. His hand on
+    #         the cover. The annotations visible at the edge
+    #         of the pages in his handwriting. Hold the
+    #         insert as he hands the folio to Rhea. The
+    #         exchange is flat and unhurried — the paper
+    #         crosses the frame without ceremony. When it
+    #         lands in Rhea's hand, cut back to the two-shot.
+    # SFX: the folio closing is the scene's one tactile
+    #      sound. Paper against paper. Quiet. The sound of
+    #      a man who prefers paper because paper cannot be
+    #      network-intercepted.
+
     "Marcus crosses to the reading alcove. Picks up the folio. Returns to the window wall. Extends the folio to Rhea."
 
     "Rhea takes it. Opens it in the standing position. Reads the first page for eleven seconds."
@@ -339,6 +383,14 @@ label a4_s08_echelon_interlude_4_ob:
 
     # ========== PHASE 6 -- MARCUS ALONE ==========
 
+    # CAMERA: Rhea exits frame. Return to the single on
+    #         Marcus at the glass. Same composition as
+    #         Phase 1. The spire has not changed. The scene
+    #         has. Hold the single. The city below is still
+    #         grey-dusk. His silhouette is still silhouetted.
+    #         The only difference is that Rhea has been in
+    #         the frame and now is not. The frame remembers.
+
     "The spire is quiet again."
 
     "Marcus remains at the window wall for the count of ten. He has been in the habit, these last weeks, of counting to ten after an operational briefing before permitting himself the interior life the briefing interrupted. The count is a discipline. The discipline is one of his few."
@@ -356,6 +408,24 @@ label a4_s08_echelon_interlude_4_ob:
     "The warm lamp on the table between the chairs lights the empty chair the way it always does."
 
     # ========== PHASE 7 -- THE EMPTY CHAIR ==========
+
+    # CAMERA: Marcus turns from the glass and walks to the
+    #         reading alcove. The camera does not track
+    #         closely — it holds the wide as he crosses the
+    #         spire floor. Stops at the table beside the
+    #         empty chair. Does not sit. The single lamp
+    #         lights the chair, not him. The composition
+    #         is identical to the EMP variant's closing
+    #         image but the lighting is colder and Marcus's
+    #         posture is stiffer. The mirror the two scenes
+    #         form is deliberate — this is the same man in
+    #         the same place having a different conversation
+    #         with his absent son.
+    # FACE: Marcus — the disappointment. Tireder than the
+    #        EMP variant's interest. The opening block names
+    #        it: the specific tired of a craftsman seeing
+    #        his apprentice copy his worst habit instead of
+    #        his best.
 
     "Marcus places his hands flat on the low table. One hand on either side of the folio's absence -- the space where the folio was before he gave it to Rhea."
 
@@ -464,6 +534,18 @@ label a4_s08_echelon_interlude_4_ob:
     mthought "That is the disappointment."
 
     # ========== PHASE 9 -- SPIRE COdA ==========
+
+    # CAMERA: final shot of the scene. Marcus in profile at
+    #         the reading alcove, the empty chair in frame
+    #         beside him, the lamp still on the chair. Hold
+    #         the two-element composition — man and chair —
+    #         for a beat past comfort. Fade. This is the
+    #         OB mirror of the EMP variant's hand-on-the-
+    #         chair-arm closing shot, and the mirror is the
+    #         entire comparative argument of the pair.
+    # LIGHTING: warm lamp on the chair, cold spire behind
+    #           Marcus. The two temperatures do not meet.
+    #           The closing image is the bisection.
 
     "The spire hum. The wind on the outer glass. The warmth of the lamp behind Marcus on the low table beside the empty reading chair."
 

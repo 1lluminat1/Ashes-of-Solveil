@@ -109,6 +109,20 @@ label a4_s08_zira_exit_plan_emp:
 
     # ========== PHASE 1 — THE DOOR ==========
 
+    # CAMERA: 35mm. Open on Zira's hands at the bench. Hands
+    #         before face per the workshop rule. She is laying
+    #         objects out on the bench — the camera does not
+    #         name them yet. It reads them as shapes. Aeron's
+    #         bootfall enters the audio mix before he enters
+    #         the frame. The camera pivots to catch him at
+    #         the door as he arrives, then returns to the
+    #         bench without cutting to his face.
+    # LIGHTING: three pools of warm light (bench, forge,
+    #           close-work clip). The rest of the workshop in
+    #           warm darkness. Zira's face is half in the
+    #           bench lamp when bent over her work. When she
+    #           straightens she comes fully into the light.
+
     "Aeron's day does not end."
 
     "Aeron's day has been ending for four hours — ever since Noelle closed her phase-two briefing with a locked location on the analyst cell and Selene dismissed the command team with the instruction to eat and sleep in that order. The day has been ending and refusing to end. The day is the day he saw his own counter-strike framework running on the Echelon side of a projection and watched Noelle ask him whether she was still a neutral observer and told her the question stayed open."
@@ -156,6 +170,23 @@ label a4_s08_zira_exit_plan_emp:
     "She lets him see it."
 
     # ========== PHASE 3 — THE OBJECTS ==========
+
+    # CAMERA: insert sequence on the bench. Each object the
+    #         narration names gets a short macro hold — the
+    #         three forged identity papers (pan from one to
+    #         the next, reading the different hands), the
+    #         chain map with its unnamed fourth stop, the
+    #         oilskin wrap unfurled, the pre-paid Ashmarket
+    #         currency, the Ghostline cipher key. Hold the
+    #         fourth stop on the chain map — the single Old
+    #         Tongue character in different ink — longer
+    #         than the others. The camera lets the reader
+    #         see that the fourth stop is not a location, it
+    #         is a choice Zira has made with her own hand.
+    # FACE: Aeron — his face finally enters the frame as
+    #        the objects enter his understanding. Tight
+    #        single on him reading the map. The recognition
+    #        plays in the eyes first, then the mouth.
 
     athought "The bench is full."
 
@@ -251,6 +282,20 @@ label a4_s08_zira_exit_plan_emp:
 
     # ========== PHASE 4 — THE EDGE ==========
 
+    # CAMERA: two-shot across the bench for the first
+    #         exchange. Zira left, Aeron right, the exit
+    #         plan between them. Hold the two-shot through
+    #         the first dialogue run. Neither cuts to single.
+    #         The scene earns closer coverage slowly. She
+    #         is not looking up at him yet and the camera
+    #         honors that — her profile in the lamp, his
+    #         three-quarter on the other side.
+    # FACE: Zira — the workshop face. Not performing. Not
+    #        hiding. Working. The same face from s05 OB's
+    #        solo inspection, but this time she is working
+    #        with an audience and the audience is the one
+    #        person she has been forging the plan for.
+
     "A silence."
 
     "Aeron is still on his side of the bench. The bench is a narrow thing and the silence is very loud in the narrowness. He is aware, in the peripheral part of his attention, that the correct move in the physical vocabulary of this room is to go around to her side of the bench."
@@ -324,6 +369,21 @@ label a4_s08_zira_exit_plan_emp:
     z "Good."
 
     # ========== PHASE 5 — THE GIFT IS A GRIEF ==========
+
+    # CAMERA: she finally looks up. Cut to the medium-tight
+    #         on her that the opening block describes —
+    #         "medium tight that respects her without pinning
+    #         her." Hold the medium for her longest run of
+    #         lines in the scene. Do not push to tight-tight.
+    #         She is a woman who has not let a camera pin
+    #         her since the Ashmarket, and the scene does
+    #         not try.
+    # FACE: Zira — the gift-is-a-grief face. This is the
+    #        face she did not have in the go-bag solo scene
+    #        because there was no one to show it to. Here
+    #        there is one person, and the face is for him,
+    #        and the face says what the hands cannot
+    #        pretend not to be saying.
 
     "A long quiet."
 
@@ -441,6 +501,18 @@ label a4_s08_zira_exit_plan_emp:
 
     # ========== PHASE 7 — THE FOLD ==========
 
+    # CAMERA: tight on her hands folding the papers. Macro
+    #         insert. One by one: the three identity papers
+    #         fold in half, the chain map folds in quarters,
+    #         the oilskin wrap closes around the currency
+    #         and the cipher key. Each fold is a deliberate
+    #         movement. The camera holds on the folds. Do
+    #         not cut to her face. The folds are her voice
+    #         returning to its usual register.
+    # SFX: the low cello note from the opening block enters
+    #      here. One note. Held under the folding. It does
+    #      not crescendo. It does not resolve. It holds.
+
     "She looks down at the bench."
 
     "She reaches for the three sheets of identity papers. She picks them up — not roughly, not reverently, with the hands of a woman who has handled forgery paper enough times to know exactly how it wants to be held."
@@ -476,6 +548,23 @@ label a4_s08_zira_exit_plan_emp:
     athought "She said 'tonight.' She left the rest of the nights open. She is telling me we may come back to this and she is also telling me not now. Both things at the same time. In one word."
 
     # ========== PHASE 8 — THE CLOSE ==========
+
+    # CAMERA: follow the folded papers to the drawer. The
+    #         drawer opens. The papers go in. Her hand closes
+    #         the drawer. The drawer is NOT locked. Hold the
+    #         tight on her hand on the closed but unlocked
+    #         drawer. The unlocked drawer is the scene's
+    #         final image. The rest of the workshop is out
+    #         of focus. Fade on the drawer, slow. The cello
+    #         note goes silent before the fade — the
+    #         silence before the cut is the scene's final
+    #         sentence.
+    # FX/COMP: the unlocked drawer is the scene's load-
+    #          bearing visual metaphor. The plan is in it.
+    #          The lock is absent. The absence of the lock
+    #          is the offer. The drawer's unlocked state is
+    #          not a mistake and the frame does not treat
+    #          it as one.
 
     "They stand at the bench for a count of twenty. Neither of them speaks."
 

@@ -99,6 +99,22 @@ label a4_s07_aeron_and_nyra_cold_ob:
 
     # ========== PHASE 1 -- ARRIVAL ==========
 
+    # CAMERA: 50mm locked two-shot across the small table.
+    #         Aeron enters frame-right without knocking — she
+    #         expects him. Nyra at the decanter. Neither of
+    #         them sits. The camera frames them through the
+    #         two empty chairs; the chairs remain in frame
+    #         the whole scene and are never used. The
+    #         composition is a meeting refusing to be a
+    #         meeting.
+    # LIGHTING: steel-blue register from a3_s12_the_oath_ob.
+    #           Single wall sconce at low amber — the amber
+    #           isolates the table and everything else falls
+    #           into near-black. The two of them are lit at
+    #           waist and above. The floor is not lit. The
+    #           bed is not in frame. The lighting is the
+    #           scene's moral geometry.
+
     "0100. The base has gone quiet -- night rotation, minimum staffing. The corridor to Nyra's quarters runs through the restructured wing: three checkpoints, none of them challenging him. His co-command walks unexamined."
 
     "He does not knock."
@@ -166,6 +182,19 @@ label a4_s07_aeron_and_nyra_cold_ob:
     athought "That is mercy in her register. I am noting that."
 
     # ========== PHASE 3 -- THE QUESTION ==========
+
+    # CAMERA: alternating medium close-ups across the table.
+    #         Aeron, then Nyra, then Aeron again. Do not cut
+    #         to wide. The table between them must be implied
+    #         by the reverse angles, not named by a master
+    #         shot. This is a scene that refuses to let the
+    #         camera show you the room.
+    # FX/COMP: the cuff stain from s06 is visible on Aeron's
+    #          right sleeve when he raises the glass. Catch
+    #          it once, in passing, without lingering. The
+    #          camera notes the stain without commenting.
+    #          Nyra has already seen it and decided not to
+    #          say.
 
     "Aeron turns the glass a quarter-rotation in his hand. The amber light catches the liquid."
 
@@ -255,6 +284,20 @@ label a4_s07_aeron_and_nyra_cold_ob:
 
     # ========== PHASE 6 -- NYRA CROSSES ==========
 
+    # CAMERA: Nyra walks around the table to Aeron's side.
+    #         Four steps, unhurried. The camera does not
+    #         follow her around the table — it stays on
+    #         Aeron's chest. Her hand enters the frame flat
+    #         against his sternum from frame-left. We do NOT
+    #         cut to her face for the grounding touch. The
+    #         grounding is where the camera stays. It is
+    #         the shot. Hold the tight on the hand and the
+    #         chest for the full phase.
+    # SFX: her footfalls on carpet are the only sound for the
+    #      duration of her walk. Four steps, unhurried. When
+    #      her hand lands on his chest, the mix drops to her
+    #      breath only. No HVAC. No clock. Just breath.
+
     "Nyra does not speak for a full minute. She watches him."
 
     nythought "He needs one more thing and he is not going to ask for it. He is going to stand there and run it alone if I do not give it to him."
@@ -322,6 +365,17 @@ label a4_s07_aeron_and_nyra_cold_ob:
 
     # ========== PHASE 8 -- THE HOUR ==========
 
+    # CAMERA: HARD CUT. The scene's one cut across time. Before
+    #         the cut: Nyra's hand on Aeron's chest, the
+    #         grounding tight. After the cut: Aeron standing at
+    #         the door, jacket still on, about to leave. One
+    #         hour has passed off-screen. The cut is abrupt
+    #         and honest — the scene refuses to stage the hour
+    #         because the hour is not content, it is time.
+    # SFX: the cut is silent. No ambient bridge, no musical
+    #      transition. The absence of a transition IS the
+    #      transition.
+
     "Nyra holds the hand a moment longer. Then lowers it."
 
     "She does not return to her side of the table. She stays at his side. Half a step of separation. They are both facing the table now, looking at the glass he did not drink."
@@ -371,6 +425,21 @@ label a4_s07_aeron_and_nyra_cold_ob:
     "The corridor swallows the sound of his boots."
 
     # ========== PHASE 10 -- NYRA ALONE ==========
+
+    # CAMERA: Aeron exits frame. The camera stays with Nyra
+    #         alone. She does not watch him go. She walks to
+    #         the table, picks up the decanter, walks to the
+    #         small sink in the corner. The camera follows
+    #         her to the sink — first camera movement of the
+    #         scene outside the grounding-hand tight. Hold on
+    #         the sink drain as she pours the rest of his
+    #         drink out. Do NOT cut to her face. The pour is
+    #         the ending. Hold the pour for the full three
+    #         seconds.
+    # SFX: the pour is the scene's loudest sound and its
+    #      last. Liquid into a metal drain. Three seconds.
+    #      Fade out on the sound, not on the image. The
+    #      sink in empty frame is the final image.
 
     "The quarters hold Nyra."
 

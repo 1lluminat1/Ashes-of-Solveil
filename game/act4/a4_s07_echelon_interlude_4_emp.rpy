@@ -85,6 +85,23 @@ label a4_s07_echelon_interlude_4_emp:
 
     # ========== PHASE 1 — THE APPROACH ==========
 
+    # CAMERA: 40mm locked wide. The command spire's long table
+    #         at full extension, the mapwall behind the command
+    #         chair, the east windows pouring gold across the
+    #         stone. The room is empty. Hold the empty frame
+    #         for a beat before anyone arrives. The scene is
+    #         about an absence before it is about a presence.
+    # LIGHTING: late afternoon Aeries gold. Long east windows.
+    #           The table in warm half-shadow. The empty chair
+    #           — the second from Marcus's right — is lit
+    #           directly by the windows and reads as the
+    #           brightest single surface in the frame. It is
+    #           the subject of the establishing shot. Marcus
+    #           does not enter it yet.
+    # SFX: spire ambient. Deep. Wind against stone. Very
+    #      distant chime from the lower courtyard. No music
+    #      bed. The silence is load-bearing.
+
     "The Aeries command spire sits at the apex of the old mountain citadel, three hundred meters above the highest tier of the city, and has for six centuries been the place where the High Commander of the Aeries goes to make a decision in silence."
 
     "The room is long. The table is longer than the room strictly requires, because the table was cut from a single piece of mountain ironwood in the second century of the Aeries and the room was built around it rather than the other way. The banners of the seven branches hang on the north wall. The mapwall, three meters tall, carries the living tactical display of the continent — red for Echelon deployments, white for old empire, grey for everything Echelon does not yet control."
@@ -100,6 +117,20 @@ label a4_s07_echelon_interlude_4_emp:
     "The seat has been empty for five months."
 
     # ========== PHASE 2 — THE ENTRANCE ==========
+
+    # CAMERA: Marcus enters from the eastern corridor door
+    #         frame-left. Hold the wide through his walk. He
+    #         is backlit by the windows — his face is not
+    #         visible until he reaches the command chair and
+    #         turns into frame. The walk is long and the
+    #         camera does not cut or push during it. The pan
+    #         across the table lands on the empty chair as
+    #         he approaches it.
+    # SFX: the soft step of polished boots on polished stone.
+    #      Marcus's walk has its own cadence — unhurried,
+    #      weighted, the step of a man who owns the room he
+    #      is walking through. Mark the first footfall and
+    #      the last as the scene's bookend sounds.
 
     "The eastern door opens."
 
@@ -158,6 +189,19 @@ label a4_s07_echelon_interlude_4_emp:
     "He recognizes it because it is one of the shapes he knows how to break."
 
     # ========== PHASE 4 — THE INTEREST ==========
+
+    # CAMERA: medium on Marcus standing at the empty chair.
+    #         He has not sat yet. His hand is on the arm of
+    #         Aeron's chair. The camera holds medium — Marcus
+    #         does not need push-in. The room pushes in on
+    #         its own by listening.
+    # FACE: Marcus — the interest face. The opening block
+    #        calls out that this is a thing Marcus has not
+    #        been in weeks. Tonight he is interested. The
+    #        camera reads it in the micro-movement of the
+    #        eyes scanning the chair — not affection, not
+    #        grief. Recognition. A reader finding the
+    #        passage he has been looking for.
 
     "There is a small change in Marcus's face."
 
@@ -231,6 +275,18 @@ label a4_s07_echelon_interlude_4_emp:
 
     # ========== PHASE 6 — RHEA VESTIN ==========
 
+    # CAMERA: Marcus still medium, still standing, hand still
+    #         on the chair arm. The Rhea mention is the
+    #         scene's one forward-reaching line. The camera
+    #         does not push in for it. Rhea is not in the
+    #         room and the camera does not let us believe she
+    #         is. The mention lands in an empty frame and
+    #         that is the point — Marcus is summoning her
+    #         and the camera is refusing to animate her yet.
+    # SFX: the silence deepens by one step around the Rhea
+    #      mention. The wind against the stone becomes the
+    #      only audible event. Mark the drop.
+
     "He reaches for the small panel beside the command chair. The panel is for internal Echelon communications — not the tactical display, the command-side back-channel."
 
     "He opens the dispatch queue."
@@ -262,6 +318,17 @@ label a4_s07_echelon_interlude_4_emp:
     "Marcus closes the panel."
 
     # ========== PHASE 7 — THE ADDRESS ==========
+
+    # CAMERA: stay medium. The one time Marcus speaks in the
+    #         scene. The camera does not move for the line.
+    #         The line is spoken to the empty chair, not to
+    #         the camera. He is addressing his son in his
+    #         son's absence. The composition is Marcus
+    #         medium and the chair in the frame beside him,
+    #         both lit by the gold.
+    # SFX: the held low string from the opening block enters
+    #      here. Barely audible. Under Marcus's line. It
+    #      does not crescendo. It holds.
 
     "He looks at the empty chair."
 
@@ -304,6 +371,20 @@ label a4_s07_echelon_interlude_4_emp:
     "The room holds him."
 
     # ========== PHASE 8 — THE HAND ==========
+
+    # CAMERA: tight insert on Marcus's right hand at the arm
+    #         of the empty chair. Half in the gold from the
+    #         windows, half in the shadow of his own sleeve.
+    #         Not gripping. Not tapping. Not moving. Hold
+    #         the insert for the length of the held string.
+    #         Fade on the hand. The last image of the scene
+    #         is the hand on the empty arm.
+    # LIGHTING: the gold on the chair arm is the scene's
+    #           closing grammar. The shadow of his sleeve
+    #           is the scene's closing argument. Together
+    #           they compose a single frame that says what
+    #           the scene has been saying: Marcus will not
+    #           let go of an absence he is also the cause of.
 
     "Marcus reaches to his right."
 
