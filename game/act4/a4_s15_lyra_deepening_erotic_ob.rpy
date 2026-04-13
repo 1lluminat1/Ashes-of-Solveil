@@ -102,6 +102,16 @@ label a4_s15_lyra_deepening_erotic_ob:
 
     # ========== PHASE 1 -- THE ARRIVAL ==========
 
+    # CAMERA: 50mm locked. OB register. Opens on the corridor
+    #         outside Aeron's quarters. Lyra approaching from
+    #         frame-left at measured pace. She has not come
+    #         here unannounced since a3_s13. The camera tracks
+    #         her only as far as the door and then LOCKS.
+    #         Door cycles. She enters. No push, no follow.
+    # LIGHTING: corridor cool institutional. Cold 5000K
+    #           overheads. No practicals. The corridor is a
+    #           plate the OB register has shown us before.
+
     "The corridor outside Aeron's quarters is empty. It is late enough that night watch is the only traffic on this level. Her boots on the deck plating are the only sound."
 
     lthought "I am walking toward a decision I have already made."
@@ -208,6 +218,21 @@ label a4_s15_lyra_deepening_erotic_ob:
 
     # ========== PHASE 5 -- THE UNBUCKLING ==========
 
+    # CAMERA: close-up ONLY on the buckle as she unbuckles
+    #         the Band. The only close-up of the entire
+    #         scene up to this point. Hold the macro on
+    #         the buckle through the unfasten. Then mid-
+    #         shot for the setting-down on the bedside
+    #         table. The setting-down is a shot in itself.
+    # SFX: the Band leather coming free. Distinct texture
+    #      from the re-buckle in a4_s04 — this is the
+    #      unfasten, cooler, mechanical. The set-down on
+    #      the metal bedside table is a single ceramic-on-
+    #      metal beat. Mark it precisely.
+    # FX/COMP: the bedside table is METAL. When she sets
+    #          the Band down, it leaves a ring mark the
+    #          camera will note later at re-buckle.
+
     "She steps back by one pace."
 
     "The step back is not retreat. It is the amount of room her hands need to work. She lowers her gaze to her own hip. Her fingers find the buckle."
@@ -265,6 +290,14 @@ label a4_s15_lyra_deepening_erotic_ob:
     lthought "The substitution is either heresy or the most honest prayer I have ever made. I am not going to decide which one it is tonight. Tonight I am going to do the substitution and see which one it turns out to be in the morning."
 
     # ========== PHASE 7 -- CONSENT GATE (THREE OPTIONS) ==========
+
+    # CAMERA: alternating close singles — her, him, her,
+    #         him. The close singles are reserved for the
+    #         consent gate. Her eyes are NOT searching
+    #         tonight. His eyes are NOT recessed. Something
+    #         has changed in both of them — not softened.
+    #         The fabric between them is thinner. The
+    #         closes read the difference from a3_s13.
 
     "He closes the last of the distance. His hand rises -- not to take her, to ask. The hand is between them, palm half-open, at the level of her sternum. The gesture is the same offered-hand as in the muster bay this morning."
 
@@ -430,6 +463,19 @@ label a4_s15_lyra_deepening_erotic_ob:
         jump .intimate_marker
 
     # ========== PHASE 9 -- INTIMATE MARKER ==========
+
+    # CAMERA: clinical compositions. Echo a3_s02 and
+    #         a3_s13 but with different light. Stay locked.
+    #         OB intimacy does not earn handheld here. The
+    #         bodies make the same shapes they have made in
+    #         the OB path before. The angles are familiar
+    #         and the camera treats them as familiar.
+    # LIGHTING: blue city-glow dominant. Amber practical
+    #           is absent. The absence of the amber from
+    #           this body of work is MORE TOTAL than it
+    #           was in a3_s13 — mark the further
+    #           darkening. The scene is continuing the
+    #           s13 palette toward its logical end.
     label .intimate_marker:
 
         # [INTIMATE CONTENT HERE]
@@ -449,6 +495,24 @@ label a4_s15_lyra_deepening_erotic_ob:
         #   name, she says it the way she said 'I am here' -- as the statement of a position.
 
     # ========== PHASE 10 -- AFTERCARE (COLD) ==========
+
+    # CAMERA: wide two-shot. Lyra sitting up at the edge
+    #         of the cot, re-buckling. Aeron on the cot
+    #         behind her, NOT reaching. She is NOT looking
+    #         at him. The re-buckling is done by touch,
+    #         not sight — the room is nearly dark. Do not
+    #         push in on the re-buckle. Hold the wide. She
+    #         is completing a ritual and the frame does
+    #         not intrude on it.
+    # LIGHTING: overhead off, lamp off. Only the city glow
+    #           through the reinforced window. The room is
+    #           nearly dark. The re-buckle happens in
+    #           near-silhouette.
+    # FX/COMP: the ring mark on the metal bedside table is
+    #          visible in the frame where she set the Band
+    #          down. She does NOT wipe the mark. It stays
+    #          on the table after she puts the Band back on.
+    #          Catch the mark in passing — do not italicize.
 
     # VISUAL: After. The lamp is off. The overhead is off. Only city-glow through the window.
     # Lyra sitting up at the edge of the cot. Legs over the side. Bare feet on the cold deck.
@@ -604,6 +668,15 @@ label a4_s15_lyra_deepening_erotic_ob:
     athought "The slow drawer is going to hold them next to each other until something happens that changes which one is load-bearing."
 
     # ========== PHASE 14 -- HOLD ==========
+
+    # CAMERA: she leaves through the door she entered. The
+    #         camera stays in the quarters after she is
+    #         gone. Holds on the EMPTY half of the cot.
+    #         The ring mark on the metal bedside table is
+    #         still in the frame at the edge. Hold past
+    #         comfort. Fade on the empty composition —
+    #         not on Aeron's face. The room after her exit
+    #         is the scene's final argument.
 
     "The quarters hold. The window holds. The ring mark on the metal holds for another minute and then begins, imperceptibly, to fade."
 

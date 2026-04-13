@@ -131,6 +131,24 @@ label a4_s16a_door_and_data_emp:
 
     # ========== PHASE 1 — THE FAILURE ON THE FLOOR ==========
 
+    # CAMERA: 50mm locked establishing of Noelle's
+    #         workspace from outside. The door is open.
+    #         Overhead strip at FULL — she has not
+    #         adjusted the lighting. The lighting is not
+    #         the point. The datapad is on the desk. A
+    #         second datapad is open beside it. PAPER is
+    #         on the floor — not dropped, PLACED. She has
+    #         been laying out the framework failure in
+    #         physical space because the screen is too
+    #         small for the shape of the mistake. Hold
+    #         the wide on the layout.
+    # FX/COMP: the paper on the floor is the scene's
+    #          first substantial visual. Each sheet is a
+    #          different slice of the predictive model
+    #          that failed. The arrangement on the floor
+    #          reads as a diagnostic autopsy. Noelle has
+    #          been working this way for hours.
+
     "Twenty-two forty. Six hours since Davel Ostra. Four hours since the vigil."
 
     "Noelle has been in her workspace for three of those four hours."
@@ -164,6 +182,20 @@ label a4_s16a_door_and_data_emp:
     "She does not look up."
 
     # ========== PHASE 2 — ZIRA ARRIVES ==========
+
+    # CAMERA: 35mm tracking Zira down the corridor at
+    #         operational pace. She is carrying the thing
+    #         that comes AFTER anger when the person
+    #         you are angry at is also the person whose
+    #         work you need to survive the next 48 hours.
+    #         The tracking shot lands at Noelle's door.
+    #         Zira enters without knocking. Noelle does
+    #         NOT look up. Cut to wide two-shot — Noelle
+    #         at the desk, Zira in the doorframe. Hold.
+    # FACE: Zira — NOT angry. The post-anger face of a
+    #        woman who has done the triage and is now
+    #        looking for the model-builder. Focused,
+    #        tight, precise.
 
     "Zira walks into the workspace without knocking."
 
@@ -222,6 +254,22 @@ label a4_s16a_door_and_data_emp:
     "They work."
 
     # ========== PHASE 3 — THE WORK BECOMES THE CONNECTION ==========
+
+    # CAMERA: 35mm slow push. They work. The camera moves
+    #         in GRADUALLY over the course of the work
+    #         sequence — from the wide two-shot toward a
+    #         close two-shot. The push is slow enough that
+    #         the audience does not NOTICE the camera
+    #         closing until the coverage is already tight.
+    #         The work is the connection and the camera
+    #         registering the work as intimacy is the
+    #         scene's argument.
+    # SFX: the work sounds — stylus taps, paper rustling
+    #      when Noelle reaches for a sheet on the floor,
+    #      the two voices exchanging short technical
+    #      lines. Their cadence becomes collaborative
+    #      over the phase. Mark the moment the cadences
+    #      start matching.
 
     "For the next thirty-five minutes they work the failure."
 
@@ -286,6 +334,20 @@ label a4_s16a_door_and_data_emp:
     "Aeron appears in the doorway."
 
     # ========== PHASE 4 — AERON ARRIVES ==========
+
+    # CAMERA: Aeron arrives and takes the third position
+    #         at the desk. The camera push continues —
+    #         from the close two-shot to an almost-close
+    #         THREE-SHOT. The push has been gradual
+    #         throughout the scene and lands naturally on
+    #         the three. Do not cut for Aeron's entrance.
+    #         The frame reforms to include him.
+    # BLOCKING: Aeron does not displace either woman. He
+    #           takes a position at the desk that is
+    #           geometrically the third point of a
+    #           triangle, not a head-of-the-room
+    #           position. The triangle is the scene's
+    #           consent structure made visible.
 
     "He has been in the war room. He has been in the war room for two hours since the vigil and he has come to Noelle's workspace because Tessa told him Noelle had been in her workspace since nineteen hundred and had not left."
 
@@ -368,6 +430,20 @@ label a4_s16a_door_and_data_emp:
     $ nudge_poly("zira_noelle_rebuild", delta=1)
 
     # ========== PHASE 5 — POLY GATE ==========
+
+    # CAMERA: 50mm still. Three faces at the desk. Hold
+    #         the held three-shot through the consent
+    #         gate conversation. Do NOT cut to singles
+    #         during the gate. The three-shot is the
+    #         entire consent structure. The scene is a
+    #         poly scene because the frame is a poly
+    #         frame — same rule as s14a. If the camera
+    #         reduces to a two-shot at any point during
+    #         the gate, the scene has lost its
+    #         argument.
+    # BLOCKING: during the intimate sequence, the
+    #           three-shot MUST hold. All three bodies
+    #           in the same frame. Same rule as s14a.
 
     if metric("poly_pressure") >= 3:
 
@@ -709,6 +785,19 @@ label a4_s16a_door_and_data_emp_below_threshold:
     jump a4_s16a_door_data_state_updates
 
     # ========== PHASE 6 — AFTERCARE ==========
+
+    # CAMERA: hold the three-shot. Widen by a fraction
+    #         for aftercare — give the composition more
+    #         air. The paper is still on the floor. The
+    #         datapads are still on the desk. The work
+    #         that brought the three of them into the
+    #         frame is STILL on the floor and on the
+    #         desk, unfinished. The aftercare is not
+    #         post-intimacy in the narrative sense; it
+    #         is post-recalibration. The model-repair
+    #         work continues as the composition fades.
+    #         Fade on the three-shot with the paper
+    #         still on the floor.
 
 label a4_s16a_door_data_aftercare:
 

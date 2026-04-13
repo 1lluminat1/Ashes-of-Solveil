@@ -148,6 +148,39 @@ label a4_s16_rhea_strikes_emp:
 
     # ========== PHASE 1 — THE ALERT ==========
 
+    # CAMERA: ROOM A — ops wing at oh-four-hundred. Open
+    #         on the ops table from a LOW angle, almost
+    #         floor-level, looking up at the underside of
+    #         the holo-table's green wash. Lyra is the
+    #         only one at the table. The rest of the ops
+    #         wing is in fourth-shift skeleton — two
+    #         analysts at the back bench, Noelle's pad
+    #         face-down where she left it. Hold the low
+    #         angle for the alert tick escalation.
+    # SFX: the alert tick is the scene's opening audio
+    #      event. One ping per minute to two to four
+    #      within a thirty-second interval at the top of
+    #      the scene. Mark each tick. The rising cadence
+    #      is the beat.
+
+    # CAMERA: open on the ops table from a LOW angle,
+    #         almost floor-level, looking up at the
+    #         underside of the holo-table's green wash.
+    #         Unusual framing for this room. Lyra is at
+    #         the table; only Lyra. The alert tick is
+    #         audible — one ping a minute, then two,
+    #         then four in the thirty-second interval at
+    #         the top of the scene. Hold the low angle.
+    # SFX: the alert tick is the scene's opening rhythm.
+    #      Distinct, dry, machine-bright. Mark each
+    #      acceleration step. The accelerating tick is
+    #      the first Marcus-clock hit of Act 4 made
+    #      audible.
+    # FACE: Lyra — the calmest body in the room reading
+    #        a signal that is not consistent with any
+    #        signal she has read before. The face does
+    #        its small thing. The camera does not push.
+
     "Oh-six-twelve. The morning after the workshop scene. Six days and eleven hours after Marcus signed the Rhea Vestin dispatch in a4_s07."
 
     "The ops wing is in its fourth-shift skeleton configuration. Two analysts at the back bench are running a Ghostline relay sweep on the eastern corridor. The ops table is in a low-power reading mode — the holo-table at half-depth, the alert bed running at one ping a minute, the way it runs when the night is quiet and the quiet is the kind of quiet that gets reported as 'routine' at the oh-seven-hundred."
@@ -185,6 +218,32 @@ label a4_s16_rhea_strikes_emp:
     l "Make that a Ghostline reader and Zira. I want Zira at the table for this one."
 
     # ========== PHASE 2 — AERON ARRIVES ==========
+
+    # CAMERA: tracking shot of Aeron arriving. Not at the
+    #         pace of s14 and not at the pace of s13. The
+    #         pace of a man WOKEN by a runner whose
+    #         message was not softened. He comes into the
+    #         ops wing and goes directly to the side chair
+    #         from s14. The chair is an established posture
+    #         now — one night in — and the body goes to it
+    #         automatically. The camera NOTICES the
+    #         automatic nature of the choice and holds on
+    #         the sit for a beat.
+    # FACE: Aeron — the pre-coffee face of a man who has
+    #        been dragged out of the medbay alcove at four
+    #        in the morning. Not commanding. Receiving.
+    #        The side chair is already his register.
+
+    # CAMERA: tracking shot of Aeron arriving. Not at the
+    #         pace of s14, not at the pace of s13. At the
+    #         pace of a man who was woken up by a runner
+    #         whose message arrived at his face without
+    #         anybody trying to soften it. He comes into
+    #         the ops wing and goes directly to the side
+    #         chair from s14 — the chair is an established
+    #         posture now, one night in. The camera
+    #         NOTICES the automatic nature of the choice.
+    #         Catch the automatic beat and do not italicize.
 
     "Aeron was asleep in the analyst alcove's auxiliary cot — not the one Noelle collapsed on, the one beside it — because the analyst alcove is the nearest sleeping surface to the ops wing and because Tessa told him at the end of s15's night to sleep where the ops wing could reach him. He had not taken the instruction until the workshop ended at oh-two-forty. He had taken it after."
 
@@ -271,6 +330,41 @@ label a4_s16_rhea_strikes_emp:
     athought "Lyra is the right person to wake Noelle up. Lyra is the person whose hand on your shoulder when you are asleep is a hand you wake up trusting. Lyra's entire presence at Phoenix is the presence of a person whose hand on your shoulder at oh-six-seventeen is a safe hand. I am not underselling the specific skill by naming it. The skill is load-bearing for what is about to happen to Noelle."
 
     # ========== PHASE 4 — THE INTERCEPT ==========
+
+    # CAMERA: ROOM B. Hard cut to a tight shot of an
+    #         intercepted Echelon back-channel transcript
+    #         on Noelle's screen. One sender. One
+    #         recipient. Five lines of text. Attached to
+    #         a scrubbed signal metadata header identifying
+    #         source as a Western Industrial Theater relay
+    #         Marcus uses for command-chain comms. The
+    #         transcript is the ONLY visual of Marcus in
+    #         the scene. He is a signal, not a body. Hold
+    #         on the transcript long enough for the player
+    #         to read it — every line legible. Then hard
+    #         cut back to Room A.
+    # FX/COMP: the transcript on the screen must be
+    #          rendered as legible text, not placeholder
+    #          lorem. The five lines are load-bearing.
+    #          The metadata header frames them as
+    #          authentic Marcus.
+
+    # CAMERA: HARD CUT to a tight shot of an intercepted
+    #         Echelon back-channel transcript on Noelle's
+    #         screen. The only visual of Marcus in the
+    #         scene — he is a SIGNAL, not a body. Hold
+    #         the transcript long enough for the player
+    #         to read the five lines. Do not animate the
+    #         scroll. Static shot. Institutional typeface.
+    #         The header identifies the source as a
+    #         Western Industrial Theater relay. That
+    #         theater name is the single most important
+    #         piece of information in the scene and the
+    #         camera gives it the static hold it needs.
+    # SFX: cut the ops ambient to near-silence during the
+    #      transcript read. The room holds its breath.
+    #      One digital tick marks the header coming up.
+    #      Then the ambient returns at half.
 
     "While Lyra is in the analyst alcove, the Ghostline layer on the holo-table pulls up a second signal."
 
@@ -387,6 +481,18 @@ label a4_s16_rhea_strikes_emp:
     n "I need to take the framework down."
 
     # ========== PHASE 6 — THE QUESTION ==========
+
+    # CAMERA: pull back to a wide three-shot of the ops
+    #         table. Lyra, Noelle, Aeron. Zira has also
+    #         arrived by this point. Four-shot. The
+    #         composition is crowded because the table is
+    #         the only lit surface in the room and
+    #         everyone who matters is pulling toward it.
+    #         Do NOT cut to singles for the question. Hold
+    #         the wide. The frame is reading the shape of
+    #         a decision that is already being made by the
+    #         four of them together and is not going to be
+    #         a commander's call.
 
     "The sentence lands on the table."
 
@@ -519,6 +625,22 @@ label a4_s16_rhea_strikes_emp:
     "The comms click off."
 
     # ========== PHASE 8 — THE SIDE CHAIR HOLDS ==========
+
+    # CAMERA: final composition of the scene. Wide on the
+    #         ops table. The four women and Aeron are at
+    #         the table. Aeron is still in the side chair.
+    #         He has not moved to the head chair. The head
+    #         chair is still empty — the datapad face-down
+    #         on its arm has been moved (someone picked it
+    #         up during the scene) but the chair itself is
+    #         still empty. Hold the wide. Fade on the
+    #         five-at-the-table composition with the empty
+    #         head chair at the end of the frame.
+    # FX/COMP: the side chair holding is the scene's
+    #          thesis. Even in a crisis, the shape that
+    #          was set up in s13 and reinforced in s14
+    #          holds. Command geometry can survive a
+    #          Marcus strike.
 
     "Aeron's hands have been on the arms of the side chair the entire scene."
 

@@ -126,6 +126,21 @@ label a4_s15_zira_deepening_erotic_emp:
 
     # ========== PHASE 1 — THE DOORWAY ==========
 
+    # CAMERA: 35mm locked from inside the workshop looking
+    #         at the door. The door opens. Aeron is in the
+    #         frame as a silhouette against the corridor
+    #         spill. He does not step in. The camera does
+    #         NOT find Zira yet. The workshop rule from s08
+    #         holds — voice before face. Her voice enters
+    #         the mix from off-frame before the camera
+    #         finds her.
+    # LIGHTING: three-lamp configuration from s08 — bench
+    #           lamp, forge lamp over the banked forge,
+    #           clip lamp on the left edge of the bench.
+    #           The clip lamp is the pool we will find her
+    #           in. The forge lamp is warm background. The
+    #           corridor spill behind Aeron is cold.
+
     "Twenty-three-forty. Eleven and a half hours after the ops wing scene. Aeron has spent the intervening hours at the ops wing side chair through a full shift rotation and then at the mess and then at the corridor outside quarters where he stood for ninety seconds without going in."
 
     "He did not go to quarters because quarters was the room Tessa had prescribed forty-eight hours ago and the prescription had served its purpose. He did not go to the mess because the mess was where Zira had found him in s09a and the mess had already been spent on her that way. He did not go to the command center because the command center was running without him and his hands on a tactical layer at midnight would have been a demand the room did not need to field."
@@ -179,6 +194,22 @@ label a4_s15_zira_deepening_erotic_emp:
     zthought "I am going to have to be braver than I prepared to be."
 
     # ========== PHASE 2 — THE BENCH ==========
+
+    # CAMERA: 35mm slow pivot off the doorway, finding
+    #         Zira at the bench. She is working on a brass
+    #         clock mechanism the size of a palm, half-
+    #         assembled, gears visible. Her hands are in
+    #         frame before her face — the workshop rule.
+    #         The camera lets the clock mechanism be the
+    #         subject for a beat before her face comes
+    #         into focus. Hold on the mechanism under her
+    #         hands.
+    # FX/COMP: the clock mechanism is the scene's load-
+    #          bearing physical object. She is NOT forging
+    #          a plan tonight. She is working on something
+    #          Aeron has never seen her work on before.
+    #          That distinction is the scene's first
+    #          substantial information.
 
     "She sets the tweezer down in the tool groove. She sets the gear down next to the felt pad. Her hands come off the bench in the particular slow way she has when she is letting herself decide one movement at a time rather than doing the whole thing at once."
 
@@ -274,6 +305,24 @@ label a4_s15_zira_deepening_erotic_emp:
 
     # ========== PHASE 3 — THE CONSENT GATE ==========
 
+    # CAMERA: she sets the tool down. She turns. She does
+    #         not stand. The turn is small. Her face comes
+    #         fully into the clip lamp for the first time
+    #         in the scene. Medium-tight on her at the end
+    #         of the turn. Then Aeron crosses to the bench
+    #         — the camera TRACKS with him without cutting,
+    #         a single move that ends in a two-shot close
+    #         across the bench. She seated on the high
+    #         stool. Him standing at the bench edge. The
+    #         distance between them is the width of the
+    #         clock mechanism. Hold that distance for the
+    #         consent-gate exchange.
+    # FACE: Zira — the workshop face, but softer than s13
+    #        OB's friction face. This is the EMP register
+    #        of the same person. The softness is not a
+    #        pose; it is the effect of being in a scene
+    #        that is not angry tonight.
+
     "Zira's hand on his shirt does not release."
 
     "Her other hand — the one that put his palm on her jaw and then came away — goes to the back of his wrist. Not to guide him. To be there. The touch is a permission being offered and a permission being waited for in the same gesture."
@@ -302,6 +351,16 @@ label a4_s15_zira_deepening_erotic_emp:
 
 
     # ========== PHASE 4A — YES NOW ==========
+
+    # CAMERA: his hand on her jaw. Her hand in the front
+    #         of his shirt. The breath where they stop
+    #         pretending. Hold the close two-shot through
+    #         the full consent confirmation. Do not cut
+    #         to singles. This is the EMP variant of the
+    #         s13 OB erotic grammar — tender inversions of
+    #         the same angles. Where OB was friction, this
+    #         is weight. Where OB cut tighter on the
+    #         tension, this holds wider on the settling.
 
 label a4_s15_zira_yes_now:
 
@@ -528,6 +587,22 @@ label a4_s15_zira_not_tonight:
 
 
     # ========== PHASE 5 — AFTERCARE (YES NOW / SLOWER) ==========
+
+    # CAMERA: DIFFERENT VOCABULARY. Low angle, the floor
+    #         of the workshop, the two of them against
+    #         the bench, the clock mechanism on the table
+    #         ABOVE them. Warm, slow, no push. The scene
+    #         rests in the low shot until the clock line
+    #         lands. After the clock line: tight on the
+    #         mechanism. Hold. Hold again. The scene ENDS
+    #         on the clock running backwards by ONE
+    #         SECOND every minute and neither of them
+    #         explaining it. Fade on the mechanism.
+    # FX/COMP: the clock running backwards is the scene's
+    #          closing image. Do not overexplain. The
+    #          mechanism is the scene's answer to its own
+    #          question and neither of them speaks during
+    #          the final hold.
 
 label a4_s15_zira_aftercare:
 
