@@ -37,7 +37,7 @@ transform _timeline_fadeout:
 # MAIN TIMELINE SCREEN
 # ----------------------------------------------------------------
 
-screen scene_timeline(date="", time="", location=""):
+screen scene_timeline(date="", time="", location="", year=""):
     # Full-screen overlay. Click-to-dismiss is handled by the
     # helper function's renpy.pause(), not by screen actions.
     modal False
@@ -52,7 +52,20 @@ screen scene_timeline(date="", time="", location=""):
     vbox:
         xalign 0.5
         yalign 0.48
-        spacing 12
+        spacing 14
+
+        # YEAR (top line — prominent, warm amber, wide kerning)
+        # The year is the single most important framing element:
+        # the story spans 383–391 A.C., and players need to feel
+        # the time skips between acts. Always show on its own line.
+        if year:
+            text ("{cps=20}" + year + "{/cps}"):
+                font gui.system_font
+                size 24
+                color "#D4B886"
+                kerning 5.0
+                text_align 0.5
+                xalign 0.5
 
         # DATE  ·  TIME (monospaced, letterspaced, muted)
         if date and time:
@@ -65,6 +78,14 @@ screen scene_timeline(date="", time="", location=""):
                 xalign 0.5
         elif date:
             text ("{cps=20}" + date + "{/cps}"):
+                font gui.system_font
+                size 20
+                color "#8FA6B8"
+                kerning 2.0
+                text_align 0.5
+                xalign 0.5
+        elif time:
+            text ("{cps=20}" + time + "{/cps}"):
                 font gui.system_font
                 size 20
                 color "#8FA6B8"
@@ -144,17 +165,20 @@ init python:
     # ---------------------------------------------------------------
     # SOLVEIL CALENDAR
     # ---------------------------------------------------------------
+    # AC = "After Consolidation" (the founding of Solveil at 1 AC).
+    # See Notion: 12_Solveil_Timeline_AC-AE_Enriched_Canon[LORE].
+    #
     # Six months of 60 days each (360-day year):
     #   Ember → Rain → Kiln → Cipher → Silence → Forge
     #
     # The game spans 383-391 AC (8 years). Each act takes place in
     # a different year with time skips between them:
     #
-    #   Act 1: Late Forge, 383 AC  (Aeron age 23 — Echelon service)
-    #   Act 2: Early Ember, 385 AC (age 25 — post-defection)
-    #   Act 3: Mid Cipher, 388 AC  (age 28 — rebellion deepens)
-    #   Act 4: Mid Forge, 390 AC   (age 30 — shared authority / violence)
-    #   Act 5: Late Forge → Ember, 390-391 AC (age 31 — the fall)
+    #   Act 1: Late Forge, 383 AC  (story start — Echelon service)
+    #   Act 2: Early Ember, 385 AC (post-defection — six months later)
+    #   Act 3: Mid Cipher, 388 AC  (rebellion deepens — 3 years on)
+    #   Act 4: Mid Forge, 390 AC   (the Aegis stutters)
+    #   Act 5: Late Forge → Ember, 390-391 AC (Fall of Echelon)
     #
     # Within each act, "DAY X" is relative to that act's start.
     # The helper auto-detects the current act from _current_scene_id.
@@ -166,14 +190,24 @@ init python:
     SOLVEIL_MONTHS = ["Ember", "Rain", "Kiln", "Cipher", "Silence", "Forge"]
     SOLVEIL_DAYS_PER_MONTH = 60
 
-    # Per-act calendar origin: (start_month_index, start_day, year)
-    # "DAY 1" in each act maps to start_day of the specified month/year.
+    # Per-act calendar origin:
+    #   (start_month_index, start_day_of_month, year, first_game_day_in_act)
+    #
+    # IMPORTANT: "DAY X" in the scripts is a CUMULATIVE day number that
+    # carries across acts (Act 1 ends DAY 7, Act 2 starts DAY 8, Act 3
+    # starts DAY 22, Act 4 starts DAY 43). Inside the story-world, multi-
+    # year time skips happen between acts; the day numbers do NOT reflect
+    # those gaps — the calendar origin per act handles that.
+    #
+    # Mapping: each act's first cumulative DAY maps to the listed
+    # (month, day_of_month, year). Subsequent scene days offset forward
+    # from there.
     ACT_CALENDAR = {
-        1: (5, 42, 383),   # Act 1: 42nd of Forge, 383 AC
-        2: (0, 8, 385),    # Act 2: 8th of Ember, 385 AC
-        3: (3, 15, 388),   # Act 3: 15th of Cipher, 388 AC
-        4: (5, 25, 390),   # Act 4: 25th of Forge, 390 AC
-        5: (5, 52, 390),   # Act 5: 52nd of Forge, 390 AC → overflows to 391 Ember
+        1: (5, 42, 383,  1),   # DAY 1  = 42nd of Forge,   383 AC (story start)
+        2: (0,  8, 385,  8),   # DAY 8  = 8th  of Ember,   385 AC (post-defection)
+        3: (3, 15, 388, 22),   # DAY 22 = 15th of Cipher,  388 AC (rebellion deepens)
+        4: (5, 25, 390, 43),   # DAY 43 = 25th of Forge,   390 AC (Aegis stutters)
+        5: (5, 52, 390, 56),   # DAY 56 = 52nd of Forge,   390 AC → overflows into 391 (Fall)
     }
 
     def _ordinal(n):
@@ -192,24 +226,25 @@ init python:
         if sid.startswith('a5_'): return 5
         return 1  # fallback
 
-    def _solveil_date(game_day):
-        """Convert a relative game day (DAY X within the current act) to
-        a Solveil calendar date string.
+    def _solveil_date_parts(game_day):
+        """Convert a cumulative game day (DAY X from the script) to
+        a (date_text, year_text) tuple, e.g. ('25th of Forge', '390 A.C.').
 
-        Uses _current_scene_id to determine which act we're in,
-        then offsets from that act's calendar origin.
-
-        Returns: '44th of Forge, 383 AC' etc.
+        Uses _current_scene_id to determine which act we're in, looks up
+        that act's calendar origin, then offsets relative to the act's
+        first cumulative day. Day numbers carry across acts; the per-act
+        origin handles the story-world year jumps.
         """
         if not game_day or game_day < 1:
-            return ""
+            return "", ""
 
         act = _get_current_act()
-        month_idx, start_day, year = ACT_CALENDAR.get(act, ACT_CALENDAR[1])
+        month_idx, start_day, year, first_day = ACT_CALENDAR.get(act, ACT_CALENDAR[1])
 
-        cal_day = start_day + game_day - 1
+        # Offset from the act's first cumulative day, not from DAY 1.
+        cal_day = start_day + (game_day - first_day)
 
-        # Overflow into subsequent months/years
+        # Forward overflow into subsequent months/years
         while cal_day > SOLVEIL_DAYS_PER_MONTH:
             cal_day -= SOLVEIL_DAYS_PER_MONTH
             month_idx += 1
@@ -217,14 +252,54 @@ init python:
                 month_idx = 0
                 year += 1
 
+        # Backward underflow (defensive — for a stray scene below the
+        # act's declared first day; shouldn't happen in normal play).
+        while cal_day < 1:
+            cal_day += SOLVEIL_DAYS_PER_MONTH
+            month_idx -= 1
+            if month_idx < 0:
+                month_idx = len(SOLVEIL_MONTHS) - 1
+                year -= 1
+
         month_name = SOLVEIL_MONTHS[month_idx]
-        return _ordinal(cal_day) + " of " + month_name + ", " + str(year) + " AC"
+        date_text = _ordinal(cal_day) + " of " + month_name
+        year_text = str(year) + " A.C."
+        return date_text, year_text
+
+    def _solveil_date(game_day):
+        """Backward-compat: returns the full date string with year embedded.
+
+        Prefer _solveil_date_parts() for new code — it returns the year
+        separately so the timeline card can render it on its own line.
+        """
+        date_text, year_text = _solveil_date_parts(game_day)
+        if not date_text:
+            return ""
+        return date_text + ", " + year_text
 
     def _parse_day_number(date_str):
         """Extract the day number from 'DAY X' format. Returns 0 if not matched."""
         import re
         m = re.match(r"DAY\s+(\d+)", str(date_str))
         return int(m.group(1)) if m else 0
+
+    def _split_year_from_date(date_str):
+        """Extract a 'NNN A.C.' year from a preformatted date string.
+
+        Returns (date_without_year, year_text). If no year is found,
+        returns (date_str, ''). Used for hand-authored dates like
+        '368 AC' (a1_s01_branding) or '5th of Ember, 390 AC'.
+        """
+        import re
+        if not date_str:
+            return "", ""
+        # Match optional comma + whitespace + year + optional A.C./AC suffix
+        m = re.search(r",?\s*(\d{3,4})\s*A\.?\s*C\.?\s*$", str(date_str), re.IGNORECASE)
+        if not m:
+            return date_str, ""
+        year_text = m.group(1) + " A.C."
+        date_without_year = date_str[:m.start()].rstrip(", ").strip()
+        return date_without_year, year_text
 
     # ---------------------------------------------------------------
     # HELPERS
@@ -236,20 +311,32 @@ init python:
         Call at the top of a scene label (after scene_mark entered):
             $ show_timeline("DAY 3", "04:17", "Phoenix Secondary Base")
 
-        The 'DAY X' format is auto-converted to the Solveil calendar:
-            DAY 3 → '5th of Forge, 390 AC'
+        The 'DAY X' format is auto-converted to the Solveil calendar.
+        The year is split out and rendered on its own prominent line:
 
-        You can also pass a pre-formatted string or an integer day number.
+            390 A.C.
+            5th of Forge  ·  04:17
+            Phoenix Secondary Base
+
+        You can also pass a pre-formatted string ('368 AC',
+        '5th of Ember, 390 AC') or an integer day number — the year is
+        extracted from any of these forms and shown on the year line.
         """
-        # Auto-convert DAY X to Solveil calendar
+        year = ""
+
+        # Auto-convert DAY X (or int) to Solveil calendar parts
         if isinstance(date, int):
-            date = _solveil_date(date)
+            date, year = _solveil_date_parts(date)
         elif isinstance(date, str) and date.upper().startswith("DAY "):
             day_num = _parse_day_number(date)
             if day_num > 0:
-                date = _solveil_date(day_num)
+                date, year = _solveil_date_parts(day_num)
+        elif isinstance(date, str):
+            # Hand-authored date like '368 AC' or '5th of Ember, 390 AC'.
+            # Pull the year onto its own line if present.
+            date, year = _split_year_from_date(date)
 
-        renpy.show_screen("scene_timeline", date=date, time=time, location=location)
+        renpy.show_screen("scene_timeline", date=date, time=time, location=location, year=year)
         renpy.pause(2.8, hard=False)  # click-to-skip
         renpy.hide_screen("scene_timeline")
 
