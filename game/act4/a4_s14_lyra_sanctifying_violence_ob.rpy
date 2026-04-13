@@ -89,6 +89,23 @@ label a4_s14_lyra_sanctifying_violence_ob:
 
     # ========== PHASE 1 -- THE WALK IN ==========
 
+    # CAMERA: 50mm locked. Institutional register. Opens
+    #         three-quarter on the muster bay — a long
+    #         corridor-adjacent staging room. Operators
+    #         already assembled. Lyra enters frame-left.
+    #         The camera dollies with her only until she
+    #         stops at the head of the line, then locks
+    #         again and stays locked for the rest of the
+    #         blessing.
+    # LIGHTING: 5000K overhead strips. Cold-white. No warm
+    #           practicals. No candle. Lyra has brought
+    #           NOTHING from the shrine alcove. This
+    #           blessing happens in the base's own light.
+    #           The yellow hazard striping of a loading
+    #           zone is on the floor where she will
+    #           stand. That yellow is the only saturated
+    #           color in the frame.
+
     "The door to the muster bay slides aside. Lyra steps through. The hazard striping on the floor catches the cold overhead light and holds it."
 
     lthought "Walk in the way you have walked into cathedrals. The room does not know what to do with the difference."
@@ -160,6 +177,20 @@ label a4_s14_lyra_sanctifying_violence_ob:
     lthought "Two months ago he would have either pushed or pulled. Now he only witnesses. He is learning precision. Precision includes not touching the thing that is already moving correctly."
 
     # ========== PHASE 4 -- THE BLESSING ==========
+
+    # CAMERA: close-ups ONLY on Lyra's hand making the
+    #         six-fold sign. Never on the operators' faces
+    #         — they are a line, not a crowd. The Band is
+    #         visible at her hip, cinched past comfort
+    #         (same notch as a4_s04), under her vestments
+    #         when she raises her hand. Catch the Band in
+    #         the close on the hand.
+    # SFX: the kit-up noises do NOT stop for her. The bay
+    #      does not hush. Lyra is not what the bay is
+    #      pausing for. She is an added layer. The single
+    #      breath she takes before she starts is the
+    #      scene's only hushed sound. The hand-sign sweep
+    #      is silent.
 
     "Her hand traces the sign. Six points. Collarbone, shoulder, shoulder, sternum, hip, heart. The sign is the same sign priests have made in this language for eight hundred years. The sign does not know what bay it is being made in."
 
@@ -247,6 +278,15 @@ label a4_s14_lyra_sanctifying_violence_ob:
     lthought "Except."
 
     # ========== PHASE 7 -- THE SECOND WITNESS ==========
+
+    # CAMERA: wide on the whole bay. Lyra at the near end,
+    #         Aeron at the far wall with his hands clasped
+    #         behind his back. He is IN frame but NOT LIT
+    #         — corridor bleed behind him keeps his face
+    #         in shadow. The composition is asymmetric:
+    #         she is lit by the institutional cold, he is
+    #         a silhouette. Hold the wide. He is not yet
+    #         allowed to have a face in the scene.
 
     "Bootfall from the far wall. Aeron crossing the empty bay. Measured. Not hurrying. He stops two paces from her. His face is out of the corridor back-light now. She can see him."
 
@@ -372,6 +412,16 @@ label a4_s14_lyra_sanctifying_violence_ob:
 
     # ========== PHASE 11 -- THE HAND ==========
 
+    # CAMERA: the operators have filed out. Lyra and Aeron
+    #         are alone in the bay. Two-shot, locked, both
+    #         facing each other. Aeron's face is finally
+    #         lit — the corridor bleed is gone because the
+    #         loading door has closed behind the operators
+    #         and the bay's overheads are now falling on
+    #         both of them equally. The two-shot is
+    #         symmetrical. The camera does not move for
+    #         the closing exchange.
+
     "She looks at the hand."
 
     lthought "The last time he held his hand out to me like this was three weeks ago. In the corridor outside the war room. I did not take it that time. I had just come from the medbay and my hands were not clean."
@@ -393,6 +443,15 @@ label a4_s14_lyra_sanctifying_violence_ob:
     "Neither of them speaks."
 
     # ========== PHASE 12 -- THE BAND ==========
+
+    # CAMERA: insert on the Band at her hip — still
+    #         cinched past comfort, still the a4_s04 notch.
+    #         The Band has been in the scene since Phase 1
+    #         but it has been peripheral. Here the camera
+    #         gives it a held single. Hold the insert. The
+    #         Band is the only physical prop the scene
+    #         needs to make its argument, and the hold on
+    #         it is the scene's explicit sentence.
 
     "Her free hand does not go to the buckle."
 
@@ -445,6 +504,16 @@ label a4_s14_lyra_sanctifying_violence_ob:
     lthought "That is the smallest doctrine I can make from the materials available."
 
     # ========== PHASE 15 -- HOLD ==========
+
+    # CAMERA: final shot. Return to the wide on the empty
+    #         bay with Lyra and Aeron in two-shot at the
+    #         near end. The yellow hazard stripe on the
+    #         floor under her boots. The Band at her hip.
+    #         The cold institutional overheads on both of
+    #         them. Hold. Fade on the composition — do
+    #         not cut to either face for the final
+    #         statement. The bay holds them equally and
+    #         the frame lets it.
 
     "She does not move. Aeron does not move. The bay holds them in its cold overhead light. The hazard stripe is under her boots and the Band is at her hip and the hand in her hand is Aeron's and the operators are gone and the prayer she said was a blessing for a weapon and she is not going to resolve any of those things in this scene."
 

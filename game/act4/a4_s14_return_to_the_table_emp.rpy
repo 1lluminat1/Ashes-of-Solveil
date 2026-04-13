@@ -105,6 +105,16 @@ label a4_s14_return_to_the_table_emp:
 
     # ========== PHASE 1 — THE CORRIDOR ==========
 
+    # CAMERA: 40mm locked low. Three-quarters FRONT on
+    #         Aeron — not behind him. The camera watches
+    #         him arrive rather than follows him there.
+    #         This is the formal inverse of s13's opening
+    #         handheld-behind: the scene is about him
+    #         returning to a room that does not need him
+    #         to be at the center of the shot. Hold the
+    #         low three-quarter front through his corridor
+    #         walk.
+
     "Twelve-fifteen. Forty-eight hours after the ops wing door closed behind him."
 
     "Aeron is walking the ops wing corridor at a pace that is not the clean-fast pace of s13 and is not the clipped precision of the weeks before that. It is a walking pace. The walking pace of a man who has slept — not enough, not the way Tessa would call enough, but enough that his body is no longer running on the fuel of its own adrenaline."
@@ -163,6 +173,15 @@ label a4_s14_return_to_the_table_emp:
 
     # ========== PHASE 2 — THE THRESHOLD ==========
 
+    # CAMERA: 35mm locked from inside the ops wing looking
+    #         outward at the door. The door opens. Aeron
+    #         appears in it. He does NOT stop this time. He
+    #         walks in. Crucially — he walks in at a tempo
+    #         that is not a commander's. It is the tempo of
+    #         a man entering a room that is already running.
+    #         The walking pace is the scene's first
+    #         substantial declaration.
+
     # scene bg_ops_wing_table_day with dissolve
 
     "The ops wing is running."
@@ -190,6 +209,30 @@ label a4_s14_return_to_the_table_emp:
     "He walks into the room at the walking pace he had in the corridor."
 
     # ========== PHASE 3 — THE GEOMETRY ==========
+
+    # CAMERA: wide, high-ish, almost schematic. The ops
+    #         table as shape. Selene at the head-adjacent
+    #         position she took in s13 and has not left.
+    #         Noelle at her left. Lyra at the near-right.
+    #         Zira at the foot. Aeron's old chair at the
+    #         head is empty with a datapad on its arm —
+    #         the room's way of saying the chair is not
+    #         going to be reclaimed AND not going to be
+    #         erased. The camera FINDS THE GEOMETRY BEFORE
+    #         IT FINDS THE FACES. The geometry is the
+    #         subject. Aeron enters the frame and walks
+    #         the long side — the neutral side he took in
+    #         s13 — and stops at the side chair three down
+    #         from Selene. He pulls it. He sits. The
+    #         camera does not push. Stay schematic.
+    # FX/COMP: the empty chair at the head with the
+    #          datapad face-down on its arm is the scene's
+    #          single most important visual. The datapad
+    #          belongs to no one in the scene — it is a
+    #          working pad somebody left there when they
+    #          needed both hands. The object on the chair
+    #          is the room's honest answer to the question
+    #          of whether the chair is empty or reserved.
 
     "The empty chair at the head is not empty the way it was in s13."
 
@@ -312,6 +355,21 @@ label a4_s14_return_to_the_table_emp:
     sel "Five of us. Log it."
 
     # ========== PHASE 6 — THE EYE ==========
+
+    # CAMERA: ONE movement. After Aeron is seated — after
+    #         a beat, maybe two — Selene looks up from the
+    #         tactical layer she has been reading. Her eye
+    #         finds his. Cut to a single two-shot across
+    #         the table held for exactly the length of the
+    #         look. Then cut back to the schematic
+    #         geometry wide. That is the whole transaction.
+    #         Nobody else in the room registers the look.
+    #         Nobody else in the room is supposed to.
+    # SFX: the single low held note enters at the moment
+    #      the eyes find each other. It holds for the
+    #      duration of the two-shot and fades out under
+    #      the cut back to wide. That is the whole musical
+    #      event of the scene.
 
     "Selene's hand leaves the filter she was flicking."
 
@@ -438,6 +496,16 @@ label a4_s14_return_to_the_table_emp:
     athought "The posture is: I am one of the chairs."
 
     # ========== PHASE 10 — THE SCENE ENDS IN THE MIDDLE OF THE WORK ==========
+
+    # CAMERA: return to the schematic wide. The room is
+    #         running. Aeron is in it at the side chair.
+    #         Selene is reading the tactical layer. Noelle
+    #         is speaking. Lyra is taking her own notes.
+    #         Zira's arms are folded. The empty head-chair
+    #         with its face-down datapad is still in the
+    #         frame. Fade on the schematic. The room does
+    #         not stop working for the fade. The fade
+    #         happens on a room that is continuing.
 
     "Noelle turns to the next paragraph of the briefing."
 

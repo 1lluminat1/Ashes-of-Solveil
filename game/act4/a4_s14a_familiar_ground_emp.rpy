@@ -138,6 +138,22 @@ label a4_s14a_familiar_ground_emp:
 
     # ========== PHASE 1 — TWO VOICES ==========
 
+    # CAMERA: 50mm locked in the corridor. The mapping
+    #         station's door is open by about six inches.
+    #         Warm practical light from inside — two
+    #         lamps. Two voices inside the room are
+    #         audible before Aeron rounds the corner. The
+    #         CAMERA FINDS THE VOICES BEFORE IT FINDS THE
+    #         WOMEN. That formal choice is the scene's
+    #         first statement: the two of them working
+    #         together is already a composition, not a
+    #         reveal.
+    # SFX: the audible voices in the corridor are low,
+    #      unhurried, the cadence of two people who are
+    #      working on something they both take seriously.
+    #      Mark the individual voices without making them
+    #      perfectly intelligible. Texture over content.
+
     "Zero one fifteen. The base is in its deep-night register. Most of the corridors are empty. The shift rotation happened at twenty-three hundred and the overnight crew is at their stations and the people who are not on overnight are in whatever version of rest the base is offering tonight."
 
     "Aeron is not resting."
@@ -222,6 +238,23 @@ label a4_s14a_familiar_ground_emp:
 
     # ========== PHASE 2 — THE DOORWAY ==========
 
+    # CAMERA: cut to 35mm inside the mapping station. Slow
+    #         pan across the table. Lyra at the eastern
+    #         end with two cups of tea — the Act 3 tea,
+    #         recognizable. Zira at the western end with
+    #         the updated relay map unrolled, a stylus
+    #         behind her ear, her hand flat on the
+    #         northern corridor of the map. They are
+    #         WORKING. The camera lets the work be the
+    #         subject for a full beat before it finds
+    #         either face.
+    # LIGHTING: two practicals, warm. The mapping station
+    #           at night. The table is the brightest
+    #           surface in the frame. Both women are in
+    #           the same warm wash — their different
+    #           temperatures of care given identical
+    #           lighting. The equality is load-bearing.
+
     "He pushes the door open."
 
     "The corridor light floods into the mapping station for a beat — a wash of cooler overhead that disrupts the warm practical-lamp arrangement inside."
@@ -299,6 +332,24 @@ label a4_s14a_familiar_ground_emp:
     "A beat."
 
     # ========== PHASE 3 — THE RECOGNITION ==========
+
+    # CAMERA: cut to 35mm locked from inside the room,
+    #         framing the six-inch gap of the door. Aeron
+    #         appears in the gap. Same framing as his
+    #         appearance in Zira's workshop doorway in
+    #         s15-that-will-come. But here TWO women look
+    #         up instead of one. The TWO-LOOK is the
+    #         scene's THESIS image. Hold the two-look.
+    #         Aeron does not know what to do with the
+    #         geometry of two faces looking at him with
+    #         different versions of the same attention,
+    #         and the camera does not help him.
+    # FACE: both women look up at the same moment. Lyra
+    #        with the tea-keeper's face. Zira with the
+    #        map-reader's face. The two faces are not
+    #        competing — they are recognizing that their
+    #        care for the same man has different shapes
+    #        and both shapes are in this room.
 
     "They work."
 
@@ -437,6 +488,24 @@ label a4_s14a_familiar_ground_emp:
     $ nudge_poly("lyra_zira_recognized", delta=1)
 
     # ========== PHASE 4 — POLY GATE ==========
+
+    # CAMERA: wide three-shot. Low. The mapping table is
+    #         the central object. The relay map is the
+    #         surface. Lyra at one end, Zira at the other,
+    #         Aeron between them at the side of the table
+    #         where the chair is not — he is standing. Do
+    #         NOT push in on anyone during the gate-work
+    #         conversation. The three-shot is the whole
+    #         composition and the composition is the
+    #         scene's consent structure made visible.
+    # BLOCKING: when the physical intimacy begins, do not
+    #           lose the three-shot. All three bodies must
+    #           remain in the same frame at all times for
+    #           the full sequence. The scene is a poly
+    #           scene because the frame is a poly frame.
+    #           If at any point the composition reduces to
+    #           a two-shot, the scene has lost its
+    #           argument.
 
     if metric("poly_pressure") >= 3:
 
@@ -704,6 +773,21 @@ label a4_s14a_familiar_ground_emp_below_threshold:
     jump a4_s14a_familiar_state_updates
 
     # ========== PHASE 5 — AFTERCARE ==========
+
+    # CAMERA: hold the three-shot but widen fractionally —
+    #         give the composition more air. The mapping
+    #         table is still the central object. The tea
+    #         cups are still on Lyra's end. The relay map
+    #         is still on Zira's end. Aeron is still
+    #         between them. The composition has not
+    #         changed and it will not change for the rest
+    #         of the scene. The three-shot remains the
+    #         final image. Fade on the three-shot. The
+    #         two women and the one man in a single
+    #         frame, the table between them holding the
+    #         work they were doing together before he
+    #         arrived and will keep doing after the
+    #         scene ends.
 
 label a4_s14a_familiar_aftercare:
 

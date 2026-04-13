@@ -120,6 +120,24 @@ label a4_s13_zira_deepening_erotic_ob:
 
     # ========== PHASE 1 -- THE DOOR ==========
 
+    # CAMERA: 35mm handheld, 4-6%% drift — less than a3_s15.
+    #         Open wide on the workshop. Zira at the bench,
+    #         her back to the door. The bench is her
+    #         operational surface: tools, stripped comm
+    #         unit, soldering station at standby, and — in
+    #         the back-left corner — the drawer, CLOSED.
+    #         The camera catches the drawer in the wide
+    #         establish because we will need it at aftercare.
+    #         The wide holds until Aeron crosses the
+    #         threshold.
+    # LIGHTING: workshop practicals. Single overhead bench
+    #           lamp at 80%%. The amber is industrial, not
+    #           candlelight. Standby glow from two terminals
+    #           (blue/green). A strip of red tell-tale LEDs
+    #           along the soldering station that never
+    #           turns off. Skin under amber and blue-green.
+    #           No soft bloom. No golden hour.
+
     zthought "It is 2207 and he has not come yet."
 
     zthought "I am at the bench. I am working on a comm unit I do not need to work on. The comm unit has been stripped to its board for forty minutes. I am not soldering. I am holding the iron and letting it run hot for no reason."
@@ -153,6 +171,15 @@ label a4_s13_zira_deepening_erotic_ob:
     zthought "That is the first correct answer tonight and I am cataloging it before the second one has a chance to overwrite it."
 
     # ========== PHASE 2 -- THE OPENING ==========
+
+    # CAMERA: tighten to medium two-shot — Aeron slightly
+    #         out of focus in the near ground, Zira sharp
+    #         in the mid ground. She is the load-bearing
+    #         focus of the room, not him. This is the
+    #         visual assertion of the a4_s12 terms: she is
+    #         the center of this space; he is a visitor.
+    #         Hold the focus prioritization through the
+    #         opening dialogue.
 
     "Aeron stands two paces inside the door. He does not approach the bench. He waits for her to signal."
 
@@ -217,6 +244,21 @@ label a4_s13_zira_deepening_erotic_ob:
     zthought "Before I close the distance I am going to check the thing I already know the answer to, because the check is the thing the morning demand required from me."
 
     # ========== PHASE 4 -- THE APPROACH ==========
+
+    # CAMERA: close-ups begin. Zira's hands — no longer
+    #         steady. She has released the morning's
+    #         restraint. Her collar. Her mouth when she
+    #         says each of the three hinges. Cut to Aeron's
+    #         eyes when the third hinge lands. The
+    #         intimacy is handheld and tighter — no
+    #         tenderness in the composition. The bodies
+    #         make ANGLES, not curves. The lens does NOT
+    #         soften. Where a4_s11 OB had geometry as
+    #         altar, this is geometry as friction.
+    # SFX: Zira setting a small tool down — a single
+    #      metallic ting. Her fist on his collar — fabric
+    #      stress. Their breathing during the build. No
+    #      music. The workshop supplies its own rhythm.
 
     "She moves around the bench."
 
@@ -438,6 +480,21 @@ label a4_s13_zira_deepening_erotic_ob:
         jump .intimate_sequence
 
     # ========== PHASE 5 -- THE INTIMATE SEQUENCE ==========
+
+    # CAMERA: handheld tighter still. The bodies in angles.
+    #         The frame is reading muscle, tension, the
+    #         working of the two of them against the bench
+    #         and against each other. Do not cut to wide.
+    #         Do not rack. Stay inside the coverage. The
+    #         physical composition is the scene's whole
+    #         argument — this is what Zira's terms produce
+    #         under OB, and the camera stays in the angles
+    #         that produce it.
+    # LIGHTING: the red LED strip from the soldering station
+    #           is the only light that does not change. It
+    #           stays constant on skin through the entire
+    #           sequence. Mark the red as the visual
+    #           constant.
     label .intimate_sequence:
 
         # VISUAL: The workshop. The bench. Zira's territory, her rules.
@@ -473,6 +530,24 @@ label a4_s13_zira_deepening_erotic_ob:
         # [INTIMATE CONTENT HERE]
 
     # ========== PHASE 6 -- AFTERCARE (COLD) ==========
+
+    # CAMERA: pull back to a wider shot — Zira at the bench
+    #         again with her back to him. The drawer from
+    #         the opening establish re-enters the frame.
+    #         She opens it. The camera is over her shoulder
+    #         — we see the pressed flower from a4_s05 in
+    #         the drawer for the first time since that solo
+    #         scene. Aeron is out of frame now. Hold on
+    #         the drawer. She does not take the flower
+    #         out. She closes the drawer.
+    # FX/COMP: the drawer's return is the scene's quiet
+    #          ending argument. The flower is still in it.
+    #          The drawer is still unlocked. Nothing has
+    #          changed about the flower or the drawer
+    #          because of the last thirty minutes. Zira
+    #          is opening it with her back to him because
+    #          she wants him not to see what she is
+    #          checking on.
 
         # VISUAL: After. The workshop is still the workshop. The amber lamp has
         # not moved. The terminals are still on standby. The comm unit on the

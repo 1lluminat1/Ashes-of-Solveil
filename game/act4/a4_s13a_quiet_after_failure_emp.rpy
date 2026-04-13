@@ -78,6 +78,19 @@ label a4_s13a_quiet_after_failure_emp:
 
     # ========== PHASE 1 — AERON ALONE ==========
 
+    # CAMERA: 50mm locked. Wide enough to see the bunk,
+    #         the desk chair, and the door. Aeron on the
+    #         edge of the bunk. The camera does NOT move
+    #         for the first two minutes of the scene. Hold
+    #         the wide. The water stain on the ceiling in
+    #         the upper-left is visible in the frame. He
+    #         looks at it once. The camera catches the look
+    #         without following it.
+    # LIGHTING: overhead at half — he dimmed it on entering.
+    #           The room is warmer than the corridor by one
+    #           stop. The water stain is the darkest patch
+    #           in the otherwise warm wash.
+
     "Sixteen-fifty. Six hours and five minutes into the forty-eight-hour stand-down."
 
     "Aeron has not slept."
@@ -101,6 +114,19 @@ label a4_s13a_quiet_after_failure_emp:
     "Quiet. One knuckle. Not two. The knock of a person who does not want to be mistaken for an emergency."
 
     # ========== PHASE 2 — NOELLE ARRIVES ==========
+
+    # CAMERA: same frame. Do not cut. Noelle enters, does
+    #         not cross the room. The frame widens by a
+    #         fraction — a breath of extra air on the
+    #         right-hand side where Noelle stops against
+    #         the back of the closed door. The widening is
+    #         so small it should be subliminal. She is
+    #         carrying a datapad. It is in her hand and on
+    #         the floor beside her by the end of the phase.
+    # LIGHTING: when the door opens, corridor light is
+    #           briefly visible around her shoulder. Then
+    #           the door closes and that light is gone.
+    #           The warmer room wash returns.
 
     athought "Not Tessa. Tessa's knock is a two-knuckle diagonal with a half-beat between. That is one knuckle."
 
@@ -137,6 +163,20 @@ label a4_s13a_quiet_after_failure_emp:
     "Neither of them moves to close it."
 
     # ========== PHASE 3 — THE SILENCE THAT IS NOT A SILENCE ==========
+
+    # CAMERA: both seated on the floor now. Aeron with his
+    #         back against the bunk frame. Noelle with her
+    #         back against the closed door. The frame shows
+    #         both of them on opposite sides of the room
+    #         with the open floor between them. The CHOSEN
+    #         DISTANCE is the subject. No cuts. No push-
+    #         ins. Hold the wide for the long phase. This
+    #         is the composition the scene stays in for
+    #         most of its runtime.
+    # BLOCKING: neither crosses the open space. The wall
+    #           between them is a wall made of floor. The
+    #           scene trusts the geometry to carry the
+    #           emotion.
 
     "For a minute, neither of them speaks."
 
@@ -252,6 +292,19 @@ label a4_s13a_quiet_after_failure_emp:
 
     # ========== PHASE 6 — THE WORD ==========
 
+    # CAMERA: hold the wide. Do NOT cut to singles for
+    #         Noelle's use of the word 'love.' The scene's
+    #         formal refusal to push on the word is the
+    #         entire meaning of the word as she is using
+    #         it. She is not asking for a reaction shot. The
+    #         camera honors the refusal.
+    # SFX: the single held low string enters at her SECOND
+    #      use of the word, and only there. It does not
+    #      resolve. It is cut at the end of the scene on a
+    #      continuing pitch per the opening block. The
+    #      non-resolution is the scene's argument about
+    #      what the word can and cannot do in this room.
+
     n "Aeron."
 
     a "Yes."
@@ -360,6 +413,22 @@ label a4_s13a_quiet_after_failure_emp:
     athought "That is a thing I am learning about her tonight."
 
     # ========== PHASE 9 — THE WATER STAIN ==========
+
+    # CAMERA: first camera movement of the scene — a slow
+    #         upward tilt to the water stain on the ceiling
+    #         as Aeron tells her what it looks like. Hold
+    #         the tilt on the stain. Noelle looks up from
+    #         her seated position against the door. The
+    #         camera does not tilt back down for her look.
+    #         The stain stays in the frame. This is the
+    #         scene's one visual indulgence and it is
+    #         earned.
+    # FX/COMP: the water stain is the scene's visual
+    #          anchor. Aeron has looked at it three times
+    #          in the phase sequence. Noelle looks at it
+    #          once — here — at the end, after he tells
+    #          her what it looks like. The shared look is
+    #          the closest the scene gets to contact.
 
     "Another three minutes."
 
@@ -470,6 +539,19 @@ label a4_s13a_quiet_after_failure_emp:
     "The latch catches."
 
     # ========== PHASE 11 — AFTER ==========
+
+    # CAMERA: Noelle stands, crosses to the door, opens it.
+    #         The datapad is in her hand again — she picks
+    #         it up on her way to standing, a small detail
+    #         the camera catches without editorializing.
+    #         The corridor light returns briefly as the
+    #         door opens. She exits. The door closes. The
+    #         camera holds on the empty right-hand side of
+    #         the frame where she had been seated. Aeron is
+    #         still on the floor with his back against the
+    #         bunk frame. The water stain is still on the
+    #         ceiling. The held string cuts on a continuing
+    #         pitch. Fade.
 
     "Aeron sits on the floor with his back against the bunk frame."
 
