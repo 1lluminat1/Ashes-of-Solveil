@@ -66,6 +66,25 @@ label a4_s02_the_new_shape_ob:
 
     # ========== PHASE 1 -- THE ASSEMBLY ==========
 
+    # CAMERA: 40mm wide establishing, locked tripod. The war room
+    #         from the door angle: command table foreground-right,
+    #         display wall background-left, the hierarchical tree
+    #         already cycling on the display. Colder than the
+    #         a3_s07 establishing — same room, fewer people, more
+    #         structure. As each LI enters, they walk into the
+    #         establishing shot without it cutting. The camera does
+    #         not pan to greet any of them.
+    # LIGHTING: overhead strips at 100%%. Tactical blue at full.
+    #           Nyra's calibration from Act 3 has not been adjusted
+    #           back. Hard shadows from the display wall onto the
+    #           table. Clean edge geometry. No warm practicals
+    #           anywhere in the frame.
+    # SFX: display refresh every 11 seconds — the scene's heartbeat.
+    #      Distant boot formations from the staging yard carry
+    #      under the hum. The staging yard has been running on
+    #      Nyra's schedule long enough that the rhythm is the
+    #      base's rhythm now.
+
     "0900."
 
     "The war room is cold. The overhead strips are at 100%%. The tactical displays behind the briefing position cycle through the sector consolidation plan Aeron approved three hours ago with a single stylus mark."
@@ -204,6 +223,18 @@ label a4_s02_the_new_shape_ob:
 
     # ========== PHASE 3 -- NYRA CONTINUES ==========
 
+    # CAMERA: return to Nyra's single. Locked. Same briefer's frame
+    #         from a3_s07, unchanged — the composition is the
+    #         continuity. She delivers the metrics like a weapon
+    #         specification. The camera does not react to the
+    #         numbers; the room does not react to the numbers. The
+    #         numbers are not asking for a reaction.
+    # FACE: Nyra — the doctrinal face. Calm. Unhurried. The voice
+    #        has not modulated and the face has not either. The
+    #        stability is the seduction (per opening block). Let
+    #        the camera study her long enough that the stability
+    #        becomes noticeable, then uncomfortable.
+
     "Nyra does not wait for reactions. The diagram is the argument."
 
     ny "The operational benefits are measurable. Reporting latency from function branch to command node: under four minutes. Decision-to-execution latency for strike operations: under twelve minutes. Logistical waste ratio: seven percent, down from twenty-two."
@@ -246,6 +277,21 @@ label a4_s02_the_new_shape_ob:
 
     # ========== PHASE 4 -- THE NAMING ==========
 
+    # CAMERA: hold Nyra's single. Do not cut to the table during
+    #         the naming. The camera is not letting the room
+    #         rescue itself by showing us reaction faces. It stays
+    #         on her while the "she died" sentence forms in her
+    #         mouth and lands in the room. The settling pause
+    #         between "I am announcing it now" and "This is not
+    #         a new room" is a single held breath on her face.
+    #         Trust the hold.
+    # SFX: under the naming, drop the ambient. The display refresh
+    #      tick stops being the heartbeat — it goes half-volume.
+    #      The distant staging yard fades out entirely. The room
+    #      should feel like it has been sealed. When she finishes
+    #      the naming, let the ambient slowly come back. The
+    #      absence and return are the frame.
+
     ny "There is one element of this structure I want to address directly."
 
     ny "The diagram shows co-command at the apex. The diagram is not inventing that. The diagram is recording it."
@@ -267,6 +313,22 @@ label a4_s02_the_new_shape_ob:
     ny "I am only naming it."
 
     # ========== PHASE 5 -- THE NAMING LANDS ==========
+
+    # CAMERA: fast sequence of four absences. Cut to Zira's single
+    #         — she does not correct, cut. Cut to Lyra's single
+    #         — eyes still closed, cut. Cut to Noelle's single —
+    #         stylus paused mid-stroke, cut. Cut to Tessa's single
+    #         — still looking at the wall. Each shot is a beat
+    #         shorter than the one before. The last three are under
+    #         a second each. The acceleration is the silence
+    #         gathering weight. Land finally on Aeron's single
+    #         staring at the table for the full two-second hold.
+    # FACE: Aeron — two seconds is a long time. The face does
+    #        nothing visible. The internal monologue plays over a
+    #        face that is not reacting. The non-reaction is the
+    #        character of the scene. When the fourth thought
+    #        ("I notice I am grateful for the word") lands,
+    #        there is a single slow blink. That blink is the tell.
 
     "The 'she' is not specified."
 
@@ -316,6 +378,27 @@ label a4_s02_the_new_shape_ob:
 
     # WIDER SHOT -- 40mm pulls back. The whole table in frame. The weight of the
     # room. Aeron signing is a small motion at the center of a large image.
+    #
+    # CAMERA (cont.): hold the wide for the full signature sequence.
+    #                 The camera does NOT go to a macro on the stylus
+    #                 this time — that was the Phase 6 choice in
+    #                 a4_s01, and it was the right choice there. Here
+    #                 the wide is the right choice because the weight
+    #                 is institutional, not personal. The signature
+    #                 is being absorbed by the room, not carved into
+    #                 anyone's face. Keep the wide even after he
+    #                 slides the datapad back. Let the ratification
+    #                 propagate under the wide. The display refresh
+    #                 update is visible on the wall in the background
+    #                 — the shape locks into place across all the
+    #                 internal systems in the same frame as the
+    #                 signature. That is the event.
+    # SFX: the stylus mark is almost subliminal under the wide.
+    #      One small dry stroke. Then the tap-tap-propagate of
+    #      the ratification wave through the internal systems —
+    #      a low soft cluster of clicks as each subsystem
+    #      acknowledges the new command architecture. The base
+    #      agreeing with itself.
 
     "Nyra slides a datapad across the table. Not the datapad from s01 -- a new one. This one has the structural diagram on it and a signature field at the bottom."
 
@@ -341,6 +424,16 @@ label a4_s02_the_new_shape_ob:
 
     # ========== PHASE 7 -- CLOSURE WITHOUT CLOSURE ==========
 
+    # CAMERA: Nyra moves out of the held wide toward the door. The
+    #         camera does not pan with her. It stays on the table
+    #         — the team, the display wall, the hierarchical tree.
+    #         She exits frame-right. The door opens and closes in
+    #         the ambient. The tree stays on the wall.
+    # FACE: none of the other four respond to her exit. No heads
+    #        turn. No eyes track. The room is continuing exactly
+    #        as it was before she spoke. The absence of visible
+    #        response is the scene's cruelest frame.
+
     ny "Operational assignments for the week are in your individual briefing packets. Commander Rylan and I will meet in the strategic room at 1400 to finalize the day-five Sector 9 approach."
 
     ny "Thank you."
@@ -358,6 +451,23 @@ label a4_s02_the_new_shape_ob:
     "The door closes."
 
     # ========== PHASE 8 -- THE ROOM AFTER ==========
+
+    # CAMERA: the wide holds. As each LI stands in turn, the
+    #         camera follows the standing figure to the door with
+    #         a slow pan — not all the way, it gives up the pan
+    #         before the figure exits frame and returns to the
+    #         table wide. Each departure earns a partial pan and
+    #         a return. The camera is trying to keep the room
+    #         together by refusing to cut to singles, and failing
+    #         in slow motion.
+    # FACE: Zira earns the one honest close in the whole scene —
+    #        when she says "Aeron" instead of "Commander" the
+    #        camera finally cuts to her tight, for exactly the
+    #        length of her two-line exchange. Then straight back
+    #        to the wide. That close is the scene's only break
+    #        from its institutional coverage. It is also the only
+    #        moment in the scene where the old Phoenix shape
+    #        almost returns. Almost.
 
     "The war room does not empty immediately."
 
@@ -460,6 +570,24 @@ label a4_s02_the_new_shape_ob:
     "The door closes."
 
     # ========== PHASE 9 -- AERON ALONE ==========
+
+    # CAMERA: the wide stays on. Aeron alone at the head of the
+    #         table. The hierarchical tree on the display behind
+    #         him. He is small in the frame; the tree dominates.
+    #         Do not cut to a single on him for the entire private
+    #         monologue. The wide is the point. He is being
+    #         absorbed by the composition he just signed into
+    #         being. That absorption is the final image of the
+    #         scene. Hold it for the full display cycle at the
+    #         end — the blue light washing the empty table,
+    #         Aeron not moving, the base functioning in the
+    #         ambient. Hold until the cut to black arrives.
+    # LIGHTING: one last institutional note. The display wash
+    #           is the only light on his face. The pendant over
+    #           the table is running cold blue through the tree's
+    #           animation cycle. His face catches the blue the
+    #           way the corner of a dead screen catches it — not
+    #           illuminated, just reflecting.
 
     "Aeron is alone in the war room."
 

@@ -116,6 +116,23 @@ label a4_s01_the_cold_room_ob:
 
     # ========== PHASE 2 -- THE WAIT ==========
 
+    # CAMERA: locked wide on the corridor. Nyra at frame-left, the
+    #         strategic room door at frame-right, the corridor axis
+    #         receding back-frame toward the rest of the base. The
+    #         camera does not cut. Every time-stamp ("0552." "0558."
+    #         "0603.") plays over the same held frame. The analysts
+    #         and supply runner pass through the frame in the deep
+    #         background — a half-blurred drift of figures Nyra
+    #         never turns toward. This is a single endurance plate.
+    # LIGHTING: corridor cool grey. Operational overheads at level.
+    #           No warm practicals in this hallway. Nyra is lit
+    #           evenly — no shadow side, no key side. She is
+    #           composed into a uniform wash that matches the
+    #           corridor's institutional flatness.
+    # FACE: Nyra — do not cut to a single. Her face at this distance
+    #        is barely readable. The point of the shot is that the
+    #        frame contains the waiting, not the person doing it.
+
     "0552."
 
     "0558."
@@ -144,6 +161,19 @@ label a4_s01_the_cold_room_ob:
 
     # ========== PHASE 3 -- THE BOLT ==========
 
+    # CAMERA: the wide holds until the bolt sound. On the sound, a
+    #         slow push-in begins — 50mm, tripod-locked, dolly-in
+    #         rather than zoom. The push lands on Nyra at medium
+    #         single exactly as the door hiss starts. She steps
+    #         forward one pace into her own close-up. Hand on the
+    #         plate. Hiss. Do not cut through the hiss; let the
+    #         door open into the same held shot.
+    # SFX: the bolt draw is the scene's most important single sound.
+    #      Long and mechanical — steel on steel, unhurried. The
+    #      status light flip from red to green is silent. The door
+    #      hiss is clean, no servo jitter. Every cue in this beat
+    #      is about a machine opening on schedule.
+
     "0622."
 
     #play sound "sfx/door_bolt_interior_slow.ogg"
@@ -161,6 +191,26 @@ label a4_s01_the_cold_room_ob:
     "The door hisses open."
 
     # ========== PHASE 4 -- INTERIOR ==========
+
+    # CAMERA: we enter the room with Nyra, but the camera is not on
+    #         her. Wide establishing of the room itself first: the
+    #         pendant pool on the central table, the layered maps,
+    #         the 48-hour coffee cup, the dead tactical display
+    #         against the back wall, Aeron's silhouette in the
+    #         alcove. Nyra walks into the establishing shot. The
+    #         room is the subject; the two figures are compositional
+    #         elements. Only after she sits does the camera begin
+    #         the symmetrical singles coverage.
+    # LIGHTING: pendant pool is the only full-brightness source.
+    #           Outside the pool the room is blue-grey institutional
+    #           wash. Aeron's alcove is darker than the table —
+    #           he has been standing in a deliberate shadow for
+    #           five hours. The contrast between the pool and the
+    #           alcove is the composition.
+    # BLOCKING: symmetrical singles from here forward. Aeron at
+    #           the head of the table. Nyra at the analyst's seat
+    #           opposite. No two-shot until the coverage chooses to
+    #           break, which it will not. The geometry is the scene.
 
     #scene bg_strategic_room_ob_interior with dissolve
 
@@ -234,6 +284,22 @@ label a4_s01_the_cold_room_ob:
 
     # ========== PHASE 5 -- THE PLAN ==========
 
+    # CAMERA: insert shot — the datapad sliding across the table
+    #         two-handed. Macro, low angle, the glide lit by the
+    #         pendant pool. When it stops in front of Aeron, the
+    #         camera cuts to his single for the read. Hold him on
+    #         the single for the full four-minute-eleven-second
+    #         read without a cut. Only his eyes move inside the
+    #         frame. When he reaches for the datapad the hand
+    #         enters frame from below — the reach is part of the
+    #         single, not a break into an insert.
+    # FACE: Aeron — surgeon-intake face. The jaw does nothing. The
+    #        eyes are metronomic. No flicker at the "better than
+    #        anything we produced when Selene was alive" thought.
+    #        That is the whole point of the single: the stillness
+    #        of his face while that sentence lands is the scene's
+    #        moral coordinate.
+
     "Nyra opens the datapad."
 
     "She slides it across the table, flat, two-handed. The datapad comes to rest between them, angled toward Aeron. The screen is a sector consolidation plan. Seven days of operations, mapped with the tight clean geometry of someone who built it overnight."
@@ -294,6 +360,18 @@ label a4_s01_the_cold_room_ob:
 
     # ========== PHASE 6 -- THE MARK ==========
 
+    # CAMERA: the scene's one macro insert. Close on the datapad
+    #         screen. The stylus enters the frame from above. One
+    #         stroke. The '3' gets the horizontal bar. The '5'
+    #         forms above it. The stroke is a single continuous
+    #         motion. Hold the macro on the mark for a full second
+    #         after the stylus lifts. This is the entire OB thesis
+    #         rendered as a single stylus stroke. The insert
+    #         deserves its hold.
+    # SFX: the pen mark sound is the scene's punctuation mark.
+    #      Small, dry, final. The room's hum drops by a half
+    #      under it and comes back immediately after.
+
     "Aeron takes a stylus from the tray beside the datapad."
 
     "He makes one mark."
@@ -311,6 +389,19 @@ label a4_s01_the_cold_room_ob:
     "He still has not spoken."
 
     # ========== PHASE 7 -- THE READ-BACK ==========
+
+    # CAMERA: back to Nyra's single for the read-back. Her eyes
+    #         move across the plan in the one-pass she describes —
+    #         seven seconds, the camera does not push or rack.
+    #         The nod that lands at the end is small enough that
+    #         it would be invisible at a wider shot; the single is
+    #         the only framing where it reads.
+    # FACE: Nyra — the nod is not acknowledgment of a commander's
+    #        correction. It is acknowledgment of a colleague who
+    #        saw what she saw. The distinction is in the angle of
+    #        the nod: down-and-forward, not down-and-back. Both
+    #        exist in OB protocol. The camera must read the right
+    #        one.
 
     "Nyra looks down at the datapad."
 
@@ -346,6 +437,21 @@ label a4_s01_the_cold_room_ob:
 
     # ========== PHASE 8 -- THE DEPARTURE ==========
 
+    # CAMERA: reverse on the door from inside the room — the frame
+    #         we have not yet used. Nyra crosses from the table
+    #         into the doorway. Hold the reverse as she pauses at
+    #         the threshold. The pause is not a look back; the
+    #         camera does not expect one and does not frame for
+    #         it. When she steps through, the door closes and the
+    #         reverse lingers on the closed door for a beat. The
+    #         lingering beat is for Aeron off-frame — we do not
+    #         need to see him to feel that the bolt does not
+    #         re-engage.
+    # SFX: the door closes with the same mechanical precision as
+    #      the opening. The absence of the bolt throw is the
+    #      scene's quietest sound cue — a sound that does not
+    #      happen. Mark it on the mix.
+
     "Nyra picks up the datapad. Tucks it under her arm. The motion is the same motion she used when she entered."
 
     "She walks to the door."
@@ -367,6 +473,23 @@ label a4_s01_the_cold_room_ob:
     "The bolt on the interior does not re-engage. Aeron has not thrown it again. That is the only thing in the scene that has changed from the beginning."
 
     # ========== PHASE 9 -- THE MOTHER BEAT ==========
+
+    # CAMERA: return to Aeron's single. Tight. Tighter than the
+    #         singles from Phase 4 — this is the one push-in the
+    #         scene gives him. The pendant pool fills the background
+    #         with cold light behind his face. No cut during the
+    #         "Liora" beat. The entire pressure-check plays on one
+    #         unbroken close.
+    # FACE: Aeron — the one beat allowed. It is not grief. It is a
+    #        gauge reading. Watch the eyelids: a single slow close
+    #        at "Liora," a single slow open at "The pressure is in
+    #        the green." Nothing else on the face moves. The
+    #        rehearsed stillness is the horror of the shot.
+    # LIGHTING: the pendant cold key sharpens for this single. OB
+    #           contrast bump per the Cinematography Bible §4.4 —
+    #           raise key/fill by about 10%, sharpen the reflection
+    #           roughness in the dead display behind him. The room
+    #           gets visibly more OB during his private beat.
 
     "Aeron sits alone at the strategic table."
 
@@ -446,6 +569,21 @@ label a4_s01_the_cold_room_ob:
     pause 0.8
 
     # ========== PHASE 11 -- CORRIDOR COdA ==========
+
+    # CAMERA: 50mm, tripod-locked. Aeron walks east. The camera
+    #         holds a medium wide — him in the foreground, corridor
+    #         receding behind him. As the junior analyst approaches
+    #         from the opposite direction, the camera does not
+    #         switch to a two-shot for the salute. The analyst
+    #         passes through the frame at depth without interrupting
+    #         the composition. The exchange is a geometry event,
+    #         not a relationship event. Continue the hold after
+    #         the analyst has passed.
+    # FACE: Aeron — identical to his pre-beat face from Phase 1.
+    #        That is the tell. The morning has rewritten nothing
+    #        visible. The analyst's failure to notice anything
+    #        unusual is the scene's closing shot; the camera
+    #        confirms by showing nothing unusual either.
 
     #scene bg_phoenix_corridor_dawn with dissolve
     #play ambient "sfx/ambient/corridor_dawn_cold.ogg" fadein 2.0

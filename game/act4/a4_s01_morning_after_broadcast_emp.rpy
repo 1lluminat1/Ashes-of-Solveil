@@ -82,6 +82,18 @@ label a4_s01_morning_after_broadcast_emp:
 
     # ========== PHASE 2 — WHAT THE BROADCAST LEFT BEHIND ==========
 
+    # CAMERA: 32mm handheld, Aeron's walking pace unchanged. The camera
+    #         crosses the corridor threshold into the intake wing and
+    #         the frame-depth opens up — the long rows of cots recede
+    #         toward the back wall. Hold the wide as he walks. Do not
+    #         cut in on the sleeping faces. They are collective, not
+    #         individual. Only the grey-haired woman earns a single.
+    # LIGHTING: Overhead strips off. Only the emergency amber is lit —
+    #           low, floor-level strip lighting throwing the cots into
+    #           soft silhouette. The grey-haired woman's eyes catch
+    #           the amber from below. She is the one practical
+    #           face-light in the shot.
+
     "The corridor opens into the intake wing."
 
     "Intake used to be a storage room. It was converted in the first six hours after the broadcast went live, when the first wave of walk-ins arrived and there was nowhere to put them."
@@ -112,6 +124,16 @@ label a4_s01_morning_after_broadcast_emp:
 
     # ========== PHASE 3 — THE MESS HALL ==========
 
+    # CAMERA: walk-through continues. Wide on the mess hall's single
+    #         lit overhead — the lamp directly above the central
+    #         table with the thermos. The rest of the hall in
+    #         darkness. Aeron crosses through the lit circle without
+    #         stopping. The camera lets the thermos exit frame with him.
+    # SFX: the grain-paste smell cannot be filmed. Carry it with a
+    #      faint metallic loop — the old-electrical hum the narration
+    #      names. The mess hall ambient is quieter than the corridor
+    #      by one step. Audio drops under the walk.
+
     "The mess hall has one light on."
 
     "Someone has left a thermos on the central table. Steam is still coming off the lid. Whoever made it is gone — back to sleep, or on watch, or out walking the perimeter the way he is walking the interior."
@@ -127,6 +149,18 @@ label a4_s01_morning_after_broadcast_emp:
     "He does not sit down. He keeps walking."
 
     # ========== PHASE 4 — THE COMMS ROOM ==========
+
+    # CAMERA: tripod-locked for the comms room. The feed screens
+    #         become the only light source — muted TV-blue flicker
+    #         on Aeron's face. Three-way frame: (1) still of Liora
+    #         on screen left, (2) live counter centre, (3) Sector
+    #         Nine upload scrolling right. Hold Aeron in foreground
+    #         silhouette. Do not push in on the screens — he is not
+    #         looking at them directly.
+    # FACE: Aeron — the face of a man letting something exist in his
+    #        peripheral vision because looking head-on would cost him
+    #        the walk. The jaw working. Eyes held just off-axis. The
+    #        word "working" lands inside him without visible motion.
 
     "The comms room is dark except for the feed screens."
 
@@ -155,6 +189,19 @@ label a4_s01_morning_after_broadcast_emp:
     "Then he moves."
 
     # ========== PHASE 5 — THE BOARD ==========
+
+    # CAMERA: 50mm eye-level on the board (per opening block). Locked
+    #         tripod. Aeron enters frame-right. The board fills the
+    #         left two-thirds. The frame does not pan across the
+    #         columns — the camera holds, and the names read in his
+    #         eyeline as he scans them. This is the scene's first
+    #         long hold and it is the pivot of the walk.
+    # LIGHTING: Tessa's single clipped work lamp is the only key.
+    #           The board is the brightest surface in the room by a
+    #           wide margin. Aeron's face is lit by bounce from the
+    #           board — indirect, cold. The lamp's angle means the
+    #           LIVING column and the DEAD column receive the exact
+    #           same light. That equality is the subject of the shot.
 
     "Tessa's board is in the annex off the clinic."
 
@@ -224,6 +271,19 @@ label a4_s01_morning_after_broadcast_emp:
 
     # ========== PHASE 6 — THE CORRIDOR OUT ==========
 
+    # CAMERA: walking pace returns. The training room is a blank
+    #         composition as he passes — rolled mats, leaning sparring
+    #         staff, no practical. The chapel space gets a half-beat
+    #         hold: the door ajar, candles visible through the gap,
+    #         amber pooling onto the corridor plates. The camera does
+    #         not cross either threshold. He is moving and the camera
+    #         is moving with him.
+    # LIGHTING: one of the scene's rare pockets of warmth — the chapel
+    #           candles. The amber falls on the corridor plates as he
+    #           passes and leaves his face when he clears the doorway.
+    #           Cold blue resumes immediately. The warmth is Lyra's,
+    #           not his, and the light honors that.
+
     "The corridor from the clinic annex passes the training room. The training room is empty at this hour. The mats are rolled. Someone has left a sparring staff leaning against the wall — Zira's, probably, or the new one she has been teaching with since the recruits started arriving."
 
     "Zira is teaching now. That is a thing that happens. Zira stands in front of eight or ten new bodies and shows them how to not die for the first five seconds of a fight. The things nobody taught her. The things she is teaching because nobody taught her."
@@ -245,6 +305,21 @@ label a4_s01_morning_after_broadcast_emp:
     "He keeps walking."
 
     # ========== PHASE 7 — THE CIPHER TABLE ==========
+
+    # CAMERA: the scene's first two-shot setup. 40mm, slight push-in
+    #         as Aeron crosses the ops room toward the cipher table.
+    #         Selene foreground-left, cipher in her hands, table
+    #         between them. The push lands exactly at the moment she
+    #         looks up. Hold. The camera does not cut for the full
+    #         cipher-slide exchange — two people at a table, one
+    #         object, no cuts.
+    # LIGHTING: one table lamp only. Selene half-lit — working light.
+    #           Aeron walks into the lamp's range as he approaches.
+    #           Both faces catch the amber the way the board did
+    #           upstairs. The visual grammar matches: Tessa's lamp
+    #           on the board and Selene's lamp on the cipher are the
+    #           same light, intentionally. Care and command under
+    #           the same colour temperature.
 
     "The ops room is dark."
 
@@ -289,6 +364,13 @@ label a4_s01_morning_after_broadcast_emp:
 
     # ========== PHASE 8 — THE ONLY DIALOGUE ==========
 
+    # CAMERA: hold the two-shot. Nobody moves for the four-line
+    #         exchange. The cipher catches the lamp-light in the low
+    #         third of the frame — the object is in the frame, the
+    #         faces are in the frame, and the tabletop between them
+    #         is the negative space doing the work. Do not cut to
+    #         singles. The "Yes / Yes" is a two-shot line.
+
     sel "Today we find out what we actually built."
 
     athought "Yes."
@@ -296,6 +378,13 @@ label a4_s01_morning_after_broadcast_emp:
     a "Yes."
 
     # ========== CLOSING ==========
+
+    # CAMERA: the long closing hold. Static two-shot on the cipher
+    #         between them. The camera does not move for the duration
+    #         of the closing narration. Let the generator hum, the
+    #         wind through the unsealed breach, the distant voices
+    #         carry the cut to black. This is the scene's last and
+    #         longest static plate.
 
     "The lamp hums. The cipher catches the light. Neither of them moves for a long moment."
 

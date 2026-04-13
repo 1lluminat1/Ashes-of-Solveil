@@ -90,6 +90,19 @@ label a4_s02_first_cracks_emp:
 
     # ========== PHASE 2 — THE PROBLEM SET ==========
 
+    # CAMERA: 32mm handheld picks up for the round-robin. Two-shot
+    #         bias — Selene and whoever is speaking held in the same
+    #         frame as each question lands. When Zira reports, cut
+    #         to the Selene/Zira two-shot. When Tessa offers, rack
+    #         to the Selene/Tessa two-shot. The camera is treating
+    #         Selene as the pivot even though her lines are minimal.
+    #         The two-shot discipline is the point — every question
+    #         goes through her until the moment it doesn't.
+    # SFX: datapad taps are the beat markers. One tap per question
+    #      handoff. The tactical display tick runs continuous under.
+    #      Keep the ambient busy — this is the first operational
+    #      briefing of the act and it sounds like work.
+
     sel "We have three operational questions. In order: intake assignment, supply routing, Echelon mobilization."
 
     sel "Zira, intake status."
@@ -113,6 +126,21 @@ label a4_s02_first_cracks_emp:
     n "They are repositioning. Marcus has pulled three patrol battalions off the outer rings. Consolidation pattern, not a strike posture — yet. The signal analysis is suggestive, not conclusive. I will have more in eighteen hours."
 
     # ========== PHASE 3 — AERON TAKES THE BURST ==========
+
+    # CAMERA: break from the two-shot. Tight single on Aeron as the
+    #         room pauses. The handheld tightens its drift — not
+    #         steadier, more focused. Hold the single through the
+    #         entire command burst. Do not cut away to the listening
+    #         team. They are off-frame and we hear the room taking
+    #         shape around his orders in the ambient — chairs
+    #         shifting, datapads moving — but the frame stays on him.
+    #         This is the shape of the Aeries reflex: the commander
+    #         alone in the camera while the room reorganizes around
+    #         him.
+    # FACE: Aeron — command-clean. The old reflex running clean and
+    #        fast. No tells. No hesitation. The face that earned
+    #        him the ledger number. The horror of the beat is how
+    #        well the face still fits.
 
     "The room pauses."
 
@@ -188,6 +216,20 @@ label a4_s02_first_cracks_emp:
 
     # ========== PHASE 5 — THE DEFENSE ==========
 
+    # CAMERA: the first cut in the locked correction frame — and it
+    #         is not a cut. It is a slow rack from Selene to Aeron.
+    #         The rack lands on his face at the same instant "There
+    #         wasn't time" leaves his mouth. The timing is the
+    #         point: the reflex speaks before the camera arrives,
+    #         and the camera catches him already having said it.
+    # FACE: Aeron — the half-second micro-collapse the opening block
+    #        calls for. The command mask slips. Under it: not grief.
+    #        Recognition. The recognition that the sentence he just
+    #        spoke is a sentence his father used to speak. Hold him
+    #        on the single for the full internal monologue. Do not
+    #        cut to Selene's reaction during the Marcus-voice
+    #        paragraphs. This is his scene to receive.
+
     a "There wasn't time."
 
     "He says it before he can stop himself. The old reflex. The First Principle defending itself in his mouth."
@@ -206,6 +248,23 @@ label a4_s02_first_cracks_emp:
 
     # ========== PHASE 6 — THE ROOM HOLDS ==========
 
+    # CAMERA: four isolated tight close-ups, one per LI. No pans
+    #         between them — hard cuts on each reaction beat.
+    #         Lyra first (her eyes meeting his for a half-second),
+    #         then Zira (expressionless, tracking), then Tessa
+    #         (the "I saw that" look), then Noelle (the stylus on
+    #         the scrap paper). Each close is held for exactly
+    #         long enough to register and then cut. They are
+    #         composed as isolated witnesses, not a jury.
+    # FACE: each LI reads exactly one thing:
+    #        Lyra — presence as offering
+    #        Zira — geometry-logging neutrality
+    #        Tessa — recording for later
+    #        Noelle — the hand-write tell from a3_s08 recurring
+    #       The point is that none of them is helping him. The
+    #       point is that they are witnessing him. The cuts are
+    #       the respect.
+
     "The other four LIs do not intervene."
 
     "This is important enough that he notices it. Lyra does not defuse. Zira does not joke. Tessa does not mother. Noelle does not clarify."
@@ -223,6 +282,22 @@ label a4_s02_first_cracks_emp:
     "Noelle's stylus is moving now — not on her datapad, on a separate scrap of paper. She is logging the exchange by hand. He has seen her do this once before, in a3_s08. She does it when she does not trust the datapad to hold the weight."
 
     # ========== PHASE 7 — THE CHOICE ==========
+
+    # CAMERA: return to Aeron's tight single. Lock. No handheld
+    #         drift for this beat. The opening block calls for a
+    #         locked hold at the choice moment and the camera
+    #         honors it here. Selene is off-frame but the
+    #         audio carries her stillness — the room's ambient
+    #         has dropped to its quietest level because everyone
+    #         in it is holding their breath and the mix reflects
+    #         that. The choice menu appears over a held close on
+    #         his face. Do not move the camera until after the
+    #         menu resolves.
+    # FACE: Aeron — the face of a man choosing between the voice
+    #        in his mouth and the voice in the room. The jaw
+    #        setting, then softening, then setting again. The
+    #        choice is visible in the micro-movement of the jaw
+    #        alone. Trust it.
 
     athought "She is waiting for me to respond."
 
@@ -379,6 +454,22 @@ label a4_s02_first_cracks_emp:
     label .after_branches:
 
     # ========== PHASE 8 — THE PROMISE IN THE ROOM ==========
+
+    # CAMERA: wide on the war room as the team disperses. The
+    #         handheld returns for the dispersal but at the
+    #         slowest drift of the scene — the room is unwinding.
+    #         As the others exit frame, the shot narrows
+    #         naturally to the two-shot of Aeron and Selene at
+    #         the head of the table. This is the scene's first
+    #         real two-shot, and it arrives after the correction
+    #         has been received. The geometry of the shared-
+    #         command table is restored by the camera, not by
+    #         the dialogue.
+    # LIGHTING: overheads still at full operational. No change.
+    #           This is an important non-change: the scene refused
+    #           to soften the light for Selene's correction and it
+    #           refuses to soften the light now. Shared command is
+    #           work, and the room stays lit for work.
 
     "The team disperses to their assignments. Not fast. Not slow. The pace of people carrying a weight that is not the operational plan."
 
