@@ -98,6 +98,34 @@ label a4_s22_council_of_attrition_ob:
 
     # ========== PHASE 1 -- CALL TO ORDER ==========
 
+    # CAMERA: 50mm locked wide. OB grammar. Formal
+    #         council composition. Long dark table,
+    #         Aeron at the head, the others around it.
+    #         Nyra at his right. Zira at his left. Lyra
+    #         across from Nyra. Noelle across from Zira.
+    #         Tessa at the foot (branch A) OR empty
+    #         chair at the foot (branch B). Establish
+    #         the composition. If branch B, the empty
+    #         foot-chair is noted in this wide and the
+    #         camera does NOT return to it — nobody
+    #         acknowledges it verbally, the absence is
+    #         a data point the scene refuses to process
+    #         aloud.
+    # LIGHTING: war room overheads at full. Cold white.
+    #           The map overlay on the table is dormant.
+    #           A single warm amber from the standby
+    #           tactical display on the far wall. The
+    #           warmth is decorative and does not reach
+    #           the faces. The warmth is for the room,
+    #           not for the council.
+    # FX/COMP: scars visible in the table — a coffee
+    #          ring from days ago that was not wiped,
+    #          a nick at the head-chair from a magazine
+    #          set down too hard. Rhea Vestin's last-
+    #          known node locations marked in RED at
+    #          the north-east quadrant of the map
+    #          overlay. Small. Exact.
+
     "The map overlay on the table ignites. Red marks bloom at the north-east quadrant. Rhea Vestin's last known node locations. The red is precise. The overlay holds steady."
 
     "Aeron sits at the head. He does not stand to call the council. He taps the table once with the flat of his hand. The sound is a small formal beat. The council recognizes it."
@@ -117,6 +145,24 @@ label a4_s22_council_of_attrition_ob:
     a "That is the proposal. I am going to hear each of you. Lyra first."
 
     # ========== PHASE 2 -- LYRA ==========
+
+    # CAMERA: the coverage grammar for the next five
+    #         phases: a series of MEDIUM ONE-SHOTS, each
+    #         LI in their own locked frame. The camera
+    #         does NOT pan between them. It CUTS. Hard
+    #         cuts from one single to the next. The cuts
+    #         are the geometry of a council where each
+    #         person delivers a fragment and NO ONE
+    #         argues with any other person's fragment.
+    #         The horror is in the absence of debate:
+    #         it is a PARADE OF CONSENT. Each medium
+    #         single lasts the length of that LI's line
+    #         and not longer.
+    # SFX: each LI's chair creaks when they speak — a
+    #      small sound, specific to each. Mark the
+    #      individual chair sounds. The chairs are the
+    #      only fingerprint the council has at this
+    #      point.
 
     "Lyra does not adjust her posture. She has been sitting the way she has been sitting since she walked in -- straight, hands folded on the table in front of her, the ceremonial rope at her wrist visible at the cuff."
 
@@ -324,6 +370,21 @@ label a4_s22_council_of_attrition_ob:
 
     # ========== PHASE 7 -- AERON AUTHORIZES ==========
 
+    # CAMERA: the final wide. Shot from BEHIND Aeron
+    #         looking down the table. His shoulder is
+    #         in the near foreground. The five others
+    #         (or four, branch B) are in a single frame
+    #         with the day's packet stack between them.
+    #         The back of Aeron's head is the camera's
+    #         anchor. This is the OB MIRROR of the EMP
+    #         s21 shot where the council refused to
+    #         preempt — same composition, opposite
+    #         answer. Hold the wide through the
+    #         authorization.
+    # SFX: paper rustle as Aeron opens the Rhea file.
+    #      The calendar entry committing — a single
+    #      terminal chime, low, one note. No music.
+
     "Aeron looks at the map overlay. The red marks at the north-east quadrant hold steady. He moves the overlay once with a finger on the table edge, rotating the view so the rotation point sits center-frame."
 
     a "Mission authorized."
@@ -434,6 +495,17 @@ label a4_s22_council_of_attrition_ob:
     athought "Both of those facts are true in the same jacket."
 
     # ========== PHASE 11 -- FADE ==========
+
+    # CAMERA: hold the wide from Phase 7 (or whichever
+    #         final composition Phase 10 resolves to).
+    #         The council disperses silently. The camera
+    #         does not follow anyone out. It stays at
+    #         the table. The red marks on the map are
+    #         still visible at the north-east quadrant.
+    #         Fade on the empty-but-for-Aeron frame, or
+    #         the fully-empty frame if the blocking
+    #         places him standing. The red on the map
+    #         is the last thing to go dark.
 
     "He stands. He does not gather a packet. He walks the length of the table to the door. At the door he pauses once -- not the pause his mother was describing, a different kind, a small operational pause that is the habit of a man confirming that a room is ready to be left alone."
 

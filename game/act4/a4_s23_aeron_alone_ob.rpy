@@ -106,6 +106,25 @@ label a4_s23_aeron_alone_ob:
 
     # ========== PHASE 1 -- THE DESK ==========
 
+    # CAMERA: 50mm locked. The LOCKED-NESS is the whole
+    #         aesthetic. Wide on Aeron's quarters: bed
+    #         MADE (never slept in for three nights in
+    #         a row), small desk by the far wall, single
+    #         chair pushed back from the desk, tactical
+    #         terminal on standby, small mirror on a
+    #         stand at the desk's left edge. Aeron enters
+    #         from the war room door in his day coat.
+    #         The camera does NOT follow him to the bed.
+    #         He does not go to the bed. He walks to the
+    #         desk. He sits. Hold the wide through the
+    #         sit.
+    # LIGHTING: one desk lamp. Everything outside the
+    #           lamp's circle is DARK. The bed is in
+    #           dark. The door is in dark. The mirror
+    #           is half in the lamp's circle, half
+    #           outside. Not flattering light. Enough
+    #           light to see a face by.
+
     "Aeron sits. He does not sit heavily. He sits the way he does everything now, which is with the exact amount of force required for the action and no more."
 
     "The desk lamp is already on. He left it on when he went out this morning because he knew he would come back after dark. The desk lamp's circle holds the mirror and his right hand and a patch of the desk surface. Everything else is out."
@@ -127,6 +146,16 @@ label a4_s23_aeron_alone_ob:
     athought "What has changed is the day I am reading it on. The first read was yesterday pre-council. The second read was yesterday pre-council. The third read is now, on the other side of a council that authorized the assassination of Rhea Vestin. The page is the same. The reader is not."
 
     # ========== PHASE 3 -- THE UNFOLD ==========
+
+    # CAMERA: INSERT top-down on his hands unfolding the
+    #         letter. Macro. Paper under the desk lamp's
+    #         circle of light. Single handwritten page.
+    #         Hold the macro as the page flattens. Then
+    #         return to the locked medium — three-
+    #         quarter profile at the desk, mirror at
+    #         frame-left. From this point forward, the
+    #         scene alternates between the locked medium
+    #         and the mirror substitution.
 
     "He opens the envelope. The page comes out. The creases are set. He unfolds along the creases and places the page flat on the desk."
 
@@ -282,6 +311,22 @@ label a4_s23_aeron_alone_ob:
 
     # ========== PHASE 16 -- THE MIRROR ==========
 
+    # CAMERA: the scene's ONE "camera move" — which is
+    #         not a move, it is a SUBSTITUTION. Cut from
+    #         the locked medium to a locked frontal from
+    #         INSIDE the mirror's plane. The viewer sees
+    #         the reflection directly. Aeron's face
+    #         fills the frame. The camera has become
+    #         the mirror. Hold this substitution for a
+    #         LONG beat. The scene's entire interior
+    #         monologue lives in this frame.
+    # FACE: Aeron — the mirror-face. The face the mirror
+    #        has been collecting without him looking at
+    #        it. The act's accumulation is visible here
+    #        and nowhere else. Whatever he has become
+    #        over twelve days, the mirror is returning
+    #        it to him at 0330.
+
     "He lifts his eyes from the letter."
 
     "The mirror is at his left. The small steel-framed field mirror. He has not looked into it in four months. There is a fine layer of dust on the top edge of the frame. The glass is clean."
@@ -372,6 +417,15 @@ label a4_s23_aeron_alone_ob:
 
     # ========== PHASE 21 -- THE MIRROR, ONCE MORE ==========
 
+    # CAMERA: return to the mirror substitution frame.
+    #         The second look. Shorter than the first.
+    #         The face in the mirror has not changed
+    #         in the thirty seconds since he looked
+    #         away — but HE has processed the first
+    #         look, and the second look registers the
+    #         processing. Hold briefly. Cut back to
+    #         the locked medium.
+
     "He looks into the mirror one more time. The locked frontal holds."
 
     athought "The face I am going to bring to the ops table in ninety minutes is this face. I am going to sit at the head of the table -- not the side chair. The head. The head is where the man who runs the assassination sits on day one of day seven. I have been taking the side chair for three weeks because the side chair is easier to leave. On day one of day seven I am going to take the head chair and I am not going to leave it until the mission is executed or I am replaced."
@@ -406,6 +460,18 @@ label a4_s23_aeron_alone_ob:
 
     # ========== PHASE 24 -- THE WAR ROOM AT 0500 ==========
 
+    # CAMERA: HARD CUT from the empty desk (where the
+    #         scene has been holding after Aeron
+    #         stands and walks out) to the empty war
+    #         room at 0500. 50mm locked wide. The head
+    #         chair is empty. Aeron enters from the
+    #         corridor door and walks to the head chair.
+    #         He sits. Hold the wide through the sit.
+    # LIGHTING: war room overheads at 40%%. Same cold
+    #           working light as a4_s21 OB. No change
+    #           during the entrance. The lighting does
+    #           not notice him.
+
     "He arrives at the war room at 0500 sharp. The pressure seal cycles once. He enters."
 
     "The war room is exactly the way he left it the previous morning after the council. The map overlay dormant. The packet stack at the head of the table where he left it. The chair at the foot of the table empty -- or empty in a way that depends on the previous branch."
@@ -423,6 +489,16 @@ label a4_s23_aeron_alone_ob:
     athought "That is the private beat of the OB track. The moment nobody witnesses. The moment I take the chair because the chair has already been taken in every previous morning of this month and the taking is now simply the body completing the routine the mind has surrendered to."
 
     # ========== PHASE 25 -- THE FINAL FRAME ==========
+
+    # CAMERA: hold the 50mm locked wide on Aeron in the
+    #         head chair at 0500. Nothing moves. No
+    #         other council members. No staff yet. The
+    #         war room is empty except for him. The
+    #         map overlay is dormant. The cold white
+    #         overheads are at 40%%. Hold the wide past
+    #         comfort. Fade on the composition — not on
+    #         his face. The final frame of Act 4 OB is
+    #         the head chair no longer empty.
 
     "He opens the packet stack. The Ghostline relay log is on top. He begins to read."
 

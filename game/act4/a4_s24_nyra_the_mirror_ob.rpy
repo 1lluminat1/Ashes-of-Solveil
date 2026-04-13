@@ -96,6 +96,34 @@ label a4_s24_nyra_the_mirror_ob:
 
     # ========== PHASE 1 -- THE ARRIVAL ==========
 
+    # CAMERA: 50mm locked. Two-shot across the ops
+    #         table — same room as a4_s01 OB, the
+    #         strategic room where the act opened.
+    #         Camera on the short axis of the table,
+    #         three-quarter height. The two-shot does
+    #         NOT cut for the full length of Nyra's
+    #         pitch. Aeron at the head chair (he
+    #         returned to it in s23). Nyra at the long
+    #         side three seats down — same-side
+    #         geometry with the corner of the table as
+    #         the hinge. They are not across from each
+    #         other. That non-across is the composition.
+    # LIGHTING: steel-blue overhead at 35%%. One desk
+    #           lamp at the head — warm, low, yellow —
+    #           is on. The ONLY warm source in the
+    #           room and it is on AERON's side of the
+    #           table, not Nyra's. The asymmetry is
+    #           LOAD-BEARING. The warm light is Liora's
+    #           letter — the jacket pocket it
+    #           illuminates holds the letter — and the
+    #           scene does not name the letter aloud
+    #           until the end.
+    # SFX: HVAC loop, distant server rack cycle, the
+    #      small electrical hum of the tactical board's
+    #      standby state. Nothing else. No boots in
+    #      the corridor. No breath sounds until
+    #      Aeron's response. SILENCE AS INSTRUMENT.
+
     athought "Oh-oh-forty-seven."
 
     athought "I came down here at twenty-three hundred and I have not left since. I am not working. I am holding the head chair. That is a different verb."
@@ -121,6 +149,19 @@ label a4_s24_nyra_the_mirror_ob:
     athought "I let her."
 
     # ========== PHASE 2 -- THE OPEN ==========
+
+    # CAMERA: hold the two-shot. Nyra leans forward,
+    #         forearms flat on the table, palms open on
+    #         the wood — the way a priest lays her
+    #         hands on a text she is about to read
+    #         from. The camera catches the gesture in
+    #         the two-shot without zooming on it. The
+    #         priest-gesture is the scene's first
+    #         formal admission of what Nyra is doing.
+    # FACE: Nyra — the offering face. Not hot. Not
+    #        cold. The face of a woman making a
+    #        doctrinal proposal she has rehearsed
+    #        alone and is now delivering on schedule.
 
     "Nyra speaks. Her voice is low enough that the HVAC loop is louder. That is deliberate. She wants him to lean forward, even imperceptibly, even just in the ears."
 
@@ -270,6 +311,22 @@ label a4_s24_nyra_the_mirror_ob:
 
     # ========== PHASE 6 -- THE HALVING ==========
 
+    # CAMERA: the scene's one push. The two-shot
+    #         tightens to a medium single on Aeron —
+    #         slow push, FOUR beats, no further
+    #         movement after the tighten lands. Hold
+    #         the single through his response. He is
+    #         not accepting the doctrine whole. He is
+    #         HALVING it. The camera registers the
+    #         halving as a deliberate refusal to
+    #         accept what was offered.
+    # FACE: Aeron — the mirror-face from s23 is on
+    #        him still. Twelve hours later. Nyra is
+    #        speaking to a man the mirror has already
+    #        told him something about, and the face
+    #        in the single is processing both voices
+    #        at once.
+
     "Aeron speaks. His voice is not prepared. The voice is what his body made when the thinking stopped and the answer became audible."
 
     a "If I take your framing, I will never be able to put the letter down."
@@ -358,6 +415,16 @@ label a4_s24_nyra_the_mirror_ob:
 
     # ========== PHASE 9 -- THE EXIT ==========
 
+    # CAMERA: cut back to the two-shot when Nyra
+    #         answers his refusal. Hold the two-shot
+    #         until she stands. Then her exit is
+    #         framed OVER AERON'S SHOULDER — we do not
+    #         follow her. We watch her become smaller
+    #         at the door. Hold on Aeron's back-of-
+    #         the-head foreground and Nyra's receding
+    #         figure in the mid-ground. The door
+    #         cycles. She is gone.
+
     "Nyra lifts her hands off the table. She brings them back to her lap. The gesture is small. It is the gesture of a person who has decided, inside the decision, to stop performing the posture of the pitch."
 
     "She does not stand yet. She speaks first."
@@ -433,6 +500,18 @@ label a4_s24_nyra_the_mirror_ob:
     athought "That is the bargain I made tonight without saying the word bargain."
 
     # ========== PHASE 11 -- HOLD ==========
+
+    # CAMERA: final shot. Aeron alone at the head of
+    #         the table after Nyra's exit. The warm
+    #         desk lamp is still on, still on his side.
+    #         The steel-blue overhead is still at 35%%.
+    #         He touches the jacket pocket where the
+    #         letter is — the camera catches the touch
+    #         as the scene's final gesture. Hold on
+    #         the touch. Do NOT insert on the pocket.
+    #         The touch from medium distance is the
+    #         scene's closing sentence. Fade on the
+    #         hold.
 
     "Aeron sits."
 

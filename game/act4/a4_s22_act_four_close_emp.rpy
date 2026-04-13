@@ -74,6 +74,23 @@ label a4_s22_act_four_close_emp:
 
     # ========== PHASE 1 — THE EDGE ==========
 
+    # CAMERA: wide establishing. Aeron at the edge of
+    #         the secondary base. Base wall behind him.
+    #         Access road in front of him. The convoy —
+    #         fourteen civilians in loose column behind
+    #         three Phoenix runners — is moving on the
+    #         road in the mid-ground. The camera is at
+    #         Aeron's HEIGHT, one step back and to his
+    #         right. It does NOT move for the whole of
+    #         the relay that follows. Hold the wide.
+    # LIGHTING: cinema choice. Default: sun rising over
+    #           east ridge, light cold and honest, same
+    #           kind of light as a4_s01 but twelve days
+    #           later with more weight. Mark the sun
+    #           position. Aeron's face is HALF in the
+    #           light and HALF out of it — he is
+    #           literally at the edge.
+
     "Aeron walks to the edge of the base."
 
     "He has not been at the edge of the base in twelve days. The edge of the base is the place where the secondary base's wall meets the access road, and the access road runs east toward the ridge, and the ridge is the ridge Lyra called in the Sector 7 interdiction, and the ridge is where the Sector 6 staging point waits at the bottom of the far side of it."
@@ -101,6 +118,18 @@ label a4_s22_act_four_close_emp:
     athought "This is the last beat of the act. I can feel the shape of it. The act is about to hand forward."
 
     # ========== PHASE 2 — ZIRA ==========
+
+    # CAMERA: do NOT cut. The wide from Phase 1 holds.
+    #         Each LI will enter and exit from Aeron's
+    #         LEFT (the base side). Zira first. She is
+    #         moving, running, a pack on her back. She
+    #         enters the frame from the left, does the
+    #         beat at Aeron's position, leaves the frame
+    #         toward the convoy. One long take. The
+    #         edit is the COMING and GOING, not a cut.
+    # FACE: Zira — the field-Zira face. Focused. Not
+    #        frozen. The warmth is visible only in the
+    #        moment she is actually beside him.
 
     "Footsteps behind him from the base side. Fast. Runner-fast."
 
@@ -240,6 +269,21 @@ label a4_s22_act_four_close_emp:
 
     # ========== PHASE 6 — SELENE ==========
 
+    # CAMERA: same long take continues. Selene enters
+    #         from the left. She does NOT run or walk
+    #         fast — she walks. She STOPS beside him.
+    #         This is the only LI who stops. The others
+    #         passed through the beat; Selene holds it.
+    #         The camera continues not to cut. The
+    #         held wide now contains two standing
+    #         figures at the edge of the base watching
+    #         the convoy.
+    # SFX: her arrival is audible — the step into the
+    #      held frame. Then silence for the length of
+    #      one full breath before her line. Mark the
+    #      breath precisely. The silence is her line
+    #      that is not yet a line.
+
     "Selene walks up to the edge."
 
     "Selene does not walk fast. Selene walks at the pace of a woman who has been commanding since she was twenty-three years old and who has learned, over that long accumulation of years, that commanders who walk fast are commanders who are being watched, and that there is a pace which tells a base that command is not in a hurry and the not-in-a-hurry is the reassurance the base needs at the edge of a difficult day."
@@ -350,6 +394,22 @@ label a4_s22_act_four_close_emp:
     athought "We did not break."
 
     # ========== PHASE 9 — THE HOLD ==========
+
+    # CAMERA: the ONLY camera move of the scene. Pull
+    #         back ONE small step — one step only —
+    #         and hold on the wider wide. The convoy
+    #         in the mid-ground, smaller now. Aeron in
+    #         the foreground alone. The sun per the
+    #         opening block's cinema choice. Hold the
+    #         wider wide for the final beat. The one
+    #         long low string rises and falls across
+    #         the final line. Fade on the wider wide
+    #         with the convoy in the frame receding
+    #         toward Sector 6.
+    # FX/COMP: the receding convoy is the scene's
+    #          closing argument. They are moving away.
+    #          Aeron is not going with them. The act
+    #          closes on the distance between the two.
 
     "The camera holds on the wide for a long beat."
 
