@@ -66,6 +66,27 @@ label a4_s11_mercy_call_costs_emp:
 
     # ========== PHASE 1 — THE CAPTURED SIX ==========
 
+    # CAMERA: handheld, tight, low. Field register 1. The camera
+    #         stays INSIDE the Phoenix cordon — over-the-shoulder
+    #         from inside the circle toward the six on their
+    #         knees. Flashlight beams cut through the low mist.
+    #         Do not pan out to reveal the full circle; the
+    #         viewer is in with the captives, not with the
+    #         operation. Hold the low-frame tight on the
+    #         kneeling posture line. Vess Kallan is third from
+    #         the left, his posture different from the others —
+    #         catch that difference in the frame without
+    #         naming it.
+    # LIGHTING: pre-dawn gray-blue. Horizon about thirty
+    #           minutes from morning. Flashlight beams are the
+    #           only practicals and they cut through mist.
+    #           Cold. The six on their knees are lit from
+    #           above and in front, never from behind — their
+    #           silhouettes are absorbed by the pre-dawn.
+    # SFX: boots in gravel, breath in the cold, the low relay
+    #      hum, a distant Sector 12 owl. The owl is a real
+    #      sound not a decorative one. Use it once.
+
     "Pre-dawn. Sector 12. A ravine the Phoenix scouts have been mapping for a week."
 
     "The operation was supposed to be an intel pull — an Echelon patrol passing through the corridor with field reports Noelle wanted for the Marcus adaptation model. The scouts had the patrol on a loop. Aeron's team was in position to take them silent if the window opened. The window opened."
@@ -196,6 +217,28 @@ label a4_s11_mercy_call_costs_emp:
 
     # ========== PHASE 3 — THE MERCY CALL ==========
 
+    # CAMERA: transition to decision register 2. Medium hold
+    #         on Aeron at the edge of the ravine, the six
+    #         behind him in soft focus. The camera stops
+    #         drifting. Selene's comms voice enters over. Hold
+    #         the medium on him for the entire decision arc.
+    #         Do not cut to the six during the call. They are
+    #         the context, not the subject. When Aeron turns
+    #         from the six to look at Zira — one beat — catch
+    #         the turn in profile, then hold on the profile
+    #         through the line they trade. Turn back. The
+    #         whole mercy call plays in that medium with one
+    #         profile-break.
+    # FACE: Aeron — the thesis line from a4_s10 is in his
+    #        chest and he is running an operation with no
+    #        action protocol for it yet. The face shows the
+    #        delta. Eyes working. Jaw working. No resolution
+    #        on the face — the resolution is in the sentence
+    #        he delivers.
+    # LIGHTING: same pre-dawn, colder. One half-stop colder
+    #           than Phase 1 per the opening block. Mark the
+    #           subtle temperature drop on his face.
+
     athought "Delegate the question."
 
     athought "I do not know the action yet. She told me last night I would not know the action and she was right. I do not know the action. I know the sentence."
@@ -319,6 +362,23 @@ label a4_s11_mercy_call_costs_emp:
 
     # ========== PHASE 5 — ZIRA CARRIES THE LIFER ==========
 
+    # CAMERA: transition to corridor register 3. Zira walking
+    #         Vess Kallan through the secondary base corridor.
+    #         Medium two-shot from slightly behind — her grip
+    #         on his elbow visible in the frame. This is the
+    #         professional grip of a Phoenix officer who has
+    #         done this twice before and is counting it.
+    #         Track with them at walking pace. The corridor
+    #         is flat-amber shift-change light. Hold through
+    #         one door opening ahead and closing behind.
+    # LIGHTING: standard secondary-base amber. Overhead strips
+    #           at full operational. The particular flatness
+    #           of a corridor at shift change — no shadows,
+    #           no warmth, institutional fluorescent amber.
+    #           This is the first warm light the scene has
+    #           had, and it reads as wrong temperature for
+    #           what Zira is doing.
+
     "The six are brought up the ravine slope under Phoenix escort. The five conscripts move as a group with two Phoenix fighters on each flank. Kallan is moved separately. Not because Aeron ordered the separation — because Zira walked up to him before Aeron finished the comms exchange with Noelle and said, in the flat command voice she uses when the command voice is the point:"
 
     z "I will move the lifer. Directly. I want my hand on his elbow for the entire transit."
@@ -362,6 +422,19 @@ label a4_s11_mercy_call_costs_emp:
     athought "The sentence Selene said was 'I will carry it with you.' The sentence Zira is enacting is the same sentence in a body verb. I need to remember that these are not different sentences. They are one sentence performed by different mouths and hands."
 
     # ========== PHASE 6 — LYRA'S BENEDICTION ==========
+
+    # CAMERA: Lyra is voice-only on the overwatch comms. We do
+    #         not cut to her on the ridge. Her voice enters
+    #         the mix over the held corridor shot (or the
+    #         return to the ravine edge — whichever the
+    #         narrative places her voice against). Hold
+    #         whichever image she is speaking over. The
+    #         scene does not visualize her; she is the
+    #         acoustic benediction.
+    # SFX: Lyra's comms voice is clean, tactical-clean, but
+    #      carries a different weight than her operational
+    #      voice — mark the weight. No static on her line.
+    #      The clarity of her comms is the benediction.
 
     "Aeron stops at the top of the ravine slope before moving to the extract vehicles. Lyra's voice comes down from the ridge on the comms."
 
@@ -424,6 +497,27 @@ label a4_s11_mercy_call_costs_emp:
     athought "I am not going to hurry the shape."
 
     # ========== PHASE 8 — THE COMMAND POST AND THE NUMBER ==========
+
+    # CAMERA: transition to command post register 4. Aeron
+    #         alone at Noelle's board. 50mm locked. The 38%
+    #         is drawn LARGE on the board in red marker — not
+    #         projected. The camera opens on the number in
+    #         close-up and pulls back to reveal Aeron
+    #         standing at the board alone. The red is the
+    #         brightest small element in the otherwise dim
+    #         room. One work lamp. Everything else dim. Hold
+    #         the wide on Aeron at the board — do not push
+    #         in on him. The number is doing the work.
+    # FX/COMP: Noelle uses the projection for models and the
+    #          marker for things she wants to be physical
+    #          artifacts in the room. The 38% is physical.
+    #          That choice is deliberate and visible. The
+    #          red marker is the scene's only saturated
+    #          color in the final register.
+    # SFX: the one low note enters here per the opening
+    #      block. Held under the closing image. Fades on
+    #      the cut to black. The number stays in frame
+    #      until the fade completes.
 
     # scene bg_command_post_noelle_board_emp with dissolve
 

@@ -50,6 +50,22 @@ label a4_s11a_prayer_after_mercy_emp:
 
     # ========== PHASE 1 — THE DOOR ==========
 
+    # CAMERA: 85mm. Very tight focal length, shallow depth.
+    #         Opens low — off the floor, off Lyra's shoulder.
+    #         The camera approaches at floor level the way a
+    #         cat approaches a kneeling person: slowly, from
+    #         the side, without staging. Her profile and the
+    #         back of her hands in her lap are the first
+    #         visible shapes. One candle in soft focus at the
+    #         edge of the frame.
+    # LIGHTING: three candles, no overhead, no work lamp.
+    #           Warm low. The only light in the entire room.
+    #           The chapel-space has been cleared of function
+    #           tonight — it is candles and the back wall.
+    #           Her hands in the candlelight look like
+    #           instruments rather than tools. That
+    #           distinction is the scene's first observation.
+
     "He does not knock this time."
 
     "There is a protocol for knocking on Lyra's door and there is a protocol for not knocking, and the two protocols are not written anywhere and neither of them has ever been discussed. He knows which one tonight is. He arrives at the door and the door is already not-closed — pulled to, unlatched, the way she leaves it when she is in her private space and does not want to be interrupted except by the one person she is willing to be interrupted by."
@@ -75,6 +91,18 @@ label a4_s11a_prayer_after_mercy_emp:
     "He stays at the threshold for a count of three. Not to be polite — to enter the silence she is inside without breaking what it is holding. The rule is the same as it was at her desk in s04. The rule is: if you come in loudly, you did not come in at all."
 
     # ========== PHASE 2 — THE FLOOR ==========
+
+    # CAMERA: Aeron's arrival is not a cut. His shadow crosses
+    #         the edge of the frame first, then his weight
+    #         arrives on the floor beside her as a bodily
+    #         fact the camera registers by the micro-change
+    #         in her breath. He sits cross-legged, not
+    #         kneeling. The camera stays on her hands. His
+    #         entry is a presence, not a reveal.
+    # BLOCKING: his shoulder height is matched to hers by
+    #           the seated pose. They are at the same height
+    #           without either of them having negotiated it.
+    #           That matching is the scene's blocking thesis.
 
     "He crosses the room."
 
@@ -131,6 +159,17 @@ label a4_s11a_prayer_after_mercy_emp:
     "He lets her finish."
 
     # ========== PHASE 3 — THE NAMING ==========
+
+    # CAMERA: her eyes open for the Old Tongue word. The
+    #         camera catches the open — first face-beat of
+    #         the scene, tight profile single. She says the
+    #         word once and closes her eyes again. The camera
+    #         holds through the close. The eye-open-eye-close
+    #         is the naming event.
+    # FACE: Lyra — composed, present, not performing. The
+    #        Old Tongue word is given plainly, the way she
+    #        would give a diagnosis. Define once, do not
+    #        gloss twice per the voice baseline.
 
     "Her eyes are still closed. Her hands are still open in her lap. Her breath has not changed. She is not performing prayer, and she is not performing not-prayer. She is doing the thing she came into this room to do and she is letting him be in it with her."
 
@@ -252,6 +291,17 @@ label a4_s11a_prayer_after_mercy_emp:
 
     # ========== PHASE 6 — THE SHOULDER ==========
 
+    # CAMERA: the shoulder touch is the scene's FIRST hand
+    #         contact. Macro insert on the hand landing on
+    #         the shoulder. The held low cello note enters
+    #         the mix at the moment of contact. Do not cut
+    #         away during the touch. The hand stays where
+    #         it lands.
+    # SFX: the held low note per the opening block. One
+    #      cello, or something like a cello. Held so long
+    #      the listener forgets the note started. It does
+    #      not resolve until the scene ends.
+
     "He does not know what to say. He does not say anything."
 
     "She moves — a very small motion. Her right hand lifts from her lap. It does not go to his face. It does not go to his hands. It goes, at a cleric's measured pace, to his left shoulder, and settles there."
@@ -269,6 +319,20 @@ label a4_s11a_prayer_after_mercy_emp:
     lthought "I did not know s04 had a next sentence. I am learning it now."
 
     # ========== PHASE 7 — THE FOREHEAD ==========
+
+    # CAMERA: the forehead rest is the scene's ONLY two-shot.
+    #         Both profiles visible for the first time. Hold
+    #         the two-shot through the rest — do not push
+    #         closer. Candles at the edges of the frame. The
+    #         held note still going. This is the scene's
+    #         quietest image and its most composed one.
+    # FACE: both faces — the first time the camera sees
+    #        them in the same frame. Her eyes closed, his
+    #        eyes half-closed. The candlelight evens the
+    #        difference between them. This mirrors the
+    #        forehead rest in a4_s04, intentionally —
+    #        the two scenes are in conversation with each
+    #        other and the camera acknowledges it.
 
     "He turns his head toward her. Slowly."
 
@@ -301,6 +365,14 @@ label a4_s11a_prayer_after_mercy_emp:
     lthought "I am here to be present with him. That is the sacrament. That is the whole of it."
 
     # ========== PHASE 8 — THE CLOSE ==========
+
+    # CAMERA: final shot returns to the opening composition —
+    #         85mm low off her shoulder, her hands visible in
+    #         the candlelight. His weight is still beside her
+    #         in the frame at the edge. The held note resolves
+    #         on the fade. The candles are still lit when the
+    #         fade completes. The scene does not extinguish
+    #         anything it started.
 
     "He straightens. Not abruptly. The same way she straightened in s04 — the way a priest steps back from a rail. He leaves her hand on his shoulder until she is the one who takes it away, and she takes it away after, and the taking-away is also slow."
 

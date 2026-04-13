@@ -50,6 +50,23 @@ label a4_s11b_the_ones_he_lost_emp:
 
     # ========== PHASE 1 — THE LIST ==========
 
+    # CAMERA: 50mm, locked mid. The ops room at oh-two-
+    #         hundred. Wide enough to show Aeron at the
+    #         cipher table with the datapad propped against
+    #         a stack of reports, the coffee cup beside his
+    #         right hand, the far-end lamp someone forgot
+    #         to cap burning in the background. The frame
+    #         is already wide enough to hold two chairs
+    #         even though only one is occupied. This is
+    #         deliberate — the composition is waiting for
+    #         Selene without telling you it is waiting.
+    # LIGHTING: two lamps. One at the cipher table, one at
+    #           the far end. The feed screens muted, soft
+    #           grey wash across the far wall. Aeron's face
+    #           is UNDERLIT by the datapad — the one visual
+    #           rule of the scene. The underlight is the
+    #           rule and it does not break.
+
     "The ops room has one person in it."
 
     "The feed screens are muted. The lamp at the far end is on because whoever left it on forgot to cap it, and nobody has come back to fix the small carelessness. The cipher table is where he always ends up at this hour — not because the cipher is there, but because the table is the largest flat surface in a room otherwise full of consoles. When you need to read something long, you come to the flat surface."
@@ -79,6 +96,22 @@ label a4_s11b_the_ones_he_lost_emp:
     "He starts at the top."
 
     # ========== PHASE 2 — THE RULE OF THREE ==========
+
+    # CAMERA: alternate between the two locked angles — the
+    #         three-quarter on his face as he reads, and the
+    #         over-shoulder on the datapad screen as the
+    #         names scroll. The names MUST be legible in
+    #         the over-shoulder. Do not stylize them. The
+    #         camera is treating the names as documents and
+    #         the documents as subjects. The alternation
+    #         cadence is set by his breath — one angle, one
+    #         breath, then the other. Slow.
+    # SFX: the datapad haptic when he scrolls. Soft. A
+    #      small fleshly sound. When he starts saying names
+    #      aloud, the base ambient thins — not cut, just
+    #      distant. The names become the only thing the
+    #      microphone is listening for. That thinning is
+    #      the scene's moral acoustic.
 
     "Tessa taught him the rule four months ago, standing in front of her board in the clinic annex at the old base. She had her uncapped marker in her hand and a name was on her tongue, and she was waiting to write it, and she was saying it out loud, and she said it three times."
 
@@ -124,6 +157,12 @@ label a4_s11b_the_ones_he_lost_emp:
     "He scrolls."
 
     # ========== PHASE 3 — THE GALA ==========
+
+    # CAMERA: stay in the alternating coverage. Do not
+    #         introduce new angles for the Gala names. The
+    #         camera is not visualizing the Gala — it is
+    #         reading names from a list and the reading is
+    #         the scene. Let the names do the work.
 
     "The next entries come in a cluster. The gala casualties. Seven names on one night. Act I, late. The explosion that killed them was not something Aeron ordered and was not something he could have prevented by any ordinary calculus, but the seven names sit on his list anyway because he was the reason Echelon brought the payload into the room that night, and the brought-payload is what detonated, and the seven were in the room because they were in the room because the aristocracy of Solveil went to the gala because Solveil had galas."
 
@@ -241,6 +280,22 @@ label a4_s11b_the_ones_he_lost_emp:
 
     # ========== PHASE 6 — THE RULE BREAKS ==========
 
+    # CAMERA: push in on the three-quarter angle — first
+    #         camera movement of the scene. Slow, short
+    #         push. Land on a tight close when his hand
+    #         stops scrolling and the screen settles on
+    #         LIORA RYLAN. Hold the tight. The pause on
+    #         her entry is the longest single hold in the
+    #         scene. His hand does not move for the full
+    #         rule-of-three attempt and the collapse of it.
+    # FACE: Aeron — the surface composure cracks first in
+    #        the eyes, then in the mouth. The discipline of
+    #        the rule tries to hold and fails. Do not cut
+    #        away during the failure. The face is the beat.
+    # SFX: the thinned base ambient drops one more step.
+    #      Nothing in the room is audible except the
+    #      datapad under his hand and his breath.
+
     "He scrolls."
 
     "The next name on the list is the one he has been scrolling toward since he opened the file and has been pretending he was not."
@@ -357,6 +412,29 @@ label a4_s11b_the_ones_he_lost_emp:
     "The screen goes dark."
 
     # ========== PHASE 8 — SELENE ==========
+
+    # CAMERA: Selene enters without a cut. She becomes
+    #         present at the edge of the frame because the
+    #         frame has been wide enough the whole scene to
+    #         hold two chairs. She crosses the room without
+    #         speaking and takes the other chair — the chair
+    #         that has been in the frame the entire scene.
+    #         She does not move it. She sits in it where it
+    #         already is. The composition has become a
+    #         two-shot without a cut. The camera has not
+    #         re-framed. It has recognized.
+    # FACE: Selene — recognition, not concern. The opening
+    #        block calls out the distinction as load-
+    #        bearing. Her face is the face of a woman who
+    #        has been at a cipher table at oh-two-hundred
+    #        before and is not surprised to find somebody
+    #        else here. She reaches for his coffee. She
+    #        borrows it without asking because the borrowing
+    #        is the message.
+    # SFX: no music enters. Ever. The silence is the music
+    #      per the opening block. The scene fades on the
+    #      two-shot with the ops room's deep quiet
+    #      continuing.
 
     "He does not know how long he sits there after the screen goes dark. The lamp at the far end of the room has been on for longer than anyone tracks. The feed screens are still muted. The cipher table is the same cipher table it was when he came in, and the flat surface is still a flat surface, and the list is a file that has been closed but not archived."
 
