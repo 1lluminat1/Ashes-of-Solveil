@@ -117,6 +117,19 @@ label a4_s19_lyra_deepening_erotic_emp:
 
     # ========== PHASE 1 — AFTER THE VIGIL ==========
 
+    # CAMERA: 85mm long lens. The back of Lyra's head, her
+    #         Band-hand at her side — we see the wrist and
+    #         the BAND IS NOT ON IT. The other celebrants
+    #         have left. She is the last body in the hall.
+    #         One candle still burning on the low table.
+    #         Hold the long-lens shot on the back of her
+    #         shoulders for a long beat. The long lens
+    #         flattens the depth — she is the only
+    #         subject the camera can resolve.
+    # LIGHTING: one candle. The hall is otherwise dark.
+    #           The candle is her working light. Her
+    #           outline is read by its edge.
+
     "Zero one thirty-eight. The vigil for Davel Ostra has been over for twenty-three minutes."
 
     "Lyra led it."
@@ -161,6 +174,14 @@ label a4_s19_lyra_deepening_erotic_emp:
 
     # ========== PHASE 2 — THE CORRIDOR ==========
 
+    # CAMERA: 50mm. Aeron following three paces behind
+    #         her. Neither speaks. The camera tracks the
+    #         two of them from a side angle — the corridor
+    #         reads as the gap between her walk and his
+    #         walk, not as a space. The three paces are
+    #         deliberate on his part: she is not asking
+    #         him to walk beside her.
+
     "They walked through the secondary base at oh-one-forty in single file — her in front with the candle cupped in her left hand, him three paces behind."
 
     "The corridors were empty. The base was holding its breath. Somewhere three levels below them a generator was making its small mechanical sound and the sound was the only sound that was not their footfalls."
@@ -182,6 +203,19 @@ label a4_s19_lyra_deepening_erotic_emp:
     "She entered."
 
     # ========== PHASE 3 — THE BAND ON THE BENCH ==========
+
+    # CAMERA: same altar space as s11a. Three candles,
+    #         no overhead, back wall unlit receding into
+    #         warm darkness. The difference is the Band
+    #         on the bench BESIDE her instead of on her
+    #         wrist. The camera frames the Band and Lyra
+    #         in the same shot and lets the absence be
+    #         the subject. Insert on the Band. Hold. Then
+    #         widen to include her kneeling beside it.
+    # FX/COMP: the Band on the bench, not on her wrist,
+    #          is the scene's entire formal declaration.
+    #          Everything from s11a is the same. That one
+    #          change is the difference.
 
     # scene bg_lyra_private_altar_emp_night with dissolve
 
@@ -332,6 +366,21 @@ label a4_s19_lyra_deepening_erotic_emp:
     l "I have prayed to be allowed to be a woman and not only a vessel. Tonight is my answer."
 
     # ========== PHASE 6 — AERON'S LINE ==========
+
+    # CAMERA: MACRO on Aeron's hand placed on Lyra's
+    #         sternum AT HER DIRECTION. Callback to Tessa's
+    #         medic move in s12, but rewritten — this time
+    #         it is a priest's hand direction, not a
+    #         medic's. Hand flat. Palm against the
+    #         sternum bone. Under the palm: her heart,
+    #         her breath, the Old Tongue word she is
+    #         about to speak. Hold the macro for a LONG
+    #         count. This is the scene's most important
+    #         single image.
+    # SFX: her breath under his palm. The word she speaks
+    #      before the consent gate is an Old Tongue word
+    #      that has not been in the scene until now.
+    #      Define it once by context. Do not gloss.
 
     "He is holding very still."
 
@@ -634,6 +683,22 @@ label a4_s19_lyra_route_hold:
 label a4_s19_lyra_aftercare_intimate:
 
     # ========== PHASE 8 — AFTERCARE ==========
+
+    # CAMERA: pull back from the macro vocabulary. Wide
+    #         on the altar space. The Band is STILL on
+    #         the bench, not on her wrist. She does NOT
+    #         put it back on during the scene — she will
+    #         put it back on in the morning, as a chosen
+    #         sentence, not a cage. The camera frames
+    #         the Band and the two of them together in
+    #         the final composition. Hold. Fade on the
+    #         three-element composition: the Band, her,
+    #         him.
+    # FX/COMP: the Band stays on the bench through the
+    #          fade. Her wrist is bare at the cut to
+    #          black. This is the scene's closing
+    #          argument — devotion as shared burden and
+    #          not as compelled ritual.
 
     # CAMERA: 50mm. Lyra's face. The Band in soft focus at the edge
     # of frame, on the bench where it has been all night. The

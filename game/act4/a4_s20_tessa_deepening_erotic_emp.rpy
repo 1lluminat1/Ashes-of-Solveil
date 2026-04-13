@@ -73,6 +73,22 @@ label a4_s20_tessa_deepening_erotic_emp:
 
     # ========== PHASE 1 — THE DOORWAY (again) ==========
 
+    # CAMERA: the REVERSE of s06's voyeur frame. Aeron in
+    #         the doorway, the board ahead of him, Tessa
+    #         at the board. Same geometry, rotated 180
+    #         degrees — now we are looking past him at
+    #         her, where s06 looked past her at him. The
+    #         inversion is formal and load-bearing. Hold
+    #         the doorway composition.
+    # LIGHTING: medbay night-low. Clip lamp at the top
+    #           of the board (same as s06). One extra
+    #           practical lit in the treatment corner
+    #           tonight. The vigil-candle from the Davel
+    #           Ostra vigil is still burning in the corner
+    #           of the main medical area — its flicker
+    #           is the only moving light besides the
+    #           clip lamp.
+
     "The vigil ended at oh-one-twenty."
 
     "Aeron did not stay for the last of it. He stayed for the naming and he stayed for the silence that came after the naming and he stayed for the moment Selene put her hand on his shoulder and left hers there for exactly the length of breath she wanted him to take. Then he stood up and walked out of the vigil room because the vigil room had decided what it needed to do and had done it, and the shape of the correct grief after a vigil is not more vigil."
@@ -96,6 +112,16 @@ label a4_s20_tessa_deepening_erotic_emp:
     "He does not enter."
 
     # ========== PHASE 2 — THE CAPPING ==========
+
+    # CAMERA: where s06 held on the WRITING, this scene
+    #         holds on the CAPPING. Macro insert on her
+    #         hands recapping the marker. The cap is the
+    #         scene's first sentence. DAVEL OSTRA is
+    #         visible on the dead column behind her hands
+    #         — the ink still wet-looking, six minutes
+    #         old. Hold the insert on the cap. Then
+    #         widen slightly to include the name in the
+    #         frame with the capped marker.
 
     "Tessa is at the board."
 
@@ -233,6 +259,22 @@ label a4_s20_tessa_deepening_erotic_emp:
 
     # ========== PHASE 6 — THE DECLASSIFYING ==========
 
+    # CAMERA: 50mm tight on the jacket. Her hands on
+    #         the front closures. The motion has NO
+    #         HURRY in it. The camera watches the jacket
+    #         come off the shoulders and does NOT pan
+    #         away when the shoulders are bare of it. The
+    #         folding is the full length of a beat. The
+    #         bench is the next beat. The jacket on the
+    #         bench is a third beat. Three discrete
+    #         holds — coming off, folding, landing on
+    #         the bench.
+    # FX/COMP: the jacket is the scene's load-bearing
+    #          object. It is the thing that gets
+    #          removed, and the removal IS the
+    #          permission. The jacket on the bench
+    #          stays in frame for phases 3 through 7.
+
     "She does not step toward him yet."
 
     "She reaches up to her own shoulders. Her hands find the front closures of her medic jacket. The jacket is the Phoenix field-medic grey, the one with the red cross sewn over the left breast pocket, the one she has been wearing every time he has seen her for the last seventeen days. She is not used to taking it off in front of anyone who is not also a medic. She is not taking it off for the reason a woman takes off a jacket in the first scene of an intimate beat. She is taking it off because the jacket is the uniform, and the uniform is the thing she is putting down."
@@ -272,6 +314,15 @@ label a4_s20_tessa_deepening_erotic_emp:
     "He can see her not counting."
 
     # ========== PHASE 7 — THE FIRST TOUCH ==========
+
+    # CAMERA: shoulder-high two-shot, profiled. His hand
+    #         on her elbow. The camera has NO INTEREST
+    #         in her face yet — the hand on the elbow is
+    #         the subject. The frame reads this touch as
+    #         the GRIEF-HAND: neither medical nor
+    #         sensual. Then her hand on his. Then the
+    #         step into him. The step is ONE frame of
+    #         blocking, not two.
 
     "He moves first."
 
@@ -516,6 +567,23 @@ label a4_s20_path_held_only:
     jump a4_s20_aftercare
 
     # ========== PHASE 9 — AFTERCARE ==========
+
+    # CAMERA: wide. The board is in the back of the
+    #         frame. Both of them sit on the bench, the
+    #         jacket between them, a SECOND lamp on now
+    #         beside the first. The board's GHOST TEXT
+    #         from previous entries behind them is the
+    #         scene's closing composition. Hold the wide
+    #         for the last lines. Do NOT close in. Fade
+    #         on the wide.
+    # SFX: the one held low string enters under the
+    #      aftercare beat. Very low. Holds through the
+    #      wide. Fades on the cut to black.
+    # FX/COMP: the jacket on the bench between them is
+    #          not worn again in the scene. It is a
+    #          physical object that was removed and
+    #          stays removed. The scene does not
+    #          re-dress her.
 
 label a4_s20_aftercare:
 
