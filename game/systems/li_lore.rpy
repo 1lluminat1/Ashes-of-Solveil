@@ -136,7 +136,10 @@ init python:
             "dialogue": "lore_noelle_name_mechanic",
             "codex_id": "noelle_korr", "codex_stage": 2,
             "flag": "lore_noelle_name_mechanic",
-            "scenes": ["a3_s11", "a4_s13a", "a4_s18"],
+            # NOT available at a3_s11 (the scene where the mechanic fires —
+            # asking about it here would be premature and self-referential).
+            # Available after the event has had time to settle.
+            "scenes": ["a4_s13a", "a4_s18"],
         },
 
         # === SELENE (3 topics, EMP only) ===
@@ -145,14 +148,21 @@ init python:
             "dialogue": "lore_selene_kael",
             "codex_id": "kael_rylan", "codex_stage": 2,
             "flag": "lore_selene_kael",
-            "scenes": ["a3_s14", "a3_s16", "a4_s10", "a4_s12a"],
+            # NOT available at a3_s14/a3_s16 — the full Kael story
+            # (his last words, the nine-minute window) is delivered
+            # narratively in a4_s05 and a4_s10. Offering it earlier
+            # would spoil the Act 4 thesis delivery.
+            "scenes": ["a4_s10", "a4_s12a"],
         },
         "selene_nineteen_years": {
             "li": "Selene", "label": "the nineteen-year war",
             "dialogue": "lore_selene_nineteen_years",
             "codex_id": "phoenix_rebellion", "codex_stage": 2,
             "flag": "lore_selene_nineteen_years",
-            "scenes": ["a3_s06", "a3_s14", "a4_s10"],
+            # NOT available before a3_s20 (story keeper) — the dialogue
+            # mentions Liora's courier network by name, which is revealed
+            # in a3_s20. Restrict to after the reveal.
+            "scenes": ["a4_s10", "a4_s12a"],
         },
         "selene_shared_command": {
             "li": "Selene", "label": "shared command",

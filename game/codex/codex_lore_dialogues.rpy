@@ -153,13 +153,14 @@ label lore_noelle_compliance:
     return
 
 label lore_noelle_name_mechanic:
-    a "The Name Mechanic. What happened when I typed my name?"
-    n "The framework uses identity markers as anchoring variables. When a subject provides their real name voluntarily during an unmonitored interaction, the framework registers it as a trust signature."
-    n "My system was designed to capture those signatures automatically. When you typed 'Aeron' — your real name, not Glass, not Commander — the framework classified it as a category-zero trust event."
-    n "Category zero means: the subject has chosen to be vulnerable. The framework has no protocol for what to do with voluntary vulnerability."
-    a "So what did it do?"
-    n "It crashed. Not the system. Me. The framework did exactly what it was supposed to do. I was the one who couldn't handle the output."
-    n "The output was: this person trusts me. I had no unit for that."
+    a "The Name Mechanic. You mentioned a test in your framework — a name field?"
+    n "The framework uses identity markers as anchoring variables. There's a specific test: if a subject provides their real name voluntarily during an unmonitored interaction, the framework classifies it as a trust signature."
+    n "Category zero. It means: the subject has chosen to be vulnerable. The framework has no protocol for what to do with voluntary vulnerability."
+    a "What happens when someone triggers it?"
+    n "The framework processes the input correctly. The analyst does not."
+    n "The first time a subject gives you their real name — not a title, not a callsign, not a role — the framework says 'this person trusts you.' And then you have to decide what to do with the fact that your model works and your heart doesn't."
+    a "Did that happen with me?"
+    n "(quiet) That is a question I am not going to answer with words."
     return
 
 
