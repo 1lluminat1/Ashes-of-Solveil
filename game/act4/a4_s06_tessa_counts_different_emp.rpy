@@ -73,6 +73,22 @@ label a4_s06_tessa_counts_different_emp:
 
     # ========== PHASE 1 — THE DOORWAY ==========
 
+    # CAMERA: opens from Aeron's POV in the doorway. Shoulder-
+    #         high, held back. The frame is the width of the
+    #         door and the room beyond: Tessa at the board
+    #         with her back to us, the board filling the wall
+    #         behind her, Joran Tev still asleep on the cot
+    #         from a4_s05a in the middle distance. The camera
+    #         knows this is voyeur framing and respects the
+    #         distance by holding at the threshold — it does
+    #         not enter the room when he does not.
+    # LIGHTING: main medical night shift. Work lights at half-
+    #           power across the ceiling. Tessa's clip lamp on
+    #           the board is the brightest surface in the frame
+    #           and it is HER lamp, transported with the board
+    #           through the displacement. The lamp is the scene's
+    #           claim that this is her space, not the building's.
+
     "Aeron wakes on the medbay cot at oh-five-thirty. The chair beside him is empty. Tessa's jacket is not on the back of it — she took it with her when she stood up, sometime after the sun came in, because Tessa does not leave evidence of a vigil when the vigil is over."
 
     "He does not wake her out of his sleep by looking for her. He wakes into the realization that she is no longer in the chair and that this is the correct shape for the morning."
@@ -92,6 +108,22 @@ label a4_s06_tessa_counts_different_emp:
     "She is in the main medical area, two corridors over, where the board lives."
 
     # ========== PHASE 2 — THE BOARD ==========
+
+    # CAMERA: push from the doorway POV toward the board itself.
+    #         Not a full dolly — a measured push that lands at
+    #         medium-wide on the board with Tessa's silhouette
+    #         in the near foreground. LIORA RYLAN is visible
+    #         on both columns. The older entries from previous
+    #         bases form a ghost pattern on the cleanest areas
+    #         of the whiteboard surface — former names that
+    #         have been erased enough times that they remain
+    #         as residue. The camera lets the ghost be visible
+    #         without calling attention to it.
+    # FX/COMP: the ghost-pattern of erased former entries is
+    #          the scene's most important visual texture. Every
+    #          name on this board has been carried through two
+    #          bases. The residue is the inheritance Tessa's
+    #          hands have been making.
 
     "He stops in the doorway."
 
@@ -124,6 +156,26 @@ label a4_s06_tessa_counts_different_emp:
     "He does not enter. He stays at the door. He is not intruding on the ritual — he is bearing witness from the threshold because the threshold is the correct place to bear witness from and he has learned in the last twelve hours to pay attention to correct places."
 
     # ========== PHASE 3 — THE NAMES ==========
+
+    # CAMERA: two macro inserts in sequence. (1) The marker tip
+    #         lifting from the shelf below the board frame —
+    #         black fine-tip, her fingers finding the cap,
+    #         uncapping in one motion. (2) The letters forming
+    #         on the whiteboard: K, E, S, A — then M, A, R, I, N.
+    #         Then the second name. Hold each macro for the
+    #         duration of the name. The camera does not cut to
+    #         Tessa's face during the writing. Her face is not
+    #         earned yet. After both names are down and the
+    #         marker is recapped, cut to her face for the first
+    #         time in the scene — single, profile, no push.
+    # SFX: the squeak of the marker is the scene's primary
+    #      sound event. Clean, dry, deliberate. The uncap and
+    #      the recap are both audible. Between the two names,
+    #      her breath holds once. The mix catches the hold.
+    # FACE: Tessa — the composure is the decision-face. She has
+    #        decided to write the names in this register and
+    #        she is executing the decision. Not grieving. Not
+    #        performing. Working.
 
     "She uncaps the marker."
 
@@ -164,6 +216,20 @@ label a4_s06_tessa_counts_different_emp:
     "He takes the breath."
 
     # ========== PHASE 4 — THE THRESHOLD ==========
+
+    # CAMERA: reverse on Aeron at the doorway, still held back.
+    #         She turns. The turn is not for him — it is the
+    #         natural move of a woman who has finished with the
+    #         board and is now choosing whether to give him
+    #         permission to enter. The permission is granted by
+    #         her eyes. He crosses the threshold. The camera
+    #         tracks him entering on the reverse, then cuts to
+    #         the wide of both of them at the board.
+    # BLOCKING: they stand side by side at the board, equal
+    #           distance, neither in front of the other. The
+    #           composition is a side-by-side of two witnesses.
+    #           No physical contact. The space between their
+    #           shoulders is the scene's measured quantity.
 
     "Tessa speaks without turning."
 
@@ -253,6 +319,20 @@ label a4_s06_tessa_counts_different_emp:
 
     # ========== PHASE 6 — THE SILENT BORROWING ==========
 
+    # CAMERA: hold the side-by-side wide. Aeron is learning the
+    #         rule-of-three silently. His mouth moves over the
+    #         names without voicing them — the same silent
+    #         shaping Tessa did in a4_s05a when she ran the rule
+    #         on his sleeping body. The scene does not call
+    #         attention to the inversion; the camera catches
+    #         it as a natural act. Do not push in to confirm
+    #         that he is doing it. Trust the wide.
+    # FACE: Aeron — the borrowing. This is the first time in
+    #        the series he has used her rule, and he is using
+    #        it without asking permission because the permission
+    #        was already given when she taught it to him
+    #        without teaching him. The face is reverent.
+
     "He does not say the names aloud."
 
     "He says them in his head instead."
@@ -320,6 +400,19 @@ label a4_s06_tessa_counts_different_emp:
     "Aeron and Tessa do not move."
 
     # ========== PHASE 7 — THE CLOSE ==========
+
+    # CAMERA: the scene's final shot is the two-shot wide —
+    #         both of them in frame, the board filling the wall
+    #         behind them, LIORA RYLAN visible on both columns,
+    #         the two new names visible on the dead side. Hold.
+    #         The camera does not move. When the held string
+    #         fades in, the shot does not react. Fade on the
+    #         wide. The board is the last image.
+    # SFX: the one held low string enters here per the opening
+    #      block. Very low. Under everything else. It does not
+    #      resolve before the fade. The string is her rule
+    #      given a musical form for exactly long enough to
+    #      register that it has a musical form, and then gone.
 
     "Eventually Tessa reaches up."
 

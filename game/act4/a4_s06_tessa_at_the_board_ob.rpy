@@ -99,6 +99,24 @@ label a4_s06_tessa_at_the_board_ob:
 
     # ========== PHASE 1 -- ARRIVAL ==========
 
+    # CAMERA: 50mm locked. Open on the board header in extreme
+    #         close-up: Tessa's handwriting underneath, the
+    #         adhesive-strip overwrite on top. Rack focus
+    #         between the two layers of ink — pull from the
+    #         original THE LIVING to the overlay OPERATIONAL
+    #         and back. The rack is the scene's opening
+    #         sentence. The camera does not add any word to it.
+    # LIGHTING: hostile temperature. Overhead strips sodium-
+    #           cold at full. The amber clip lamp on the board's
+    #           top edge is fighting and losing. The two
+    #           temperatures are not in harmony — they are in
+    #           conflict, and the composition reads the conflict
+    #           as a grammar event: the institutional light is
+    #           winning.
+    # SFX: new-wing HVAC hum. Cleaner than the old war room.
+    #      More expensive. This is the hum of a budget line
+    #      item, and the ambient reads that way.
+
     "0600. The new wing runs warm because the HVAC is still commissioning. It will run cold inside a week. Tessa has been told this twice, by two different engineers, and neither was wrong."
 
     "She enters through the staff door. Badge tap. Seal breath. The overhead strips come up in sequence as the occupancy sensor catches her."
@@ -114,6 +132,19 @@ label a4_s06_tessa_at_the_board_ob:
     "She looks at the board."
 
     # ========== PHASE 2 -- THE OVERWRITE ==========
+
+    # CAMERA: pull back from the rack to reveal Tessa standing
+    #         six feet from the board. She has not moved since
+    #         entering the wing. Full figure at medium distance.
+    #         The board fills the frame behind her. The overwrite
+    #         on the header is visible at the edge of the board
+    #         in the same frame as her face. Do not cut. Hold
+    #         the composition for the calculation that follows.
+    # FACE: Tessa — the calculation face. Not grief. Not anger.
+    #        The particular stillness of a woman running the
+    #        math on three bad options in real time. The face
+    #        is doing the work the scene names in the phases
+    #        that follow.
 
     "The board has survived the displacement. Both columns. Her handwriting intact from the war room. Every name she carried over."
 
@@ -219,6 +250,18 @@ label a4_s06_tessa_at_the_board_ob:
 
     # ========== PHASE 6 -- THE LAMP ==========
 
+    # CAMERA: track her approach to the board for the first
+    #         movement of the scene. 50mm lock releases for
+    #         exactly the steps it takes her to reach the
+    #         board, then locks again when she arrives. She
+    #         reaches up. Her hand finds the clip lamp. The
+    #         camera cuts to a tight insert on her hand at
+    #         the lamp switch.
+    # SFX: the lamp click is the scene's most important single
+    #      sound cue. One click. Dry, mechanical. The amber
+    #      glow on the board surface drops out in the same
+    #      frame as the click. Mark the drop in the mix.
+
     tthought "The clip lamp is mine. I brought it from the war room. It is my lamp, not the building's. It runs on the battery pack I keep charged in my coat."
 
     tthought "If I take it, I am taking my care out of this room."
@@ -234,6 +277,19 @@ label a4_s06_tessa_at_the_board_ob:
     tthought "I will leave the lamp where it is and I will walk out of this wing and I will see what I am when I wake up."
 
     # ========== PHASE 7 -- THE ACT ==========
+
+    # CAMERA: wide on the wing. Tessa walks out. The board is
+    #         still in frame at the wall. The camera does not
+    #         follow her — the door seal closes in the
+    #         background as she exits frame-left. The wing is
+    #         now empty with the board still in it. Hold the
+    #         wide on the empty room.
+    # LIGHTING: the amber clip lamp is off. The overhead
+    #           institutional white is the only light. The
+    #           board is administratively correct. The warmth
+    #           is gone. This is the scene's core visual
+    #           event: the board has survived the displacement
+    #           and the survival has cost it its temperature.
 
     "She crosses the six feet. The approach takes longer than it should. Sealed floor under her boots. The overhead strips catch her shadow and throw it small onto the board."
 
@@ -264,6 +320,18 @@ label a4_s06_tessa_at_the_board_ob:
     "The board is still bolted to the wall."
 
     # ========== PHASE 8 -- AERON ARRIVES ==========
+
+    # CAMERA: hold the wide from Phase 7. Aeron walks into the
+    #         frame from the left — the camera does not track
+    #         to him, he walks into an already-composed shot.
+    #         His boots are heavier than Tessa's. He crosses
+    #         to the board. Stops at the same six-foot mark
+    #         she stopped at, then moves closer. Reads both
+    #         columns. The camera holds the wide for the
+    #         reading.
+    # FACE: Aeron — he does not know Tessa has just been here.
+    #        The composition knows and he does not. That
+    #        information asymmetry is the scene's cruelty.
 
     "Thirty seconds of silence. The HVAC cycles. Bed three shifts again."
 
@@ -337,6 +405,22 @@ label a4_s06_tessa_at_the_board_ob:
 
     # ========== PHASE 9 -- THE ERASURE ==========
 
+    # CAMERA: tight insert on his hand at the board. His sleeve
+    #         wiping a name from the left column. No cap click.
+    #         No marker sound. The erasure is almost silent —
+    #         only the faint drag of fabric on whiteboard. Hold
+    #         the insert through the full wipe. When his hand
+    #         lowers, the name is gone but the ghost residue of
+    #         the ink is still visible on the sleeve. The
+    #         camera catches the sleeve before the hand leaves
+    #         frame.
+    # SFX: the wipe is the quietest erasure the scene could
+    #      produce. It should be barely louder than the HVAC.
+    #      The quietness is the horror — a name removed
+    #      without ceremony, without ritual, without the
+    #      marker or the cap or the rule of three. The
+    #      administrative erasure.
+
     "He looks at the right column. LIORA RYLAN is not there."
 
     "He looks at the left column. LIORA RYLAN is there. In Tessa's handwriting. Careful letters. The same pressure she uses on every name."
@@ -368,6 +452,18 @@ label a4_s06_tessa_at_the_board_ob:
     athought "I am noting that too."
 
     # ========== PHASE 10 -- EXIT ==========
+
+    # CAMERA: the scene's final shot is the board alone. Aeron
+    #         has walked out of frame. The institutional lights
+    #         are holding. The amber clip lamp is still off.
+    #         The board has one fewer name on the left column
+    #         and the ghost of the wiped letters is barely
+    #         visible in the residue. Hold the wide on the
+    #         board. This is the scene's closing image: the
+    #         board after two visits, neither of them Tessa's
+    #         ritual hand, neither of them in her light.
+    # LIGHTING: pure institutional white. No warmth anywhere
+    #           in the frame. The budget line item has won.
 
     "He lowers his hand. He does not look at the right column again. He does not look at Selene's name. He does not look at the overwritten header."
 

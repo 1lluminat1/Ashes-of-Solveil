@@ -68,6 +68,26 @@ label a4_s05_zira_cannot_leave_ob:
 
     # ========== PHASE 1 -- THE BAG ==========
 
+    # CAMERA: 40mm locked wide. Three-quarter on Zira from her
+    #         left. The go-bag in the foreground has equal
+    #         compositional weight to her face in mid-ground.
+    #         No handheld. Do not move. The composition is the
+    #         argument: she is holding still and the camera is
+    #         holding still and the bag is holding still, and
+    #         the stillness is the inspection the entire scene
+    #         is about.
+    # LIGHTING: one halogen overhead directly on the bench. Warm-
+    #           white. Everything else in the workshop is dim.
+    #           The bag sits inside the halogen circle. The
+    #           corner where she will eventually set it down is
+    #           outside the circle. Orange standby glow from the
+    #           soldering station at the far edge of the frame.
+    #           That orange is the scene's only other light, and
+    #           it will matter at the end.
+    # SFX: workshop ambient is the generator hum through the wall
+    #      and the soldering station's standby whine. No music
+    #      in the scene. Ever.
+
     "The bag has been on the bench for fifty-seven minutes. She knows because she checked the chrono once at the start, to see how long she had been sitting there, and then decided not to check it again. She has checked it twice anyway. It has been fifty-seven minutes."
 
     "She is staring at the bag."
@@ -250,6 +270,15 @@ label a4_s05_zira_cannot_leave_ob:
 
     # ========== PHASE 8 -- THE BAG, INSPECTED ==========
 
+    # CAMERA: tighten from the established wide to a tight on
+    #         her hands. First movement of the scene — her hands
+    #         have been still for an hour and the tight catches
+    #         the moment they decide to move. Hold the tight on
+    #         her hands for the rest of the inspection. Her face
+    #         does not need to be in the frame for the six
+    #         phases of truth-accounting. Her hands are carrying
+    #         the scene.
+
     "She looks at the bag again. The bag is now an object she understands. She packed it. She knows why she packed it. The packing was honest work -- her hands were telling her something, and the something has now reached the front of her mind."
 
     zthought "The bag is not for leaving."
@@ -265,6 +294,22 @@ label a4_s05_zira_cannot_leave_ob:
     zthought "Now. Empty the bag."
 
     # ========== PHASE 9 -- THE REMOVAL ==========
+
+    # CAMERA: locked top-down insert on the bench. Clinical
+    #         framing — the same angle the Phoenix medics use
+    #         when they inventory field kits. Each item she
+    #         removes comes into frame from below, lands on
+    #         the bench surface, and stays in frame until the
+    #         next item lands. The inventory accumulates as a
+    #         composition. The camera does not editorialize.
+    #         Do not rack, do not push, do not cut away. The
+    #         top-down is the grammar of the inspection and
+    #         the scene trusts the grammar.
+    # SFX: each item makes its own small contact sound as it
+    #      lands. The waxed paper rustles. Metal clicks
+    #      against the bench. Fabric settles. The sounds are
+    #      the only dialogue in the scene; give them each
+    #      their own moment in the mix.
 
     "She pulls items out one by one. She does not move fast. Each item goes back to its place on the shelf or in the wall safe behind her."
 
@@ -283,6 +328,24 @@ label a4_s05_zira_cannot_leave_ob:
     "When the bag is almost empty, her hand finds the last object at the bottom -- a flat packet of waxed paper she had tucked in before she closed the zipper an hour ago. She did not put it there deliberately. Or she did, and the deliberation was the kind you only recognize afterward."
 
     # ========== PHASE 10 -- THE FLOWER ==========
+
+    # CAMERA: same top-down locked angle. The pressed-flower
+    #         packet lands in frame like every other item. Do
+    #         NOT push in on it. Do NOT rack focus. The scene's
+    #         refusal to editorialize is the reason the flower
+    #         lands at all. It is inventoried with the same
+    #         neutral framing as the rations and the spare
+    #         soldering tip, and that refusal is the beat.
+    # SFX: the single metallic click as she sets the packet
+    #      down. The waxed sheets inside the packet make no
+    #      sound because she does not open them. The absence
+    #      of the open-the-packet sound is the absence of the
+    #      explanation.
+    # FACE: still out of frame. She does not look up. The
+    #        camera does not look for her. The first time in
+    #        the series this flower has appeared on camera
+    #        and it arrives in a top-down inventory shot with
+    #        no one's face in the frame. Trust that choice.
 
     "She lifts it out. Two squares of waxed paper, pressed together, a small square of something flat between them. She sets the packet on the bench."
 
@@ -310,6 +373,22 @@ label a4_s05_zira_cannot_leave_ob:
 
     # ========== PHASE 11 -- THE BAG IN THE CORNER ==========
 
+    # CAMERA: pull back from the top-down insert to a medium
+    #         single on Zira for the first time since Phase 1.
+    #         She stands. The standing is small — a work
+    #         movement, not a dramatic one. The camera follows
+    #         her to the corner with the bag. When the bag
+    #         crosses from inside the halogen circle to outside
+    #         it, the lighting on the canvas changes visibly.
+    #         The bag dims. The bag is no longer in the frame
+    #         that gets the light.
+    # LIGHTING: the halogen is doing all the work. When the
+    #           bag leaves the halogen circle, the bag goes
+    #           from warm-white to nearly black — the orange
+    #           standby from the soldering station barely
+    #           reaches it. That dimming is the scene's one
+    #           lighting event. Mark it.
+
     "She stands. The stool creaks once. Her legs are stiff from the hour of stillness and she waits a beat for them to remember themselves."
 
     "She picks up the bag. It is lighter now -- almost empty. The Ghostline logo inside the flap is visible at the angle she is holding it."
@@ -329,6 +408,22 @@ label a4_s05_zira_cannot_leave_ob:
     "She looks at the bag for one beat in its new position. Then she turns back to the bench."
 
     # ========== PHASE 12 -- THE REPAIR ==========
+
+    # CAMERA: back to the tight on her hands. New composition:
+    #         the small tool she is repairing, her hands around
+    #         it, the bench surface, and the pressed-flower
+    #         packet in the upper-right of the frame. The
+    #         flower is not the subject of the shot. It is the
+    #         object that is in the room with her while she
+    #         does something else. That geometry is the closest
+    #         the scene gets to a statement.
+    # SFX: the small clean sounds of the repair — a screw
+    #      backing out, oil on cloth, the tip of a pick
+    #      against metal. These sounds are her vocabulary.
+    #      Zira does not perform her feelings; she catalogues
+    #      them the way she catalogues wire. The audio mix
+    #      honors that by making the tool sounds the scene's
+    #      primary audio event.
 
     "The bench has a small tool on it. She put it there yesterday. It is a precision driver with a stripped tip -- the kind of micro-repair she usually does last thing before she calls it a night, because the focus it requires is the kind of focus that sets her down for sleep."
 
@@ -393,6 +488,20 @@ label a4_s05_zira_cannot_leave_ob:
     "She returns to the driver. The work continues."
 
     # ========== PHASE 15 -- HOLD ==========
+
+    # CAMERA: the scene's final shot is the tight on her hands
+    #         at the repair, held steady. Do not move. Do not
+    #         push. Do not cut away to the bag in the corner.
+    #         Do not cut to her face. The hands — steady, at
+    #         work — are the whole of the scene's resolution,
+    #         and the resolution is that she did not leave.
+    #         Hold the shot for a full five seconds past what
+    #         feels narratively necessary. Then fade, slow.
+    # LIGHTING: unchanged. The halogen. The bench. The bag
+    #           dim in the corner at the edge of the frame.
+    #           The orange soldering standby still holding.
+    #           Nothing about the light acknowledges what
+    #           just happened.
 
     "The halogen hums. The generator hums. The night shift in ops is running its rotation somewhere three corridors away. The workshop is at equilibrium."
 

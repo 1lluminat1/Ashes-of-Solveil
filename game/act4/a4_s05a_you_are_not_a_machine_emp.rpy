@@ -55,6 +55,23 @@ label a4_s05a_you_are_not_a_machine_emp:
 
     # ========== PHASE 1 — THE CORRIDOR ==========
 
+    # CAMERA: handheld tight on Aeron walking. The shot has been
+    #         with him since Phase 1 — or implied to have been,
+    #         the camera is already at his walking pace. When
+    #         Tessa steps out of the medbay doorway, the camera
+    #         does NOT cut to her arrival. It finds her because
+    #         she has stopped moving and her stillness pulls
+    #         focus from the moving background. Stay in the
+    #         handheld for the entire corridor argument. Over-
+    #         the-shoulder bias when she speaks, reverse on him
+    #         when he answers. When her hand lands on his
+    #         forearm, rack focus to the hand. Hold the rack.
+    # FACE: Aeron — visible tremor in the left hand before Tessa
+    #        arrives. The face is degraded in a way the opening
+    #        block names: dissociation of someone who has not
+    #        stopped moving because stopping is the worst option.
+    #        The camera reads the tremor first, the face second.
+
     "Thirty-eight hours."
 
     "He has not counted them, because counting them would make him think about stopping, and thinking about stopping is the thing he is not doing tonight."
@@ -131,6 +148,26 @@ label a4_s05a_you_are_not_a_machine_emp:
 
     # ========== PHASE 2 — THE SCRAPE HE DID NOT NOTICE ==========
 
+    # CAMERA: LOCATION SHIFT — corridor to medbay treatment bench.
+    #         50mm, still. The handheld is gone. Tessa's hands
+    #         are the subject of the new composition; they
+    #         enter each frame first and Aeron enters second as
+    #         the object of their care. Cover the cleaning of
+    #         the scrape in inserts — the three-inch dirty
+    #         abrasion he has not noticed, the antiseptic, the
+    #         fresh bandage, the eyes-check, the pulse, the BP
+    #         reading at 9 points up. The medbay exists around
+    #         her hands. When the scene widens, it widens to
+    #         include her face, never his.
+    # LIGHTING: medbay treatment station. Overhead surgical
+    #           strip directly above the exam table at 5600K,
+    #           hard. Amber practicals in the periphery at
+    #           2800K. The two temperatures are present at the
+    #           same time and Tessa moves between them as she
+    #           works. The scene will get dimmer as it goes on.
+
+
+
     # scene bg_medbay_night_low_light with dissolve
     # play ambient "sfx/ambient/medbay_quiet_night.ogg" fadein 1.5
 
@@ -195,6 +232,20 @@ label a4_s05a_you_are_not_a_machine_emp:
     "She is very quiet."
 
     # ========== PHASE 3 — THE NAMING ==========
+
+    # CAMERA: the scene's one close-up on Aeron's face. Tight
+    #         single, held for the "using endurance as self-harm"
+    #         line and his answer. The first time in the scene
+    #         the camera leaves Tessa's hands. The close is
+    #         earned by her diagnosis — she has named the thing
+    #         and the frame catches him receiving the name.
+    #         After his one line of truth ("I cannot stop
+    #         moving. If I stop, I think about her"), cut back
+    #         to her hands for the rest of the phase.
+    # FACE: Aeron — the dissociation cracks. Not dramatically.
+    #        The jaw softens by a degree. The eyes find her
+    #        eyes for the first time in the scene. The moment
+    #        of surrender is in the eye-find, not in the words.
 
     "She pulls the glove off her right hand. Not both — one. The left glove stays on because the left glove is still holding the cuff."
 
@@ -272,6 +323,23 @@ label a4_s05a_you_are_not_a_machine_emp:
 
     # ========== PHASE 4 — THE COT ==========
 
+    # CAMERA: wide. Third visual register of the scene. Two-shot
+    #         of Aeron lying on the cot and Tessa in the chair
+    #         beside him. The medbay is quiet around them. Do
+    #         not move the camera for the duration of the
+    #         settling beat. Hold the wide as the scene narrows
+    #         its own sound — the ventilation, the generator,
+    #         the IV tick at the edge of hearing, his breath
+    #         slowing. The vitals monitor is visible in the
+    #         frame but not the subject of the frame. Let the
+    #         heart rate number settle across the held shot.
+    # LIGHTING: medbay has dimmed. Only the amber practicals
+    #           remain. The surgical strip is off. The dimmer
+    #           the scene gets, the steadier Tessa becomes
+    #           (per opening block). The amber-only framing
+    #           signals that she is now operating under her
+    #           own light, not the medbay's.
+
     "She bandages the scrape. Three turns of gauze. Tape. She does not narrate the dressing this time — the gesture is so familiar now it is almost a private language."
 
     "She stands up."
@@ -339,6 +407,25 @@ label a4_s05a_you_are_not_a_machine_emp:
     "He is asleep before his next breath finishes."
 
     # ========== PHASE 5 — THE THREE TIMES ==========
+
+    # CAMERA: slow push from the wide two-shot to a medium
+    #         single on Tessa. She is applying her mother's
+    #         rule (from a2_int_tessa_torins_name) silently to
+    #         his sleeping body — the first callback to the
+    #         rule in Act 4 and the rule's first application
+    #         to a living person. The camera has to be close
+    #         enough to see her mouth form the three iterations
+    #         of his name without voicing them. She does not
+    #         say them aloud. Her mouth does. The silent
+    #         shaping is the scene's moral center.
+    # FACE: Tessa — steadier than she has been anywhere in the
+    #        series. The rule is doing its work and she is
+    #        letting it. No tears. No visible strain. The face
+    #        of a woman running an inherited discipline on
+    #        someone she has decided to keep.
+    # SFX: the held low string from the opening block enters
+    #      here. Barely there. Under her mouth. Fade out on
+    #      the cut to black.
 
     "Tessa watches him for a long time."
 
