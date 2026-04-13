@@ -89,6 +89,32 @@ label a4_s16_tessa_fracture_point_ob:
 
     # ========== PHASE 1 -- ENTRY ==========
 
+    # CAMERA: 50mm locked. OB economic register. Open on
+    #         the ops table in close-up — empty surface,
+    #         tactical displays cycling in the background,
+    #         blue light on dull metal. Tessa's hand enters
+    #         the frame FIRST. She sets the OPERATIONAL
+    #         header strip down on the table. Hold the
+    #         macro on the strip of adhesive plastic —
+    #         and keep it in the frame for the REST of
+    #         the scene. This is the insert that does not
+    #         cut away.
+    # LIGHTING: ops room after hours. Blue-cold. Nyra's
+    #           display wall cycling patrol grids in slow
+    #           loop. One desk lamp at Aeron's station.
+    #           The adhesive strip catches the blue — the
+    #           word OPERATIONAL reads cold regardless of
+    #           angle. No warm practicals. No amber. The
+    #           room has been scrubbed of the old base's
+    #           warmth the same way the medwing was built
+    #           to be (mirror of a4_s06 OB).
+    # FX/COMP: the underside of the strip is still tacky
+    #          from the board. Fragments of THE LIVING in
+    #          Tessa's handwriting are visible on the back
+    #          when the strip is lifted — pulled off with
+    #          the overwrite. Catch the fragments in the
+    #          macro if the angle allows.
+
     "0247. The ops room runs cool at this hour. The display wall cycles patrol grids in a slow blue loop. Aeron is at his station, working Stelker's rotation conflict into a formatted intake reconciliation."
 
     "The main door seals."
@@ -128,6 +154,14 @@ label a4_s16_tessa_fracture_point_ob:
     athought "The honest answer has two parts."
 
     # ========== PHASE 3 -- THE BRANCH ==========
+
+    # CAMERA: the ONLY cut to two-shot in the scene. This
+    #         is the question beat. Tessa standing at the
+    #         short end of the table, Aeron seated at his
+    #         station. The header strip is between them in
+    #         the lower third of the frame. Hold the
+    #         two-shot through the question. Do not push.
+    #         Do not cut to singles during her line.
 
     if flag("tessa_thread_open"):
         jump a4_s16_tessa_fracture_point_ob_stayed
@@ -266,6 +300,13 @@ label a4_s16_tessa_fracture_point_ob_stayed:
 
     # ========== PHASE 9A -- THE EXIT ==========
 
+    # CAMERA: return to the macro insert on the adhesive
+    #         strip. Tessa's exit is audible off-frame —
+    #         her boots, the door seal, the HVAC
+    #         re-balancing — but the camera does not
+    #         track her. It stays on the strip. The strip
+    #         is the whole of the scene's final sentence.
+
     "She does not take the strip back. The strip stays where she put it."
 
     "She does not touch his hand. She does not reach across the table. She does not give him the benefit of a closing gesture."
@@ -287,6 +328,14 @@ label a4_s16_tessa_fracture_point_ob_stayed:
     athought "Decided is what I used to be."
 
     # ========== PHASE 10A -- THE HEADER STAYS ==========
+
+    # CAMERA: hold the macro on the strip. Aeron's hand
+    #         is visible in the frame near it — he does
+    #         NOT move it. He does not wipe it. He does
+    #         not reach for it. The hand and the strip
+    #         in the same frame, neither touching the
+    #         other, is the scene's closing image. Fade
+    #         on the strip, not on his face.
 
     "Aeron does not move the strip of plastic. He does not pick it up. He does not fold it. He does not slide it into a drawer. He does not wipe the tacky underside off the table."
 
@@ -496,6 +545,14 @@ label a4_s16_tessa_fracture_point_ob_withdrew:
     athought "I am noting it the way she just noted that I did not look up when she walked in. The same kind of note. The kind a medic keeps in a folder in her coat."
 
     # ========== PHASE 10B -- THE HEADER STAYS ==========
+
+    # CAMERA: same closing treatment as the A branch.
+    #         Hold the macro on the strip. Aeron's hand
+    #         in frame, not touching the strip. Fade on
+    #         the strip. The strip is the scene's final
+    #         image regardless of which branch the scene
+    #         took. The permanence of the header is the
+    #         closing argument both branches are making.
 
     "Aeron does not move the strip of plastic. He does not pick it up. He does not fold it. He does not slide it into a drawer."
 

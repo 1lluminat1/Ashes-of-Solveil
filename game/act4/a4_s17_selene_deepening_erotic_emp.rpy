@@ -95,6 +95,18 @@ label a4_s17_selene_deepening_erotic_emp:
 
     # ========== PHASE 1 — THE CORRIDOR ==========
 
+    # CAMERA: 40mm, Aeron's walking pace. The camera is
+    #         LOWER than s12a by about two inches — as if
+    #         the architecture itself is sitting down
+    #         tonight. The corridor is empty. He is the
+    #         only body in it. Hold the low walking pace
+    #         through the approach. The lower camera
+    #         reads the weight he is carrying without
+    #         naming it.
+    # SFX: deep-hour base ambient. The long-cycle vent.
+    #      His bootfall on the corridor plates. Nothing
+    #      else.
+
     "Twenty-three forty. Four hours since the board took Davel Ostra's name off the rotation and put it in the column Tessa keeps in graphite."
 
     "Rhea Vestin's first cut. The runner who did not make it back from the canal rendezvous. A twenty-two-year-old with a sister in the secondary base kitchen who found out at nineteen-fifteen and has not stopped working since, because there is nowhere else to put her hands."
@@ -130,6 +142,19 @@ label a4_s17_selene_deepening_erotic_emp:
     "The door opens before he knocks."
 
     # ========== PHASE 2 — THE OPENING ==========
+
+    # CAMERA: 50mm. She opens the door before he knocks.
+    #         The door opens on the quiet click of a
+    #         latch that was not holding. The camera
+    #         catches the door opening from his side —
+    #         the light from the room spilling onto the
+    #         corridor plates at his feet. Hold on her
+    #         silhouette in the doorway for a beat before
+    #         the composition settles into interior.
+    # FX/COMP: the second small lamp by the bed is
+    #          visible behind her. TWO practicals now,
+    #          not one. She has prepared the light. She
+    #          has not prepared words.
 
     "It does not swing. It opens by a hand on the inside of it, at a speed that is not hurried and is not hesitant, and the hand is Selene's."
 
@@ -267,6 +292,19 @@ label a4_s17_selene_deepening_erotic_emp:
 
     # ========== PHASE 4 — THE LETTER, TURNED ==========
 
+    # CAMERA: insert on the letter as she turns it. It
+    #         has been face-up since s12a — reverse-ink
+    #         visible through the paper. She turns it
+    #         face-down tonight. Hold the insert on the
+    #         turn. This is the scene's first substantial
+    #         gesture and it is a gesture of permission:
+    #         the letter is no longer the subject of the
+    #         room. Something else is allowed to be.
+    # FX/COMP: the letter remains in the frame after the
+    #          turn, on the desk at the edge. It does
+    #          not leave the scene. It is simply no
+    #          longer face-up.
+
     "She takes her hand off his sternum."
 
     "She turns — not away, sideways — and walks the three paces to the desk."
@@ -315,6 +353,14 @@ label a4_s17_selene_deepening_erotic_emp:
 
     # ========== PHASE 5 — THE JAW ==========
 
+    # CAMERA: this is where the camera finally pushes.
+    #         Her hand moves to his jaw. The camera
+    #         pushes with the movement and lands at a
+    #         close two-shot, her face in profile, his
+    #         in three-quarter. Hold the close. The jaw-
+    #         touch is the scene's first contact and it
+    #         is the scene's consent preamble.
+
     "She comes back across the three paces of floor."
 
     "She is slower than she was going toward the desk. Not reluctant — the slowness is the slowness of a person who is aware that each step is a step she is choosing, and she wants to be inside the choosing."
@@ -352,6 +398,20 @@ label a4_s17_selene_deepening_erotic_emp:
     sthought "He is a man. The student-teacher framing has been a frame. The frame served its purpose. The frame is on the desk, next to the letter, face-down."
 
     # ========== PHASE 6 — THE FOREHEAD ==========
+
+    # CAMERA: MACRO on his forehead against her
+    #         collarbone. WE LOSE THE ROOM. The room is
+    #         gone. There is only the pulse at the base
+    #         of her throat and the angle of his head
+    #         against her. The camera stays there for a
+    #         LONG COUNT. Nothing else moves. Hold the
+    #         macro longer than it feels justified. The
+    #         hold IS the scene. This is the scene's
+    #         most important single image.
+    # SFX: everything drops to her pulse and his breath.
+    #      The base vent fades under. The corridor
+    #      ambient is gone. Pulse. Breath. That is the
+    #      whole audio during the held beat.
 
     "She moves her hand from his jaw to the side of his head, at the temple, fingers in his hair."
 
@@ -650,6 +710,18 @@ label a4_s17_selene_route_sit:
 label a4_s17_selene_aftercare_intimate:
 
     # ========== PHASE 8a — AFTERCARE (INTIMATE VARIANT) ==========
+
+    # CAMERA: pull back from the macro vocabulary. 35mm
+    #         two-shot, loose. They are in her bed now,
+    #         or against it, or near it — whichever the
+    #         narrative has placed them. The second
+    #         practical lamp is closer to them now. The
+    #         letter is still on the desk, face-down,
+    #         at the edge of the frame. Hold the wide.
+    #         No music enters until after this phase
+    #         begins — and when it does, it is the
+    #         lowest register string the Act 4 score
+    #         has used yet. Barely audible. Holding.
 
     # CAMERA: 50mm. Hold on Selene's face against the pillow, Aeron's
     # shoulder at the edge of frame. Not a two-shot for the first beat —

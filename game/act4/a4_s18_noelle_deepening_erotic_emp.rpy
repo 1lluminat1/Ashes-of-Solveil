@@ -104,6 +104,15 @@ label a4_s18_noelle_deepening_erotic_emp:
 
     # ========== PHASE 1 — THE SEARCH ==========
 
+    # CAMERA: 35mm walking pace — deliberate, not hurried.
+    #         He has already checked her workspace, her
+    #         quarters, the ops wing terminal she uses at
+    #         odd hours. The camera tracks his head-turns
+    #         at each corridor intersection — the shape
+    #         of a man running a search pattern he is not
+    #         enjoying running. Hold the tracking shot
+    #         for the duration of the search.
+
     "Zero one twenty-eight. Six hours since Rhea Vestin's first cut. Vigil finished at oh-one-fifteen. Most of the base has gone to whatever version of sleep the base is doing tonight. The ones who are not asleep are the ones who were closest to Davel Ostra."
 
     "Aeron is not close to Davel Ostra."
@@ -141,6 +150,26 @@ label a4_s18_noelle_deepening_erotic_emp:
     "And he sees her."
 
     # ========== PHASE 2 — THE WINDOW ==========
+
+    # CAMERA: 50mm. A stretch of the base neither has
+    #         reason to be in. The slit window in the
+    #         outer wall — 18 inches tall, 3 inches wide —
+    #         is the only window in this hallway. Noelle
+    #         is standing in front of it, forehead almost
+    #         touching the plate glass. The camera finds
+    #         her from the FAR END of the corridor and
+    #         HOLDS there. The distance from the camera
+    #         is the scene's first sentence — she is
+    #         small in the frame, the corridor is long,
+    #         the window is a thin bright vertical beside
+    #         her.
+    # LIGHTING: two overhead strips at half, spaced far
+    #           apart. The slit window is letting in
+    #           night-city glow — the only warm-ish
+    #           element (city sodium). Her face is lit
+    #           partly by the overhead and partly by the
+    #           window. The mix is institutional corridor
+    #           + one thin strip of unplanned warmth.
 
     "She is halfway down the stretch, standing in front of something he has never noticed before — a narrow vertical slit in the wall that somebody cut into the plate during the original construction of the secondary base and never properly sealed. A window. Maybe eighteen inches tall. Three inches wide. Hip-height to shoulder-height on Noelle."
 
@@ -292,6 +321,20 @@ label a4_s18_noelle_deepening_erotic_emp:
 
     # ========== PHASE 4 — THE TURN ==========
 
+    # CAMERA: soft dolly in from Aeron's walking pace.
+    #         She does NOT turn when he approaches. She
+    #         speaks without turning. The camera stops
+    #         three paces behind her and does not close
+    #         the distance until she turns on her own.
+    #         When she turns, the camera catches the
+    #         turn in her profile first, then moves to
+    #         the full face as she finishes the movement.
+    # FACE: Noelle — classification collapsed. The face
+    #        does not know what category she is in.
+    #        That unknowing is the scene's first beat
+    #        of contact. She is not performing it; she
+    #        is showing it.
+
     "She turns."
 
     "Slowly. Not dramatic — the speed of a person who has been facing a window for fifty-three minutes and is discovering, for the first time in all those minutes, that there is a body behind her to turn toward."
@@ -373,6 +416,23 @@ label a4_s18_noelle_deepening_erotic_emp:
     a "I know."
 
     # ========== PHASE 5 — BOTH HANDS ==========
+
+    # CAMERA: 35mm two-shot, the window behind her. She
+    #         has her back to the plate glass. Both
+    #         hands on his chest — NOT for medical
+    #         reasons. SHE KISSES HIM FIRST. The camera
+    #         lets the kiss be the kiss. No cutaways. No
+    #         pull-back. Hold the two-shot through the
+    #         kiss. The kiss ENDS on her choosing the
+    #         next sentence. Catch the beat where her
+    #         eyes open before she pulls back — that is
+    #         the beat where she chooses.
+    # FX/COMP: the window behind her frames her head.
+    #          The city glow is her halo for the
+    #          duration of the kiss. The halo is not
+    #          a metaphor Noelle would approve of and
+    #          the frame does not italicize it, but the
+    #          composition contains it.
 
     "She walks the six feet."
 
@@ -627,6 +687,18 @@ label a4_s18_noelle_route_choose:
 label a4_s18_noelle_aftercare_intimate:
 
     # ========== PHASE 7 — AFTERCARE ==========
+
+    # CAMERA: pull back to the far-end composition from
+    #         Phase 2, inverted. Now TWO figures at the
+    #         slit window instead of one. Same corridor
+    #         length. Same institutional lighting. Same
+    #         thin strip of city glow from the window.
+    #         The composition is the scene's bookend —
+    #         Noelle was alone at the window at the
+    #         start; she is not alone at the window at
+    #         the end. Hold the wide bookend through
+    #         the closing beat. Fade on the two of them
+    #         at the slit.
 
     # CAMERA: 50mm. Her face. The datapad is in frame somewhere —
     # on the desk, or on the floor if the corridor-route, or absent
