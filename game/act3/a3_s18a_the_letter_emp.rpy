@@ -11,7 +11,7 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a3_s18a_the_letter_emp:
 
-    $ show_timeline("DAY 36", "02:00", "Phoenix Base — Mapping Station")
+    $ show_timeline("29th of Cipher, 388 A.C.", "02:00", "Phoenix Base — Mapping Station")
 
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 50mm, locked. Clinical opening — the dead drop location. Then close on hands.

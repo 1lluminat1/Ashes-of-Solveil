@@ -8,7 +8,7 @@ $ _current_scene_id = "a2_s07_quiet_night"
 $ scene_mark(_current_scene_id, "entered")
 
 label a2_s07_quiet_night:
-    $ show_timeline("DAY 10", "22:00", "Unders — Safe House")
+    $ show_timeline("10th of Ember, 385 A.C.", "22:00", "Unders — Safe House")
 
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 35–50mm intimate; slow drifts, minimal cuts. Two-shots and close singles. Hold on Lyra's face during vulnerable beats. Push-in when she talks about Elisse.

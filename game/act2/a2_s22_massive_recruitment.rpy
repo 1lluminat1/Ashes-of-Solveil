@@ -9,7 +9,7 @@ $ _current_scene_id = "a2_s22_massive_recruitment"
 $ scene_mark(_current_scene_id, "entered")
 
 label a2_s22_massive_recruitment:
-    $ show_timeline("DAY 19", "06:00", "Phoenix Base — War Room")
+    $ show_timeline("19th of Ember, 385 A.C.", "06:00", "Phoenix Base — War Room")
 
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 35mm, starts wide — widest shot we've used in Act 2. The ops room is FULL. Bodies everywhere.

@@ -9,7 +9,7 @@ $ _current_scene_id = "a4_s12a_she_is_not_just_tactical_emp"
 $ scene_mark(_current_scene_id, "entered")
 
 label a4_s12a_she_is_not_just_tactical_emp:
-    $ show_timeline("DAY 48", "02:00", "Phoenix Secondary Base — Officers' Corridor")
+    $ show_timeline("30th of Forge, 390 A.C.", "02:00", "Phoenix Secondary Base — Officers' Corridor")
 
 
     # Codex — stage bumps for characters the player learns more about here.

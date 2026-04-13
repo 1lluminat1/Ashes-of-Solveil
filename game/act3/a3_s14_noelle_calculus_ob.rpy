@@ -12,7 +12,7 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a3_s14_noelle_calculus_ob:
 
-    $ show_timeline("DAY 32", "10:00", "Phoenix Base — Analysis Room")
+    $ show_timeline("25th of Cipher, 388 A.C.", "10:00", "Phoenix Base — Analysis Room")
 
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 40mm, tripod-locked. Documentary framing -- evidence presentation.

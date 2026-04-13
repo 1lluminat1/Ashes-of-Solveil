@@ -10,7 +10,7 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a3_s18_the_weight_emp:
 
-    $ show_timeline("DAY 35", "00:30", "Phoenix Base — War Room")
+    $ show_timeline("28th of Cipher, 388 A.C.", "00:30", "Phoenix Base — War Room")
 
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 40mm, locked on tripod. Steady. The stillness is the point.

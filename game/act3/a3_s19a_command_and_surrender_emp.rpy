@@ -13,7 +13,7 @@ label a3_s19a_command_and_surrender_emp:
 
     # Gallery — unlock this scene in the character replay grid.
     $ gallery_unlock("a3_s19a_command_and_surrender_emp")
-    $ show_timeline("DAY 37", "23:00", "Phoenix Base — Selene's Quarters")
+    $ show_timeline("30th of Cipher, 388 A.C.", "23:00", "Phoenix Base — Selene's Quarters")
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 32mm, handheld with minimal drift. The steadiness matches Selene's composure —
     #         and the handheld catches when that composure cracks.

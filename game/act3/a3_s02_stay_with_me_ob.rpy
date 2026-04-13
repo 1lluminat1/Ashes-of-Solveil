@@ -9,7 +9,7 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a3_s02_stay_with_me_ob:
 
-    $ show_timeline("DAY 22", "23:00", "Phoenix Base — Aeron's Quarters")
+    $ show_timeline("15th of Cipher, 388 A.C.", "23:00", "Phoenix Base — Aeron's Quarters")
 
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 50mm lens (OB detachment), locked tripod with minimal drift.

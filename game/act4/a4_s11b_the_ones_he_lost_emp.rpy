@@ -9,7 +9,7 @@ $ _current_scene_id = "a4_s11b_the_ones_he_lost_emp"
 $ scene_mark(_current_scene_id, "entered")
 
 label a4_s11b_the_ones_he_lost_emp:
-    $ show_timeline("DAY 48", "02:17", "Phoenix Secondary Base — Ops Room")
+    $ show_timeline("30th of Forge, 390 A.C.", "02:17", "Phoenix Secondary Base — Ops Room")
 
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 50mm. The ops room at night. Locked mids on Aeron at the cipher table. No

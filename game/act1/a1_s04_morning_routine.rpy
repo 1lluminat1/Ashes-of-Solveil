@@ -9,7 +9,7 @@ $ scene_mark(_current_scene_id, "entered")
 
 
 label a1_s04_morning_routine:
-    $ show_timeline("DAY 2", "06:00", "Aeries — Aeron's Quarters")
+    $ show_timeline("43rd of Forge, 383 A.C.", "06:00", "Aeries — Aeron's Quarters")
 
     # ========= STAGE DIRECTIONS =========
     # CAMERA: 40mm static mid-shot toward window; white morning glare bleeds through glass.

@@ -11,7 +11,7 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a3_s22_the_hunt_ob:
 
-    $ show_timeline("DAY 40", "02:00", "Multiple Sectors — Operation")
+    $ show_timeline("33rd of Cipher, 388 A.C.", "02:00", "Multiple Sectors — Operation")
 
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 50mm, locked (OB precision). War room command view.

@@ -11,7 +11,7 @@ $ _current_scene_id = "a4_s22_council_of_attrition_ob"
 $ scene_mark(_current_scene_id, "entered")
 
 label a4_s22_council_of_attrition_ob:
-    $ show_timeline("DAY 54", "08:30", "Phoenix Base — War Room")
+    $ show_timeline("36th of Forge, 390 A.C.", "08:30", "Phoenix Base — War Room")
 
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 50mm, locked. OB grammar. Formal council composition. Open wide on

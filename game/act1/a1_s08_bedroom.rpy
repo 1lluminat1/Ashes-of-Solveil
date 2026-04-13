@@ -9,7 +9,7 @@ $ scene_mark(_current_scene_id, "entered")
 
 
 label a1_s08_bedroom:
-    $ show_timeline("DAY 2", "23:30", "Aeries — Aeron's Quarters")
+    $ show_timeline("43rd of Forge, 383 A.C.", "23:30", "Aeries — Aeron's Quarters")
 
     # ========= STAGE DIRECTIONS =========
     # CAMERA: Static 35–40mm; gentle 2% push on envelope reveal and on "mask slipped."

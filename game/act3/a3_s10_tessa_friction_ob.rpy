@@ -12,7 +12,7 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a3_s10_tessa_friction_ob:
 
-    $ show_timeline("DAY 28", "09:00", "Phoenix Base — Medbay")
+    $ show_timeline("21st of Cipher, 388 A.C.", "09:00", "Phoenix Base — Medbay")
 
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 50mm, handheld with subtle drift. Two-shot throughout -- Tessa and Aeron

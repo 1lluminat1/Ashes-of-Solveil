@@ -20,7 +20,7 @@ label a4_s18_noelle_deepening_erotic_emp:
 
     # Gallery — unlock this scene in the character replay grid.
     $ gallery_unlock("a4_s18_noelle_deepening_erotic_emp")
-    $ show_timeline("DAY 53", "01:00", "Phoenix Secondary Base — Supply Corridor")
+    $ show_timeline("35th of Forge, 390 A.C.", "01:00", "Phoenix Secondary Base — Supply Corridor")
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: Four movements.
     #         (1) Corridor, Aeron searching: 35mm, walking pace that is

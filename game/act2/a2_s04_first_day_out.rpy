@@ -12,7 +12,7 @@ $ _current_scene_id = "a2_s04_first_day_out"
 $ scene_mark(_current_scene_id, "entered")
 
 label a2_s04_first_day_out:
-    $ show_timeline("DAY 9", "06:00", "Unders — Sector 4 Yard")
+    $ show_timeline("9th of Ember, 385 A.C.", "06:00", "Unders — Sector 4 Yard")
 
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 24–28mm for streets (crowd compression), 35mm for yard interiors; handheld drift with occasional 3–4% push on threat beats.

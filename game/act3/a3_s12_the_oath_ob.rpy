@@ -16,7 +16,7 @@ label a3_s12_the_oath_ob:
 
     # Gallery — unlock this scene in the character replay grid.
     $ gallery_unlock("a3_s12_the_oath_ob")
-    $ show_timeline("DAY 30", "02:00", "Phoenix Base — Nyra's Quarters")
+    $ show_timeline("23rd of Cipher, 388 A.C.", "02:00", "Phoenix Base — Nyra's Quarters")
     # Codex — stage bumps for characters the player learns more about here.
     $ codex_reveal("nyra", to_stage=1, source="a3_s12_the_oath_ob")
 

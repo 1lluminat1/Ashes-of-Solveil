@@ -9,7 +9,7 @@ $ _current_scene_id = "a4_s16_rhea_strikes_emp"
 $ scene_mark(_current_scene_id, "entered")
 
 label a4_s16_rhea_strikes_emp:
-    $ show_timeline("DAY 52", "04:00", "Phoenix Secondary Base — Ops Wing")
+    $ show_timeline("34th of Forge, 390 A.C.", "04:00", "Phoenix Secondary Base — Ops Wing")
 
 
     # Codex — stage bumps for characters the player learns more about here.

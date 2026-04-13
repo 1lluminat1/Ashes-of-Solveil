@@ -15,7 +15,7 @@ label a3_s15_chain_of_two_ob:
 
     # Gallery — unlock this scene in the character replay grid.
     $ gallery_unlock("a3_s15_chain_of_two_ob")
-    $ show_timeline("DAY 33", "03:00", "Phoenix Base — Signal Bay")
+    $ show_timeline("26th of Cipher, 388 A.C.", "03:00", "Phoenix Base — Signal Bay")
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 35mm, handheld with controlled drift (6-8%). The instability is Zira's --
     #         the camera moves the way she feels. Opens mid-action: Zira in the signal bay,

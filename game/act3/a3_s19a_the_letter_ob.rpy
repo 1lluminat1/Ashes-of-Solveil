@@ -11,7 +11,7 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a3_s19a_the_letter_ob:
 
-    $ show_timeline("DAY 37", "02:00", "Phoenix Base — Mapping Station")
+    $ show_timeline("30th of Cipher, 388 A.C.", "02:00", "Phoenix Base — Mapping Station")
 
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 50mm, locked. OB stillness. The dead drop case on the table. Then close on hands.

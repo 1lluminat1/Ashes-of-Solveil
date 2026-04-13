@@ -11,7 +11,7 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a3_s04_who_commands_now_ob:
 
-    $ show_timeline("DAY 24", "02:00", "Phoenix Base — Signal Bay")
+    $ show_timeline("17th of Cipher, 388 A.C.", "02:00", "Phoenix Base — Signal Bay")
 
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 35mm, handheld drift (unusual for OB -- the signal is unsettling).

@@ -9,7 +9,7 @@ $ _current_scene_id = "a4_s10_what_selene_meant_emp"
 $ scene_mark(_current_scene_id, "entered")
 
 label a4_s10_what_selene_meant_emp:
-    $ show_timeline("DAY 46", "22:00", "Phoenix Secondary Base — Archive Annex")
+    $ show_timeline("28th of Forge, 390 A.C.", "22:00", "Phoenix Secondary Base — Archive Annex")
 
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: One room. Two people. 50mm, locked, patient. This is not a scene with

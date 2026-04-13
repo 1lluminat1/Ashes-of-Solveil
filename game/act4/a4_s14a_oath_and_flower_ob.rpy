@@ -16,7 +16,7 @@ label a4_s14a_oath_and_flower_ob:
 
     # Gallery -- unlock this scene in the character replay grid.
     $ gallery_unlock("a4_s14a_oath_and_flower_ob")
-    $ show_timeline("DAY 49", "22:00", "Phoenix Base — Aeron's Quarters")
+    $ show_timeline("31st of Forge, 390 A.C.", "22:00", "Phoenix Base — Aeron's Quarters")
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 50mm, locked tripod. Institutional coverage. The lens grammar of
     #         a4_s11 (Nyra's quarters) crossed with the a4_s13 workshop coverage.

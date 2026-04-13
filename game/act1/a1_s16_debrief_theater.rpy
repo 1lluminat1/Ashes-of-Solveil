@@ -9,7 +9,7 @@ $ scene_mark(_current_scene_id, "entered")
 
 
 label a1_s16_debrief_theater:
-    $ show_timeline("DAY 3", "19:00", "Aeries — Debrief Theater")
+    $ show_timeline("44th of Forge, 383 A.C.", "19:00", "Aeries — Debrief Theater")
 
     # ========= STAGE DIRECTIONS =========
     # CAMERA: Wide establishing on amphitheater; push in on Marcus at lectern.

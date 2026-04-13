@@ -11,7 +11,7 @@ $ _current_scene_id = "a4_s25_lyra_at_the_altar_ob"
 $ scene_mark(_current_scene_id, "entered")
 
 label a4_s25_lyra_at_the_altar_ob:
-    $ show_timeline("DAY 55", "05:00", "Phoenix Base — Altar Alcove")
+    $ show_timeline("37th of Forge, 390 A.C.", "05:00", "Phoenix Base — Altar Alcove")
 
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 50mm locked. The altar alcove -- the small room off the base's

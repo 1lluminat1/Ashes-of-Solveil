@@ -10,7 +10,7 @@ $ _current_scene_id = "a4_s03_marcus_adapts_emp"
 $ scene_mark(_current_scene_id, "entered")
 
 label a4_s03_marcus_adapts_emp:
-    $ show_timeline("DAY 43", "15:00", "Phoenix Secondary Base — Noelle's Workspace")
+    $ show_timeline("25th of Forge, 390 A.C.", "15:00", "Phoenix Secondary Base — Noelle's Workspace")
 
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 50mm, locked for the opening on Noelle's workspace — the stillness of

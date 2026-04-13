@@ -11,7 +11,7 @@ $ _current_scene_id = "a4_s23_aeron_alone_ob"
 $ scene_mark(_current_scene_id, "entered")
 
 label a4_s23_aeron_alone_ob:
-    $ show_timeline("DAY 55", "03:30", "Phoenix Base — Aeron's Quarters")
+    $ show_timeline("37th of Forge, 390 A.C.", "03:30", "Phoenix Base — Aeron's Quarters")
 
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 50mm, locked. The locked-ness is the whole aesthetic. No drift.

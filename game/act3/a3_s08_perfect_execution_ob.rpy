@@ -14,7 +14,7 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a3_s08_perfect_execution_ob:
 
-    $ show_timeline("DAY 27", "03:00", "Sector 4 — Supply Depot")
+    $ show_timeline("20th of Cipher, 388 A.C.", "03:00", "Sector 4 — Supply Depot")
 
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 40mm locked during planning. Switch to 50mm handheld during the operation --

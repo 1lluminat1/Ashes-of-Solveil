@@ -11,7 +11,7 @@ $ scene_mark(_current_scene_id, "entered")
 define runner = Character("Runner")
 
 label a2_s18_the_patient:
-    $ show_timeline("DAY 15", "03:00", "Phoenix Base — Medbay")
+    $ show_timeline("15th of Ember, 385 A.C.", "03:00", "Phoenix Base — Medbay")
 
     # Codex — stage bumps for characters the player learns more about here.
     $ codex_reveal("tessa", to_stage=1, source="a2_s18_the_patient")

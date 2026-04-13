@@ -15,7 +15,7 @@ label a3_s17_count_the_cost_ob:
 
     # Gallery — unlock this scene in the character replay grid.
     $ gallery_unlock("a3_s17_count_the_cost_ob")
-    $ show_timeline("DAY 35", "03:30", "Phoenix Base — Medbay Corridor")
+    $ show_timeline("28th of Cipher, 388 A.C.", "03:30", "Phoenix Base — Medbay Corridor")
     # ========= GATE CHECK =========
     # This scene ONLY fires if player apologized to Tessa in s10.
     # If dismissed, skip entirely.

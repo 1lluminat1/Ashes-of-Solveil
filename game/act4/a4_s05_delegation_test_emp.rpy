@@ -9,7 +9,7 @@ $ _current_scene_id = "a4_s05_delegation_test_emp"
 $ scene_mark(_current_scene_id, "entered")
 
 label a4_s05_delegation_test_emp:
-    $ show_timeline("DAY 44", "05:00", "Phoenix Secondary Base — War Room")
+    $ show_timeline("26th of Forge, 390 A.C.", "05:00", "Phoenix Secondary Base — War Room")
 
 
     # Codex — stage bumps for characters the player learns more about here.

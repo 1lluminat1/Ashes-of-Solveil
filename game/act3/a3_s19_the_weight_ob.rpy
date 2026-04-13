@@ -12,7 +12,7 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a3_s19_the_weight_ob:
 
-    $ show_timeline("DAY 37", "00:30", "Phoenix Base — War Room")
+    $ show_timeline("30th of Cipher, 388 A.C.", "00:30", "Phoenix Base — War Room")
 
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 40mm, locked tripod. Same steadiness as EMP version.

@@ -13,7 +13,7 @@ $ scene_mark(_current_scene_id, "entered")
 # Rhe is defined in a4_s08_echelon_interlude_4_ob.rpy
 
 label a4_s18_rhea_arrives_ob:
-    $ show_timeline("DAY 52", "04:00", "Phoenix Base — Ops Wing")
+    $ show_timeline("34th of Forge, 390 A.C.", "04:00", "Phoenix Base — Ops Wing")
 
 
     # Codex — stage bumps for characters the player learns more about here.

@@ -9,7 +9,7 @@ $ scene_mark(_current_scene_id, "entered")
 
 
 label a1_s17_breaking_point:
-    $ show_timeline("DAY 3", "22:00", "Aeries — Rooftop")
+    $ show_timeline("44th of Forge, 383 A.C.", "22:00", "Aeries — Rooftop")
 
     # Codex — this is the Breaking Point itself. The entry unlocks
     # here, and Aeron's dossier bumps to Stage 1 (the first real crack).

@@ -16,7 +16,7 @@ label a4_s20a_doctrine_and_weapon_ob:
 
     # Gallery -- unlock this scene in the character replay grid.
     $ gallery_unlock("a4_s20a_doctrine_and_weapon_ob")
-    $ show_timeline("DAY 53", "02:30", "Phoenix Base — Aeron's Quarters")
+    $ show_timeline("35th of Forge, 390 A.C.", "02:30", "Phoenix Base — Aeron's Quarters")
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 50mm, locked tripod. The same institutional coverage grammar as
     #         a4_s11 (Nyra) crossed with the data-alcove coverage from a4_s20

@@ -8,7 +8,7 @@ $ _current_scene_id = "a2_s11_selenes_judgment"
 $ scene_mark(_current_scene_id, "entered")
 
 label a2_s11_selenes_judgment:
-    $ show_timeline("DAY 12", "08:00", "Unders — Command Post")
+    $ show_timeline("12th of Ember, 385 A.C.", "08:00", "Unders — Command Post")
 
     # Codex — stage bumps for characters the player learns more about here.
     $ codex_reveal("selene_valen", to_stage=1, source="a2_s11_selenes_judgment")

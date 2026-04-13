@@ -11,7 +11,7 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a3_s20_you_dont_get_to_break_ob:
 
-    $ show_timeline("DAY 38", "07:00", "Phoenix Base — Ops Corridor")
+    $ show_timeline("31st of Cipher, 388 A.C.", "07:00", "Phoenix Base — Ops Corridor")
 
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 40mm, locked. Two-shot framing throughout -- Zira and Aeron, equal weight.

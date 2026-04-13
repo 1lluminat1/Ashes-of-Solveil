@@ -20,7 +20,7 @@ label a4_s16a_door_and_data_emp:
 
     # Gallery — unlock this scene in the character replay grid.
     $ gallery_unlock("a4_s16a_door_and_data_emp")
-    $ show_timeline("DAY 52", "16:00", "Phoenix Secondary Base — Noelle's Workspace")
+    $ show_timeline("34th of Forge, 390 A.C.", "16:00", "Phoenix Secondary Base — Noelle's Workspace")
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: Five movements.
     #         (1) Noelle's workspace from outside. 50mm, locked. The door

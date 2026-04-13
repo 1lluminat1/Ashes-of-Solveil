@@ -8,7 +8,7 @@ $ _current_scene_id = "a2_s16_finding_home"
 $ scene_mark(_current_scene_id, "entered")
 
 label a2_s16_finding_home:
-    $ show_timeline("DAY 14", "09:00", "Unders — Base Scouting")
+    $ show_timeline("14th of Ember, 385 A.C.", "09:00", "Unders — Base Scouting")
 
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: Group shot around planning table. Individual shots for each LI's pitch. Push-in on Aeron during the decision moment.

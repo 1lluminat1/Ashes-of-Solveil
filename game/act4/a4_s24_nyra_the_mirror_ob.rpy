@@ -11,7 +11,7 @@ $ _current_scene_id = "a4_s24_nyra_the_mirror_ob"
 $ scene_mark(_current_scene_id, "entered")
 
 label a4_s24_nyra_the_mirror_ob:
-    $ show_timeline("DAY 55", "00:47", "Phoenix Base — Ops Room")
+    $ show_timeline("37th of Forge, 390 A.C.", "00:47", "Phoenix Base — Ops Room")
 
 
     # Codex — stage bumps for characters the player learns more about here.

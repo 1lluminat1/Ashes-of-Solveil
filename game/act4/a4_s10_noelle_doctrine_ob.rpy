@@ -11,7 +11,7 @@ $ _current_scene_id = "a4_s10_noelle_doctrine_ob"
 $ scene_mark(_current_scene_id, "entered")
 
 label a4_s10_noelle_doctrine_ob:
-    $ show_timeline("DAY 47", "02:00", "Phoenix Base — Noelle's Workspace")
+    $ show_timeline("29th of Forge, 390 A.C.", "02:00", "Phoenix Base — Noelle's Workspace")
 
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 50mm, locked tripod. Data alcove, cold register. Opens on the

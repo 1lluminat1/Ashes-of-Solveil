@@ -171,43 +171,42 @@ init python:
     # Six months of 60 days each (360-day year):
     #   Ember → Rain → Kiln → Cipher → Silence → Forge
     #
-    # The game spans 383-391 AC (8 years). Each act takes place in
-    # a different year with time skips between them:
+    # The game spans 383-391 A.C. across four acts, with multi-year
+    # time skips between them:
     #
-    #   Act 1: Late Forge, 383 AC  (story start — Echelon service)
-    #   Act 2: Early Ember, 385 AC (post-defection — six months later)
-    #   Act 3: Mid Cipher, 388 AC  (rebellion deepens — 3 years on)
-    #   Act 4: Mid Forge, 390 AC   (the Aegis stutters)
-    #   Act 5: Late Forge → Ember, 390-391 AC (Fall of Echelon)
+    #   Act 1: Late Forge,   383 A.C.       (story start — Echelon service)
+    #   Act 2: Early Ember,  385 A.C.       (post-defection — two years later)
+    #   Act 3: Mid Cipher,   388 A.C.       (rebellion deepens — three years on)
+    #   Act 4: Late Forge,   390 A.C.       (the Aegis stutters — two years on)
+    #   Act 5: Late Forge → Ember, 390-391  (Fall of Echelon — not yet written)
     #
-    # Within each act, "DAY X" is relative to that act's start.
-    # The helper auto-detects the current act from _current_scene_id.
+    # SCENE CONVENTION:
+    # Scene files call show_timeline with the literal in-fiction date
+    # string, e.g.
     #
-    # 391 AC = Year of Echelon's fall = Aeron's 391st mission number.
-    # Zira reveals the parallel in Act 5's prep scene.
+    #   $ show_timeline("25th of Forge, 390 A.C.", "10:00", "War Room")
+    #
+    # The card renders the year on its own prominent line, the date
+    # and time on a second line, and the location on a third. There
+    # is no "day counter" — each scene file says the date directly.
+    #
+    # ACT_CALENDAR below exists only as documentation of the canonical
+    # start-of-act dates, and as a reference the legacy _solveil_date*
+    # helpers need for the deprecated DAY-N format (kept for backward
+    # compat only; all live scenes use literal date strings).
     # ---------------------------------------------------------------
 
     SOLVEIL_MONTHS = ["Ember", "Rain", "Kiln", "Cipher", "Silence", "Forge"]
     SOLVEIL_DAYS_PER_MONTH = 60
 
-    # Per-act calendar origin:
-    #   (start_month_index, start_day_of_month, year, first_game_day_in_act)
-    #
-    # IMPORTANT: "DAY X" in the scripts is a CUMULATIVE day number that
-    # carries across acts (Act 1 ends DAY 7, Act 2 starts DAY 8, Act 3
-    # starts DAY 22, Act 4 starts DAY 43). Inside the story-world, multi-
-    # year time skips happen between acts; the day numbers do NOT reflect
-    # those gaps — the calendar origin per act handles that.
-    #
-    # Mapping: each act's first cumulative DAY maps to the listed
-    # (month, day_of_month, year). Subsequent scene days offset forward
-    # from there.
+    # Canonical start-of-act calendar anchor (doc/reference).
+    # Tuple: (start_month_index, start_day_of_month, year)
     ACT_CALENDAR = {
-        1: (5, 42, 383,  1),   # DAY 1  = 42nd of Forge,   383 AC (story start)
-        2: (0,  8, 385,  8),   # DAY 8  = 8th  of Ember,   385 AC (post-defection)
-        3: (3, 15, 388, 22),   # DAY 22 = 15th of Cipher,  388 AC (rebellion deepens)
-        4: (5, 25, 390, 43),   # DAY 43 = 25th of Forge,   390 AC (Aegis stutters)
-        5: (5, 52, 390, 56),   # DAY 56 = 52nd of Forge,   390 AC → overflows into 391 (Fall)
+        1: (5, 42, 383),   # Act 1 opens: 42nd of Forge,  383 A.C.
+        2: (0,  8, 385),   # Act 2 opens: 8th  of Ember,  385 A.C.
+        3: (3, 15, 388),   # Act 3 opens: 15th of Cipher, 388 A.C.
+        4: (5, 25, 390),   # Act 4 opens: 25th of Forge,  390 A.C.
+        5: (5, 52, 390),   # Act 5 opens: 52nd of Forge,  390 A.C. (not yet written)
     }
 
     def _ordinal(n):
@@ -226,69 +225,17 @@ init python:
         if sid.startswith('a5_'): return 5
         return 1  # fallback
 
-    def _solveil_date_parts(game_day):
-        """Convert a cumulative game day (DAY X from the script) to
-        a (date_text, year_text) tuple, e.g. ('25th of Forge', '390 A.C.').
-
-        Uses _current_scene_id to determine which act we're in, looks up
-        that act's calendar origin, then offsets relative to the act's
-        first cumulative day. Day numbers carry across acts; the per-act
-        origin handles the story-world year jumps.
-        """
-        if not game_day or game_day < 1:
-            return "", ""
-
-        act = _get_current_act()
-        month_idx, start_day, year, first_day = ACT_CALENDAR.get(act, ACT_CALENDAR[1])
-
-        # Offset from the act's first cumulative day, not from DAY 1.
-        cal_day = start_day + (game_day - first_day)
-
-        # Forward overflow into subsequent months/years
-        while cal_day > SOLVEIL_DAYS_PER_MONTH:
-            cal_day -= SOLVEIL_DAYS_PER_MONTH
-            month_idx += 1
-            if month_idx >= len(SOLVEIL_MONTHS):
-                month_idx = 0
-                year += 1
-
-        # Backward underflow (defensive — for a stray scene below the
-        # act's declared first day; shouldn't happen in normal play).
-        while cal_day < 1:
-            cal_day += SOLVEIL_DAYS_PER_MONTH
-            month_idx -= 1
-            if month_idx < 0:
-                month_idx = len(SOLVEIL_MONTHS) - 1
-                year -= 1
-
-        month_name = SOLVEIL_MONTHS[month_idx]
-        date_text = _ordinal(cal_day) + " of " + month_name
-        year_text = str(year) + " A.C."
-        return date_text, year_text
-
-    def _solveil_date(game_day):
-        """Backward-compat: returns the full date string with year embedded.
-
-        Prefer _solveil_date_parts() for new code — it returns the year
-        separately so the timeline card can render it on its own line.
-        """
-        date_text, year_text = _solveil_date_parts(game_day)
-        if not date_text:
-            return ""
-        return date_text + ", " + year_text
-
-    def _parse_day_number(date_str):
-        """Extract the day number from 'DAY X' format. Returns 0 if not matched."""
-        import re
-        m = re.match(r"DAY\s+(\d+)", str(date_str))
-        return int(m.group(1)) if m else 0
-
     def _split_year_from_date(date_str):
-        """Extract a 'NNN A.C.' year from a preformatted date string.
+        """Extract a 'NNN A.C.' year from a literal date string.
 
         Returns (date_without_year, year_text). If no year is found,
-        returns (date_str, ''). Used for hand-authored dates like
-        '368 AC' (a1_s01_branding) or '5th of Ember, 390 AC'.
+        returns (date_str, ''). This is how live scene files feed the
+        card: the scene passes a literal like '25th of Forge, 390 A.C.'
+        and this helper splits the year off so the card can render it
+        on its own prominent top line.
+
+        Also handles the legacy short form used by the a1_s01_branding
+        prologue ('368 AC'), where there is no day-of-month component.
         """
         import re
         if not date_str:
@@ -302,6 +249,53 @@ init python:
         return date_without_year, year_text
 
     # ---------------------------------------------------------------
+    # LEGACY DAY-N HELPERS — DEPRECATED
+    # ---------------------------------------------------------------
+    # These remain only so any old `show_timeline("DAY 5", ...)` call
+    # that slips through keeps working. Live scene files no longer use
+    # the DAY-N format — they pass literal in-fiction date strings
+    # directly (see _split_year_from_date above).
+    # ---------------------------------------------------------------
+
+    def _get_current_act():
+        """Detect the current act number from _current_scene_id (legacy)."""
+        sid = str(getattr(renpy.store, '_current_scene_id', ''))
+        if sid.startswith('a1_'): return 1
+        if sid.startswith('a2_'): return 2
+        if sid.startswith('a3_'): return 3
+        if sid.startswith('a4_'): return 4
+        if sid.startswith('a5_'): return 5
+        return 1
+
+    def _solveil_date_parts(game_day):
+        """Legacy helper: convert a 1-indexed within-act day to
+        (date_text, year_text). Kept for backward compat only.
+        """
+        if not game_day or game_day < 1:
+            return "", ""
+        act = _get_current_act()
+        month_idx, start_day, year = ACT_CALENDAR.get(act, ACT_CALENDAR[1])
+        cal_day = start_day + (game_day - 1)
+        while cal_day > SOLVEIL_DAYS_PER_MONTH:
+            cal_day -= SOLVEIL_DAYS_PER_MONTH
+            month_idx += 1
+            if month_idx >= len(SOLVEIL_MONTHS):
+                month_idx = 0
+                year += 1
+        return _ordinal(cal_day) + " of " + SOLVEIL_MONTHS[month_idx], str(year) + " A.C."
+
+    def _solveil_date(game_day):
+        """Legacy helper: full date string with year embedded."""
+        d, y = _solveil_date_parts(game_day)
+        return d + ", " + y if d else ""
+
+    def _parse_day_number(date_str):
+        """Legacy helper: extract the day number from 'DAY X' format."""
+        import re
+        m = re.match(r"DAY\s+(\d+)", str(date_str))
+        return int(m.group(1)) if m else 0
+
+    # ---------------------------------------------------------------
     # HELPERS
     # ---------------------------------------------------------------
 
@@ -309,31 +303,31 @@ init python:
         """Show the standard timeline card and wait for it to finish.
 
         Call at the top of a scene label (after scene_mark entered):
-            $ show_timeline("DAY 3", "04:17", "Phoenix Secondary Base")
+            $ show_timeline("25th of Forge, 390 A.C.", "10:00", "Phoenix Base — War Room")
 
-        The 'DAY X' format is auto-converted to the Solveil calendar.
-        The year is split out and rendered on its own prominent line:
+        The year is automatically split off from the date string and
+        rendered on its own prominent top line:
 
             390 A.C.
-            5th of Forge  ·  04:17
-            Phoenix Secondary Base
+            25th of Forge  ·  10:00
+            Phoenix Base — War Room
 
-        You can also pass a pre-formatted string ('368 AC',
-        '5th of Ember, 390 AC') or an integer day number — the year is
-        extracted from any of these forms and shown on the year line.
+        Legacy DAY-N format is still accepted for backward compatibility
+        but live scenes all use literal in-fiction date strings.
         """
         year = ""
 
-        # Auto-convert DAY X (or int) to Solveil calendar parts
         if isinstance(date, int):
+            # Legacy: integer game day
             date, year = _solveil_date_parts(date)
         elif isinstance(date, str) and date.upper().startswith("DAY "):
+            # Legacy: "DAY N" format — auto-convert via per-act calendar
             day_num = _parse_day_number(date)
             if day_num > 0:
                 date, year = _solveil_date_parts(day_num)
         elif isinstance(date, str):
-            # Hand-authored date like '368 AC' or '5th of Ember, 390 AC'.
-            # Pull the year onto its own line if present.
+            # Live path: literal in-fiction date string like
+            # "25th of Forge, 390 A.C." or "368 AC" — split the year off.
             date, year = _split_year_from_date(date)
 
         renpy.show_screen("scene_timeline", date=date, time=time, location=location, year=year)

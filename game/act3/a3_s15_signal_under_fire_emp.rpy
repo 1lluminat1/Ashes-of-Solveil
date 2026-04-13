@@ -13,7 +13,7 @@ label a3_s15_signal_under_fire_emp:
 
     # Gallery — unlock this scene in the character replay grid.
     $ gallery_unlock("a3_s15_signal_under_fire_emp")
-    $ show_timeline("DAY 33", "04:00", "Sector 6 — Tunnel Node 6-Kappa")
+    $ show_timeline("26th of Cipher, 388 A.C.", "04:00", "Sector 6 — Tunnel Node 6-Kappa")
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 28mm, handheld with 8-10% drift during the op. Frenetic energy, close-quarters framing.
     #         During the firefight: fast cuts, low angles, muzzle flash as lighting source.

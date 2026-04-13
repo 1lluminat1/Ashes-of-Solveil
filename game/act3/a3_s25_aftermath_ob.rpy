@@ -10,7 +10,7 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a3_s25_aftermath_ob:
 
-    $ show_timeline("DAY 42", "18:00", "Phoenix Base — War Room")
+    $ show_timeline("35th of Cipher, 388 A.C.", "18:00", "Phoenix Base — War Room")
 
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 40mm, steady. Wide on the war room. Tightens to each speaker.

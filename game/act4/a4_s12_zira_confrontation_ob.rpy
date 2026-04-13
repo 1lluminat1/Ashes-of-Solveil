@@ -11,7 +11,7 @@ $ _current_scene_id = "a4_s12_zira_confrontation_ob"
 $ scene_mark(_current_scene_id, "entered")
 
 label a4_s12_zira_confrontation_ob:
-    $ show_timeline("DAY 48", "07:00", "Phoenix Base — Ops Corridor")
+    $ show_timeline("30th of Forge, 390 A.C.", "07:00", "Phoenix Base — Ops Corridor")
 
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 40mm, locked for the setup, then handheld with restrained drift

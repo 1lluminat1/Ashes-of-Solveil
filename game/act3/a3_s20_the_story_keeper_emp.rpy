@@ -10,7 +10,7 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a3_s20_the_story_keeper_emp:
 
-    $ show_timeline("DAY 38", "04:00", "Phoenix Base — Mapping Station")
+    $ show_timeline("31st of Cipher, 388 A.C.", "04:00", "Phoenix Base — Mapping Station")
 
     # Codex — first Liora unlock. This scene is where the player
     # starts learning who "the story-keeper" is.

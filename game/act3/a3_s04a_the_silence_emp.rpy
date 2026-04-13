@@ -10,7 +10,7 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a3_s04a_the_silence_emp:
 
-    $ show_timeline("DAY 23", "14:00", "Phoenix Base — War Room")
+    $ show_timeline("16th of Cipher, 388 A.C.", "14:00", "Phoenix Base — War Room")
 
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 40mm, locked tripod. Council framing — wide establishing, then rotating close-ups

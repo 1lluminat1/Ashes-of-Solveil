@@ -12,7 +12,7 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a3_s20a_lyra_prays_for_the_hunt_ob:
 
-    $ show_timeline("DAY 39", "04:00", "Phoenix Base — Altar Alcove")
+    $ show_timeline("32nd of Cipher, 388 A.C.", "04:00", "Phoenix Base — Altar Alcove")
 
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 50mm, locked. Opens on Lyra's quarters -- small, sparse. The Anayet texts

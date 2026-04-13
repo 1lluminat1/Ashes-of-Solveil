@@ -9,7 +9,7 @@ $ _current_scene_id = "a4_s04_lyra_unbuckled_emp"
 $ scene_mark(_current_scene_id, "entered")
 
 label a4_s04_lyra_unbuckled_emp:
-    $ show_timeline("DAY 43", "22:00", "Phoenix Secondary Base — Lyra's Desk")
+    $ show_timeline("25th of Forge, 390 A.C.", "22:00", "Phoenix Secondary Base — Lyra's Desk")
 
 
     # Codex — stage bumps for characters the player learns more about here.

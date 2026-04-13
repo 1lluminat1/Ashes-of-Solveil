@@ -15,7 +15,7 @@ label a4_s13_zira_deepening_erotic_ob:
 
     # Gallery — unlock this scene in the character replay grid.
     $ gallery_unlock("a4_s13_zira_deepening_erotic_ob")
-    $ show_timeline("DAY 48", "23:00", "Phoenix Base — Zira's Workshop")
+    $ show_timeline("30th of Forge, 390 A.C.", "23:00", "Phoenix Base — Zira's Workshop")
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 35mm, handheld with restrained drift (4-6%). Less drift than a3_s15.
     #         Zira is not throwing things tonight. She has graduated past throwing.

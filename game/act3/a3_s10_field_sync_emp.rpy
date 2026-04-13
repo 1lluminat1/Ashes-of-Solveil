@@ -10,7 +10,7 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a3_s10_field_sync_emp:
 
-    $ show_timeline("DAY 29", "15:00", "Sector 6 — Patrol Route")
+    $ show_timeline("22nd of Cipher, 388 A.C.", "15:00", "Sector 6 — Patrol Route")
 
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 28mm, handheld, high drift (12-15%). Combat framing. Opens wide and chaotic --

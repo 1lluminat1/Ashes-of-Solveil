@@ -9,7 +9,7 @@ $ scene_mark(_current_scene_id, "entered")
 
 
 label a1_s19_the_message:
-    $ show_timeline("DAY 4", "03:00", "Aeries — Aeron's Quarters")
+    $ show_timeline("45th of Forge, 383 A.C.", "03:00", "Aeries — Aeron's Quarters")
 
     # ========= STAGE DIRECTIONS =========
     # CAMERA: Slow push from door to desk; tight on terminal for message reveals.

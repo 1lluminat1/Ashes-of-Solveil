@@ -11,7 +11,7 @@ $ _current_scene_id = "a4_s16_tessa_fracture_point_ob"
 $ scene_mark(_current_scene_id, "entered")
 
 label a4_s16_tessa_fracture_point_ob:
-    $ show_timeline("DAY 51", "02:47", "Phoenix Base — Ops Room")
+    $ show_timeline("33rd of Forge, 390 A.C.", "02:47", "Phoenix Base — Ops Room")
 
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 50mm, locked tripod. OB economic register. No handheld.

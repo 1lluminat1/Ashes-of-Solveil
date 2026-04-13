@@ -23,7 +23,7 @@ label a4_s20a_command_and_the_door_emp:
 
     # Gallery — unlock this scene in the character replay grid.
     $ gallery_unlock("a4_s20a_command_and_the_door_emp")
-    $ show_timeline("DAY 54", "01:00", "Phoenix Secondary Base — Cipher Alcove")
+    $ show_timeline("36th of Forge, 390 A.C.", "01:00", "Phoenix Secondary Base — Cipher Alcove")
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: Five movements.
     #         (1) The cipher alcove from outside. 50mm, locked. The alcove

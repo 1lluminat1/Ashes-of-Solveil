@@ -22,7 +22,7 @@ label a4_s19_lyra_deepening_erotic_emp:
 
     # Gallery — unlock this scene in the character replay grid.
     $ gallery_unlock("a4_s19_lyra_deepening_erotic_emp")
-    $ show_timeline("DAY 53", "20:00", "Phoenix Secondary Base — Altar Space")
+    $ show_timeline("35th of Forge, 390 A.C.", "20:00", "Phoenix Secondary Base — Altar Space")
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: Four movements.
     #         (1) The small hall after the vigil: 85mm long lens. The

@@ -13,7 +13,7 @@ label a3_s03_breath_of_faith_emp:
 
     # Gallery — unlock this scene in the character replay grid.
     $ gallery_unlock("a3_s03_breath_of_faith_emp")
-    $ show_timeline("DAY 22", "22:00", "Phoenix Base — Balcony")
+    $ show_timeline("15th of Cipher, 388 A.C.", "22:00", "Phoenix Base — Balcony")
     # Codex — stage bumps for characters the player learns more about here.
     $ codex_reveal("lyra_vashar", to_stage=2, source="a3_s03_breath_of_faith_emp")
 

@@ -10,7 +10,7 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a3_s08_the_unmeasurable_emp:
 
-    $ show_timeline("DAY 28", "20:00", "Phoenix Base — Observation Deck")
+    $ show_timeline("21st of Cipher, 388 A.C.", "20:00", "Phoenix Base — Observation Deck")
 
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 35mm, steady dolly. Opens from Aeron's POV in the doorway — wide on the analysis

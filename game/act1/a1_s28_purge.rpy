@@ -9,7 +9,7 @@ $ scene_mark(_current_scene_id, "entered")
 
 
 label a1_s28_purge:
-    $ show_timeline("DAY 7", "19:00", "Aeries — Rooftop")
+    $ show_timeline("48th of Forge, 383 A.C.", "19:00", "Aeries — Rooftop")
 
     # ========= STAGE DIRECTIONS =========
     # CAMERA: Wide static establishing → slow dolly-in → shockwave coverage → slow pull-back on aftermath.

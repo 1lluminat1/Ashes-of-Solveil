@@ -8,7 +8,7 @@ $ _current_scene_id = "a2_s10_static_faith"
 $ scene_mark(_current_scene_id, "entered")
 
 label a2_s10_static_faith:
-    $ show_timeline("DAY 11", "20:00", "Unders — Common Area")
+    $ show_timeline("11th of Ember, 385 A.C.", "20:00", "Unders — Common Area")
 
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: Alternating medium shots and close-ups. Two-shot framing emphasizes the gap/tension between Lyra and Zira. Aeron enters frame late, observing from threshold.

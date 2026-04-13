@@ -15,7 +15,7 @@ label a3_s24_liora_ob:
 
     # Codex — stage bumps for characters the player learns more about here.
     $ codex_reveal("liora_rylan", to_stage=2, source="a3_s24_liora_ob")
-    $ show_timeline("DAY 42", "10:00", "Sector 5 — Outlander Safe House")
+    $ show_timeline("35th of Cipher, 388 A.C.", "10:00", "Sector 5 — Outlander Safe House")
 
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: This scene uses three visual grammars:

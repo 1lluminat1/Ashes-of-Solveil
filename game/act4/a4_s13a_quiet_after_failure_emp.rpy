@@ -9,7 +9,7 @@ $ _current_scene_id = "a4_s13a_quiet_after_failure_emp"
 $ scene_mark(_current_scene_id, "entered")
 
 label a4_s13a_quiet_after_failure_emp:
-    $ show_timeline("DAY 48", "21:00", "Phoenix Secondary Base — Aeron's Quarters")
+    $ show_timeline("30th of Forge, 390 A.C.", "21:00", "Phoenix Secondary Base — Aeron's Quarters")
 
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: Three movements, all still.

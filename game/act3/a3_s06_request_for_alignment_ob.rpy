@@ -11,7 +11,7 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a3_s06_request_for_alignment_ob:
 
-    $ show_timeline("DAY 25", "14:00", "Phoenix Base — War Room")
+    $ show_timeline("18th of Cipher, 388 A.C.", "14:00", "Phoenix Base — War Room")
 
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 40mm lens (OB tension), deliberate movement. Wide establishing shot of war room,

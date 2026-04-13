@@ -12,7 +12,7 @@ define o2 = Character("Officer 2")
 
 
 label a1_s22_return_to_aeries:
-    $ show_timeline("DAY 4", "18:00", "Aeries — Checkpoint")
+    $ show_timeline("45th of Forge, 383 A.C.", "18:00", "Aeries — Checkpoint")
 
     # ========= STAGE DIRECTIONS =========
     # CAMERA: Slow push on Aeron's reflection ghosted over the city; threshold hover CU; gear montage options.

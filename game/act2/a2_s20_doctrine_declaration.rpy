@@ -8,7 +8,7 @@ $ _current_scene_id = "a2_s20_doctrine_declaration"
 $ scene_mark(_current_scene_id, "entered")
 
 label a2_s20_doctrine_declaration:
-    $ show_timeline("DAY 17", "10:00", "Phoenix Base — War Room")
+    $ show_timeline("17th of Ember, 385 A.C.", "10:00", "Phoenix Base — War Room")
 
     # Codex — the Doctrine Declaration is the scene whose name matches.
     # Also unlocks the Phoenix entry (Selene names the rebellion here).

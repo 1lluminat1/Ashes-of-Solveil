@@ -9,7 +9,7 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a3_s01_back_from_edge_emp:
 
-    $ show_timeline("DAY 22", "06:00", "Phoenix Base — War Room")
+    $ show_timeline("15th of Cipher, 388 A.C.", "06:00", "Phoenix Base — War Room")
 
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: Wide establishing on war room → medium group shots during briefing → close-ups during private Selene/Aeron conversation.

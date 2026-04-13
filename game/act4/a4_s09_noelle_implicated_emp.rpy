@@ -10,7 +10,7 @@ $ _current_scene_id = "a4_s09_noelle_implicated_emp"
 $ scene_mark(_current_scene_id, "entered")
 
 label a4_s09_noelle_implicated_emp:
-    $ show_timeline("DAY 46", "09:00", "Phoenix Secondary Base — Noelle's Workspace")
+    $ show_timeline("28th of Forge, 390 A.C.", "09:00", "Phoenix Secondary Base — Noelle's Workspace")
 
 
     # Codex — stage bumps for characters the player learns more about here.

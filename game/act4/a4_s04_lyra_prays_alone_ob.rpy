@@ -11,7 +11,7 @@ $ _current_scene_id = "a4_s04_lyra_prays_alone_ob"
 $ scene_mark(_current_scene_id, "entered")
 
 label a4_s04_lyra_prays_alone_ob:
-    $ show_timeline("DAY 44", "05:00", "Phoenix Base — Shrine Alcove")
+    $ show_timeline("26th of Forge, 390 A.C.", "05:00", "Phoenix Base — Shrine Alcove")
 
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 50mm, locked tripod. The OB lens. No drift. No search.

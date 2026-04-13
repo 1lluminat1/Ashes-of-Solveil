@@ -9,7 +9,7 @@ $ _current_scene_id = "a4_s09a_she_calls_him_out_emp"
 $ scene_mark(_current_scene_id, "entered")
 
 label a4_s09a_she_calls_him_out_emp:
-    $ show_timeline("DAY 46", "12:00", "Phoenix Secondary Base — Mess Hall")
+    $ show_timeline("28th of Forge, 390 A.C.", "12:00", "Phoenix Secondary Base — Mess Hall")
 
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 50mm, handheld but held still. The mess at the back-end of third shift —

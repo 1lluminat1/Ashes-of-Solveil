@@ -8,7 +8,7 @@ $ _current_scene_id = "a2_s17_building_something"
 $ scene_mark(_current_scene_id, "entered")
 
 label a2_s17_building_something:
-    $ show_timeline("DAY 14", "18:00", "Phoenix Base — Common Area")
+    $ show_timeline("14th of Ember, 385 A.C.", "18:00", "Phoenix Base — Common Area")
 
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: Mix of montage coverage and intimate moments. Wide shots for community scenes, tight two-shots for key interactions.

@@ -12,7 +12,7 @@ define child = Character("Child")
 
 
 label a1_s20_lower_spans:
-    $ show_timeline("DAY 4", "09:00", "Middle Levels — Transit Hub")
+    $ show_timeline("45th of Forge, 383 A.C.", "09:00", "Middle Levels — Transit Hub")
 
     # ========= STAGE DIRECTIONS =========
     # CAMERA: Tracking shots through catwalks; eye-level two-shots for encounters; high-angle wide for courtyard.

@@ -10,7 +10,7 @@ $ _current_scene_id = "a4_s08_zira_exit_plan_emp"
 $ scene_mark(_current_scene_id, "entered")
 
 label a4_s08_zira_exit_plan_emp:
-    $ show_timeline("DAY 45", "23:00", "Phoenix Secondary Base — Zira's Workshop")
+    $ show_timeline("27th of Forge, 390 A.C.", "23:00", "Phoenix Secondary Base — Zira's Workshop")
 
 
     # Codex — stage bumps for characters the player learns more about here.

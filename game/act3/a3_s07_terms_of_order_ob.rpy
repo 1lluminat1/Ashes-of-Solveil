@@ -14,7 +14,7 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a3_s07_terms_of_order_ob:
 
-    $ show_timeline("DAY 26", "06:00", "Phoenix Base — War Room")
+    $ show_timeline("19th of Cipher, 388 A.C.", "06:00", "Phoenix Base — War Room")
 
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 40mm, locked tripod. Wide establishing of war room, then slow coverage rotation

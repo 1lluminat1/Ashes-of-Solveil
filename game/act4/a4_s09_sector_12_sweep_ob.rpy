@@ -14,7 +14,7 @@ $ scene_mark(_current_scene_id, "entered")
 # ny (Nyra) is defined centrally in ui_solveil.rpy
 
 label a4_s09_sector_12_sweep_ob:
-    $ show_timeline("DAY 46", "04:47", "Sector 12 — Operations")
+    $ show_timeline("28th of Forge, 390 A.C.", "04:47", "Sector 12 — Operations")
 
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 35mm, locked tripod. The ops table wide. Opens on the table from

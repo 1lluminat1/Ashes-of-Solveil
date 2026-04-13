@@ -9,7 +9,7 @@ $ scene_mark(_current_scene_id, "entered")
 
 
 label a1_s02_bedroom:
-    $ show_timeline("DAY 1", "07:30", "Aeries — Aeron's Quarters")
+    $ show_timeline("42nd of Forge, 383 A.C.", "07:30", "Aeries — Aeron's Quarters")
 
     # ========= STAGE DIRECTIONS =========
     # CAMERA: Wide static shot of the room — no character in frame yet. Cold, minimal.

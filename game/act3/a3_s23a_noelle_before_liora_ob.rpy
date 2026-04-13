@@ -11,7 +11,7 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a3_s23a_noelle_before_liora_ob:
 
-    $ show_timeline("DAY 42", "02:00", "Phoenix Base — Noelle's Workspace")
+    $ show_timeline("35th of Cipher, 388 A.C.", "02:00", "Phoenix Base — Noelle's Workspace")
 
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 50mm, locked. Opens on Noelle's terminal -- the probability model

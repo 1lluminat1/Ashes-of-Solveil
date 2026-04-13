@@ -9,7 +9,7 @@ $ _current_scene_id = "a4_s14_return_to_the_table_emp"
 $ scene_mark(_current_scene_id, "entered")
 
 label a4_s14_return_to_the_table_emp:
-    $ show_timeline("DAY 50", "12:15", "Phoenix Secondary Base — Ops Wing")
+    $ show_timeline("32nd of Forge, 390 A.C.", "12:15", "Phoenix Secondary Base — Ops Wing")
 
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: Four movements, minimal.

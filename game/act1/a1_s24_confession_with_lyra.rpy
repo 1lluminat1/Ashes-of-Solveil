@@ -9,7 +9,7 @@ $ scene_mark(_current_scene_id, "entered")
 
 
 label a1_s24_confession_with_lyra:
-    $ show_timeline("DAY 5", "05:00", "Aeries — Aeron's Quarters")
+    $ show_timeline("46th of Forge, 383 A.C.", "05:00", "Aeries — Aeron's Quarters")
 
     # Codex — stage bumps for characters the player learns more about here.
     $ codex_reveal("lyra_vashar", to_stage=1, source="a1_s24_confession_with_lyra")

@@ -13,7 +13,7 @@ label a4_s15_zira_deepening_erotic_emp:
 
     # Gallery — unlock this scene in the character replay grid.
     $ gallery_unlock("a4_s15_zira_deepening_erotic_emp")
-    $ show_timeline("DAY 51", "23:00", "Phoenix Secondary Base — Zira's Workshop")
+    $ show_timeline("33rd of Forge, 390 A.C.", "23:00", "Phoenix Secondary Base — Zira's Workshop")
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: Five movements.
     #         (1) The doorway. 35mm, locked, from inside the workshop looking

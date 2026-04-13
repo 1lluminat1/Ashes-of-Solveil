@@ -14,7 +14,7 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a3_s11_counter_strike_ob:
 
-    $ show_timeline("DAY 29", "01:40", "Phoenix Base — War Room")
+    $ show_timeline("22nd of Cipher, 388 A.C.", "01:40", "Phoenix Base — War Room")
 
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 40mm for the intel delivery, then 50mm locked for planning.
