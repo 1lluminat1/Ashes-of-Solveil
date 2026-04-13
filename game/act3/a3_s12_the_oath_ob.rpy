@@ -16,6 +16,7 @@ label a3_s12_the_oath_ob:
 
     # Gallery — unlock this scene in the character replay grid.
     $ gallery_unlock("a3_s12_the_oath_ob")
+    $ show_timeline("DAY 30", "02:00", "Phoenix Base — Nyra's Quarters")
     # Codex — stage bumps for characters the player learns more about here.
     $ codex_reveal("nyra", to_stage=1, source="a3_s12_the_oath_ob")
 
@@ -429,6 +430,8 @@ label a3_s12_the_oath_ob:
     $ npc_remember("Aeron", "tremor_stopped_after_nyra", tone="unsettling_relief")
     $ scene_mark(_current_scene_id, "completed")
 
+    call li_lore_check("Nyra") from _a3_s12_lore
+
     return
 
     # --- COMFORT VARIANT ---
@@ -463,6 +466,8 @@ label a3_s12_the_oath_ob:
         $ rel_bump("Nyra", respect=1)
         $ flag("nyra_oath_deferred", True)
         $ scene_mark(_current_scene_id, "completed")
+
+        call li_lore_check("Nyra") from _a3_s12_lore_comfort
 
         return
 

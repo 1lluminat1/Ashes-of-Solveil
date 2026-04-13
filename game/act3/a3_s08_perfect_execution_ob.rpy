@@ -14,6 +14,8 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a3_s08_perfect_execution_ob:
 
+    $ show_timeline("DAY 27", "03:00", "Sector 4 — Supply Depot")
+
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 40mm locked during planning. Switch to 50mm handheld during the operation --
     #         but steadier than combat should be. The steadiness IS the horror.

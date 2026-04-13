@@ -9,6 +9,7 @@ $ _current_scene_id = "a4_s09a_she_calls_him_out_emp"
 $ scene_mark(_current_scene_id, "entered")
 
 label a4_s09a_she_calls_him_out_emp:
+    $ show_timeline("DAY 46", "12:00", "Phoenix Secondary Base — Mess Hall")
 
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 50mm, handheld but held still. The mess at the back-end of third shift —
@@ -435,6 +436,7 @@ label a4_s09a_she_calls_him_out_emp:
     $ canon_set("aeron.seen_by_zira_in_grief", True)
     $ tp_seed("a4.zira.let_me_in")
     $ scene_mark(_current_scene_id, "completed")
+    call li_lore_check("Zira") from _a4_s09a_lore
 
     return
 

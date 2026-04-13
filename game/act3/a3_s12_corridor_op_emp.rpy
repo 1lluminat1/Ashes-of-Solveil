@@ -10,6 +10,8 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a3_s12_corridor_op_emp:
 
+    $ show_timeline("DAY 31", "02:00", "Sector 11 — Service Corridor")
+
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 28mm, handheld with purpose — tight and kinetic during the operation,
     #         widening for the briefing and aftermath. Drift increases during the extraction

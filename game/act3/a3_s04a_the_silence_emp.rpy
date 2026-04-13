@@ -10,6 +10,8 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a3_s04a_the_silence_emp:
 
+    $ show_timeline("DAY 23", "14:00", "Phoenix Base — War Room")
+
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 40mm, locked tripod. Council framing — wide establishing, then rotating close-ups
     #         on each speaker during the menu options. If the timer fires: slow push-in on Aeron,

@@ -11,6 +11,7 @@ $ _current_scene_id = "a4_s07_aeron_and_nyra_cold_ob"
 $ scene_mark(_current_scene_id, "entered")
 
 label a4_s07_aeron_and_nyra_cold_ob:
+    $ show_timeline("DAY 45", "01:00", "Phoenix Base — Nyra's Quarters")
 
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 50mm, locked. Two-shot across a small table. Neither character
@@ -427,6 +428,7 @@ label a4_s07_aeron_and_nyra_cold_ob:
     $ metric("ob.aeron.marcus_idiom", +1)
 
     $ scene_mark(_current_scene_id, "exited")
+    call li_lore_check("Nyra") from _a4_s07_lore
 
     return
 

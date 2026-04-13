@@ -11,6 +11,8 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a3_s05_echoes_in_rain_ob:
 
+    $ show_timeline("DAY 25", "04:00", "Sector 4 — Ruins")
+
     # Codex — Nyra's first appearance on the OB path.
     $ codex_mention("nyra", source="a3_s05_echoes_in_rain_ob")
 

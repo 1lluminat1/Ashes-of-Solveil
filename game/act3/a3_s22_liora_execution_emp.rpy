@@ -16,6 +16,7 @@ label a3_s22_liora_execution_emp:
 
     # Codex — stage bumps for characters the player learns more about here.
     $ codex_reveal("liora_rylan", to_stage=2, source="a3_s22_liora_execution_emp")
+    $ show_timeline("DAY 42", "10:00", "Aeries — Public Platform")
 
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: This scene uses three visual grammars:

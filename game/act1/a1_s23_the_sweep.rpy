@@ -13,6 +13,7 @@ define unit4 = Character("[Unit-4]", color="#4A90E2")
 
 
 label a1_s23_the_sweep:
+    $ show_timeline("DAY 5", "02:00", "Sector 10 — Operation 391")
 
     # Codex — Operation 391 is canonical now. Unlock the sweep entry.
     $ codex_mention("sector_10_sweep", source="a1_s23_the_sweep")

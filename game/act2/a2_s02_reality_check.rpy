@@ -8,6 +8,7 @@ $ _current_scene_id = "a2_s02_reality_check"
 $ scene_mark(_current_scene_id, "entered")
 
 label a2_s02_reality_check:
+    $ show_timeline("DAY 8", "10:00", "Unders — Safe House")
 
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 28–35mm interior; mostly static with slow 3–4% drift; occasional push-in on Zira "reality" lines.

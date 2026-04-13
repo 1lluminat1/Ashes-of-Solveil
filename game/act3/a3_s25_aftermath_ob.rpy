@@ -10,6 +10,8 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a3_s25_aftermath_ob:
 
+    $ show_timeline("DAY 42", "18:00", "Phoenix Base — War Room")
+
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 40mm, steady. Wide on the war room. Tightens to each speaker.
     #         Final shot: Aeron at the table, alone. The lights on. The room obedient.

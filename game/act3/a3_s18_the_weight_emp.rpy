@@ -10,6 +10,8 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a3_s18_the_weight_emp:
 
+    $ show_timeline("DAY 35", "00:30", "Phoenix Base — War Room")
+
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 40mm, locked on tripod. Steady. The stillness is the point.
     #         Opens wide on the command table — empty chairs, maps, the holo-surface

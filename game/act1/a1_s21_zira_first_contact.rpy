@@ -9,6 +9,7 @@ $ scene_mark(_current_scene_id, "entered")
 
 
 label a1_s21_zira_first_contact:
+    $ show_timeline("DAY 4", "14:00", "Sector 10 — Market District")
 
     # Codex — Zira's first in-scene appearance. Stage 0 unlocks.
     $ codex_mention("zira", source="a1_s21_zira_first_contact")

@@ -10,6 +10,7 @@ $ scene_mark(_current_scene_id, "entered")
 define torin = Character("Torin")
 
 label a2_s23_mercy_and_counting:
+    $ show_timeline("DAY 20", "23:00", "Phoenix Base — Medbay")
 
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 40mm, locked. Tighter than usual — this scene is claustrophobic by design.

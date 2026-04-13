@@ -9,6 +9,7 @@ $ _current_scene_id = "a4_s06_tessa_counts_different_emp"
 $ scene_mark(_current_scene_id, "entered")
 
 label a4_s06_tessa_counts_different_emp:
+    $ show_timeline("DAY 44", "05:30", "Phoenix Secondary Base — Medbay")
 
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: Opens from Aeron's POV in the doorway. Shoulder-high, held back,

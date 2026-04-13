@@ -11,6 +11,8 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a3_s06_request_for_alignment_ob:
 
+    $ show_timeline("DAY 25", "14:00", "Phoenix Base — War Room")
+
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 40mm lens (OB tension), deliberate movement. Wide establishing shot of war room,
     #         then tightening coverage as tension builds. Reaction shots: Zira hostile, Lyra guarded,
@@ -501,6 +503,8 @@ label a3_s06_request_for_alignment_ob:
         $ scene_mark(_current_scene_id, "completed")
         $ flag("nyra_integrated", True)
 
+        call li_lore_check("Nyra") from _a3_s06_lore
+
         return
 
 
@@ -528,6 +532,8 @@ label a3_s06_request_for_alignment_ob:
         # ========= STATE UPDATES =========
         $ scene_mark(_current_scene_id, "completed")
         $ flag("nyra_rejected", True)
+
+        call li_lore_check("Nyra") from _a3_s06_lore_reject
 
         return
 

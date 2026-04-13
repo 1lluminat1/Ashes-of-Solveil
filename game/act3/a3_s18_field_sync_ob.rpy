@@ -12,6 +12,8 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a3_s18_field_sync_ob:
 
+    $ show_timeline("DAY 36", "14:00", "Sector 6 — Patrol Route")
+
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 28mm, handheld, drift 12-15%. Same combat framing as EMP s10.
     #         The crucial difference: when the sync hits, the camera DOESN'T stabilize.

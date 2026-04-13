@@ -15,6 +15,7 @@ label a4_s20_noelle_deepening_erotic_ob:
 
     # Gallery — unlock this scene in the character replay grid.
     $ gallery_unlock("a4_s20_noelle_deepening_erotic_ob")
+    $ show_timeline("DAY 53", "01:00", "Phoenix Base — Noelle's Workspace")
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 50mm, locked tripod for the working-at-the-desk coverage; a
     #         slow handheld for the consent gate beats; a static medium wide

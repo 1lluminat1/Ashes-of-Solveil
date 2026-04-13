@@ -9,6 +9,7 @@ $ _current_scene_id = "a4_s12a_she_is_not_just_tactical_emp"
 $ scene_mark(_current_scene_id, "entered")
 
 label a4_s12a_she_is_not_just_tactical_emp:
+    $ show_timeline("DAY 48", "02:00", "Phoenix Secondary Base — Officers' Corridor")
 
 
     # Codex — stage bumps for characters the player learns more about here.
@@ -583,6 +584,7 @@ label a4_s12a_she_is_not_just_tactical_emp:
     $ tp_seed("a4.selene.inch_of_the_door")
     $ metric("selene_unguarded_moments_witnessed", delta=1)
     $ scene_mark(_current_scene_id, "exited")
+    call li_lore_check("Selene") from _a4_s12a_lore
 
     return
 

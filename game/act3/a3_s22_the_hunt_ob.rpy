@@ -11,6 +11,8 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a3_s22_the_hunt_ob:
 
+    $ show_timeline("DAY 40", "02:00", "Multiple Sectors — Operation")
+
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 50mm, locked (OB precision). War room command view.
     #         Opens on the tactical display: the city in blue light. Echelon patrols mapped.

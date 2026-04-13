@@ -13,6 +13,8 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a3_s09_echelon_interlude_3_ob:
 
+    $ show_timeline_echelon("E_INT_203", "Aeries — Behavioral Analysis")
+
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: Locked. 50mm. Flat institutional framing. No push-ins.
     #         Wide on the analysis desk -- two terminals, a shared display, dossier folders.

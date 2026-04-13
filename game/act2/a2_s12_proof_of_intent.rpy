@@ -8,6 +8,7 @@ $ _current_scene_id = "a2_s12_proof_of_intent"
 $ scene_mark(_current_scene_id, "entered")
 
 label a2_s12_proof_of_intent:
+    $ show_timeline("DAY 12", "15:00", "Unders — Sector 4 Ruins")
 
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: Dynamic action coverage. Wide establishing shots of the depot, then tight handheld during infiltration. Aeron's POV for tactical assessment moments.

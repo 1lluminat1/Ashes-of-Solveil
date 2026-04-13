@@ -9,6 +9,7 @@ $ _current_scene_id = "a4_s21_marcus_second_cut_emp"
 $ scene_mark(_current_scene_id, "entered")
 
 label a4_s21_marcus_second_cut_emp:
+    $ show_timeline("DAY 54", "08:00", "Phoenix Secondary Base — War Room")
 
 
     # Codex — stage bumps for characters the player learns more about here.

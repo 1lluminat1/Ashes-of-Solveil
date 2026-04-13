@@ -17,6 +17,7 @@ define cadet = Character("Daren")
 
 
 label a1_s06_gala:
+    $ show_timeline("DAY 2", "20:00", "Aeries — Grand Ballroom")
 
     # ========= STAGE DIRECTIONS =========
     # CAMERA: 35–38mm stabilized glide; gentle 3% push on stress beats; avoid frontal CU of Aeron until Marcus entrance.

@@ -14,6 +14,8 @@ define commander = Character("Commander")
 
 label a3_s09_echelon_interlude_3_emp:
 
+    $ show_timeline_echelon("E_INT_203", "Aeries — Logistics Division")
+
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: Locked. 50mm. Flat institutional framing. No push-ins. No drama.
     #         Wide on the requisition table -- papers, ledgers, a single terminal.

@@ -15,6 +15,7 @@ label a3_s13_proof_of_life_ob:
 
     # Gallery — unlock this scene in the character replay grid.
     $ gallery_unlock("a3_s13_proof_of_life_ob")
+    $ show_timeline("DAY 31", "22:00", "Phoenix Base — Aeron's Quarters")
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 50mm lens (OB detachment), locked tripod. Opens wide on the corridor --
     #         Lyra at his door. Same framing as s02 "Stay With Me" but the angles are

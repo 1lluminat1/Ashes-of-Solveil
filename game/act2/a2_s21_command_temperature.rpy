@@ -9,6 +9,7 @@ $ _current_scene_id = "a2_s21_command_temperature"
 $ scene_mark(_current_scene_id, "entered")
 
 label a2_s21_command_temperature:
+    $ show_timeline("DAY 18", "14:00", "Phoenix Base — War Room")
 
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 40mm, steady. Two-shots across the ops table — Selene and Aeron on opposite sides.

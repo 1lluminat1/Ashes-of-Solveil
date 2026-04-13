@@ -9,6 +9,8 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a3_s01_ashes_in_formation_ob:
 
+    $ show_timeline("DAY 22", "08:00", "Phoenix Base — Assembly Hall")
+
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 50mm lens (OB detachment), locked tripod for funeral, handheld for war room.
     #         Wide establishing shots emphasize isolation. Close-ups catch micro-expressions.

@@ -10,6 +10,7 @@ $ _current_scene_id = "a4_s09_noelle_implicated_emp"
 $ scene_mark(_current_scene_id, "entered")
 
 label a4_s09_noelle_implicated_emp:
+    $ show_timeline("DAY 46", "09:00", "Phoenix Secondary Base — Noelle's Workspace")
 
 
     # Codex — stage bumps for characters the player learns more about here.
@@ -499,6 +500,7 @@ label a4_s09_noelle_implicated_emp:
     $ metric("noelle_framework_confidence", 91)
     $ nudge_poly("witness", "held")
     $ scene_mark(_current_scene_id, "exited")
+    call li_lore_check("Noelle") from _a4_s09_lore
     return
 
 

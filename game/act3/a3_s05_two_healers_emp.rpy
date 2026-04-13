@@ -298,6 +298,8 @@ label a3_s05_two_healers_emp:
     $ flag("discipline_serves_care", True)
     $ scene_mark(_current_scene_id, "completed")
 
+    call li_lore_check("Tessa") from _a3_s05_lore
+
     return
 
 

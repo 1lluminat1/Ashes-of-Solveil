@@ -11,6 +11,7 @@ $ scene_mark(_current_scene_id, "entered")
 define man = Character("Local")
 
 label a2_s01_descent:
+    $ show_timeline("DAY 8", "04:00", "Aeries to Unders — Descent")
 
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 28–40mm; handheld sway on rooftop; steadier as they commit to moving; tighter CUs in crowd crush.

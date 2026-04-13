@@ -9,6 +9,7 @@ $ _current_scene_id = "a4_s04_lyra_unbuckled_emp"
 $ scene_mark(_current_scene_id, "entered")
 
 label a4_s04_lyra_unbuckled_emp:
+    $ show_timeline("DAY 43", "22:00", "Phoenix Secondary Base — Lyra's Desk")
 
 
     # Codex — stage bumps for characters the player learns more about here.
@@ -370,6 +371,7 @@ label a4_s04_lyra_unbuckled_emp:
     $ canon_set("lyra.band_is_chosen_not_compelled", True)
     $ tp_seed("a4.lyra_partnership_phase_one")
     $ scene_mark(_current_scene_id, "completed")
+    call li_lore_check("Lyra") from _a4_s04_lore
 
     return
 

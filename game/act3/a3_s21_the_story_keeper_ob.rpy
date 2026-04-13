@@ -10,6 +10,8 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a3_s21_the_story_keeper_ob:
 
+    $ show_timeline("DAY 39", "10:00", "Phoenix Base — Mapping Station")
+
     # Codex — first Liora unlock on the OB path.
     $ codex_mention("liora_rylan", source="a3_s21_the_story_keeper_ob")
 

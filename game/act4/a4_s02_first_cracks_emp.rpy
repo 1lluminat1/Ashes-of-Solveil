@@ -11,6 +11,7 @@ $ _current_scene_id = "a4_s02_first_cracks_emp"
 $ scene_mark(_current_scene_id, "entered")
 
 label a4_s02_first_cracks_emp:
+    $ show_timeline("DAY 43", "10:00", "Phoenix Secondary Base — War Room")
 
 
     # Codex — stage bumps for characters the player learns more about here.

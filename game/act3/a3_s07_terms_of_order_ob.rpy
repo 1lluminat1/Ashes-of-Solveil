@@ -14,6 +14,8 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a3_s07_terms_of_order_ob:
 
+    $ show_timeline("DAY 26", "06:00", "Phoenix Base — War Room")
+
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 40mm, locked tripod. Wide establishing of war room, then slow coverage rotation
     #         around the table. Each speaker gets a clean close-up. Nyra framed center
@@ -404,6 +406,8 @@ label a3_s07_terms_of_order_ob:
     $ npc_remember("Tessa", "terms_of_order", tone="concerned_caution")
     $ npc_remember("Noelle", "terms_of_order", tone="data_supportive")
     $ npc_remember("Lyra", "terms_of_order", tone="silent_breaking")
+
+    call li_lore_check("Nyra") from _a3_s07_lore
 
     return
 

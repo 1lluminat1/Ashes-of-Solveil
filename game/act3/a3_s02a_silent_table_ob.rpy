@@ -9,6 +9,8 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a3_s02a_silent_table_ob:
 
+    $ show_timeline("DAY 23", "06:00", "Phoenix Base — War Room")
+
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 40mm, center-locked (OB style). Slow pans across the table.
     #         Wide establishing shot shows Selene's empty chair. Close-ups on each speaker.

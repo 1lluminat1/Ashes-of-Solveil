@@ -8,7 +8,7 @@ $ _current_scene_id = "a2_s14_the_intel_den"
 $ scene_mark(_current_scene_id, "entered")
 
 label a2_s14_the_intel_den:
-
+    $ show_timeline("DAY 13", "10:00", "Unders — Intel Den")
 
     # Codex — stage bumps for characters the player learns more about here.
     $ codex_reveal("noelle_korr", to_stage=1, source="a2_s14_the_intel_den")

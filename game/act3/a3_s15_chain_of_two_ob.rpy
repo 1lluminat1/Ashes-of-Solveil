@@ -15,6 +15,7 @@ label a3_s15_chain_of_two_ob:
 
     # Gallery — unlock this scene in the character replay grid.
     $ gallery_unlock("a3_s15_chain_of_two_ob")
+    $ show_timeline("DAY 33", "03:00", "Phoenix Base — Signal Bay")
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 35mm, handheld with controlled drift (6-8%). The instability is Zira's --
     #         the camera moves the way she feels. Opens mid-action: Zira in the signal bay,
@@ -383,6 +384,8 @@ label a3_s15_chain_of_two_ob:
     $ npc_remember("Zira", "i_chose_you_first", tone="territorial_honesty")
     $ npc_remember("Aeron", "zira_didnt_ask_me_to_feel", tone="relief")
     $ scene_mark(_current_scene_id, "completed")
+
+    call li_lore_check("Zira") from _a3_s15_lore_ob
 
     return
 

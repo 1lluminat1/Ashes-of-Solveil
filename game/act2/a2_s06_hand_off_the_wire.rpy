@@ -8,6 +8,7 @@ $ _current_scene_id = "a2_s06_hand_off_the_wire"
 $ scene_mark(_current_scene_id, "entered")
 
 label a2_s06_hand_off_the_wire:
+    $ show_timeline("DAY 10", "02:00", "Unders — Ghostline Node")
 
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 35–50mm; tighter than previous scenes. Handheld with subtle drift. Push-ins on Zira when she reveals something vulnerable. Two-shots when they're working together at the node.

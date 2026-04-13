@@ -12,6 +12,8 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a3_s20a_lyra_prays_for_the_hunt_ob:
 
+    $ show_timeline("DAY 39", "04:00", "Phoenix Base — Altar Alcove")
+
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 50mm, locked. Opens on Lyra's quarters -- small, sparse. The Anayet texts
     #         on the shelf. The prayer mat on the floor. The Band visible on her wrist.

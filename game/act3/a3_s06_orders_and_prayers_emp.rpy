@@ -9,6 +9,8 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a3_s06_orders_and_prayers_emp:
 
+    $ show_timeline("DAY 25", "09:00", "Phoenix Base — War Room")
+
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 32mm lens (EMP warmth). Three-shot framing: Lyra, Selene, Aeron between.
     #         When Lyra and Selene argue, camera favors two-shots that exclude Aeron —

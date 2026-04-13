@@ -15,6 +15,7 @@ $ scene_mark(_current_scene_id, "entered")
 # m (Marcus) is used only for a brief Echelon intercept cut-in.
 
 label a4_s03_marcus_adapts_ob:
+    $ show_timeline("DAY 43", "15:00", "Phoenix Base — Briefing Room")
 
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 40mm locked for the operations room. Noelle at the analysis station,

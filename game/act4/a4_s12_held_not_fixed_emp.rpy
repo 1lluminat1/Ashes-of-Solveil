@@ -448,6 +448,7 @@ label a4_s12_held_not_fixed_emp:
     $ tp_seed("a4.tessa.held_not_fixed")
     $ nudge_poly(threshold=1)
     $ scene_mark(_current_scene_id, "completed")
+    call li_lore_check("Tessa") from _a4_s12_lore
 
     return
 

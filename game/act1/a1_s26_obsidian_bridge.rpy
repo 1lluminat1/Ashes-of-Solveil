@@ -9,7 +9,7 @@ $ scene_mark(_current_scene_id, "entered")
 
 
 label a1_s26_obsidian_bridge:
-
+    $ show_timeline("DAY 5", "00:00", "Sector 10 — Obsidian Bridge")
 
     # Codex — stage bumps for characters the player learns more about here.
     $ codex_reveal("zira", to_stage=1, source="a1_s26_obsidian_bridge")

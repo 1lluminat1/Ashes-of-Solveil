@@ -9,6 +9,7 @@ $ _current_scene_id = "a4_s11_mercy_call_costs_emp"
 $ scene_mark(_current_scene_id, "entered")
 
 label a4_s11_mercy_call_costs_emp:
+    $ show_timeline("DAY 47", "05:00", "Sector 12 — Ravine")
 
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: Four registers. (1) Field — handheld, tight, low light. The column

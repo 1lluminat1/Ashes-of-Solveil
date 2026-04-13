@@ -9,6 +9,7 @@ $ _current_scene_id = "a4_s13_protecting_exhaustion_emp"
 $ scene_mark(_current_scene_id, "entered")
 
 label a4_s13_protecting_exhaustion_emp:
+    $ show_timeline("DAY 48", "09:30", "Phoenix Secondary Base — Ops Wing")
 
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: Four movements.

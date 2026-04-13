@@ -14,6 +14,7 @@ $ scene_mark(_current_scene_id, "entered")
 # ny (Nyra) is defined centrally in ui_solveil.rpy
 
 label a4_s02_the_new_shape_ob:
+    $ show_timeline("DAY 43", "10:00", "Phoenix Base — War Room")
 
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 40mm, locked tripod. War room wide establishing -- slightly colder than

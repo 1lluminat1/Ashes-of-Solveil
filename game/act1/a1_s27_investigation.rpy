@@ -9,6 +9,7 @@ $ scene_mark(_current_scene_id, "entered")
 
 
 label a1_s27_investigation:
+    $ show_timeline("DAY 6", "10:00", "Middle Levels — Data Terminal")
 
     # ========= STAGE DIRECTIONS =========
     # CAMERA: Static apartment wide; terminal inserts; pacing coverage.

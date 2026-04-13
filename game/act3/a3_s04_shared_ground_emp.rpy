@@ -10,6 +10,8 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a3_s04_shared_ground_emp:
 
+    $ show_timeline("DAY 23", "05:00", "Sector 4 — Supply Convoy")
+
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 40mm, steady handheld. Opens wide on the command table — Selene and Aeron side by side.
     #         Briefing: clean two-shots, over-shoulder bias. Execution: tighter, faster cuts — 28mm.

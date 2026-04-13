@@ -10,6 +10,7 @@ $ _current_scene_id = "a4_s08_zira_exit_plan_emp"
 $ scene_mark(_current_scene_id, "entered")
 
 label a4_s08_zira_exit_plan_emp:
+    $ show_timeline("DAY 45", "23:00", "Phoenix Secondary Base — Zira's Workshop")
 
 
     # Codex — stage bumps for characters the player learns more about here.
@@ -544,6 +545,7 @@ label a4_s08_zira_exit_plan_emp:
     $ tp_seed("a4.zira.two_spaces")
     $ metric("zira_exit_plan_days_building", 21)
     $ scene_mark(_current_scene_id, "exited")
+    call li_lore_check("Zira") from _a4_s08_lore
 
     return
 

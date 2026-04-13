@@ -15,6 +15,7 @@ label a4_s11_nyra_second_oath_ob:
 
     # Gallery — unlock this scene in the character replay grid.
     $ gallery_unlock("a4_s11_nyra_second_oath_ob")
+    $ show_timeline("DAY 47", "22:00", "Phoenix Base — Nyra's Quarters")
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 50mm, locked tripod. Same lens grammar as a3_s12 -- formal distance,
     #         composed framing, no drift. But the room is different. This is HER

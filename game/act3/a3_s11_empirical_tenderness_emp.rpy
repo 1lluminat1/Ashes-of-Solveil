@@ -14,6 +14,7 @@ label a3_s11_empirical_tenderness_emp:
 
     # Gallery — unlock this scene in the character replay grid.
     $ gallery_unlock("a3_s11_empirical_tenderness_emp")
+    $ show_timeline("DAY 30", "23:00", "Phoenix Base — Noelle's Workspace")
     # Codex — stage bumps for characters the player learns more about here.
     $ codex_reveal("noelle_korr", to_stage=2, source="a3_s11_empirical_tenderness_emp")
 

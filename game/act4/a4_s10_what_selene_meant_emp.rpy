@@ -9,6 +9,7 @@ $ _current_scene_id = "a4_s10_what_selene_meant_emp"
 $ scene_mark(_current_scene_id, "entered")
 
 label a4_s10_what_selene_meant_emp:
+    $ show_timeline("DAY 46", "22:00", "Phoenix Secondary Base — Archive Annex")
 
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: One room. Two people. 50mm, locked, patient. This is not a scene with
@@ -487,6 +488,7 @@ label a4_s10_what_selene_meant_emp:
     $ tp_seed("a4.selene.delegate_the_question")
     $ nudge_poly("authority", "shared")
     $ scene_mark(_current_scene_id, "completed")
+    call li_lore_check("Selene") from _a4_s10_lore
 
     return
 

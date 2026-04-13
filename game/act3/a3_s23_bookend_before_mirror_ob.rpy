@@ -10,6 +10,8 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a3_s23_bookend_before_mirror_ob:
 
+    $ show_timeline("DAY 41", "19:00", "Phoenix Base — Common Area")
+
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 40mm, locked. Steady. The steadiness is deliberate -- this room doesn't drift.
     #         EMP's bookend used handheld warmth (32mm, gentle drift). OB's bookend uses

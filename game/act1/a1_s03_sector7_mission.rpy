@@ -12,6 +12,7 @@ define unit3 = Character("Unit-3", color="#4A90E2")
 
 
 label a1_s03_sector7_mission:
+    $ show_timeline("DAY 1", "14:00", "Sector 7 — Industrial Zone")
 
     # ========= STAGE DIRECTIONS =========
     # CAMERA: 38mm, eye-level, center-locked; slight vignette. Static plate (no character sprites yet).

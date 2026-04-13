@@ -11,6 +11,7 @@ define docent = Character("Docent")
 
 
 label a1_s15_archive_of_merit:
+    $ show_timeline("DAY 3", "16:00", "Aeries — Archive of Merit")
 
     # ========= STAGE DIRECTIONS =========
     # CAMERA: Slow tracking shot through corridor; occasional close-ups on plaques.

@@ -9,6 +9,7 @@ $ scene_mark(_current_scene_id, "entered")
 
 
 label a1_s01_branding:
+    $ show_timeline("DAY 1", "06:00", "Aeries — Tier Hall")
 
     # ========= STAGE DIRECTIONS =========
     # CAMERA: Nothing. No image. No character. No light.

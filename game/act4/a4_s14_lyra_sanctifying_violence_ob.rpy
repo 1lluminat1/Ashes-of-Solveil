@@ -11,6 +11,7 @@ $ _current_scene_id = "a4_s14_lyra_sanctifying_violence_ob"
 $ scene_mark(_current_scene_id, "entered")
 
 label a4_s14_lyra_sanctifying_violence_ob:
+    $ show_timeline("DAY 49", "06:00", "Phoenix Base — Muster Bay")
 
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 50mm locked. Institutional register. The scene opens three-quarter on the

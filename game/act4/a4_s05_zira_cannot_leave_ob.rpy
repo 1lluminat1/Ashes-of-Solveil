@@ -11,6 +11,7 @@ $ _current_scene_id = "a4_s05_zira_cannot_leave_ob"
 $ scene_mark(_current_scene_id, "entered")
 
 label a4_s05_zira_cannot_leave_ob:
+    $ show_timeline("DAY 44", "23:00", "Phoenix Base — Zira's Workshop")
 
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 40mm, locked. No handheld. No drift. This is a woman holding still.

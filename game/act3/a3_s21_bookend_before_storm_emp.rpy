@@ -10,6 +10,8 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a3_s21_bookend_before_storm_emp:
 
+    $ show_timeline("DAY 40", "19:00", "Phoenix Base — Common Area")
+
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 32mm, handheld with gentle drift (2%). Warm. Domestic. The camera moves
     #         like someone walking through a room where everyone belongs.

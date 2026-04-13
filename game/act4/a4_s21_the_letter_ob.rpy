@@ -11,6 +11,7 @@ $ _current_scene_id = "a4_s21_the_letter_ob"
 $ scene_mark(_current_scene_id, "entered")
 
 label a4_s21_the_letter_ob:
+    $ show_timeline("DAY 54", "05:00", "Phoenix Base — Ops Room")
 
 
     # Codex — stage bumps for characters the player learns more about here.

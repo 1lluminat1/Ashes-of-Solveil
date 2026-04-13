@@ -9,6 +9,7 @@ $ scene_mark(_current_scene_id, "entered")
 
 
 label a1_s10_barracks_morning:
+    $ show_timeline("DAY 3", "06:00", "Aeries — Barracks")
 
     # ========= STAGE DIRECTIONS =========
     # CAMERA: Lateral track through barracks aisle (35–40mm), waist-up silhouettes; keep Aeron face off-screen.

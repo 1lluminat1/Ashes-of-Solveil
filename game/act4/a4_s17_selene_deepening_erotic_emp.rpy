@@ -17,6 +17,7 @@ label a4_s17_selene_deepening_erotic_emp:
 
     # Gallery — unlock this scene in the character replay grid.
     $ gallery_unlock("a4_s17_selene_deepening_erotic_emp")
+    $ show_timeline("DAY 52", "23:00", "Phoenix Secondary Base — Selene's Quarters")
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: Four movements.
     #         (1) Corridor approach: 40mm, Aeron's walking pace. The base is

@@ -13,6 +13,7 @@ label a3_s03_breath_of_faith_emp:
 
     # Gallery — unlock this scene in the character replay grid.
     $ gallery_unlock("a3_s03_breath_of_faith_emp")
+    $ show_timeline("DAY 22", "22:00", "Phoenix Base — Balcony")
     # Codex — stage bumps for characters the player learns more about here.
     $ codex_reveal("lyra_vashar", to_stage=2, source="a3_s03_breath_of_faith_emp")
 
@@ -398,6 +399,8 @@ label a3_s03_breath_of_faith_emp:
         # ========= STATE UPDATES =========
         $ scene_mark(_current_scene_id, "completed")
 
+        call li_lore_check("Lyra") from _a3_s03_lore
+
         return
 
     label .scene_end_intimate:
@@ -424,6 +427,8 @@ label a3_s03_breath_of_faith_emp:
         # ========= STATE UPDATES =========
         $ flag("breath_of_faith_intimate", True)
         $ scene_mark(_current_scene_id, "completed")
+
+        call li_lore_check("Lyra") from _a3_s03_lore_intimate
 
         return
 

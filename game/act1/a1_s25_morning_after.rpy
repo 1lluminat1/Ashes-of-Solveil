@@ -9,6 +9,7 @@ $ scene_mark(_current_scene_id, "entered")
 
 
 label a1_s25_morning_after:
+    $ show_timeline("DAY 5", "08:00", "Aeries — Aeron's Quarters")
 
     # ========= STAGE DIRECTIONS =========
     # CAMERA: Slow reveal from floor-level; tight two-shots; wrist CU for Band-check; threshold hug option.

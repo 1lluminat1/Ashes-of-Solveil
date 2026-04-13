@@ -8,7 +8,7 @@ $ _current_scene_id = "a2_s13_echelon_interlude_1"
 $ scene_mark(_current_scene_id, "entered")
 
 label a2_s13_echelon_interlude_1:
-
+    $ show_timeline_echelon("E_INT_201", "Aeries Command Spire")
 
     # Codex — stage bumps for characters the player learns more about here.
     $ codex_reveal("marcus_rylan", to_stage=2, source="a2_s13_echelon_interlude_1")

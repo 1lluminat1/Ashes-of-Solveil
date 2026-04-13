@@ -11,7 +11,7 @@ define aud = Character("Auditor")
 
 
 label a1_s09_inspection_day:
-
+    $ show_timeline("DAY 3", "08:00", "Aeries — Inspection Hall")
 
     # Codex — stage bumps for characters the player learns more about here.
     $ codex_reveal("marcus_rylan", to_stage=1, source="a1_s09_inspection_day")

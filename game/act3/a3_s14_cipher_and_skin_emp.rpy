@@ -10,6 +10,8 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a3_s14_cipher_and_skin_emp:
 
+    $ show_timeline("DAY 32", "01:00", "Phoenix Base — Ops Table")
+
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 40mm lens, locked tripod for the opening wide shot — stability that matches command routine.
     #         As the conversation turns personal, shift to handheld 32mm — the frame loosens with them.
@@ -360,6 +362,8 @@ label a3_s14_cipher_and_skin_emp:
     $ rel_bump("Selene", trust=1, affection=2)
     $ flag("selene_first_kiss", True)
     $ scene_mark(_current_scene_id, "completed")
+
+    call li_lore_check("Selene") from _a3_s14_lore
 
     return
 

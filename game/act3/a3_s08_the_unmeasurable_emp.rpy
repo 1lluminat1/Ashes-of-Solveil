@@ -10,6 +10,8 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a3_s08_the_unmeasurable_emp:
 
+    $ show_timeline("DAY 28", "20:00", "Phoenix Base — Observation Deck")
+
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 35mm, steady dolly. Opens from Aeron's POV in the doorway — wide on the analysis
     #         alcove. Tightens to two-shots of Lyra and Noelle as the experiment begins.
@@ -365,6 +367,8 @@ label a3_s08_the_unmeasurable_emp:
     $ flag("unmeasurable_logged", True)
     $ flag("noelle_coherence_gap", True)
     $ scene_mark(_current_scene_id, "completed")
+
+    call li_lore_check("Noelle") from _a3_s08_lore
 
     return
 

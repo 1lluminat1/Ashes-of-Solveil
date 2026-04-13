@@ -13,6 +13,7 @@ define senna = Character("Senna")
 define maren = Character("Maren")
 
 label a2_s19_recruitment_wave:
+    $ show_timeline("DAY 16", "08:00", "Phoenix Base — Intake")
 
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 35mm, starts wide on ops room energy then tightens for interviews. Two-shot for Elara.

@@ -15,6 +15,7 @@ $ scene_mark(_current_scene_id, "entered")
 define rhe = Character("Commander Rhea Vestin", color="#8a95a4")
 
 label a4_s08_echelon_interlude_4_ob:
+    $ show_timeline_echelon("E_INT_204", "Aeries Command Spire")
 
     # Codex — Rhea's first named mention on the OB path.
     $ codex_mention("rhea_vestin", source="a4_s08_echelon_interlude_4_ob")

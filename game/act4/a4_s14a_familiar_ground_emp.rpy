@@ -23,6 +23,7 @@ label a4_s14a_familiar_ground_emp:
 
     # Gallery — unlock this scene in the character replay grid.
     $ gallery_unlock("a4_s14a_familiar_ground_emp")
+    $ show_timeline("DAY 50", "23:30", "Phoenix Secondary Base — Mapping Station")
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: Five movements.
     #         (1) The mapping station from outside. 50mm, locked. The door

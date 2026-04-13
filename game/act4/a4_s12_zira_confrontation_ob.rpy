@@ -11,6 +11,7 @@ $ _current_scene_id = "a4_s12_zira_confrontation_ob"
 $ scene_mark(_current_scene_id, "entered")
 
 label a4_s12_zira_confrontation_ob:
+    $ show_timeline("DAY 48", "07:00", "Phoenix Base — Ops Corridor")
 
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 40mm, locked for the setup, then handheld with restrained drift
@@ -397,6 +398,7 @@ label a4_s12_zira_confrontation_ob:
     $ npc_remember("Aeron", "rehearsed_the_half_answer_two_weeks_ago", tone="booked_cost")
     $ metric("zira_patience", adjust=-1)
     $ scene_mark(_current_scene_id, "completed")
+    call li_lore_check("Zira") from _a4_s12_ob_lore
 
     return
 

@@ -10,6 +10,7 @@ $ scene_mark(_current_scene_id, "entered")
 define jace = Character("Jace")
 
 label a2_s05_clinic:
+    $ show_timeline("DAY 9", "14:00", "Unders — Tessa's Clinic")
 
     # Codex — Tessa's first scene. Unlock her entry.
     $ codex_mention("tessa", source="a2_s05_clinic")

@@ -10,6 +10,7 @@ $ scene_mark(_current_scene_id, "entered")
 $ op_start("raid_defense", note="Echelon assault on main base")
 
 label a2_s25_echelon_raid_defense:
+    $ show_timeline("DAY 21", "02:00", "Phoenix Base — Perimeter")
 
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: Shifts per phase. Wide for alarm. Tight handheld for Zira's sabotage. Military precision for Lyra.

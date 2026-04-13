@@ -11,6 +11,8 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a3_s18a_the_letter_emp:
 
+    $ show_timeline("DAY 36", "02:00", "Phoenix Base — Mapping Station")
+
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 50mm, locked. Clinical opening — the dead drop location. Then close on hands.
     #         Zira's hands opening the case. Aeron's hands receiving the letter.

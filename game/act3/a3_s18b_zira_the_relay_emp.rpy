@@ -130,6 +130,8 @@ label a3_s18b_zira_the_relay_emp:
     $ npc_remember("Zira", "processed_liora_letter_alone", tone="quiet_resolve")
     $ scene_mark(_current_scene_id, "completed")
 
+    call li_lore_check("Zira") from _a3_s18b_lore
+
     return
 
 

@@ -9,6 +9,8 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a3_s07_echelon_strikes_back_emp:
 
+    $ show_timeline("DAY 27", "03:00", "Phoenix Secondary Base")
+
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 32mm lens but drained of EMP warmth — handheld with 5-8% drift. Unsteady.
     #         Opens wide on approach (landscape of wrongness), then tightens through the walk-through.

@@ -10,6 +10,7 @@ $ _current_scene_id = "a4_s07_echelon_interlude_4_emp"
 $ scene_mark(_current_scene_id, "entered")
 
 label a4_s07_echelon_interlude_4_emp:
+    $ show_timeline_echelon("E_INT_204", "Aeries Command Spire")
 
 
     # Codex — stage bumps for characters the player learns more about here.

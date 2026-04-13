@@ -11,6 +11,8 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a3_s05a_woman_from_sector_7_emp:
 
+    $ show_timeline("DAY 24", "12:00", "Sector 7 — Community Hall")
+
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 32mm lens (EMP warmth). Opens wide on mess hall bustle, then tightens to
     #         two-shot as Hana approaches. Aeron pushed to frame edge — this is Lyra's scene.

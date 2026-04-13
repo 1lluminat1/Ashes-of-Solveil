@@ -12,6 +12,7 @@ define rec = Character("Recruit")
 
 
 label a1_s13_demonstration_floor:
+    $ show_timeline("DAY 3", "14:00", "Aeries — Training Complex")
 
     # ========= STAGE DIRECTIONS =========
     # CAMERA: Static wide on simulation floor; occasional tight inserts on hands/weapon.

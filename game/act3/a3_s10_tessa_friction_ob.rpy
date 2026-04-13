@@ -12,6 +12,8 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a3_s10_tessa_friction_ob:
 
+    $ show_timeline("DAY 28", "09:00", "Phoenix Base — Medbay")
+
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 50mm, handheld with subtle drift. Two-shot throughout -- Tessa and Aeron
     #         across the medbay table. Close-ups alternate. Her face open, his guarded.
@@ -329,6 +331,8 @@ label a3_s10_tessa_friction_ob:
 
         # ========= STATE UPDATES =========
         $ scene_mark(_current_scene_id, "completed")
+
+        call li_lore_check("Tessa") from _a3_s10_lore
 
         return
 

@@ -12,6 +12,8 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a3_s19_the_weight_ob:
 
+    $ show_timeline("DAY 37", "00:30", "Phoenix Base — War Room")
+
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 40mm, locked tripod. Same steadiness as EMP version.
     #         Opens wide on the war room: empty table, empty chairs. The holo-table

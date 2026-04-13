@@ -12,6 +12,7 @@ define analyst = Character("Analyst")
 define supervisor = Character("Supervisor")
 
 label a2_s24_echelon_interlude_2:
+    $ show_timeline_echelon("E_INT_202", "Aeries Command Spire")
 
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: Locked. 50mm. Flat, institutional framing. No push-ins. No drama. Bureaucracy.

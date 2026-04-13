@@ -11,6 +11,8 @@ $ scene_mark(_current_scene_id, "entered")
 
 label a3_s20_you_dont_get_to_break_ob:
 
+    $ show_timeline("DAY 38", "07:00", "Phoenix Base — Ops Corridor")
+
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 40mm, locked. Two-shot framing throughout -- Zira and Aeron, equal weight.
     #         Neither person dominates the frame. The camera doesn't take sides.

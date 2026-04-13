@@ -9,6 +9,7 @@ $ scene_mark(_current_scene_id, "entered")
 
 
 label a1_s18_lyra_visit:
+    $ show_timeline("DAY 3", "23:45", "Aeries — Aeron's Quarters")
 
     # ========= STAGE DIRECTIONS =========
     # CAMERA: Over-shoulder reveals; two-shots in profile; window reflection CUs.

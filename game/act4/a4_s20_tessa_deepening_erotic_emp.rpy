@@ -13,6 +13,7 @@ label a4_s20_tessa_deepening_erotic_emp:
 
     # Gallery — unlock this scene in the character replay grid.
     $ gallery_unlock("a4_s20_tessa_deepening_erotic_emp")
+    $ show_timeline("DAY 53", "23:00", "Phoenix Secondary Base — Medbay")
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: Four movements.
     #         (1) Doorway — the reverse of s06's voyeur frame. Aeron in the door, the

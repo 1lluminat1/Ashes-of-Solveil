@@ -8,6 +8,7 @@ $ _current_scene_id = "a2_s08_the_analyst"
 $ scene_mark(_current_scene_id, "entered")
 
 label a2_s08_the_analyst:
+    $ show_timeline("DAY 11", "09:00", "Unders — Analysis Room")
 
     # Codex — Noelle's first appearance (over a Ghostline terminal).
     $ codex_mention("noelle_korr", source="a2_s08_the_analyst")
