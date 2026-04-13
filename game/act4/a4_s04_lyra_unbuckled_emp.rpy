@@ -44,6 +44,22 @@ label a4_s04_lyra_unbuckled_emp:
 
     # ========== PHASE 1 — THE ABSENCE ==========
 
+    # CAMERA: open on the Aether Band on the desk — 85mm macro,
+    #         unusually tight for a scene opener. The lamp seam
+    #         caught on the leather. Hold until the absence
+    #         becomes the subject. Then rack focus through the
+    #         shallow depth to Lyra's hands in her lap, leaving
+    #         the Band in soft focus. Aeron's entrance is a
+    #         reflected motion in the lamp's brass — the camera
+    #         does not cut to him. He arrives in the existing
+    #         frame.
+    # LIGHTING: one lamp, warm, low. The EMP dial at its softest —
+    #           micro-bloom on the practical per the Cinematography
+    #           Bible §4.4, warm back-edge kicker under 2500K at
+    #           1% key. The Band catches the lamp. The wrist does
+    #           not. The room tilts toward the unlit half-
+    #           centimeter by itself.
+
     "The door to Lyra's quarters is not locked. It has not been locked since the morning after the execution. There is a detail there he does not ask her about."
 
     "He knocks anyway. Once. Then opens."
@@ -112,6 +128,20 @@ label a4_s04_lyra_unbuckled_emp:
 
     # ========== PHASE 3 — THE WRIST ==========
 
+    # CAMERA: insert on Lyra's bare wrist. The camera has not had
+    #         a close on a wrist in this series before — the shot
+    #         is a first. The pale half-centimeter held center-
+    #         frame. Hold the insert through Aeron's "I have seen
+    #         her naked. I have not seen her wrist until now."
+    #         Then cut to her face for the first time — single,
+    #         eye-level. She has not looked at him yet and the
+    #         camera honors that by finding her first.
+    # FACE: Lyra — steadier than the opening. Not untroubled.
+    #        Chosen. The word she will say later (Anayet) is
+    #        already somewhere behind her eyes; the camera has to
+    #        show the reader that the word exists before she
+    #        names it.
+
     "He looks at her wrist. It is paler than the skin above it — the Band's shadow, eleven years deep. A half-centimeter of skin that has not met direct light since she was nineteen."
 
     "It looks like a scar that is not a scar. It looks like a place where a scar would be if the Order had been honest about what it was asking of her."
@@ -162,6 +192,20 @@ label a4_s04_lyra_unbuckled_emp:
 
     # ========== PHASE 4 — THE WORD ==========
 
+    # CAMERA: two-shot for the first time in the scene. Lyra at
+    #         the desk, Aeron still in the doorway distance
+    #         (before he kneels). The composition is asymmetric —
+    #         she is seated, he is standing at the far edge of
+    #         the frame. The asymmetry is the point: the word is
+    #         hers to offer across the room, and the geometry
+    #         does not let him reach for it early.
+    # FACE: Lyra — the moment she says "There is a word" is the
+    #        first eye contact she has given him in the scene.
+    #        The camera catches it on the beat. Hold her single
+    #        for the Anayet speech. This is her first Old
+    #        Tongue word spoken to him. The scene trusts her
+    #        voice to carry the weight.
+
     l "There is a word."
 
     a "A word."
@@ -197,6 +241,29 @@ label a4_s04_lyra_unbuckled_emp:
     l "I am naming the thing I cannot promise. That is what I have tonight."
 
     # ========== PHASE 5 — THE RE-BUCKLING ==========
+
+    # CAMERA: this is the scene's center. The macro ritual. Cover
+    #         the re-buckling in inserts: (1) the Band passing
+    #         from her hand to his, (2) the wrist turning palm-up,
+    #         (3) the leather finding the notch, (4) the strap
+    #         through the loop, (5) the pin lining up with the
+    #         worn hole, (6) the clasp closing. Six inserts, each
+    #         held for the length of the corresponding narration.
+    #         DO NOT cut to faces during the macro sequence. The
+    #         scene is asking you to trust the hands. The faces
+    #         are earned at the forehead beat and not before.
+    # SFX: the clasp click is the scene's most important single
+    #      sound cue. Recorded clean per the opening block. It
+    #      should be louder in the mix than either breath. The
+    #      room drops by a half-step around it so the click can
+    #      sit where the narration places it. Immediately after
+    #      the click, the ambient returns — but the held string
+    #      has not come in yet. That comes later, at the forehead.
+    # BLOCKING: Aeron kneels at the side of the desk, not in
+    #           front of her. The kneeling is height-match, not
+    #           deference. Match the frame to the height of her
+    #           wrist. The frame does not put him below her; it
+    #           puts his hands level with hers.
 
     "She picks up the Band. Holds it out to him. Not at arm's length — close. Her wrist turns over, palm up, in her lap."
 
@@ -263,6 +330,21 @@ label a4_s04_lyra_unbuckled_emp:
 
     # ========== PHASE 6 — THE SENTENCE ==========
 
+    # CAMERA: emerge from the macro sequence for the first face
+    #         beat of the whole scene. Two-shot at Lyra's wrist
+    #         height — she is still seated, he is still at the
+    #         side of the desk. Neither has straightened. The
+    #         composition is unusually low; hold it. Her face
+    #         into his shoulder-line, his face angled up to hers.
+    #         This is the first time they are in the same frame
+    #         at the same physical level in the scene.
+    # FACE: Lyra — "I used to think faith meant being whole" is
+    #        her quietest register yet. The voice under the voice.
+    #        The camera stays on her for the full three lines.
+    #        Aeron's reaction is a single slow close of the eyes,
+    #        off-frame. The camera does not need to see it because
+    #        the room does not need to see it.
+
     "His hands leave her wrist. He does not stand. He stays at her side, at the height of the desk, her hand still open in her lap."
 
     l "I used to think faith meant being whole."
@@ -308,6 +390,27 @@ label a4_s04_lyra_unbuckled_emp:
     athought "I am going to let that be a pattern I pay attention to."
 
     # ========== PHASE 7 — THE FOREHEAD ==========
+
+    # CAMERA: the forehead-rest is the scene's one held tight. Two
+    #         foreheads in profile, eyes closed, the Band visible
+    #         at the bottom of the frame under his thumb. Hold for
+    #         two breaths. The shot does not move, does not push,
+    #         does not rack. It holds the way a cleric holds a
+    #         bow. When she straightens, the camera straightens
+    #         with her but does not cut away. Her "Okay" lands on
+    #         her face still in the held tight; then the frame
+    #         opens gently for his exit to the door.
+    # SFX: the held string comes in here — the first music cue in
+    #      the scene. Barely there per the opening block, one
+    #      note. Underneath it, the room's breath — hers and his
+    #      sharing the same rhythm for the first time. The string
+    #      carries to the door and fades out on the threshold.
+    # FACE: for the first time in the scene the camera has both
+    #        faces in one tight composition. Lyra's is closer to
+    #        the lamp; Aeron's is in the amber lamp-spill. Both
+    #        softened. The scene has been building to this frame
+    #        for the entire 300 lines before it; it is not a
+    #        climax, it is a landing.
 
     "She leans forward in the chair. Slowly. Not a dramatic motion — the kind of motion a cleric would make toward an altar she had just been cleared to approach."
 

@@ -65,6 +65,23 @@ label a4_s04_lyra_prays_alone_ob:
 
     # ========== PHASE 1 -- THE POSITION ==========
 
+    # CAMERA: 50mm locked. The OB lens. Opens on the shrine alcove
+    #         from the corridor angle — the composition is the
+    #         rectangle of the alcove mouth framing Lyra's
+    #         three-quarter back. The alcove is narrow enough that
+    #         she fills the lower half of the frame and the
+    #         concrete ceiling fills the upper half. The small
+    #         shrine assemblage is arranged at her knees: candle,
+    #         cloth, icon. No drift. No search. The camera waits
+    #         with her.
+    # LIGHTING: the two lights of the scene are established in
+    #           Phase 1 and do not change. Candle: warm orange
+    #           practical, low. Corridor strip: cold blue-white,
+    #           bleeding through the open mouth of the alcove
+    #           from behind the camera. The two do not meet on
+    #           her face. She is bisected the whole scene. That
+    #           bisection is the scene's thesis.
+
     "The alcove is six feet deep and four feet wide. It used to hold fracture splints. Lyra moved the splints to the next alcove over and asked permission after."
 
     "The permission was given by a quartermaster who did not look at her when he said yes. She has noticed, in the last ten days, that fewer people look at her directly. She has not decided yet whether the problem is her or the base."
@@ -122,6 +139,19 @@ label a4_s04_lyra_prays_alone_ob:
     lthought "That is not the same thing."
 
     # ========== PHASE 3 -- THE NAME IN HER MOUTH ==========
+
+    # CAMERA: push in from the three-quarter back to a tight
+    #         profile on her mouth. The Old Tongue syllables are
+    #         under-voiced; the camera has to be close enough to
+    #         see them form and fail. Hold the profile through
+    #         the prayer attempt. The candle flame is visible at
+    #         the bottom edge of the frame — the scene's one
+    #         warm element, small and insistent.
+    # SFX: the Old Tongue syllables are mixed below the base
+    #      ambient. They should be barely audible — the shape of
+    #      her mouth should carry them more than the audio. When
+    #      the prayer fails, the breath becomes more audible
+    #      than the words. That substitution is the beat.
 
     "She tries a different opening. The one she has not used since she was a novice. The simplest."
 
@@ -201,6 +231,19 @@ label a4_s04_lyra_prays_alone_ob:
 
     # ========== PHASE 5 -- THE SECOND ATTEMPT AT PRAYER ==========
 
+    # CAMERA: insert on her hand at the Band. Macro. She has not
+    #         loosened it; she has cinched it tighter by one
+    #         notch past comfort. The leather under her thumb.
+    #         The metal clasp. The worn hole pulled past its
+    #         original seat. Hold the insert for the full
+    #         thought paragraph. The tightness is her second
+    #         tool, the body taking over what the mouth could
+    #         not carry.
+    # FACE: (off-frame during the insert) — her face does not
+    #        need to register the tightening. The wrist registers
+    #        it for her. The camera trusts the discipline to
+    #        speak through the body.
+
     "She tries once more. She tries the prayer for discernment. It is the prayer you say when you cannot tell which thing you are doing. It is the prayer the cathedral made her say before she took her initial vows."
 
     l "(under voice, Old Tongue) Sel'anor thrun i vethai."
@@ -267,6 +310,25 @@ label a4_s04_lyra_prays_alone_ob:
 
     # ========== PHASE 7 -- ARRIVAL ==========
 
+    # CAMERA: reverse angle on the alcove mouth — we see past
+    #         Lyra's kneeling silhouette to the corridor beyond.
+    #         Aeron's figure forms in the corridor light, crosses
+    #         the threshold, and his shadow passes over the
+    #         candle. The camera catches the flame's recovery in
+    #         the same shot. He kneels into the frame beside her
+    #         and the reverse becomes a two-shot without the
+    #         camera cutting. Symmetrical composition: both
+    #         kneeling, both three-quarter back, equal frame
+    #         weight per the opening block.
+    # BLOCKING: he kneels beside, not behind, not in front. He
+    #           does not cross into the candle's warm pocket;
+    #           her shoulder is the edge he respects. The
+    #           kneeling is parallel, not supplicating.
+    # SFX: his bootfall is the first new sound in the alcove in
+    #      five minutes. The flame's recovery from his shadow
+    #      crossing it is a micro-sound — the barely-audible
+    #      rush of air reasserting — and the mix catches it.
+
     "Bootfall at the threshold. One set. The cadence she has learned to recognize by the specific hesitation in the second step -- the half-beat where he decides whether to come forward or stand."
 
     "This morning he comes forward."
@@ -301,6 +363,18 @@ label a4_s04_lyra_prays_alone_ob:
 
     # ========== PHASE 8 -- THE BODY PRAYS ==========
 
+    # CAMERA: macro insert on their joined hands. His palm open,
+    #         hers taking rather than gripping. The pressure she
+    #         sets and his exact meeting of it — both are
+    #         readable in the macro. Hold the insert for the full
+    #         "I am here" thought paragraph. Do not cut to either
+    #         face during the paragraph. The hands are the prayer.
+    # LIGHTING: in the macro the candle wash is warm on both
+    #           hands. The corridor blue is a cold edge at the
+    #           top of the frame. The two temperatures meet on
+    #           their knuckles — the only place in the scene
+    #           where the two lights do touch.
+
     "She holds the position. Forehead above the blanket. Hand in his hand. The candle holding its flame. The ventilation carrying on its institutional work."
 
     "Her mouth does not move. The Old Tongue syllables are not coming. She has given up on asking them to come."
@@ -326,6 +400,18 @@ label a4_s04_lyra_prays_alone_ob:
     lthought "The part I did not know -- the part I am learning this morning -- is that sometimes the thing you are holding is heavier than the arms you brought."
 
     # ========== PHASE 9 -- THE LINE ==========
+
+    # CAMERA: return to the two-shot from Phase 7. Both of them
+    #         three-quarter back, kneeling symmetrical. Hold as
+    #         she straightens. The straightening is not a beat of
+    #         revelation; it is a beat of repositioning. She does
+    #         not turn to him. The three-word line lands with
+    #         her still looking at the candle.
+    # FACE: Lyra — the statement-of-position face. Not a feeling,
+    #        a coordinate. If the camera catches her profile at
+    #        all it is as a shape in the two-shot, not as a close.
+    #        Aeron's "I know" is an off-frame answer; the camera
+    #        does not cut to him for it.
 
     "She straightens. Slowly. Her forehead comes up from its near-contact with the blanket. Her hand is still in his. She does not look at him. She looks at the candle."
 
@@ -396,6 +482,19 @@ label a4_s04_lyra_prays_alone_ob:
     lthought "I am counting anyway."
 
     # ========== PHASE 12 -- THE END THAT DOES NOT END ==========
+
+    # CAMERA: the final shot is the one the narration names —
+    #         slow push-in on her hand at her hip, thumb resting
+    #         against the buckle. Tight. The buckle is the last
+    #         image before the fade. Do not cut away to her face.
+    #         Do not cut away to Aeron. The thumb's stillness is
+    #         the last action in the scene, and the stillness is
+    #         the sentence. Hold for a full beat past what feels
+    #         comfortable. Then fade to black, slow.
+    # LIGHTING: the candle is still alive under the push. The
+    #           corridor blue is still bleeding in from off-frame.
+    #           The two lights have not met, and they will not,
+    #           and that is the closing note the scene plays on.
 
     "She does not release his hand. He does not release hers. The scene ends the way the scene began: with the Band cinched, the candle lit, the prayer unfinished, and one more body in the alcove than there was at the start."
 

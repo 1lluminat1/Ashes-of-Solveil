@@ -70,6 +70,25 @@ label a4_s03_marcus_adapts_ob:
 
     # ========== PHASE 1 -- THE BRIEFING CONVENES ==========
 
+    # CAMERA: 40mm locked establishing of the operations room as a
+    #         narrow triangle — Noelle's analytical station foreground,
+    #         Nyra at the display wall middle-ground, Aeron at the
+    #         head of the ops table background. The three points of
+    #         the triangle held in a single wide. No handheld. The
+    #         composition is geometry, not relationship.
+    # LIGHTING: tactical blue at full across Noelle's station and
+    #           Nyra's display wall. Aeron's end of the table is
+    #           slightly dimmer — he is half in the pendant pool,
+    #           half in the cool ambient. The asymmetry is
+    #           deliberate: the briefers are in bright light, the
+    #           authorizer is in half-shadow. The authorization
+    #           will come from where the light does not reach all
+    #           the way.
+    # SFX: ops room ambient is Noelle's station's tick — the stylus
+    #      on the tablet, the analytical engine's low sub-audible
+    #      refresh. Phoenix ops never sleeps; the room sounds busy
+    #      even when only three people are in it.
+
     "1130."
 
     "The operations room is smaller than the war room. It is not built for councils. It is built for three or four people to stand around a central analytical display and make decisions that do not require ratification -- decisions that are already inside the authority envelope Nyra and Aeron ratified two hours ago."
@@ -150,6 +169,29 @@ label a4_s03_marcus_adapts_ob:
 
     # ========== PHASE 5 -- THE ECHELON INTERCEPT (CUT-IN) ==========
 
+    # CAMERA: hard cut from the locked Phoenix ops triangle to
+    #         Echelon handheld. 2% drift — the first handheld in
+    #         the scene. The camera is in a room it does not
+    #         belong in and is honest about that. Opens on the
+    #         printed report on the steel desk, pushes up to
+    #         Marcus reading. No cut during his eleven seconds
+    #         of audio. When the line ends, cut hard back to
+    #         Phoenix — no transition, no dissolve. The cut is
+    #         the scene's one gesture of violence.
+    # LIGHTING: sodium amber Echelon war room. Warmer than
+    #           anything in Phoenix by a full ten mireds per the
+    #           Cinematography Bible §6.3. The warmth is the
+    #           visual wrongness — Echelon's comfort standard is
+    #           the thing Phoenix is fighting, and the frame
+    #           cannot be in that light for more than eleven
+    #           seconds without losing its register.
+    # FACE: Marcus — reading, not pleased, not angry. The face of
+    #        a man confirming what he already decided against the
+    #        text. Do not cut to a tight single on him. The
+    #        medium single is the correct distance: not intimate,
+    #        not doctrinal. The scene is not giving Marcus that
+    #        closeness. It is sampling him.
+
     n "Before I take the strategic questions, there's an intercept fragment I need you to hear. Ghostline pulled it at 0747. It's eleven seconds. It confirms Vestin."
 
     "She taps the console."
@@ -180,6 +222,18 @@ label a4_s03_marcus_adapts_ob:
     #play ambient "sfx/ambient/ops_room_analytical.ogg" fadein 0.5
 
     # ========== PHASE 6 -- THE CLOCK UPDATES ==========
+
+    # CAMERA: hard cut back to the Phoenix triangle. Exact reverse
+    #         of the Phase 1 establishing. The three points of the
+    #         triangle, unchanged. As the collision clock updates,
+    #         the camera pushes in very slightly on the right panel
+    #         of the display wall — just enough that the clock
+    #         numbers become legible from Aeron's seat. The push
+    #         stops at the legibility threshold. That is the
+    #         entire camera move.
+    # SFX: the three clock beeps are the scene's most important
+    #      sound cue. Dry, low, institutional. They do not sound
+    #      like a countdown — they sound like a log entry.
 
     "The ops room. Noelle at the console. Nyra at the display wall. Aeron at the head of the ops table."
 
@@ -281,7 +335,22 @@ label a4_s03_marcus_adapts_ob:
 
     # ========== PHASE 9 -- THE AUTHORIZATION ==========
 
-    a "Noelle."
+    # CAMERA: tight single on Aeron for the authorization. The
+    #         scene's first tight on him. Locked. Hold through the
+    #         full ten-word sentence, then through Noelle's
+    #         "Commander," then through the parameter speech.
+    #         Do not cut to Noelle or Nyra during the authorization
+    #         — they are off-frame and their presence is felt
+    #         through the ambient. The frame is his signature on
+    #         the authorization, and the authorization is spoken,
+    #         not written.
+    # FACE: Aeron — the mask. Not command-clean like the EMP
+    #        correspondent scene. OB-clean: still. The face does
+    #        not work. The mouth speaks. The voice carries the
+    #        parameter list without inflection. At "Execution is
+    #        authorized for day three, zero four hundred" the jaw
+    #        does nothing. The horror is that the face has stopped
+    #        having reactions to the words his mouth is producing.
 
     "Her head lifts."
 
@@ -322,6 +391,21 @@ label a4_s03_marcus_adapts_ob:
     "The clock ticks."
 
     # ========== PHASE 10 -- THE CIVILIAN NUMBER ==========
+
+    # CAMERA: widen from Aeron's single to include Nyra in the
+    #         frame. Two-shot: Aeron foreground, Nyra at the
+    #         display wall. Noelle is the voice, off-frame. When
+    #         Aeron looks at Nyra instead of speaking the
+    #         acknowledgment, the camera does not react — no
+    #         push, no rack. The look is a delegation and the
+    #         camera treats it as a normal piece of operational
+    #         procedure. That flatness is the scene's worst
+    #         moment.
+    # FACE: Nyra — the "Acknowledged" is said at the same register
+    #        as the "Thank you for coming" from s02. She is
+    #        speaking for him without any visible awareness that
+    #        she is speaking for him. The substitution has become
+    #        invisible because it has become routine.
 
     n "Commander, for the record. The accelerated staging removes the pre-strike civilian evacuation window. The estimated civilian cost is nine to nineteen. The confidence interval is eighty-two percent."
 
@@ -366,6 +450,24 @@ label a4_s03_marcus_adapts_ob:
     "The operations room permits the authorization to stand because the operations room was built for exactly this configuration."
 
     # ========== PHASE 12 -- THE NAMES ==========
+
+    # CAMERA: single on Noelle. Push-in from medium to tight as
+    #         she walks to the whiteboard. Hold on her hand and
+    #         the marker as she writes each line — not a macro
+    #         insert, a standing over-shoulder at her working
+    #         distance. The six lines of the MERIDIAN entry are
+    #         the scene's second close. After she caps the marker,
+    #         the camera follows her back to her station and
+    #         tightens on her tablet for the margin-list beat.
+    #         The forty-three statistical placeholders are written
+    #         on screen in her handwriting. Hold the tablet tight
+    #         for her private "Entry nine" thought.
+    # FACE: Noelle — the face of a woman keeping a list she will
+    #        not be thanked for keeping. Not grieving. Not
+    #        protesting. Archiving. The private accountability
+    #        ritual has become her entire moral life and the face
+    #        is neutral enough that you could miss it if you did
+    #        not know to look. The camera knows to look.
 
     "Noelle turns to the operations board."
 
@@ -429,6 +531,19 @@ label a4_s03_marcus_adapts_ob:
     "The door closes."
 
     # ========== PHASE 14 -- NYRA AND NOELLE ==========
+
+    # CAMERA: two-shot of the two women Aeron has left behind.
+    #         Not the Phase 1 triangle — the third point is gone
+    #         and the frame has to reorganize around the absence.
+    #         Nyra at the display wall, Noelle at her station,
+    #         the collision clock ticking on the right panel
+    #         between them. The composition has changed shape
+    #         without anyone moving. That is the subject of the
+    #         shot.
+    # LIGHTING: unchanged. Tactical blue. The room does not
+    #           acknowledge the departure with any grammar shift.
+    #           That non-acknowledgment is what the coda is
+    #           saying about what the room is for.
 
     "Nyra remains at the display wall."
 

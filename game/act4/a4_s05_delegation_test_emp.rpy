@@ -58,6 +58,19 @@ label a4_s05_delegation_test_emp:
 
     # ========== PHASE 1 — THE ASSIGNMENT ==========
 
+    # CAMERA: 35mm, static, council framing. The war table between
+    #         Aeron and Selene — no angles, no push, no rack.
+    #         Eye-level. When Selene says "Lyra is leading on-site,"
+    #         the camera does not move. Aeron's reaction plays on
+    #         the held frame. The stillness of the composition is
+    #         the first lesson: authority is being negotiated, not
+    #         staged, and the camera refuses to stage it.
+    # LIGHTING: war room tactical amber and green. Full operational
+    #           wash. The display behind Selene throws the Sector 7
+    #           approach map onto her back in soft projection
+    #           light. She is reading the map without turning to
+    #           it; the projection is her context, not her tool.
+
     "The war table. Morning briefing. The Sector 7 interdiction brief is pinned to the tactical display — an Echelon supply convoy running through a choke point Phoenix has been tracking for a week."
 
     "Noelle has the patterning. Selene has the authority. Aeron has the muscle memory of seventy-odd operations in his father's voice and the beginnings of operations in his own."
@@ -142,6 +155,21 @@ label a4_s05_delegation_test_emp:
 
     # ========== PHASE 2 — THE BRIEF ==========
 
+    # CAMERA: still the war table. The camera has not moved since
+    #         Phase 1. Each LI enters the briefing at the same
+    #         distance from the lens, as if they are being
+    #         assigned by their position in the composition
+    #         rather than by the words in the text. Lyra into
+    #         frame-right, Zira into frame-left, Noelle at the
+    #         terminal wing, Tessa offstage. Selene is the
+    #         briefer; the camera stays on her side of the table
+    #         as she delivers each assignment.
+    # FACE: Aeron — the tactical resistance shows in the jaw
+    #        only. Eyes still reading the approach vectors. He is
+    #        doing the operation in his head while being told he
+    #        is not going to run it. The camera does not push in
+    #        on the conflict; the wide holds.
+
     "Lyra is in the room by the time the conversation settles. She has been standing near the door. She does not speak until he turns toward her."
 
     a "Lyra."
@@ -219,6 +247,30 @@ label a4_s05_delegation_test_emp:
     l "I know. I am thanking you anyway."
 
     # ========== PHASE 4 — THE OPERATION ==========
+
+    # CAMERA: LOCATION SHIFT — the command center. New visual
+    #         register. Locked mid on Aeron at the relay console.
+    #         Noelle's data crystal hazes the frame in blue-green
+    #         per the opening block. Selene in overwatch behind
+    #         him, soft-focus background, but present in every
+    #         shot for the rest of the operation. Do NOT cut to
+    #         Lyra when her voice comes over the comms — she is
+    #         voice-only for the entire phase. The camera stays
+    #         on Aeron's face receiving her voice. That
+    #         containment is the delegation made visual.
+    # LIGHTING: colder than the war room. Noelle's crystal light
+    #           is the primary key. The relay displays throw
+    #           amber on Aeron's console hand but leave his face
+    #           in the crystal's blue-green. The two temperatures
+    #           on his body are the scene's second bisection
+    #           (Lyra's was the first in s04 ob).
+    # SFX: active ambient — relay chatter, tactical alerts, the
+    #      particular heartbeat of an operation in progress. The
+    #      comms feed carrying Lyra's voice is clean and
+    #      tactical, not the voice from the quarters scene.
+    #      Mark the transitions where her voice is the only
+    #      sound in the frame — those are the held frames
+    #      during which Aeron is not allowed to speak.
 
     # scene bg_command_center_emp with dissolve
 
@@ -322,6 +374,18 @@ label a4_s05_delegation_test_emp:
 
     # ========== PHASE 5 — THE NAMES ==========
 
+    # CAMERA: tighten on Aeron's face for the first names beat.
+    #         The relay console's light falls away. The crystal
+    #         blue-green stays. Hold through the naming. Do not
+    #         cut to Noelle or Selene during the names — the
+    #         camera is making him bear the naming alone because
+    #         the operation made him bear the receiving alone.
+    # FACE: Aeron — the command-reflex beat. His mouth opens to
+    #        intervene and does not intervene. The discipline of
+    #        the closed mouth is the face. The jaw sets, then
+    #        releases, then sets again. The naming continues
+    #        over the held close.
+
     "The command center empties over the next forty minutes. The team comes home. Lyra comes in the door ahead of the wounded — one shoulder wound, one grazed thigh, three uninjured. She has the civilian under her left arm because the civilian is shaking and no one else is free to hold her."
 
     "Lyra hands the civilian off to medbay. She stands at the center of the command center and does not sit."
@@ -353,6 +417,26 @@ label a4_s05_delegation_test_emp:
     athought "I have to know their names."
 
     # ========== PHASE 6 — THE CIPHER TABLE ==========
+
+    # CAMERA: LOCATION SHIFT — the cipher alcove, post-op. Third
+    #         visual register. Aeron alone at the table. One work
+    #         lamp. Noelle's side-by-side projection floating
+    #         above the table surface: the plan that was (Lyra's)
+    #         and the plan that would have been (Aeron's), the
+    #         delta in red. The camera opens on the projection,
+    #         then pulls focus to Aeron's face reading it. Hold
+    #         him on the single for the arithmetic — the two
+    #         saved, the one extracted, the delta's color.
+    # LIGHTING: nearly dark. One work lamp. The projection is the
+    #           only other light and it is math-light: the
+    #           colored overlays from Noelle's model. The red of
+    #           the delta is the brightest single element in the
+    #           frame. The red is where his eye has to go.
+    # SFX: silence after the operation. The hum of a room that
+    #      has just finished doing something. No relay chatter.
+    #      No tactical alerts. The active ambient of Phase 4 has
+    #      been replaced by its inverse — a quietness that
+    #      almost aches.
 
     # scene bg_cipher_alcove_emp with dissolve
 
@@ -393,6 +477,21 @@ label a4_s05_delegation_test_emp:
     athought "I am counting."
 
     # ========== PHASE 7 — SELENE ==========
+
+    # CAMERA: Selene's entrance is from the side. The camera
+    #         catches her in the doorway frame-left; she does
+    #         not sit down. Hold her standing at the edge of
+    #         the projection light. Aeron remains seated. The
+    #         two-shot is asymmetric: him below her, both lit
+    #         by the projection's red wash. This is the scene's
+    #         first proper face-to-face between them since the
+    #         war room briefing, and the asymmetry is deliberate.
+    #         Do not normalize the composition by having her
+    #         sit. She stands. He sits. The authority has
+    #         been negotiated and this is the shape it took.
+    # FACE: Selene — the teacher face. No pride. No apology.
+    #        The look of a woman watching a student learn the
+    #        thing the student did not know he needed to learn.
 
     "Footsteps at the alcove entrance. He does not look up."
 
@@ -483,6 +582,22 @@ label a4_s05_delegation_test_emp:
     "She leaves."
 
     # ========== PHASE 8 — THE CLOSE ==========
+
+    # CAMERA: hold the asymmetric two-shot from Phase 7 through
+    #         the closing exchange. Selene does not sit. Aeron
+    #         does not stand. The projection continues to play
+    #         its red delta above them. As Selene exits, the
+    #         camera stays on Aeron alone at the cipher table
+    #         with the projection still running. Fade on the
+    #         projection, not on his face. The red delta is the
+    #         last thing the scene shows.
+    # FACE: Aeron — the grief has arrived. It does not leave.
+    #        This is not the post-s01 grief (that was the
+    #        morning-after register). This is the scene-specific
+    #        grief of a commander who learned in four hours
+    #        that the people he commands save lives he would
+    #        have spent. The grief is quiet and lives behind
+    #        the eyes. The camera trusts the eyes.
 
     "The projection is still running. Two plans. The delta in red. The names are not on the projection — the projection does not know how to display names."
 
