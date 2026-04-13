@@ -69,10 +69,19 @@ init 1 python:
         "bands": {
             "title": _("Resonance Bands"),
             "category": _("Systems"),
-            "tags": ["haptic","intercept","tuning"],
-            "body": [
-                _("Passive wrist transducers (coil + micro-capacitive array)."),
-                _("They intercept lineage resonance and translate it to haptic/thermal feedback (tune/dampen/spike)."),
+            "tags": ["haptic","intercept","tuning","rejection","Verdant"],
+            "stages": [
+                { "body": [
+                    _("Passive wrist transducers (coil + micro-capacitive array)."),
+                    _("They intercept lineage resonance and translate it to haptic/thermal feedback (tune/dampen/spike)."),
+                ]},
+                { "body": [
+                    _("Passive wrist transducers (coil + micro-capacitive array)."),
+                    _("They intercept lineage resonance and translate it to haptic/thermal feedback (tune/dampen/spike)."),
+                    _("The Band is a container. If the resonance is too strong, the container cannot hold it."),
+                    _("Pure Verdant bloodline overwhelms the device instantly. Diluted lineage holds longer before the Band fails."),
+                    _("The Aeries calls this 'rejection.' The Cathedral called it 'excess.' The truth: the technology is insufficient for the bloodline."),
+                ]},
             ],
         },
         "solveil_tiers": {

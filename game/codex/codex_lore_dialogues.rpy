@@ -37,10 +37,17 @@ label lore_lyra_the_band:
     l "It's a transducer. Coil and micro-capacitive array. Passive. It intercepts lineage resonance and translates it to feedback — heat, vibration, pressure."
     l "The bonding ritual at twelve aligns it to your specific frequency. If it takes, you feel the world differently. Colors are slightly richer. Sounds have texture."
     a "And if it doesn't take?"
-    l "(quiet) Then the Band rejects you. It heats until the metal blisters. The symbols it etches into your skin crack and fade. And everyone in the room sees it happen."
-    l "The rejection isn't private. It's the most public thing that can happen to a twelve-year-old in the Aeries."
-    a "I know."
-    l "I know you know. I'm sorry I've never said that to you before."
+    l "(quiet) Then the Band rejects you. It heats until the metal blisters. The symbols crack and fade."
+    l "But Aeron — the rejection isn't what the Aeries tells you it is."
+    a "What do you mean?"
+    l "The Band is a container. It channels lineage resonance into something manageable. If the resonance is too strong, the container can't hold it."
+    l "Your Band didn't reject you because you were broken. It rejected you because you're pure Verdant. The resonance overwhelmed the device. Instantly."
+    l "Kael's held for three years because he carried the bloodline but wasn't pure. The Band fought the resonance until it lost."
+    a "So the rejection is the lineage being too much."
+    l "The rejection is the Band being too little. The Aeries calls it failure because admitting the truth — that the technology is insufficient for the bloodline — would undermine everything the Branding Program is built on."
+    l "The same force that broke your Band is the force that kept Kael alive when he fell. The resonance doesn't obey containers. It protects its own."
+    a "No one ever told me that."
+    l "No one in the Aeries would. I learned it from Elisse, in the Cathedral archives, in a section they sealed after Wing Seven."
     return
 
 label lore_lyra_cathedral:
