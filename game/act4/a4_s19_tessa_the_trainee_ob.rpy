@@ -15,7 +15,7 @@ $ _current_scene_id = "a4_s19_tessa_the_trainee_ob"
 $ scene_mark(_current_scene_id, "entered")
 
 label a4_s19_tessa_the_trainee_ob:
-    $ show_timeline("DAY 52", "03:00", "Phoenix Base — Medical Wing")
+    $ show_timeline("DAY 53", "03:00", "Phoenix Base — Medical Wing")
 
     # Branch dispatch. Matches the pattern from a4_s17_tessa_conditional_beat_ob.
     if canon_get("ob.tessa.choice") == "stay_and_resist":

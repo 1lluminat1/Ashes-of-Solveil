@@ -141,16 +141,87 @@ screen scene_timeline_echelon(designation="", location=""):
 
 init python:
 
+    # ---------------------------------------------------------------
+    # SOLVEIL CALENDAR
+    # ---------------------------------------------------------------
+    # Six months of 60 days each (360-day year):
+    #   Ember → Rain → Kiln → Cipher → Silence → Forge
+    #
+    # The game begins on the 3rd of Forge, 390 AC and runs through
+    # late Forge. Act 5's finale crosses into Year 391 AC — the
+    # first of Ember. The number 391 echoes Operation 391, the
+    # Sector 10 sweep that started Aeron's fracture.
+    #
+    # "DAY X" in scene calls maps to (X + 2)th of Forge, 390 AC.
+    # DAY 58 = 60th of Forge (last day of 390 AC).
+    # DAY 59+ = 1st of Ember, 391 AC (the new year).
+    # ---------------------------------------------------------------
+
+    SOLVEIL_MONTHS = ["Ember", "Rain", "Kiln", "Cipher", "Silence", "Forge"]
+    SOLVEIL_DAYS_PER_MONTH = 60
+    SOLVEIL_GAME_START_MONTH = 5  # Forge (0-indexed)
+    SOLVEIL_GAME_START_DAY = 3    # 3rd of Forge
+    SOLVEIL_GAME_START_YEAR = 390
+
+    def _ordinal(n):
+        """Return ordinal suffix for a number: 1st, 2nd, 3rd, 4th..."""
+        if 11 <= (n % 100) <= 13:
+            return str(n) + "th"
+        return str(n) + {1: "st", 2: "nd", 3: "rd"}.get(n % 10, "th")
+
+    def _solveil_date(game_day):
+        """Convert a relative game day (DAY 1 = first day of Act 1) to
+        a Solveil calendar date string.
+
+        Returns: '5th of Forge, 390 AC' or '1st of Ember, 391 AC'
+        """
+        if not game_day or game_day < 1:
+            return ""
+        # Calendar day within the starting month
+        cal_day = SOLVEIL_GAME_START_DAY + game_day - 1
+        month_idx = SOLVEIL_GAME_START_MONTH
+        year = SOLVEIL_GAME_START_YEAR
+
+        # Overflow into subsequent months/years
+        while cal_day > SOLVEIL_DAYS_PER_MONTH:
+            cal_day -= SOLVEIL_DAYS_PER_MONTH
+            month_idx += 1
+            if month_idx >= len(SOLVEIL_MONTHS):
+                month_idx = 0
+                year += 1
+
+        month_name = SOLVEIL_MONTHS[month_idx]
+        return _ordinal(cal_day) + " of " + month_name + ", " + str(year) + " AC"
+
+    def _parse_day_number(date_str):
+        """Extract the day number from 'DAY X' format. Returns 0 if not matched."""
+        import re
+        m = re.match(r"DAY\s+(\d+)", str(date_str))
+        return int(m.group(1)) if m else 0
+
+    # ---------------------------------------------------------------
+    # HELPERS
+    # ---------------------------------------------------------------
+
     def show_timeline(date="", time="", location=""):
         """Show the standard timeline card and wait for it to finish.
 
         Call at the top of a scene label (after scene_mark entered):
             $ show_timeline("DAY 3", "04:17", "Phoenix Secondary Base")
 
-        The card types out, holds, then fades. Total ~2.8s. The
-        player can click to skip. After this call returns, the scene
-        continues normally.
+        The 'DAY X' format is auto-converted to the Solveil calendar:
+            DAY 3 → '5th of Forge, 390 AC'
+
+        You can also pass a pre-formatted string or an integer day number.
         """
+        # Auto-convert DAY X to Solveil calendar
+        if isinstance(date, int):
+            date = _solveil_date(date)
+        elif isinstance(date, str) and date.upper().startswith("DAY "):
+            day_num = _parse_day_number(date)
+            if day_num > 0:
+                date = _solveil_date(day_num)
+
         renpy.show_screen("scene_timeline", date=date, time=time, location=location)
         renpy.pause(2.8, hard=False)  # click-to-skip
         renpy.hide_screen("scene_timeline")

@@ -66,7 +66,7 @@ init 2 python:
             "portrait":       "images/ui/portraits/lyra.png",
             "basic_info": [
                 ("Age",         "27"),
-                ("Born",        "Third of Ember, A.C. 379"),
+                ("Born",        "Third of Ember, A.C. 363"),
                 ("Birthplace",  "Aeries — Cathedral Quarter"),
                 ("Lineage",     "Ethereal"),
                 ("Affiliation", "Cathedral of Harmony / Phoenix"),
@@ -101,7 +101,7 @@ init 2 python:
             "portrait":       "images/ui/portraits/zira.png",
             "basic_info": [
                 ("Age",         "30"),
-                ("Born",        "Sixth of Rain, A.C. 376"),
+                ("Born",        "Sixth of Rain, A.C. 360"),
                 ("Birthplace",  "Unders — Ashmarket (claimed)"),
                 ("Lineage",     "Unlineaged"),
                 ("Affiliation", "Ghostline / Phoenix"),
@@ -149,7 +149,7 @@ init 2 python:
             "portrait":       "images/ui/portraits/tessa.png",
             "basic_info": [
                 ("Age",         "32"),
-                ("Born",        "Ninth of Kiln, A.C. 374"),
+                ("Born",        "Ninth of Kiln, A.C. 358"),
                 ("Birthplace",  "Middle Levels — Foundry Wards"),
                 ("Lineage",     "Unlineaged"),
                 ("Affiliation", "Phoenix Clinic"),
@@ -181,7 +181,7 @@ init 2 python:
             "portrait":       "images/ui/portraits/noelle.png",
             "basic_info": [
                 ("Age",         "29"),
-                ("Born",        "First of Cipher, A.C. 377"),
+                ("Born",        "First of Cipher, A.C. 361"),
                 ("Birthplace",  "Aeries — Cognitive Institute"),
                 ("Lineage",     "Unlineaged"),
                 ("Affiliation", "Phoenix Strategic Analysis"),
@@ -213,7 +213,7 @@ init 2 python:
             "portrait":       "images/ui/portraits/selene.png",
             "basic_info": [
                 ("Age",         "41"),
-                ("Born",        "Twelfth of Ember, A.C. 365"),
+                ("Born",        "Twelfth of Ember, A.C. 349"),
                 ("Birthplace",  "Middle Levels — Transit 9"),
                 ("Lineage",     "Unlineaged"),
                 ("Affiliation", "Phoenix (Commander)"),
@@ -239,7 +239,7 @@ init 2 python:
             "portrait":       "images/ui/portraits/nyra.png",
             "basic_info": [
                 ("Age",         "35"),
-                ("Born",        "Fifth of Silence, A.C. 371"),
+                ("Born",        "Fifth of Silence, A.C. 355"),
                 ("Birthplace",  "Aeries — Warden Academy"),
                 ("Lineage",     "Unlineaged"),
                 ("Affiliation", "Former Echelon / OB Co-Command"),
@@ -269,7 +269,7 @@ init 2 python:
             "portrait":       "images/ui/portraits/marcus.png",
             "basic_info": [
                 ("Age",         "57"),
-                ("Born",        "Eighth of Forge, A.C. 349"),
+                ("Born",        "Eighth of Forge, A.C. 333"),
                 ("Birthplace",  "Aeries — Military Quarter"),
                 ("Lineage",     "Unlineaged"),
                 ("Affiliation", "Echelon — High Command"),
@@ -287,8 +287,8 @@ init 2 python:
             "tagline":        "Brother. Band-failed. The reliable witness.",
             "portrait":       "images/ui/portraits/kael.png",
             "basic_info": [
-                ("Age",         "17 (deceased)"),
-                ("Born",        "Second of Ember, A.C. 389"),
+                ("Age",         "24 (deceased)"),
+                ("Born",        "Second of Ember, A.C. 353"),
                 ("Birthplace",  "Aeries — Rylan Estate"),
                 ("Lineage",     "Unlineaged (Band-rejected)"),
                 ("Affiliation", "—"),
@@ -307,7 +307,7 @@ init 2 python:
             "portrait":       "images/ui/portraits/liora.png",
             "basic_info": [
                 ("Age",         "55"),
-                ("Born",        "Seventh of Rain, A.C. 351"),
+                ("Born",        "Seventh of Rain, A.C. 335"),
                 ("Birthplace",  "Border Sector — Old Registry"),
                 ("Lineage",     "Ethereal"),
                 ("Affiliation", "Outlands / courier networks"),
@@ -326,7 +326,7 @@ init 2 python:
             "portrait":       "images/ui/portraits/rhea.png",
             "basic_info": [
                 ("Age",         "31"),
-                ("Born",        "Fourth of Cipher, A.C. 375"),
+                ("Born",        "Fourth of Cipher, A.C. 359"),
                 ("Birthplace",  "Aeries — War College"),
                 ("Lineage",     "Unlineaged"),
                 ("Affiliation", "Echelon — Surgical Ops"),
