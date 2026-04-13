@@ -128,24 +128,22 @@ label start:
         call a3_s08_the_unmeasurable_emp
         call a3_s09_echelon_interlude_3_emp
         call a3_s10_field_sync_emp
-        # Phase II: Deepening (s11–s17, Noelle + Zira + Lyra stay;
-        # Tessa + Selene moved to Phase III)
+        # Phase II: Deepening (s11–s17, Noelle + Zira + Lyra;
+        # Tessa + Selene first erotics live in Phase III)
         call a3_s11_empirical_tenderness_emp
         call a3_s12_corridor_op_emp
-        # s13 (Tessa) MOVED to after s20
         call a3_s14_cipher_and_skin_emp
         call a3_s15_signal_under_fire_emp
-        # s16 (Selene) MOVED to after s19
         call a3_s17_faith_in_flaws_emp
         # Phase III: Revelation & Cost — intimate beats interleaved
         call a3_s18_the_weight_emp
         call a3_s18a_the_letter_emp
         call a3_s18b_zira_the_relay_emp             # NEW interstitial
         call a3_s19_noelle_revelation_emp
-        call a3_s16_command_and_surrender_emp        # MOVED Selene erotic
+        call a3_s19a_command_and_surrender_emp      # Selene first erotic
         call a3_s20_the_story_keeper_emp
-        call a3_s13_scar_and_steady_emp             # MOVED Tessa erotic
-        call a3_s20a_lyra_archive_emp               # NEW interstitial
+        call a3_s20a_scar_and_steady_emp            # Tessa first erotic
+        call a3_s20b_lyra_archive_emp               # NEW interstitial
         call a3_s21_bookend_before_storm_emp
         call a3_s22_liora_execution_emp
         call a3_s22a_tessa_after_liora_emp          # NEW interstitial

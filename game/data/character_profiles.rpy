@@ -157,7 +157,7 @@ init 2 python:
             ],
             "codex_entries": ["tessa", "rule_of_three", "phoenix_rebellion"],
             "scenes": [
-                { "id": "a3_s13_scar_and_steady_emp",   "label": "a3_s13_scar_and_steady_emp",
+                { "id": "a3_s20a_scar_and_steady_emp",  "label": "a3_s20a_scar_and_steady_emp",
                   "title": "Scar and Steady",          "act": 3, "path": "EMP",
                   "description": "Her hands on his wounds — care as desire, diagnosis as devotion." },
                 { "id": "a3_s17_count_the_cost_ob",     "label": "a3_s17_count_the_cost_ob",
@@ -221,7 +221,7 @@ init 2 python:
             ],
             "codex_entries": ["selene_valen", "phoenix_rebellion", "kael_rylan"],
             "scenes": [
-                { "id": "a3_s16_command_and_surrender_emp", "label": "a3_s16_command_and_surrender_emp",
+                { "id": "a3_s19a_command_and_surrender_emp", "label": "a3_s19a_command_and_surrender_emp",
                   "title": "Command and Surrender",    "act": 3, "path": "EMP",
                   "description": "The first time she is a woman across the table instead of a commander." },
                 { "id": "a4_s17_selene_deepening_erotic_emp", "label": "a4_s17_selene_deepening_erotic_emp",

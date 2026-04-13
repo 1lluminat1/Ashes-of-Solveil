@@ -1,18 +1,18 @@
 # =======================================================
-# ACT 3 - Scene 16: Command and Surrender (Empathy Path)
-# File: a3_s16_command_and_surrender_emp.rpy
+# ACT 3 - Scene 19a: Command and Surrender (Empathy Path)
+# File: a3_s19a_command_and_surrender_emp.rpy
 # Type: SELENE FIRST EROTIC
 # =======================================================
 
 # ========= SCENE START TASKS =========
-$ _current_scene_id = "a3_s16_command_and_surrender_emp"
+$ _current_scene_id = "a3_s19a_command_and_surrender_emp"
 $ scene_mark(_current_scene_id, "entered")
 
-label a3_s16_command_and_surrender_emp:
+label a3_s19a_command_and_surrender_emp:
 
 
     # Gallery — unlock this scene in the character replay grid.
-    $ gallery_unlock("a3_s16_command_and_surrender_emp")
+    $ gallery_unlock("a3_s19a_command_and_surrender_emp")
     $ show_timeline("DAY 37", "23:00", "Phoenix Base — Selene's Quarters")
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 32mm, handheld with minimal drift. The steadiness matches Selene's composure —
@@ -361,7 +361,7 @@ label a3_s16_command_and_surrender_emp:
 
 
 # ========= CANONICAL NOTES =========
-# cann.scene_id: a3_s16_command_and_surrender_emp
+# cann.scene_id: a3_s19a_command_and_surrender_emp
 # cann.chapter: Act III, Phase II - Deepening (Empathy Path)
 # cann.chapter_start: False
 # cann.when_in_timeline:

@@ -710,7 +710,7 @@ label a4_s20_aftercare:
 #     path A. The turning off the clip lamp with his free hand in paths B and
 #     C — the small chore done before being asked.
 # cann.callbacks:
-#   - a3_s13_scar_and_steady_emp: the first erotic, Tessa's hands on his
+#   - a3_s20a_scar_and_steady_emp: the first erotic, Tessa's hands on his
 #     wounds. This scene is that scene's reversal.
 #   - a4_s05a_you_are_not_a_machine_emp: the cot, the medic register, the
 #     overrule. This scene is the beat after that scene's lesson has been

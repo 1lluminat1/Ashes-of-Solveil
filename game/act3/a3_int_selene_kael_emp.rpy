@@ -74,7 +74,7 @@ label a3_int_selene_kael_emp:
 # =========================================================
 # cann.scene_id: a3_int_selene_kael_emp
 # cann.chapter: Act III, Phase II — Deepening
-# cann.placement: After a3_s16_command_and_surrender_emp (the first erotic scene).
+# cann.placement: After a3_s19a_command_and_surrender_emp (the first erotic scene).
 #                 Pre-dawn. Her quarters. Aeron asleep beside her. The plant on the
 #                 windowsill taking the first light. Selene watching him breathe and
 #                 not touching him, on purpose.
@@ -110,7 +110,7 @@ label a3_int_selene_kael_emp:
 #   - a3_int_selene_nineteen_years_emp: the briefing format and the first crack. This
 #     scene is the crack opening all the way. The coffee cup detail recurs because
 #     it was the first image that did not fit the briefing.
-#   - a3_s16_command_and_surrender_emp: the erotic scene. The sheet, the sleeping
+#   - a3_s19a_command_and_surrender_emp: the erotic scene. The sheet, the sleeping
 #     figure, the held breath of the body beside her.
 #   - The plant: establishes Selene-private-life visual. Recurs across Phase III as
 #     an index of her interior state. Watering the plant in later scenes is not

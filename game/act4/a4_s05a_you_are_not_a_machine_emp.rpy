@@ -436,7 +436,7 @@ label a4_s05a_you_are_not_a_machine_emp:
 #     be spent. I am tired of being the only person in this building who remembers
 #     that. Medbay. Now. I am not asking." He stops.
 #   - Medbay: She takes him to the treatment bench (the same one from
-#     a3_s13_scar_and_steady_emp). Finds a three-inch dirty scrape on his forearm
+#     a3_s20a_scar_and_steady_emp). Finds a three-inch dirty scrape on his forearm
 #     he has not noticed. Cleans it. Checks his eyes, pulse, blood pressure. His
 #     resting heart rate is 104. BP is up 9 points from baseline.
 #   - She names the pattern: "You are using endurance as self-harm. I have seen
@@ -523,7 +523,7 @@ label a4_s05a_you_are_not_a_machine_emp:
 #   - a3_int_tessa_the_board_emp: Liora on both sides of the board. Tessa's
 #     explicit Act IV thesis about expanding the definition of living. This
 #     scene is an enactment of that thesis on a patient who is not dead.
-#   - a3_s13_scar_and_steady_emp: the same treatment bench, the Brand scar, the
+#   - a3_s20a_scar_and_steady_emp: the same treatment bench, the Brand scar, the
 #     same hands. The scene does not repeat intimacy from that night — it adds
 #     the next register of the same relationship.
 #   - a4_s05_delegation_test_emp: Joran Tev is asleep in the adjacent cot. The

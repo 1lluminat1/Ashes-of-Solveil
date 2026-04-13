@@ -79,9 +79,9 @@ What actually happens in every scene, in script.rpy play order. Use this to veri
 18. **The Letter** — Zira finds Liora's letter. "I fell in love with the pause." EMP Aeron softens. The pause connects to the Emergence Mechanic.
 19. *[NEW] Zira: The Relay* — Zira processes delivering the letter. "I found her for you. I don't know if that was a gift or a weapon."
 20. **Noelle Revelation** — Purge data confirmed. Marcus's signature on the kill order. Proof of orchestrated mass murder. Choice: how to use the proof.
-21. **Command and Surrender** (SELENE FIRST EROTIC, MOVED) — Post-revelation vulnerability. "Don't let this change how we lead." / "It already has." Consent gates.
+21. **Command and Surrender** (SELENE FIRST EROTIC) — Post-revelation vulnerability. "Don't let this change how we lead." / "It already has." Consent gates.
 22. **The Story Keeper** — Zira finds the courier pattern. "A woman who keeps the names." Aeron realizes: his mother is alive.
-23. **Scar and Steady** (TESSA FIRST EROTIC, MOVED) — Tessa treats accumulated wounds after the revelation. Her hands on his injuries. The Brand scar. "You're still here." Consent gates.
+23. **Scar and Steady** (TESSA FIRST EROTIC) — Tessa treats accumulated wounds after the revelation. Her hands on his injuries. The Brand scar. "You're still here." Consent gates.
 24. *[NEW] Lyra: Archive* — Lyra recognizes Liora's handwriting from Cathedral registries. "I have seen this hand before."
 25. **Bookend Before the Storm** — All five LIs together. Warm. Poly foreshadowing. Callbacks: balcony rail, Kael's rail, Tier Hall. "This is home."
 26. **LIORA EXECUTION** (ACT 3 EMP FINALE) — Captured through courier network Aeron's compassion exposed. Public execution in the Aeries. Marcus present. Her last act: she says a name. The cost of compassion made flesh.

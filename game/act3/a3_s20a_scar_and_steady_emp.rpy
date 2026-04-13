@@ -1,18 +1,18 @@
 # =======================================================
-# ACT 3 - Scene 13: Scar and Steady (Empathy Path)
-# File: a3_s13_scar_and_steady_emp.rpy
+# ACT 3 - Scene 20a: Scar and Steady (Empathy Path)
+# File: a3_s20a_scar_and_steady_emp.rpy
 # Type: TESSA FIRST EROTIC
 # =======================================================
 
 # ========= SCENE START TASKS =========
-$ _current_scene_id = "a3_s13_scar_and_steady_emp"
+$ _current_scene_id = "a3_s20a_scar_and_steady_emp"
 $ scene_mark(_current_scene_id, "entered")
 
-label a3_s13_scar_and_steady_emp:
+label a3_s20a_scar_and_steady_emp:
 
 
     # Gallery — unlock this scene in the character replay grid.
-    $ gallery_unlock("a3_s13_scar_and_steady_emp")
+    $ gallery_unlock("a3_s20a_scar_and_steady_emp")
     $ show_timeline("DAY 38", "22:00", "Phoenix Base — Medbay")
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 50mm, handheld with minimal drift (2-3%). Opens on Tessa's hands —
@@ -472,7 +472,7 @@ label a3_s13_scar_and_steady_emp:
 
 
 # ========= CANONICAL NOTES =========
-# cann.scene_id: a3_s13_scar_and_steady_emp
+# cann.scene_id: a3_s20a_scar_and_steady_emp
 # cann.chapter: Act III, Phase II — Deepening (Empathy Path)
 # cann.chapter_start: False
 # cann.when_in_timeline:

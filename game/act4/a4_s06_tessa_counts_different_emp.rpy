@@ -501,7 +501,7 @@ label a4_s06_tessa_counts_different_emp:
 #     here with both entries still present — the canon is maintained through the
 #     displacement. The present scene is the pre-dawn interlude's mirror with
 #     Aeron in the room.
-#   - a3_s13_scar_and_steady_emp: the hands steady after. Tessa's hands are
+#   - a3_s20a_scar_and_steady_emp: the hands steady after. Tessa's hands are
 #     steady for the writing. The scene trusts that established physiology.
 #   - a4_s05_delegation_test_emp: the source of Kesa Marin and Joren Hale as
 #     Phoenix KIA, and the source of Aeron's adoption of the rule of three.

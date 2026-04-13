@@ -42,7 +42,7 @@ One 160x160 thumbnail per replay scene. Drop PNGs at `images/ui/gallery/<scene_i
 | ⬜ `a3_s15_chain_of_two_ob` | Chain of Two | Act 3 | OB | `images/ui/gallery/a3_s15_chain_of_two_ob.png` |
 | ⬜ `a4_s15_zira_deepening_erotic_emp` | The Clock Runs Back | Act 4 | EMP | `images/ui/gallery/a4_s15_zira_deepening_erotic_emp.png` |
 | ⬜ `a4_s13_zira_deepening_erotic_ob` | Something From Before | Act 4 | OB | `images/ui/gallery/a4_s13_zira_deepening_erotic_ob.png` |
-| ⬜ `a3_s13_scar_and_steady_emp` | Scar and Steady | Act 3 | EMP | `images/ui/gallery/a3_s13_scar_and_steady_emp.png` |
+| ⬜ `a3_s20a_scar_and_steady_emp` | Scar and Steady | Act 3 | EMP | `images/ui/gallery/a3_s20a_scar_and_steady_emp.png` |
 | ⬜ `a3_s17_count_the_cost_ob` | Count the Cost | Act 3 | OB | `images/ui/gallery/a3_s17_count_the_cost_ob.png` |
 | ⬜ `a4_s20_tessa_deepening_erotic_emp` | Not a Medic Tonight | Act 4 | EMP | `images/ui/gallery/a4_s20_tessa_deepening_erotic_emp.png` |
 | ⬜ `a4_s17_tessa_conditional_beat_ob` | Remember Who I Am Writing It For | Act 4 | OB | `images/ui/gallery/a4_s17_tessa_conditional_beat_ob.png` |
@@ -50,7 +50,7 @@ One 160x160 thumbnail per replay scene. Drop PNGs at `images/ui/gallery/<scene_i
 | ⬜ `a3_s16_data_and_doubt_ob` | Data and Doubt | Act 3 | OB | `images/ui/gallery/a3_s16_data_and_doubt_ob.png` |
 | ⬜ `a4_s18_noelle_deepening_erotic_emp` | As a Sentence Now | Act 4 | EMP | `images/ui/gallery/a4_s18_noelle_deepening_erotic_emp.png` |
 | ⬜ `a4_s20_noelle_deepening_erotic_ob` | A Hand I Cannot Predict | Act 4 | OB | `images/ui/gallery/a4_s20_noelle_deepening_erotic_ob.png` |
-| ⬜ `a3_s16_command_and_surrender_emp` | Command and Surrender | Act 3 | EMP | `images/ui/gallery/a3_s16_command_and_surrender_emp.png` |
+| ⬜ `a3_s19a_command_and_surrender_emp` | Command and Surrender | Act 3 | EMP | `images/ui/gallery/a3_s19a_command_and_surrender_emp.png` |
 | ⬜ `a4_s17_selene_deepening_erotic_emp` | Held as Woman | Act 4 | EMP | `images/ui/gallery/a4_s17_selene_deepening_erotic_emp.png` |
 | ⬜ `a3_s12_the_oath_ob` | The Oath | Act 3 | OB | `images/ui/gallery/a3_s12_the_oath_ob.png` |
 | ⬜ `a4_s11_nyra_second_oath_ob` | The Second Oath | Act 4 | OB | `images/ui/gallery/a4_s11_nyra_second_oath_ob.png` |
@@ -549,12 +549,12 @@ That inserts commented `# scene <scene_id>_NNN with dissolve` stubs at each clus
 | `a3_s12_corridor_op_emp` | 157 | 0 | 0 | 0% | ⬜ not started |
 | `a3_s12_the_oath_ob` | 159 | 0 | 0 | 0% | ⬜ not started |
 | `a3_s13_proof_of_life_ob` | 148 | 0 | 0 | 0% | ⬜ not started |
-| `a3_s13_scar_and_steady_emp` | 187 | 0 | 0 | 0% | ⬜ not started |
+| `a3_s20a_scar_and_steady_emp` | 187 | 0 | 0 | 0% | ⬜ not started |
 | `a3_s14_cipher_and_skin_emp` | 144 | 0 | 0 | 0% | ⬜ not started |
 | `a3_s14_noelle_calculus_ob` | 102 | 0 | 0 | 0% | ⬜ not started |
 | `a3_s15_chain_of_two_ob` | 128 | 0 | 0 | 0% | ⬜ not started |
 | `a3_s15_signal_under_fire_emp` | 162 | 0 | 0 | 0% | ⬜ not started |
-| `a3_s16_command_and_surrender_emp` | 133 | 0 | 0 | 0% | ⬜ not started |
+| `a3_s19a_command_and_surrender_emp` | 133 | 0 | 0 | 0% | ⬜ not started |
 | `a3_s16_data_and_doubt_ob` | 152 | 0 | 0 | 0% | ⬜ not started |
 | `a3_s17_count_the_cost_ob` | 123 | 0 | 0 | 0% | ⬜ not started |
 | `a3_s17_faith_in_flaws_emp` | 120 | 0 | 0 | 0% | ⬜ not started |
@@ -568,7 +568,7 @@ That inserts commented `# scene <scene_id>_NNN with dissolve` stubs at each clus
 | `a3_s19b_zira_before_the_weight_ob` | 30 | 0 | 0 | 0% | ⬜ not started |
 | `a3_s20_the_story_keeper_emp` | 81 | 0 | 0 | 0% | ⬜ not started |
 | `a3_s20_you_dont_get_to_break_ob` | 77 | 0 | 0 | 0% | ⬜ not started |
-| `a3_s20a_lyra_archive_emp` | 62 | 0 | 0 | 0% | ⬜ not started |
+| `a3_s20b_lyra_archive_emp` | 62 | 0 | 0 | 0% | ⬜ not started |
 | `a3_s20a_lyra_prays_for_the_hunt_ob` | 35 | 0 | 0 | 0% | ⬜ not started |
 | `a3_s21_bookend_before_storm_emp` | 84 | 0 | 0 | 0% | ⬜ not started |
 | `a3_s21_the_story_keeper_ob` | 81 | 0 | 0 | 0% | ⬜ not started |

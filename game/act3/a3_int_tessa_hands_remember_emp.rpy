@@ -63,7 +63,7 @@ label a3_int_tessa_hands_remember_emp:
 # =========================================================
 # cann.scene_id: a3_int_tessa_hands_remember_emp
 # cann.chapter: Act III, Phase II — Deepening
-# cann.placement: After a3_s13_scar_and_steady_emp. Tessa's first erotic scene with
+# cann.placement: After a3_s20a_scar_and_steady_emp. Tessa's first erotic scene with
 #                 Aeron has concluded. Later the same night. She is alone in the
 #                 medbay, cleaning forceps that were already clean.
 # cann.what_happened:
@@ -96,7 +96,7 @@ label a3_int_tessa_hands_remember_emp:
 # cann.callbacks:
 #   - a2_int_tessa_torins_name: the hands shaking over the sink. The hands are steady
 #     now. The scene is structured as a quiet answer to that one.
-#   - a3_s13_scar_and_steady_emp: the scene this follows directly. The Brand scar, the
+#   - a3_s20a_scar_and_steady_emp: the scene this follows directly. The Brand scar, the
 #     gash, the pulse in the wrist — all drawn from that scene's physical vocabulary.
 #   - Future: a3_int_tessa_the_board_emp — the observation she does not yet understand
 #     returns under pressure when the board can no longer hold what it used to hold.

@@ -1,15 +1,15 @@
 # =======================================================
-# ACT 3 - Scene 20a: The Archive (Empathy Path)
-# File: a3_s20a_lyra_archive_emp.rpy
+# ACT 3 - Scene 20b: The Archive (Empathy Path)
+# File: a3_s20b_lyra_archive_emp.rpy
 # Type: LYRA EMOTIONAL + PLOT BEAT -- after the Story Keeper reveal
 # Fires after a3_s20. Lyra finds Aeron searching for his mother's trail.
 # =======================================================
 
 # ========= SCENE START TASKS =========
-$ _current_scene_id = "a3_s20a_lyra_archive_emp"
+$ _current_scene_id = "a3_s20b_lyra_archive_emp"
 $ scene_mark(_current_scene_id, "entered")
 
-label a3_s20a_lyra_archive_emp:
+label a3_s20b_lyra_archive_emp:
 
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 50mm, locked. Opens on Aeron's hands at the mapping terminal -- searching.
@@ -181,7 +181,7 @@ label a3_s20a_lyra_archive_emp:
 
 
 # ========= CANONICAL NOTES =========
-# cann.scene_id: a3_s20a_lyra_archive_emp
+# cann.scene_id: a3_s20b_lyra_archive_emp
 # cann.chapter: Act III, Phase III -- Revelation & Cost (Empathy Path)
 # cann.chapter_start: False
 # cann.when_in_timeline:
