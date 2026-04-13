@@ -168,13 +168,21 @@ label lore_noelle_name_mechanic:
 
 label lore_selene_kael:
     a "Kael. Tell me about him."
-    sel "Kael Rylan. Your brother. Twenty-four when I knew him. He'd been in the rebellion for six years by then."
-    sel "He had a way of looking at a problem that made the problem feel seen. Not solved — seen. And somehow, being seen was enough to find the answer."
-    a "What was he like as a person?"
-    sel "Funny. Serious about the work and funny about everything else. He made coffee that tasted like engine oil and called it a feature."
-    sel "He died on a morning when I sent him through a nine-minute window that I should have called at seven minutes."
-    sel "He said, on the comms, in the last thirty seconds: 'I would have taken the nine-minute window if you had told me it was nine.'"
-    sel "I have been trying to understand that sentence for nineteen years."
+    sel "Kael Rylan. Your brother. Born the same year as me."
+    sel "His Band worked for three years. Then it turned on him at fifteen. Marcus kept him in the Aeries. Called it mercy."
+    a "Kael called it a cage."
+    sel "You remember."
+    a "He told me. Before the rooftop."
+    sel "(quiet) He jumped. You know that. Age seventeen. From the same rail you stood at."
+    sel "What you don't know is that he survived."
+    a "What?"
+    sel "I was there. I was scouting the Aeries — looking for kids who were fracturing, kids the system was breaking. I was seventeen too. Running courier routes for cells that didn't have names yet."
+    sel "I saw him on the rail. I saw him go over. And something — his bloodline, the Verdant resonance, something in the fall itself — he didn't die."
+    sel "I pulled him out of the wreckage at the base of the span. He was broken in six places but he was breathing."
+    a "He never told me."
+    sel "He couldn't. Marcus reported him dead. The official record says suicide. Kael let the record stand because a dead man can't be caged."
+    sel "He took the survival as fate. He said: 'If the fall didn't kill me, the cage wasn't supposed to hold me.'"
+    sel "He gave me nine years after that. Nine years as the best second I ever had. And then the nine-minute window."
     return
 
 label lore_selene_nineteen_years:

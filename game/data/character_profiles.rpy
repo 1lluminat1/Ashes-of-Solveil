@@ -284,10 +284,10 @@ init 2 python:
             "tab":            "supporting",
             "order":          2,
             "accent":         _CA_KAEL,
-            "tagline":        "Brother. Band-failed. The reliable witness.",
+            "tagline":        "Brother. The fall that didn't kill him.",
             "portrait":       "images/ui/portraits/kael.png",
             "basic_info": [
-                ("Age",         "24 (deceased)"),
+                ("Age",         "26 (deceased)"),
                 ("Born",        "Second of Ember, A.C. 349"),
                 ("Birthplace",  "Aeries — Rylan Estate"),
                 ("Lineage",     "Unlineaged (Band-rejected)"),
