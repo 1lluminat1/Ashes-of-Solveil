@@ -69,7 +69,7 @@ init 1 python:
         "bands": {
             "title": _("Resonance Bands"),
             "category": _("Systems"),
-            "tags": ["haptic","intercept","tuning","rejection","Verdant"],
+            "tags": ["haptic","intercept","tuning","rejection"],
             "stages": [
                 { "body": [
                     _("Passive wrist transducers (coil + micro-capacitive array)."),
@@ -78,9 +78,8 @@ init 1 python:
                 { "body": [
                     _("Passive wrist transducers (coil + micro-capacitive array)."),
                     _("They intercept lineage resonance and translate it to haptic/thermal feedback (tune/dampen/spike)."),
-                    _("The Band is a container. If the resonance is too strong, the container cannot hold it."),
-                    _("Pure Verdant bloodline overwhelms the device instantly. Diluted lineage holds longer before the Band fails."),
-                    _("The Aeries calls this 'rejection.' The Cathedral called it 'excess.' The truth: the technology is insufficient for the bloodline."),
+                    _("The Cathedral's archived term for Band rejection was not 'failure.' It was 'excess.' The archives were sealed after Wing Seven."),
+                    _("Some rejections are immediate. Others take years. The reasons for the difference are not publicly understood."),
                 ]},
             ],
         },
