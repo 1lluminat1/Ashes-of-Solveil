@@ -103,6 +103,21 @@ label a4_s03_marcus_adapts_emp:
 
     # ========== PHASE 2 — MARCUS IS OPERATIONAL ==========
 
+    # CAMERA: slow push-in on the crystal stand as Noelle's hand reaches for
+    #         it. The pale blue wash enters the frame before the projection
+    #         resolves — we see the light change on the three faces first,
+    #         then the dimensional map blooms above the stand. Hold the
+    #         push. Let the overlay bloom inside the frame, not the camera.
+    # LIGHTING: Crystal activation. The three task lamps drop to background.
+    #           The pale blue wash becomes primary key. Every face shifts
+    #           from warm lamp light to cold projection light in the same
+    #           breath. Aeron's edges harden. Noelle's softens. Selene's
+    #           goes half-dark.
+    # SFX: One-shot — the low chime of the crystal activation. The loop
+    #      gains one layer: the pale sine-wave hum of the projection field.
+    #      The keyboard at the console stops for the duration of Noelle's
+    #      first finding.
+
     "Noelle activates the data crystal."
 
     "The pale blue wash fills the room. The projection resolves above the stand — a dimensional map of the city's signal grid, with Echelon's command network overlaid in hot red."
@@ -126,6 +141,18 @@ label a4_s03_marcus_adapts_emp:
     n "That is the first finding. It is the less significant one."
 
     # ========== PHASE 3 — THE SECOND FINDING ==========
+
+    # CAMERA: over-shoulder from Aeron's side as Noelle touches the console.
+    #         The second and third overlays land inside the projection; the
+    #         camera does not cut to them, the camera waits for them. Rack
+    #         focus from Noelle's hand to the hologram as the green layer
+    #         fades in. Land the rack on the moment the shapes align —
+    #         not before, not after.
+    # VISUAL: The layers read in order: red (Marcus's command network),
+    #         green (Echelon field ops, last 36 hours), white (Aeron's own
+    #         post-defection counter-strike framework). The white and the
+    #         green are the same shape. The green is lagged behind the
+    #         white by a consistent window. The beat is the recognition.
 
     "Noelle touches the console."
 
@@ -163,6 +190,15 @@ label a4_s03_marcus_adapts_emp:
 
     # ========== PHASE 4 — AERON RECEIVES IT ==========
 
+    # CAMERA: tight single on Aeron. Not on his hands — his face. Noelle
+    #         and Selene drop out of focus in the pale blue wash. Hold
+    #         the tight for the full inheritance monologue. This is the
+    #         longest close in the scene; do not cut away from it.
+    # FACE: Aeron — the bracing face gives way. Not to tears. To the
+    #        recognition that cannot be said out loud. The mouth does
+    #        nothing while the eyes do all the work. The grief is quiet.
+    #        It is not for the plot. It is for Marcus.
+
     "Aeron does not move."
 
     "Selene looks at him once — a brief glance, not concerned, just confirming he is still on his feet — and then returns her attention to the projection."
@@ -193,6 +229,14 @@ label a4_s03_marcus_adapts_emp:
 
     athought "All three sentences are true. They cannot be true at the same time. They are."
 
+    # BLOCKING: Selene's hand moves flat onto the console near Aeron's.
+    #           Not touching. Present. Frame the two hands in the lower
+    #           third of the two-shot, the projection still running above
+    #           them. This is the cipher-table gesture from a4_s02
+    #           redeployed for a room that does not know what the cipher
+    #           table means. The camera knows. Aeron knows. Noelle does
+    #           not — and the frame does not tell her.
+
     "Selene, without looking at him, puts her hand flat on the console near his. Not touching. Present. The gesture from the cipher table this morning, redeployed for a room that does not know what the cipher table means."
 
     athought "She sees it. She is not going to say it in front of Noelle. She is just going to stand there and be the thing that keeps me from stepping back from the projection."
@@ -220,6 +264,19 @@ label a4_s03_marcus_adapts_emp:
     n "Understood."
 
     # ========== PHASE 5 — NOELLE BREAKS CATEGORY ==========
+
+    # CAMERA: medium on Noelle. Not tight. She is small in the frame.
+    #         She is being honest about being small. The projection
+    #         continues behind her, the three layers still hanging. She
+    #         does not turn to look at them. She is looking at Aeron.
+    #         Selene drops into the soft edge of the frame — present,
+    #         not witness-ing.
+    # FACE: Noelle — the observer face gives way. First time in the
+    #        series she uses "I" about herself as subject and not as
+    #        instrument. The stillness in her hands holds. The stillness
+    #        is now a different stillness — no longer the tell of a
+    #        woman working; the tell of a woman who has stopped being
+    #        able to separate herself from the work.
 
     "Noelle does not deactivate the crystal."
 
@@ -259,6 +316,16 @@ label a4_s03_marcus_adapts_emp:
 
     # ========== PHASE 6 — THE ACKNOWLEDGEMENT ==========
 
+    # CAMERA: hold. The camera does not push. Aeron enters the medium-
+    #         on-Noelle frame from off-screen left as he takes the step.
+    #         They are now both in the same shot at the same distance,
+    #         the projection still running between them. This is the
+    #         first time in the scene Aeron and Noelle share a frame
+    #         at the same scale.
+    # BLOCKING: One step. Not to comfort. To acknowledge. This is the
+    #           first physical move Aeron has made since the opening.
+    #           Let the step register as the beat before he speaks.
+
     "Aeron takes one step closer to her."
 
     "Not to comfort. To acknowledge. To stand in the same frame as the person who is saying this thing."
@@ -289,6 +356,18 @@ label a4_s03_marcus_adapts_emp:
 
     # ========== PHASE 7 — THE PROJECTION HOLDS ==========
 
+    # CAMERA: slow push-in on the projection itself. Pull the human faces
+    #         out of the frame entirely. Hold on the three-layer overlay:
+    #         red, green, white. The trajectories extrapolating forward.
+    #         The convergence point in the western industrial corridor
+    #         resolves inside the frame as a single bright meeting of
+    #         lines. Let the math do the speaking the characters will not.
+    # VISUAL: The two shapes — white and green — meeting at a point six
+    #         days from now. Nobody says it. The frame says it. This is
+    #         the closest the scene gets to a thesis shot, and it is the
+    #         scene's one hero plate: the projection alone, humans
+    #         excluded, the collision geometry lit by itself.
+
     "Nobody deactivates the crystal."
 
     "The three layers keep running. Red, green, white. Marcus consolidating. Marcus learning. Aeron's own framework turned back on the people Aeron built it for."
@@ -309,6 +388,13 @@ label a4_s03_marcus_adapts_emp:
 
     # ========== PHASE 8 — CLOSING ==========
 
+    # CAMERA: pull back to a three-shot including all three figures and
+    #         the projection. Selene speaks from the edge of the frame.
+    #         The care protocol is quiet; the composition is flat.
+    # FACE: Selene — the face of a woman running Tessa's rule on somebody
+    #        who does not yet know what the rule is. Gentle. Unhesitating.
+    #        The care moves through her without ceremony.
+
     sel "Noelle. Eighteen hours in. When did you last eat."
 
     n "I do not remember."
@@ -326,6 +412,14 @@ label a4_s03_marcus_adapts_emp:
     n "Understood."
 
     "Noelle turns back to the console. Her hands are already moving — phase two opening, the cell-location queries spinning up, the task sequence building."
+
+    # CAMERA: empty-workspace plate for the closing coda. Crystal still
+    #         running. Pale blue wash on empty walls. Three task lamps
+    #         still lit at the console where Noelle has returned to work.
+    #         Aeron and Selene leaving frame-right; hold on the room
+    #         after they exit. The projection is the only motion in the
+    #         shot. This is the "quiet stitch" plate per the Cinematography
+    #         Bible §3 — negative space for introspection before the cut.
 
     "Aeron and Selene leave the workspace together. They walk the corridor without speaking. The projection stays behind them, running in the empty room, casting pale blue light on the walls."
 

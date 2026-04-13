@@ -102,6 +102,19 @@ label a4_s12a_she_is_not_just_tactical_emp:
 
     # ========== PHASE 2 — THE GAP ==========
 
+    # CAMERA: transition from the corridor-approach drift to the doorway
+    #         hold. 50mm over Aeron's shoulder, arriving at his stopping
+    #         point. The gap is the composition — a vertical slice of
+    #         the warmer room framed by the cold corridor wall on either
+    #         side. Inside the slice: Selene in the reading chair, the
+    #         letter in her hand. The camera does not enter the room.
+    #         It watches from the threshold the way Aeron watches.
+    # LIGHTING: first major temperature contrast of the scene. Corridor
+    #           blue on Aeron's back. Desk-lamp amber on Selene through
+    #           the gap. The seam between them falls on the door frame
+    #           itself. The warmth is losing the war at the plate
+    #           geometry. That is the subject of the shot.
+
     "He can see a slice of the room through the gap."
 
     "It is her personal quarters, not her office. He has been inside once, on the night of the displacement, and he remembers the geometry: small bunk to the right, reading desk to the left, one chair, one shelf, one window. The window has been sealed with a plate since the move — the outer wall is not secure for glass."
@@ -174,6 +187,12 @@ label a4_s12a_she_is_not_just_tactical_emp:
 
     # ========== PHASE 4 — THE KNOCK ==========
 
+    # SFX: loop holds — corridor ambient, generator, distant rotation.
+    #      One-shot: two soft knuckles on the door frame. The knock
+    #      is deliberately quiet; it does not push air. It is a
+    #      sentence spoken at conversational volume in the language
+    #      of a woman who will hear exactly that kind of knock.
+
     "He steps back toward the door. Not all the way — enough that he can reach the frame. He does not push the door wider. He does not look through the gap again. He lifts his hand."
 
     "He knocks once. Quiet. Two knuckles. The knock that says: I am here, I saw nothing, I am asking."
@@ -195,6 +214,23 @@ label a4_s12a_she_is_not_just_tactical_emp:
     "He closes it behind him. Not all the way. He leaves it at an inch from his side, because the inch is the pitch the room is holding and he is not going to retune the room."
 
     # ========== PHASE 5 — THE ROOM ==========
+
+    # CAMERA: 40mm two-shot transition as Aeron crosses the threshold
+    #         and stops at two meters from her chair. Selene still
+    #         seated, letter folded onto the desk. The camera enters
+    #         the room with him but does not approach further — it
+    #         holds at his stopping distance, because the camera is
+    #         reading the same thresholds he is reading.
+    # LIGHTING: inside now. The desk lamp is the only key. The
+    #           corridor behind him reads cold through the one-inch
+    #           gap he did not close. Her face is lit from below and
+    #           left; the shadow of her jaw falls on her own neck
+    #           (per opening). No overhead at all. She has turned
+    #           them off.
+    # SFX: corridor ambient drops by roughly half the moment the door
+    #      is at an inch. The practical lamp's crackle comes forward.
+    #      The room is holding quieter than the corridor by a
+    #      measurable margin, and the audio mix honors it.
 
     # scene bg_selene_quarters_lamp_only with dissolve
 
@@ -221,6 +257,17 @@ label a4_s12a_she_is_not_just_tactical_emp:
     "He does not speak first. He knows better than to speak first in a room that is holding a pitch."
 
     # ========== PHASE 6 — THE LETTER ==========
+
+    # CAMERA: medium two-shot across the room. Selene at the chair,
+    #         Aeron at his two-meter mark. The folded letter in the
+    #         lower third of her side of the frame. The camera favors
+    #         her face slightly — he is listening, she is the speaking
+    #         subject. Do not cut during her sentences. Let the
+    #         monologue play in one breath per movement.
+    # FACE: Selene — the stripped face. Teacher mask, commander mask,
+    #        co-commander mask, all off. What is left is a woman with
+    #        a letter in her hand. She does not cry. She does not look
+    #        away. She lets him see her. That is the moment.
 
     "Selene speaks first."
 
@@ -289,6 +336,15 @@ label a4_s12a_she_is_not_just_tactical_emp:
     "He does not say any of that. He knows better than to name a thing that is standing in the room holding itself together by not being named."
 
     "He looks at her. He looks at the letter on the desk."
+
+    # CAMERA: push-in matching his step. Half the distance the camera
+    #         would move for a normal approach — the understatement of
+    #         the move is the beat. Land the push at the chair; do not
+    #         travel past it. The chair becomes the third subject of
+    #         the frame exactly when his hand finds the wood.
+    # BLOCKING: ONE step. Not two. He stops at the back of the chair.
+    #           His hand goes onto the wood. (The macro on the hand
+    #           follows in Phase 8.)
 
     "He takes one step forward."
 
@@ -359,6 +415,19 @@ label a4_s12a_she_is_not_just_tactical_emp:
     sel "Then I am glad it is this week."
 
     # ========== PHASE 10 — THE LETTER, READ OUT LOUD (NOT) ==========
+
+    # CAMERA: slow tighten on Selene as she describes the cat. Not a
+    #         rack — a dolly. A few centimeters closer while staying on
+    #         her face. The folded letter visible in the lower frame.
+    #         The cat story is the only moment in the scene where her
+    #         voice almost breaks; the camera is there to catch the
+    #         almost without flinching.
+    # FACE: Selene — the inventory of the letter. She is not remembering
+    #        the words, she is giving them. "Grandmother" is the beat;
+    #        her mouth stops after she says it. "Grandmother is dead"
+    #        is Aeron's line — do NOT cut to him for it. Stay on
+    #        Selene's face. His voice is an off-frame answer. The
+    #        grief is hers; the witness is his.
 
     "He does not ask what the letter says."
 
@@ -452,6 +521,18 @@ label a4_s12a_she_is_not_just_tactical_emp:
 
     # ========== PHASE 12 — THE STAYING ==========
 
+    # CAMERA: locked two-shot. No movement for the full "quiet for a
+    #         long time" beat. This is the scene's longest held frame.
+    #         Let the ambient hold the shot — do not intercut, do not
+    #         push, do not rack. The only motion inside the frame is
+    #         Selene's breath finding a slower cadence. A still
+    #         composition for the one place in the scene where
+    #         something is changing that can only be seen by not
+    #         cutting.
+    # SFX: the practical lamp crackles once. Mark it. That is the
+    #      scene's only punctuation during the long silence. Everything
+    #      else is the room breathing with her.
+
     "He stays."
 
     "He does not sit. There is no second chair in the room. The bunk is not a place he is going to put his body in this room tonight. He stays standing, his hand on the back of her chair, his eyes not on her face but in the middle distance just past her shoulder — the angle of looking that lets a person be witnessed without being observed."
@@ -504,6 +585,17 @@ label a4_s12a_she_is_not_just_tactical_emp:
 
     # ========== PHASE 13 — THE LEAVING ==========
 
+    # CAMERA: macro insert on Aeron's hand lifting from the chair. The
+    #         wood is warm under his palm. He lets the warmth leave
+    #         before his hand does — a small pause the camera honors
+    #         with a half-second hold. Then he walks to the door
+    #         without looking back. The look-back at the threshold is
+    #         one over-shoulder beat: a single held second of Selene
+    #         in the chair still holding the letter.
+    # FACE: Selene — the corner of her mouth still holding the small-
+    #        move from earlier. Not a smile. The acknowledgment of an
+    #        offering accepted. It is the last face-beat of the scene.
+
     "He lifts his hand from the chair."
 
     "Slowly. The wood is still warm under his palm. He lets the warmth leave before his hand does — a small pause he does not explain to himself."
@@ -525,6 +617,17 @@ label a4_s12a_she_is_not_just_tactical_emp:
     "The latch catches."
 
     # ========== PHASE 14 — THE CORRIDOR, AFTER ==========
+
+    # CAMERA: frame-match the opening corridor approach from Phase 1 —
+    #         same plate geometry, but reversed. Aeron now stands
+    #         where he had been walking from. The lamplight slice is
+    #         gone; the door has caught the warm light back inside
+    #         the room. The corridor is the same corridor and he is
+    #         not the same Aeron. The composition is the one place
+    #         the scene says it without dialogue.
+    # LIGHTING: pure cold blue on him. The scene's one practical has
+    #           been extinguished from his side of the door. The
+    #           frame contains no warmth. That is the point.
 
     # scene bg_secondary_base_corridor_night_low with dissolve
 
