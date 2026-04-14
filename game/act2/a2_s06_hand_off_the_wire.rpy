@@ -248,7 +248,7 @@ label a2_s06_hand_off_the_wire:
     menu:
         athought "She's handing me something irreplaceable. How do I take it?"
 
-        "Accept it with weight—acknowledge what this means.":
+        "Accept it.":
             $ choice_and_dev(
                 _current_scene_id, "_accept_with_weight", "EMP", factor=1,
                 note="Aeron acknowledges the emotional weight of Zira's trust, treats the relay as more than a tool."
@@ -295,7 +295,7 @@ label a2_s06_hand_off_the_wire:
 
             z "Come here. Let me show you how it works."
 
-        "Accept it professionally—focus on the tactical value.":
+        "Take it.":
             $ choice_and_dev(
                 _current_scene_id, "_accept_professionally", "OB", factor=1,
                 note="Aeron treats the relay as a tactical asset, maintains professional distance from the emotional weight."

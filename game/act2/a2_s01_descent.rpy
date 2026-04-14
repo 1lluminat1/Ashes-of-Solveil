@@ -143,7 +143,7 @@ label a2_s01_descent:
     # --- PLAYER CHOICE: contact Zira or not ---
     menu:
         "The relay blinks once."
-        "Activate the device — reach out to Zira.":
+        "Activate the device.":
             $ choice_and_dev(
                 _current_scene_id, "_a2_01_contact_zira", "EMP", factor=2,
                 next_scene_label="a2_s02_reality_check",
@@ -162,7 +162,7 @@ label a2_s01_descent:
             athought "If she got it, she knows we've jumped."
             athought "If she didn't… we walk alone."
 
-        "Pocket it — too risky to send a signal.":
+        "Pocket it.":
             $ choice_and_dev(
                 _current_scene_id, "_a2_01_ignore_device", "OB", factor=2,
                 next_scene_label="a2_s02_reality_check",

@@ -80,7 +80,7 @@ label a2_s09_armor_down:
 
     a "Lyra—"
 
-    l "I signed a false report to preserve a lie. I watched them seal my mentor's memory in glass and called it sanctified."
+    l "I signed a false report to preserve a lie. I watched them seal my mentor's memory in glass and called it sanctification."
     l "If that's not broken, nothing is."
     l "But you sat with me anyway. You didn't try to fix me or explain me away."
     l "You just... stayed."
@@ -93,18 +93,18 @@ label a2_s09_armor_down:
 
     # --- PLAYER CHOICE: How does Aeron respond to her vulnerability? ---
     menu:
-        "She's offering something fragile. How does he receive it?"
+        "She's offering something fragile."
 
-        "Close the distance—let this become what it's becoming.":
+        "Close the distance.":
             $ record_choice_once(
                 _current_scene_id, "_close_distance",
                 note="Aeron chooses to pursue intimacy with Lyra. Consent affirmed."
             )
             $ scene_mark(_current_scene_id, "intimacy_chosen")
 
-            athought "I don't think about it. Just act."
+            athought "No thinking, just act."
 
-            "My hand comes up to her face. Gentle."
+            athought "My hand comes up to her face. Gentle."
 
             athought "The way you touch something you're afraid might disappear."
 
@@ -114,8 +114,6 @@ label a2_s09_armor_down:
 
             a "No. Promises are cheap."
             a "I'm just telling you."
-
-            "She laughs."
 
             athought "Her laugh is small and broken, but somehow beautiful because of it."
 
@@ -137,15 +135,13 @@ label a2_s09_armor_down:
 
             a "Then we figure it out together."
 
-            "She nods."
-
             athought "She looks small and scared, but there's certainty in her eyes that wasn't there before."
 
             "And then her lips find his."
 
             jump a2_s09_intimate_scene
 
-        "Hold back—this isn't the right time.":
+        "Hold back.":
             $ record_choice_once(
                 _current_scene_id, "_hold_back",
                 note="Aeron chooses to hold back from intimacy despite the opening."

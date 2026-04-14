@@ -185,7 +185,7 @@ label a2_s17_building_something:
         menu:
             "She's pulling away. What does Aeron do?"
 
-            "Don't let her retreat—close the distance.":
+            "Don't let her retreat.":
                 $ record_choice_once(
                     _current_scene_id, "_kiss_zira",
                     note="Aeron initiates first kiss with Zira."
@@ -241,7 +241,7 @@ label a2_s17_building_something:
 
                 z "(small smile) Good."
 
-            "Let her have space—this isn't the moment.":
+            "Let her have space.":
                 $ record_choice_once(
                     _current_scene_id, "_give_space",
                     note="Aeron lets Zira retreat, respects her pace."

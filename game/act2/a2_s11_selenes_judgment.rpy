@@ -124,9 +124,9 @@ label a2_s11_selenes_judgment:
 
     # --- PLAYER CHOICE: How does Aeron respond to her challenge? ---
     menu:
-        "She's asked a direct question. How does he answer?"
+        "She's asked a direct question."
 
-        "Acknowledge the debt—he owes her people.":
+        "Acknowledge the debt.":
             $ choice_and_dev(
                 _current_scene_id, "_acknowledge_debt", "EMP", factor=1,
                 note="Aeron admits moral responsibility without deflection or tactical framing."
@@ -156,7 +156,7 @@ label a2_s11_selenes_judgment:
 
             sel "That's the first honest thing an Echelon officer has ever said to me."
 
-        "Make the tactical case—his skills are valuable.":
+        "Make the tactical case.":
             $ choice_and_dev(
                 _current_scene_id, "_tactical_case", "OB", factor=1,
                 note="Aeron frames his value in terms of utility rather than addressing the moral weight."

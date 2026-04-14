@@ -206,7 +206,7 @@ label a2_s07_quiet_night:
     menu:
         "She's asking if they can change. If running means anything at all."
 
-        "Hold space for her—let her feel it without fixing it.":
+        "Hold space for her.":
             $ choice_and_dev(
                 _current_scene_id, "_hold_space", "EMP", factor=1,
                 note="Aeron sits with Lyra's pain instead of trying to solve it. Emotional presence over solutions."
@@ -270,7 +270,7 @@ label a2_s07_quiet_night:
 
             athought "We stay like that. Shoulder to shoulder. Hand touching hand. The Unders humming its wrong song around us."
 
-        "Offer perspective—reframe the guilt as something useful.":
+        "Offer perspective.":
             $ choice_and_dev(
                 _current_scene_id, "_reframe_guilt", "OB", factor=1,
                 note="Aeron tries to make the guilt productive rather than sitting with the emotion."

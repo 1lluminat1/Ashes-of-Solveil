@@ -138,9 +138,9 @@ label a2_s08_the_analyst:
 
     # --- PLAYER CHOICE: How does Aeron explain his break? ---
     menu:
-        "She's asking what broke him. What does he tell her?"
+        "She's asking what broke him."
 
-        "Tell her the truth—something shattered.":
+        "Tell her the truth.":
             $ choice_and_dev(
                 _current_scene_id, "_truth_shattered", "EMP", factor=1,
                 note="Aeron admits vulnerability to a stranger. Honesty over protection."
@@ -175,7 +175,7 @@ label a2_s08_the_analyst:
             n "I think you're an anomaly, Captain. And I've built my career on eliminating anomalies."
             n "The fact that I'm talking to you instead of flagging your location to Echelon should tell you something."
 
-        "Deflect—it's not her business.":
+        "Deflect.":
             $ choice_and_dev(
                 _current_scene_id, "_deflect_question", "OB", factor=1,
                 note="Aeron protects himself, maintains walls with the unknown analyst."

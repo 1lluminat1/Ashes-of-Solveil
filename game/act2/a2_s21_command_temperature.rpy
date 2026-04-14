@@ -115,7 +115,7 @@ label a2_s21_command_temperature:
 
             sel "Then what do you propose?"
 
-        "Accept the plan — suggest a contingency.":
+        "Accept the plan.":
             $ choice_and_dev(
                 _current_scene_id, "_accepted_with_contingency", "OB", factor=1,
                 note="Accepts plan's framework but adds tactical contingency. Respects chain of command while demonstrating competence."
