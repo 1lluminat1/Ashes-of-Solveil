@@ -44,7 +44,7 @@ label a4_s10_what_selene_meant_emp:
     #           the chair she is lighter by a specific small amount. She sits again.
     # FACE: Selene — the most stripped-back register she has in this chapter.
     #       Not commander-Selene. Not the Marcus inheritor. The Selene who is
-    #       twenty-eight in the story and fifty-one in the chair at the same time.
+    #       twenty-eight in the story and thirty-seven in the chair at the same time.
     #       Aeron — open, listening, braced. He does not try to route tonight.
     #       The routing is not an option in this room.
 
@@ -560,7 +560,7 @@ label a4_s10_what_selene_meant_emp:
 
     "Selene's hands are in her lap. She is not looking at him. She is letting the minute be a minute."
 
-    athought "She brought me to a room neither of us runs because the sentence she was going to give me could not survive the commanders in either of us. She had to strip the commander off. She had to sit in the chair as the twenty-eight-year-old and the fifty-one-year-old at the same time and I had to sit in a chair that was not mine to command."
+    athought "She brought me to a room neither of us runs because the sentence she was going to give me could not survive the commanders in either of us. She had to strip the commander off. She had to sit in the chair as the twenty-eight-year-old and the thirty-seven-year-old at the same time and I had to sit in a chair that was not mine to command."
 
     athought "The minute is her letting the sentence breathe. She is not ending the scene. She is letting the scene end itself by having been what it needed to be."
 
@@ -701,7 +701,7 @@ label a4_s10_what_selene_meant_emp:
 # cann.selene_state:
 #   - The most stripped-back register she has had in the chapter. Not
 #     commander-Selene, not the Marcus inheritor. The Selene who is twenty-eight
-#     in the story and fifty-one in the chair at the same time. This is the
+#     in the story and thirty-seven in the chair at the same time. This is the
 #     version of her that has not appeared in the game before.
 #   - Her Kael backstory is now fully canonical. The lieutenant's name is Kael.
 #     The operation was a riverbank extraction in the third district. The window

@@ -447,7 +447,7 @@ label a4_s17_selene_deepening_erotic_emp:
 
     sthought "He does not know I am crying yet. He will know when he feels the first drop."
 
-    sthought "I have not cried in front of a person since I was thirty-one."
+    sthought "I have not cried in front of a person since I was twenty-nine."
 
     sthought "I am thirty-nine."
 
@@ -565,7 +565,7 @@ label a4_s17_selene_route_slow:
 
     "Her eyes have not left his face."
 
-    sel "My sentence is: I want you in a room with no clock. I have not been in a room with no clock since I was thirty-one. The clock is my vocation. Tonight I am going to put the clock in the drawer with the letter."
+    sel "My sentence is: I want you in a room with no clock. I have not been in a room with no clock since I was twenty-nine. The clock is my vocation. Tonight I am going to put the clock in the drawer with the letter."
 
     sel "Slowly. Yes."
 
@@ -755,7 +755,7 @@ label a4_s17_selene_aftercare_intimate:
 
     sel "Kael was grieving his wife. Not the way you grieve someone who has died — the way you grieve someone who is still in the room with you and is deciding, quietly, that she should not be. I had met her seven times. Her name was Rava. She had been Kael's wife in the Phoenix internal registry for three years by then, and she was deciding that she did not want their daughter raised inside a war, and Kael could not leave the war, and the whole arrangement was a small slow tension he was living inside. He never said her name out loud in the war room. He looked at a particular corner of the war room instead, and the corner was her. He taught me competence because competence was the grammar of holding that tension without falling apart. I was his student and I was also the thing he was using to not fall apart."
 
-    sel "I did not know that for a long time. I figured it out at thirty-one, the year I finally cried in front of another person for the first time, and the other person was Kael, and I cried about a mission we had lost and he cried about his wife and we did not say either of those things out loud. We just cried at the same table with a map between us."
+    sel "I did not know that for a long time. I figured it out at twenty-nine, the year I finally cried in front of another person for the first time, and the other person was Kael, and I cried about a mission we had lost and he cried about his wife and we did not say either of those things out loud. We just cried at the same table with a map between us."
 
     sel "I have been doing the same thing to you."
 
