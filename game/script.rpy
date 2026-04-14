@@ -203,6 +203,7 @@ label start:
         call a4_s09_noelle_implicated_emp
         call a4_s09a_she_calls_him_out_emp
         call a4_s10_what_selene_meant_emp
+        call a4_s10a_liora_sent_word_emp
         call a4_s11_mercy_call_costs_emp
         call a4_s11a_prayer_after_mercy_emp
         call a4_s11b_the_ones_he_lost_emp
