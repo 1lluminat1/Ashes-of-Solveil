@@ -409,7 +409,7 @@ init 1 python:
                 {
                     "body": [
                         _("Branded at twelve. Rejected at fifteen. Kept in the Aeries by his father's strings — {i}mercy{/i} Kael called the cage. The whispers followed him: {i}protected failure, the General's broken son.{/i} At seventeen he stood on the same rail and let go."),
-                        _("He had been Selene's command protégé at twenty-four — her lieutenant on Operation Verdant, before the name Kael became a file she sealed shut with the efficiency of a woman who had already lost too much. She remembers him holding a standard-issue coffee cup with both hands, like a small bird he did not want to crush. Nothing she ever had to file."),
+                        _("He had been Selene's command protégé at twenty-six — her lieutenant on Operation Stillwater, before the name Kael became a file she sealed shut with the efficiency of a woman who had already lost too much. She remembers him holding a standard-issue coffee cup with both hands, like a small bird he did not want to crush. Nothing she ever had to file."),
                         _("The lie: Kael was the one who couldn't carry the weight. The truth: two of the people who loved Aeron most were already grieving him in Kael's shape before Aeron arrived."),
                     ],
                 },

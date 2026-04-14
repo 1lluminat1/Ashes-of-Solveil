@@ -44,7 +44,7 @@ label a4_s10_what_selene_meant_emp:
     #           the chair she is lighter by a specific small amount. She sits again.
     # FACE: Selene — the most stripped-back register she has in this chapter.
     #       Not commander-Selene. Not the Marcus inheritor. The Selene who is
-    #       twenty-four in the story and fifty-one in the chair at the same time.
+    #       twenty-eight in the story and fifty-one in the chair at the same time.
     #       Aeron — open, listening, braced. He does not try to route tonight.
     #       The routing is not an option in this room.
 
@@ -157,7 +157,45 @@ label a4_s10_what_selene_meant_emp:
 
     "She lets the name sit in the room."
 
-    sel "He was twenty-six. I was twenty-four. He had been under me for nine months. Marcus assigned him to me when he decided I was ready to carry a subordinate — I was not running a wing yet, I was running a six-person cell, and Kael was my second. I had never had a second before. He was the first person I had professional authority over in my life."
+    sel "Before I go further, there is something about him that is not in any record you have access to."
+
+    sel "Your brother did not die on the rooftop at seventeen."
+
+    "Aeron's hands are flat on the table. Neither of them moves."
+
+    sel "The fall was supposed to be the whole of Solveil and it was not. The city caught him badly enough to keep him alive. He hit the cloud layer and then he hit everything else — the upper industrial gantries, a disused maintenance span on Tier 9, the outer cables of a mid-level cargo crossing, the edge of a condenser shell, the side of a waste-trunk before it angled into the Middle Levels. Every impact broke something. Every impact decelerated him. His body became the brake on his own fall."
+
+    sel "I was a courier in the Middle Levels that evening. Seventeen years old, two levels above the wreckage, running a route that was going to take me past the base of that particular span at the wrong minute. I heard the echo of the final impact travel down the cable tree. I was the only person close enough to hear what it was. I traced the sound. I found him in a heap of twisted structural cabling — broken in six places, still breathing. I dragged him into a maintenance tunnel I knew about from courier work and I kept him alive for three weeks with stolen supplies and one physician I never put in a report."
+
+    sel "By the time he was ambulatory, your father had filed the suicide record and buried an empty box. The Aeries recorded Kael Rylan as dead. We let the record stand because a dead man cannot be caged. Your brother took the survival as a verdict — *if the fall didn't kill me, the cage wasn't supposed to hold me* — and he gave me nine years after that. Nine years as the best second I ever had."
+
+    sel "Every doctrine of shared command I have been teaching you came from him first. I did not invent it. I inherited it."
+
+    athought "The sentence is going through me without finding anywhere to stop. It is not possible. He died on the rooftop. There was a funeral. There was a box."
+
+    athought "There was an empty box."
+
+    "A long beat. The pipe in the corner ticks twice and is silent."
+
+    sel "In the last three of those nine years, he had a wife."
+
+    sel "Her name was Rava. She worked a laundry collective in the Foundry Wards when he met her in 378 AC. They married six months later in the Phoenix internal registry. She was one of the people I loved him through. I met her seven times in three years — I never sat with her, we never became close, she understood the cost of operational rank and I understood the cost of a wife who stayed out of operations. Kael never said her name in the war room. He looked at a particular corner of the war room instead, and the corner was her."
+
+    sel "In 379 they had a daughter. He held her in his arms the night she was born. He named her in a language he did not speak because his mother did. He did it knowing his mother would recognize the name if she ever heard it — and he did it without telling any of us that he had written to his mother for the first time in seven years to let her know her granddaughter existed."
+
+    "Aeron cannot speak."
+
+    sel "I am telling you this because everything I am about to tell you about how he died is the story of a man who had a family and was trying to figure out how to hold the family and the rebellion at the same time. The operational part of it does not make sense without the family part. And the lesson he taught me at the end does not make sense without knowing that he taught it as a man who had something to come home to."
+
+    "A beat."
+
+    sel "Rava and their daughter are both gone now. I do not know the full story of what happened to them after Kael died. What I know is that Rava took the child and disappeared into the Unders in the week after Stillwater, and I looked for them and found nothing. I have been assuming for nine years that they died in the aftermath the way most things in the post-Stillwater weeks died, which is silently, and without me being able to do anything about it."
+
+    sel "That is the whole family. That is what I have been carrying alone for nine years. I am handing it to you now because it is time."
+
+    "A longer beat. She drinks water. The cup goes back down."
+
+    sel "He was twenty-six. I was twenty-eight. He had been under me for nine months. Marcus assigned him to me when he decided I was ready to carry a subordinate — I was not running a wing yet, I was running a six-person cell, and Kael was my second. I had never had a second before. He was the first person I had professional authority over in my life."
 
     sel "I liked him. I am going to say it that flatly because the scene does not work if I pretend I liked him in the abstract. I liked him the way you like a person you are going to keep — I liked the way he listened in briefings, I liked that his handwriting on intel reports was the cleanest in the cell, I liked that he made me laugh exactly twice in nine months and both times he was not trying to."
 
@@ -237,7 +275,7 @@ label a4_s10_what_selene_meant_emp:
 
     "Aeron does not speak for a long moment. He has the water cup in his hand. He has not drunk from it since he picked it up."
 
-    athought "Kael said the weight belongs to more than one person. He said it while he was dying. He said it to Selene, who was twenty-four, and Marcus was standing behind her with his hand on the back of her chair, not saying anything, because Marcus knew the lesson was not his to deliver."
+    athought "Kael said the weight belongs to more than one person. He said it while he was dying. He said it to Selene, who was twenty-eight, and Marcus was standing behind her with his hand on the back of her chair, not saying anything, because Marcus knew the lesson was not his to deliver."
 
     athought "I am inside the lesson now. I am not being delivered it — I am being inherited into it."
 
@@ -522,7 +560,7 @@ label a4_s10_what_selene_meant_emp:
 
     "Selene's hands are in her lap. She is not looking at him. She is letting the minute be a minute."
 
-    athought "She brought me to a room neither of us runs because the sentence she was going to give me could not survive the commanders in either of us. She had to strip the commander off. She had to sit in the chair as the twenty-four-year-old and the fifty-one-year-old at the same time and I had to sit in a chair that was not mine to command."
+    athought "She brought me to a room neither of us runs because the sentence she was going to give me could not survive the commanders in either of us. She had to strip the commander off. She had to sit in the chair as the twenty-eight-year-old and the fifty-one-year-old at the same time and I had to sit in a chair that was not mine to command."
 
     athought "The minute is her letting the sentence breathe. She is not ending the scene. She is letting the scene end itself by having been what it needed to be."
 
@@ -662,7 +700,7 @@ label a4_s10_what_selene_meant_emp:
 #     yet. That is correct and canonical.
 # cann.selene_state:
 #   - The most stripped-back register she has had in the chapter. Not
-#     commander-Selene, not the Marcus inheritor. The Selene who is twenty-four
+#     commander-Selene, not the Marcus inheritor. The Selene who is twenty-eight
 #     in the story and fifty-one in the chair at the same time. This is the
 #     version of her that has not appeared in the game before.
 #   - Her Kael backstory is now fully canonical. The lieutenant's name is Kael.

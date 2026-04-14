@@ -173,7 +173,7 @@ label lore_noelle_name_mechanic:
 
 label lore_selene_kael:
     a "Kael. Tell me about him."
-    sel "Kael Rylan. Your brother. Born the same year as me."
+    sel "Kael Rylan. Your brother. Two years younger than me."
     sel "His Band worked for three years. Then it turned on him at fifteen. Marcus kept him in the Aeries. Called it mercy."
     a "Kael called it a cage."
     sel "You remember."
