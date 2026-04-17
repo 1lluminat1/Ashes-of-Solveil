@@ -1,14 +1,14 @@
 # =======================================================
 # ACT 3 - Interlude: Nyra — "Before the Mirror"
-# File: a3_int_nyra_before_the_mirror_ob.rpy
+# File: a3_int_02_nyra_before_the_mirror_ob.rpy
 # Type: LI THOUGHT INTERLUDE (Nyra, OB)
 # =======================================================
 
 # ========= SCENE START TASKS =========
-$ _current_scene_id = "a3_int_nyra_before_the_mirror_ob"
+$ _current_scene_id = "a3_int_02_nyra_before_the_mirror_ob"
 $ scene_mark(_current_scene_id, "entered")
 
-label a3_int_nyra_before_the_mirror_ob:
+label a3_int_02_nyra_before_the_mirror_ob:
 
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: Locked medium. The cloth, the blade, the steady passes. Her hands only.
@@ -64,7 +64,7 @@ label a3_int_nyra_before_the_mirror_ob:
 # =========================================================
 # CANONICAL NOTES
 # =========================================================
-# cann.scene_id: a3_int_nyra_before_the_mirror_ob
+# cann.scene_id: a3_int_02_nyra_before_the_mirror_ob
 # cann.chapter: Act III, Phase III — Mirror & Rejection
 # cann.placement: Before a3_s24_liora_ob (the Liora confrontation — OB Act 3 finale).
 #                 Nyra's chambers. Pre-op calm. Polishing Veilbreaker. Alone. This
@@ -104,7 +104,7 @@ label a3_int_nyra_before_the_mirror_ob:
 #     her own conviction preparing to be betrayed by her own conviction, one scene
 #     before it happens, unable to see it.
 # cann.callbacks:
-#   - a3_int_nyra_the_oath_ob: the ritual and the scar. The scar was glowing at the
+#   - a3_int_01_nyra_the_oath_ob: the ritual and the scar. The scar was glowing at the
 #     end of that scene. The contrast is the content of this scene.
 #   - a3_s12_the_oath_ob: the fractured-crest ritual, the silvered scars. Established.
 #   - a3_s23_bookend_before_mirror_ob: the bookend this interlude lives inside.

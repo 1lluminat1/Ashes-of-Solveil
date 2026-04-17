@@ -1,14 +1,14 @@
 # =======================================================
 # ACT 2 - Interlude: Noelle — "Variable Name"
-# File: a2_int_noelle_variable_name.rpy
+# File: a2_int_02_noelle_variable_name.rpy
 # Type: LI THOUGHT INTERLUDE (Noelle)
 # =======================================================
 
 # ========= SCENE START TASKS =========
-$ _current_scene_id = "a2_int_noelle_variable_name"
+$ _current_scene_id = "a2_int_02_noelle_variable_name"
 $ scene_mark(_current_scene_id, "entered")
 
-label a2_int_noelle_variable_name:
+label a2_int_02_noelle_variable_name:
 
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: Over the shoulder. The projected data crystal fills the frame — a
@@ -77,7 +77,7 @@ label a2_int_noelle_variable_name:
 # =========================================================
 # CANONICAL NOTES
 # =========================================================
-# cann.scene_id: a2_int_noelle_variable_name
+# cann.scene_id: a2_int_02_noelle_variable_name
 # cann.chapter: Act II, Chapter III — Proving Ground
 # cann.placement: After a2_s18_the_patient. Noelle has witnessed Tessa engage a
 #                 surgical clamp in the presence of fear. Later the same evening
@@ -114,7 +114,7 @@ label a2_int_noelle_variable_name:
 # cann.callbacks:
 #   - a2_s18_the_patient: the clamp, the fear, Tessa's hands. All drawn directly from
 #     the scene this follows.
-#   - Future: a3_int_noelle_unmeasurable_emp — the file stays open and the hypothesis
+#   - Future: a3_int_02_noelle_unmeasurable_emp — the file stays open and the hypothesis
 #     "Unmeasurable ≠ Nonexistent" is written into the same framework this scene
 #     refuses to close.
 #   - Future: a3_int_noelle_aeron — the file is renamed from unmodeled_variable_TK to

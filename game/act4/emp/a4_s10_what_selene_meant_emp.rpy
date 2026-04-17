@@ -772,9 +772,9 @@ label a4_s10_what_selene_meant_emp:
 #     she watched you do it in the mess." The cross-LI intelligence is
 #     deliberate: Zira told Selene, Selene is using it to reinforce the
 #     diagnosis without undermining Zira's private approach.
-#   - a2_int_tessa_torins_name: the origin of the rule of three. Selene is
+#   - a2_int_04_tessa_torins_name: the origin of the rule of three. Selene is
 #     calling back to it structurally, not by name.
-#   - a3_int_tessa_the_board_emp: the board that holds names. Selene's "shared
+#   - a3_int_08_tessa_the_board_emp: the board that holds names. Selene's "shared
 #     ledger" language is a cousin to Tessa's board.
 #   - Marcus as Selene's teacher: the full version of the Marcus inheritance
 #     is now canonical. Selene's "I am being your Marcus because the

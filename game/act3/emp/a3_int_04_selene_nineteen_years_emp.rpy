@@ -1,14 +1,14 @@
 # =======================================================
 # ACT 3 - Interlude: Selene — "Nineteen Years"
-# File: a3_int_selene_nineteen_years_emp.rpy
+# File: a3_int_04_selene_nineteen_years_emp.rpy
 # Type: LI THOUGHT INTERLUDE (Selene, EMP)
 # =======================================================
 
 # ========= SCENE START TASKS =========
-$ _current_scene_id = "a3_int_selene_nineteen_years_emp"
+$ _current_scene_id = "a3_int_04_selene_nineteen_years_emp"
 $ scene_mark(_current_scene_id, "entered")
 
-label a3_int_selene_nineteen_years_emp:
+label a3_int_04_selene_nineteen_years_emp:
 
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 85mm. Tight on the cipher in her palm. One slow pull to her hand and
@@ -67,7 +67,7 @@ label a3_int_selene_nineteen_years_emp:
 # =========================================================
 # CANONICAL NOTES
 # =========================================================
-# cann.scene_id: a3_int_selene_nineteen_years_emp
+# cann.scene_id: a3_int_04_selene_nineteen_years_emp
 # cann.chapter: Act III, Phase II — Deepening
 # cann.placement: After a3_s14_cipher_and_skin_emp (the first kiss scene). Selene
 #                 alone in her quarters, late night. The command cipher on the
@@ -105,13 +105,13 @@ label a3_int_selene_nineteen_years_emp:
 # cann.callbacks:
 #   - a3_s14_cipher_and_skin_emp: the kiss. The cipher on the nightstand in this
 #     interlude is the one from that scene. The metal warmth is the continuity.
-#   - Kael: first direct name. Will return in a3_int_selene_kael_emp and seeds Phase III.
+#   - Kael: first direct name. Will return in a3_int_06_selene_kael_emp and seeds Phase III.
 #   - "Monitor self" — new internal line. Recurs as Selene's private shorthand for
 #     the thing the briefing format cannot contain.
 # cann.block_status:
 #   - INTERLUDE. EMP path. No branching. No choice. Transition only.
 # cann.requires_followup:
-#   - Kael as unresolved thread: a3_int_selene_kael_emp goes deeper into the grief.
+#   - Kael as unresolved thread: a3_int_06_selene_kael_emp goes deeper into the grief.
 #   - The drawer as recurring image for Selene's suppression architecture.
 #   - "The recommending party is the party being compromised" — her Phase III problem
 #     in one line. Her command self cannot objectively evaluate her compromised self.

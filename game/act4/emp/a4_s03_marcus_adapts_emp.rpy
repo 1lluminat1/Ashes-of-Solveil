@@ -52,7 +52,7 @@ label a4_s03_marcus_adapts_emp:
     #        moving from "documenting" to "implicated."
     #        Callbacks: a3_s07 (Aeron recognizing his own handwriting in Echelon's strike),
     #        a3_s14 (cipher and the shape emerging — Noelle's projection architecture),
-    #        a3_int_noelle_unmeasurable_emp (the category error Noelle committed alone),
+    #        a3_int_02_noelle_unmeasurable_emp (the category error Noelle committed alone),
     #        a3_s22 (the execution and the 2.3 million witness feed routing), a4_s01
     #        (the morning after — still running the broadcast), a4_s02 (the hand-log
     #        Noelle kept, which this scene retroactively explains).
@@ -310,7 +310,7 @@ label a4_s03_marcus_adapts_emp:
 
     athought "She is asking me to acknowledge that she is no longer what she thought she was."
 
-    athought "In a3_int_noelle_unmeasurable she wrote a log entry with herself as the subject and did not submit it for peer review. That was the first crack. This is the second."
+    athought "In a3_int_02_noelle_unmeasurable she wrote a log entry with herself as the subject and did not submit it for peer review. That was the first crack. This is the second."
 
     athought "She is becoming something that does not fit inside the category 'observer.' She is becoming a participant. A participant on both sides, whether she wants to be or not."
 
@@ -526,7 +526,7 @@ label a4_s03_marcus_adapts_emp:
 # cann.character_moments:
 #   - Noelle: "I have to say something that is not part of the briefing. I would like
 #     to say it on the record but I do not know whose record." This sentence reopens
-#     the category error from a3_int_noelle_unmeasurable. She is asking Aeron to
+#     the category error from a3_int_02_noelle_unmeasurable. She is asking Aeron to
 #     witness her becoming uncategorizable to herself.
 #   - Aeron: "You are not a neutral observer anymore. I don't know what you are either.
 #     I am not going to pretend I do." Explicit refusal of premature closure. The

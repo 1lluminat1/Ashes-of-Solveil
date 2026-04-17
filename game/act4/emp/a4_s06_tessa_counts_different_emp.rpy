@@ -25,7 +25,7 @@ label a4_s06_tessa_counts_different_emp:
     # LIGHTING: Main medical area, night shift. Work lights along the ceiling at
     #           half-power. A single clip lamp on the upper edge of the board
     #           that Tessa has installed herself — the same lamp from
-    #           a3_int_tessa_the_board_emp, transported with the board across
+    #           a3_int_08_tessa_the_board_emp, transported with the board across
     #           the displacement. The lamp is her light, not the building's.
     # SFX: Main medical area at night. Ventilation. A distant IV pump. Joran Tev
     #      sleeping on the cot across the room (callback to a4_s05a — he is still
@@ -586,11 +586,11 @@ label a4_s06_tessa_counts_different_emp:
 #     on her rule, in her space. The refusal to announce the borrowing. "I am
 #     going to pay attention to this the rest of my life."
 # cann.callbacks:
-#   - a2_int_tessa_torins_name: the origin of the rule. Her mother, the winter
+#   - a2_int_04_tessa_torins_name: the origin of the rule. Her mother, the winter
 #     her father did not come back, the rule for the counter. This scene is
-#     the second major evolution of that rule (first: a3_int_tessa_the_board_emp
+#     the second major evolution of that rule (first: a3_int_08_tessa_the_board_emp
 #     when Liora went on both columns).
-#   - a3_int_tessa_the_board_emp: LIORA RYLAN on both sides. The board is shown
+#   - a3_int_08_tessa_the_board_emp: LIORA RYLAN on both sides. The board is shown
 #     here with both entries still present — the canon is maintained through the
 #     displacement. The present scene is the pre-dawn interlude's mirror with
 #     Aeron in the room.

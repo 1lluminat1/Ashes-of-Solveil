@@ -745,8 +745,8 @@ label a4_s05_delegation_test_emp:
 #     tactical precision — the thing that is being asked to sit still tonight.
 #   - a3_s04a_the_silence_emp: the refusal of borrowed voices. Here, Aeron is
 #     refusing his own voice. Inverse register.
-#   - a2_int_tessa_torins_name: the rule of three. Aeron borrows it silently.
-#   - a3_int_tessa_the_board_emp: the board that holds names. Aeron is
+#   - a2_int_04_tessa_torins_name: the rule of three. Aeron borrows it silently.
+#   - a3_int_08_tessa_the_board_emp: the board that holds names. Aeron is
 #     pre-echoing the board from the cipher table.
 #   - Marcus as Selene's teacher: backfills Selene's own leadership inheritance.
 #     Establishes that Selene learned delegation through grief the same way.

@@ -1,14 +1,14 @@
 # =======================================================
 # ACT 2 - Interlude: Zira — "Signal Check"
-# File: a2_int_zira_signal_check.rpy
+# File: a2_int_01_zira_signal_check.rpy
 # Type: LI THOUGHT INTERLUDE (Zira)
 # =======================================================
 
 # ========= SCENE START TASKS =========
-$ _current_scene_id = "a2_int_zira_signal_check"
+$ _current_scene_id = "a2_int_01_zira_signal_check"
 $ scene_mark(_current_scene_id, "entered")
 
-label a2_int_zira_signal_check:
+label a2_int_01_zira_signal_check:
 
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 35mm, low, across the workshop bench. The Ghostline terminal glow in
@@ -74,7 +74,7 @@ label a2_int_zira_signal_check:
 # =========================================================
 # CANONICAL NOTES
 # =========================================================
-# cann.scene_id: a2_int_zira_signal_check
+# cann.scene_id: a2_int_01_zira_signal_check
 # cann.chapter: Act II, Chapter III — Proving Ground
 # cann.placement: After a2_s17_building_something (the base montage with Kira).
 #                 Late night. Zira alone in her workshop at the new base. Kira
@@ -117,7 +117,7 @@ label a2_int_zira_signal_check:
 #     planned around for years.
 #   - a2_s17_building_something: the montage. Public Zira building. This interlude
 #     is the private cost of being built into.
-#   - Future: a3_int_zira_after_him_emp — the same triage logic runs again and is
+#   - Future: a3_int_05_zira_after_him_emp — the same triage logic runs again and is
 #     quieter and more honest.
 #   - Future: a3_int_zira_dont_regret_it — the decision this interlude refuses to
 #     write down finally gets written.

@@ -1,14 +1,14 @@
 # =======================================================
 # ACT 3 - Interlude: Tessa — "Hands Remember"  (EMP)
-# File: a3_int_tessa_hands_remember_emp.rpy
+# File: a3_int_07_tessa_hands_remember_emp.rpy
 # Type: LI THOUGHT INTERLUDE (Tessa)
 # =======================================================
 
 # ========= SCENE START TASKS =========
-$ _current_scene_id = "a3_int_tessa_hands_remember_emp"
+$ _current_scene_id = "a3_int_07_tessa_hands_remember_emp"
 $ scene_mark(_current_scene_id, "entered")
 
-label a3_int_tessa_hands_remember_emp:
+label a3_int_07_tessa_hands_remember_emp:
 
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: Close on the forceps and the cloth. The hands move in slow, practiced
@@ -61,7 +61,7 @@ label a3_int_tessa_hands_remember_emp:
 # =========================================================
 # CANONICAL NOTES
 # =========================================================
-# cann.scene_id: a3_int_tessa_hands_remember_emp
+# cann.scene_id: a3_int_07_tessa_hands_remember_emp
 # cann.chapter: Act III, Phase II — Deepening
 # cann.placement: After a3_s20a_scar_and_steady_emp. Tessa's first erotic scene with
 #                 Aeron has concluded. Later the same night. She is alone in the
@@ -94,11 +94,11 @@ label a3_int_tessa_hands_remember_emp:
 #   - The grief discipline from "Torin's Name" is the same faculty she has been using
 #     to love him. She does not have two systems. She only has one.
 # cann.callbacks:
-#   - a2_int_tessa_torins_name: the hands shaking over the sink. The hands are steady
+#   - a2_int_04_tessa_torins_name: the hands shaking over the sink. The hands are steady
 #     now. The scene is structured as a quiet answer to that one.
 #   - a3_s20a_scar_and_steady_emp: the scene this follows directly. The Brand scar, the
 #     gash, the pulse in the wrist — all drawn from that scene's physical vocabulary.
-#   - Future: a3_int_tessa_the_board_emp — the observation she does not yet understand
+#   - Future: a3_int_08_tessa_the_board_emp — the observation she does not yet understand
 #     returns under pressure when the board can no longer hold what it used to hold.
 # cann.block_status:
 #   - INTERLUDE. No branching. No choice. EMP-route only.

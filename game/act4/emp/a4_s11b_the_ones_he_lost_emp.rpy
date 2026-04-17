@@ -620,10 +620,10 @@ label a4_s11b_the_ones_he_lost_emp:
 #     Liora Rylan. Previously known names plus several new gala-name entries
 #     elaborated here to give the list texture.
 # cann.callbacks:
-#   - a2_int_tessa_torins_name: Tessa's rule of three. The rule is invoked
+#   - a2_int_04_tessa_torins_name: Tessa's rule of three. The rule is invoked
 #     explicitly by name ("once to hear, twice to mean, three times to keep").
 #     This scene is the first time Aeron has applied the rule at scale.
-#   - a3_int_tessa_the_board_emp: the both-sides rule for Liora. Referenced as
+#   - a3_int_08_tessa_the_board_emp: the both-sides rule for Liora. Referenced as
 #     the only authority that can hold her in both columns and the reason the
 #     datapad cannot hold her the same way.
 #   - a4_s05_delegation_test_emp: Kesa Marin and Joren Hale. Aeron applied the

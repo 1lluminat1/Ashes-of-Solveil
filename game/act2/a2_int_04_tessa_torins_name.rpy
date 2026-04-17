@@ -1,18 +1,18 @@
 # =======================================================
 # ACT 2 - Interlude: Tessa — "Torin's Name"
-# File: a2_int_tessa_torins_name.rpy
+# File: a2_int_04_tessa_torins_name.rpy
 # Type: LI THOUGHT INTERLUDE (Tessa)
 # =======================================================
 
 # ========= SCENE START TASKS =========
-$ _current_scene_id = "a2_int_tessa_torins_name"
+$ _current_scene_id = "a2_int_04_tessa_torins_name"
 $ scene_mark(_current_scene_id, "entered")
 
-label a2_int_tessa_torins_name:
+label a2_int_04_tessa_torins_name:
 
     # Codex — first scene where the rule of three is actually NAMED
     # as a rule. Unlock the motif entry.
-    $ codex_mention("rule_of_three", source="a2_int_tessa_torins_name")
+    $ codex_mention("rule_of_three", source="a2_int_04_tessa_torins_name")
 
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: Waist-level. Locked on the hands and the water. The face stays out of
@@ -74,7 +74,7 @@ label a2_int_tessa_torins_name:
 # =========================================================
 # CANONICAL NOTES
 # =========================================================
-# cann.scene_id: a2_int_tessa_torins_name
+# cann.scene_id: a2_int_04_tessa_torins_name
 # cann.chapter: Act II, Chapter IV — The Cost
 # cann.placement: Immediately after a2_s23_mercy_and_counting. Tessa has just delivered
 #                 the mercy death to Torin Vell. She steps into the washroom adjacent
@@ -114,9 +114,9 @@ label a2_int_tessa_torins_name:
 #     not been stated aloud in the script before this scene. This is where it lands.
 #   - The board (established in a2_s14_the_intel_den and a2_s16_finding_home): the
 #     structural object the philosophy is named after.
-#   - Future: a3_int_tessa_hands_remember_emp — the same hands, now steady for a
+#   - Future: a3_int_07_tessa_hands_remember_emp — the same hands, now steady for a
 #     different reason.
-#   - Future: a3_int_tessa_the_board_emp — the same board, now forced to hold Liora
+#   - Future: a3_int_08_tessa_the_board_emp — the same board, now forced to hold Liora
 #     Rylan on both sides.
 # cann.block_status:
 #   - INTERLUDE. No branching. No choice. Scene runs as a quiet transition into the

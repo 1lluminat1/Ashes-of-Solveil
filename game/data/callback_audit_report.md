@@ -10,19 +10,19 @@ have been addressed in commit `d2e6fea`. The fixes are noted inline below.
 ## 1. Confirmed Working Callbacks
 
 ### 1.1 Tessa's Rule of Three
-- **Origin**: `a2_int_tessa_torins_name.rpy` L43-57 — "say it three times, sweet thing, and you are still here"
+- **Origin**: `a2_int_04_tessa_torins_name.rpy` L43-57 — "say it three times, sweet thing, and you are still here"
 - **Callback A (teaching)**: `a4_s05a_you_are_not_a_machine_emp.rpy` L363-411 — Tessa silently applies the rule to Aeron's sleeping body
 - **Callback B (application)**: `a4_s11b_the_ones_he_lost_emp.rpy` L82-230 — Aeron runs the full rule on the gala dead, then the rule breaks on Liora's name
 - **Callback C (evolution)**: `a4_s06_tessa_counts_different_emp.rpy` L139, L203, L215, L383 — Tessa's rule goes silent
 - **Status**: ✅ FULLY WIRED. Most powerful arc in Act 4. All four reference points confirmed.
 
 ### 1.2 Liora on Tessa's Board (EMP)
-- **Origin**: `a3_int_tessa_the_board_emp.rpy` — Liora placed on both LIVING and DEAD columns
+- **Origin**: `a3_int_08_tessa_the_board_emp.rpy` — Liora placed on both LIVING and DEAD columns
 - **Callback**: `a4_s06_tessa_counts_different_emp.rpy` L107-113 — "LIORA RYLAN is on both columns"
 - **Status**: ✅ CONSISTENT. Board entry correctly reflects death.
 
 ### 1.3 Selene's Kael Story
-- **Origin**: `a3_int_selene_kael_emp.rpy` (flashback)
+- **Origin**: `a3_int_06_selene_kael_emp.rpy` (flashback)
 - **Setup**: `a4_s05_delegation_test_emp.rpy` — "we'll finish it later"
 - **Callback (completion)**: `a4_s10_what_selene_meant_emp.rpy` L102-232 — full story delivered, thesis line "delegate the question"
 - **Status**: ✅ FULLY WIRED. Explicit meta-acknowledgement at L238.
@@ -54,7 +54,7 @@ have been addressed in commit `d2e6fea`. The fixes are noted inline below.
 ### 1.8 Noelle "Variable to Sentence"
 - **Origin (variable)**: `a4_s13a_quiet_after_failure_emp.rpy` L218-276
 - **Callback (sentence)**: `a4_s18_noelle_deepening_erotic_emp.rpy` L654-680
-- **Deep lineage**: `a2_int_noelle_variable_name.rpy` L51-53 — original framework from Act 2
+- **Deep lineage**: `a2_int_02_noelle_variable_name.rpy` L51-53 — original framework from Act 2
 - **Status**: ✅ FULLY WIRED with three-scene lineage.
 
 ### 1.9 Liora's Letter (Cross-Path)

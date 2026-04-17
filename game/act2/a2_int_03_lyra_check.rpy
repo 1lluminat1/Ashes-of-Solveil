@@ -1,14 +1,14 @@
 # =======================================================
 # ACT 2 - Interlude: Lyra — "Check"
-# File: a2_int_lyra_check.rpy
+# File: a2_int_03_lyra_check.rpy
 # Type: LI THOUGHT INTERLUDE (Lyra)
 # =======================================================
 
 # ========= SCENE START TASKS =========
-$ _current_scene_id = "a2_int_lyra_check"
+$ _current_scene_id = "a2_int_03_lyra_check"
 $ scene_mark(_current_scene_id, "entered")
 
-label a2_int_lyra_check:
+label a2_int_03_lyra_check:
 
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 85mm macro. Held close on the hands and the Band. The face only once —
@@ -61,7 +61,7 @@ label a2_int_lyra_check:
 # =========================================================
 # CANONICAL NOTES
 # =========================================================
-# cann.scene_id: a2_int_lyra_check
+# cann.scene_id: a2_int_03_lyra_check
 # cann.chapter: Act II, Chapter IV — The Cost
 # cann.placement: After a2_s22_massive_recruitment (Phoenix growth milestone).
 #                 Private interlude. Night. Lyra alone in assigned quarters.
@@ -89,9 +89,9 @@ label a2_int_lyra_check:
 #     An unnamed thing has no liturgy.
 # cann.callbacks:
 #   - Glass Academy sensation-check training: inherited discipline turning against her.
-#   - Future: a3_int_lyra_file_was_wrong_emp — the pattern of compulsive checking
+#   - Future: a3_int_01_lyra_file_was_wrong_emp — the pattern of compulsive checking
 #     worsens after the Hana encounter.
-#   - Future: a3_int_lyra_field_sync_emp — the same Band carries a warmth her training
+#   - Future: a3_int_03_lyra_field_sync_emp — the same Band carries a warmth her training
 #     has no word for.
 #   - Liora's letter (a3_s18a): "brave enough to be soft when softness is the most
 #     dangerous thing." Lyra is not brave yet. She is still trying to file softness.

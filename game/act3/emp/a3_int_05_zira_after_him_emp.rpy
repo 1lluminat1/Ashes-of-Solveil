@@ -1,14 +1,14 @@
 # =======================================================
 # ACT 3 - Interlude: Zira — "After Him"
-# File: a3_int_zira_after_him_emp.rpy
+# File: a3_int_05_zira_after_him_emp.rpy
 # Type: LI THOUGHT INTERLUDE (Zira, EMP)
 # =======================================================
 
 # ========= SCENE START TASKS =========
-$ _current_scene_id = "a3_int_zira_after_him_emp"
+$ _current_scene_id = "a3_int_05_zira_after_him_emp"
 $ scene_mark(_current_scene_id, "entered")
 
-label a3_int_zira_after_him_emp:
+label a3_int_05_zira_after_him_emp:
 
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 40mm, very low. The alcove ceiling. Pipework. Her hand on his chest
@@ -67,7 +67,7 @@ label a3_int_zira_after_him_emp:
 # =========================================================
 # CANONICAL NOTES
 # =========================================================
-# cann.scene_id: a3_int_zira_after_him_emp
+# cann.scene_id: a3_int_05_zira_after_him_emp
 # cann.chapter: Act III, Phase II — Deepening
 # cann.placement: After a3_s15_signal_under_fire_emp (maintenance alcove intimate
 #                 scene). Post-scene. Aeron asleep beside her. Fourteen minutes
@@ -107,7 +107,7 @@ label a3_int_zira_after_him_emp:
 #     pretend the feeling is smaller than it is.
 # cann.callbacks:
 #   - Kai: explicit reference. The agreed-to loss. Pattern repeat now recognized.
-#   - a2_int_zira_signal_check: the unpatched exit plan. This interlude is the
+#   - a2_int_01_zira_signal_check: the unpatched exit plan. This interlude is the
 #     quiet follow-up — she has stopped trying to patch it.
 #   - a3_s15_signal_under_fire_emp: the scene this interlude follows.
 #   - Ghostline metaphor: carrier tone cut, signal still, the feeling as

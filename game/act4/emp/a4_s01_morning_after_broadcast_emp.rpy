@@ -37,7 +37,7 @@ label a4_s01_morning_after_broadcast_emp:
     #        Establishes: the broadcast worked, the cost compounded, Aeron is still choosing,
     #        shared command is real but untested under new conditions.
     #        Callbacks: a3_s22 (Liora's execution), a3_s23 (the broadcast plan), a3_s01 (the
-    #        shared command and the cipher), a3_int_tessa_the_board_emp (both-sides rule).
+    #        shared command and the cipher), a3_int_08_tessa_the_board_emp (both-sides rule).
 
     # ========= VOICE BASELINE =========
     # EMP cadence, stripped to the minimum. Aeron's internal voice is spare. No tactical loops.
@@ -426,7 +426,7 @@ label a4_s01_morning_after_broadcast_emp:
 #   - He passes the comms room where the broadcast is still playing muted. A live counter
 #     shows active Ghostline nodes carrying the feed. Recent upload: a woman in Sector Nine
 #     adds a name of her own. "The broadcast was supposed to be a weapon. It turned into a mirror."
-#   - He stops at Tessa's board. Liora is on both sides (canonical state from a3_int_tessa_the_board).
+#   - He stops at Tessa's board. Liora is on both sides (canonical state from a3_int_08_tessa_the_board).
 #     Three new names on the dead side from the scouts Aeron sent to find Liora before the platform:
 #     Rada Vorn, Ilet Mako, Sen Thal. Four more names in Lyra's handwriting — recruits who arrived
 #     after the broadcast and did not survive long enough to be held.

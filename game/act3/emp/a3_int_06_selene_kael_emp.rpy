@@ -1,19 +1,19 @@
 # =======================================================
 # ACT 3 - Interlude: Selene — "Kael"
-# File: a3_int_selene_kael_emp.rpy
+# File: a3_int_06_selene_kael_emp.rpy
 # Type: LI THOUGHT INTERLUDE (Selene, EMP)
 # =======================================================
 
 # ========= SCENE START TASKS =========
-$ _current_scene_id = "a3_int_selene_kael_emp"
+$ _current_scene_id = "a3_int_06_selene_kael_emp"
 $ scene_mark(_current_scene_id, "entered")
 
-label a3_int_selene_kael_emp:
+label a3_int_06_selene_kael_emp:
 
 
     # Codex — stage bumps for characters the player learns more about here.
-    $ codex_reveal("selene_valen", to_stage=2, source="a3_int_selene_kael_emp")
-    $ codex_reveal("kael_rylan", to_stage=2, source="a3_int_selene_kael_emp")
+    $ codex_reveal("selene_valen", to_stage=2, source="a3_int_06_selene_kael_emp")
+    $ codex_reveal("kael_rylan", to_stage=2, source="a3_int_06_selene_kael_emp")
 
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 50mm from the foot of the bed. Her profile against pre-dawn grey. The
@@ -72,7 +72,7 @@ label a3_int_selene_kael_emp:
 # =========================================================
 # CANONICAL NOTES
 # =========================================================
-# cann.scene_id: a3_int_selene_kael_emp
+# cann.scene_id: a3_int_06_selene_kael_emp
 # cann.chapter: Act III, Phase II — Deepening
 # cann.placement: After a3_s19a_command_and_surrender_emp (the first erotic scene).
 #                 Pre-dawn. Her quarters. Aeron asleep beside her. The plant on the
@@ -107,7 +107,7 @@ label a3_int_selene_kael_emp:
 #   - The plant is the quiet confession: she has always known how to tend a life. She
 #     just never included her own.
 # cann.callbacks:
-#   - a3_int_selene_nineteen_years_emp: the briefing format and the first crack. This
+#   - a3_int_04_selene_nineteen_years_emp: the briefing format and the first crack. This
 #     scene is the crack opening all the way. The coffee cup detail recurs because
 #     it was the first image that did not fit the briefing.
 #   - a3_s19a_command_and_surrender_emp: the erotic scene. The sheet, the sleeping

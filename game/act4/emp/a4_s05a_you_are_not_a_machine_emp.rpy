@@ -410,7 +410,7 @@ label a4_s05a_you_are_not_a_machine_emp:
 
     # CAMERA: slow push from the wide two-shot to a medium
     #         single on Tessa. She is applying her mother's
-    #         rule (from a2_int_tessa_torins_name) silently to
+    #         rule (from a2_int_04_tessa_torins_name) silently to
     #         his sleeping body — the first callback to the
     #         rule in Act 4 and the rule's first application
     #         to a living person. The camera has to be close
@@ -541,7 +541,7 @@ label a4_s05a_you_are_not_a_machine_emp:
 #     one breath.
 #   - Tessa's internal beat: she acknowledges that she was exactly as sharp as she
 #     meant to be in the corridor. She has been expanding her definition of care
-#     since the board scene (a3_int_tessa_the_board_emp) and the sharpness is
+#     since the board scene (a3_int_08_tessa_the_board_emp) and the sharpness is
 #     part of that expansion. She then performs her mother's three-times rule
 #     silently on Aeron — the first time she has used the rule on a living person.
 #     "Say it three times and you are still here. You are still here."
@@ -602,12 +602,12 @@ label a4_s05a_you_are_not_a_machine_emp:
 #     before (Selene does it in a4_s05). This is the first time in Act IV he
 #     accepts intimate command authority.
 # cann.callbacks:
-#   - a2_int_tessa_torins_name: her mother's rule — say it three times and you
+#   - a2_int_04_tessa_torins_name: her mother's rule — say it three times and you
 #     are still here. The rule was for the counter. Here the rule is applied to
 #     a living person for the first time.
-#   - a3_int_tessa_hands_remember_emp: her steadiness after. The scene trusts
+#   - a3_int_07_tessa_hands_remember_emp: her steadiness after. The scene trusts
 #     that established baseline.
-#   - a3_int_tessa_the_board_emp: Liora on both sides of the board. Tessa's
+#   - a3_int_08_tessa_the_board_emp: Liora on both sides of the board. Tessa's
 #     explicit Act IV thesis about expanding the definition of living. This
 #     scene is an enactment of that thesis on a patient who is not dead.
 #   - a3_s20a_scar_and_steady_emp: the same treatment bench, the Brand scar, the

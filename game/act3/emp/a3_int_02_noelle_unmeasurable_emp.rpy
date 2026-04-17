@@ -1,14 +1,14 @@
 # =======================================================
 # ACT 3 - Interlude: Noelle — "The Unmeasurable"  (EMP)
-# File: a3_int_noelle_unmeasurable_emp.rpy
+# File: a3_int_02_noelle_unmeasurable_emp.rpy
 # Type: LI THOUGHT INTERLUDE (Noelle)
 # =======================================================
 
 # ========= SCENE START TASKS =========
-$ _current_scene_id = "a3_int_noelle_unmeasurable_emp"
+$ _current_scene_id = "a3_int_02_noelle_unmeasurable_emp"
 $ scene_mark(_current_scene_id, "entered")
 
-label a3_int_noelle_unmeasurable_emp:
+label a3_int_02_noelle_unmeasurable_emp:
 
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: The log projection at a shallow angle. Noelle's hand enters frame with
@@ -72,7 +72,7 @@ label a3_int_noelle_unmeasurable_emp:
 # =========================================================
 # CANONICAL NOTES
 # =========================================================
-# cann.scene_id: a3_int_noelle_unmeasurable_emp
+# cann.scene_id: a3_int_02_noelle_unmeasurable_emp
 # cann.chapter: Act III, Phase I — Proving Ground
 # cann.placement: After a3_s08_the_unmeasurable_emp. Lyra has led Noelle through a
 #                 breathing meditation. Later, the same night. Noelle alone at her
@@ -111,7 +111,7 @@ label a3_int_noelle_unmeasurable_emp:
 #     Noelle, peer review is the mechanism by which a claim becomes real. Keeping this
 #     file private makes the claim hers in a way nothing else in her career has been.
 # cann.callbacks:
-#   - a2_int_noelle_variable_name: the unsaved file that stayed open. This is the
+#   - a2_int_02_noelle_variable_name: the unsaved file that stayed open. This is the
 #     second file that will stay unclosed, and the hypothesis is written into the
 #     same moral framework that scene refused to close.
 #   - a3_s08_the_unmeasurable_emp: the breathing protocol with Lyra. All sensor

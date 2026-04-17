@@ -553,11 +553,11 @@ label a4_s04_lyra_unbuckled_emp:
 #     learns her wrist "by Braille." He does not count her pulse under his thumb.
 #     These are the scene's small character beats.
 # cann.callbacks:
-#   - a2_int_lyra_check: the count that breaks on eight. The Band compulsion. The
+#   - a2_int_03_lyra_check: the count that breaks on eight. The Band compulsion. The
 #     sensation-check training. This scene is the counterweight to that interlude.
-#   - a3_int_lyra_file_was_wrong_emp: Lyra's recognition of her training as weapon.
+#   - a3_int_01_lyra_file_was_wrong_emp: Lyra's recognition of her training as weapon.
 #     The re-buckling is the ritual form of that recognition.
-#   - a3_int_lyra_field_sync_emp: Anayet first appears there. Spoken only in her
+#   - a3_int_03_lyra_field_sync_emp: Anayet first appears there. Spoken only in her
 #     own head. This scene is the word's first outside witness.
 #   - Liora's letter (a3_s18a): "brave enough to be soft when softness is the most
 #     dangerous thing." Lyra is performing that lesson here.

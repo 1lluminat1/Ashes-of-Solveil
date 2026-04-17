@@ -1,18 +1,18 @@
 # =======================================================
 # ACT 3 - Interlude: Nyra — "The Oath"
-# File: a3_int_nyra_the_oath_ob.rpy
+# File: a3_int_01_nyra_the_oath_ob.rpy
 # Type: LI THOUGHT INTERLUDE (Nyra, OB)
 # =======================================================
 
 # ========= SCENE START TASKS =========
-$ _current_scene_id = "a3_int_nyra_the_oath_ob"
+$ _current_scene_id = "a3_int_01_nyra_the_oath_ob"
 $ scene_mark(_current_scene_id, "entered")
 
-label a3_int_nyra_the_oath_ob:
+label a3_int_01_nyra_the_oath_ob:
 
 
     # Codex — stage bumps for characters the player learns more about here.
-    $ codex_reveal("nyra", to_stage=2, source="a3_int_nyra_the_oath_ob")
+    $ codex_reveal("nyra", to_stage=2, source="a3_int_01_nyra_the_oath_ob")
 
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 100mm macro. The blade. The palm. The bead. No face above the shoulder.
@@ -71,7 +71,7 @@ label a3_int_nyra_the_oath_ob:
 # =========================================================
 # CANONICAL NOTES
 # =========================================================
-# cann.scene_id: a3_int_nyra_the_oath_ob
+# cann.scene_id: a3_int_01_nyra_the_oath_ob
 # cann.chapter: Act III, Phase II — Relationships Under Strain
 # cann.placement: After a3_s12_the_oath_ob (the fractured-crest ritual, Nyra's first
 #                 intimate scene with Aeron). Her private quarters. Veilbreaker on
@@ -124,5 +124,5 @@ label a3_int_nyra_the_oath_ob:
 #     scenes as her internal refrain.
 #   - The silver compound jar: establishes the physical ritual. Recurs.
 #   - The absence of doubt in her voice here is the baseline against which
-#     a3_int_nyra_before_the_mirror_ob will be read. The mirror scene is the last
+#     a3_int_02_nyra_before_the_mirror_ob will be read. The mirror scene is the last
 #     moment of this certainty before it is tested.

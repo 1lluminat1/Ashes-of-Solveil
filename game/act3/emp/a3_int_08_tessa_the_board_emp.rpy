@@ -1,18 +1,18 @@
 # =======================================================
 # ACT 3 - Interlude: Tessa — "The Board"  (EMP)
-# File: a3_int_tessa_the_board_emp.rpy
+# File: a3_int_08_tessa_the_board_emp.rpy
 # Type: LI THOUGHT INTERLUDE (Tessa)
 # =======================================================
 
 # ========= SCENE START TASKS =========
-$ _current_scene_id = "a3_int_tessa_the_board_emp"
+$ _current_scene_id = "a3_int_08_tessa_the_board_emp"
 $ scene_mark(_current_scene_id, "entered")
 
-label a3_int_tessa_the_board_emp:
+label a3_int_08_tessa_the_board_emp:
 
 
     # Codex — stage bumps for characters the player learns more about here.
-    $ codex_reveal("tessa", to_stage=2, source="a3_int_tessa_the_board_emp")
+    $ codex_reveal("tessa", to_stage=2, source="a3_int_08_tessa_the_board_emp")
 
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: The board in full for the first beat. Then in close on the marker tip,
@@ -70,7 +70,7 @@ label a3_int_tessa_the_board_emp:
 # =========================================================
 # CANONICAL NOTES
 # =========================================================
-# cann.scene_id: a3_int_tessa_the_board_emp
+# cann.scene_id: a3_int_08_tessa_the_board_emp
 # cann.chapter: Act III, Phase III — Revelation & Cost
 # cann.placement: After a3_s22_liora_execution_emp, before a3_s23_aftermath_emp.
 #                 Pre-dawn. Tessa alone at her board at the secondary base. She has
@@ -103,7 +103,7 @@ label a3_int_tessa_the_board_emp:
 #   - She explicitly does not want to be seen at the board right now. The ritual is
 #     private and she is protecting it. This is a thing she has not done before.
 # cann.callbacks:
-#   - a2_int_tessa_torins_name: the rule (living first, always, because living is the
+#   - a2_int_04_tessa_torins_name: the rule (living first, always, because living is the
 #     one she is trying to keep). The rule is still operative. The rule is under stress.
 #   - a2_s23_mercy_and_counting: the mercy-death discipline. Liora is a new kind of
 #     case the mercy-death discipline does not cover.

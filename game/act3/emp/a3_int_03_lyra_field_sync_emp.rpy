@@ -1,14 +1,14 @@
 # =======================================================
 # ACT 3 - Interlude: Lyra — "Untrained Prayer"
-# File: a3_int_lyra_field_sync_emp.rpy
+# File: a3_int_03_lyra_field_sync_emp.rpy
 # Type: LI THOUGHT INTERLUDE (Lyra, EMP)
 # =======================================================
 
 # ========= SCENE START TASKS =========
-$ _current_scene_id = "a3_int_lyra_field_sync_emp"
+$ _current_scene_id = "a3_int_03_lyra_field_sync_emp"
 $ scene_mark(_current_scene_id, "entered")
 
-label a3_int_lyra_field_sync_emp:
+label a3_int_03_lyra_field_sync_emp:
 
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 85mm, held on her hand closed around her own wrist. Not the Band —
@@ -63,7 +63,7 @@ label a3_int_lyra_field_sync_emp:
 # =========================================================
 # CANONICAL NOTES
 # =========================================================
-# cann.scene_id: a3_int_lyra_field_sync_emp
+# cann.scene_id: a3_int_03_lyra_field_sync_emp
 # cann.chapter: Act III, Phase II — Deepening
 # cann.placement: After a3_s10_field_sync_emp (the bloodline resonance scene).
 #                 Night. Private. Lyra in quarters. The post-op warmth of the
@@ -98,9 +98,9 @@ label a3_int_lyra_field_sync_emp:
 #   - Her mother is in the subtext again. Lyra does not name her here. The word in
 #     her mouth may be her mother's.
 # cann.callbacks:
-#   - a2_int_lyra_check: the Band ritual, the prayer she couldn't finish. The same
+#   - a2_int_03_lyra_check: the Band ritual, the prayer she couldn't finish. The same
 #     Band. A different warmth.
-#   - a3_int_lyra_file_was_wrong_emp: the weapon-skill realization. This scene is
+#   - a3_int_01_lyra_file_was_wrong_emp: the weapon-skill realization. This scene is
 #     the counter-image: the part of her that was not trained is the part still
 #     alive.
 #   - a3_s10_field_sync_emp: the resonance scene itself.

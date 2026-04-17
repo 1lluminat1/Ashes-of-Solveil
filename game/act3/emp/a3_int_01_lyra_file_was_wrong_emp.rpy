@@ -1,14 +1,14 @@
 # =======================================================
 # ACT 3 - Interlude: Lyra — "The File Was Wrong"
-# File: a3_int_lyra_file_was_wrong_emp.rpy
+# File: a3_int_01_lyra_file_was_wrong_emp.rpy
 # Type: LI THOUGHT INTERLUDE (Lyra, EMP)
 # =======================================================
 
 # ========= SCENE START TASKS =========
-$ _current_scene_id = "a3_int_lyra_file_was_wrong_emp"
+$ _current_scene_id = "a3_int_01_lyra_file_was_wrong_emp"
 $ scene_mark(_current_scene_id, "entered")
 
-label a3_int_lyra_file_was_wrong_emp:
+label a3_int_01_lyra_file_was_wrong_emp:
 
     # ========= STAGE DIRECTIONS (cinema-first) =========
     # CAMERA: 50mm, locked on the journal and the pen. One cutaway to her hand
@@ -64,7 +64,7 @@ label a3_int_lyra_file_was_wrong_emp:
 # =========================================================
 # CANONICAL NOTES
 # =========================================================
-# cann.scene_id: a3_int_lyra_file_was_wrong_emp
+# cann.scene_id: a3_int_01_lyra_file_was_wrong_emp
 # cann.chapter: Act III, Phase I — Proving Ground
 # cann.placement: After a3_s05a_woman_from_sector_7_emp (the Hana encounter).
 #                 Private interlude. Lyra alone in quarters. Journal on desk. Pen
@@ -93,11 +93,11 @@ label a3_int_lyra_file_was_wrong_emp:
 #   - The Ethereal pattern recognition she has been told is a gift was weaponized
 #     before she knew what it was. She did not earn the skill — she was shaped into
 #     the skill.
-#   - The Band-check compulsion from a2_int_lyra_check recurs unconsciously at the
+#   - The Band-check compulsion from a2_int_03_lyra_check recurs unconsciously at the
 #     end of the scene. It has escalated. She is no longer counting pulses — she is
 #     reaching for the Band for the warmth of a thing that cannot leave her wrist.
 # cann.callbacks:
-#   - a2_int_lyra_check: the Band ritual. Worse now. Automatic rather than intentional.
+#   - a2_int_03_lyra_check: the Band ritual. Worse now. Automatic rather than intentional.
 #   - a3_s05a_woman_from_sector_7_emp: the Hana encounter. The scene that broke this one.
 #   - Glass Academy: the pattern-recognition training. Liora's letter (a3_s18a) will
 #     later name the suppressants that sealed Aeron's memories — the Academy has form

@@ -650,7 +650,7 @@ label a4_s12_held_not_fixed_emp:
 #     am held" aloud once more before leaving. The interior recognition that
 #     they are not even and that the not-asking is the gift.
 # cann.callbacks:
-#   - a2_int_tessa_torins_name / a3_int_tessa_the_board_emp: Tessa's board
+#   - a2_int_04_tessa_torins_name / a3_int_08_tessa_the_board_emp: Tessa's board
 #     and rule of three. This scene is the continuation of her arc from
 #     keeper of names to chooser of attachments. Her hand goes from the
 #     marker to the sternum.

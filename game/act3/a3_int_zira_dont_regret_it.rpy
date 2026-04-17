@@ -93,7 +93,7 @@ label a3_int_zira_dont_regret_it:
 # cann.voice_profile:
 #   - Technical vocabulary as emotional tool: cost function, stance, ratification,
 #     maintenance, geometry. Zira's native language used at full honesty.
-#   - No deflection voice — carryover from a3_int_zira_after_him_emp. She is
+#   - No deflection voice — carryover from a3_int_05_zira_after_him_emp. She is
 #     operating without her internal sarcasm buffer and does not comment on the
 #     absence this time.
 #   - The two path variants use different relational geometries. EMP closes on
@@ -109,9 +109,9 @@ label a3_int_zira_dont_regret_it:
 #     The distinction is load-bearing for Zira's Act 4 arc: when and whether
 #     maintenance costs exceed the stance's structural capacity.
 # cann.callbacks:
-#   - a2_int_zira_signal_check: the unpatched exit plan. She never patched it.
+#   - a2_int_01_zira_signal_check: the unpatched exit plan. She never patched it.
 #     This interlude is what happens after you stop trying.
-#   - a3_int_zira_after_him_emp: the recognition. This interlude is the action
+#   - a3_int_05_zira_after_him_emp: the recognition. This interlude is the action
 #     that follows the recognition.
 #   - EMP variant: a3_s22_liora_execution_emp — the execution, Liora's ledgers,
 #     the Ghostline-as-memorial promise Zira made on-camera.

@@ -95,7 +95,7 @@ label a3_int_noelle_aeron:
 #     three percent of a person dismissed as statistical noise.
 #   - New designation: Aeron. New model: insufficient.
 #   - She stares at the word insufficient. Her training says refine the model until
-#     it fits. Her new category — the one established in a3_int_noelle_unmeasurable —
+#     it fits. Her new category — the one established in a3_int_02_noelle_unmeasurable —
 #     says some things refuse to fit, and the refusal is itself data. She chooses the
 #     new category.
 #   - The data crystal flickers on the DESIGNATION field. Not a hardware fault. A
@@ -122,9 +122,9 @@ label a3_int_noelle_aeron:
 #     out loud in the triggering scene was the thing that unlocked her ability to
 #     say it in her head here, in the place her real variables live.
 # cann.callbacks:
-#   - a2_int_noelle_variable_name: the file opened two acts ago. It is the same file.
+#   - a2_int_02_noelle_variable_name: the file opened two acts ago. It is the same file.
 #     It is still open.
-#   - a3_int_noelle_unmeasurable_emp: the hypothesis (Unmeasurable ≠ Nonexistent) is
+#   - a3_int_02_noelle_unmeasurable_emp: the hypothesis (Unmeasurable ≠ Nonexistent) is
 #     the permission this scene cashes in.
 #   - a3_s11_empirical_tenderness_emp / a3_s16_data_and_doubt_ob: whichever scene
 #     triggered the tp_name_typed flag is the scene this interlude answers.

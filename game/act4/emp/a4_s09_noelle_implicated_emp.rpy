@@ -782,7 +782,7 @@ label a4_s09_noelle_implicated_emp:
 #     parallel. Both scenes build the Act IV presence-without-touch
 #     vocabulary. Aeron carries the a4_s08 gesture into a4_s09 without
 #     planning to.
-#   - a3_int_noelle_unmeasurable_emp: the category error Noelle
+#   - a3_int_02_noelle_unmeasurable_emp: the category error Noelle
 #     committed alone. This scene is the category error's second half
 #     — she is no longer committing it alone, and the category is no
 #     longer a category she can live inside.
