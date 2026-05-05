@@ -16,8 +16,9 @@ label a4_s09a_noelle_coda_emp:
     #         coda begins exactly where s09 closed: Noelle at the console,
     #         the door already closed behind Aeron, the workspace alone with
     #         her. The scene is ninety minutes of story-time compressed into
-    #         a sequence of seven beats. The camera honors the compression
-    #         by holding longer on each beat than the audience expects.
+    #         a sequence of beats — eight numbered, each held longer
+    #         than the audience expects. The camera honors the compression
+    #         by refusing to cut early.
     #         The crystal stand is dark for the first phase. It activates
     #         in Phase 2 — not the projection crystal from s09, a different
     #         crystal: the small black personal data crystal she has not
@@ -87,7 +88,7 @@ label a4_s09a_noelle_coda_emp:
 
     "She types."
 
-    "The first paragraph of the next analysis section resolves under her fingers in the clean low keystroke sound she thinks of, privately, as the register. The register she described to Aeron earlier without naming. The register she joined CAD inside. The register that has always been hers."
+    "The first paragraph of the next analysis section resolves under her fingers in the clean low keystroke sound she thinks of, privately, as the register. The register is the tool. The register is what her hands have made sentences with for nine years."
 
     "She reads what she has typed."
 
@@ -97,13 +98,21 @@ label a4_s09a_noelle_coda_emp:
 
     "Her hands do not move. They remain on the keyboard the way she places them when she is about to switch registers — palms slightly forward, fingers spread, not lifting yet. The not-lifting is its own posture. She has not used it since the framework signing."
 
-    nthought "The paragraph is two hundred and thirty words. Three of the four sentence structures are Faber's. The conjunction pattern is Faber's. The scope-narrowing rhetorical move at the second sentence is Faber's. I learned all of these from Faber. I have used them for nine years. I have used them in this register because the register absorbed them and the register is mine."
+    nthought "The paragraph is two hundred and thirty words. Three of the four sentence structures are Faber's. The conjunction pattern is Faber's. The scope-narrowing rhetorical move at the second sentence is Faber's. I learned all of these from Faber."
 
-    nthought "The register is mine and the syntax inside the register is his."
+    nthought "The register is mine. The syntax inside the register is his. That is the standard analyst-teacher inheritance. Every analyst inherits syntax from the analyst who trained her. The inheritance is professional. The inheritance is normal. The inheritance is the kind of thing I would file under PROFESSIONAL DEVELOPMENT and close the folder on."
 
-    nthought "I noticed this when I was writing the framework earlier and I did not stop. The scene with Aeron required the writing to continue. The scene with Aeron is closed. There is no longer a reason for the writing to continue at the cost of the noticing."
+    "A pause. Two seconds. Long enough for the filing to happen and short enough that she catches it."
 
-    nthought "I am noticing now."
+    nthought "I notice I am filing."
+
+    nthought "Filing is the move."
+
+    nthought "Filing is what Faber taught me to do with discomfort. Filing is the move that turns a question into a category. Filing is the move that turns me into the analyst who can carry the question without asking it."
+
+    nthought "The register is not the tool. The register is the room he taught me to do the filing in. I have been calling the room mine because the filing has been mine and the room has held the filing without complaint."
+
+    nthought "The room is locked from the inside. The lock is the filing."
 
     "She lifts her hands from the keyboard."
 
@@ -413,6 +422,20 @@ label a4_s09a_noelle_coda_emp:
     #           it from a different position. The position
     #           is the position of a person who has just
     #           seen what the room is made of.
+
+    nthought "This is not evidence."
+
+    nthought "This is grief."
+
+    "She waits for the correction. The register has corrected her on every plain sentence she has tried to think for nine years. The correction is the move that turns *this is grief* into *this is a documented psychological response to a confirmed bereavement event* and lets her keep working."
+
+    "None comes."
+
+    "She sits in the absence of the correction for a count of nine — a count she does not realize she is keeping. The room does not collapse. The screen does not change. The crystal stays in the reader. The framework draft is still queued at oh-six-hundred. The base around her is still the base. Nothing about the silence requires action. The silence is the new condition."
+
+    nthought "All right."
+
+    "Two syllables. Plain. Not a category. Not a finding. The first sentence she has thought tonight that does not have Faber's hand inside it."
 
     "She does not eject the crystal. She leaves it in the secondary reader. The folder *me* is still open. The AUTHOR field is still on the screen. The 14 Anvil 386 file is still loaded. She is going to look at the screen again later. She is going to look at it for a long time, in iterations, over the next weeks. She is going to read the nine hundred and fourteen files. She is going to read them in the order she has the budget for them. The reading will take months. The reading will take longer than months. The reading is the work she just inherited from the eleven-year-old at the desk."
 
