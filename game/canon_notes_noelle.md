@@ -1,7 +1,7 @@
 # CANON NOTES — NOELLE KORR
 
 Authoritative reference for the Noelle storyline after the integration / trauma
-expansion pass. Any scene touching Noelle, Iren, Director Faber, the Liora
+expansion pass. Any scene touching Noelle, Halen, Director Faber, the Liora
 file, the NDI baseline, the implant, the child file, or Protocol Verdant must
 be consistent with this file. If a scene contradicts this file, the scene is
 wrong.
@@ -20,15 +20,19 @@ Last updated: 2026-05-05 (Noelle integration pass).
   Greek *kore* (the maiden whose taking begins the world's grief — Persephone)
   and Latin *cor* (heart). Lyra recognizes this aloud once (see §13.4).
 - Four pieces of new canon sit underneath Noelle's existing arc and
-  recontextualize it: **Iren (the partner)**, **the implant**, **the Liora
+  recontextualize it: **Halen (the partner)**, **the implant**, **the Liora
   file**, **the NDI baseline (parents)**. These are not new arcs — they are
   the floor under what was already there.
 
-## 2. IREN — THE DELETED PARTNER
+## 2. HALEN — THE DELETED PARTNER
 
-- **Iren** was a CAD researcher, Noelle's partner from approximately
+- **Halen** was a CAD researcher, Noelle's partner from approximately
   379–381 AC. Gender-neutral name; play either reading.
-- Echelon killed Iren in 381 AC. The official record is a transfer: *"reassigned
+- The name carries a Welsh root meaning *salt* — the residue of tears,
+  the preservation that outlives a body. The regime preserved Halen's
+  "transfer" record long after the body was gone; Noelle's grief is
+  what was left of the love after the editing took everything else.
+- Echelon killed Halen in 381 AC. The official record is a transfer: *"reassigned
   to Outer Wards Resonance Research Station, indefinite term."*
 - **The killing was operational, not personal.** Noelle's emotional
   attachment was reducing her productivity. CAD removed the cause to preserve
@@ -42,20 +46,20 @@ Last updated: 2026-05-05 (Noelle integration pass).
   her partner is alive elsewhere does not search. A Noelle who knows they
   are dead might. The lie was maintained for over a year.
 - Noelle does not discover the death until the Defection Coda (`a4_s10b`,
-  see §11). The records on her data crystal show "Iren — Outer Wards
+  see §11). The records on her data crystal show "Halen — Outer Wards
   Resonance, year four of assignment" until she cross-checks the dispatch
-  manifests and finds no Iren ever arrived at any Outer Wards station.
+  manifests and finds no Halen ever arrived at any Outer Wards station.
 - The discovery has two beats: first that she was edited (already canon),
   second that the edit was hiding a murder (new). The second beat is the
   scene's load.
-- **Iren is dead. Iren stays dead.** No late-reveal return. The partner is
+- **Halen is dead. Halen stays dead.** No late-reveal return. The partner is
   not in the rebellion under another name. The horror is that the love is
   unrecoverable on every axis.
 
 ### 2.1 Structural rhyme with Kael
 
 - Marcus authored a death that was not real (Kael's "suicide"). Echelon
-  authored an absence that was a death (Iren's "transfer"). Twin lies,
+  authored an absence that was a death (Halen's "transfer"). Twin lies,
   mirrored direction.
 - The two lies are the regime's two grammars: **one for blood, one for
   assets.** Marcus protected what he loved by burying it; Echelon protected
@@ -188,7 +192,7 @@ Last updated: 2026-05-05 (Noelle integration pass).
   shaper. Etymological double-meaning includes "fabrication."
 - Faber was Noelle's direct supervisor inside CAD. Mid-fifties at story
   start. Still active in the directorate.
-- Faber signed the operational order on Iren. Faber authorized the memory
+- Faber signed the operational order on Halen. Faber authorized the memory
   edits on Noelle. Faber's countersign protocol is what protected Liora's
   file from being actioned. **The same hand that protected Aeron's mother
   killed Noelle's partner.** Faber is not a moustache-twirler — Faber is
@@ -205,7 +209,7 @@ Last updated: 2026-05-05 (Noelle integration pass).
   antagonist, a teacher, a ghost. Possible Act 5 confrontation if you want
   one — not authored.
 - **The unanswered question Noelle carries:** was Faber edited too? Did
-  Faber sign the order on Iren freely, or does Faber's compliance also
+  Faber sign the order on Halen freely, or does Faber's compliance also
   trace back to a CAD recalibration session? Noelle has the data to
   investigate this. She has not. The question is left open in canon.
 
@@ -271,7 +275,7 @@ Last updated: 2026-05-05 (Noelle integration pass).
   beat folded inside the Defection Coda — single nthought passage, not
   its own scene.
 - The Defection Coda (§11.1) stages: (1) the realization of the editing,
-  (2) the discovery that the edit was hiding Iren's murder, (3) the
+  (2) the discovery that the edit was hiding Halen's murder, (3) the
   recognition that her own NDI baseline came from her parents. Three
   layers of revelation, in that order.
 
@@ -304,9 +308,9 @@ Last updated: 2026-05-05 (Noelle integration pass).
   three things in three minutes:
   1. Her own name on logs she cannot remember authoring. (Existing canon,
      dramatized for the first time.)
-  2. *Iren — Outer Wards Resonance, year four of assignment.* Cross-checks
-     against dispatch manifests. No Iren ever arrived. The transfer was a
-     fiction. Iren died on the day the records say they were reassigned.
+  2. *Halen — Outer Wards Resonance, year four of assignment.* Cross-checks
+     against dispatch manifests. No Halen ever arrived. The transfer was a
+     fiction. Halen died on the day the records say they were reassigned.
   3. The cohort metadata on her own NDI baseline file points to her
      parents' research suite. *KORR_A_TALEN_PROJECT_LEAD.* Anesh and
      Talen Korr are in the byline of her own foundational data.
@@ -348,7 +352,7 @@ Last updated: 2026-05-05 (Noelle integration pass).
   the patient with the survival probability.
 - **EMP:** Tessa removes the implant. Awake surgery. Noelle holds the
   conversation through the procedure as a coping mechanism. The
-  conversation lands on Iren — Noelle has just discovered the death in
+  conversation lands on Halen — Noelle has just discovered the death in
   the coda the night before; she has not told anyone; she tells Tessa
   while Tessa is cutting into her skull. *"I do not know if I am crying
   about a person I cannot remember loving or about the procedure. The
@@ -356,10 +360,14 @@ Last updated: 2026-05-05 (Noelle integration pass).
   still."*
 - **OB:** Tessa identifies the implant and recommends removal. Noelle
   refuses. *"It is a closed-loop. We control what they see. Leaving it
-  active is operationally superior."* Tessa argues. Noelle holds. The
-  conversation ends with Tessa walking away — *"You taught me care was
-  not a variable. You did not tell me you were going to delete it from
-  your own ledger."* The friendship breaks here on OB. It does not heal.
+  active is operationally superior."* Tessa argues briefly. Noelle holds.
+  **Tessa does not walk away.** She says: *"All right. Then I'll watch
+  the room."* And she does. For the rest of the act. The friendship is
+  not broken. **Noelle is.** What withdraws on OB is not Tessa's
+  willingness to give care — Tessa's character is the hand that stays —
+  it is Noelle's capacity to receive it. The system performed this edit
+  on her once with Halen. The OB version is the edit she is now
+  performing on herself.
 
 ### 11.4 Civilizational Memory-Editing Thesis (`a3_s20_unwitnessed_emp` / `_ob`)
 
@@ -399,7 +407,28 @@ Last updated: 2026-05-05 (Noelle integration pass).
 - 30-second beat. Does not need its own scene. Threads into an existing
   Act 3 mission scene — author chooses location.
 
-### 11.6 Cassandra Moment (optional)
+### 11.6 The Glass Moment (OB only, late Act 4)
+
+- One late Act 4 OB beat where Tessa's care language fails to land on
+  Noelle. Routine field-medical follow-up after a casualty debrief.
+  Noelle is at her workstation. Tessa, passing through the room, says,
+  to no one — half to herself, half to the air: *"You taught me care
+  was not a variable. You did not tell me you were going to delete it
+  from your own ledger."*
+- Noelle hears it. Noelle does not react. The line — which would have
+  cracked her in Act 2 — passes through the room like weather.
+- **Tessa is not accusing her.** Tessa is grieving aloud in a register
+  Noelle taught her. The tragedy is not that Tessa says it; the tragedy
+  is that Noelle no longer has the channel to hear what Tessa is
+  saying. The Name Mechanic's inverse — instead of a name dissolving a
+  menu, a sentence fails to dissolve a wall.
+- 30-second beat. Threads into an existing OB Act 4 scene; the
+  recommended placement is during or immediately after the doctrine-
+  drafting in `a4_s10_noelle_doctrine_ob`, so the dissociation registers
+  against the moment Noelle is most actively becoming Faber.
+- Flag: `glass_moment_ob_unfelt`. Pays off in late-game reflection.
+
+### 11.7 Cassandra Moment (optional)
 
 - Late Act 4 or Act 5. Noelle predicts an Echelon counter-move (probably
   Rhea Vestin-related) with high confidence. The room dismisses it as
@@ -456,9 +485,14 @@ Last updated: 2026-05-05 (Noelle integration pass).
   system that produced her never stopped producing her. The Korr family
   line continues through her drafting hand. Faber's countersign protocol
   is what she has unconsciously inherited.
-- The Tessa anchor breaks the friendship on OB. This is the cost OB
-  needs more of — not violence, but **withdrawal of the people who
-  taught her.**
+- The Tessa anchor on OB does not break the friendship; it breaks
+  Noelle's capacity to receive Tessa. Tessa stays in the room. Noelle
+  stops being able to feel her stay. This is the OB cost in the
+  friendship register: not the withdrawal of the people who taught her,
+  but **the withdrawal of her own ability to be reached by what they
+  teach.** It mirrors the Halen edit — what was done to her, she is now
+  doing to herself. The implant left active is the door; the Glass
+  Moment (§11.6) is the room behind it.
 - The implant left active is the OB body horror in canon form. She
   carries the regime in her skull voluntarily because operational
   control is preferable to bodily autonomy. This is the OB thesis in a
@@ -488,7 +522,7 @@ Last updated: 2026-05-05 (Noelle integration pass).
 
 ## 14. LOAD-BEARING QUOTES (do not paraphrase)
 
-- Iren's transfer fiction: *"reassigned to Outer Wards Resonance Research
+- Halen's transfer fiction: *"reassigned to Outer Wards Resonance Research
   Station, indefinite term."*
 - Noelle's pre-defection note in her own handwriting: *"This isn't
   support, it's editing."*
@@ -497,8 +531,12 @@ Last updated: 2026-05-05 (Noelle integration pass).
   have."*
 - Tessa during the implant removal (EMP): *"It does not have to. Hold
   still."*
-- Tessa's exit line (OB): *"You taught me care was not a variable. You
-  did not tell me you were going to delete it from your own ledger."*
+- Tessa's stay-line (OB implant scene): *"All right. Then I'll watch
+  the room."*
+- Tessa's Glass-Moment line (OB late Act 4 — spoken half to herself):
+  *"You taught me care was not a variable. You did not tell me you
+  were going to delete it from your own ledger."* (Same words as the
+  earlier draft; reassigned from exit to overheard-grief.)
 - Noelle's civilizational thesis: *"The clock is not military. The
   clock is forensic."*
 - Noelle's EMP thesis close: *"so we have to be witnessed before we
@@ -525,16 +563,18 @@ Last updated: 2026-05-05 (Noelle integration pass).
 - `a3_s20` (NEW): `noelle_thesis_delivered`. Required for `a4_p15`
   (Selene × Noelle anchor) to fire at full weight.
 - `a4_s10b` (NEW): `defection_coda_complete`, with sub-flags
-  `iren_discovered`, `ndi_baseline_realized`.
+  `halen_discovered`, `ndi_baseline_realized`.
 - `a4_s17` (NEW): `verdant_payoff_complete`, with sub-flags
   `lyra_placement_revealed_emp`, `liora_file_handed_emp`,
   `liora_file_held_ob`.
+- Late Act 4 OB threaded beat: `glass_moment_ob_unfelt` — set when the
+  Tessa Glass Moment passes through Noelle without landing.
 - Mira recognition in Act 4 mission scene: `mira_recognized_emp` vs
   `mira_recognized_ob`. Path-determinative for end-game reflection.
 
 ## 16. OPEN ITEMS
 
-- **Iren's gender:** canon-neutral. Author per scene. The name reads any
+- **Halen's gender:** canon-neutral. Author per scene. The name reads any
   reading; pronoun choice in scenes can lock if useful or stay
   ambiguous if poly-aware framing is preferred.
 - **Faber's first name:** never used. If a scene needs one, do not invent
