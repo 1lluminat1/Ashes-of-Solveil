@@ -78,6 +78,7 @@ label a2_s08_the_analyst:
     n "Aeron Rylan. Formerly Captain Rylan, Echelon Order Division, call sign 'Glass.'"
     n "Thirty-seven confirmed operations. Ninety-four percent mission success rate."
     n "Responsible for the coordination of the Sector 10 Sweep that preceded the Purge."
+    n "Faber's notes on you are longer than my own."
 
     athought "The words land like bullets—precise, each one drawing blood."
 

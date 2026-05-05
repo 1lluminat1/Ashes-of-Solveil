@@ -124,6 +124,8 @@ label a3_s14_noelle_calculus_ob:
 
     "Marcus Rylan."
 
+    n "There is a second signature on the document. Not the kill order — the cohort selection. Faber, R. — Director, CAD. My former director countersigned the discriminant function that picked the household enumeration. Marcus's hand chose that they died. Faber's hand chose who. I am noting the chain for the operational record."
+
     athought "My father's handwriting."
 
     athought "I'd recognize it anywhere. The sharp downstroke on the M. The compressed signature of a man who signed too many documents to give each one its full name."

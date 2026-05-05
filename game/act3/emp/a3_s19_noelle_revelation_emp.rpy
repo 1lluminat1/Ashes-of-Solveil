@@ -137,6 +137,10 @@ label a3_s19_noelle_revelation_emp:
 
     n "Not delegated. Not through subordinates. The authorization chain is three links: the operational planner, the logistics coordinator, and Marcus Rylan. He was the final authority."
 
+    n "There is a fourth signature in the document. Not on the kill order — on the cohort selection. Sector designations, household enumeration, the discriminant function that decided which families went on the list. The countersign reads *Faber, R. — Director, CAD.* My director picked the names. My subject's father signed the paperwork. I was in the room for the early modeling."
+
+    n "I am stating that as fact, not confession. The room can do with it what the room does with it."
+
     z "That's not a chain of command. That's a chain of three."
 
     n "By design. Fewer signatories means fewer witnesses. Fewer people who can testify."

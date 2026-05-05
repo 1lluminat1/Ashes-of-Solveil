@@ -44,6 +44,14 @@ label a1_s09_inspection_day:
 
     a "Field operations. Enforcement. Containment."
 
+    "The auditor's display angles toward the observation glass for a half-second as the chair's servo recalibrates. The reflection lands on Aeron's side of the partition. He reads the line at the top of his own evaluation header before the angle corrects."
+
+    "*CAD-flagged: high variance. Cross-reference KORR_N_BASELINE. Monitor. (Faber)*"
+
+    "The reflection is gone in under a second. The auditor does not notice the angle correction was slow. Aeron does not know the names. He registers the line and files it with the other small irregularities in the inspection room he has been registering and filing for nine years."
+
+    athought "Two names I do not know. A flag I do not recognize. The auditor will not explain and I will not ask."
+
     aud "Define mercy in operational terms."
 
     # ========= MENU 1: SEMANTIC ALIGNMENT =========
