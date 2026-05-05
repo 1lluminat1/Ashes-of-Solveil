@@ -19,6 +19,12 @@ Last updated: 2026-05-05 (Noelle integration pass).
 - Her surname **Korr** carries two etymological loads, both intentional:
   Greek *kore* (the maiden whose taking begins the world's grief — Persephone)
   and Latin *cor* (heart). Lyra recognizes this aloud once (see §13.4).
+- **There is also a second surname in her records: Vance.** This is the
+  residue of Halen (see §2.2). Korr is what Noelle calls herself. Vance
+  is what her CAD credentials, professional registry, and signed
+  documents have always called her. She has never asked why. The
+  editing made the question unaskable. Until the Defection Coda, she
+  had not realized Vance was a name she did not choose to carry.
 - Four pieces of new canon sit underneath Noelle's existing arc and
   recontextualize it: **Halen (the partner)**, **the implant**, **the Liora
   file**, **the NDI baseline (parents)**. These are not new arcs — they are
@@ -56,7 +62,50 @@ Last updated: 2026-05-05 (Noelle integration pass).
   not in the rebellion under another name. The horror is that the love is
   unrecoverable on every axis.
 
-### 2.1 Structural rhyme with Kael
+### 2.1 The Vance Surname
+
+- **Halen's birth surname was Vance.** Noelle took Vance during their
+  joining (CAD's bureaucratic register for partner-recognition; partners
+  on classified projects could register joint professional identities for
+  shared-credential access). The taking was administrative, not
+  ceremonial — a credential update on her CAD profile. Her birth name,
+  Korr, remained on every personal record. **Korr was who she was.
+  Vance was the name on her badge.**
+- After Halen was killed and Noelle was edited, the Vance designation
+  remained active on her CAD credentials, professional registry, and
+  every document she had ever signed. The editing was selective —
+  removing the emotional and biographical memory of the relationship —
+  but it left bureaucratic artifacts intact. Untangling Vance from her
+  professional identity would have required scrubbing nine years of
+  paperwork across three sub-directorates, which would have been more
+  visible than the residue. Faber's containment principle: *the trail
+  of the editing must be smaller than the trail of the un-editing.*
+- For the seven months between the editing and her defection, Noelle
+  signed every CAD document as NOELLE VANCE without remembering why.
+  Her hand knew. Her eye accepted it. The question was sealed.
+- After her defection, she introduced herself to Phoenix as Noelle
+  Korr. The rebellion calls her Korr. **Her signature on Phoenix
+  command documents is still Vance.** Her hand goes to it
+  automatically — professional muscle memory cured by nine years of
+  practice. She has signed three Phoenix documents this way. The
+  third was ADAPTIVE PLACEMENT MODEL v1 in `a4_s09`. Aeron read the
+  surname on the pad and did not ask about it. Noelle did not
+  explain. Neither of them named the gap.
+- **The Defection Coda is where she sees it.** Looking at her CAD
+  logs in the data crystal, the author byline on every entry reads
+  *AUTHOR: VANCE, N.* She stares at it. She has stared at this byline
+  thousands of times in her life and never once asked the question.
+  The editing kept the question unaskable. It is only askable now
+  because Halen's transfer fiction has just collapsed in front of
+  her — and the surname is the second body it leaves behind.
+- **a4_s09 line 431 is canon and load-bearing.** Do NOT edit the
+  scene. The NOELLE VANCE signature is the unwitting documentation
+  of the editing, performed in real time, in front of Aeron, before
+  either of them had the framework to read it. The scene plays
+  exactly as written. The Defection Coda is what gives it its
+  retroactive weight.
+
+### 2.2 Structural rhyme with Kael
 
 - Marcus authored a death that was not real (Kael's "suicide"). Echelon
   authored an absence that was a death (Halen's "transfer"). Twin lies,
@@ -305,23 +354,52 @@ Last updated: 2026-05-05 (Noelle integration pass).
   own cadence and recognizes Faber's voice in her writing. She opens her
   defection data crystal — the one she has not opened since the rebellion
   established its base — to remind herself why she defected. She finds
-  three things in three minutes:
+  four things in four minutes:
   1. Her own name on logs she cannot remember authoring. (Existing canon,
      dramatized for the first time.)
   2. *Halen — Outer Wards Resonance, year four of assignment.* Cross-checks
      against dispatch manifests. No Halen ever arrived. The transfer was a
      fiction. Halen died on the day the records say they were reassigned.
   3. The cohort metadata on her own NDI baseline file points to her
-     parents' research suite. *KORR_A_TALEN_PROJECT_LEAD.* Anesh and
-     Talen Korr are in the byline of her own foundational data.
+     parents' research suite. Project lead listed in two byline slots —
+     *KORR, A.* and *KORR, T.* — Anesh and Talen Korr in the byline of
+     their daughter's foundational data.
+  4. **The author byline on her own CAD logs reads VANCE, N.** Not
+     KORR. *Vance.* She has been seeing this byline on her work for
+     nine years and has never once let the question form. She lets the
+     question form now. She remembers — vaguely, structurally, the way
+     a person remembers a room they once cleaned without remembering
+     why they were in the room — that Vance was Halen's surname. She
+     has been signing her dead partner's name on every official
+     document she has ever produced. She has been signing it on
+     Phoenix command documents for the last seven months. The
+     signature she gave Aeron in `a4_s09` was Halen's name. Aeron
+     read it on the pad. Neither of them named the gap.
 - **Ending:** She does not cry. She closes the crystal. She returns to the
-  framework she was drafting. She types one more line. She deletes it.
-  - **EMP:** The deleted line was *"this isn't support, it's editing."*
-    The same line she found in her own handwriting before the defection.
-    She has just written it again. She does not show Aeron yet.
-  - **OB:** The deleted line was *"Faber would approve of this draft."*
-    She types it. She deletes it. She rewrites the framework cleaner.
-    She does not stop.
+  framework she was drafting. The endings diverge sharply on the surname
+  question:
+  - **EMP:** She types two lines. She deletes both. The first is *"this
+    isn't support, it's editing"* — the same line she found in her own
+    handwriting before the defection. She has just written it again.
+    The second, beneath it, is her name. She types *"Noelle Vance."*
+    She looks at the surname. She deletes it. She types *"Noelle
+    Korr."* She looks at that. She deletes it too. She types *"Noelle"*
+    and stops there. She does not delete the first name. She lets it
+    sit alone on the screen for a count of fourteen — the same count
+    Aeron held in `a4_s10a` after Selene delivered the Soren sentence.
+    She does not know about that count. Then she clears the field and
+    returns to the framework.
+  - **OB:** She catches her hand drafting the doctrine's signature
+    block. The default surname her hand writes is Vance. She watches
+    her hand write it. She does not change it. She types one more
+    line: *"Faber would approve of this draft."* She deletes it. She
+    leaves the Vance signature on the doctrine. She continues writing.
+    **OB Noelle keeps the editing in place voluntarily.** The Vance
+    line stays because removing it would be operationally expensive.
+    The system's first edit was performed on her. The OB version is
+    the edit she is choosing to leave undisturbed now that she can see
+    it. EMP Noelle has her name back as a question. OB Noelle keeps
+    the question sealed.
 - Whistleblower nthought folds into the second beat: *"someone gave me
   this. I cannot remember their face. Their hands gave me the future they
   would not have."*
@@ -524,6 +602,11 @@ Last updated: 2026-05-05 (Noelle integration pass).
 
 - Halen's transfer fiction: *"reassigned to Outer Wards Resonance Research
   Station, indefinite term."*
+- The Vance byline on Noelle's own CAD logs: *AUTHOR: VANCE, N.*
+  (Seen thousands of times. Read once.)
+- Noelle's EMP coda final line on the screen, alone, uncleared for
+  fourteen seconds: *"Noelle"* (no surname). The first name as the
+  only thing she is certain belongs to her.
 - Noelle's pre-defection note in her own handwriting: *"This isn't
   support, it's editing."*
 - Noelle's whistleblower nthought: *"someone gave me this. I cannot
@@ -563,7 +646,10 @@ Last updated: 2026-05-05 (Noelle integration pass).
 - `a3_s20` (NEW): `noelle_thesis_delivered`. Required for `a4_p15`
   (Selene × Noelle anchor) to fire at full weight.
 - `a4_s10b` (NEW): `defection_coda_complete`, with sub-flags
-  `halen_discovered`, `ndi_baseline_realized`.
+  `halen_discovered`, `ndi_baseline_realized`, `vance_recognized_emp`
+  vs `vance_kept_ob`. The Vance flag is path-determinative — EMP
+  Noelle has the surname back as a question; OB Noelle keeps the
+  editing in place voluntarily.
 - `a4_s17` (NEW): `verdant_payoff_complete`, with sub-flags
   `lyra_placement_revealed_emp`, `liora_file_handed_emp`,
   `liora_file_held_ob`.
@@ -577,6 +663,16 @@ Last updated: 2026-05-05 (Noelle integration pass).
 - **Halen's gender:** canon-neutral. Author per scene. The name reads any
   reading; pronoun choice in scenes can lock if useful or stay
   ambiguous if poly-aware framing is preferred.
+- **Korr vs Vance in future scenes (post-coda):** EMP Noelle begins
+  signing as Korr from the next document onward — the recovery is
+  visible in the audit trail. OB Noelle continues signing as Vance —
+  the editing remains operational. A scene where Aeron notices the
+  EMP signature change is open territory and would land. A scene where
+  Aeron notices the OB signature has *not* changed is the inverse, and
+  also open. Author at discretion. **`a4_s09` line 431 is canon and
+  load-bearing — do not edit the NOELLE VANCE signature there.** It is
+  the unwitting documentation of the editing in real time, before
+  either character had the framework to read it.
 - **Faber's first name:** never used. If a scene needs one, do not invent
   one — keep the institutional flatness.
 - **Mira's foster placement:** unspecified. If the Act 4 mission scene
