@@ -51,7 +51,8 @@ Last updated: 2026-05-05 (Noelle integration pass).
 - **The transfer fiction was the containment measure.** A Noelle who thinks
   her partner is alive elsewhere does not search. A Noelle who knows they
   are dead might. The lie was maintained for over a year.
-- Noelle does not discover the death until the Defection Coda (`a4_s10b`,
+- Noelle does not discover the death until the Defection Coda (`a4_s09a` /
+  `a4_s10a` per path,
   see §11). The records on her data crystal show "Halen — Outer Wards
   Resonance, year four of assignment" until she cross-checks the dispatch
   manifests and finds no Halen ever arrived at any Outer Wards station.
@@ -345,11 +346,12 @@ Last updated: 2026-05-05 (Noelle integration pass).
 
 ## 11. SCENES TO AUTHOR
 
-### 11.1 Defection Coda (`a4_s10b_noelle_coda_emp` / `_ob`)
+### 11.1 Defection Coda (`a4_s09a_noelle_coda_emp` / `a4_s10a_noelle_coda_ob`)
 
 - **Shape:** Coda riding `a4_s09_noelle_implicated_emp` (EMP) and
   `a4_s10_noelle_doctrine_ob` (OB). Same structural pattern as Kael's
-  `a4_s10a` riding the EMP `a4_s10`.
+  `a4_s10a` riding the EMP `a4_s10` — the coda suffix matches the
+  parent scene number on each path.
 - **Beat:** Noelle is drafting a framework / doctrine. She catches her
   own cadence and recognizes Faber's voice in her writing. She opens her
   defection data crystal — the one she has not opened since the rebellion
@@ -645,11 +647,11 @@ Last updated: 2026-05-05 (Noelle integration pass).
   determinative.
 - `a3_s20` (NEW): `noelle_thesis_delivered`. Required for `a4_p15`
   (Selene × Noelle anchor) to fire at full weight.
-- `a4_s10b` (NEW): `defection_coda_complete`, with sub-flags
-  `halen_discovered`, `ndi_baseline_realized`, `vance_recognized_emp`
-  vs `vance_kept_ob`. The Vance flag is path-determinative — EMP
-  Noelle has the surname back as a question; OB Noelle keeps the
-  editing in place voluntarily.
+- `a4_s09a` (EMP, NEW) / `a4_s10a` (OB, NEW): `defection_coda_complete`,
+  with sub-flags `halen_discovered`, `ndi_baseline_realized`,
+  `vance_recognized_emp` vs `vance_kept_ob`. The Vance flag is
+  path-determinative — EMP Noelle has the surname back as a question;
+  OB Noelle keeps the editing in place voluntarily.
 - `a4_s17` (NEW): `verdant_payoff_complete`, with sub-flags
   `lyra_placement_revealed_emp`, `liora_file_handed_emp`,
   `liora_file_held_ob`.
