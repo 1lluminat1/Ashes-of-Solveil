@@ -42,6 +42,8 @@ label a3_s19b_zira_before_the_weight_ob:
 
     "The relay unit on the bench cycles through its standby pattern. She is not working on it. She is sitting in front of it."
 
+    zthought "Tonight's pull queued at midnight. Six bytes off the Mercer relay, dirty header. I'll clean it before sleep."
+
     zthought "The board overwrite."
 
     zthought "Tessa's board. The war room. The header on the living column read LIVING until it didn't. Someone -- Aeron, Nyra, one of the command chain -- changed it. The word OPERATIONAL replaced the word LIVING and nobody in this room thought that was worth stopping for."

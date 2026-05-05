@@ -28,9 +28,11 @@ label a3_int_zira_dont_regret_it:
     if canon_get("path_state", "UNSET") == "OB":
         zthought "Diagnostic loop, pass seventeen. I don't need pass seventeen. Pass fourteen was clean and I kept going."
         zthought "The loop is the anchor. The loop is what my hands do when my head is doing the other thing."
+        zthought "The midnight cycle ran in the next pane an hour ago. Three fragments. Null again. Logged."
     else:
         zthought "Seeding Liora's ledgers into every active node. The files are clean, compressed, checksummed. I could run this deployment in my sleep."
         zthought "I am running this deployment because my hands need something to hold that isn't his."
+        zthought "The midnight cycle ran in the next pane an hour ago. Three fragments. Not enough to break the block. Enough to feed the cycle."
 
     zthought "I am replaying the moment I chose him."
 
