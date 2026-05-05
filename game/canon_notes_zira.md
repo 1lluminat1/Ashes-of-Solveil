@@ -155,35 +155,35 @@ misfired") is replaced by the following:
   chain configuration, beacon credential rotation procedures, the
   geographic distribution he wanted the first ten Ghostline nodes to
   follow.
-- **The final ninety seconds shifts register.** Renn becomes aware of
-  the breach proximity. His voice does not change pitch. He says (do
-  not paraphrase):
+- **The final block is short.** Renn becomes aware of the breach
+  proximity. His voice does not change pitch. He says (do not paraphrase):
 
-> *"Z — I'm hearing them at the perimeter. Two minutes maybe. I'm going
-> to hold the post until the broadcast hits the seventeenth cell. After
-> that, the repeater chain takes over. I configured it last week. You
-> didn't know. Sorry — wanted you to have a redundancy you didn't owe me.*
+> *"Z — I'm hearing them at the perimeter. Two minutes maybe. I'm
+> going to hold the post until the broadcast hits the seventeenth
+> cell. After that, the repeater chain takes over. I configured it
+> last week. You didn't know. Sorry — wanted you to have a
+> redundancy you didn't owe me.*
 > 
-> *You're going to ask yourself, after this, whether you should have
-> told me to evacuate instead. Don't. You made the right call. I'd have
-> made it the same. The math is the math. I was the senior operator and
-> the broadcast was mine to hold, and the four kids were yours to ask
-> about, and you asked, and I answered, and we picked the same answer
-> because it was the right answer. You hear me, kid? It was the right
-> answer.*
-> 
-> *The network is the people. Don't forget the names. Take care of
-> Marna if she's still there. Keep the kids who make it. Keep the
-> voice — it's all I'll have a way to be.*
-> 
-> *I'm going to keep working until the moment I can't. I love you.
-> Out."*
+> *You asked. I answered. I'd answer the same. Keep the line
+> alive. Out."*
 
 - **Out.** The last word is the standard radio sign-off. The cruelest
   word in the broadcast, because it is the last word.
 - **He calls her *Z* and *kid.*** Not Zero — Zero is not canon; it was
-  author-process trivia from the early concept days. Renn's actual
-  vocabulary for Zira is *Z* (operational) and *kid* (familial).
+  author-process trivia from the early concept days. Renn's
+  vocabulary for Zira is *Z* (operational) and *kid* (familial — used
+  earlier in the broadcast's technical section but not in the final
+  block).
+- **The compression is the load.** The five lines in the final block
+  carry the entire weight: *You asked* names the partnership;
+  *I answered* names his agency; *I'd answer the same* validates the
+  choice (his version of *I love you* in his actual register —
+  technical, compressed, exact); *Keep the line alive* is both the
+  operational instruction and the connection to him; *Out* is the
+  sign-off. Renn does not get to the larger conversation Zira has
+  been imagining for eleven years. He gets to five sentences. The
+  broadcast is shorter than her imagined version. **The not-getting-
+  to-it is itself the cost.**
 - The broadcast cuts out at *Out.* No gunshot in the recording — Marcus
   shot Renn approximately four seconds after Renn signed off. The four
   seconds are the silence Zira hears at the end of the file.
@@ -391,12 +391,14 @@ seen the wafer.
 - Marna's death is **not** Zira's fault, the way the Breach's nine are
   the math she carries. Marna is grief without choice, the loss that
   arrived without a console-question. Zira mentions Marna rarely.
-- **Marna does not appear in The Last Transmission.** Renn's final
-  line — *"Take care of Marna if she's still there"* — is a
-  request Zira could not fulfill. The "if" in the line is unbearable.
-  Zira hears the unbearable in the broadcast. The line is not
-  addressed in scene; Zira does not respond to it aloud. The audience
-  carries the weight.
+- **Marna does not appear in The Last Transmission.** Renn's
+  compressed final block does not get to Marna — he runs out of
+  time. The conversation Zira has been imagining for eleven years
+  was longer than the actual broadcast. The not-getting-to-Marna
+  is its own grief: the things Renn would have said if he had
+  more than five sentences are forever unsaid. Marna's fate stays
+  canonical via the Faber-signed disposition; she is just not
+  named in the recording.
 - Marna's fate is canonical and threadable. Future scenes referencing
   Zira's family history should respect the Faber-disposition framing.
 
@@ -537,8 +539,9 @@ of Sector 12-B's specific dead.
 
 ## 12. LOAD-BEARING QUOTES (do not paraphrase)
 
-- Renn's last broadcast (full final ninety seconds, §3 above).
-- Renn's specific final line: *"I love you. Out."*
+- Renn's last broadcast (full final block, §3 above).
+- Renn's specific final lines: *"You asked. I answered. I'd answer
+  the same. Keep the line alive. Out."*
 - Renn's choice at the console: *"Push the warning. Get the others
   out. I'll hold the post."*
 - Zira's eleven-year carry: *"I asked him to choose. He chose the

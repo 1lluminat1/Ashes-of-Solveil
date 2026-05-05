@@ -212,11 +212,11 @@ label a4_s20c_last_transmission_ob:
 
     zthought "The backup is data. I am filing the data."
 
-    renn "(via recording) You're going to ask yourself, after this, whether you should have told me to evacuate instead. Don't."
+    "The recording's ambient shifts. Some part of Sector 12-B's relay floor is audible behind Renn — small mechanical sounds, distant. Echelon is approaching. The sounds change."
 
-    "A pause."
+    "Renn breathes once. The audience hears him breathe."
 
-    renn "(via recording) You made the right call. I'd have made it the same. The math is the math. I was the senior operator and the broadcast was mine to hold, and the four kids were yours to ask about, and you asked, and I answered, and we picked the same answer because it was the right answer."
+    renn "(via recording) You asked. I answered. I'd answer the same. Keep the line alive."
 
     zthought "He is naming the choice."
 
@@ -225,18 +225,6 @@ label a4_s20c_last_transmission_ob:
     zthought "I have been carrying the choice as ours. He is confirming I have been carrying it correctly."
 
     zthought "The confirmation is what I came here for. The confirmation has now arrived."
-
-    renn "(via recording) You hear me, kid? It was the right answer."
-
-    "Renn waits in the recording. Zira files the wait."
-
-    renn "(via recording) The network is the people. Don't forget the names. Take care of Marna if she's still there. Keep the kids who make it. Keep the voice — it's all I'll have a way to be."
-
-    zthought "Marna is dead. Marna died six months after you. The line I cannot fulfill is in the broadcast."
-
-    zthought "The line is data. I am filing it."
-
-    renn "(via recording) I'm going to keep working until the moment I can't. I love you."
 
     "Pause."
 
@@ -266,15 +254,13 @@ label a4_s20c_last_transmission_ob:
 
     zthought "Item one: the Choice at the Console is confirmed. He validated it. The carrying has been correct. Filed."
 
-    zthought "Item two: the four kids he names are the four kids I have been carrying. He addresses them correctly. The names match. Filed."
+    zthought "Item two: he calls the choice *ours.* You asked. I answered. I'd answer the same. The naming of the partnership-in-cost is the work the OB version of me has been doing without language for it. The naming closes the language gap. Filed."
 
-    zthought "Item three: the line about Marna is a line I cannot fulfill. The non-fulfillment is operationally relevant only as historical record. Filed."
+    zthought "Item three: he signs off as *Out.* The word is his standard radio close. The word is in the broadcast. The word is not for me to inherit. The word is his. Filed."
 
-    zthought "Item four: he says he loves me. I am noting the line. The line is not operationally relevant. The line is filed in the personal layer."
+    zthought "The conversation Zira-eleven-years-ago was hoping for was longer than this. The brevity is itself a fact. The brevity is filed."
 
-    zthought "Item five: he signs off as *Out.* The word is his standard radio close. The word is in the broadcast. The word is not for me to inherit. The word is his. Filed."
-
-    "She does not engage further with item four. She does not engage further with item five. The OB working register's filing closes both items inside one nthought line each."
+    "The OB working register's filing closes the items inside their own nthought lines. The items the broadcast did not contain — the longer reassurances, the named names, the directives for the rebuild's caretakers — were never going to be in the broadcast. Renn had two minutes. He used five sentences. The five sentences were enough for him. The OB working register is filing them as enough for her."
 
     zthought "Audit complete."
 
@@ -390,7 +376,7 @@ label a4_s20c_last_transmission_ob:
 
     "The work continues."
 
-    "Inside her, the broadcast plays. Renn's voice in the file is now sealed under a new cipher she alone can decrypt. The validation he gave her — *the math was right* — is data she has now filed. The line about Marna is data she has filed. The line about loving her is data she has filed. The word *Out* is data she has filed."
+    "Inside her, the broadcast plays. Renn's voice in the file is now sealed under a new cipher she alone can decrypt. The validation he gave her — *I'd answer the same* — is data she has now filed. The compressed five sentences are data she has filed. The word *Out* is data she has filed. The conversation she had been imagining for eleven years — the longer one, the one with the names and the directives and the *I love you* — was never going to be in the broadcast. Renn did not have time. The not-having-time is data she has filed."
 
     "The filing is complete. The audit is closed. The work resumes."
 
@@ -486,16 +472,20 @@ label a4_s20c_last_transmission_ob:
 #   - The empty spare chair stays empty for the entire scene.
 #   - The broadcast plays. Same recording. Same five minutes
 #     twelve seconds. Same words. Same final ninety-second shift.
-#     Same *I love you. Out.* Same four seconds of silence.
+#     Same *You asked. I answered. I'd answer the same. Keep the line
+#     alive. Out.* Same four seconds of silence.
 #   - Zira's response to the broadcast is internal-only. She
 #     files each piece of information as it lands:
 #     1. The Choice at the Console — confirmed and filed.
-#     2. The four kids named — filed.
-#     3. The Marna line — filed (she cannot fulfill it; Marna is
-#        dead; the non-fulfillment is registered as historical).
-#     4. *I love you* — filed in the personal layer; not
-#        engaged with further.
-#     5. *Out* — filed; not inherited as her sign-off.
+#     2. *You asked. I answered. I'd answer the same.* — the
+#        naming of the partnership-in-cost. The OB working
+#        register has been carrying the partnership without
+#        language for it. The naming closes the language gap.
+#        Filed.
+#     3. *Out* — filed; not inherited as her sign-off.
+#   - The conversation Zira had been imagining for eleven years
+#     was longer than the actual broadcast. The brevity is
+#     itself a fact. The brevity is filed.
 #   - "Audit complete. Filed." The OB working register's standard
 #     close phrase, applied to the eleven-year cycle.
 #   - She re-encrypts the broadcast under a new cipher she
@@ -650,8 +640,12 @@ label a4_s20c_last_transmission_ob:
 #     Author at discretion if a later OB scene wants to surface
 #     the broadcast via different mechanism. The default is
 #     permanent withholding.
-#   - The Marna line in the broadcast (Renn asking Zira to take
-#     care of Marna) is unfulfilled and unaddressable. The
-#     non-fulfillment is canon. Future OB Marna references
-#     should respect the weight.
+#   - Marna is not named in the broadcast. Renn ran out of time
+#     before he could get to her. The not-naming is canon. The
+#     conversation Zira imagined for eleven years included Marna;
+#     the actual broadcast did not. The grief shape on OB is
+#     specifically that the broadcast was shorter than the
+#     imagined version. Future OB Marna references should respect
+#     that Renn never got to ask Zira to take care of her —
+#     because he ran out of seconds.
 # =========================================================

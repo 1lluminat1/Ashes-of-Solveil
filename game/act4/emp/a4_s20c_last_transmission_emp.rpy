@@ -366,25 +366,11 @@ label a4_s20c_last_transmission_emp:
 
     "Zira's eyes are still closed. Aeron's face has the institutional stillness he has carried since the alcove with Selene."
 
-    renn "(via recording) You're going to ask yourself, after this, whether you should have told me to evacuate instead. Don't."
+    "The recording's ambient shifts. Some part of Sector 12-B's relay floor is audible behind Renn — small mechanical sounds, distant. Echelon is approaching. The sounds change."
 
-    "A pause."
+    "Renn breathes once. The audience hears him breathe."
 
-    renn "(via recording) You made the right call. I'd have made it the same. The math is the math. I was the senior operator and the broadcast was mine to hold, and the four kids were yours to ask about, and you asked, and I answered, and we picked the same answer because it was the right answer."
-
-    "Zira's face has not changed. The change is internal."
-
-    "Aeron has not moved."
-
-    renn "(via recording) You hear me, kid? It was the right answer."
-
-    "A short silence in the recording. Renn waiting. The wait is not for confirmation; the wait is just Renn breathing. The audience hears him breathe."
-
-    renn "(via recording) The network is the people. Don't forget the names. Take care of Marna if she's still there. Keep the kids who make it. Keep the voice — it's all I'll have a way to be."
-
-    "The recording's ambient hisses. Some part of Sector 12-B's relay floor is audible behind Renn's voice — small mechanical sounds, distant. Echelon is approaching. The sounds change."
-
-    renn "(via recording) I'm going to keep working until the moment I can't. I love you."
+    renn "(via recording) You asked. I answered. I'd answer the same. Keep the line alive."
 
     "A pause. The smallest pause."
 
@@ -671,15 +657,14 @@ label a4_s20c_last_transmission_emp:
 #     for Ghostline's first ten nodes (the same distribution Zira
 #     used for the rebuild — she has been hearing the reasoning
 #     behind her own choices for the first time).
-#   - Final ninety seconds: Renn aware of the breach proximity.
-#     Names the choice at the console. Validates Zira's call.
-#     "You made the right call. I'd have made it the same. The
-#     math is the math." Names the four kids. Names the sign-off
-#     phrase: "The network is the people. Don't forget the names.
-#     Take care of Marna if she's still there. Keep the kids who
-#     make it. Keep the voice — it's all I'll have a way to be.
-#     I'm going to keep working until the moment I can't. I love
-#     you. Out."
+#   - Final block: Renn aware of the breach proximity. Discloses the
+#     repeater chain redundancy ("I configured it last week. You
+#     didn't know."). Then five compressed sentences that carry the
+#     entire validation: "You asked. I answered. I'd answer the
+#     same. Keep the line alive. Out." The compression is the load.
+#     The conversation Zira has been imagining for eleven years was
+#     longer than the actual broadcast. The not-getting-to-the-rest
+#     is its own grief.
 #   - Four seconds of silence in the recording after Out. The
 #     silence is the recording of the silence before Marcus shot
 #     Renn. No gunshot in the file.
