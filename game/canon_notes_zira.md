@@ -585,11 +585,12 @@ of Sector 12-B's specific dead.
   establishes Ghostline's pre-Breach generation existed and operated
   loosely from 300-320 AC onward. Whether Zira ever interacts with
   surviving old-guard Ghostrunners outside Sector 12-B is open.
-- **Kira's age progression** — Kira is approximately twelve in Act 4
-  (390 AC). She was four at the Breach (379 AC). She remembers her
-  parents but not Sector 12-B's collapse. Whether she ever learns
-  the salt mechanic is open authoring territory and would be a
-  significant Act 5 character beat.
+- **Kira's age progression** — Kira is twelve at story start (383 AC)
+  per existing canon (a2_s17). She was eight at the Breach (379 AC).
+  She is approximately nineteen in Act 4 (390 AC). The Breach math
+  requires her to remember her parents — she does. Whether she ever
+  learns the salt mechanic is open authoring territory and would be
+  a significant Act 5 character beat.
 - **The decryption of Renn's cipher took eleven years.** The
   acquisition vector for the final fragment (CAD-internal traffic
   burst) is canon-locked. The specific CAD operation that produced
