@@ -129,7 +129,7 @@ label a4_s20c_last_transmission_emp:
 
     "The workshop at oh-three-fourteen. The base is in its deepest second-shift quiet. Zira is at the cipher terminal. Her hands are working the same sequence they have worked, by her own count, four thousand and eighty-three times."
 
-    "She does not count the cycles aloud. She counts them privately, the way some people count rosary beads. The four thousand and eighty-three is the count as of last night's cycle. Tonight will be four thousand and eighty-four. The number is meaningless and the number is exact."
+    "She does not count the cycles aloud. She counts them privately, the way some people count rosary beads."
 
     zthought "Today's fragment came in at twenty-two-fifty-eight via the Sector Three maintenance pull. CAD-internal traffic burst, twelve-second window, returned a thirty-seven-byte block."
 
@@ -139,13 +139,13 @@ label a4_s20c_last_transmission_emp:
 
     zthought "Thirty-seven."
 
-    "Her fingers complete the load sequence. The fragment's thirty-seven bytes resolve in the test buffer. She tabs to the cipher-test routine. The routine is the routine. She has run the routine, by her own count, four thousand and eighty-three times. Tonight is the four thousand and eighty-fourth."
+    "Her fingers complete the load sequence. The fragment's thirty-seven bytes resolve in the test buffer. She tabs to the cipher-test routine. The routine is the routine."
 
     zthought "Run."
 
     "She runs it."
 
-    "The cipher terminal hums. The cycle tone holds. Zira watches the corner of the screen. The watching is the ritual. The ritual is the eleven years."
+    "The cipher terminal hums. The cycle tone holds. Zira watches the corner of the screen."
 
     zthought "Most nights the routine returns NULL within forty seconds. The longest cycle I've ever recorded was a hundred and sixty-two seconds — three years ago, on an eight-byte fragment that turned out to be padding. Tonight the cycle has been running for —"
 
@@ -169,7 +169,7 @@ label a4_s20c_last_transmission_emp:
 
     "At seven minutes thirty-one, the cipher-completion chime sounds."
 
-    "Three tones. Distinct from the cycle tone. Zira has heard the cycle tone four thousand and eighty-three times. She has never heard the completion chime. She has imagined what it would sound like. She had it wrong."
+    "Three tones. Distinct from the cycle tone. She'd imagined what the chime would sound like. She had it wrong."
 
     "Her hands stop on the keyboard."
 
@@ -196,8 +196,6 @@ label a4_s20c_last_transmission_emp:
 
     "She does not play the file."
 
-    "The reason is in her hands, which have not moved, and in her eyes, which have not left the corner of the screen where the completion notice sits."
-
     zthought "Play it now and it lives in this workshop forever. Mine. Just mine."
 
     zthought "I don't want it to live here alone."
@@ -208,7 +206,7 @@ label a4_s20c_last_transmission_emp:
 
     "She stands."
 
-    "The motion is small. The chair pushes back without sound — Zira's chair has been on her own oiled tracks for years; she does not let it scrape. She stands and looks at the terminal one more time. The completion notice is still there. The file is still there. The file is going to be there in five minutes when she comes back."
+    "The motion is small. The chair pushes back without sound — she does not let it scrape. She looks at the terminal one more time. The completion notice is still there."
 
     zthought "Rylan's three doors down."
 
@@ -238,23 +236,13 @@ label a4_s20c_last_transmission_emp:
 
     "She knocks twice. Soft taps. The Ghostrunner ping."
 
-    "The base is small enough that the knock is heard. Aeron hasn't been sleeping deeply lately — too many compartments, not enough nights to file them. He hears the knock. He registers the cadence."
-
-    "The cadence is the Ghostrunner ping. The ping is Zira's. The ping is non-urgent."
-
-    "He registers all of that in the first second. He is awake by the second second. He is at the door by the eighth."
+    "The base is small enough that the knock is heard. Aeron hasn't been sleeping deeply lately. He hears it. He's at the door in eight seconds."
 
     "He opens it. He is dressed in the layered base-night clothes he sleeps in. His hair is at sleep-rotation. He does not look surprised."
 
-    "He looks at her face."
-
-    "He sees what is on her face."
-
-    "He does not ask."
+    "He looks at her face. He doesn't ask."
 
     a "Yeah."
-
-    "One syllable."
 
     "He pulls a coat from the hook by the door. He follows her without dressing further. He does not lock his quarters behind him. They walk the corridor together to her workshop. They do not talk."
 
@@ -283,7 +271,7 @@ label a4_s20c_last_transmission_emp:
 
     z "Eleven years tonight. Four thousand cycles. The fragment landed twenty minutes ago."
 
-    "She says it plainly. She is not sure who the sentence is for. Aeron hears it as the only context he is going to need. He registers the sentence and waits."
+    "She says it plainly. Aeron waits."
 
     z "The file is Renn's. He encrypted it in his personal cipher — one we built between us when I was twelve, never operational, never written down. I've been carrying the encrypted block for eleven years. I've been hunting the key bytes for eleven years. Tonight I have them."
 
@@ -299,9 +287,7 @@ label a4_s20c_last_transmission_emp:
 
     a "Okay."
 
-    "Same syllable from before. Same register. He has nothing else to offer; nothing else is needed."
-
-    "She turns to the terminal. She calls up the file. Her hands are steady. The eleven years has trained the hands."
+    "She turns to the terminal. She calls up the file. Her hands are steady."
 
     "She presses play."
 
@@ -330,21 +316,23 @@ label a4_s20c_last_transmission_emp:
 
     "The broadcast plays."
 
-    "The first thing on the recording is Renn clearing his throat. A small wet sound. Zira has not heard Renn clear his throat in eleven years."
+    "The first thing on the recording is Renn clearing his throat. A small wet sound."
 
     "Then his voice, unmistakable — the voice from the relay junction reset. The patience. The tech-voice cadence."
 
     renn "(via recording) Successor channel. This is Renn at the Sector Twelve-B primary. If you are listening to this it means I did not make it back and the wafer made it to whoever is rebuilding. I am going to walk you through the priority items in the order I would want them rebuilt. I am going to be efficient. The walk is the walk."
 
-    "Zira's hands stay on her knees. Her face does not change. The face is holding."
+    "Zira's hands stay on her knees. Her face does not change."
 
     renn "(via recording) Priority one. Repeater chains. You will find seven configured chains in the southern sub-mesh. Six are stable. The seventh is the one I rebuilt last week — node Corvid through the bird-feeder factory. The handshake on that one is non-standard. I built it asymmetric to keep it off Echelon's pattern reads. To replicate, you reverse the third-byte flip in the —"
 
-    "He continues. The technical detail runs for ninety seconds. The detail is not the point. The voice is the point — the voice that has been a thirty-seven-second loop for eleven years, saying words it has not said before."
+    "He continues. The technical detail runs for ninety seconds."
 
     "Zira's eyes have closed at some point in the ninety seconds. Aeron does not see when."
 
-    "The broadcast continues. Repeater chain configuration. Beacon credential rotation. The geographic distribution Renn wanted for the first ten Ghostline nodes — the same distribution Zira used for the rebuild, eleven years later, because the wafer's partial map carried it. Zira is hearing, for the first time, the reasoning behind the choices she has been making for eleven years. The reasoning is not new to her. She has reverse-engineered it. The reasoning being said *aloud* by the man who wrote it is what is new."
+    "The broadcast continues. Repeater chain configuration. Beacon credential rotation. The geographic distribution Renn wanted for the first ten Ghostline nodes — the same distribution Zira used for the rebuild, eleven years later."
+
+    zthought "I built this. He's saying it back to me. New part is hearing him say it."
 
     "Her hands have moved from her knees to the edge of the workstation. Aeron sees the move. He does not comment."
 
@@ -368,11 +356,11 @@ label a4_s20c_last_transmission_emp:
 
     renn "(via recording) I'm going to hold the post until the broadcast hits the seventeenth cell. After that, the repeater chain takes over. I configured it last week. You didn't know. Sorry — wanted you to have a redundancy you didn't owe me."
 
-    "Zira's eyes are still closed. Aeron's face has the institutional stillness he has carried since the alcove with Selene."
+    "Zira's eyes are still closed. Aeron's face is still."
 
     "The recording's ambient shifts. Some part of Sector 12-B's relay floor is audible behind Renn — small mechanical sounds, distant. Echelon is approaching. The sounds change."
 
-    "Renn breathes once. The breath is on the recording. They hear it."
+    "Renn breathes once. They hear it."
 
     renn "(via recording) You asked. I answered. I'd answer the same. Keep the line alive."
 
@@ -382,7 +370,7 @@ label a4_s20c_last_transmission_emp:
 
     "The recording continues for four seconds after *Out.*"
 
-    "Four seconds of silence. The silence is the recording of the silence before Marcus shot Renn. The silence has no sound except the very faint persistent hiss of the Sector 12-B relay floor and the very distant approach of Echelon at the perimeter. There is no gunshot in the recording. The recording cuts out at four seconds."
+    "The very faint hiss of the relay floor. The very distant approach at the perimeter. No gunshot. The recording cuts."
 
     "The cipher terminal returns to ambient hum."
 
@@ -404,15 +392,11 @@ label a4_s20c_last_transmission_emp:
 
     a "Z."
 
-    "He uses the name Renn used. He chose it deliberately. The choice lands in the room. Zira's eyes open."
+    "Zira's eyes open."
 
     a "I'm here, Z."
 
     a "I won't touch it unless you ask."
-
-    "He says it plainly. The line is short. The line is what he has."
-
-    "Zira does not respond immediately. She is not crying. The eleven-year face has not let her cry tonight. The crying is a budget she has not allocated and the lack of allocation is itself the work."
 
     z "You heard him."
 
@@ -420,11 +404,7 @@ label a4_s20c_last_transmission_emp:
 
     z "He was good. He was so steady."
 
-    "She is saying it like it surprises her. The surprise is that the eleven-year-built mental reconstruction of Renn is *less* than the recording. The recording is more than the memory. The memory has been thinner than the actual man. She has been carrying a smaller version of him."
-
     z "He was so much him."
-
-    "She says it twice."
 
     z "He was so much him."
 
@@ -446,7 +426,7 @@ label a4_s20c_last_transmission_emp:
 
     z "Tev. Kessa. Ami. Yves."
 
-    "She pauses after each name. Aeron does not interrupt. The naming is its own pace."
+    "She pauses after each name."
 
     z "Sera. Linn. Halix. Doss."
 
@@ -454,15 +434,13 @@ label a4_s20c_last_transmission_emp:
 
     z "Renn."
 
-    "Aeron's face does not move. He was already counting toward the brother. The name lands where he had room for it."
+    "Aeron's face does not move."
 
     z "They're the nine I couldn't save. The nine in Ash-Nine."
 
     z "Tev was fifteen. Kessa was seventeen. Ami and Yves were eighteen. They were the four young ones at the relay floor when the choice landed. They'd have lived if I'd pushed the override. I didn't push the override. They died at their posts."
 
     z "Sera and Linn were Kira's parents."
-
-    "She watches Aeron's face for the recognition. The recognition arrives. She does not pause for him to respond. She continues."
 
     z "Sera and Linn were going to die regardless of the override. So were Halix and Doss. They were the senior operators. The override wouldn't have reached them in time."
 
@@ -488,7 +466,7 @@ label a4_s20c_last_transmission_emp:
 
     z "I gave you my brother's voice as your key to my network. You've been authenticating against him since the bridge. He hasn't been the file. He's been the door."
 
-    "Aeron's left hand lifts halfway and stops. The gesture of a person who realizes there is no gesture that would help."
+    "Aeron's left hand lifts halfway and stops."
 
     "He lowers the hand."
 
@@ -501,8 +479,6 @@ label a4_s20c_last_transmission_emp:
     "He does not elaborate."
 
     z "You're welcome."
-
-    "She means it."
 
     # ========== PHASE 9 — THE FLOWER ==========
 
@@ -518,7 +494,7 @@ label a4_s20c_last_transmission_emp:
 
     "Zira opens the lower drawer."
 
-    "Aeron has not seen her open the drawer before. He has seen the drawer. He has known the drawer is sealed. The opening is its own disclosure."
+    "Aeron has not seen her open the drawer before. He has seen the drawer. He has known the drawer is sealed."
 
     "Inside the drawer: an oilskin packet, folded in fourths. The wafer's lead-lined sub-compartment is to the right of the packet. She does not touch the wafer. She lifts the oilskin out and sets it on the workstation."
 
@@ -555,15 +531,13 @@ label a4_s20c_last_transmission_emp:
 
     "Zira turns back to the cipher terminal."
 
-    "She does not close the file. She files it in a private archive of her own — a single encrypted store separate from Ghostline's distributed storage. The file is going to live in the workshop with her. It is also going to live, from this hour forward, on a backup she will create tomorrow at one of the three core nodes. She does not tell Aeron about the backup. She has decided already."
+    "She does not close the file. She files it in a private archive of her own — a single encrypted store separate from Ghostline's distributed storage. The file is going to live in the workshop with her. It is also going to live, from this hour forward, on a backup she will create tomorrow at one of the three core nodes."
 
     "She closes the cipher-test routine. The completion notice clears from the screen."
 
-    "She types one line into her personal Ghostline operator log. The log is the small private journal she keeps for her own work — the journal nobody else reads. The line is dated 4 Glass 390 oh-three-fifty-six."
+    "She types one line into her personal Ghostline operator log. The line is dated 4 Glass 390 oh-three-fifty-six."
 
     "*Cipher decryption complete. File received. Aeron in the room. Out.*"
-
-    "Aeron sees the word resolve on the screen as she types it. He recognizes it. He does not name the recognition aloud."
 
     z "I'm going to close the workshop in five minutes. You can stay in the chair until I do. After that we walk back to the corridor. The hour after this hour is yours."
 
@@ -577,7 +551,7 @@ label a4_s20c_last_transmission_emp:
 
     "She walks Aeron to the workshop door. He follows her into the corridor. The door closes behind them. The workshop is empty."
 
-    "The cipher terminal hums alone. The completion notice has cleared. The flower is on the cloth in the open drawer. The wafer is in its lead-lined sub-compartment. Renn's broadcast is in the private archive and is going to be backed up to a core node tomorrow."
+    "The cipher terminal hums alone. The completion notice has cleared. The flower is on the cloth in the open drawer. The wafer is in its lead-lined sub-compartment."
 
     "Out."
 
