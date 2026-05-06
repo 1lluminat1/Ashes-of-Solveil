@@ -464,6 +464,80 @@ She does not adopt his sign-off because adopting it would be a public
 acknowledgment of the broadcast she did not share. OB Zira's sign-off
 remains operational-standard.
 
+## 10A. *Z* AS ACCESS — EMP-GATED
+
+**Z is not a nickname. It is access.**
+
+Renn called her *Z*. She has not heard another voice say it in eleven
+years. The single syllable carries the entire pre-Choice partnership
+the broadcast eventually re-opens.
+
+### 10A.1 EMP path — Aeron inherits the name by recognition
+
+Three-step adoption. Aeron arrives at *Z* without knowing Renn ever
+used it. The arrival has to be earned and gradual.
+
+- **Step 1: Slip.** Mid-Act-3 (`a3_s15_signal_under_fire_emp`, line
+  132). Under fire, Aeron uses *Z!* as tactical shorthand. He does
+  not notice. Zira notices and does not say so. She files it. The
+  slip emerges from field intimacy, not from romance-writing
+  convenience — Aeron is Echelon-trained, single-syllable callsigns
+  are operational.
+
+- **Step 2: Question.** Late Act 3 (`a3_s18a_the_letter_emp`, after
+  the Liora reveal). Aeron uses it deliberately for the first time.
+  Zira asks where he got it. He says *You answer to it. The rest
+  started feeling like distance.* She does not tell him Renn used
+  it. She deflects with *Dangerous habit, Rylan.* He says
+  *Probably.* They move on. The player feels the snag.
+
+- **Step 3: Habit.** By early Act 4 EMP, *Z* is just his name for
+  her. No scene needs to announce it. It appears in casual moments
+  (`a4_s09a_she_calls_him_out_emp`, line 129). The Last Transmission
+  scene's *He uses the name Renn used. He chose it deliberately*
+  works because Aeron has been saying *Z* for months without knowing
+  the parallel; what is deliberate tonight is that he says it
+  knowing Zira is about to hear Renn say it for the first time in
+  eleven years.
+
+The doubling — Renn's voice, then Aeron's, inside the same hour — is
+the moment that breaks Zira open. The reveal only works if the
+audience and Aeron both arrive at the parallel together. **Zira does
+not tell Aeron that Renn used the name. Not before the broadcast.
+Possibly never.**
+
+### 10A.2 OB path — Aeron never receives the name
+
+OB Aeron has the same Echelon-trained capacity for tactical
+shorthand. The path-coded emotional architecture prevents the
+syllable from forming. The diagnostic moment is in
+`a3_s20_you_dont_get_to_break_ob`, line 65: *He starts to say
+something shorter. The syllable doesn't form.* Aeron defaults to
+*Zira.*
+
+OB Aeron may respect her, rely on her, desire her, even protect her,
+but he does not enter the wound correctly. He does not become the
+person she can ask things of and have answered. The Choice at the
+Console, on this path, has nobody who can call her *Z* on the other
+side of it.
+
+The Last Transmission OB scene plays this at full volume: the
+broadcast lands with only Renn's voice saying *Z*. The living mouth
+that would say it has chosen not to be in the room.
+
+### 10A.3 Parallel to the Beacon Chip
+
+The structure mirrors the credential canon (§5):
+
+- **EMP Aeron** carries Renn's voice as credential and speaks
+  Renn's name for her. He has access on both axes.
+- **OB Aeron** rejected the chip and never receives the name. He
+  has access on neither.
+
+The chip is the technical layer of access. The name is the
+emotional layer. Both gate at the same moment — the bridge — and
+both cascade across the campaign. Do not break this parallel.
+
 ## 11. PATH EXPRESSIONS
 
 ### 11.1 EMP path

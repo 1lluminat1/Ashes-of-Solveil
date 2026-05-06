@@ -62,6 +62,8 @@ label a3_s20_you_dont_get_to_break_ob:
 
     "He does. Not because she commands it. Because the tone is one he hasn't heard from Zira before."
 
+    "He starts to say something shorter. The syllable doesn't form."
+
     a "Zira."
 
     z "Don't 'Zira' me. Not the operational voice. Not the command tone. Just -- stop for a second."

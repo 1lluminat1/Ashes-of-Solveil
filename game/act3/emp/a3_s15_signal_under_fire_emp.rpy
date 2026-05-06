@@ -129,7 +129,7 @@ label a3_s15_signal_under_fire_emp:
 
     #play sound "sfx/suppressed_fire_burst.ogg"
 
-    a "(returning fire, controlled bursts) Zira!"
+    a "(returning fire, controlled bursts) Z!"
 
     z "Three minutes!"
 
@@ -207,6 +207,8 @@ label a3_s15_signal_under_fire_emp:
     "Silence. The carrier hum from the repaired node is faint here but audible — a low thrum beneath everything."
 
     "They wait."
+
+    zthought "He just called me Z. He doesn't know he did. I'm filing it."
 
     z "(barely a whisper) We almost died."
 

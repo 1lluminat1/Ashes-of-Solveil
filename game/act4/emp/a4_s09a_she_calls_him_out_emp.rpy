@@ -126,7 +126,7 @@ label a4_s09a_she_calls_him_out_emp:
 
     z "Aeron."
 
-    a "Zira."
+    a "Z."
 
     "Her hands are empty. No mug. No datapad. No file. She is standing across from him the way a soldier stands at a table she has decided to claim."
 

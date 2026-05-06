@@ -205,6 +205,20 @@ label a3_s18a_the_letter_emp:
 
     athought "That was her."
 
+    "He looks at Zira."
+
+    a "Z."
+
+    z "Where'd you get that?"
+
+    a "You answer to it. The rest started feeling like distance."
+
+    "She files the answer. She doesn't tell him Renn used it. She doesn't ask him not to."
+
+    z "Dangerous habit, Rylan."
+
+    a "Probably."
+
     "The mapping station hums. Zira's terminals glow with their network maps. The courier routes that led to this letter thread across the display."
 
     "He sits with it. He doesn't need to do anything else tonight."
