@@ -151,7 +151,7 @@ label a4_s08_zira_exit_plan_emp:
 
     "Two beats. Three."
 
-    "He does not say anything. She is finishing a line, and finishing a line is a Zira thing, and he has learned over four years of Zira-in-the-workshop scenes not to speak during the finishing of a line because the line is always load-bearing."
+    "He does not say anything. She is finishing a line."
 
     "She finishes the line."
 
@@ -159,7 +159,7 @@ label a4_s08_zira_exit_plan_emp:
 
     "Then she straightens."
 
-    "She straightens in the way of a woman whose back has been bent for longer than her back wants to be bent. The small pain-wince is a fact she does not hide because she has long since given up hiding the small pain-wince from him specifically. That is a form of intimacy. It is the intimacy that made him notice her before any of the rest of it."
+    "She straightens in the way of a woman whose back has been bent for longer than her back wants to be bent. The small pain-wince is a fact she does not hide."
 
     "She turns to look at him."
 
@@ -198,7 +198,7 @@ label a4_s08_zira_exit_plan_emp:
 
     "He stops at the opposite edge. He looks down at what is laid out in the pool of the clip lamp."
 
-    "Three sheets of identity papers. Three different names. Three different hands — because Zira has been trained, and because Zira has always taken seriously the rule that a forger who is willing to be caught by a handwriting analyst is not a forger, she is a decorator."
+    "Three sheets of identity papers. Three different names. Three different hands — because Zira has been trained."
 
     "A hand-drawn chain map. Four stops. From the secondary base through the western passes and then north along a route he does not recognize into a country he is not sure whether to call a country. The fourth stop is not named. The fourth stop is marked with a single character in Old Tongue, written in a different ink from the rest of the map."
 
@@ -212,9 +212,7 @@ label a4_s08_zira_exit_plan_emp:
 
     "Then he looks up at Zira."
 
-    "She is watching him read the bench. She has not moved. Her arms are at her sides. Her right hand is still slightly curled from the pen. She is letting her face do whatever her face is going to do, which, in Zira's case, is a controlled amount of nothing until she chooses a sentence."
-
-    "She chooses a sentence."
+    "She is watching him read the bench. She has not moved. Her arms are at her sides. Her right hand is still slightly curled from the pen."
 
     z "Go ahead."
 
@@ -230,43 +228,43 @@ label a4_s08_zira_exit_plan_emp:
 
     z "Three weeks."
 
-    "She says it flat. She does not add a clause. The three weeks are not offered with context. The three weeks are a fact, the same way the letter on the bench is a fact, the same way his name is a fact."
+    "She says it flat. She doesn't add a clause."
 
     a "You started three weeks ago."
 
     z "I started the night you came back from the Obsidian Bridge. I had been thinking about starting for longer. I started that night."
 
-    athought "The Obsidian Bridge was Act I. She has been thinking about this since Act I and building it since Act III. She has been carrying this for as long as she has been carrying the forgery of my codebooks for the Ghostline. In the same hands."
+    athought "She's been carrying this for as long as she's been forging my codebooks for the Ghostline. Same hands."
 
     a "You have been building me an exit."
 
     z "Yes."
 
-    a "Forged papers. Three aliases. A safehouse chain. An extract currency kit. Ghostline quiet-route key. A knife I have not seen before."
+    a "Forged papers. Three aliases. A safehouse chain. An extract currency kit. Ghostline quiet-route key. A knife I haven't seen before."
 
-    z "That knife is from the Ashmarket. It is not Phoenix kit. It has no Phoenix fingerprints on it. If you ever need to use the knife, you will not need Phoenix to have been in the room."
+    z "That knife is from the Ashmarket. It isn't Phoenix kit. It has no Phoenix fingerprints on it. If you ever need to use the knife, you won't need Phoenix to have been in the room."
 
     "He does not touch the knife."
 
-    a "The fourth stop on the map is not named."
+    a "The fourth stop on the map isn't named."
 
     z "No."
 
-    a "You are not going to name it for me."
+    a "You aren't going to name it for me."
 
     z "No."
 
     "She takes a single small breath that is not quite a sigh."
 
-    z "I will tell you this much. I know the person at the fourth stop. I knew her before the Ashmarket. She owes me two favors of the kind of weight that does not get called in unless the caller has nowhere else to go. She does not know your name. She will know it when she sees the letter."
+    z "I'll tell you this much. I know the person at the fourth stop. I knew her before the Ashmarket. She owes me two favors of the kind of weight that doesn't get called in unless the caller has nowhere else to go. She doesn't know your name. She'll know it when she sees the letter."
 
     "His eyes go to the letter on the bench."
 
     z "Do not open it."
 
-    a "I was not going to."
+    a "I wasn't going to."
 
-    z "I know. I am saying it anyway. The letter is not for you to read. The letter is the thing the woman at the fourth stop reads when you give it to her, and what it says to her is not something I am willing to have you carrying in your head while you are still in Solveil."
+    z "I know. I'm saying it anyway. The letter isn't for you to read. The letter is the thing the woman at the fourth stop reads when you give it to her, and what it says to her isn't something I'm willing to have you carrying in your head while you're still in Solveil."
 
     z "Carry the letter. Do not read it."
 
@@ -308,11 +306,11 @@ label a4_s08_zira_exit_plan_emp:
 
     z "Yes."
 
-    a "I am not going to take this."
+    a "I'm not going to take this."
 
     "A small thing happens in her face."
 
-    "The small thing is not hurt. Zira has been hurt in worse ways than this and the ways do not appear on her face the way hurt appears on ordinary faces. The small thing is the sardonic armor coming up in the particular way she uses it when she is about to say something she has rehearsed and does not want him to notice she rehearsed."
+    "The small thing is not hurt. The small thing is the sardonic armor coming up — the kind she uses when she's about to say something she rehearsed."
 
     z "Oh, good. I was worried we were going to have to do the scene where the big commander takes the escape bag from his girlfriend and rides off into the sunset with the forged papers. I was mentally drafting the eyeroll."
 
@@ -320,13 +318,13 @@ label a4_s08_zira_exit_plan_emp:
 
     z "I know, Aeron."
 
-    "Her voice has shed one skin of its sarcasm in the second sentence. She hears herself and makes a small mouth-movement at her own armor — not quite a grimace, a small private acknowledgement."
+    "Her voice has shed a skin of its sarcasm. She hears herself and makes a small mouth-movement at her own armor — not quite a grimace."
 
-    z "I know you are not going to take it. I knew you were not going to take it when I started."
+    z "I know you're not going to take it. I knew you weren't going to when I started."
 
-    athought "That is the sentence."
+    athought "That's the sentence."
 
-    athought "That is the sentence and I am not going to step on it by answering it too fast."
+    athought "Not going to step on it by answering too fast."
 
     "He does not answer it too fast."
 
@@ -344,9 +342,9 @@ label a4_s08_zira_exit_plan_emp:
 
     a "What move."
 
-    z "The move to my side of the bench. I did not know I was waiting for it until you made it. I have been standing on this side of the bench alone for three weeks and I have been telling myself the aloneness is the cost of the work. The aloneness was the cost of the work. And I was going to be fine with it, because the work was the point, and the work required me to be alone with it, and fine is what I have been since I was fifteen."
+    z "The move to my side of the bench. I didn't know I was waiting for it until you made it. I've been standing on this side of the bench alone for three weeks and I've been telling myself the aloneness was the cost of the work. The aloneness was the cost of the work. I was going to be fine with it, because the work was the point, and fine is what I've been since I was fifteen."
 
-    z "Then you walked around the bench and my throat did a thing I was not expecting."
+    z "Then you walked around the bench and my throat did a thing I wasn't expecting."
 
     a "Zira."
 
@@ -356,13 +354,13 @@ label a4_s08_zira_exit_plan_emp:
 
     "She laughs a small laugh. The laugh is one note and it does not have much voice behind it, but it is a laugh."
 
-    z "It closed about a quarter of the way. That is the clinical description. The non-clinical description is that I have been building a door for someone I love and pretending to myself that building the door was the love, and then you walked around the bench and I realized the love was bigger than the door and the door was not going to hold all of it."
+    z "It closed about a quarter of the way. That's the clinical description. The non-clinical description is that I've been building a door for someone I love and pretending to myself that building the door was the love. Then you walked around the bench and I realized the love was bigger than the door and the door wasn't going to hold all of it."
 
-    "She says the word love the way she says ordinary workshop nouns. Pen. Wax. Love. She has always done this. It is the Ashmarket in her voice — the refusal to let a big word strut."
+    "She says the word love the way she says ordinary workshop nouns. Pen. Wax. Love."
 
     "He does not say it back."
 
-    "Not because he does not feel it. Because saying it back in this moment would be the wrong instrument for the sentence she just handed him. The sentence she handed him does not want an echo. It wants a witness."
+    "Saying it back would be the wrong instrument. The sentence wants a witness, not an echo."
 
     a "I see it."
 
@@ -389,25 +387,25 @@ label a4_s08_zira_exit_plan_emp:
 
     "She is looking at the chain map. Her right hand — the pen hand — is at her side again, but her left hand has come up to rest on the bench, flat, near the edge of the map. Not on the map. Near it."
 
-    athought "She built this knowing I would not take it."
+    athought "She built this knowing I wouldn't take it."
 
-    athought "She built this because she needed the door to exist."
+    athought "She built it because she needed the door to exist."
 
-    athought "The gift is not the plan. The gift is the fact that she did the work."
+    athought "The gift isn't the plan. The gift is the fact that she did the work."
 
-    athought "And the grief is also the fact that she did the work, because doing the work was the only way she could love me through the thing that is happening to me, and she knows the door is not going to open, and she built it anyway, and the building was the love."
+    athought "She knows the door isn't going to open. She built it anyway. The building was the love."
 
-    athought "I cannot take the papers because taking the papers would be the ending Zira and I are both refusing to write. But I also cannot refuse the work she did. The work is not the papers. The work is the three weeks."
+    athought "I can't take the papers. Taking them would be the ending we're both refusing to write. But I can't refuse the work either."
 
     athought "I have to hold the three weeks without holding the papers."
 
     "He speaks slowly, because he is finding the sentence as he says it."
 
-    a "You built this in the only way you know how to love me through what I am in the middle of."
+    a "You built this in the only way you know how to love me through what I'm in the middle of."
 
     z "Yes."
 
-    a "And I am not going to take it."
+    a "And I'm not going to take it."
 
     z "I know."
 
@@ -415,21 +413,21 @@ label a4_s08_zira_exit_plan_emp:
 
     z "I needed to know the door existed. Even if you never open it."
 
-    "The sentence is quiet. She is not performing the sentence. The sentence came out the way her pen draws a line — one continuous motion, no re-inking."
+    "The sentence came out the way her pen draws a line — one continuous motion, no re-inking."
 
     "He takes a breath."
 
-    athought "Write that down. Not on paper. In the part of my head Marcus cannot read. 'I needed to know the door existed. Even if you never open it.' That is a sentence I am going to carry the rest of my life. That is the kind of sentence that sits next to 'necessary is not worth it' and 'the rule is for the living' and 'I am not a neutral observer anymore.' These are the sentences the women in this war are giving me and I am going to keep every one of them."
+    athought "Write that down. Not on paper. In the part of my head Marcus can't read. 'I needed to know the door existed. Even if you never open it.' I'm going to carry that the rest of my life. It sits next to 'necessary is not worth it' and 'the rule is for the living' and 'I'm not a neutral observer anymore.' These are the sentences the women in this war are giving me. I'm going to keep every one."
 
     a "Zira."
 
-    z "Don't say thank you. It is not a thank-you situation."
+    z "Don't say thank you. It isn't a thank-you situation."
 
-    a "I was not going to say thank you."
+    a "I wasn't going to say thank you."
 
     z "What were you going to say."
 
-    a "I was going to say — this is a gift and it is also a grief. Both. Not one and then the other. Both at the same time. I do not know how to hold it other than to stand here with you and not lie about either half."
+    a "I was going to say — this is a gift and it's also a grief. Both. Not one and then the other. Both at the same time. I don't know how to hold it other than to stand here with you and not lie about either half."
 
     "She is quiet for three beats."
 
@@ -453,51 +451,51 @@ label a4_s08_zira_exit_plan_emp:
 
     "She finally looks at him. Her face is not the workshop face. Her face is the face from the one quiet conversation they had in the Ghostline alcove at the end of Act II and have not had again since."
 
-    z "I did not build an exit for me, Aeron. I was building this for three weeks and it never once occurred to me to build a second chain with my own papers in it. There is one door in this plan. The door has your name on it. I am not in the chain. I am the woman at the first stop who hands you the packet and goes back to the workshop and rebanks the forge."
+    z "I didn't build an exit for me, Aeron. I was building this for three weeks and it never once occurred to me to build a second chain with my own papers in it. There's one door in this plan. The door has your name on it. I'm not in the chain. I'm the woman at the first stop who hands you the packet and goes back to the workshop and rebanks the forge."
 
-    z "And I am telling you that because I do not want you walking out of this room thinking I was building a door for both of us and decided to give you mine. That is a different story. That is not this story. I was building a door for you and I did not even notice that I was not in the plan until I drafted the chain map yesterday and realized the map stopped being a plural two stops in."
+    z "And I'm telling you because I don't want you walking out thinking I was building a door for both of us and decided to give you mine. That's a different story. That isn't this story. I was building a door for you and I didn't even notice I wasn't in the plan until I drafted the chain map yesterday and realized the map stopped being plural two stops in."
 
-    z "That is the part I wanted you to hear out loud. Not because I am asking you to fix it. You cannot fix it. I am not sure I want it fixed. I am telling you because the scene would be a lie if I did not."
+    z "That's the part I wanted you to hear out loud. Not because I'm asking you to fix it. You can't fix it. I'm not sure I want it fixed. I'm telling you because the scene would be a lie if I didn't."
 
     "He does not move."
 
-    "He does not move because moving would force the scene to be about his move, and the scene is not about his move. The scene is about her sentence."
+    "He does not move. The scene isn't about his move. The scene is about her sentence."
 
-    athought "She did not build one for herself. She did not build one for herself because she has not believed in a door with her name on it since she was fifteen. And the thing the Ashmarket did to her at fifteen is the thing she has never told me directly, and the thing that has been hiding under every 'fine' she has ever said to me, and the reason 'fine' is the word she lets do the most work in her whole vocabulary."
+    athought "She didn't build one for herself. She hasn't believed in a door with her name on it since she was fifteen. The thing the Ashmarket did to her at fifteen has been hiding under every 'fine' she's ever said to me."
 
     athought "She is showing me the shape of the thing right now. Not the thing itself. The shape."
 
-    athought "I am going to look at the shape. I am not going to ask her to hand me the thing."
+    athought "I'm going to look at the shape. I'm not going to ask her to hand me the thing."
 
     a "Zira."
 
     z "I know."
 
-    a "I am not going to fix it."
+    a "I'm not going to fix it."
 
     z "I know."
 
-    a "I am also not going to pretend I did not hear it."
+    a "I'm also not going to pretend I didn't hear it."
 
-    z "I know. That is all I am asking."
+    z "I know. That's all I'm asking."
 
     "A beat."
 
-    a "The next time you are in the workshop drafting a chain map, I want you to leave two spaces for names."
+    a "The next time you're in the workshop drafting a chain map, I want you to leave two spaces for names."
 
     z "Aeron."
 
-    a "I am not saying put my name in one and yours in the other. I am saying leave the spaces. They do not have to be filled. They have to exist on the page."
+    a "I'm not saying put my name in one and yours in the other. I'm saying leave the spaces. They don't have to be filled. They have to exist on the page."
 
     "She looks at him for a long moment."
 
-    z "That is a sentence I was not prepared for."
+    z "That's a sentence I wasn't prepared for."
 
-    a "I was not prepared for it either. It arrived the way your sentence about the door arrived. I did not know I had it until it was out."
+    a "I wasn't prepared for it either. It arrived the way your sentence about the door arrived. I didn't know I had it until it was out."
 
-    z "I am going to think about it."
+    z "I'm going to think about it."
 
-    a "That is all I am asking."
+    a "That's all I'm asking."
 
     # ========== PHASE 7 — THE FOLD ==========
 
@@ -523,7 +521,7 @@ label a4_s08_zira_exit_plan_emp:
 
     "She picks up the whole stack in one hand."
 
-    "She opens the small drawer built into the left side of the bench — the drawer she keeps her finished work in, the drawer that in any other forger's workshop would be locked at all times and in Zira's workshop is locked only when she is not in the building."
+    "She opens the small drawer built into the left side of the bench — the drawer she keeps her finished work in. In any other forger's workshop it would be locked. Zira locks it only when she's out of the building."
 
     "She places the stack in the drawer."
 
@@ -531,21 +529,21 @@ label a4_s08_zira_exit_plan_emp:
 
     "She does not lock it."
 
-    "Her hand rests on the drawer handle for a second after the drawer is closed. Not pushing. Not pulling. Just present on the handle — the same kind of present that Tessa's flat palm on the board was, the day Aeron watched her do that and did not know yet that he was going to see the gesture twice in the same chapter."
+    "Her hand rests on the drawer handle for a second after the drawer is closed. Not pushing. Not pulling. Just present on the handle — the same kind of present Tessa's flat palm on the board was."
 
     "Her hand comes off the handle."
 
     z "The drawer stays unlocked."
 
-    z "Not because I think you are going to change your mind about taking the papers. I do not think you are going to change your mind. I think the papers are going to live in that drawer for the rest of this chapter and probably the rest of this war, and I think that is the correct home for them."
+    z "Not because I think you're going to change your mind. I don't think you're going to change your mind. I think the papers are going to live in that drawer for the rest of this chapter and probably the rest of this war, and I think that's the correct home for them."
 
-    z "The drawer is unlocked because the door is not going to be a secret from you. You know where it is. You know how to open it. I am not going to pretend the building was a decorative exercise. I built a working door."
+    z "The drawer is unlocked because the door isn't going to be a secret from you. You know where it is. You know how to open it. I'm not going to pretend the building was a decorative exercise. I built a working door."
 
     z "And the working door has an unlocked handle on the inside."
 
-    z "That is the last thing I am going to say about it for the rest of tonight."
+    z "That's the last thing I'm going to say about it tonight."
 
-    athought "She said 'tonight.' She left the rest of the nights open. She is telling me we may come back to this and she is also telling me not now. Both things at the same time. In one word."
+    athought "She said 'tonight.' She left the rest of the nights open."
 
     # ========== PHASE 8 — THE CLOSE ==========
 
@@ -568,19 +566,19 @@ label a4_s08_zira_exit_plan_emp:
 
     "They stand at the bench for a count of twenty. Neither of them speaks."
 
-    "Aeron does not touch her and she does not touch him. The scene is not a scene for touching. Touching would be the wrong instrument. They are standing on the same side of a bench where one of them has been alone for three weeks and the being-on-the-same-side is the gesture the scene is asking them to make."
+    "Aeron does not touch her and she does not touch him. Touching would be the wrong instrument. They are standing on the same side of a bench where one of them has been alone for three weeks."
 
     "Eventually Zira moves."
 
-    "She goes to the banked forge in the corner. She picks up the small iron hook she uses to open the forge door. She opens the door a finger-width — just enough to let the banked heat out into the room for another hour — and closes it again. The motion is practiced and unnecessary. She is giving her hands something to do so that her hands do not do something else."
+    "She goes to the banked forge in the corner. She picks up the small iron hook she uses to open the forge door. She opens the door a finger-width — just enough to let the banked heat out into the room for another hour — and closes it again. The motion is practiced and unnecessary. She is giving her hands something to do."
 
     "Aeron watches her do it and does not comment."
 
-    "When she comes back to the bench, she picks up the pen she was using earlier and puts it in the pen tray properly, which means she has decided the work session is over. Zira does not put pens in the tray properly unless she has decided she is done."
+    "When she comes back to the bench, she picks up the pen and puts it in the tray properly. Zira does not put pens in the tray properly unless she's decided she's done."
 
     a "Are you going to sleep."
 
-    z "I am going to sit in the workshop for another hour and drink the tea I have not had since this afternoon and then I am going to sleep."
+    z "I'm going to sit in the workshop for another hour and drink the tea I haven't had since this afternoon and then I'm going to sleep."
 
     a "Okay."
 
@@ -602,15 +600,13 @@ label a4_s08_zira_exit_plan_emp:
 
     "Both of them are aware of the drawer."
 
-    "The drawer is not going away. The drawer is the new thing in the workshop. The drawer has a room in it now, and the room has a door, and the door is unlocked, and Zira and Aeron are sitting in the outer room of a relationship that has grown a door they are both going to live around for the rest of the war."
-
-    "That is the scene."
+    "The drawer isn't going away."
 
     "Aeron drinks the tea."
 
-    athought "I am going to carry this the way I carry Tessa's rule and Noelle's hands going still and Lyra's Band unbuckled and Selene's necessary-is-not-worth-it. I am going to carry it as a sentence. 'I needed to know the door existed. Even if you never open it.'"
+    athought "I'm going to carry this the way I carry Tessa's rule and Noelle's hands going still and Lyra's Band unbuckled and Selene's necessary-is-not-worth-it. I'm going to carry it as a sentence. 'I needed to know the door existed. Even if you never open it.'"
 
-    athought "That is Zira's sentence. I am going to hold it in the part of my head Marcus cannot read."
+    athought "That's Zira's sentence. I'm going to hold it in the part of my head Marcus can't read."
 
     "The forge ticks as it cools."
 
