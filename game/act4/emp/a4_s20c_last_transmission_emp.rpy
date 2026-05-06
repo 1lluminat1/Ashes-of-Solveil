@@ -408,7 +408,7 @@ label a4_s20c_last_transmission_emp:
 
     a "I'm here, Z."
 
-    a "I won't make this mine."
+    a "I won't touch it unless you ask."
 
     "He says it plainly. The line is short. The line is what he has."
 
