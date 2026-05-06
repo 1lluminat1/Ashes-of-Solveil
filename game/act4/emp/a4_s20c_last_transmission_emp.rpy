@@ -238,7 +238,7 @@ label a4_s20c_last_transmission_emp:
 
     "She knocks twice. Soft taps. The Ghostrunner ping."
 
-    "The base is small enough that the knock is heard. Aeron has not been sleeping deeply tonight — he never sleeps deeply this late in Act 4, when the count of compartments is still exceeding the count of nights he has had to file them. He hears the knock. He registers the cadence."
+    "The base is small enough that the knock is heard. Aeron hasn't been sleeping deeply lately — too many compartments, not enough nights to file them. He hears the knock. He registers the cadence."
 
     "The cadence is the Ghostrunner ping. The ping is Zira's. The ping is non-urgent."
 
