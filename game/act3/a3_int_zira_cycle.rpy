@@ -51,7 +51,7 @@ label a3_int_zira_cycle:
     # change. She does not lean forward. She does not lean back. She is not
     # waiting in any way a stranger would recognize.
 
-    zthought "The cycle does not care that I am tired. The cycle does not care that I have done this before."
+    zthought "The cycle doesn't care that I'm tired. The cycle doesn't care that I've done this before."
     zthought "Good. I built it that way."
 
     # ---- BEAT 3: the result lands ----

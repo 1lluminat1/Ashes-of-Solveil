@@ -91,13 +91,13 @@ label a4_s20c_last_transmission_ob:
 
     "The workshop at oh-three-fourteen. The base in its deepest second-shift quiet. Zira at the cipher terminal. Her hands working the same sequence they have worked four thousand and eighty-three times."
 
-    "She does not count the cycles aloud. She counts them privately. Tonight will be four thousand and eighty-four. The number is meaningless and the number is exact."
+    "She does not count the cycles aloud. She counts them privately."
 
     zthought "Today's fragment came in at twenty-two-fifty-eight via the Sector Three maintenance pull. Thirty-seven bytes."
 
     zthought "Largest single-cycle fragment ever pulled. Most cycles return zero or one byte. Tonight returned thirty-seven."
 
-    zthought "Noting the size. The size is data. The size isn't yet a result."
+    zthought "Noting the size. The size is data."
 
     "Her fingers complete the load sequence. The fragment resolves in the test buffer. She tabs to the cipher-test routine."
 
@@ -105,13 +105,13 @@ label a4_s20c_last_transmission_ob:
 
     "She runs it."
 
-    "The cipher terminal hums. The cycle tone holds. Zira watches the corner of the screen — the spot where the progress indicator lives, the spot her eye has trained to monitor over eleven years."
+    "The cipher terminal hums. The cycle tone holds. Zira watches the corner of the screen."
 
     "Two minutes seven seconds. Three minutes. Four. Five. Six. The cycle has not returned NULL. The progress indicator advances steadily for the last fifty-one seconds."
 
     "At seven minutes thirty-one, the cipher-completion chime sounds."
 
-    "Three tones. Distinct from the cycle tone. The chime has never sounded before. Zira has heard the cycle tone four thousand and eighty-three times. She has never heard the completion chime."
+    "Three tones. Distinct from the cycle tone. The chime has never sounded before."
 
     "Her hands stop on the keyboard."
 
@@ -147,17 +147,17 @@ label a4_s20c_last_transmission_ob:
 
     zthought "Good."
 
-    "She does not justify the decision in her own thinking. She does not run a pro-and-con. The OB working register has been making decisions of this shape for two months without ceremony. Tonight is consistent."
+    "She doesn't run a pro-and-con."
 
     zthought "He doesn't have a beacon credential. He never accepted the chip at the bridge. He hasn't authenticated against my brother once across the entire run of his Ghostline access. I've been overriding for him by hand for fourteen months."
 
     zthought "I've been holding Renn back from him."
 
-    zthought "I'm not giving him Renn tonight. The not-giving is the entire reason I've been holding the chip."
+    zthought "I'm not giving him Renn tonight."
 
     zthought "The broadcast is mine. The broadcast plays in this room with the chair empty."
 
-    "She turns to the cipher terminal. She calls up the file. Her hands are steady. The eleven years has trained the hands."
+    "She turns to the cipher terminal. She calls up the file. Her hands are steady."
 
     "She presses play."
 
@@ -188,9 +188,9 @@ label a4_s20c_last_transmission_ob:
 
     zthought "I'm hearing the reasoning behind eleven years of my own choices. I already knew the reasoning. I reverse-engineered it. The new part is the voice saying it."
 
-    zthought "I'm not going to linger on the new. The new is data. The data is filing."
+    zthought "Not lingering on the new. The new is data. Filing."
 
-    "The OB working register holds. The face holds. The hands hold."
+    "The face holds."
 
     "The broadcast hits the three-minute thirty-eight mark. Renn's voice shifts."
 
@@ -226,7 +226,7 @@ label a4_s20c_last_transmission_ob:
 
     zthought "I've been carrying the choice as ours. He's confirming I've been carrying it correctly."
 
-    zthought "The confirmation is what I came here for. The confirmation has now arrived."
+    zthought "Confirmation arrived."
 
     "Pause."
 
@@ -256,17 +256,13 @@ label a4_s20c_last_transmission_ob:
 
     zthought "Item one: the Choice at the Console is confirmed. He validated it. The carrying has been correct. Filed."
 
-    zthought "Item two: he calls the choice *ours.* You asked. I answered. I'd answer the same. The naming of the partnership-in-cost is the work the OB version of me has been doing without language for it. The naming closes the language gap. Filed."
+    zthought "Item two: he calls the choice *ours.* The partnership-in-cost has a name now. Filed."
 
-    zthought "Item three: he signs off as *Out.* The word is his standard radio close. The word is in the broadcast. The word isn't for me to inherit. The word is his. Filed."
+    zthought "Item three: he signs off as *Out.* The word is his. Filed."
 
-    zthought "The conversation Zira-eleven-years-ago was hoping for was longer than this. The brevity is itself a fact. The brevity is filed."
-
-    "The OB working register's filing closes the items inside their own nthought lines. The items the broadcast did not contain — the longer reassurances, the named names, the directives for the rebuild's caretakers — were never going to be in the broadcast. Renn had two minutes. He used five sentences. The five sentences were enough for him. The OB working register is filing them as enough for her."
+    zthought "The conversation eleven-years-ago me was hoping for was longer than this. The brevity is itself a fact. Filed."
 
     zthought "Audit complete."
-
-    "The phrase is the phrase she has used to close every personal data crystal audit in her workshop life. The phrase is what she uses to mark the end of work that is hers and not the rebellion's. Tonight the phrase closes the eleven-year cycle."
 
     zthought "Filed."
 
@@ -280,17 +276,15 @@ label a4_s20c_last_transmission_ob:
 
     "She moves to file the broadcast."
 
-    "She does not store it on Ghostline distributed storage. The file is too sensitive for distributed storage on either path; on this path the additional concern is that distributed storage is auditable by Aeron through his manual override permissions. She files it instead in a private archive — a single encrypted store separate from the network."
+    "She does not store it on Ghostline distributed storage. The distributed store is auditable by Aeron through his manual override permissions. She files it instead in a private archive — a single encrypted store separate from the network."
 
-    "She encrypts the file with a new cipher. The new cipher is not Renn's. The new cipher is one she wrote tonight, in the last twenty seconds, while the broadcast was playing. The cipher is hers alone. No one else will be able to decrypt the file. Including Aeron, if he ever finds it."
+    "She encrypts the file with a new cipher she wrote in the last twenty seconds, while the broadcast was playing. The cipher is hers alone. No one else will be able to decrypt the file. Including Aeron, if he ever finds it."
 
     zthought "The decrypted file existed for thirty-seven seconds. The encrypted-with-new-cipher file is the version that lives forward."
 
     zthought "The new cipher's key is in my head. It isn't written down."
 
     zthought "If I die, the file dies with me. It won't survive me."
-
-    zthought "Noting the consequence. The consequence is consistent with the OB working register's principle: the trail of the editing must be smaller than the trail of the un-editing."
 
     zthought "I'm editing the broadcast. Not the content — the access. The content is preserved. The access is sealed."
 
@@ -309,17 +303,13 @@ label a4_s20c_last_transmission_ob:
     #         operator log.
     # LIGHTING: unchanged.
 
-    "She types one line into her personal Ghostline operator log."
-
-    "The log is the small private journal she keeps for her own work. Nobody else reads it. She has been writing in it since the rebuild began. Her standard sign-off in the log is *Z. close.* — operational shorthand."
-
-    "Tonight's entry is dated 4 Glass 390 oh-three-fifty-nine."
+    "She types one line into her personal Ghostline operator log. The line is dated 4 Glass 390 oh-three-fifty-nine."
 
     "*Cipher decryption complete. File received. File re-sealed under new cipher. Z. close.*"
 
-    "She does not type *Out.* The word does not propagate to her vocabulary on this path."
+    "She does not type *Out.*"
 
-    zthought "He left me the word. I'm not taking it. The taking would be a public act. The public act would need someone else in the room. Aeron isn't in the room."
+    zthought "He left me the word. I'm not taking it. Aeron isn't in the room."
 
     zthought "The word stays his. I keep my own."
 
@@ -341,7 +331,7 @@ label a4_s20c_last_transmission_ob:
 
     zthought "If I open the drawer tonight I'll touch the flower. The touch would be a sentimental decision. Tonight isn't the night for sentimental decisions."
 
-    zthought "Selene is dead. Two months. She gave me the flower before she died, at a moment I can't properly date because the OB compression of the past two months is heavier than the EMP version of the same window."
+    zthought "Selene is dead. Two months. She gave me the flower before she died, at a moment I can't properly date because the past two months have been compressed."
 
     zthought "I'm not opening the drawer tonight."
 
@@ -372,21 +362,15 @@ label a4_s20c_last_transmission_ob:
 
     "Zira returns to the operational queue."
 
-    "She has nine items pending review for tomorrow's oh-six-hundred briefing. The items have been on her queue since yesterday. The items will be on her queue regardless of what just happened in the workshop."
+    "She has nine items pending review for tomorrow's oh-six-hundred briefing. The items have been on her queue since yesterday."
 
     "She opens the first item. A Ghostline node performance review for the eastern sub-mesh. She runs the diagnostics. The diagnostics return clean. She files the review. She moves to the second item."
 
     "The work continues."
 
-    "Inside her, the broadcast plays. Renn's voice in the file is now sealed under a new cipher she alone can decrypt. The validation he gave her — *I'd answer the same* — is data she has now filed. The compressed five sentences are data she has filed. The word *Out* is data she has filed. The conversation she had been imagining for eleven years — the longer one, the one with the names and the directives and the *I love you* — was never going to be in the broadcast. Renn did not have time. The not-having-time is data she has filed."
+    "Aeron is in his quarters, asleep. He will wake at oh-five-thirty for the morning brief. He will not know."
 
-    "The filing is complete. The audit is closed. The work resumes."
-
-    "Aeron is in his quarters, asleep. He will wake at oh-five-thirty for the morning brief. He will not know what happened in this workshop tonight. He will never know."
-
-    "The repeater chain Renn configured eleven years ago — the redundancy he built without telling her — is still operational, somewhere in the southern sub-mesh. She has been using it without knowing. The chain is one of the things she has just learned about. She files the learning."
-
-    "The base around her continues to function. Ghostline transmits. The carrier hiss moves through the monitoring panel at its standard rate. Every burst transmission carries the nine names in the salt — a memorial automated, automatic, eleven years old, never named to anyone."
+    "The base around her continues to function. Ghostline transmits. The carrier hiss moves through the monitoring panel at its standard rate. Every burst transmission carries the nine names in the salt."
 
     "The empty chair stays empty."
 

@@ -213,7 +213,7 @@ label a3_s18a_the_letter_emp:
 
     a "You answer to it. The rest started feeling like distance."
 
-    "She files the answer. She doesn't tell him Renn used it. She doesn't ask him not to."
+    "She files the answer."
 
     z "Dangerous habit, Rylan."
 
