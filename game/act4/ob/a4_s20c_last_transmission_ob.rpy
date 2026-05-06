@@ -97,7 +97,7 @@ label a4_s20c_last_transmission_ob:
 
     zthought "Largest single-cycle fragment ever pulled. Most cycles return zero or one byte. Tonight returned thirty-seven."
 
-    zthought "I am noting the size. The size is data. The size is not yet a result."
+    zthought "Noting the size. The size is data. The size isn't yet a result."
 
     "Her fingers complete the load sequence. The fragment resolves in the test buffer. She tabs to the cipher-test routine."
 
@@ -137,21 +137,23 @@ label a4_s20c_last_transmission_ob:
 
     "She does not stand."
 
-    "The audience may expect her to stand. On a different path she would. The audience will not see that path tonight."
+    zthought "Rylan's three doors down."
 
-    zthought "Aeron is in his quarters. He went to bed at twenty-two-thirty. He has been asleep for four and a half hours."
+    zthought "Asleep. Probably."
 
-    zthought "The path I do not take is the path where I walk to his quarters and bring him here."
+    zthought "He could be in the chair in five minutes."
 
-    zthought "I am not taking that path."
+    zthought "My hand isn't on the door control."
+
+    zthought "Good."
 
     "She does not justify the decision in her own thinking. She does not run a pro-and-con. The OB working register has been making decisions of this shape for two months without ceremony. Tonight is consistent."
 
-    zthought "He does not have a beacon credential. He never accepted the chip at the bridge. He has not authenticated against my brother once across the entire run of his Ghostline access. I have been overriding for him by hand for fourteen months."
+    zthought "He doesn't have a beacon credential. He never accepted the chip at the bridge. He hasn't authenticated against my brother once across the entire run of his Ghostline access. I've been overriding for him by hand for fourteen months."
 
-    zthought "I have been holding Renn back from him."
+    zthought "I've been holding Renn back from him."
 
-    zthought "I am not going to give him Renn tonight. The not-giving is the entire reason I have been holding the chip."
+    zthought "I'm not giving him Renn tonight. The not-giving is the entire reason I've been holding the chip."
 
     zthought "The broadcast is mine. The broadcast plays in this room with the chair empty."
 
@@ -184,9 +186,9 @@ label a4_s20c_last_transmission_ob:
 
     "He continues. The technical detail runs for ninety seconds. Repeater chain configuration. Beacon credential rotation. The geographic distribution Renn wanted for the first ten Ghostline nodes — the same distribution Zira used for the rebuild, eleven years later."
 
-    zthought "I have been hearing the reasoning behind my own choices for the first time. The reasoning is correct. The reasoning is what I reverse-engineered. The voice saying it aloud is what is new."
+    zthought "I'm hearing the reasoning behind eleven years of my own choices. I already knew the reasoning. I reverse-engineered it. The new part is the voice saying it."
 
-    zthought "I am not going to linger on the new. The new is data. The data is filing."
+    zthought "I'm not going to linger on the new. The new is data. The data is filing."
 
     "The OB working register holds. The face holds. The hands hold."
 
@@ -206,23 +208,23 @@ label a4_s20c_last_transmission_ob:
 
     renn "(via recording) I'm going to hold the post until the broadcast hits the seventeenth cell. After that, the repeater chain takes over. I configured it last week. You didn't know. Sorry — wanted you to have a redundancy you didn't owe me."
 
-    zthought "He configured the repeater chain. He is telling me, eleven years late, that the rebuild had a backup I was not aware of."
+    zthought "He configured the repeater chain. Eleven years late, he's telling me the rebuild had a backup I didn't know about."
 
-    zthought "The backup did not save him. The backup was for Ghostline."
+    zthought "The backup didn't save him. The backup was for Ghostline."
 
-    zthought "The backup is data. I am filing the data."
+    zthought "The backup is data. I'm filing the data."
 
     "The recording's ambient shifts. Some part of Sector 12-B's relay floor is audible behind Renn — small mechanical sounds, distant. Echelon is approaching. The sounds change."
 
-    "Renn breathes once. The audience hears him breathe."
+    "Renn breathes once. The breath is on the recording."
 
     renn "(via recording) You asked. I answered. I'd answer the same. Keep the line alive."
 
-    zthought "He is naming the choice."
+    zthought "He's naming the choice."
 
-    zthought "He is validating the choice."
+    zthought "He's validating the choice."
 
-    zthought "I have been carrying the choice as ours. He is confirming I have been carrying it correctly."
+    zthought "I've been carrying the choice as ours. He's confirming I've been carrying it correctly."
 
     zthought "The confirmation is what I came here for. The confirmation has now arrived."
 
@@ -256,7 +258,7 @@ label a4_s20c_last_transmission_ob:
 
     zthought "Item two: he calls the choice *ours.* You asked. I answered. I'd answer the same. The naming of the partnership-in-cost is the work the OB version of me has been doing without language for it. The naming closes the language gap. Filed."
 
-    zthought "Item three: he signs off as *Out.* The word is his standard radio close. The word is in the broadcast. The word is not for me to inherit. The word is his. Filed."
+    zthought "Item three: he signs off as *Out.* The word is his standard radio close. The word is in the broadcast. The word isn't for me to inherit. The word is his. Filed."
 
     zthought "The conversation Zira-eleven-years-ago was hoping for was longer than this. The brevity is itself a fact. The brevity is filed."
 
@@ -284,13 +286,13 @@ label a4_s20c_last_transmission_ob:
 
     zthought "The decrypted file existed for thirty-seven seconds. The encrypted-with-new-cipher file is the version that lives forward."
 
-    zthought "The new cipher's key is in my head. The key is not written down."
+    zthought "The new cipher's key is in my head. It isn't written down."
 
-    zthought "If I die, the file dies with me. The file will not survive me."
+    zthought "If I die, the file dies with me. It won't survive me."
 
-    zthought "I am noting the consequence. The consequence is consistent with the OB working register's principle: the trail of the editing must be smaller than the trail of the un-editing."
+    zthought "Noting the consequence. The consequence is consistent with the OB working register's principle: the trail of the editing must be smaller than the trail of the un-editing."
 
-    zthought "I am editing the broadcast. Not the content — the access. The content is preserved. The access is sealed."
+    zthought "I'm editing the broadcast. Not the content — the access. The content is preserved. The access is sealed."
 
     zthought "The seal is mine."
 
@@ -317,7 +319,7 @@ label a4_s20c_last_transmission_ob:
 
     "She does not type *Out.* The word does not propagate to her vocabulary on this path."
 
-    zthought "He left me the word. I am not taking it. The taking would be a public act. The public act would require an audience. The audience would require Aeron in the room. Aeron is not in the room."
+    zthought "He left me the word. I'm not taking it. The taking would be a public act. The public act would need someone else in the room. Aeron isn't in the room."
 
     zthought "The word stays his. I keep my own."
 
@@ -337,17 +339,17 @@ label a4_s20c_last_transmission_ob:
 
     "She does not open the drawer."
 
-    zthought "If I open the drawer tonight I will touch the flower. The touching would be a sentimental decision. Tonight is not the night to make sentimental decisions."
+    zthought "If I open the drawer tonight I'll touch the flower. The touch would be a sentimental decision. Tonight isn't the night for sentimental decisions."
 
-    zthought "Selene is dead. She has been dead for two months. She gave me the flower before she died, on a path I am not on. On this path she handed it to me at a moment I cannot properly date because the OB compression of the past two months is heavier than the EMP version of the same window."
+    zthought "Selene is dead. Two months. She gave me the flower before she died, at a moment I can't properly date because the OB compression of the past two months is heavier than the EMP version of the same window."
 
-    zthought "I am not opening the drawer tonight."
+    zthought "I'm not opening the drawer tonight."
 
     "Her hand returns to her knee."
 
     "The drawer stays closed."
 
-    zthought "The flower is still there. The flower has been there for two months. The flower will be there tomorrow."
+    zthought "The flower is still there. It's been there for two months. It'll be there tomorrow."
 
     zthought "The eleven-year compartment is closed. The two-month compartment stays closed."
 

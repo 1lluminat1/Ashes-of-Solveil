@@ -135,7 +135,7 @@ label a4_s20c_last_transmission_emp:
 
     zthought "Thirty-seven bytes."
 
-    zthought "Eleven years and the largest single fragment I have ever pulled in one cycle. The largest before this was nine. Most cycles are zero or one."
+    zthought "Eleven years and the largest single fragment I've ever pulled in one cycle. The largest before this was nine. Most cycles are zero or one."
 
     zthought "Thirty-seven."
 
@@ -198,23 +198,27 @@ label a4_s20c_last_transmission_emp:
 
     "The reason is in her hands, which have not moved, and in her eyes, which have not left the corner of the screen where the completion notice sits."
 
-    zthought "If I play it now, I play it alone, in this workshop, at oh-three-twenty-three on the fourth of Glass, and the playing is mine and the hearing is mine and the file becomes a thing that lives inside the workshop forever."
+    zthought "Play it now and it lives in this workshop forever. Mine. Just mine."
 
-    zthought "I do not want it to live inside the workshop alone."
+    zthought "I don't want it to live here alone."
 
-    zthought "I do not want to be the only person in the room when it plays."
+    zthought "I don't want to be the only person in the room when it plays."
 
-    zthought "I have been alone with this for eleven years. I am not going to be alone with it for the playing."
+    zthought "Eleven years alone with this. Not alone for the playing."
 
     "She stands."
 
     "The motion is small. The chair pushes back without sound — Zira's chair has been on her own oiled tracks for years; she does not let it scrape. She stands and looks at the terminal one more time. The completion notice is still there. The file is still there. The file is going to be there in five minutes when she comes back."
 
-    zthought "Aeron is in his quarters. He went to bed at twenty-two-thirty. He has been asleep for four and a half hours. I am going to wake him."
+    zthought "Rylan's three doors down."
 
-    zthought "I am going to wake him because he is the person I want in the room."
+    zthought "Asleep. Probably."
 
-    zthought "I am not going to explain to him why he is the person I want in the room. He will not ask."
+    zthought "He should stay that way."
+
+    zthought "My hand is already on the door control."
+
+    zthought "Great."
 
     "She walks to the workshop door. Opens it. The corridor outside is the second-shift quiet. She closes the door behind her."
 
@@ -281,17 +285,17 @@ label a4_s20c_last_transmission_emp:
 
     "She says it plainly. She is not sure who the sentence is for. Aeron hears it as the only context he is going to need. He registers the sentence and waits."
 
-    z "The file is Renn's. He encrypted it in his personal cipher — one we built between us when I was twelve, never operational, never written down. I have been carrying the encrypted block for eleven years. I have been hunting the key bytes for eleven years. Tonight I have them."
+    z "The file is Renn's. He encrypted it in his personal cipher — one we built between us when I was twelve, never operational, never written down. I've been carrying the encrypted block for eleven years. I've been hunting the key bytes for eleven years. Tonight I have them."
 
     z "The file is five minutes and twelve seconds of audio."
 
-    z "I think it is the broadcast he was running when Marcus shot him."
+    z "I think it's the broadcast he was running when Marcus shot him."
 
-    z "I have not played it."
+    z "I haven't played it."
 
-    z "I am going to play it now. I am playing it because I have decided I am playing it. I am playing it with you in the room because I am not going to be alone in the room when it plays."
+    z "I'm going to play it now. I've decided. I'm playing it with you in the room because I'm not going to be alone for it."
 
-    z "I am not asking you to do anything. You sit there. The audio plays. After it plays, we sit with it. That is the plan."
+    z "I'm not asking you to do anything. You sit there. The audio plays. After it plays, we sit with it. That's the plan."
 
     a "Okay."
 
@@ -402,7 +406,9 @@ label a4_s20c_last_transmission_emp:
 
     "He uses the name Renn used. He chose it deliberately. The choice lands in the room. Zira's eyes open."
 
-    a "I am here for whatever you need from this hour. I am not going to fill it with anything that is not yours to fill."
+    a "I'm here, Z."
+
+    a "I won't make this mine."
 
     "He says it plainly. The line is short. The line is what he has."
 
@@ -424,9 +430,9 @@ label a4_s20c_last_transmission_emp:
 
     "Aeron does not respond. He waits."
 
-    z "I have been carrying half of him. The half I rebuilt from the wafer. Tonight he became more. The more is information. I do not know what to do with the more."
+    z "I've been carrying half of him. The half I rebuilt from the wafer. Tonight he became more. The more is information. I don't know what to do with the more."
 
-    a "You do not have to do anything with it tonight."
+    a "You don't have to do anything with it tonight."
 
     z "I know."
 
@@ -444,21 +450,21 @@ label a4_s20c_last_transmission_emp:
 
     z "Sera. Linn. Halix. Doss. Brann."
 
-    z "They are the nine I could not save. The nine in Ash-Nine."
+    z "They're the nine I couldn't save. The nine in Ash-Nine."
 
-    z "Tev was fifteen. Kessa was seventeen. Ami and Yves were eighteen. They were the four young ones at the relay floor when the choice landed. They would have lived if I had pushed the override. I did not push the override. They died at their posts."
+    z "Tev was fifteen. Kessa was seventeen. Ami and Yves were eighteen. They were the four young ones at the relay floor when the choice landed. They'd have lived if I'd pushed the override. I didn't push the override. They died at their posts."
 
     z "Sera and Linn were Kira's parents."
 
     "She watches Aeron's face for the recognition. The recognition arrives. She does not pause for him to respond. She continues."
 
-    z "Sera and Linn were going to die regardless of the override. So were Halix and Doss and Brann. They were the senior operators. The override would not have reached them in time. Their deaths are a different math. I carry them anyway. The carrying is not interested in the math."
+    z "Sera and Linn were going to die regardless of the override. So were Halix and Doss and Brann. They were the senior operators. The override wouldn't have reached them in time. Their deaths are a different math. I carry them anyway. The carrying isn't interested in the math."
 
-    z "I have been transmitting the nine names through Ghostline's encrypted layer for eleven years. They are the salt for the network's authentication routine. Every burst transmission across Ghostline carries them. The network cannot validate a packet without them. I built remembrance into the protocol. I did it without telling anyone. I am telling you now because tonight is the night I am no longer the only person who knows."
+    z "I've been transmitting the nine names through Ghostline's encrypted layer for eleven years. They're the salt for the network's authentication routine. Every burst transmission across Ghostline carries them. The network can't validate a packet without them. I built remembrance into the protocol. I did it without telling anyone. I'm telling you now because tonight's the night I'm no longer the only person who knows."
 
-    a "I have been carrying the salt."
+    a "I've been carrying the salt."
 
-    z "Yes. Every time you have used a beacon credential. Every Ghostline-mediated scene of your life since Obsidian Bridge. The salt is the salt. You have been authenticating against the nine names for over a year."
+    z "Yes. Every time you've used a beacon credential. Every Ghostline-mediated scene of your life since Obsidian Bridge. The salt is the salt. You've been authenticating against the nine names for over a year."
 
     "A pause."
 
@@ -466,11 +472,11 @@ label a4_s20c_last_transmission_emp:
 
     z "Renn."
 
-    z "The thirty-seven-second relay-junction recording is the frequency-domain anchor for Ghostline's credential validation. Every chip I have ever issued carries a fragment of his voice as its signature. Validating a credential means matching the fragment against the canonical recording on the three core nodes."
+    z "The thirty-seven-second relay-junction recording is the frequency-domain anchor for Ghostline's credential validation. Every chip I've ever issued carries a fragment of his voice as its signature. Validating a credential means matching the fragment against the canonical recording on the three core nodes."
 
     z "The chip I gave you at the bridge carries his voice."
 
-    z "I gave you my brother's voice as your key to my network. You have been authenticating against him since Act One. He has not been the file. He has been the door."
+    z "I gave you my brother's voice as your key to my network. You've been authenticating against him since Act One. He hasn't been the file. He's been the door."
 
     "Aeron's left hand lifts halfway and stops. The same halfway gesture from the alcove with Selene. The gesture of a person who realizes there is no gesture that would help."
 
@@ -482,11 +488,11 @@ label a4_s20c_last_transmission_emp:
 
     a "Thank you."
 
-    "He does not elaborate. Thanking her is the small word. The small word is what is available."
+    "He does not elaborate."
 
-    z "You are welcome."
+    z "You're welcome."
 
-    "She means it. The two-word exchange holds.”
+    "She means it."
 
     # ========== PHASE 9 — THE FLOWER ==========
 
@@ -518,11 +524,11 @@ label a4_s20c_last_transmission_emp:
 
     "She does not move the flower from the cloth. She does not return it to the oilskin. She leaves the oilskin open, the flower exposed, the drawer open."
 
-    z "I have been carrying that for two months. I would not let myself touch it. Selene gave it to me before the displacement. She did not say what it was for. I think she knew what it would be for. I think she saw something in me that needed an object that was *from before* and I did not want the object because I did not want there to be a *before* I needed the object for."
+    z "I've been carrying that for two months. I wouldn't let myself touch it. Selene gave it to me before the displacement. She didn't say what it was for. I think she knew what it would be for. I think she saw something in me that needed an object that was *from before* — and I didn't want the object, because I didn't want there to be a *before* I needed the object for."
 
-    z "There is a before. There is always a before. The before is the night Renn answered."
+    z "There's a before. There's always a before. The before is the night Renn answered."
 
-    z "I am keeping the flower on the bench. The drawer stays open."
+    z "I'm keeping the flower on the bench. The drawer stays open."
 
     # ========== PHASE 10 — OUT ==========
 
@@ -555,9 +561,9 @@ label a4_s20c_last_transmission_emp:
 
     "Aeron sees the word resolve on the screen as she types it. He recognizes it. He does not name the recognition aloud."
 
-    z "I am going to close the workshop in five minutes. You can stay in the chair until I do. After that we walk back to the corridor. The hour after this hour is yours."
+    z "I'm going to close the workshop in five minutes. You can stay in the chair until I do. After that we walk back to the corridor. The hour after this hour is yours."
 
-    a "I will stay."
+    a "I'll stay."
 
     "She nods once."
 
@@ -861,11 +867,9 @@ label a4_s20c_last_transmission_emp:
 #     unwritten. Author at discretion whether to dramatize.
 #   - The Selene-knew-the-flower-was-for-this-purpose subtext
 #     is open territory. Zira speculates Selene saw something
-#     in her that needed an object. A future Zira-Selene
-#     scene (impossible — Selene is dead by Act 4 EMP given the
-#     chronology; Selene died in Act 2 OB; on EMP she is alive,
-#     so a Selene reaction to the flower-touch is open authoring
-#     territory if Aeron tells her).
+#     in her that needed an object. Selene is alive on EMP — a
+#     Selene reaction to the flower-touch is open authoring
+#     territory if Aeron ever tells her, or if Zira does.
 #   - Whether Zira ever plays the broadcast for other LIs is
 #     open. Default: she does not. The audience is Aeron. The
 #     broadcast lives between Aeron and Zira from this scene
