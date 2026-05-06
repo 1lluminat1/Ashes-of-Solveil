@@ -147,21 +147,21 @@ label a4_s20c_last_transmission_emp:
 
     "The cipher terminal hums. The cycle tone holds. Zira watches the corner of the screen. The watching is the ritual. The ritual is the eleven years."
 
-    zthought "Most nights the routine returns NULL within forty seconds. The longest cycle I have ever recorded was a hundred and sixty-two seconds — three years ago, on a forty-byte fragment that turned out to be padding. Tonight the cycle has been running for —"
+    zthought "Most nights the routine returns NULL within forty seconds. The longest cycle I've ever recorded was a hundred and sixty-two seconds — three years ago, on an eight-byte fragment that turned out to be padding. Tonight the cycle has been running for —"
 
     "She glances at the timer. Two minutes seven seconds. Three minutes. Three minutes forty-one. The cycle has not returned NULL. The cycle has not returned anything."
 
-    zthought "It is not going to return NULL."
+    zthought "It's not going to return NULL."
 
-    zthought "I am noticing what I am noticing."
+    zthought "I'm noticing what I'm noticing."
 
-    zthought "I am not letting myself notice it yet."
+    zthought "I'm not letting myself notice it yet."
 
     "The cycle continues. Four minutes. Five. Six. The terminal's cycle tone has not faltered. The progress indicator has not changed for three of the last four minutes. The fragment is processing through the cipher's deepest layers — the layers Zira has been able to populate only with placeholder noise for eleven years because she did not have the key bytes to fill them."
 
-    zthought "Tonight the layers are not noise."
+    zthought "Tonight the layers aren't noise."
 
-    zthought "I am still not letting myself notice."
+    zthought "I'm still not letting myself notice."
 
     "Six minutes forty seconds. The progress indicator moves a single pixel. Then another. Then it begins to advance."
 
@@ -169,7 +169,7 @@ label a4_s20c_last_transmission_emp:
 
     "At seven minutes thirty-one, the cipher-completion chime sounds."
 
-    "Three tones. Distinct from the cycle tone. The audience hears the chime for the first time in the scene. Zira has heard the cycle tone four thousand and eighty-three times. She has never heard the completion chime. She has imagined what it would sound like. She had it wrong."
+    "Three tones. Distinct from the cycle tone. Zira has heard the cycle tone four thousand and eighty-three times. She has never heard the completion chime. She has imagined what it would sound like. She had it wrong."
 
     "Her hands stop on the keyboard."
 
@@ -196,7 +196,7 @@ label a4_s20c_last_transmission_emp:
 
     "She does not play the file."
 
-    "The audience may expect her to play the file. She does not. The reason is in her hands, which have not moved, and in her eyes, which have not left the corner of the screen where the completion notice sits."
+    "The reason is in her hands, which have not moved, and in her eyes, which have not left the corner of the screen where the completion notice sits."
 
     zthought "If I play it now, I play it alone, in this workshop, at oh-three-twenty-three on the fourth of Glass, and the playing is mine and the hearing is mine and the file becomes a thing that lives inside the workshop forever."
 
@@ -279,7 +279,7 @@ label a4_s20c_last_transmission_emp:
 
     z "Eleven years tonight. Four thousand cycles. The fragment landed twenty minutes ago."
 
-    "She says it plainly. She is not sure who the sentence is for. The audience hears it as confirmation. Aeron hears it as the only context he is going to need. He registers the sentence and waits."
+    "She says it plainly. She is not sure who the sentence is for. Aeron hears it as the only context he is going to need. He registers the sentence and waits."
 
     z "The file is Renn's. He encrypted it in his personal cipher — one we built between us when I was twelve, never operational, never written down. I have been carrying the encrypted block for eleven years. I have been hunting the key bytes for eleven years. Tonight I have them."
 
@@ -326,7 +326,7 @@ label a4_s20c_last_transmission_emp:
 
     "The broadcast plays."
 
-    "The first thing on the recording is Renn clearing his throat. A small wet sound. The audience has not heard Renn clear his throat in eleven years."
+    "The first thing on the recording is Renn clearing his throat. A small wet sound. Zira has not heard Renn clear his throat in eleven years."
 
     "Then his voice, unmistakable — the voice from the relay junction reset. The patience. The tech-voice cadence."
 
@@ -336,9 +336,9 @@ label a4_s20c_last_transmission_emp:
 
     renn "(via recording) Priority one. Repeater chains. You will find seven configured chains in the southern sub-mesh. Six are stable. The seventh is the one I rebuilt last week — node Corvid through the bird-feeder factory. The handshake on that one is non-standard. I built it asymmetric to keep it off Echelon's pattern reads. To replicate, you reverse the third-byte flip in the —"
 
-    "He continues. The technical detail runs for ninety seconds. The audience is not expected to follow it. The audience is expected to sit inside the impossibility of the voice."
+    "He continues. The technical detail runs for ninety seconds. The detail is not the point. The voice is the point — the voice that has been a thirty-seven-second loop for eleven years, saying words it has not said before."
 
-    "Zira's eyes have closed at some point in the ninety seconds. The audience may not have noticed when."
+    "Zira's eyes have closed at some point in the ninety seconds. Aeron does not see when."
 
     "The broadcast continues. Repeater chain configuration. Beacon credential rotation. The geographic distribution Renn wanted for the first ten Ghostline nodes — the same distribution Zira used for the rebuild, eleven years later, because the wafer's partial map carried it. Zira is hearing, for the first time, the reasoning behind the choices she has been making for eleven years. The reasoning is not new to her. She has reverse-engineered it. The reasoning being said *aloud* by the man who wrote it is what is new."
 
@@ -368,7 +368,7 @@ label a4_s20c_last_transmission_emp:
 
     "The recording's ambient shifts. Some part of Sector 12-B's relay floor is audible behind Renn — small mechanical sounds, distant. Echelon is approaching. The sounds change."
 
-    "Renn breathes once. The audience hears him breathe."
+    "Renn breathes once. The breath is on the recording. They hear it."
 
     renn "(via recording) You asked. I answered. I'd answer the same. Keep the line alive."
 
@@ -514,7 +514,7 @@ label a4_s20c_last_transmission_emp:
 
     "Her fingers touch the pressed flower for the first time in canon."
 
-    "She does not pick it up. She just touches it. The touch lasts perhaps four seconds. The audience may not be able to see the touch from the camera distance — it is the smallest gesture in the scene — but the camera holds it long enough that the audience knows it happened."
+    "She does not pick it up. She just touches it. The touch lasts perhaps four seconds. It is the smallest gesture in the scene, and the only one that matters."
 
     "She does not move the flower from the cloth. She does not return it to the oilskin. She leaves the oilskin open, the flower exposed, the drawer open."
 
