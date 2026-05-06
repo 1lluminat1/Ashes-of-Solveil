@@ -448,7 +448,13 @@ label a4_s20c_last_transmission_emp:
 
     "She pauses after each name. Aeron does not interrupt. The naming is its own pace."
 
-    z "Sera. Linn. Halix. Doss. Brann."
+    z "Sera. Linn. Halix. Doss."
+
+    "The pause after the fourth name is longer. She does not look at him."
+
+    z "Renn."
+
+    "Aeron's face does not move. He was already counting toward the brother. The name lands where he had room for it."
 
     z "They're the nine I couldn't save. The nine in Ash-Nine."
 
@@ -458,13 +464,17 @@ label a4_s20c_last_transmission_emp:
 
     "She watches Aeron's face for the recognition. The recognition arrives. She does not pause for him to respond. She continues."
 
-    z "Sera and Linn were going to die regardless of the override. So were Halix and Doss and Brann. They were the senior operators. The override wouldn't have reached them in time. Their deaths are a different math. I carry them anyway. The carrying isn't interested in the math."
+    z "Sera and Linn were going to die regardless of the override. So were Halix and Doss. They were the senior operators. The override wouldn't have reached them in time."
+
+    z "Renn was at the broadcast post. He'd have died regardless too. He's the one whose voice you just heard."
+
+    z "Their deaths are a different math. I carry them anyway. The carrying isn't interested in the math."
 
     z "I've been transmitting the nine names through Ghostline's encrypted layer for eleven years. They're the salt for the network's authentication routine. Every burst transmission across Ghostline carries them. The network can't validate a packet without them. I built remembrance into the protocol. I did it without telling anyone. I'm telling you now because tonight's the night I'm no longer the only person who knows."
 
     a "I've been carrying the salt."
 
-    z "Yes. Every time you've used a beacon credential. Every Ghostline-mediated scene of your life since Obsidian Bridge. The salt is the salt. You've been authenticating against the nine names for over a year."
+    z "Yes. Every time you've used a beacon credential. Every Ghostline call you've made since Obsidian Bridge. The salt is the salt. You've been authenticating against the nine names for over a year."
 
     "A pause."
 
@@ -476,9 +486,9 @@ label a4_s20c_last_transmission_emp:
 
     z "The chip I gave you at the bridge carries his voice."
 
-    z "I gave you my brother's voice as your key to my network. You've been authenticating against him since Act One. He hasn't been the file. He's been the door."
+    z "I gave you my brother's voice as your key to my network. You've been authenticating against him since the bridge. He hasn't been the file. He's been the door."
 
-    "Aeron's left hand lifts halfway and stops. The same halfway gesture from the alcove with Selene. The gesture of a person who realizes there is no gesture that would help."
+    "Aeron's left hand lifts halfway and stops. The gesture of a person who realizes there is no gesture that would help."
 
     "He lowers the hand."
 
@@ -512,15 +522,15 @@ label a4_s20c_last_transmission_emp:
 
     "Inside the drawer: an oilskin packet, folded in fourths. The wafer's lead-lined sub-compartment is to the right of the packet. She does not touch the wafer. She lifts the oilskin out and sets it on the workstation."
 
-    "She unfolds the oilskin. The pressed winterbloom resolves on the cloth. The flower is the flower from a3_s19b — the one Selene gave her, pre-displacement, the one she has not touched."
+    "She unfolds the oilskin. The pressed winterbloom resolves on the cloth. The same flower Selene gave her, pre-displacement. The one she hasn't let herself touch."
 
     "Zira looks at the flower."
 
     "She rests her hand on the cloth beside the flower. Not on the flower itself. The hand rests for two seconds. Then she moves the hand the half-inch."
 
-    "Her fingers touch the pressed flower for the first time in canon."
+    "Her fingers touch the pressed flower for the first time."
 
-    "She does not pick it up. She just touches it. The touch lasts perhaps four seconds. It is the smallest gesture in the scene, and the only one that matters."
+    "She does not pick it up. She just touches it. The touch lasts perhaps four seconds."
 
     "She does not move the flower from the cloth. She does not return it to the oilskin. She leaves the oilskin open, the flower exposed, the drawer open."
 
@@ -552,12 +562,6 @@ label a4_s20c_last_transmission_emp:
     "She types one line into her personal Ghostline operator log. The log is the small private journal she keeps for her own work — the journal nobody else reads. The line is dated 4 Glass 390 oh-three-fifty-six."
 
     "*Cipher decryption complete. File received. Aeron in the room. Out.*"
-
-    "She has not used the word *Out* in her log before tonight. Her standard sign-off has been *Z. close.* — operational shorthand. Tonight is the first time she has signed off as *Out.*"
-
-    "The word is hers now."
-
-    "She did not earn it. He gave it to her. It is the same word for both reasons."
 
     "Aeron sees the word resolve on the screen as she types it. He recognizes it. He does not name the recognition aloud."
 
@@ -675,17 +679,18 @@ label a4_s20c_last_transmission_emp:
 #     silence is the recording of the silence before Marcus shot
 #     Renn. No gunshot in the file.
 #   - Aeron speaks once after the broadcast: "Z." He uses the name
-#     Renn used. Then: "I am here for whatever you need from this
-#     hour. I am not going to fill it with anything that is not
-#     yours to fill."
+#     Renn used. Then: "I'm here, Z. I won't touch it unless you
+#     ask."
 #   - Zira: "He was so much him." Said twice. The eleven-year-built
 #     mental reconstruction of Renn was thinner than the actual
 #     recording. The recording is more than the memory. The
 #     memory has been carrying half of him.
 #   - Zira names the nine. Aloud for the first time. Tev (15),
 #     Kessa (17), Ami (18), Yves (18) — the four young at the
-#     relay floor. Sera, Linn, Halix, Doss, Brann — the five
-#     senior. Names Sera and Linn as Kira's parents.
+#     relay floor. Sera, Linn, Halix, Doss — four seniors. Renn —
+#     named last, alone, after a held pause. Names Sera and Linn
+#     as Kira's parents. Names Renn as the broadcast voice she has
+#     just played.
 #   - Zira discloses the cryptographic salt mechanic: the nine
 #     names are Ghostline's authentication salt. Aeron has been
 #     carrying them in his beacon credential since Obsidian
@@ -693,8 +698,9 @@ label a4_s20c_last_transmission_emp:
 #   - Zira discloses the Beacon Chip's voice carrier: Renn's
 #     thirty-seven-second relay-junction recording is the
 #     frequency-domain anchor for credential validation. Aeron
-#     has been authenticating against Renn's voice since Act I.
-#     "I gave you my brother's voice as your key to my network."
+#     has been authenticating against Renn's voice since Obsidian
+#     Bridge. "I gave you my brother's voice as your key to my
+#     network."
 #   - Aeron's only other line: "Thank you." Zira: "You are
 #     welcome." The two-word exchange holds.
 #   - Zira opens the lower drawer. Unfolds the oilskin. Touches

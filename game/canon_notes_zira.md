@@ -74,8 +74,9 @@ misfired") is replaced by the following:
   Renn had configured the repeater chains earlier to maintain signal
   continuity if the operator went down. The continuation was Renn's
   preparation, not an accident.
-- The four young operators died at their posts. The five senior
-  operators (see §4 for full list) died at theirs. Nine in Sector 12-B.
+- The four young operators died at their posts. The four senior
+  operators (see §4 for full list) died at theirs. Renn died at the
+  broadcast post. Nine in Sector 12-B, including her brother.
 - **Zira has been carrying for eleven years: *I asked him to choose. He
   chose the broadcast. The broadcast killed him. The nine I could not
   save are the price of saving the seventeen cells. Renn validated the
@@ -213,7 +214,7 @@ She did it to herself. She did not tell anyone.**
 | **Ami** | 18 | Marna's stall apprentice. Was running relay overflow that night to cover two operators down with fever. |
 | **Yves** | 18 | Renn's relay protégé. Could solo a junction reset by sixteen. Renn's letter (§3) "the four kids" specifically refers to these four. |
 
-**The five senior operators (would have died regardless of override choice):**
+**The four senior operators (would have died regardless of override choice):**
 
 | Name | Age | Role |
 |---|---|---|
@@ -221,14 +222,19 @@ She did it to herself. She did not tell anyone.**
 | **Linn Vex** | 28 | Sera's partner. **Kira's other parent.** Supply/courier interface. Did not survive the night. **Kira lost both parents at Sector 12-B.** |
 | **Halix** | 24 | Ghostrunner; route-finder. Mapped the original Sector 12-B Ghostline node distribution before the rebuild. Halix's routing notes survive on Node Corvid (§8). |
 | **Doss** | 32 | Senior courier. Knew every smuggler line into the Wards. Renn coordinated with Doss for the seventeen-cell warning routing. |
-| **Brann** | 53 | Oldest. Senior technician. Trained Renn. Trained Sera. Trained the four young. Was the relay's institutional memory. |
+
+**The brother:**
+
+| Name | Age | Role |
+|---|---|---|
+| **Renn Kael** | 24 | Zira's older brother. Lead operator at Sector 12-B primary. Was at the broadcast post running the warning when Marcus arrived. Marcus shot Kessa first; Renn second; the bodies were three meters apart. The override would not have reached the broadcast post in time. Renn dies regardless on every counterfactual. He is named last in the spoken roster — alone, after a held pause — because his voice was just played and the audience and Zira meet the doubling at the same beat. |
 
 ### 4.2 Why nine and not eight, ten, twenty
 
-- The five senior operators died at their posts during Marcus's raid.
-  Standard rebellion-cell collapse pattern. The five would have died
-  whether Zira pushed the broadcast or the evacuation. Renn's choice
-  did not affect their fates.
+- The four senior operators and Renn died at their posts during
+  Marcus's raid. Standard rebellion-cell collapse pattern. They
+  would have died whether Zira pushed the broadcast or the
+  evacuation. Renn's choice did not affect their fates.
 - The four young operators *would* have been pulled out by the
   evacuation override. They died because the override fired the
   broadcast amplifier instead. Renn's choice killed them.
@@ -243,7 +249,7 @@ She did it to herself. She did not tell anyone.**
 
 - Ghostline-Theta's authentication system uses a hash function whose
   salt is the concatenation of the nine names in chronological order
-  of death (Tev, Kessa, Ami, Yves, Sera, Linn, Halix, Doss, Brann).
+  of death (Tev, Kessa, Ami, Yves, Sera, Linn, Halix, Doss, Renn).
 - Every packet sent across Ghostline includes a hash signature
   computed from the salt + payload + timestamp + sender credential.
 - Validating a received packet requires re-computing the hash, which
@@ -257,7 +263,7 @@ She did it to herself. She did not tell anyone.**
   duration of his Ghostline access.
 - The reveal: in scene (see §11), Aeron sees a string of names scrolling
   under the carrier hiss layer during a Ghostline diagnostic. He
-  recognizes one — possibly Sera, possibly Tev, possibly Brann. He
+  recognizes one — possibly Sera, possibly Tev, possibly Halix. He
   asks. Zira names them. All nine. To him. For the first time aloud.
 
 ### 4.4 What this does to the character
@@ -624,8 +630,9 @@ of Sector 12-B's specific dead.
 - Zira at the decryption (audience confirmation moment): *"Eleven
   years tonight. Four thousand cycles. The fragment landed twenty
   minutes ago."*
-- Zira naming the nine, in order: *"Tev. Kessa. Ami. Yves. Sera.
-  Linn. Halix. Doss. Brann. The salt is the salt."*
+- Zira naming the nine, in spoken order (4 + 4 + 1, with held pause
+  before the brother): *"Tev. Kessa. Ami. Yves. / Sera. Linn. Halix.
+  Doss. / Renn."*
 - Aeron's response to the broadcast (EMP only): *(no speech). The
   scene closes on his silence.*
 - Zira's first use of *Out* as sign-off (EMP only, scene close): a
